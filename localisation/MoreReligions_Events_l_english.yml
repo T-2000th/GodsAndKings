@@ -467,13 +467,3 @@ mr_egypt.2.oa: "...A Sudanese eunuch has been appointed [Root.Monarch.GetTitle].
 mr_egypt.2.ob: "...A Berber chief has been appointed [Root.Monarch.GetTitle]."
 mr_egypt.2.oc: "...A Mamluk commander has been appointed [Root.Monarch.GetTitle]."
 mr_egypt.2.od: "...The family of [Root.Monarch.GetName] remains influential."
-
-mr_egypt.3.t: "The Lady of the State"
-mr_egypt.3.d: "In recent years, an unlikely face has become common in the [Root.GetAdjective] court. A female relative of the Imam-Caliph, who despite not having any official positions has nevertheless pur her energy into helping the administration of various ministries. Many have already started to refer to her as 'Sitt al-Mulk', invoking the memory of Imam-Caliph Al-Hakim's sister who ruled the Caliphate during Al-Aziz's regency. Many have started petitioning [Root.Monarch.GetName] to grant her an official office."
-mr_egypt.3.a: "Yes, she could serve us well."
-mr_egypt.3.b: "Things are fine the way they are."
-
-mr_egypt.4.t: "Sitt al-Mulk's Palace Coup"
-mr_egypt.4.d: "It happened subtly enough to go unnoticed initially, but as the months have gone by, more and more of the [Root.Monarch.GetTitle]'s key supporters have associated less with [Root.Monarch.GetHerHim] and more with Sitt al-Mulk. Now, her intentions are clear when she, a collection of notable ministers and commanders, and a retinue of Mamluks have besieged [Root.Monarch.GetName]'s palace, demanding [Root.GetSheHe] hand over the position of [Root.Monarch.GetTitle] to Sitt al-Mulk."
-mr_egypt.4.a: "I've been beaten at my own game..."
-mr_egypt.4.b: "I won't fall without a fight!"
