@@ -294,8 +294,6 @@ carpathia_region = {
 		southern_transylvania_area
 		wallachia_area
 		moldavia_area
-		lower_moldavia_area
-		oltenia_area
 	}
 }
 

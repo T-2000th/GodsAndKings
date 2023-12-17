@@ -1092,19 +1092,11 @@ silistria_area = { #+burgas/Varna full
 }
 
 wallachia_area = { #5 full
-	161 2998 4531 5508 5509
-}
-
-oltenia_area = { # 5 full
-	160 4532 5505 5506 5507
+	160 161 2998 4531 4532
 }
 
 moldavia_area = { #5 full
-	268 4529 5501 5503 5504
-}
-
-lower_moldavia_area = { #5 full
-	1756 2405 4530 5500 5502 
+	268 1756 2405 4529 4530
 }
 
 transylvania_area = { #4 #Northern Transylvania + Beszterce full
