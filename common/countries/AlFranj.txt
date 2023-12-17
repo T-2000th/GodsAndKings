@@ -1,7 +1,7 @@
 # Egyptian crusader subject king
 graphical_culture = westerngfx
 
-color = { 45 85 175 }
+color = { 54 100 49 }
 
 #revolutionary_colors = { 8 15 8 }
 

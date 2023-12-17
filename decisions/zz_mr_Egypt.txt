@@ -1,0 +1,75 @@
+# Unite levantine crusader vassals into Al-Franj
+country_decisions = {
+	mr_egypt_create_al_franj = {
+		potential = {
+			religion_group = muslim
+			any_owned_province = {
+				region = mashriq_region
+			}
+			NOT = { exists = FRJ }
+		}
+
+		allow = {
+			2313 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				culture = outremer
+				religion_group = christian
+			}
+			custom_trigger_tooltip = {
+				tooltip = mr_create_franj_crusader_tt
+				NOT = {
+					any_country = {
+						is_levantine_crusader_state = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+			}
+		}
+
+		major = yes
+
+		effect = {
+			every_province = {
+				limit = {
+					culture = outremer
+				}
+				add_core = FRJ
+			}
+			2313 = {
+				owner = {
+					release = FRJ
+				}
+			}
+			vassalize = FRJ
+			hidden_effect = { # Get the AI on its feet
+				FRJ = {
+					add_treasury = 200
+					add_manpower = 10 # 10k
+					add_adm_power = 200
+					add_dip_power = 200
+					add_mil_power = 200
+				}
+			}
+
+			if = {
+				limit = { tag = EGY }
+				add_historical_friend = FRJ
+			}
+
+			every_subject_country = {
+				limit = {
+					is_levantine_crusader_state = yes
+				}
+				FRJ = {
+					inherit = PREV
+				}
+			}
+
+			add_prestige = 25
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

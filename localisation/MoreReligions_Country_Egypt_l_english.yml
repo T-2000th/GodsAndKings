@@ -17,3 +17,7 @@
 ## ------------------------ Modifiers ------------------------------------------
  egy_justified_war_mod: "Justified Wars"
  desc_egy_justified_war_mod: "The firm legal and moral grounding of our current claims among the populace makes them and the troops more willing and eager to serve."
+
+ mr_egypt_create_al_franj_title: "Create Al-Franj"
+ mr_egypt_create_al_franj_desc: "REPLACE_ME"
+ mr_create_franj_crusader_tt: "Any extant §Ycrusader state§! is a subject of §Y[Root.GetName].§!"
