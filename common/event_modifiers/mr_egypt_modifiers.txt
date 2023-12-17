@@ -1,0 +1,4 @@
+egy_justified_war_mod = {
+	land_morale = 0.1
+	manpower_recovery_speed = 0.2
+}

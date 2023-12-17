@@ -1,0 +1,73 @@
+egypt_missions_first = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = EGY
+	}
+}
+
+egypt_missions_second = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = EGY
+	}
+}
+
+egypt_missions_third = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = EGY
+	}
+}
+
+egypt_missions_fourth = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = EGY
+	}
+}
+
+egypt_missions_fifth = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = EGY
+	}
+
+	egypt_conquest_east_1 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 1
+		required_missions = { }
+
+		trigger = {
+			palestine_area = {
+				any_province = {
+					is_claim = ROOT
+				}
+			}
+		}
+
+		effect = {
+			palestine_area = {
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = egy_justified_war_mod
+				duration = 3650
+			}
+		}
+	}
+}
