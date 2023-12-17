@@ -155,7 +155,10 @@ on_battle_won_country = {
 	}
 	if = {
 		limit = {
-			mission_completed = g_mission_elite_regiments
+			OR = {
+				mission_completed = g_mission_elite_regiments
+				mission_completed = mr_greece_speciality_1
+			}
 		}
 		elite_unit_xp_combat_effect = yes
 	}
@@ -1449,5 +1452,17 @@ on_institution_embracement = {
 		country_event = {
 			id = mr_institutions.2
 		}
+	}
+}
+
+on_new_term_election = {
+	events = {
+		mr_egypt.1 #wazir republic election
+	}
+}
+
+on_death_election = {
+	events = {
+		mr_egypt.2 #wazir election on death
 	}
 }
