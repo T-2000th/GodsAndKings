@@ -136,6 +136,8 @@
  eng_restoring_in_progress: "Restoration Efforts"
  mr_eng_crown_investments: "Crown Investments"
  mr_eng_pacification: "England Pacified"
+ mr_naval_maintenance: "Revitalized Naval Supply Industry"
+ mr_eng_government_reforms: "Ministerial Consolidation"
  
  ### misc
  mr_anglo_hibernian: "Anglo-Hibernian"
@@ -343,3 +345,9 @@
  mr_england.1009.d: ""
  mr_england.1009.a: ""
  mr_england.1009.b: ""
+ 
+ mr_england.102.t: "Timber Security Act of [GetYear]"
+ mr_england.102.d: "Chartering the lumberyards were a great boon for the continued existence of a robust shipbuilding industry. But even the great mills we have now are not meant to fuel the greatest extent of our ambitions.\n\nA call to the [Root.Monarch.GetTitle] by a Crown Navy Minister was a few years ago made urging the Crown to be proactive in securing future sources of lumber. With the trajectory of the nation, it took little foresight to start."
+ mr_england.102.a: "The Royal Woods System is our cornerstone!"
+ mr_england.102.b: "The forests of lands across the sea will fuel our expansion!"
+ mr_england.102.c: "A fruitful alliance with [eng_wood_dealer.GetName] will free to produce other things."

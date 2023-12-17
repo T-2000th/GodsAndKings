@@ -20,4 +20,5 @@ discovered_by = ottoman
 discovered_by = eastern
 extra_cost = 8
 add_local_autonomy = 5
+add_prosperity = 100
 1444.11.12 = { trade_goods = unknown }

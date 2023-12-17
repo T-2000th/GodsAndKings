@@ -156,6 +156,7 @@ province_event = {
 	trigger = {
 		owner = {
 			tag = ENG
+			religion = mr_lollard
 			has_country_flag = eng_lenient_oversight_flag
 			NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		}
@@ -899,6 +900,26 @@ province_event = {
 	}
 	mean_time_to_happen = {
 		years = 40
+		modifier = {
+			factor = 0.9
+			navy_size = 10
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 25
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 50
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 75
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 100
+		}
 	}
 	
 	option = {
@@ -928,6 +949,26 @@ province_event = {
 	}
 	mean_time_to_happen = {
 		years = 30
+		modifier = {
+			factor = 0.9
+			navy_size = 10
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 25
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 50
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 75
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 100
+		}
 	}
 	
 	option = {
@@ -952,7 +993,7 @@ province_event = {
 		#triggered by mr_forest_restoration decision
 	}
 	mean_time_to_happen = {
-		days = 1 
+		days = 1
 	}
 	
 	option = {
@@ -992,6 +1033,26 @@ province_event = {
 	}
 	mean_time_to_happen = {
 		years = 20
+		modifier = {
+			factor = 0.9
+			navy_size = 10
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 25
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 50
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 75
+		}
+		modifier = {
+			factor = 0.9
+			navy_size = 100
+		}
 	}
 	
 	option = {
@@ -1784,6 +1845,210 @@ country_event = {
 		every_owned_province = {
 			limit = { has_province_flag = crown_agenda_culture_target_2 }
 			clr_province_flag = crown_agenda_culture_target_2
+		}
+	}
+}
+#overseas expansion
+country_event = {
+	id = mr_england.101
+	title = mr_england.101.t
+	desc = mr_england.101.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		#triggered by mission eng_m_naval_4
+	}
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = mr_england.101.a
+		
+	}
+}
+#National Timber Security
+country_event = {
+	id = mr_england.102
+	title = mr_england.102.t
+	desc = mr_england.102.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		#triggered by mission eng_m_timber
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		random_ally = {
+			save_global_event_target_as = eng_wood_plug
+		}
+	}
+	
+	option = {
+		name = mr_england.102.a
+		highlight = yes
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = eng_m_timber_trigger_TT
+				all_owned_province = {
+					NOT = {
+						calc_true_if = {
+							amount = 1
+							OR = {
+								has_province_modifier = eng_m_neglected_royal_woods
+								has_province_modifier = eng_m_declining_royal_woods
+								has_province_modifier = eng_m_severely_exhausted_royal_woods
+							}
+						}
+					}
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_group = england_region
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_group = england_region
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_group = england_region
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_group = england_region
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = mr_england.102.b
+		highlight = yes
+		trigger = {
+			calc_true_if = {
+				amount = 8
+				all_owned_province = {
+					NOT = { province_group = england_region }
+					OR = {
+						trade_goods = lumber
+						trade_goods = naval_supplies
+					}
+				}
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = lumber
+					trade_goods = naval_supplies
+				}
+				NOT = { has_province_modifier = mr_eng_lumbermills }
+			}
+			add_province_modifier = {
+				name = mr_eng_lumbermills
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = mr_england.102.c
+		highlight = yes
+		trigger = {
+			any_ally = {
+				lumber = 4
+			}
+		}
+		hidden_effect = {
+			set_country_flag = eng_got_a_supplier
+		}
+		custom_tooltip = 
+		event_target:eng_wood_dealer = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = lumber
+						trade_goods = naval_supplies
+					}
+					NOT = { has_province_modifier = mr_eng_lumbermills }	
+				}
+				add_province_modifier = {
+					name = mr_eng_lumbermills
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = lumber
+						trade_goods = naval_supplies
+					}
+					NOT = { has_province_modifier = mr_eng_lumbermills }	
+				}
+				add_province_modifier = {
+					name = mr_eng_lumbermills
+					duration = -1
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = eng_wood_dealer
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = eng_wood_dealer
+			}
 		}
 	}
 }

@@ -56,4 +56,7 @@ went_on_hajj = {
 	opinion = 50
 	yearly_decay = 0.5
 }
-
+eng_wood_dealer = {
+	opinion = 30
+	yearly_decay = 0
+}

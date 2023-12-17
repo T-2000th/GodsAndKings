@@ -20,5 +20,6 @@ discovered_by = eastern
 extra_cost = 8
 center_of_trade = 1
 add_local_autonomy = 50
-
+add_devastation = 60
+set_seat_in_parliament = yes
 1444.11.12 = { trade_goods = unknown }

@@ -584,7 +584,6 @@ england_missions_naval_branch = {
 			}
 		}
 	}
-	
 	eng_m_naval_2 = { #royal navy shipyards
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_naval_1 }
@@ -618,6 +617,37 @@ england_missions_naval_branch = {
 			add_country_modifier = {
 				name = mr_eng_shipbuilding
 				duration = 9125
+			}
+		}
+	}
+	eng_m_naval_4 = { #overseas expansion
+		icon = mission_build_up_to_force_limit
+		required_missions = { eng_m_naval_2 }
+		position = 5
+		provinces_to_highlight = {
+			has_port = yes
+			continent = europe
+			NOT = { region = british_isles_region }
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 10
+				all_owned_province = {
+					has_port = yes
+					continent = europe
+					NOT = { region = british_isles_region }
+				}
+			}
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+				has_port = yes
+				continent = europe
+				NOT = { region = british_isles_region }
+			}
+		}
+		effect = {
+			country_event = {
+				name = mr_england.101
 			}
 		}
 	}
@@ -712,13 +742,27 @@ england_missions_naval_branch_b = {
 				}
 				calc_true_if = {
 					amount = 8
-					owned_by = ROOT
-					NOT = { province_group = england_region }
+					all_owned_province = {
+						NOT = { province_group = england_region }
+						OR = {
+							trade_goods = lumber
+							trade_goods = naval_supplies
+						}
+					}
+				}
+				any_ally = {
+					lumber = 4
 				}
 			}
 		}
 		effect = {
-		
+			add_country_modifier = {
+				name = mr_naval_maintenance
+				duration = -1
+			}
+			country_event = {
+				name = mr_england.102
+			}
 		}
 	}
 }
@@ -745,9 +789,13 @@ england_missions_central_branch_L = {
 			}
 		}
 		effect = {
-			add_country_modifier 
+			add_country_modifier = {
+				name = mr_eng_government_reforms
+				duration = 9125
+			}
 		}
 	}
+}
 #central branch
 england_missions_central_branch = {
 	slot = 3
