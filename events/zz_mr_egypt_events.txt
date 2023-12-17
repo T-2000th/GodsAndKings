@@ -8,7 +8,7 @@ country_event = {
 	id = mr_egypt.1
 	title = mr_egypt.1.t
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
+
 	desc = {
 		trigger = {
 			NOT = { has_ruler_flag = leader_has_been_pushed_out }
@@ -31,9 +31,9 @@ country_event = {
 		trigger = { has_country_flag = caretaker_revolutionary_government }
 		desc = elections.700.caretaker
 	}
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		if = {
 			limit = {
@@ -75,24 +75,24 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { 
+		ai_chance = {
 			factor = 60
 			modifier = {
 				factor = 0
 				NOT = { republican_tradition = 25 }
-			}	
+			}
 			modifier = {
 				factor = 0.5
 				NOT = { republican_tradition = 50 }
-			}				
+			}
 			modifier = {
 				factor = 0.5
 				NOT = { republican_tradition = 75 }
-			}	
+			}
 			modifier = {
 				factor = 2.0
 				republican_tradition = 90
-			}		
+			}
 		}
 		custom_tooltip = remains_ruler
 		if = {
@@ -103,16 +103,16 @@ country_event = {
 		change_dip = 1
 		change_mil = 1
 		if = {
-			limit = { 
+			limit = {
 				government = republic
-				NOT = { republican_tradition = 20 }				
+				NOT = { republican_tradition = 20 }
 				has_dlc = "Res Publica"
 				NOT = { has_government_attribute = cannot_become_dictatorship }
 			}
-			add_government_reform = presidential_despot_reform	
+			add_government_reform = presidential_despot_reform
 		}
 		if = {
-			limit = { 
+			limit = {
 				government = republic
 				NOT = { republican_tradition = 20 }
 				NOT = { has_dlc = "Res Publica" }
@@ -250,8 +250,8 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1				
-				culture = berber				
+				mil = 1
+				culture = berber
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -259,8 +259,8 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1					
-				culture = berber				
+				mil = 1
+				culture = berber
 			}
 		}
 		if = {
@@ -302,7 +302,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1		
+				dip = 1
 				culture = turkish
 				random_gender = yes # Allows random gender for republics
 			}
@@ -311,7 +311,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1		
+				dip = 1
 				culture = turkish
 			}
 		}
@@ -357,7 +357,7 @@ country_event = {
 			add_scaled_republican_tradition = -4
 		}
 		if = {
-			limit = { 
+			limit = {
 				republic_with_female_rulers_trigger = yes
 			}
 			define_ruler = {
@@ -415,9 +415,9 @@ country_event = {
 	title = "mr_egypt.2.t"
 	desc = "mr_egypt.2.d"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		has_reform = wazir_republic
 	}
@@ -430,7 +430,7 @@ country_event = {
 	after = {
 		post_ruler_focus_clearance = yes
 	}
-	
+
 	option = {
 		name = "mr_egypt.2.oa"	# An administrator type / nubian
 		ai_chance = { factor = 40 }
@@ -439,7 +439,7 @@ country_event = {
 			define_ruler = {
 				mil = 1
 				adm = 4
-				dip = 1		
+				dip = 1
 				culture = nubian
 				random_gender = yes # Allows random gender for republics
 			}
@@ -448,7 +448,7 @@ country_event = {
 			define_ruler = {
 				mil = 1
 				adm = 4
-				dip = 1		
+				dip = 1
 				culture = nubian
 			}
 		}
@@ -480,7 +480,7 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1		
+				mil = 1
 				culture = berber
 				random_gender = yes # Allows random gender for republics
 			}
@@ -489,7 +489,7 @@ country_event = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1	
+				mil = 1
 				culture = berber
 			}
 		}
@@ -521,7 +521,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1	
+				dip = 1
 				culture = turkish
 				random_gender = yes # Allows random gender for republics
 			}
@@ -530,7 +530,7 @@ country_event = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1		
+				dip = 1
 				culture = turkish
 			}
 		}
@@ -540,7 +540,7 @@ country_event = {
 				faction = wr_mamluks
 				influence = 20
 			}
-		}	
+		}
 		if = {
 			limit = { has_government_attribute = elections_influence_estates }
 			add_estate_loyalty_by_class_mil = {
@@ -564,7 +564,7 @@ country_event = {
 			add_scaled_republican_tradition = -4
 		}
 		if = {
-			limit = { 
+			limit = {
 				republic_with_female_rulers_trigger = yes
 				NOT = { has_reform = signoria_reform }
 			}
@@ -611,17 +611,17 @@ country_event = { #Sitt Al-Mulk becomes advisor
 	title = mr_egypt.3.t
 	desc = mr_egypt.3.d
 	picture = wihgfx_FEMALE_RULER_eventPicture
-	
+
 	fire_only_once = yes
 
 	trigger = {
 		has_reform = wazir_republic
 	}
-	
+
 	mean_time_to_happen = {
 		months = 600
 	}
-	
+
 	option = {
 		name = mr_egypt.3.a
 		add_adm_power = 100
@@ -634,14 +634,14 @@ country_event = { #Sitt Al-Mulk becomes advisor
 			skill = 3
 			discount = yes
 			name = "Sitt al-Mulk"
-			
+
 		}
 		hidden_effect = {
 			set_global_flag = mr_egypt_has_sitt_almulk
 		}
 		ai_chance = { factor = 75 }
 	}
-	
+
 	option = {
 		name = mr_egypt.3.b
 		add_prestige = 20
@@ -654,13 +654,13 @@ country_event = { #Sitt Al-Mulk becomes vizier
 	title = mr_egypt.4.t
 	desc = mr_egypt.4.d
 	picture = wihgfx_FEMALE_RULER_eventPicture
-	
+
 	fire_only_once = yes
 
 	trigger = {
 		has_global_flag = mr_egypt_has_sitt_almulk
 	}
-	
+
 	mean_time_to_happen = {
 		months = 60
 	}
@@ -680,15 +680,15 @@ country_event = { #Sitt Al-Mulk becomes vizier
 		add_scaled_republican_tradition = 5
 		if = {
 			limit = {
-				has_dlc = "Rights of Man" 
+				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				add_ruler_personality = intricate_web_weaver
 			}
 		}
 		ai_chance = { factor = 75 }
 	}
-	
+
 	option = {
 		name = mr_egypt.4.b
 		add_prestige = 30
@@ -698,5 +698,35 @@ country_event = { #Sitt Al-Mulk becomes vizier
 				win = yes
 			}
 		ai_chance = { factor = 25 }
+	}
+}
+country_event = { # Fate of the crusader states
+	id = mr_egypt.5
+	title = mr_egypt.5.t
+	desc = mr_egypt.5.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Subjugate them
+		name = mr_egypt.5.oa
+		custom_tooltip = mr_egypt_5_tt
+
+		every_known_country = {
+			limit = { is_levantine_crusader_state = yes }
+
+			ROOT = {
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = PREV
+				}
+			}
+		}
+	}
+
+	option = { # Eat them
+		name = mr_egypt.5.ob
+
+		add_permanent_claim_multi_provinces = { target = outremer_region }
 	}
 }

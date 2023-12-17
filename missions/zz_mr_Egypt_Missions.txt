@@ -36,6 +36,80 @@ egypt_missions_fourth = {
 	potential = {
 		tag = EGY
 	}
+
+	egypt_restore_jerusalem_1 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 3
+		required_missions = { egypt_conquest_east_2 }
+
+		provinces_to_highlight = {
+			province_id = 379
+		}
+
+		trigger = {
+			379 = {
+				NOT = { devastation = 1 }
+				has_building = temple
+			}
+		}
+
+		effect = {
+			if = { # If holy city of jerusalem < tier 2
+				limit = {
+					379 = {
+						NOT = {
+							has_great_project = { type = holy_city_jerusalem tier = 2 }
+						}
+					}
+				}
+
+				add_treasury = -500
+				379 = {
+					add_great_project_tier = { type = holy_city_jerusalem tier = 1 }
+				}
+			}
+			else = {
+				add_treasury = 500
+				add_adm_power = 100
+			}
+		}
+	}
+
+	egypt_conquest_east_4 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 5
+		required_missions = { egypt_conquest_east_3 }
+
+		provinces_to_highlight = {
+			is_capital_of = HED
+		}
+
+		trigger = {
+			OR = {
+				has_spy_network_in = {
+					who = HED
+					value = 50
+				}
+				NOT = { exists = HED }
+			}
+		}
+
+		effect = {
+			add_permanent_claim_multi_provinces = { target = tabuk_area }
+			add_permanent_claim_multi_provinces = { target = medina_area }
+			add_permanent_claim_multi_provinces = { target = mecca_area }
+
+			if = {
+				limit = {
+					mission_completed = egypt_restore_jerusalem_1
+				}
+				add_country_modifier = {
+					name = egy_justified_war_mod
+					duration = 3650
+				}
+			}
+		}
+	}
 }
 
 egypt_missions_fifth = {
@@ -51,6 +125,12 @@ egypt_missions_fifth = {
 		icon = mission_egyptian_mamluk_soldier
 		position = 1
 		required_missions = { }
+
+		provinces_to_highlight = {
+			area = palestine_area
+			NOT = { owned_by = ROOT }
+			NOT = { is_claim = ROOT }
+		}
 
 		trigger = {
 			palestine_area = {
@@ -68,6 +148,93 @@ egypt_missions_fifth = {
 				name = egy_justified_war_mod
 				duration = 3650
 			}
+		}
+	}
+
+	egypt_conquest_east_2 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 2
+		required_missions = { egypt_conquest_east_1 }
+
+		provinces_to_highlight = {
+			area = palestine_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_treasury = 100
+			MAM = {
+				every_owned_province = {
+					add_claim = ROOT
+				}
+			}
+		}
+	}
+
+	egypt_conquest_east_3 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 4
+		required_missions = { egypt_conquest_east_2 }
+
+		provinces_to_highlight = {
+			owned_by = MAM
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			OR = {
+				overlord_of = MAM
+				NOT = { exists = MAM }
+			}
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = { amount = 30 }
+			country_event_with_insight = {
+				id = mr_egypt.3
+				insight_tooltip = egypt_conquest_east_3_event_insight_tt
+			}
+		}
+	}
+
+	egypt_conquest_east_5 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 5
+		required_missions = { egypt_conquest_east_3 }
+
+		provinces_to_highlight = {
+			OR = {
+				area = aleppo_area
+				area = syria_area
+				AND = {
+					is_capital = yes
+					owner = {
+						is_levantine_crusader_state = yes
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			aleppo_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			syria_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			any_known_country = {
+				is_levantine_crusader_state = yes
+				is_subject_of = ROOT
+			}
+		}
+
+		effect = {
+			add_years_of_income = 2
+			add_permanent_claim_multi_provinces = { target = mashriq_region }
 		}
 	}
 }

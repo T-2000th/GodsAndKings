@@ -478,6 +478,12 @@ mr_egypt.4.d: "It happened subtly enough to go unnoticed initially, but as the m
 mr_egypt.4.a: "I've been beaten at my own game..."
 mr_egypt.4.b: "I won't fall without a fight!"
 
+mr_egypt.5.t: "Fate of the Crusaders"
+mr_egypt.5.d: "Having crushed the uppity Mameluk sultan, the only remaining obstacle to our total control of Syria and the wealthy Levantine coast are the annoying Frankish remnants that hide behind their walls in their strongholds and port towns.\n\nWe have little to fear from the so-called crusaders militarily, even if they could all manage to unite at once--which is unlikely--but it is an unfortunate fact that by the sheer duration of their sad but tenacious reign in the Levant, they have set down deep roots and replaced some of their Frankish impetuousness with more worthy traits, while remaining an admirable quality as warriors. Perhaps it would be more beneficial to make them into vassal states rather than directly annex them."
+mr_egypt.5.oa: "Yes, let the Franji rule in their castles, as long as they pay tribute."
+mr_egypt_5_tt: "If we become the overlord of all existing crusader states, we will be able to combine them into a single §Ysubject kingdom.§! \n\nAs long as we have a crusader subject, we will gain additional vassal forcelimit contribution."
+mr_egypt.5.ob: "The Syrian coast is §Ymine.§!"
+
 
 mrLevantFlavor.1.t: "Capture of the Jasmine City"
 mrLevantFlavor.1.da: "Long has Damascus, the Jewel of Syria, been the seat of the fiercest and most dedicated opponents to our Christian presence in the Levant, from Emir Duqaq just after the First Crusade to the long reign of the perfidious Mamelukes in our present day. With the momentous capture of such a wealthy, well-fortified city, our position in Syria is immensely strengthened. There is nowhere between our strongholds to hide but the treacherous desert, and our armies will be unmatched by all but perhaps the Wazir of Egypt or the Ilkhan himself."

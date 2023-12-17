@@ -1,3 +1,19 @@
 ﻿l_english:
  ## ------------------------ Missions ------------------------------------------
+ egypt_conquest_east_1_title: "Push into Palestine"
+ egypt_conquest_east_1_desc: "REPLACE_ME"
+ egypt_conquest_east_2_title: "Mameluks Humbled"
+ egypt_conquest_east_2_desc: "REPLACE_ME"
+ egypt_conquest_east_3_title: "Fate of the Franks"
+ egypt_conquest_east_3_desc: "REPLACE_ME"
+ egypt_restore_jerusalem_1_title: "Restore Jerusalem"
+ egypt_restore_jerusalem_1_desc: "REPLACE_ME"
+ egypt_conquest_east_4_title: "Sharif of Mecca"
+ egypt_conquest_east_4_desc: "REPLACE_ME"
+ egypt_conquest_east_5_title: "Free the Caliph"
+ egypt_conquest_east_5_desc: "REPLACE_ME"
 
+
+## ------------------------ Modifiers ------------------------------------------
+ egy_justified_war_mod: "Justified Wars"
+ desc_egy_justified_war_mod: "The firm legal and moral grounding of our current claims among the populace makes them and the troops more willing and eager to serve."
