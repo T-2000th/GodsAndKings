@@ -1,0 +1,40 @@
+namespace = mr_ireland
+
+#University of Dublin Restoration
+province_event = {
+	id = mr_ireland.1
+	title = mr_ireland.1.t
+	desc = mr_ireland.1.d
+	picture = POPE_PREACHING_eventPicture
+	
+	major = yes
+	major_trigger = {
+		capital_scope = {
+			province_group = ireland_region
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		province_id = 4951
+		NOT = { has_building = university }
+		has_construction = building
+	}
+	mean_time_to_happen = {
+		years = 15
+	}
+	
+	option = {
+		name = mr_ireland.1.a
+		owner = { add_adm_power = -50 }
+		add_building_construction = {
+			building = university
+			speed = 0.5
+		}
+	}
+	
+	option = {
+		name = mr_ireland.1.b
+		owner = { add_adm_power = 100 }
+	}
+}
+

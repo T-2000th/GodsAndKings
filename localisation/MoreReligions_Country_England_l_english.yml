@@ -190,6 +190,22 @@
  mr_england.2004.b: "Domestic goods are more important"
  eng_ire_subsidies_TT: "§YThe Irish Goods Act§! will be removed from this province after it is converted to §YAnglo-Hibernian§!\nWill make Anglo-Hibernian Conversion events §Y25%§! more likely in provinces with over §Y8§! base production"
  
+ mr_england.2005.t: "Irish House Lords"
+ mr_england.2005.d: "The Gaelic Resurgence empowered many Irish nobles, placing the peerages of Ireland on par with England. Conquest of Ireland was simple, but governing it less so; we cannot do it without the support of the Irish Lords. In [GetYear], The Earl of [irish_house_lord.GetName] journeyed to [Root.Capital.GetName] with an offer: in exchange for promoting the interests of the Crown, he requested a revitalization of his estates and particularlly his castle. He argues that governing from within would be more effective in drawing in the local Irish into our sphere, and would only require a comparitively meager investment."
+ mr_england.2005.a: "A compelling proposal."
+ mr_england.2005.b: "He's only looking out for himself."
+ eng_irish_lords_TT: "Will make Anglo-Hibernian Conversion events §Y25%§! more likely in provinces with §Yforts.§!"
+ 
+ mr_england.2006.t: "Bonding Over the Hunt"
+ mr_england.2006.d: "Fox hunts are a time honored tradition for nobility across the British Isles and Ireland. [Root.Monarch.GetTitle] [Root.Monarch.GetName] has traveled to [irish_fox_prov.GetName], invited by the local Lord. In the encampment before the Hunt, the two discuss the matters of faith, love, and shared love of the Classics. At first a muted conversation, their talks grew to raucous laughter. Their men outside the main tent, overhearing this, could only take to mirroring their lieges' merriment.\nThe Hunt went off without a hitch, making off with several fox pelts and the [Root.Monarch.GetTitle] returning to [Root.Capital.GetName] with a fond memory."
+ mr_england.2006.a: "Everyone should give it a go!"
+ eng_irish_lords_TT: "Will make Anglo-Hibernian Conversion events §Y10%§! more likely."
+ 
+ mr_england.2007.t: "Export of [eng_irish_cheese.GetName] Cheese"
+ mr_england.2007.d: "[eng_irish_cheese.GetName] has found popularity throughout England, famed for its smooth texture and distinct flavor. Hawkers as far away as Visby have been reported selling [eng_irish_cheese.GetName] Cheese. At home, it has quickly found a foothold amongst other English cheese varieties."
+ mr_england.2007.a: "Get me more!"
+ eng_irish_cheese_TT: "Will make Anglo-Hibernian Conversion events §Y5%§! more likely."
+ 
  mr_england.3.t: "Two Islands, One State"
  mr_england.3.d: "Since the conquest of Ireland, the people of have quickly taken to adopting the English language, followed closely by adopting many of the cultural practices of people in England proper. Reports have even gone so far as to call the people of Dublin 'More English than the English themselves,' despite it being the premier center of Irish culture only decades before. With the impetus of conquering Ireland being uniting both Kingdoms under the same crown, it would not be unreasonable to finally officialize this permanent union of crowns into one."
  mr_england.3.a: "Two kingdoms as One!"

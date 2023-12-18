@@ -700,6 +700,9 @@ mr_absolutist_england_reform = {
 	}
 	lock_level_when_selected = yes
 
+	government_abilities = {
+		mr_island_primacy
+	}
 	modifiers = {
 		all_estate_influence_modifier = -0.1
 		max_absolutism = 10
@@ -802,7 +805,7 @@ mr_greek_poleocracy_reform ={
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
-} #
+}
 mr_koinon_reform ={
 	icon = "national_assembly"
 	allow_normal_conversion = yes

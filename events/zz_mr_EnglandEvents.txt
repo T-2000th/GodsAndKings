@@ -76,7 +76,9 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 
 	is_triggered_only = yes
-	trigger = { }
+	trigger = {
+		#triggered by eng_m_ireland_2
+	}
 	fire_only_once = yes
 	mean_time_to_happen = { days = 1 }
 	
@@ -122,8 +124,10 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ENG
+		religion = mr_lollard
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		any_owned_province = { culture = irish }
 	}
 	mean_time_to_happen = {
 		years = 7
@@ -154,28 +158,39 @@ province_event = {
 	picture = POPE_PREACHING_eventPicture
 
 	trigger = {
+		province_group = ireland_region
+		culture = irish
 		owner = {
 			tag = ENG
-			religion = mr_lollard
 			has_country_flag = eng_lenient_oversight_flag
 			NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		}
-		province_group = ireland_region
-		culture = irish
 	}
+	is_mtth_scaled_to_size  = 1
 	mean_time_to_happen = {
-		years = 20
-		
+		years = 40
 		modifier = {
 			factor = 0.67
-			has_tax_building_trigger = yes
 			owner = { has_country_flag = eng_distribute_english_bibles_flag }
+			has_tax_building_trigger = yes
 		}
-		
 		modifier = {
 			factor = 0.75
-			base_production = 8
 			owner = { has_country_flag = eng_ire_subsidies_flag }
+			base_production = 8
+		}
+		modifier = {
+			factor = 0.75
+			fort_level = 2
+			owner = { has_country_flag = eng_distribute_irish_house_lords_flag }
+		}
+		modifier = {
+			factor = 0.90
+			owner = { has_country_flag = eng_fox_hunts_flag }
+		}
+		modifier = {
+			factor = 0.95
+			owner = { has_country_flag = eng_irish_cheese_flag }
 		}
 	}
 	
@@ -201,6 +216,7 @@ country_event = {
 		tag = ENG
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		any_owned_province = { culture = irish }
 	}
 	mean_time_to_happen = {
 		years = 10
@@ -245,6 +261,119 @@ country_event = {
 		}
 	}
 }
+
+#Irish House Lords
+country_event = {
+	id = mr_england.2005
+	title = mr_england.2005.t
+	desc = mr_england.2005.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_country_flag = eng_lenient_oversight_flag
+		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		any_owned_province = { culture = irish }
+	}
+	mean_time_to_happen = {
+		years = 8
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				province_group = ireland_region
+				culture = irish
+			}
+			save_event_target_as = irish_house_lord
+		}
+	}
+	
+	option = { #build forts
+		name = mr_england.2005.a
+		add_years_of_income = -1.5
+		add_mil_power = -100
+		hidden_effect = { set_country_flag = eng_distribute_irish_house_lords_flag }
+		custom_tooltip = eng_irish_lords_TT
+	}
+	
+	option = { #dont build forts
+		name = mr_england.2005.a
+		ireland_region = {
+			add_nationalism = 10
+		}
+	}
+}
+
+#Fox Hunt
+country_event = {
+	id = mr_england.2006
+	title = mr_england.2006.t
+	desc = mr_england.2006.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_country_flag = eng_lenient_oversight_flag
+		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		any_owned_province = { culture = irish }
+	}
+	mean_time_to_happen = {
+		years = 20
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				province_group = ireland_region
+				culture = irish
+			}
+			save_event_target_as = irish_fox_prov
+		}
+	}
+	
+	option = {
+		name = mr_england.2006.a
+		set_country_flag = eng_fox_hunts_flag
+		custom_tooltip = eng_irish_lords_TT
+	}
+}
+
+
+#Ulster Cheese
+country_event = {
+	id = mr_england.2007
+	title = mr_england.2007.t
+	desc = mr_england.2007.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_country_flag = eng_lenient_oversight_flag
+		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		any_owned_province = { culture = irish }
+	}
+	mean_time_to_happen = {
+		years = 20
+	}
+	
+	immediate = {
+		random_owned_province = {
+			limit = { trade_goods = cheese }
+			save_event_target_as = eng_irish_cheese
+		}
+	}
+	
+	option = {
+		name = mr_england.2007.a
+		hidden_effect = { set_country_flag = eng_irish_cheese_flag }
+		custom_tooltip = eng_irish_cheese_TT
+	}
+}
+
 
 #Two Islands, One State
 country_event = {
