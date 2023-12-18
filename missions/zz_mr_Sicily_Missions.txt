@@ -137,12 +137,10 @@ mr_sicily_missions_first = {
 			custom_tooltip = if_africa_TT
 			tooltip = {
 				kabylia_area = {
-					type = all
 					add_core = AFR
 					cede_province = AFR
 				}
 				barbary_coast_area = {
-					type = all
 					add_core = AFR
 					cede_province = AFR
 				}
@@ -155,12 +153,10 @@ mr_sicily_missions_first = {
 						}
 					}
 					kabylia_area = {
-						type = all
 						add_core = AFR
 						cede_province = AFR
 					}
 					barbary_coast_area = {
-						type = all
 						add_core = AFR
 						cede_province = AFR
 					}
@@ -1666,11 +1662,11 @@ mr_sicily_missions_fifth = {
 							has_terrain = hills
 						}
 					}
-				}
-				add_province_modifier = {
-					name = sicilian_development
-					duration = -1
-				}
+					add_province_modifier = {
+						name = sicilian_development
+						duration = -1
+					}
+				}	
 			}
 		}
 	}
