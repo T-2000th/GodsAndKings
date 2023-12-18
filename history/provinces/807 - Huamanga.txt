@@ -1,8 +1,8 @@
 #807 - Abancay
 
-# owner = CSU
-# controller = CSU
-# add_core = CSU
+owner = CSU
+controller = CSU
+add_core = CSU
 culture = inca
 religion = inti
 capital = "Abancay"
@@ -11,7 +11,7 @@ hre = no
 base_tax = 3 
 base_production = 3
 base_manpower = 2
-# is_city = yes
+is_city = yes
 
 
 
