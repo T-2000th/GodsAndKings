@@ -1,10 +1,10 @@
 # No previous file for Ecab
 
 culture = yucatec
-# owner = COC
-# controller = COC
-# add_core = COC
-# is_city = yes
+owner = COC
+controller = COC
+add_core = COC
+is_city = yes
 religion = mesoamerican_religion
 capital = "Ecab"
 trade_goods = fish

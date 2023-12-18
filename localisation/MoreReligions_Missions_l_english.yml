@@ -1,5 +1,5 @@
 ﻿l_english:
- 
+
  ###Pagan Missions####
  pgn_unite_southern_burma_title:0 "Hanthawaddy's Legacy"
  pgn_unite_southern_burma_desc:0 "The Hanthawaddy War lasted 40 years and brought devestation to us and the destruction of their kingdom. Now is the time to rebuild, and unify the lands of the first Pagan Kingdom."
@@ -10,7 +10,7 @@
  pgn_invade_arakan_desc:0 "The Arakan Kingdom was our ally in the Hanthawaddy War, supporting us in the subjugation of the Pegu Kingdom. As a result, our courts have become quite close, with them paying a tribute to us in return for our protection. We should approach them about furthering our relationship..."
  integrate_ark_pgn_tt:0 "§TThe Lord of Arakan have accepted our offer of integration, and we shall strive towards it! Complete the annexation decision to finish this mission.§!"
  brutalize_ark_tt:0 "§RArakan has betrayed our king and his generous offer. We must make sure that his kingdom remembers its place; under our heel!§!"
- 
+
  #Shan Missions
  sh_prepare_for_war_shan_title:0 "Prepare the Army"
  sh_prepare_for_war_shan_desc:0 "We must prepare ourselves for the long campaign to unify the Shan."
@@ -47,7 +47,7 @@
  sh_foreign_allies_tt:0 "Have either §G2 Tributaries of Pagan at 100 Opinion§!, or have §G1 Rival of Pagan at 100 Opinion.§!"
 
  ##Japanese Missions#
- 
+
  mr_jap_SD_1_title: "Establish the New Court"
  mr_jap_SD_2_title: "Reorganize the Kokushi"
  mr_jap_SD_3_title: "Align the Samurai Clans"
@@ -57,8 +57,8 @@
  mr_jap_SD_7_title: "End the Shugo Dominance"
  mr_jap_shinbutsu_1_title: "Invite Foreign Scholars"
  mr_jap_shinbutsu_2_title: "Confucianism in the Court"
- 
- 
+
+
  estate_shugo_mission_1_TT: "Have more §YCrown Land§! than the §YShugo§! Estate."
  THIS_WILL_KILL_YOU_TT: "§RIf this happens, it will end your campaign and destroy Japan!§!"
  advisor_cost_JAP_1: "A New Court Era"
@@ -70,7 +70,7 @@
  if_neo_confucian_done: "If we have completed the §YNeo-Confucianism§! Incident, we will gain the following in our Capital:"
  if_neo_confucian_not: "If we have not completed the §YNeo-Confucianism§! Incident, we will gain the ability to start the Incident via a Decision."
 confucian_scholars_JAP: "Confucian Scholars"
- 
+
  BAKUFU_NAME_1: "Edo Bakufu"
  BAKUFU_NAME_2: "Tokushima Bakufu"
  BAKUFU_NAME_3: "Satsuma Bakufu"
@@ -79,7 +79,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  BAKUFU_NAME_2_ADJ: "Bakufu"
  BAKUFU_NAME_3_ADJ: "Bakufu"
  BAKUFU_NAME_4_ADJ: "Bakufu"
- 
+
 
  #Ilkhanate Missions#
  ilk_missionaries_1: "Ilkhanate Missionaries"
@@ -87,9 +87,9 @@ confucian_scholars_JAP: "Confucian Scholars"
  no_disaster_ilk: "This will prevent the §YAnarchy of Tabriz§! from being able to start."
  ilk_religious_1_title: "End the Sufi Privileges"
  ilk_political_2_title: "Stabalize the Court"
- 
+
  ##Hungary and breakaway Missions
- 
+
  knn_diplo_second_title: "Secure Kievan Alliance"
  knn_diplo_second_desc: "Kiev has responded to our diplomatic request - that they still, even after all this time, have our back in this civil war. Now, if we can convince their Khan to fully back our invasion, the Blue Horde can begin their invasion on our behalf so that we might unify all of Hungary!"
  knn_diplo_first_title: "Gather Natural Allies"
@@ -152,7 +152,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  knn_blh_fifth_desc: "In that ancient era, we too were nomads. Not the Cumans, not the Kipchak, but the Magyar. We roamed from Asia to Europe, raiding and razing as we pleased. We shall return to this tradition, aided by our Cuman and Mongol brethren, and reclaim the world as our personal grazing ground."
 
  defensive_strong_hold_TARG: "Stronghold in Wallachia"
- 
+
  #KNN_war_modifier: "Riders of the Kan"
  HUN_thunder_dome_winner_TT: "Have won the §YHungarian Civil War§!"
  UPDATE_MISSION_KNN: "This event will decide whether to unite peacefully with the Blue Horde or to take their lands militarily."
@@ -167,7 +167,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  knn_branching_1_title: "Branching Mission"
  knn_branching_2_title: "Branching Mission"
  knn_branching_3_title: "Branching Mission"
- knn_branching_4_title: "Branching Mission" 
+ knn_branching_4_title: "Branching Mission"
  knn_branching_5_title: "Branching Mission"
  knn_diplo_third_title: "The Stab in the Back"
  knn_diplo_third_desc: "While the civil war raged across our nation, we called upon the Blue Horde to aid us and support us through those trying times. They came to our aid, and with their support we conquered all of the lands of the Magyars. However, recently, we have been betrayed. They demanded that we, their most trusting of allies, become a tributary to them. This affront cannot stand. We are the masters of our own destiny, and we shall not bend the knee to any foreign Khan! We have been betrayed, our trust abused by their own greedy nature. We shall drive them back from our home, and prove that we are mightier than they are!"
@@ -177,7 +177,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  estate_buff_KNN: "This will grant us access to the §YTribal Patriarchs§! Estate Privilege."
  BLH_core_TT: "If we complete this mission while the @BLH §YBlue Horde§! currently exists, we will gain §YTerritorial Cores§! on all provinces that they currently own."
  razed_krakow_knn: "Razing of Krakow"
- polish_defeat_TT: "If we complete this mission while @POL §YPoland§! does exist, §YPoland§! will receive the following:" 
+ polish_defeat_TT: "If we complete this mission while @POL §YPoland§! does exist, §YPoland§! will receive the following:"
  loss_of_prestige_POL: "Crippling Defeat"
  conquest_complete_TT: "If we complete this mission while @POL §YPoland§! does not exist, we will receive the following:"
  slavic_conquest_CB_TT: "We will gain access to the §YConquest of the Rus§! Casus Belli."
@@ -214,7 +214,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  aab_buda_third_title: "Etyek-Buda Vinyards"
  aab_buda_fourth_title: "A Renaissance City"
  aab_buda_fifth_title: "The Founding of Budapest"
- 
+
  #Siam Missions
 #Siam Missions
  mr_siam_conquest_1_title: "Rally the Levies"
@@ -233,7 +233,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_conquest_5_desc: "The Khmer Empire, centered in Angkor, has long been a force that has existed to the very detriment of Siam and the Thai people- practically built off all the gold we paid them and all the food we've grown for them. The prosperity of our lands has been funneled away for far too long, and this travesty must come to an end-\nthe Khmer must learn that we'll be their mules no longer!"
 
  mr_siam_conquest_6_title: "Invade Vientiane"
- mr_siam_conquest_6_desc: "Not far off the site of our latest triumphs against the Khmer lie the lands of the Lao and their city of Vientiane. While not the most notable, and definitely not the richest of places in the region; the acquisition of that city can nonetheless prove to be a worthwhile endeavor- at the very least in providing us with a central, defensible and strategic location in the west of Indochina, connected to China and Vietnam and open to their lucrative markets as it is" 
+ mr_siam_conquest_6_desc: "Not far off the site of our latest triumphs against the Khmer lie the lands of the Lao and their city of Vientiane. While not the most notable, and definitely not the richest of places in the region; the acquisition of that city can nonetheless prove to be a worthwhile endeavor- at the very least in providing us with a central, defensible and strategic location in the west of Indochina, connected to China and Vietnam and open to their lucrative markets as it is"
 
  mr_siam_conquest_7_title: "Ensure Laotian Loyalty"
  mr_siam_conquest_7_desc: "Our recent conquest of Vientiane has aroused quite the negative perception of us from the Lao people, who no doubt view us as a new oppressor; one that violently barged in and ended an era of independence and self determination. We wish not to cultivate such a gnarly image of ourselves in our subjects' minds, however- we must instead convince them that we- as their suzerains- first and foremost care about them and their rights as people of the realm.\n\nWhile that may not necessarily be true, there is also nothing to be gained in antagonising them. We must bring what little remains of Lao independence to an end, and once the region is consolidated- perhaps then a show of benevolence on our part may be warranted; in tolerating them and their local superstitions"
@@ -242,10 +242,10 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_angkor_1_desc: "It's about time we took this whole protracted conflict and pushed it back to where it all started; to the mighty city of Angkor, bringing a much-awaited end to this brutal epoch in our history.\nBy merely taking over the beating heart and soul of the once-mighty Khmer Empire, however, their people; our oppressors, those who once held such thorough sway over us will never bow before us, at least not in honesty.\n\nIf we are to rule in harmony, then, we'll be forced to take dire measures to humble their character, and imprint on them all a valuable lesson on what it means to stand against us. If Siam is to rise, then Angkor is to burn"
 
  mr_siam_angkor_2_title: "Expansion of Thai Influence"
- mr_siam_angkor_2_desc: "The dust has settled, and the sands of time have shifted and changed; taking what remains of Angkor at last with them, long after its demise at our very hands.\n\nLeaving things off with the Khmer at an act of cruelty is not what we ultimately have in mind for the region however, as we indeed do see intrinsic value in it and in the productivity of its people.\nIn rebuilding the bridges between our people that years of war have torn, we'll have to appease them- offer them jobs and opportunities within our court and working to tolerate their cultural norms..\n\nAlternatively, we could also just force our religion upon them instead; While it'll stir quite a nerve now- give it a generation or two and they too will start calling themselves pure-blooded Thai, just like the rest of us"  
+ mr_siam_angkor_2_desc: "The dust has settled, and the sands of time have shifted and changed; taking what remains of Angkor at last with them, long after its demise at our very hands.\n\nLeaving things off with the Khmer at an act of cruelty is not what we ultimately have in mind for the region however, as we indeed do see intrinsic value in it and in the productivity of its people.\nIn rebuilding the bridges between our people that years of war have torn, we'll have to appease them- offer them jobs and opportunities within our court and working to tolerate their cultural norms..\n\nAlternatively, we could also just force our religion upon them instead; While it'll stir quite a nerve now- give it a generation or two and they too will start calling themselves pure-blooded Thai, just like the rest of us"
 
  mr_siam_angkor_3_title: "Rulers of Siam"
- mr_siam_angkor_3_desc: "The Khmer have fallen and the Lao have submitted, and most of Indochina now lies in our hands. Siam has reached heights never-before witnessed by its people, with us acting as the very architects of this auspicious change.\n\nWe have carved ourselves an Empire in all but name- so let us change that too, and in crushing what little, fleeting resistence there is left in these lands- we can proclaim our rightful supremacy and affirm our place among the nations of the world as a proper Empire" 
+ mr_siam_angkor_3_desc: "The Khmer have fallen and the Lao have submitted, and most of Indochina now lies in our hands. Siam has reached heights never-before witnessed by its people, with us acting as the very architects of this auspicious change.\n\nWe have carved ourselves an Empire in all but name- so let us change that too, and in crushing what little, fleeting resistence there is left in these lands- we can proclaim our rightful supremacy and affirm our place among the nations of the world as a proper Empire"
 
  mr_siam_dev_1_title: "Rebuild the Thai Cities"
  mr_siam_dev_1_desc: "Siam is just not what it used to be; our cities have shrunk, our population has dwindled, and our coffers have been stretched as thin as they can be. This, if anything, is a pungent wake-up call. if we wish to see our people thrive and live their best lives, and if we wish to see our home united and strong again, we must then do what we can with what money we have to rebuild our cities- to expand upon them, and to make sure that the taxes being paid all reach our coffers to the dime.\nSo that our sons and daughters may inherit a home just a bit richer, and just a bit more prosperous"
@@ -271,7 +271,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_karma_2_desc: "Orbits within orbits; the mandala system focuses on the idea that from the center of a state; a great circle is formed, the orbit of which inhabit weaker, subservient states; bound to pay tribute to it. In a great ladder, those weaker states may in turn have circles of their own- which in turn unravels and extends all the down to the very level of the individual. In building a respectable state, we must attract and secure the fielty of smaller states around the orbit of our very own Mandala"
 
  mr_siam_karma_final_title: "The Eternal Chakravatin"
- mr_siam_karma_final_desc: "The King of the Universe; He who rules over all four continents, through which all things function and are kept in order- is a man of Buddhist ideals, who commands the respect of all those under him, and makes those who he deems his enemies fear him.\n\nLet our ruler be one such man, then, let him command the respect and adulation of mighty kings- and uphold the principles of Buddhism throughout the land" 
+ mr_siam_karma_final_desc: "The King of the Universe; He who rules over all four continents, through which all things function and are kept in order- is a man of Buddhist ideals, who commands the respect of all those under him, and makes those who he deems his enemies fear him.\n\nLet our ruler be one such man, then, let him command the respect and adulation of mighty kings- and uphold the principles of Buddhism throughout the land"
  mr_siam_karma_3_title: "Theravada Architecture"
  mr_siam_karma_3_desc: "In a line of good deeds to make note of the monarchy's exemplary moral character, we would do well to sponsor the development of some key Thai cities beyond our center of power; to bring prosperity to their people, and to set them up as exemplary pieces of Theravada Thai culture- ones that our neighbors will in turn wish to emulate themselves in their own domains in style and character"
 
@@ -279,7 +279,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_capital_1_desc: "The Lord's Palace is the very center of our Muang's power, the home of the treasury, and the heart of the political apparatus. By letting it be vulnerable, and open to outside attacks; it, the city itself, and the state as a whole come under dire scrutiny. We must do what we can with what money we have to fortify it and protect ourselves, then- be it from rebels or from foreign armies"
 
  mr_siam_dev_5_title: "The City of Gods"
- mr_siam_dev_5_desc: "Bangkok has come a long way in its recent history; from being little over a river town living under Ayutthaya's shadow to being the very epicenter of a vast and dominant Empire- Its a city matched by very few in Asia when it comes to size and sheer affluence, nevertheless, we know it can be made even than that.\n\nOne grand renovation, public works of all kinds and magnitudes; from the small and convenient to the grand and opulent- Palaces rivalling the Sun in brilliance and urban sprawl as far as the eye can see. Let Bangkok become a synonym to majesty in the eyes of the world, an entrepot in which all the world's riches culminate, and one whose citizens may rival even foreign kings in wealth and riches" 
+ mr_siam_dev_5_desc: "Bangkok has come a long way in its recent history; from being little over a river town living under Ayutthaya's shadow to being the very epicenter of a vast and dominant Empire- Its a city matched by very few in Asia when it comes to size and sheer affluence, nevertheless, we know it can be made even than that.\n\nOne grand renovation, public works of all kinds and magnitudes; from the small and convenient to the grand and opulent- Palaces rivalling the Sun in brilliance and urban sprawl as far as the eye can see. Let Bangkok become a synonym to majesty in the eyes of the world, an entrepot in which all the world's riches culminate, and one whose citizens may rival even foreign kings in wealth and riches"
 
  mr_siam_burma_1_title: "Rival Pagan"
  mr_siam_burma_1_desc: "The resurgent Pagan Kingdom of Burma is a state that is cause for much concern; it's a rising, influential power that undoubtedly sees us and our war-weary lands as ripe for the taking, and one that wouldn't hesitate to put us all in the ground if it served to further its ambitions.\n\nWith Siam now united, we must rise to the occasion on and take a firm stance against the Burmese and their ambitions"
@@ -303,7 +303,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_burma_7_desc: "The day dawns where a grand chapter of our history comes to a definitive close, and thus opens a new one; one where the entirety of Burma and all its environs pay their taxes to us without question, one where Thai officials rule directly over their lands, and one where a painting of our Emperor hangs over the hearths of every home from Bago, to Ava, to the Shan Hills and from there to Arakan, and everywhere in between. In time, Burma will be naught but another province in our resplendent Empire"
 
  mr_siam_china_1_title: "The Mong Mao Border"
- mr_siam_china_1_desc: "The Kingdom of Mong Mao was a long lived polity that in its heyday rivalled even the likes of the old Pagan Kingdom in power and affluence, it had achieved complete dominance over the Burmese north and had even managed to penetrate into lands that have long been considered to be parts of China's core. While the Kingdom is no longer relevant in today's world, it did nonetheless prove that China is not quite the unbreakable monolith that it oft presents itself to be. If they can do it; so can we, and if we can do it; perhaps the rest of China- and all its riches- can also be within our reach" 
+ mr_siam_china_1_desc: "The Kingdom of Mong Mao was a long lived polity that in its heyday rivalled even the likes of the old Pagan Kingdom in power and affluence, it had achieved complete dominance over the Burmese north and had even managed to penetrate into lands that have long been considered to be parts of China's core. While the Kingdom is no longer relevant in today's world, it did nonetheless prove that China is not quite the unbreakable monolith that it oft presents itself to be. If they can do it; so can we, and if we can do it; perhaps the rest of China- and all its riches- can also be within our reach"
 
  mr_siam_china_2_title: "The Maitreyan Empire"
  mr_siam_china_2_desc: "A cult of paranoid eschatologists has taken hold over what once was a land of faith.\nCrippling fears of impending doom and the Maitreya's coming wreak havok in the minds of the Chinese, all propped and propagated by the most foul heresiarchs of the Song court- who rule through nothing but lies and manipulation, in their fear of being deposed. We cannot stand idly and watch as such vile scams are being played on the minds and souls of so many millions of innocents- the Song must be opposed, and they must be punished"
@@ -312,7 +312,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_siam_china_3_desc: "For their myriads of transgressions, the powerhungry leeches of the Chinese courts have not nearly been punished enough. If we are to annihilate this blatant heathenry that transpires up there, then we must move in ourselves and take the reins of China for ourselves. Piece by piece, if need be, order will nonetheless be restored to the Middle Kingdom"
 
  mr_siam_china_4_title: "The Siamese Emperor"
- mr_siam_china_4_desc: "Tomorrow, the Sun in China will from the South- as we move in to finalise what our ancestors started, and seized the entirety of the Middle Kingdom in our name- the excuses for why we did what we did may well have varied over the many years of these continuous wars, but the ultimate truth of the matter is that we now stand stronger than we ever have in passed- we have supplanted milennia of tradition, and we are ready to replace it all with traditions of our own.\n\nWe have brought peace, freedom, justice, and security to our new Empire; and at long last, China will soon be whole again" 
+ mr_siam_china_4_desc: "Tomorrow, the Sun in China will from the South- as we move in to finalise what our ancestors started, and seized the entirety of the Middle Kingdom in our name- the excuses for why we did what we did may well have varied over the many years of these continuous wars, but the ultimate truth of the matter is that we now stand stronger than we ever have in passed- we have supplanted milennia of tradition, and we are ready to replace it all with traditions of our own.\n\nWe have brought peace, freedom, justice, and security to our new Empire; and at long last, China will soon be whole again"
 
  mr_siam_nusantara_1_title: "Upgrading the Thai Fleet"
  mr_siam_nusantara_1_desc: "Maintaining an arsenal of ships with which one can protect their coast from seaborne threats is only logical when conducting statecraft- building a fleet able to project one's power far, far beyond their coast however, takes effort, devotion, and ambition. If we are to throw our weight beyond Indochina and the mainland, we'll need a fleet powerful enough to protect and reinforce our mighty armies"
@@ -419,7 +419,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  rice_bonus_prod: "Siamese Liquor Monopoly"
  rice_wine_bonus_prod: "Siamese Liquor Monopoly"
  mr_siam_dev_1_TT: "Every Siamese province with 15 Development and a Temple or Great Temple will recieve the following:"
- 
+
  #Sicily Missions
  mr_sicily_conquest_1_title: "Sicilian Ambitions"
  mr_sicily_conquest_2_title: "Across the Strait"
@@ -461,7 +461,7 @@ confucian_scholars_JAP: "Confucian Scholars"
  mr_sicily_religion_3b_title: "Fury of the Faithful"
  mr_sicily_religion_4d_title: "Cleansing the South"
  mr_sicily_religion_4e_title: "Embracing the Reformation"
- 
+
  sicilian_ambitions: "Sicilian Ambitions"
  invade_by_1455_tt: "If we complete this mission by the end of §Y1455§!, we will recieve the following:"
  not_invade_by_1455_tt: "\nIf we do not complete this mission by the end of §Y1455§!, we will recieve the following:"
@@ -515,11 +515,11 @@ confucian_scholars_JAP: "Confucian Scholars"
  overlord_master_SIC: "Master of the Union"
  mr_fraticelli_center_of_reformation: "Center of Reformation"
 converting_the_masses: "Conversion of the Polis"
- 
- 
+
+
  #Ifat Missions
 
- 
+
  mr_ifat_eth_1_title: "End the Afar Raids"
  mr_ifat_eth_1_desc: "In the years since Afar launched their attacks upon our territory, we have been stripped of both men and resources due to their dastardly attacks. We shall bring them to heel, crushing this petty uprising and attempts at revenge/"
  mr_ifat_eth_2_title: "The Shewa Rebellion"
@@ -557,7 +557,7 @@ converting_the_masses: "Conversion of the Polis"
  mr_ifat_tall_6_title: "Gold Mines of Ethiopia"
  mr_ifat_tall_6_desc: "In the provinces of Damot and Kaffa, gold is the primary commodity produced. We shall expand upon these mines and establish mints within the region."
  mr_ifat_tall_7_title: "African Gold Empire"
- mr_ifat_tall_7_desc: "All across the African Continent, we face heavy competition from both Malian gold and Reisland Gold. We need to combat this with our own production, and dwarf them both!" 
+ mr_ifat_tall_7_desc: "All across the African Continent, we face heavy competition from both Malian gold and Reisland Gold. We need to combat this with our own production, and dwarf them both!"
  mr_ifat_tall_8_title: "Monopoly on Coffee"
  mr_ifat_tall_8_desc: "No where else in the world can produce coffee as high quality and as high quantity as we do. We must ensure this by seizing any remaining plantations within Arabia."
  mr_ifat_arab_1_title: "Prepare the Ports"
@@ -604,10 +604,10 @@ converting_the_masses: "Conversion of the Polis"
  mr_ifat_india_4_desc: "The Gujarati plains hold powerful warriors and rajas alike. We must be careful as we expand - we should learn their tactics, and adopt them for ourselves if we must."
 
 
- 
- 
- 
- 
+
+
+
+
  end_afar_raids_TT: "Every province in the §YIfat Area§! and Province will recieve §Y-10 Devastation§!."
  afar_accepted_TT: "We will gain §YAfar§! as an §YAccepted Culture§!.\nIf we already have §YAfar§! as an accepted culture, we will instead gain £dip£ §G100§! §YDiplomatic Power§!."
  deposition_of_makhzumi: "Deposition of the Makhzumi"
@@ -641,7 +641,7 @@ converting_the_masses: "Conversion of the Polis"
  sultan_of_makuria_tt: "Sultans of Makuria"
  abyssinian_unity_TT_1: "If we complete this mission while §YQasr Ibrim§! is our religion, we will gain §G+10§! §TAbyssinian Unity Power§!."
  reduce_time_canal_IFT_tt: "\nThis will reduce the Technology Cost for §YThe Suez Canal§! Great Project."
- abyssinian_unity_TT_2: "\nIf we complete this mission while §YIskandariyya§! is our religion, we will gain §G+10§! §TAbyssinian Unity Power§!." 
+ abyssinian_unity_TT_2: "\nIf we complete this mission while §YIskandariyya§! is our religion, we will gain §G+10§! §TAbyssinian Unity Power§!."
  port_of_babs: "Port Across Yemen"
  slowed_ifat_movement: "Constrict the Stait"
  arabian_mares_IFT: "Arabian Mares"
@@ -662,18 +662,18 @@ converting_the_masses: "Conversion of the Polis"
  hidden_unrest: "Nubain Hosts Quelled"
  freedom_from_shiites: "Liberation of Mecca"
  defensive_konkan: "Fort of Konkan"
- 
- 
+
+
  #Japanese Missions
- 
- 
+
+
  #To be moved to the Event Localization File
  MR_siam_flavor.1.t: "The Wheel of Karma Turns..."
  MR_siam_flavor.1.d: "As we have once more completed our goal of improving our realm. Now, as we prepare to do so again, we debate about how to achieve our next goal."
  MR_siam_flavor.1.a: "We shall follow the advice and goals of the Sangha"
  MR_siam_flavor.1.b: "We shall follow the advice of both the Sangha and Nobility"
  MR_siam_flavor.1.c: "We shall follow the advice and goals of the Nobility"
- 
+
  #Couto Misto Missions#
  cms_harvest_season_title: "Harvest Season"
  cms_harvest_season_desc: "Autumn is coming to an end, and with it the villagers bring the bounty of our free land into both their pantries and into the communal stockpile. There's a chill in the air though. A small thought, an instinct seems to have overtaken all of us and our Juiz ponders...soon enough everything will change, and we must be ready for whatever fate has in store. For now though we celebrate and party to this years hardwork. Saude!"
@@ -752,7 +752,7 @@ converting_the_masses: "Conversion of the Polis"
  nav_catalonia_merchants_title: "The Merchants of Catalonia"
  nav_catalonia_merchants_desc: "With the union over Aragon came also the union over the lands of Catalonia. A land where the sway of the nobility was almost non-existent, and instead the merchants and guilds of Barcelona were and still are king. What Barcelona decrees the rest of Catalonia follows, and what Barcelona desires above all else is gold and prosperity. \nWhile we could try to merely impose our will over the merchants, King Carlos says this would be rather inneficient and a waste of potential.\nInstead we will use the expertise of the merchants of Catalonia by employing them and hiring them as bureucrats and admnistrators in our realm. We will also give control of our finances over to them, letting them oversee the wealth and prosperity of the kingdom. This should both fullfill their monetary ambitions and provide us with a stable, and reliable financial bedrock for our Iberian dream."
  nav_bearn_clergy_title: "Bright Bearn Monks"
- nav_bearn_clergy_desc: "The vassalage of Bearn has been a very recent affair. Having occured only a few years ago, the catholic monks of Bearn requested our protection and aid in fighting against the entrenched local Waldensian heretics. It has been hardwork, as the Waldensians keep retreating further and further into secret communities in hidden caves, peaks, valleys and forests dotted all throughout the Pyrenees. \nWe must put an end to their blaspheming, by showing the Bearn clergy we are capable of stomping even the most entrenched heretic, perhaps we could convince other local southern french vassals and realms to join us. \nAfter all, the french have clearly failed in their struggle against the Cathars, and if the french can't defeat them, then we must pick up the slack." 
+ nav_bearn_clergy_desc: "The vassalage of Bearn has been a very recent affair. Having occured only a few years ago, the catholic monks of Bearn requested our protection and aid in fighting against the entrenched local Waldensian heretics. It has been hardwork, as the Waldensians keep retreating further and further into secret communities in hidden caves, peaks, valleys and forests dotted all throughout the Pyrenees. \nWe must put an end to their blaspheming, by showing the Bearn clergy we are capable of stomping even the most entrenched heretic, perhaps we could convince other local southern french vassals and realms to join us. \nAfter all, the french have clearly failed in their struggle against the Cathars, and if the french can't defeat them, then we must pick up the slack."
  nav_forward_watchposts_title: "The Gates of Iberia"
  nav_forward_watchposts_desc: "While the Pyrenees offer us an exceptional natural defensive border with the rest of Europe, we should not have to be content with it being our first line of defense. \nBy using the pretense of fighting heresy in southern france, we could move in to the Cathar heartlands of Toulouse, routing the heretics and occupying their mighty fortress of Carcassone. With it under our control we could set up various outposts along the Garonne river into Bordeaux, which would give us not just, uncontested economic control over southern france, but would also pre-empt anyone in Europe from interfering in our Iberian ambitions."
  nav_misto_peasants_title: "The Andorran Fortress"
@@ -812,7 +812,7 @@ converting_the_masses: "Conversion of the Polis"
  nav_the_vasconian_lane_title: "The Vasconian Lane"
  nav_the_vasconian_lane_desc: "While we have no shortage of manpower when it comes to our whaling ventures and outposts, the same cannot be said from our other overseas investments. Various Iberian merchants have started companies and projects to take advantage of the fertile overseas lands, and sponsor the creation of cashcrops to be sold back in europe. However they haven't been able to atract Iberian workers to these plantations, owing to the nature of the work, the distance from home and the quality of the pay. A portuguese merchant however has proposed a novel solution, by contacting the Mali Empire we could tap into their monopoly over the African Slave Trade and buy slaves to work on the plantations."
  nav_antarctic_fishing_title: "The Docks of Anti-Atlas"
- nav_antarctic_fishing_desc: "Our whaling efforts seem to propell us to ever exciting frontiers. The latest one being the discovery of the southern tip of Africa. \nConsidering it's position our sailors have taken to call this rocky and mountainous cape as "Anti-Atlas" as a reference to the faraway Morrocan Atlas Mountains visible from Gibraltar. While this southern african cape is quite treacherous and dangerous, it's honestly quite nothing for seasoned and experienced Basque sailors raised in the Bay of Bizkaia. A lesser maritime culture would have quite an issue with it, probably naming it something silly like "Cape of Torments", but we aren't quite as dramatic. Cape of Anti-Atlas will do just fine." 
+ nav_antarctic_fishing_desc: "Our whaling efforts seem to propell us to ever exciting frontiers. The latest one being the discovery of the southern tip of Africa. \nConsidering it's position our sailors have taken to call this rocky and mountainous cape as "Anti-Atlas" as a reference to the faraway Morrocan Atlas Mountains visible from Gibraltar. While this southern african cape is quite treacherous and dangerous, it's honestly quite nothing for seasoned and experienced Basque sailors raised in the Bay of Bizkaia. A lesser maritime culture would have quite an issue with it, probably naming it something silly like "Cape of Torments", but we aren't quite as dramatic. Cape of Anti-Atlas will do just fine."
  nav_nautical_pioneers_title: "Nautical Pioneers"
  nav_nautical_pioneers_desc: "While we may have come late into the theater of Naval Exploration, there is no denying that our whalers, our marines and our brave admirals have been at hard at work bringing Iberia to the forefront of naval developments. We have struggled against the waves and winds, and even now we have fully dedicated ourselves, our nations very spirit towards becoming true Naval Pioneers."
  nav_basque_ocean_title: "The Basque Ocean"
@@ -851,7 +851,7 @@ converting_the_masses: "Conversion of the Polis"
  nav_global_network_desc: "Our great federation knowns no bounds! All across Reisland, settlements boom and prosper. \nAll thanks to the vast interconnected network of supplies and logistics that we have created for ourselves. This has benefitted Iberia propper itself as well of course, and who knows. Maybe one day the Reisland colonies will be civilized and tamed enough that we will be able to add them to our great Federation. A global federation perhaps?"
  nav_euskal_bakea_title: "Euskal Bakea"
  nav_euskal_bakea_desc: "The Basque Peace. It is how our chroniclers and historians have begun to refer to this grand period of peace that we find ourselves in. In every corner of Iberia, to faraway colonies in Reisland, to even farther whaling stations in Asia. Everyone in our great federation basks in the glory and prosperity that we have brought. Iberia is secure, and the trade lanes flow with gold, luxury goods and supplies from Reisland, truly this peace is what all true warriors strive for."
- 
+
  luso_basque_wedding: "We will attempt to convince the @POR crown to accept one of our cousins as their heir. \n Base Chance of Sucess: §Y50%§! \n @POR has no Heir: §G+5%§! \n @POR has 70 trust of @NAV: §G+55%§! \n @POR has Heir: §R-5%§! \n @POR has rivalled @NAV: §R-100%§!"
  tame_portugal: "We will ask our cousin to renounce the @PAP Bull that declared @POR a Kingdom, thus reverting the realm back into a County, to be more easily integrated into the wider @NAV realm. \n Base Chance of Sucess: §Y50%§! \n @POR has 70 trust of @NAV: §G+50%§! \n @NAV has no heir: §R-30%§!"
  warden_santiago: "We will use the claims we have inherited from @POR to send an ultimatum and vassalization offer to the Bishop of @GAL. \n Base Chance of Sucess: §Y50%§! \n @GAL has 70 trust of @NAV: §G+30%§! \n @GAL army is weaker than @NAV: §G+20%§! \n @NAV is Excommunicated: §R-50%§!"
@@ -886,17 +886,17 @@ mr_greece_unity_9_desc: "We have learn many things from the Imperial fall, but o
 mr_greece_speciality_1_title: "Retrain the Guard"
 mr_greece_speciality_1_desc: "Scattered throughout all of greece are a strange people.\nA People from the far north, vicious, unrelenting and almost barbaric.\nYes the descendants of the Varangians still stalk our lands, without direction they have become especially adept thieves and robbers, but we can change that.\nWe will hire them, give them purpose and turn them once more into the formidable fighting force they were always meant to be."
 mr_greek_build_first_title: "Restore Trade Links"
-mr_greek_build_first_desc: "Greece is a land of many ports and a deep maritime tradition, situated in a most-crucial corner of the mediterranean- able to establish a most strict chokehold over European trade, and control the flow of Asian goods with great ease.\n\nYet for all its potential, years of neglect, war, and famine have left these ports and entrepots underutilised- and the world's merchants consider these lands as nothing but a minor stop in the midst of greater destinations. We curb on these obtuse ideas, and work in rebuild our cities and our towns- doing what's necessarily in refacilitating Greece as a proper trade hegemony." 
+mr_greek_build_first_desc: "Greece is a land of many ports and a deep maritime tradition, situated in a most-crucial corner of the mediterranean- able to establish a most strict chokehold over European trade, and control the flow of Asian goods with great ease.\n\nYet for all its potential, years of neglect, war, and famine have left these ports and entrepots underutilised- and the world's merchants consider these lands as nothing but a minor stop in the midst of greater destinations. We curb on these obtuse ideas, and work in rebuild our cities and our towns- doing what's necessarily in refacilitating Greece as a proper trade hegemony."
 mr_greek_build_second_title: "Rebuild the Lost Citadel"
 mr_greek_build_second_desc: "What remains of Constantine's great city; rubble, ruins, and a couple decrepit towers, are all painful reminders of what a cruel hand history has dealt us. From meteors, to the second coming of Attila; few can ever believe that the measly fishing town that now lays there used to be the world's largest, and most resplendent city.\n\nWe must begin a long process, and rebuild that great City from the ground up- starting with a new set of great walls, and in getting people to live behind them."
 mr_greek_build_third_title: "Invent in the Market"
-mr_greek_build_third_desc: "With our help; our once-great City has climbed from the precipice of oblivion has made itself a proper, upstanding town- worthy of living in.\n\nMerely 'worthy of living in' however, does not befit its status of the Queen of Cities, and as such- there much more work to do in restoring it. This time; our advisors suggest we focus on its local production, their idea was focusing on the lucrative Glass industry- but beyond that; Constantinople of old was also famous for the likes of its well-forged swords and armors, its rich and fine Silks, and its intricate and eloquent Jewelry. In this, we are rather limited- and can't be everywhere all at once, but we believe ourselves able of restoring one of these great industries, at the very least." 
+mr_greek_build_third_desc: "With our help; our once-great City has climbed from the precipice of oblivion has made itself a proper, upstanding town- worthy of living in.\n\nMerely 'worthy of living in' however, does not befit its status of the Queen of Cities, and as such- there much more work to do in restoring it. This time; our advisors suggest we focus on its local production, their idea was focusing on the lucrative Glass industry- but beyond that; Constantinople of old was also famous for the likes of its well-forged swords and armors, its rich and fine Silks, and its intricate and eloquent Jewelry. In this, we are rather limited- and can't be everywhere all at once, but we believe ourselves able of restoring one of these great industries, at the very least."
 mr_greek_build_fourth_title: "The World's Desire"
 mr_greek_build_fourth_desc: "'Nenikika se, Solomon', or, 'I have surpassed thee, Solomon'- are said to be words uttered by Emperor Justinian upon first entering the Basilica of the Holy Wisdom- The magnum opus of Isidore of Miletus and Anthemius of Tralles. Now, after the Mongols, what remains of this once great cathedral are parts of its entrance, its foundations, its bell tower, and an odd yet-standing wall here and there. What happened to it is a tragedy through and through- but, with what we have, we hope we can rebuild it- perhaps even to match the likes of the marvel that Justinian himself laid eyes upon, long ago.\n\nRight next to it also sat the Great Hall at Magnaura; once the judiciary and legal center of the Roman Empire- in restoring the Holy Wisdom, it'd also be wise to bring that back as well, and properly restoring the City's Roman glory."
 mr_greek_build_fifth_title: "Manage State Finances"
-mr_greek_build_fifth_desc: "In restoring Greece and bringing back its long-lost prosperity, one must keep his finances in check, lest he worry about loans and bankruptcy in the midst of a restoration project.\n\nWe must secure steady sources of income, be rid any debts we may have, and expand the administrative cadre- in order to fill our coffers and finance our future endeavors." 
+mr_greek_build_fifth_desc: "In restoring Greece and bringing back its long-lost prosperity, one must keep his finances in check, lest he worry about loans and bankruptcy in the midst of a restoration project.\n\nWe must secure steady sources of income, be rid any debts we may have, and expand the administrative cadre- in order to fill our coffers and finance our future endeavors."
 mr_greek_build_sixth_title: "Expand Farm Production"
-mr_greek_build_sixth_desc: "While Greece if not all that good for farming- Olives are great for Greece; being among the few crops able to sufficiently grow in any capacity in our mountains and our valleys, the Greek homeland has always been one of the biggest producers of Olives and Olive oil in the known world. That is rather fortunate; for it turns out olives, outside of Greece, are in rather short supply. We ought to standardise and expand on our state-owned olive groves, then- to give our merchants more product to sell at steep prices, and a subsantial supply of lucrative goods for us to selectively export to our allies and our accolades, should it ever benefit us." 
+mr_greek_build_sixth_desc: "While Greece if not all that good for farming- Olives are great for Greece; being among the few crops able to sufficiently grow in any capacity in our mountains and our valleys, the Greek homeland has always been one of the biggest producers of Olives and Olive oil in the known world. That is rather fortunate; for it turns out olives, outside of Greece, are in rather short supply. We ought to standardise and expand on our state-owned olive groves, then- to give our merchants more product to sell at steep prices, and a subsantial supply of lucrative goods for us to selectively export to our allies and our accolades, should it ever benefit us."
 mr_greek_build_seventh_title: "Control the Flow of Goods"
 mr_greek_build_seventh_desc: "While the trade in and around Constantinople is sufficiently under our grasp, the flow into it, in contrast; is not. If one of our rivals wishes to tap into our monopolies and cut us out- they'd be well able to, by reaching the markets of the Bosphorus, the Levant, and Egypt through other means. It is imperative, then, that we establish a strong presence in crucial chokepoints- and make our trade fleets an ever-present sight across the Eastern Mediterranean."
 mr_greek_build_eighth_title: "Expand Olive Oil Contracts"
@@ -955,7 +955,7 @@ mr_league_third_title: "Peloponnese Rennaissance"
 mr_epirus_first_title: "The Catalan Campaign"
 mr_epirus_first_desc:  "Here's a painful truth; the lands we hold at this very moment are pretty much worthless- trade with Italy being the sole thing that keeps our dominion yet-afloat. Beyond our island's coast however lies a land well worth seizing, beyond our coast also lies a rival principality; having kept hold of an island just about as worthless as ours. If we can consolidate our domain, even just a little bit, and secure a stream of income to hire a foreign army- we'll perhaps be able to then strike true at the mainland, and then carve a proper state for ourselves."
 mr_epirus_second_title: "Reclaiming Epirus"
-mr_epirus_second_desc: "It was the people of Corfu that in antiquity gave Epirus its name; 'Vast', 'Infinite', for it reached out and extended far beyond what one could see. Now too does Epirus hold an undoubtable level of prestige over us; its mighty twin cities being among the very richest in the entirety of Greece, and its mighty mountains keeping it safe from any and all threats from the east.\n\nWe must tap into this, and claim the region for ourselves; as our ancestors once did, before being driven out." 
+mr_epirus_second_desc: "It was the people of Corfu that in antiquity gave Epirus its name; 'Vast', 'Infinite', for it reached out and extended far beyond what one could see. Now too does Epirus hold an undoubtable level of prestige over us; its mighty twin cities being among the very richest in the entirety of Greece, and its mighty mountains keeping it safe from any and all threats from the east.\n\nWe must tap into this, and claim the region for ourselves; as our ancestors once did, before being driven out."
 mr_epirus_third_title: "A Company of Heroes"
 mr_epirus_third_desc: "The Catalan mercenaries that we've kept in our employ have been an invaluable asset of our Kingdom's arsenal; and the very key that led to its previous triumphs. Their guard is one we ought to expand, to glorify, and to pay better than anyone else in the market. If we're able to secure their loyalty through that, perhaps then we'll be able to also integrate them further to our state, and in turn grant us Europe's foremost professional army!"
 
@@ -974,7 +974,7 @@ mr_CST_first_desc: "Across the pond from the remains of our Megalopolis lies a p
 mr_CST_second_title: "Invite Turkish Soldiers"
 mr_CST_second_desc: "We can smell blood in these waters; the Thracians are weak- and their soldiers weary. We must get ready to strike while this still lasts, and let our Turkish allies know what we're about to do."
 mr_CST_third_title: "Pierce into the Latins"
-mr_CST_third_desc: "The time has come, tonight; we strike with all that we have, and bring due vengeance at the door of the vile Frankish miscreats, who've so benefitted at Rome's expense. It is due time we remind them why Rome came to rule the Ecumene, why Rome came to seize the world's riches, and why Rome is eternal. Constantinople may be little more than ashes; yet her indomitable spirit perseveres, and it thirsts for vengeance." 
+mr_CST_third_desc: "The time has come, tonight; we strike with all that we have, and bring due vengeance at the door of the vile Frankish miscreats, who've so benefitted at Rome's expense. It is due time we remind them why Rome came to rule the Ecumene, why Rome came to seize the world's riches, and why Rome is eternal. Constantinople may be little more than ashes; yet her indomitable spirit perseveres, and it thirsts for vengeance."
 mr_CST_fourth_title: "Align the Patriarchs"
 mr_CST_fourth_desc: "In the many years of Rome's most tragic absence from its very home; its most faithful have been led astray- trying to found and raise their own churches and their own episcopates to fill the gap of our absence in their hearts.\n\nThis will no longer be necessary.\n\nWe will bring the disparate churches of Greece to heel, and we'll remind them all who the ultimate authority on this Earth is; who Heaven's spitting mirror image in the land of the living is supposed to be, and who it is God trusts most with perpetuating His will and His divine plan. Obviously; not them- that would be us."
 mr_CST_fifth_title: "The Byzantine Resurgance"
@@ -1009,11 +1009,11 @@ mr_greek_latin_eighth_desc: "After all these years, we finally have the chance t
 
 #Greeks
 mr_greek_orthodox_first_title: "Maintain our Diocese"
-mr_greek_orthodox_first_desc: "While his All-Holiness- the Ecumenical Patriarch of Constantinople, was and always will be the very spiritual center around which Greek Orthodoxy revolves; Ecclesiastically, giving the Latin-controlled Mother-church the right of appointing bishops and administrating the free episcopates of the Orthodox is nothing but a recipe for disaster.\n\nThe Latins mustn't be allowed to control a single facet of our people's spiritual life; we must thus empower our Archepiscope and give him the legitimacy he needs to establish a proper Church of Greece, at the very least until the seat of the Patriarchate itself is liberated" 
+mr_greek_orthodox_first_desc: "While his All-Holiness- the Ecumenical Patriarch of Constantinople, was and always will be the very spiritual center around which Greek Orthodoxy revolves; Ecclesiastically, giving the Latin-controlled Mother-church the right of appointing bishops and administrating the free episcopates of the Orthodox is nothing but a recipe for disaster.\n\nThe Latins mustn't be allowed to control a single facet of our people's spiritual life; we must thus empower our Archepiscope and give him the legitimacy he needs to establish a proper Church of Greece, at the very least until the seat of the Patriarchate itself is liberated"
 mr_greek_orthodox_second_title: "The Slavic Communities"
-mr_greek_orthodox_second_desc: "Ever since the collapse of the Roman Empire and the arrival of the Mongols, the faithful in Greece have been rendered completely cut-off from the rest of the Orthodox world- susceptible now to the slimy influences of the Antichrist's herald over in Rome.\n\nIf we want to strengthen our spiritual standing, we must reach out and establish ties with the Orthodox faithful of Kiev- and work together in countering Catholic advances in our rightful lands" 
+mr_greek_orthodox_second_desc: "Ever since the collapse of the Roman Empire and the arrival of the Mongols, the faithful in Greece have been rendered completely cut-off from the rest of the Orthodox world- susceptible now to the slimy influences of the Antichrist's herald over in Rome.\n\nIf we want to strengthen our spiritual standing, we must reach out and establish ties with the Orthodox faithful of Kiev- and work together in countering Catholic advances in our rightful lands"
 mr_greek_orthodox_third_title: "An Eastern Brotherhood"
-mr_greek_orthodox_third_desc: "With our ties to the Orthodox world rekindled, we must now make what moves are necessary to reaffirm our historic spiritual primacy over the Orthodox faithful- and expand the ecclesiastic reach of the holy Greek Church throughout our lands. If, of course, we want this to really mean anything- we'll also have to commit to our new purpose; and do what we must in protecting the proper faithful throughout the Ecumene" 
+mr_greek_orthodox_third_desc: "With our ties to the Orthodox world rekindled, we must now make what moves are necessary to reaffirm our historic spiritual primacy over the Orthodox faithful- and expand the ecclesiastic reach of the holy Greek Church throughout our lands. If, of course, we want this to really mean anything- we'll also have to commit to our new purpose; and do what we must in protecting the proper faithful throughout the Ecumene"
 mr_greek_hellas_first_title: "Across the Ionian Sea"
 mr_greek_hellas_first_desc: "Just beyond the pond from Corfu lies the land that once was called Greater Greece, or, Langovardia in more recent times. It was a land with a once-thriving Greek element to it, one that has suffered at the whims of the Latins since the 1070s.\n\nIf we are to truly claim to have liberated the Greeks from the iron fist of the Frank, we must be absolute in our conviction; and bring the fight back to them- freeing our brothers who have suffered most at their hands and teaching them a lesson they won't ever forget"
 mr_greek_hellas_second_title: "Lay Claim to Rome"
@@ -1025,7 +1025,7 @@ mr_greek_hellas_fourth_desc: "While we can't exactly bring down the mighty blade
 mr_greek_hellas_fifth_title: "End the Latinokratia"
 mr_greek_hellas_fifth_desc: "With Venice gone, and the seat of the Papacy in our hands; the main actors of the Fourth Crusade have now been dealt with- but justice has not exactly been served yet. Just like how the whole of Greece was once under Latin rule; the home of the latins must now fall wholesale to Greek hands, then, and only then will we ever be even"
 mr_greek_orthodox_fourth_title: "Shield of the Faithful"
-mr_greek_orthodox_fourth_desc: "We did what we had to in order to regain our spiritual self-determination; our fledgling Church thrives, and its authority is disputed by few that matter.\nNow, however, is the time we protected this much-desired autonomy with our steel and our very own blood- and proved to the infidels of the world that this is our faith, and that we will do what we must in keeping it free and unchained" 
+mr_greek_orthodox_fourth_desc: "We did what we had to in order to regain our spiritual self-determination; our fledgling Church thrives, and its authority is disputed by few that matter.\nNow, however, is the time we protected this much-desired autonomy with our steel and our very own blood- and proved to the infidels of the world that this is our faith, and that we will do what we must in keeping it free and unchained"
 mr_greek_orthodox_fifth_title: "Establish Latin Metropolitans"
 mr_greek_orthodox_fifth_desc: "As it turns out, our brethren in Italy are not quite as in-touch with their mother faith as we'd like them to be- instead having long opted to believe in the Pope and his egomaniacal cult of character that permeates the rest of the west. This can't quite do, for Greater Greece to actually be great, its religious character ought to be brought back in line"
 mr_greek_orthodox_sixth_title: "Mend the Schism"
@@ -1035,7 +1035,7 @@ mr_greek_hellas_sixth_desc: "The core of Greater Greece has, since last Greeks r
 
 #Byzantines
 mr_greek_orthodox_fifth_a_title: "The Bogomil Threat"
-mr_greek_orthodox_fifth_a_desc: "The Bogomilist heathenisms, far with-out any sensible definition of 'Christian' in what clouded lies they preach, have been a thorn on Rome's side for a long, long time. Now, that we once again find ourselves in direct contact with these misguided, illiterate plebeians; its about time we gave them their overdue comeuppances, and eradicated their schismatic cult for good- tearing down its depraved altars and driving away their heinous proselytisers, replacing them instead with houses of proper worship, and good heralds of the true faith" 
+mr_greek_orthodox_fifth_a_desc: "The Bogomilist heathenisms, far with-out any sensible definition of 'Christian' in what clouded lies they preach, have been a thorn on Rome's side for a long, long time. Now, that we once again find ourselves in direct contact with these misguided, illiterate plebeians; its about time we gave them their overdue comeuppances, and eradicated their schismatic cult for good- tearing down its depraved altars and driving away their heinous proselytisers, replacing them instead with houses of proper worship, and good heralds of the true faith"
 mr_greek_orthodox_sixth_a_title: "The Heart of Orthodoxy"
 mr_greek_orthodox_sixth_a_desc: "The Haemus, otherwise known as the Balkans- containing the core and heart of the Roman Empire and its very crown jewel, was the land in which the proper faith was best maintained, in stark contrast to the centuries of schisms, heresies, and cults that have long since plagued the broader Christian world. Yet in the years of our guiding hand's absence; heresy of all shapes and sizes has nonetheless managed to creep in and get itself established in this pure land.\n\nIn working to correct the world, one must first keep a tidy home- and so we shall; we shall clean the house and throw out the trash, and from there we'll once again resume our sacred work"
 
@@ -1049,7 +1049,7 @@ mr_greek_muslim_sixth_title: "Rhomania for the Faithful"
 
  mr_greek_muslim_first_desc: "The coup of Alexandrios has been successful. Now the Elite of the Byzantine state are Turkish and Muslim. However, the general populace has had…less popular reactions. The people do not understand that we have found the true path, away from the lies of the Franks and ancient Romans - the prophet's word is the only way forward, and we shall show this to them through a gentle hand of persuasion and reason. The words of the Qu'ran shall bring our people into the light, and shall save the soul of this empire."
  mr_greek_muslim_second_desc: "Our reputation among the wider Muslim community is still negative. Our predecessor's history of attacking and resisting the words of the Prophet have led to many believing that we are simply faking our conversion. This could not be farther from the truth - we are genuine in our conversion, and so we must improve our standing within the international Ummah, within the communities across the world."
- 
+
  mr_greek_muslim_third_desc:  "The Basileus woke up from a dream he had; he saw a blinding light to the south, so powerful that his hands could not block it, so strong it pierced through his shut eyelids. Then, he heard a booming voice, demanding that the Basileus leave his residence, to go on the journey. When he awoke, his mind was set. The Basileus began to prepare for his journey, shaking off his nerves and gathering funds from his personal treasury - he would travel to Mecca, he would complete the Hajj."
 
  mr_greek_muslim_fourth_desc: "The laws of Islam are complex and varied. Our specific teaching might have certain restrictions that others do not have. We have hired scholars and learned men to investigate the hadith and the teachings of Muhammad to aid us in this task. We need to investigate what the intent of the first generation of Muslims was, and how our Basileus can guide our people into the future."
@@ -1060,13 +1060,18 @@ mr_greek_muslim_sixth_title: "Rhomania for the Faithful"
 
 
 
-
 mr_greek_byz_first_title: "Reconnect the Countryside"
+mr_greek_byz_first_desc: "Proud Greece lies in utter disarray; not since the times of the olden city states have these lands been so disjointed and unkempt- to reaffirm our grip over our home; we must do what we can to bring it all together again."
 mr_greek_byz_second_title: "The Core Greek Cities"
+mr_greek_byz_second_desc: "Thessalonica, Adrianople, Ioannina, Thebes, Corinth; grand cities in their own right, who all act as the very pillars that keep Greece from toppling- In furthering their prosperity; we'll only be ensuring ours- and in turn the rest of realm's as well."
 mr_greek_byz_third_title: "Build Imperial Wealth"
+mr_greek_byz_third_desc: "The Roman Empire of old had secured for itself the production of untold tonnes of luxury goods; of silk, glasses, fabrics, weapons, and of many a lucrative cash crop- these industries were a crucial cornerstone to our prosperity of old; and if we wish to see that come back upon us, then we too must support the local industries, and assure a steady source of income for the state."
 mr_greek_byz_fourth_title: "Incorperate the Borderlands"
+mr_greek_byz_fourth_desc: "In keeping Greece safe; we must see to it that its unruly neighbors are kept in check- among the most immediate of those troublecausing tribes are those of the Albanians and those of Serbs, people with a violent hatred for one another and a deep tradition of blood feuds- one that more often than not spills over to Greece and puts the diligent work we've put there to jeopardy.\n\nIf we wish to see a moment's peace in this peninsula we call a home; we'll have to resign ourselves to some babysitting- and make sure we reconcile these people while the damage they've dealt is still negligible"
 mr_greek_byz_fifth_title: "The Basileus' Reflections"
+mr_greek_byz_fifth_desc: "We've brought long overdue peace, and never-before seen prosperity to the peoples of the Balkans- everyone in this land now lives and dies by the Emperor's grace, and their gratitude for what we've done for them is well-evident in their reluctance to revolt against our rule. In furthering that- and ensuring its continuation into perpetuity, we must bring these lands under the crown's careful watch- and dedicate a bigger part of the bureaucracy in ensuring the ever-exponential growth of their wealth."
 mr_greek_byz_sixth_title: "Fortress Rhomania"
+mr_greek_byz_sixth_desc: "Rome has spent way too many of its precious resources in pointless wars of conquest and 'reconquest', from Trajan's pointless conquest of Mesopotamia to Alexios Komnenos' ill-advised reliance on the Catholic vagabonds for the reconquest of Anatolia- all culminating in our near-demise in the Fourth Crusade.\n\nWe have since toiled, and through our struggles have ensured our Holy Banner's dominance of a massive, prospering landmass- home of faithful, trustworthy and proper Roman men and women.\n\nBeyond that lies nothing but the savage abyss; calling us to take a peek like the very Sirens did to Odysseus in the Pagan myth.\n\nIf we know what's good for us; we'll deny these absurd seductions, and instead make what moves need to be made in order to keep Rhomania in Roman hands, God willing; for good."
 
 #Tooltips
 if_catholic_yes: "£yes£If we complete this mission while being §YCatholic§!, all owned provinces in the §YMacedonia§! Area or §YThracia§! Area will recieve the following:"
@@ -1137,7 +1142,7 @@ mr_catholic_center_of_reformation: "Center of Latinization"
 mr_orthodox_center_of_reformation: "Center of Reconciliation"
 spawn_center_of_reformation_catholic: "This will spawn a §YCatholic§! Center of Reformation in one of our §YCatholic§! provinces in the §YAnatolia§! Region."
 spawn_center_of_reformation_orthodox: "This will spawn an §YOrthodox§! Center of Reformation in one of our §YOrthodox§! provinces in the §YItaly§! Region."
-call_for_the_crusades_diplo_action: "Every time we create a §YRoyal Marriage§! between another §YCatholic Country§!, we will gain §Y500§! £icon_manpower£	Manpower." 
+call_for_the_crusades_diplo_action: "Every time we create a §YRoyal Marriage§! between another §YCatholic Country§!, we will gain §Y500§! £icon_manpower£	Manpower."
 enhance_unity_of_faith: "This will enhance the §YEnforced Unity of Faith§! Clergy Estate Privilege by §G+1%§! Missionary Strength and §G-25%§! Establish Holy Order Cost."
 YES_gain_triple_manpower_for_30_years: "£yes£If we complete this mission while being the §YPapal Controller§!, we will gain the following:"
 NO_gain_triple_manpower_for_30_years: "£no£If we complete this mission while being the §YPapal Controller§!, we will gain the following:"
@@ -1339,7 +1344,7 @@ IRQ_branching_3_title: "Branching Mission"
 IRQ_branching_4_title: "Branching Mission"
 #Descriptions
 
-#Modifiers 
+#Modifiers
 prosperity_under_caliph: "Prosperity under the Caliph"
 redirection_euphrates: "Redirection of the Euphrates"
 STRONG_MERCHANTS_IRQ: "Iraqi Merchants"
@@ -1362,4 +1367,4 @@ if_free_yes: "£yes£If we are independant when we complete this mission, we sha
 if_free_no: "£no£If we are independant when we complete this mission, we shall gain the following:"
 christian_provinces_TT: "All §YChristian§! provinces in the §YAl Jazira§! area will recieve the following:"
 muslim_provinces_TT: "All §YMuslim§! provinces in the §YAl Jazira§! area will recieve the following:"
-centralizing_state_buff: "§YCentralize State§! will now grant §G+33§! §YProsperity§! in a province." 
+centralizing_state_buff: "§YCentralize State§! will now grant §G+33§! §YProsperity§! in a province."
