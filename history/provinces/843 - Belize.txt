@@ -1,6 +1,6 @@
 #843 - Belize
-# owner = CTM
-# controller = CTM
+owner = CTM
+controller = CTM
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Chactemal" 
@@ -9,8 +9,8 @@ hre = no
 base_tax = 4 
 base_production = 4 
 base_manpower = 1 
-# is_city = yes 
-# add_local_autonomy = 25
+is_city = yes 
+add_local_autonomy = 25
 add_core = CTM
 discovered_by = mesoamerican
 1444.11.12 = { trade_goods = unknown }

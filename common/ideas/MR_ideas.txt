@@ -2281,3 +2281,44 @@ crusader_minor_ideas = {
 		max_flagships = 1
 	}
 }
+
+wazir_egyptian_ideas = {
+	start = {
+		advisor_pool = 1
+		army_tradition = 0.5
+	}
+
+	bonus = {
+		free_adm_policy = 1
+	}
+
+	trigger = {
+		tag = EGY
+		has_reform = wazir_republic
+	}
+	free = yes		#will be added at load.
+
+	egy_seat_of_imam = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+	}
+	egy_viziers_of_the_pen = {
+		global_autonomy = -0.05
+	}
+	egy_viziers_of_the_sword = {
+		discipline = 0.05
+	}
+	egy_defeated_saladin = {
+		republican_tradition = 0.3
+	}
+	crossroads_between_europe_and_africa = { #vanilla desc
+		global_trade_power = 0.15
+        embargo_efficiency = 0.10
+	}
+	nile_production = { #vanilla desc
+		production_efficiency = 0.15
+	}
+	egy_egypt_reconquest = {
+		core_creation = -0.15
+	}
+}

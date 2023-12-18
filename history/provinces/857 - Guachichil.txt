@@ -3,7 +3,7 @@
 # owner = CCM
 # controller = CCM
 # add_core = CCM
-culture = chichimecan 
+# culture = chichimecan 
 religion = animism
 capital = "Guachichil" 
 trade_goods = gold 
