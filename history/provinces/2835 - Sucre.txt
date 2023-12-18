@@ -1,8 +1,8 @@
 # - Sucre
 
-# owner = CRA
-# controller = CRA
-# add_core = CRA
+owner = CRA
+controller = CRA
+add_core = CRA
 culture = aimara
 
 
@@ -17,7 +17,7 @@ hre = no
 base_tax = 4 
 base_production = 4
 base_manpower = 1
-# is_city = yes
+is_city = yes
 
 
 1444.11.12 = { trade_goods = unknown }

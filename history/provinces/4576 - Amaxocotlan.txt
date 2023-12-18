@@ -2,9 +2,9 @@
 
 culture = tepic
 religion = nahuatl
-# owner = XAL
-# controller = XAL
-# add_core = XAL
+owner = XAL
+controller = XAL
+add_core = XAL
 capital = "Amaxocotlan"
 trade_goods = wool
 hre = no
