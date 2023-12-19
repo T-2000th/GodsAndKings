@@ -1,3 +1,16 @@
 ﻿l_english:
- 
- num_of_coastal_tiles_explored: "Explore §YSix§! Tiles in the §YGuinea§! Region (Current: [Root.coastal_tiles_variable_1.GetValue])\n\nExplore §YThree§! Tiles in the §YSouth Reisland§! Continent (Current: [Root.coastal_tiles_variable_2.GetValue])"
+ l_english:
+#Mission Titles:
+mr_mali_exploration_first_title: "Into the Beyond"
+mr_mali_exploration_second_title: "The Second Great Voyage"
+
+
+#Mission Descriptions
+
+#Tooltips 
+num_of_coastal_tiles_explored: "Explore every §YCoastal§! in the §YGuinea§! Region."
+
+#Modifiers
+ explorer_mindset: "Exploring the Highlands"
+ expanded_colonial_efforts: "Expanded Local Colonial Efforts"
+ two_random_province_colonies: "A Random Colony will recieve two bordering Frontiers with §Y400§! Settlers."

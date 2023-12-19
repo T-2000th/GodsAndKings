@@ -1,0 +1,8 @@
+explorer_mindset = {
+	improve_relation_modifier = 0.1
+	spy_offence = 0.15
+}
+expanded_colonial_efforts = {
+	local_colony_cost_modifier = -0.5
+	local_colonial_growth = 25
+}

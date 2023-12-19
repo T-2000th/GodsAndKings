@@ -323,11 +323,14 @@ country_event = {
 		name = "navarra_events.11.1"
 		NAV = {
 			create_union = FROM 
-            if = { limit { = LON = { junior_union_with = CAS } }
-			  create_union = LON
+            if = { 
+				limit = { 
+					LON = { junior_union_with = CAS } 
+				}
+			 	create_union = LON
 			} 
 			if = { 
-			 limit { = CAS = { junior_union_with = LON } }
+			 limit = { CAS = { junior_union_with = LON } }
 			  create_union = CAS
 			} 
 		}

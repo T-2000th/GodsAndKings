@@ -1,0 +1,65 @@
+namespace = mr_MaliFlavor
+
+country_event = {
+	id = mr_MaliFlavor.1
+	title = mr_MaliFlavor.1.t
+	desc = mr_MaliFlavor.1.d
+	picture = muslimgfx_SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					continent = south_america
+				}
+				save_event_target_as = mr_colonialism_base
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.1.a
+		add_treasury = -50
+		add_adm_power = -100
+		trigger = {
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 3
+					OR = {
+						continent = south_america
+						continent = north_america
+					}
+				}
+			}
+		}
+		custom_tooltip = two_random_province_colonies
+		hidden_effect = {
+			event_target:mr_colonialism_base = {
+				random_empty_neighbor_province = {
+					create_colony_mission_reward_province = {
+						country = ROOT
+					}
+				 }	
+			}
+			event_target:mr_colonialism_base = {
+				random_empty_neighbor_province = {
+					create_colony_mission_reward_province = {
+						country = ROOT
+					}
+				 }	
+			}
+		}
+		
+	}
+
+	option = {
+		name = mr_MaliFlavor.1.b
+		event_target:mr_colonialism_base = {
+			add_province_modifier = {
+				name = expanded_colonial_efforts
+				duration = -1
+			}
+		}
+	}
+}

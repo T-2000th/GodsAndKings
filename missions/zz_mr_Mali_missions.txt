@@ -75,9 +75,9 @@ branch_3 = {
 				duration = -1
 			}
 			add_sailors = 2000
+			
 		}
 	}
-
 }
 branch_4 = {
 	slot = 4

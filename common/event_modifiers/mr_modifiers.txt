@@ -205,6 +205,9 @@ ilk_missionaries_1 = {
 	missionaries = 1
 	global_missionary_strength = 0.2
 }
+senegal_river = {
+	local_sailors = 250	
+}
 
 #Institution Events
 birthplace_of_professional_armies = {

@@ -24,6 +24,7 @@ discovered_by = SNT
 discovered_by = SNF
 discovered_by = DEN
 discovered_by = BAO
+discovered_by = MAL
 
 owner = TEE
 controller = TEE
