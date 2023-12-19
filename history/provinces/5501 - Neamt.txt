@@ -3,8 +3,8 @@
 
 owner = MOL
 controller = MOL
-culture = romanian
-religion = orthodox
+culture = swabian
+religion = catholic
 hre = no
 base_tax = 1
 base_production = 1

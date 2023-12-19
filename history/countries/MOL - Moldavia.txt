@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 primary_culture = romanian
+add_accepted_culture = swabian
 religion = orthodox
 technology_group = eastern
 capital = 268 # Suceava
@@ -143,7 +144,8 @@ capital = 268 # Suceava
 		mil = 5
 		leader = {	
 			name = "Stefan III cel Mare"      	
-			type = general	
+			type = general	
+
 			fire = 1
 			shock = 4
 			manuever = 4

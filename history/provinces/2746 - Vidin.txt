@@ -3,7 +3,7 @@
 
 owner = BUL
 controller = BUL
-culture = bulgarian
+culture = romanian # due to a lack of Wallachia to consolidate the Romanians in one place, also to acknowledge the romanians living south of the Danube
 religion = orthodox
 capital = "Vidin"
 trade_goods = grain

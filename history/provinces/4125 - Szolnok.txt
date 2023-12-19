@@ -2,8 +2,8 @@
 
 owner = HUN
 controller = HUN 
-culture = hungarian
-religion = catholic
+culture = cuman
+religion = orthodox
 capital = "Szolnok"
 trade_goods = salt
 hre = no

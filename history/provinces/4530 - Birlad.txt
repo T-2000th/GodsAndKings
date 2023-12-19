@@ -4,7 +4,7 @@
 owner = BLH
 controller = BLH
 add_core = BLH
-culture = romanian
+culture = crimean
 religion = orthodox
 capital = "Birlad"
 trade_goods = grapes

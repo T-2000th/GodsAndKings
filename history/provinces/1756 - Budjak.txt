@@ -3,7 +3,7 @@
 
 owner = BLH
 controller = BLH
-culture = romanian
+culture = crimean
 religion = orthodox
 hre = no
 base_tax = 1

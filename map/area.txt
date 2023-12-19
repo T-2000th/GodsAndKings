@@ -1100,11 +1100,11 @@ oltenia_area = { # 5 full
 }
 
 moldavia_area = { #5 full
-	268 4529 5501 5503 5504
+	268 4529 5500 5501 5503
 }
 
 lower_moldavia_area = { #5 full
-	1756 2405 4530 5500 5502 
+	1756 2405 4530 5502 5504
 }
 
 transylvania_area = { #4 #Northern Transylvania + Beszterce full

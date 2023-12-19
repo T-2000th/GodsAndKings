@@ -4,7 +4,7 @@
 owner = JAA
 controller = JAA  
 culture = romanian
-religion = orthodox
+religion = catholic
 capital = "Severin"
 trade_goods = wool
 hre = no

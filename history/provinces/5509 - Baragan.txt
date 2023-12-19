@@ -3,7 +3,7 @@
 
 owner = BUL
 controller = BUL  
-culture = romanian
+culture = crimean
 religion = orthodox
 capital = "Floci"
 trade_goods = wool

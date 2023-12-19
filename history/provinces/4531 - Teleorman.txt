@@ -3,10 +3,10 @@
 
 owner = BUL
 controller = BUL  
-culture = romanian
+culture = cuman # Teleorman means mad forest in cuman iirc, plus its biggest monastery is literally called Comana
 religion = orthodox
 capital = "Giurgiu"
-trade_goods = livestock
+trade_goods = lumber
 hre = no
 base_tax = 1
 base_production = 1
