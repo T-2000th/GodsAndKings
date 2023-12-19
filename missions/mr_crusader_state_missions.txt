@@ -4,20 +4,39 @@
 
 
 # First slot: Coastal missions
-crusader_missions_1_coastal = {
+crusader_missions_1_minors = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = yes
 	potential = {
 		is_levantine_crusader_state = yes
-		NOT = { is_or_was_tag = { tag = EDD } } # Edessa has no coast, so gets its own content
+		NOT = { # Edessa and Antioch have unique missions in this column
+			is_or_was_tag = { tag = EDD }
+			is_or_was_tag = { tag = ATI }
+		}
+	}
+
+	cs_naval_investment = {
+		icon = mission_shipyards_of_gujarat
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			treasury = 100
+		}
+
+		effect = {
+			capital_scope = {
+				add_building = grand_shipyard
+			}
+		}
 	}
 
 	cs_powerful_fleet = {
-		icon = mission_naval_dominance
-		required_missions = { }
-		position = 1
+		icon = mission_galleys_in_port
+		required_missions = { cs_naval_investment }
+		position = 2
 
 		trigger = {
 			num_of_galley = 12
@@ -40,8 +59,68 @@ crusader_missions_1_coastal = {
 					cost = 0
 				}
 			}
+		}
+	}
 
+	cs_raiding_menace = {
+		icon = mission_raid_the_berbers
+		required_missions = { cs_powerful_fleet }
+		position = 3
 
+		trigger = {
+			navy_size = MAM
+			navy_size = EGY
+			navy_size = RUM
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = cs_fearsome_raiders
+				duration = -1
+			}
+			hidden_effect = {
+				set_variable = {
+					which = cs_num_coasts_raided
+					value = 0
+				}
+			}
+		}
+	}
+
+	cs_masters_of_the_mediterranean = {
+		icon = mission_naval_dominance
+		required_missions = { cs_raiding_menace }
+		position = 4
+
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			# Some provs might have just a grand shipyard from that first mission :)
+			NOT = { OR = { has_building = shipyard has_building = grand_shipyard } }
+		}
+
+		trigger = {
+			NOT = {
+				any_rival_country = {
+					navy_size = ROOT
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+ 				OR = { has_building = shipyard has_building = grand_shipyard }
+			}
+			check_variable = {
+				which = cs_num_coasts_raided
+				value = 25
+			}
+		}
+
+		effect = {
+			remove_country_modifier = cs_fearsome_raiders
+			add_country_modifier = {
+				name = cs_fearsome_mariners
+				duration = -1
+			}
 		}
 	}
 }
@@ -56,52 +135,144 @@ crusader_missions_1_antioch = {
 		is_or_was_tag = { tag = ATI }
 	}
 
-	ati_dynastic_ties = {
+	ati_old_claims = {
 		icon = mission_among_the_great_powers
 		required_missions = { }
-		position = 3
+		position = 1
 
 		provinces_to_highlight = {
 			OR = {
-				# In case Cilicia escaped outside their starting provs
-				AND = {
-					is_capital = yes
-					owned_by = CLC
-				}
-				AND = {
-					OR = {
-						province_id = 327
-						province_id = 2302
-						province_id = 5387
-					}
-					NOT = { owned_by = root }
-				}
+				province_id = 327
+				province_id = 2302
+				province_id = 5387
 			}
 		}
 
 		trigger = {
-			NOT = { exists = CLC } # Cilicia dead
-			owns = 327
-			owns = 2302
-			owns = 5387
+			327 = { country_or_non_sovereign_subject_holds = root }
+			2302 = { country_or_non_sovereign_subject_holds = root }
+			5387 = { country_or_non_sovereign_subject_holds = root }
 		}
 
 		effect = {
-			custom_tooltip = ati_dynastic_ties_effect_tt
-			hidden_effect = {
-				if = {
-					limit = { exists = ARM }
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						target = ARM
+			add_prestige_or_monarch_power = { amount = 25 }
+			add_adm_power = 50
+		}
+	}
+
+	ati_older_ties = {
+		icon = mission_diplomatic_relation
+		required_missions = { ati_old_claims }
+		position = 2
+
+		provinces_to_highlight = {
+			is_capital_of = SIC
+		}
+
+		trigger = {
+			OR = {
+				SIC = {
+					AND = {
+						marriage_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
 					}
 				}
-				else = {
-					armenia_area = {
-						add_permanent_claim = root
+
+				AND = {
+					is_rival = SIC
+					has_spy_network_in = {
+						who = SIC
+						value = 80
 					}
-					add_prestige_or_monarch_power = { amount = 50 }
 				}
+
+				NOT = { exists = SIC }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					SIC = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = SIC
+				}
+			}
+			else = {
+				add_permanent_claim_multi_provinces = { target = sicily_area }
+				add_permanent_claim_multi_provinces = { target = western_sicily_area }
+			}
+			if = {
+				limit = { marriage_with = SIC }
+				add_country_modifier = {
+					name = cs_flexible_marriages
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	ati_springboard_to_taranto = {
+		icon = mission_italian_conquest
+		required_missions = { ati_older_ties }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
+			western_sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		effect = {
+			add_permanent_claim_multi_provinces = { target = calabria_area }
+			add_permanent_claim_multi_provinces = { target = apulia_area }
+			add_permanent_claim_multi_provinces = { target = naples_area }
+		}
+	}
+
+	ati_both_homes_of_bohemond = {
+		icon = mission_cathedral_cities
+		required_missions = { ati_springboard_to_taranto }
+		position = 4
+
+		provinces_to_highlight = {
+			province_id = 5020
+		}
+
+		trigger = {
+			owns_core_province = 5020
+			owns_core_province = 2313
+		}
+
+		effect = {
+			set_country_flag = general_flag_for_FU_Rome_flag
+			if = {
+				limit = { PAP = { exists = yes is_subject = no } }
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = PAP
+				}
+			}
+			add_prestige_or_monarch_power = { amount = 50 }
+			add_splendor = 200
+			add_country_modifier = {
+				name = cs_hauteville_splendor
+				duration = -1
 			}
 		}
 	}

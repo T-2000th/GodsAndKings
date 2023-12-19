@@ -656,6 +656,9 @@ mr_yunnan_missions_second = {
 								culture = oirats
 								culture = khalkha
 								culture = chahar
+								culture = chahari
+								culture = tumed
+								culture = kharchin
 							}
 						}
 						change_culture = altaic_new

@@ -1,7 +1,8 @@
 #804 - Puno
 
-# owner = CLA
-# controller = CLA
+owner = CLA
+controller = CLA
+add_core = CLA
 culture = aimara
 religion = inti
 capital = "Hatuncolla"
