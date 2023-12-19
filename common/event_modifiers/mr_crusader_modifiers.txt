@@ -126,6 +126,15 @@ cs_fearsome_mariners = {
 	light_ship_power = 0.1
 }
 
+cs_hauteville_splendor = {
+	legitimacy = 0.5
+	prestige = 0.5
+	stability_cost_modifier = -0.1
+}
+
+cs_flexible_marriages = {
+	stability_cost_to_declare_war = -1
+}
 
 
 # Government buttons

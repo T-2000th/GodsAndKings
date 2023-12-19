@@ -10,9 +10,14 @@
   cs_masters_of_the_mediterranean_title: "Masters of the Mediterranean"
   cs_masters_of_the_mediterranean_desc: "Our navy is without equal in the Mediterranean, and we have mastered the arts of seamanship and naval combat in its unique waters, and begun branching out to the use of heavier ships as expected of a true great power."
 
-  ati_dynastic_ties_title: "Dynastic Ties"
-  ati_dynastic_ties_desc: "There is a long history of intermarriage for alliances between all the Christian Princes of the East, but we in Antioch have enjoyed pride of place as the strongest Prince of Outremer since the collapse of the Kingdom of Jerusalem, and thus enjoyed the closest ties to our neighbors in Little Armenia--Cilicia--and their cousins Armenia proper. If we were to seize Little Armenia, we could then press our claims to the rest of Armenia."
-  ati_dynastic_ties_effect_tt: "If Armenia exists, we will get a §Yrestoration of union§! casus belli on them.\nOtherwise, we will get §G50§! prestige (excess will be converted to monarch points) and a permanent claim on the §YArmenia Area§!."
+  ati_old_claims_title: "Dynastic Ties"
+  ati_old_claims_desc: "There is a long history of intermarriage for alliances between all the Christian Princes of the East, but we in Antioch have enjoyed pride of place as the strongest Prince of Outremer since the collapse of the Kingdom of Jerusalem, and combined with our physical proximity, have enjoyed the closest ties to our neighbors in Little Armenia--Cilicia. In these dangerous times, those dynastic ties mean we have plausible claims through not just one but several family lines to [Root.Monarch.GetTitle] [Root.Monarch.GetName]; when Antioch was strong, Cilicia was often reduced to a vassal state or administered directly by a governor appointed by the Prince. We should replicate this arrangement."
+  ati_older_ties_title: "Older Ties"
+  ati_older_ties_desc: "The Kingdom of Sicily is ruled by the \"main\" branch of the House of Hauteville. If we were to strengthen our recent ties to the senior Hautevilles--or perhaps dig up some \"iron-clad\" claims with some thorough investiation--to the throne of Sicily, we could seek to make ourselves the new heads of the dynasty, and don't we deserve that?"
+  ati_springboard_to_taranto_title: "Springboard to Taranto"
+  ati_springboard_to_taranto_desc: "With Sicily under our control, the old lands of our forefather lie just across the waters of the Sicilian Channel, the last step we'd need to establsih our claims to true greatness."
+  ati_both_homes_of_bohemond_title: "Both Homes of Bohemond"
+  ati_both_homes_of_bohemond_desc: "With our ancestral home in control, none can say we are not a great European house and a player in continental politics. In fact, meddling in the politics of Italy was a favorite occupation of the Normans of old, including extorting favors from the Pope. Perhaps it is time we pay His Holiness a visit..."
 
   edd_old_claims_title: "Old Claims"
   edd_old_claims_desc: "These are not exactly our glory dies. In times past, Edessa stretched from just beyond the city of Antioch itself in the west to the Euphrates in the east, north into the Anatolian foothills and south into the plains of Iraq. While that land and the base of power it lent us may have slipped from our grasp, who is to say that the strength of Edessa is yet spent?"
@@ -170,6 +175,10 @@
   desc_cs_fearsome_raiders: "Our strong seamen are known far and wide, and even experienced ship captains quake in their boots when they spot our swift galleys on the horizon!"
   cs_fearsome_mariners: "Fearsome Mariners"
   desc_cs_fearsome_mariners: "Our expertise at sea has only grown with time, and now that we command a large and developed fleet and naval industry, our navy has become truly world-class."
+  cs_hauteville_splendor: "Hauteville Splendor"
+  desc_cs_hauteville_splendor: "Holding both great seats of the founding member of our House, Bohemond of Taranto, and having subjugated the Hautevilles of Sicily, we stand now as the head of one of the great dynasties of Europe."
+  cs_flexible_marriages: "Flexible Marriages"
+  desc_cs_flexible_marriages: "We may have recently concluded some marriage alliances, but who's to say we *really* have to stand by those?"
 
 
   # --EVENTS--
@@ -220,7 +229,8 @@
 
 # --OTHER--
   merc_crusader_italian_troops: "Italian Company of Outremer"
-  mr_crusader_guardian_of_the_kaaba_tt: "Has chosen the '§YWe will become guardians of the Kaaba!§!' Option in the @KOJ Crusader mission event §YFate of the Kaaba§!.""
+  mr_crusader_guardian_of_the_kaaba_tt: "Has chosen the '§YWe will become guardians of the Kaaba!§!' Option in the @KOJ Crusader mission event §YFate of the Kaaba§!."
+  general_flag_for_FU_Rome_flag: "We will not receive a malus for vassalizing @PAP §YThe Papal States§!."
 
 
 
