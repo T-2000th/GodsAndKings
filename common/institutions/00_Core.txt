@@ -291,8 +291,17 @@ renaissance = {
 				region = xinan_region
 				region = north_china_region
 				region = korea_region
+				region = persia_region
 			}
-			owner = { government = republic }
+			owner = {
+				OR = { 
+					government = republic
+					tag = IRQ
+				}
+				NOT = {
+					has_reform = pirate_republic_reform
+				}
+			}
 		}
 	}
 	
@@ -564,7 +573,7 @@ firearms_institution = {
 				region = korea_region
 				region = tibet_region
 				#region = central_asia_region
-				region = maghreb_region
+				#region = maghreb_region
 				region = malaya_region
 				region = indo_china_region
 				region = iberia_region
@@ -574,6 +583,7 @@ firearms_institution = {
 					tag = POL
 					tag = BLH
 					tag = BOH
+					tag = SOS
 				}
 			}
 		}
