@@ -1,7 +1,34 @@
-#removed 9880 (oxbridge)
+
 #modified
+	#9100 tacked on to the mission On Lollards
+	#9104 removed
+	#9105 unchanged
+	#9106 unchanged
+	#9107 desc
+	#9108 unchanged
+	#9111 trigger changed/rearranged
+	
+	#9112 trigger rearranged - make sure to tie into mission later
+	
+	#9113 trigger changed, FOO, removed
+	#9114 desc
+	#9115 unchanged
+	#9117 desc
+	#9109 deprecated vanilla, unchanged
 	#9122 mtth
-	#9250 trigger
+	#9201 FOO, special person
+	#9202 FOO
+	#9203 FOO
+	#9204 FOO
+ 	#9205 trigger to only happen on non-lenient oversight path; changed trigger order
+	
+	#9250
+	#9251
+	#9237 War of Roses events, removed
+	
+	#9880 Removed (oxbridge)
+	
+	#99 unchanged
 ########################################
 # Major Flavor Events                  #
 ########################################
@@ -28,71 +55,65 @@ country_event = {
 	}
 
 	fire_only_once = yes
-	
-
-	trigger = {
-		tag = ENG
-		NOT = { is_year = 1500 }
-		num_of_cities = 5
-		religion = catholic
-	}
+	is_triggered_only = yes
+	trigger = { }
 	
 	mean_time_to_happen = {
-		months = 60
+		days = 1
 	}
 
 	immediate = {
-		hidden_effect = {
-			set_global_flag = lollard_heresy
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-				}
-				set_province_flag = lollards
-			}
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					NOT = { has_province_flag = lollards }
-				}
-				set_province_flag = lollards
-			}
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					NOT = { has_province_flag = lollards }
-				}
-				set_province_flag = lollards
-			}
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					NOT = { has_province_flag = lollards }
-				}
-				set_province_flag = lollards
-			}
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					NOT = { has_province_flag = lollards }
-				}
-				set_province_flag = lollards
-			}
-			random_owned_province = {
-				limit = {
-					region = british_isles_region
-					NOT = { has_province_flag = lollards }
-				}
-				set_province_flag = lollards
-			}									
-		}
+		# hidden_effect = {
+			# set_global_flag = lollard_heresy
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+				# }
+				# set_province_flag = lollards
+			# }
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+					# NOT = { has_province_flag = lollards }
+				# }
+				# set_province_flag = lollards
+			# }
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+					# NOT = { has_province_flag = lollards }
+				# }
+				# set_province_flag = lollards
+			# }
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+					# NOT = { has_province_flag = lollards }
+				# }
+				# set_province_flag = lollards
+			# }
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+					# NOT = { has_province_flag = lollards }
+				# }
+				# set_province_flag = lollards
+			# }
+			# random_owned_province = {
+				# limit = {
+					# region = british_isles_region
+					# NOT = { has_province_flag = lollards }
+				# }
+				# set_province_flag = lollards
+			# }									
+		# }
 	}
 
 	option = {		# Stop the Heretics
 		name = "flavor_eng.EVTOPTA9100"
 		ai_chance = { factor = 75 }
 		every_owned_province = {
-			limit = { has_province_flag = lollards }
+			limit = { religion = mr_lollard }
 			add_province_modifier = {
 				name = lollards
 				duration = 7300
@@ -111,159 +132,159 @@ country_event = {
 			}
 		}		
 	}
-	option = {		# Let them be
-		name = "flavor_eng.EVTOPTB9100"
-		ai_chance = { factor = 25 }
-		add_reform_desire = 0.03
-		add_country_modifier = {
-			name = eng_tolerates_lollards
-			duration = -1
-		}
-		PAP = {
-			add_opinion = {
-				who = ROOT
-				modifier = eng_tolerates_lollards
-			}
-		}
-		if = {
-			limit = {
-				FRA = {
-					exists = yes
-					religion = catholic
-				}
-			}
-			FRA ={
-				add_opinion = {
-					who = ROOT
-					modifier = eng_tolerates_lollards
-				}
-			}
-		}
-		if = {
-			limit = {
-				BUR = {
-					exists = yes
-					religion = catholic
-				}
-			}
-			BUR = {
-				add_opinion = {
-					who = ROOT
-					modifier = eng_tolerates_lollards
-				}
-			}
-		}
-		if = {
-			limit = {
-				BRI = {
-					exists = yes
-					religion = catholic
-				}
-			}
-			BRI = {
-				add_opinion = {
-					who = ROOT
-					modifier = eng_tolerates_lollards
-				}
-			}
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_province_flag = lollards }
-				clr_province_flag = lollards
-			}
-		}
-	}
+	# option = {		# Let them be
+		# name = "flavor_eng.EVTOPTB9100"
+		# ai_chance = { factor = 25 }
+		# add_reform_desire = 0.03
+		# add_country_modifier = {
+			# name = eng_tolerates_lollards
+			# duration = -1
+		# }
+		# PAP = {
+			# add_opinion = {
+				# who = ROOT
+				# modifier = eng_tolerates_lollards
+			# }
+		# }
+		# if = {
+			# limit = {
+				# FRA = {
+					# exists = yes
+					# religion = catholic
+				# }
+			# }
+			# FRA ={
+				# add_opinion = {
+					# who = ROOT
+					# modifier = eng_tolerates_lollards
+				# }
+			# }
+		# }
+		# if = {
+			# limit = {
+				# BUR = {
+					# exists = yes
+					# religion = catholic
+				# }
+			# }
+			# BUR = {
+				# add_opinion = {
+					# who = ROOT
+					# modifier = eng_tolerates_lollards
+				# }
+			# }
+		# }
+		# if = {
+			# limit = {
+				# BRI = {
+					# exists = yes
+					# religion = catholic
+				# }
+			# }
+			# BRI = {
+				# add_opinion = {
+					# who = ROOT
+					# modifier = eng_tolerates_lollards
+				# }
+			# }
+		# }
+		# hidden_effect = {
+			# every_owned_province = {
+				# limit = { has_province_flag = lollards }
+				# clr_province_flag = lollards
+			# }
+		# }
+	# }
 }
 
 # The End of the Hundred Years War
-country_event = {
-	id = flavor_eng.9104
-	title = "flavor_eng.EVTNAME9104"
-	desc = "flavor_eng.EVTDESC9104"
-	picture = DIPLOMACY_eventPicture
+# country_event = {
+	# id = flavor_eng.9104
+	# title = "flavor_eng.EVTNAME9104"
+	# desc = "flavor_eng.EVTDESC9104"
+	# picture = DIPLOMACY_eventPicture
 	
-	fire_only_once = yes
+	# fire_only_once = yes
 	
-	trigger = {
-		OR = {
-			AND = {
-				has_global_flag = hyw_mission_resolution
-				tag = ENG
-			}
-			AND = {
-				NOT = { is_year = 1500 }
-				NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
-				OR = {
-					AND = {
-						tag = ENG
-						NOT = { exists = GBR }
-					}
-					tag = GBR
-				}
-				primary_culture = english
-				NOT = {
-					france_region = {
-						owned_by = ROOT
-					}
-				}
-				FRA = {
-					exists = yes
-					NOT = { is_subject_of = ENG }
-					NOT = { is_subject_of = GBR }
-					NOT = { war_with = ENG }
-					NOT = { war_with = GBR }
-				}
-			}
-		}
-	}
+	# trigger = {
+		# OR = {
+			# AND = {
+				# has_global_flag = hyw_mission_resolution
+				# tag = ENG
+			# }
+			# AND = {
+				# NOT = { is_year = 1500 }
+				# NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
+				# OR = {
+					# AND = {
+						# tag = ENG
+						# NOT = { exists = GBR }
+					# }
+					# tag = GBR
+				# }
+				# primary_culture = english
+				# NOT = {
+					# france_region = {
+						# owned_by = ROOT
+					# }
+				# }
+				# FRA = {
+					# exists = yes
+					# NOT = { is_subject_of = ENG }
+					# NOT = { is_subject_of = GBR }
+					# NOT = { war_with = ENG }
+					# NOT = { war_with = GBR }
+				# }
+			# }
+		# }
+	# }
 	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = eng_had_end_of_hundred_years_war
-			if = {
-				limit = {
-					FRA = { NOT = { has_country_flag = had_end_of_HYW_france } }
-				}
-				FRA = { country_event = { id = flavor_fra.9104 days = 1 } }
-			}
-		}
-	}
+	# immediate = {
+		# hidden_effect = {
+			# set_global_flag = eng_had_end_of_hundred_years_war
+			# if = {
+				# limit = {
+					# FRA = { NOT = { has_country_flag = had_end_of_HYW_france } }
+				# }
+				# FRA = { country_event = { id = flavor_fra.9104 days = 1 } }
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	# mean_time_to_happen = {
+		# months = 12
+	# }
 	
-	option = {			# We have lost our foothold in France
-		name = "flavor_eng.EVTOPTA9104"
-		ai_chance = { factor = 80 }
-		add_stability_or_adm_power = yes
-		every_core_province = {
-			limit = {
-				region = france_region
-				NOT = { owned_by = ROOT }
-			}
-			remove_core = ROOT
-		}
-		FRA = {
-			add_opinion = {
-				who = ROOT
-				modifier = eng_no_english_in_france
-			}
-		}
-	}
-	option = {		# We will never give this up!
-		name = "flavor_eng.EVTOPTB9104"
-		ai_chance = { factor = 20 }
-		add_stability = -1
-		FRA = {
-			add_opinion = {
-				who = ROOT
-				modifier = eng_refuse_to_give_up_france
-			}
-		}
-	}
-}
+	# option = {			# We have lost our foothold in France
+		# name = "flavor_eng.EVTOPTA9104"
+		# ai_chance = { factor = 80 }
+		# add_stability_or_adm_power = yes
+		# every_core_province = {
+			# limit = {
+				# region = france_region
+				# NOT = { owned_by = ROOT }
+			# }
+			# remove_core = ROOT
+		# }
+		# FRA = {
+			# add_opinion = {
+				# who = ROOT
+				# modifier = eng_no_english_in_france
+			# }
+		# }
+	# }
+	# option = {		# We will never give this up!
+		# name = "flavor_eng.EVTOPTB9104"
+		# ai_chance = { factor = 20 }
+		# add_stability = -1
+		# FRA = {
+			# add_opinion = {
+				# who = ROOT
+				# modifier = eng_refuse_to_give_up_france
+			# }
+		# }
+	# }
+# }
 
 # The Justices of Peace
 country_event = {
@@ -542,10 +563,9 @@ country_event = {
 	title = "flavor_eng.EVTNAME9111"
 	desc = "flavor_eng.EVTDESC9111"
 	picture = NAVAL_MILITARY_eventPicture
-
+	
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_modifier = the_admirality }
-		NOT = { has_country_modifier = the_royal_army }
 		is_year = 1500
 		OR = {
 			AND = {
@@ -556,16 +576,15 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
+		mission_completed = eng_m_naval_1
+		NOT = { has_country_modifier = the_admirality }
+		NOT = { has_country_modifier = the_royal_army }
 	}
 
 	mean_time_to_happen = {
 		months = 1200
 	}
 
-	immediate = {
-		set_country_flag = ENG_had_event_9111
-	}
-	
 	option = {			# Let us authorize the Admirality
 		name = "flavor_eng.EVTOPTA9111"
 		ai_chance = { factor = 90 }
@@ -592,8 +611,6 @@ country_event = {
 	picture = MILITARY_CAMP_eventPicture
 
 	trigger = {
-		NOT = { has_country_modifier = the_admirality }
-		NOT = { has_country_modifier = the_royal_army }
 		is_year = 1500
 		OR = {
 			AND = {
@@ -604,14 +621,12 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
+		NOT = { has_country_modifier = the_admirality }
+		NOT = { has_country_modifier = the_royal_army }
 	}
 
 	mean_time_to_happen = {
 		months = 1200
-	}
-
-	immediate = {
-		set_country_flag = ENG_had_event_9112
 	}
 
 	option = {			# Let us institute the Royal Army
@@ -634,60 +649,56 @@ country_event = {
 }
 
 # Jane Grey
-country_event = {
-	id = flavor_eng.9113
-	title = "flavor_eng.EVTNAME9113"
-	desc = "flavor_eng.EVTDESC9113"
-	picture = COURT_eventPicture
+# country_event = {
+	# id = flavor_eng.9113
+	# title = "flavor_eng.EVTNAME9113"
+	# desc = "flavor_eng.EVTDESC9113"
+	# picture = COURT_eventPicture
 	
-	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9113 }
-		is_year = 1530
-		NOT = {
-			is_year = 1560
-		}
-		has_regency = yes
-		has_consort_regency = no
-		OR = {
-			AND = {
-				tag = ENG
-				NOT = { exists = GBR }
-				NOT = { exists = AVE }
-			}
-			tag = GBR
-			tag = AVE
-		}
-		owns = 246		# Northumberland
-	}
+	# fire_only_once = yes
+	# trigger = {
+		# is_year = 1530
+		# NOT = {
+			# is_year = 1560
+		# }
+		# owns = 246	# Northumberland
+		# OR = {
+			# AND = {
+				# tag = ENG
+				# NOT = { exists = GBR }
+				# NOT = { exists = AVE }
+			# }
+			# tag = GBR
+			# tag = AVE
+		# }
+		# has_regency = yes
+		# has_consort_regency = no
+	# }
 
-	mean_time_to_happen = {
-		months = 360
-		modifier = {
-			factor = 0.8
-			NOT = {
-				legitimacy = 80
-			}
-		}
-	}
-
-	immediate = {
-		set_country_flag = ENG_had_event_9113
-	}
+	# mean_time_to_happen = {
+		# months = 360
+		# modifier = {
+			# factor = 0.8
+			# NOT = {
+				# legitimacy = 80
+			# }
+		# }
+	# }
 	
-	option = {			# Her claim will not recognized!
-		name = "flavor_eng.EVTOPTA9113"
-		246 = {
-			spawn_rebels = {
-				type = pretender_rebels
-				size = 2
-				leader = "Jane"
-				leader_dynasty = "Grey"
-				female = yes
-			}
-		}
-		add_stability = -1
-	}
-}
+	# option = {			# Her claim will not recognized!
+		# name = "flavor_eng.EVTOPTA9113"
+		# 246 = {
+			# spawn_rebels = {
+				# type = pretender_rebels
+				# size = 2
+				# leader = "Jane"
+				# leader_dynasty = "Grey"
+				# female = yes
+			# }
+		# }
+		# add_stability = -1
+	# }
+# }
 
 # Bloody Mary and King Felipé of England
 country_event = {
@@ -697,7 +708,6 @@ country_event = {
 	picture = COURT_eventPicture
 
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1500
 		NOT = {
@@ -795,6 +805,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		is_year = 1540
+		NOT = {
+			is_year = 1640
+		}
 		OR = {
 			AND = {
 				tag = ENG
@@ -803,10 +817,6 @@ country_event = {
 			}
 			tag = GBR
 			tag = AVE
-		}
-		is_year = 1540
-		NOT = {
-			is_year = 1640
 		}
 		has_discovered = 1652	# White Sea
 		has_discovered = 313	# Archangelsk
@@ -851,7 +861,6 @@ country_event = {
 	picture = ADVISOR_eventPicture
 
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1550
 		NOT = { is_year = 1590 }
@@ -2263,7 +2272,6 @@ country_event = {
 	picture = ECONOMY_eventPicture
 
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1651
 		NOT = { is_year = 1670 }
@@ -2303,8 +2311,8 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9201"
 	picture = ECONOMY_eventPicture
 
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9201 }
 		is_year = 1776
 		NOT = { is_year = 1790 }
 		OR = {
@@ -2320,10 +2328,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 300
-	}
-
-	immediate = {
-		set_country_flag = ENG_had_event_9201
 	}
 
 	option = {				# Ok
@@ -2347,8 +2351,8 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9202"
 	picture = INVENTION_eventPicture
 
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9202 }
 		is_year = 1750
 		NOT = { is_year = 1776 }
 		OR = {
@@ -2366,10 +2370,6 @@ country_event = {
 		months = 300
 	}
 	
-	immediate = {
-		set_country_flag = ENG_had_event_9202
-	}
-
 	option = {				# Ok
 		name = "EXCELLENT"
 		add_adm_power = 10
@@ -2390,9 +2390,9 @@ country_event = {
 	title = "flavor_eng.EVTNAME9203"
 	desc = "flavor_eng.EVTDESC9203"
 	picture = ECONOMY_eventPicture
-
+	
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9203 }
 		is_year = 1689
 		NOT = { is_year = 1700 }
 		OR = {
@@ -2408,10 +2408,6 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 300
-	}
-
-	immediate = {
-		set_country_flag = ENG_had_event_9203
 	}
 
 	option = {				# Ok
@@ -2435,8 +2431,8 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9204"
 	picture = INVENTION_eventPicture
 
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9204 }
 		is_year = 1687
 		NOT = { is_year = 1713 }
 		OR = {
@@ -2453,10 +2449,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 300
 	}
-	
-	immediate = {
-		set_country_flag = ENG_had_event_9204
-	}
 
 	option = {				# Ok
 		name = "EXCELLENT"
@@ -2466,17 +2458,20 @@ country_event = {
 	}
 }
 
-# Shakespeare
+# Shakespeare - alt event for anglo-irish shakespeare
+#if you do lenient oversight in ireland
 country_event = {
 	id = flavor_eng.9205
 	title = "flavor_eng.EVTNAME9205"
 	desc = "flavor_eng.EVTDESC9205"
 	picture = ECONOMY_eventPicture
-
+	
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9205 }
 		is_year = 1593
 		NOT = { is_year = 1616 }
+		#NOT = { has_country_flag = ENG_had_event_9205 }
+		NOT = { has_country_flag = eng_lenient_oversight_flag }
 		NOT = { advisor_exists = 245 }
 		OR = {
 			AND = {
@@ -2493,9 +2488,9 @@ country_event = {
 		months = 300
 	}
 	
-	immediate = {
-		set_country_flag = ENG_had_event_9205
-	}
+	# immediate = {
+		# set_country_flag = ENG_had_event_9205
+	# }
 
 	option = {				# Ok
 		name = "GLORYTOOURNATION"
@@ -2510,117 +2505,117 @@ country_event = {
 	}
 }
 
-# Lack of an Heir
-country_event = {
-	id = flavor_eng.9250
-	title = "flavor_eng.EVTNAME9250"
-	desc = "flavor_eng.EVTDESC9250"
-	picture = WAR_OF_THE_ROSES_eventPicture
+# # Lack of an Heir
+# country_event = {
+	# id = flavor_eng.9250
+	# title = "flavor_eng.EVTNAME9250"
+	# desc = "flavor_eng.EVTDESC9250"
+	# picture = WAR_OF_THE_ROSES_eventPicture
 	
-	fire_only_once = yes
+	# fire_only_once = yes
 	
-	trigger = {
-		tag = ENG
-		has_regency = no
-		has_heir = no
-		is_lesser_in_union = no
-		NOT = { ruler_has_personality = infertile_personality }
-		NOT = { has_country_flag = had_war_of_the_roses }
-		#NOT = { has_disaster = war_of_the_roses }
-		NOT = { is_year = 1500 }
-	}
+	# trigger = {
+		# tag = ENG
+		# has_regency = no
+		# has_heir = no
+		# is_lesser_in_union = no
+		# NOT = { ruler_has_personality = infertile_personality }
+		# NOT = { has_country_flag = had_war_of_the_roses }
+		# #NOT = { has_disaster = war_of_the_roses }
+		# NOT = { is_year = 1500 }
+	# }
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	# mean_time_to_happen = {
+		# months = 60
+	# }
 	
 	
-	option = {		# Most troubling indeed
-		name = "flavor_eng.EVTOPTA9250"
-		add_ruler_modifier = {
-			name = low_fertility
-			duration = -1
-		}
-	}
-}
+	# option = {		# Most troubling indeed
+		# name = "flavor_eng.EVTOPTA9250"
+		# add_ruler_modifier = {
+			# name = low_fertility
+			# duration = -1
+		# }
+	# }
+# }
 
-# Rumors Dispelled
-country_event = {
-	id = flavor_eng.9251
-	title = "flavor_eng.EVTNAME9251"
-	desc = "flavor_eng.EVTDESC9251"
-	picture = WAR_OF_THE_ROSES_eventPicture
+# # Rumors Dispelled
+# country_event = {
+	# id = flavor_eng.9251
+	# title = "flavor_eng.EVTNAME9251"
+	# desc = "flavor_eng.EVTDESC9251"
+	# picture = WAR_OF_THE_ROSES_eventPicture
 	
-	fire_only_once = yes
-	trigger = {
-		tag = ENG
-		has_ruler_modifier = low_fertility
-		has_heir = yes
-	}
+	# fire_only_once = yes
+	# trigger = {
+		# tag = ENG
+		# has_ruler_modifier = low_fertility
+		# has_heir = yes
+	# }
 	
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 	
 
-	option = {		# I surely proved them wrong
-		name = "flavor_eng.EVTOPTA9251"
-		remove_country_modifier = low_fertility
-	}
-}
+	# option = {		# I surely proved them wrong
+		# name = "flavor_eng.EVTOPTA9251"
+		# remove_country_modifier = low_fertility
+	# }
+# }
 
-# The Rise of the Tudors
-country_event = { 
-	id = flavor_eng.9237
-	title = flavor_eng.9237.t
-	desc = flavor_eng.9237.d
-	picture = DIPLOMACY_eventPicture
+# # The Rise of the Tudors
+# country_event = { 
+	# id = flavor_eng.9237
+	# title = flavor_eng.9237.t
+	# desc = flavor_eng.9237.d
+	# picture = DIPLOMACY_eventPicture
 	
-	fire_only_once = yes
+	# fire_only_once = yes
  
-	mean_time_to_happen = {
-		months = 1
-	}
+	# mean_time_to_happen = {
+		# months = 1
+	# }
 
-	trigger = {
-		has_country_flag = war_of_the_roses_ended
-		OR = {
-			dynasty = York
-			dynasty = Lancaster
-		}
-		is_lesser_in_union = no
-		has_government_attribute = heir
-		NOT = { had_country_flag = { flag = war_of_the_roses_was_had days = 3650 } } #If you're under a union and get out of it quickly enough you'll still get this but otherwise you won't.
-	}
+	# trigger = {
+		# has_country_flag = war_of_the_roses_ended
+		# OR = {
+			# dynasty = York
+			# dynasty = Lancaster
+		# }
+		# is_lesser_in_union = no
+		# has_government_attribute = heir
+		# NOT = { had_country_flag = { flag = war_of_the_roses_was_had days = 3650 } } #If you're under a union and get out of it quickly enough you'll still get this but otherwise you won't.
+	# }
 
-	option = {
-	name = flavor_eng.9237.a  # There will never be reconciliation between our two houses
-		ai_chance = { factor = 0 }
-		every_owned_province = {
-			add_province_modifier = {
-				name = add_unrest_5_modifier
-				duration = 1825
-			}
-		}
-		add_prestige = 10
-	}
+	# option = {
+	# name = flavor_eng.9237.a  # There will never be reconciliation between our two houses
+		# ai_chance = { factor = 0 }
+		# every_owned_province = {
+			# add_province_modifier = {
+				# name = add_unrest_5_modifier
+				# duration = 1825
+			# }
+		# }
+		# add_prestige = 10
+	# }
 
-	option = {
-		name = flavor_eng.9237.b  # It is time for peace, let us join our two houses together in marriage 
-		ai_chance = { factor = 100 }
-		add_stability_or_adm_power = yes
-		define_heir = {
-			claim = 100
-			name = "Henry #0"
-			dynasty = "Tudor"
-			culture = english
-			adm = 3
-			dip = 4
-			mil = 2
-			age = 24
-		}
-	}
-}
+	# option = {
+		# name = flavor_eng.9237.b  # It is time for peace, let us join our two houses together in marriage 
+		# ai_chance = { factor = 100 }
+		# add_stability_or_adm_power = yes
+		# define_heir = {
+			# claim = 100
+			# name = "Henry #0"
+			# dynasty = "Tudor"
+			# culture = english
+			# adm = 3
+			# dip = 4
+			# mil = 2
+			# age = 24
+		# }
+	# }
+# }
 	
 # # Rule Britannia - Oxbridge rivalry
 # country_event = { 

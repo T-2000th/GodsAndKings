@@ -206,6 +206,16 @@
  mr_england.2007.a: "Get me more!"
  eng_irish_cheese_TT: "Will make Anglo-Hibernian Conversion events §Y5%§! more likely."
  
+ mr_england.2008.t: "Survey of [Root.GetName]"
+ mr_england.2008.d: "Conquered lands are nothing without the people who inhabit it. To make any use of a newly integrated provicne, one must properly survey its homesteads and farms so that they may be taxed properly. We arrive in [Root.GetName] to find population of [Root.GetCapitalName] has grown noticably since the last records from several years ago seem to suggest."
+ mr_england.2008.a: "Count them carefully!"
+ mr_england.2008.b: "The old documents will suffice."
+ eng_irish_census_TT: "Will make Anglo-Hibernian Conversion events §Y10%§! more likely §Yin this province§!."
+ 
+ mr_england.2009.t: "William Seanlaoich"
+ mr_england.2009.d: "Born to Irish father John and English mother Mary in a village on the outskirts of Dublin, William Seanlaoich's early life is sparesly recorded, with scant documents only revealing an education in Latin and Greek - not unusual of grammar school attendants. Regardless of his upbringing, much of his known life comes after his first breakout play in London. As playwright, his theatrical productions quickly gained fame throughout London, and then England. His work is often cited as the origin of several Irish loanwords popularized and brought into the English language which persevere even today: ciotóg, craic, and moran, to name a few. Today, even those unfamiliar with theater and poetry will likely know 'Dream of a Midsummer Night,' 'Alexander,' and 'The Merchant of Genoa.'"
+ mr_england.2009.a: "I'm looking forward to the next one!"
+ 
  mr_england.3.t: "Two Islands, One State"
  mr_england.3.d: "Since the conquest of Ireland, the people of have quickly taken to adopting the English language, followed closely by adopting many of the cultural practices of people in England proper. Reports have even gone so far as to call the people of Dublin 'More English than the English themselves,' despite it being the premier center of Irish culture only decades before. With the impetus of conquering Ireland being uniting both Kingdoms under the same crown, it would not be unreasonable to finally officialize this permanent union of crowns into one."
  mr_england.3.a: "Two kingdoms as One!"
@@ -232,6 +242,7 @@
  mr_england.7.t: "The First Conclusion"
  mr_england.7.d: "'When the Church of England began to dote in temporality after her stepmother, the great Church of Rome, and churches were slain by appropriation to diverse places. Faith, Hope, and Charity began for to flee out of our Church. For Pride with his sorry genealogy of deadly sins challengeth it by title of heritage. This conclusion is general and proved by experience, custom, and manner, as you shall after hear.'\n\nThe Church and its corrupting influence had spread too far into the English Court, in part responsible for the disaster which plunged England in chaos. It is with their practices of extortion and thievery that its mandate of legitimacy is revoked."
  mr_england.7.a: "It is so."
+ 
  
  mr_england.7002.t: "The Second Conclusion"
  mr_england.7002.d: "'The Second Conclusion is this: Our usual priesthood, the which began in Rome feigned of a power higher than angels, is not the priesthood the which Christ ordained to his Apostles. This conclusion is proved: for the priesthood of Rome is made with signs, rites, and bishops' blessings, and that is of little virtue. nowhere ensampled in the Holy Scripture, for the bishops ordinals in the New Testament be little of record. And we can not see that the Holy Ghost, for any such signs, gives any gifts, for he and his noble gifts may not stand with deadly sin in no matter person. The corollary of this conclusion is that it is full uncouth to many that be wise to see bishops play with the holy ghost in making of their orders, for they give crowns in characters in stead of white harts, and that is the livery of Antichrist, brought into Holy Church to color idleness.'\n\nThe rituals of the former Church had little basis in scripture, invented by agents of the Church to maintain its monopoly on Faith. Only by looking to the Bible and interpreting it can we find proper practice."

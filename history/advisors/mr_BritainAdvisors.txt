@@ -1,0 +1,10 @@
+advisor = {
+	advisor_id = 2000
+	name = "William Seanlaoich" #Some kind of famous writer
+	location = 4951 #Dublin
+	cost_multiplier = 0.5
+	skill = 2
+	type = artist
+	date = 1564.1.1 #30 years old
+	death_date = 1616.4.23 #died
+}

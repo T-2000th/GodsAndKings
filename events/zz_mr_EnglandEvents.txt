@@ -9,7 +9,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = { }
+	trigger = { } #triggered by A United Kingdom
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
@@ -53,7 +53,7 @@ country_event = {
 	
 	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = { }
+	trigger = { } #triggered by starter mission
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
@@ -123,7 +123,10 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
 		religion = mr_lollard
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
@@ -161,14 +164,13 @@ province_event = {
 		province_group = ireland_region
 		culture = irish
 		owner = {
-			tag = ENG
 			has_country_flag = eng_lenient_oversight_flag
 			NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		}
 	}
 	is_mtth_scaled_to_size  = 1
 	mean_time_to_happen = {
-		years = 40
+		years = 50
 		modifier = {
 			factor = 0.67
 			owner = { has_country_flag = eng_distribute_english_bibles_flag }
@@ -192,6 +194,10 @@ province_event = {
 			factor = 0.95
 			owner = { has_country_flag = eng_irish_cheese_flag }
 		}
+		modifier = {
+			factor = 0.8
+			owner = { accepted_culture = mr_anglo_hibernian }
+		}
 	}
 	
 	option = { 
@@ -213,7 +219,10 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		any_owned_province = { culture = irish }
@@ -271,7 +280,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		any_owned_province = { culture = irish }
@@ -315,7 +327,10 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		any_owned_province = { culture = irish }
@@ -341,7 +356,6 @@ country_event = {
 	}
 }
 
-
 #Ulster Cheese
 country_event = {
 	id = mr_england.2007
@@ -351,13 +365,16 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
 		has_country_flag = eng_lenient_oversight_flag
 		NOT = { has_country_modifier =  eng_anglo_hibernian_union }
 		any_owned_province = { culture = irish }
 	}
 	mean_time_to_happen = {
-		years = 20
+		years = 15
 	}
 	
 	immediate = {
@@ -374,6 +391,77 @@ country_event = {
 	}
 }
 
+#Survey of [Root.GetName]
+province_event = {
+	id = mr_england.2008
+	title = mr_england.2008.t
+	desc = mr_england.2008.d
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		province_group = ireland_region
+		culture = irish
+		NOT = { has_province_flag = eng_irish_census }
+		owner = {
+			has_country_flag = eng_lenient_oversight_flag
+			NOT = { has_country_modifier =  eng_anglo_hibernian_union }
+		}
+	}
+	is_mtth_scaled_to_size = 1
+	mean_time_to_happen = {
+		years = 15
+	}
+
+	option = {
+		name = mr_england.2008.a
+		add_adm_power = -60
+		add_base_tax = 1
+		hidden_effect = { set_province_flag = eng_irish_census }
+		custom_tooltip = eng_irish_census_TT
+	}
+	option = {
+		name = mr_england.2008.b
+		add_adm_power = 5
+	}
+}
+
+#Anglo Hibernian Playwright - Shakespeare
+country_event = {
+	id = mr_england.2009
+	title = mr_england.2009.t
+	desc = mr_england.2009.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		NOT = { advisor_exists = 2000 }
+		has_country_flag = eng_lenient_oversight_flag
+		any_owned_province = { culture = mr_anglo_hibernian }
+	}
+	mean_time_to_happen = {
+		years = 50
+		modifier = {
+			factor = 0.5
+			accepted_culture = mr_anglo_hibernian
+		}
+	}
+
+	option = {
+		name = mr_england.2009.a
+		define_advisor = {
+			name = "William Seanlaoich" 
+			location = 4951 #Dublin
+			culture = mr_anglo_hibernian
+			skill = 3
+			type = artist
+			cost_multiplier = 0.5
+		}
+	}
+}
 
 #Two Islands, One State
 country_event = {
