@@ -21,6 +21,7 @@ mr_balkh_missions_revolt = {
 		custom_tooltip = BLK_barlas_revolt1_TT
 		hidden_effect = {
             set_country_flag = BLK_barlas_revolt1
+			clr_country_flag = BLK_barlas_revolt0
 			}
 		}
 	}		
@@ -35,6 +36,7 @@ mr_balkh_missions_revolt = {
 		custom_tooltip = BLK_barlas_revolt2_TT
 		hidden_effect = {
             set_country_flag = BLK_barlas_revolt2
+			clr_country_flag = BLK_barlas_revolt1
 			}
 		}
 	}
@@ -52,6 +54,7 @@ mr_balkh_missions_revolt = {
 		custom_tooltip = BLK_barlas_revolt3_TT
 		hidden_effect = {
             set_country_flag = BLK_barlas_revolt_cleared
+			clr_country_flag = BLK_barlas_revolt2
 			TRS = {
             every_core_province = { add_core = BLK }	
              }			
