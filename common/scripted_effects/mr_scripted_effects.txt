@@ -508,3 +508,69 @@ crown_agenda_exploit_thrice_effect = {
 		}
 	}
 }
+
+clr_lollard_modifiers_effect = {
+	set_variable = {
+		which = lollardConclusionProgress
+		value = 0
+	}
+	clr_country_flag = CLERICAL_AUTONOMY_LOLLARD_FLAG
+	clr_country_flag = NO_CONFESSIONS_LOLLARD_FLAG
+	clr_country_flag = conclusion_twelve_stricken
+	clr_country_flag = conclusion_twelve_crafts
+	remove_country_modifier = mr_lollard_conc_3
+	remove_country_modifier = mr_lollard_conc_3b
+	remove_country_modifier = mr_lollard_conc_4
+	remove_country_modifier = mr_lollard_conc_4b
+	remove_country_modifier = mr_lollard_conc_5
+	remove_country_modifier = mr_lollard_conc_6
+	remove_country_modifier = mr_lollard_conc_7
+	remove_country_modifier = mr_lollard_conc_8
+	remove_country_modifier = mr_lollard_conc_8b
+	remove_country_modifier = mr_lollard_conc_10
+	remove_country_modifier = mr_lollard_conc_10b
+	remove_country_modifier = mr_lollard_conc_11
+}
+
+remove_t2_goods_effect = {
+	if = {
+		limit = { has_building = mrb_brewery }
+		remove_building = mrb_brewery
+	}
+	else_if = {
+		limit = { has_building = mrb_creamery }
+		remove_building = mrb_creamery
+	}
+	else_if = {
+		limit = { has_building = mrb_textileprocessor }
+		remove_building = mrb_textileprocessor
+	}
+	else_if = {
+		limit = { has_building = mrb_steelmill }
+		remove_building = mrb_steelmill
+	}
+	else_if = {
+		limit = { has_building = mrb_jewler }
+		remove_building = mrb_jewler
+	}
+	else_if = {
+		limit = { has_building = mrb_confectionary }
+		remove_building = mrb_confectionary
+	}
+	else_if = {
+		limit = { has_building = mrb_lumberyard }
+		remove_building = mrb_lumberyard
+	}
+	else_if = {
+		limit = { has_building = mrb_winery }
+		remove_building = mrb_winery
+	}
+	else_if = {
+		limit = { has_building = mrb_gunsmith }
+		remove_building = mrb_gunsmith
+	}
+	else_if = {
+		limit = { has_building = mrb_powdermill }
+		remove_building = mrb_powdermill
+	}
+}

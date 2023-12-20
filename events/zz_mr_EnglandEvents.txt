@@ -753,6 +753,21 @@ country_event = {
 	
 	option = {
 		name = mr_england.7003.a
+		add_country_modifier = {
+			name = mr_lollard_conc_3
+			duration = -1
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+	option = {
+		name = mr_england.7003.b
+		add_country_modifier = {
+			name = mr_lollard_conc_3b
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -786,6 +801,17 @@ country_event = {
 	
 	option = {
 		name = mr_england.7004.a
+		add_country_modifier = {
+			name = mr_lollard_conc_4
+			duration = -1
+		}
+	}
+	option = {
+		name = mr_england.7004.b
+		add_country_modifier = {
+			name = mr_lollard_conc_4b
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -819,6 +845,10 @@ country_event = {
 	
 	option = {
 		name = mr_england.7005.a
+		add_country_modifier = {
+			name = mr_lollard_conc_5
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -852,6 +882,35 @@ country_event = {
 	
 	option = {
 		name = mr_england.7006.a
+		trigger = {
+			OR = {
+				NOT = { has_reform = mr_lollard_state_head }
+				NOT = { has_country_flag = mr_unlock_lollard_reform_A }
+			}
+		}
+		hidden_effect = { set_country_flag = CLERICAL_AUTONOMY_LOLLARD_FLAG }
+		tooltip = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = CLERICAL_AUTONOMY_LOLLARD
+				influence = 5
+				duration = -1
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_church
+				desc = CLERICAL_AUTONOMY_LOLLARD_LOYALTY
+				loyalty = 10
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = mr_england.7006.b
+		add_country_modifier = {
+			name = mr_lollard_conc_6
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -885,6 +944,10 @@ country_event = {
 	
 	option = {
 		name = mr_england.7007.a
+		add_country_modifier = {
+			name = mr_lollard_conc_7
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -918,6 +981,17 @@ country_event = {
 	
 	option = {
 		name = mr_england.7008.a
+		add_country_modifier = {
+			name = mr_lollard_conc_8
+			duration = -1
+		}
+	}
+	option = {
+		name = mr_england.7008.b
+		add_country_modifier = {
+			name = mr_lollard_conc_8b
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -951,6 +1025,16 @@ country_event = {
 	
 	option = {
 		name = mr_england.7009.a
+		hidden_effect = { set_country_flag = NO_CONFESSIONS_LOLLARD_FLAG }
+		tooltip = {
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = NO_CONFESSIONS_LOLLARD
+				influence = -10
+				duration = -1
+			}
+		}
+		add_prestige = 10
 	}
 	after = {
 		change_variable = {
@@ -984,6 +1068,17 @@ country_event = {
 	
 	option = {
 		name = mr_england.7010.a
+		add_country_modifier = {
+			name = mr_lollard_conc_10
+			duration = -1
+		}
+	}
+	option = {
+		name = mr_england.7010.b
+		add_country_modifier = {
+			name = mr_lollard_conc_10b
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -1017,6 +1112,10 @@ country_event = {
 	
 	option = {
 		name = mr_england.7011.a
+		add_country_modifier = {
+			name = mr_lollard_conc_11
+			duration = -1
+		}
 	}
 	after = {
 		change_variable = {
@@ -1050,11 +1149,116 @@ country_event = {
 	
 	option = {
 		name = mr_england.7012.a
+		custom_tooltip = conclusion_twelve_TT
+		hidden_effect = { set_country_flag = conclusion_twelve_crafts }
+	}
+	option = {
+		name = mr_england.7012.b
+		add_prestige = 10
+		hidden_effect = { set_country_flag = conclusion_twelve_stricken }
 	}
 	after = {
 		change_variable = {
 			which = lollardConclusionProgress
 			value = 1
+		}
+	}
+}
+#Original Wycliffe Bible Rediscovered
+country_event = {
+	id = mr_england.7013
+	title = mr_england.7013.t
+	desc = mr_england.7013.d
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		religion = mr_lollard
+		check_variable = {
+			which = lollardConclusionProgress
+			value = 12
+		}
+	}
+	mean_time_to_happen = { 
+		years = 40
+	}
+	
+	immediate = {
+		if = {
+			limit = { #struck 3 conlusions from the record
+				has_country_modifier = mr_lollard_conc_6
+				has_country_modifier = mr_lollard_conc_10
+				has_country_flag = conclusion_twelve_stricken
+			}
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_1
+			}
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_2
+			}
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_3
+			}
+		}
+		else_if = { #struck only 2 from the record
+			limit = {
+				OR = {
+					AND = {
+						has_country_modifier = mr_lollard_conc_6
+						has_country_modifier = mr_lollard_conc_10
+					}
+					AND = {
+						has_country_modifier = mr_lollard_conc_6
+						has_country_flag = conclusion_twelve_stricken
+					}
+					AND = {
+						has_country_modifier = mr_lollard_conc_10
+						has_country_flag = conclusion_twelve_stricken
+					}
+				}
+			}
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_1
+			}
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_2
+			}
+		}
+		else = { # only 1 stricken from record
+			random_owned_province = {
+				limit = { religion = mr_lollard }
+				save_event_target_as = lollard_purists_revolt_1
+			}
+		}
+	}
+	
+	option = {
+		name = mr_england.7013.a
+		event_target:lollard_purists_revolt_1 = {
+			spawn_rebels = {
+				type = lollard_rebels
+				size = 2
+			}
+		}
+		event_target:lollard_purists_revolt_2 = {
+			spawn_rebels = {
+				type = lollard_rebels
+				size = 2
+			}
+		}
+		event_target:lollard_purists_revolt_3 = {
+			spawn_rebels = {
+				type = lollard_rebels
+				size = 2
+			}
+		}
+		add_country_modifier = {
+			name = mr_lollard_revealed
+			duration = 9125
 		}
 	}
 }

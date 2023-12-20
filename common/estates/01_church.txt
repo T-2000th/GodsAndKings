@@ -121,6 +121,20 @@ estate_church = {
 		}
 		influence = -40
 	}
+	influence_modifier = {
+		desc = CLERICAL_AUTONOMY_LOLLARD
+		trigger = {
+			has_country_flag = CLERICAL_AUTONOMY_LOLLARD_FLAG
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = NO_CONFESSIONS_LOLLARD
+		trigger = {
+			has_country_flag = NO_CONFESSIONS_LOLLARD_FLAG
+		}
+		influence = -10
+	}
 
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
@@ -186,6 +200,13 @@ estate_church = {
 		trigger = {
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			419 = { religion = coptic has_owner_religion = yes }
+		}
+	}
+	loyalty_modifier = {
+		desc = CLERICAL_AUTONOMY_LOLLARD_LOYALTY
+		loyalty = 10
+		trigger = {
+			has_country_flag = CLERICAL_AUTONOMY_LOLLARD_FLAG
 		}
 	}
 	

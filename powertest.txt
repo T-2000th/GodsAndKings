@@ -1,6 +1,8 @@
-	every_province = {
-					limit = {
-						owned_by = BLH
-					}
-					add_territorial_core = ROOT
-				}
+
+		# clr_estate_influence_modifier = {
+			# estate = estate_church
+			# desc = NO_CONFESSIONS_LOLLARD
+			# influence = -10
+			# duration = -1
+		# }
+		clr_estate_influence_modifier = NO_CONFESSIONS_LOLLARD
