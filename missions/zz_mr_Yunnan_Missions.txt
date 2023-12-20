@@ -487,7 +487,7 @@ mr_yunnan_missions_second = {
 		    }
 	}  
         ynn_conquer_kham = {
-		icon = mission_steppe_warriors
+		icon = mng_deal_kama_kagyu
 		position = 3
 		required_missions = {ynn_conquer_dali}
 		provinces_to_highlight = {
@@ -573,7 +573,7 @@ mr_yunnan_missions_second = {
     }
   }
         ynn_conquer_tibet = {
-		icon = mission_steppe_warriors
+		icon = mission_religious_harmony
 		position = 5
 		required_missions = {ynn_align_tibet}
 		provinces_to_highlight = {
