@@ -522,5 +522,4 @@ add_value_to_random_dev = {
 			add_base_manpower = $value$
 		}
 	}
-
 }
