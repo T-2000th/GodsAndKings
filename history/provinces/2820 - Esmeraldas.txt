@@ -1,17 +1,17 @@
 # - Esmeraldas
 
-# owner = QTO
-# controller = QTO
+owner = QTO
+controller = QTO
 culture = cara
 religion = inti
 capital = "Esmeraldas"
-# is_city = yes
+is_city = yes
 trade_goods = fish
 hre = no
 base_tax = 3 
 base_production = 3
 base_manpower = 1
-# add_core = QTO
+add_core = QTO
 
 
 

@@ -109,7 +109,7 @@ mr_yunnan_missions_first = {
 		    }
 	}
     ynn_crush_pagan = {
-		icon = mission_kowtow
+		icon = mission_conquer_burma
 		position = 5
 		required_missions = {ynn_burmese_invasion}
 		provinces_to_highlight = {
@@ -465,10 +465,12 @@ mr_yunnan_missions_second = {
 		}
 		effect = {
 			    dali_area = {add_nationalism = -30}	
+				661 = {
 				add_great_project_tier = {
                   type = mr_three_pagodas
                   tier = 1
-               }
+                  }
+			   }
 				
        		    kham_area = {
 				limit = {
@@ -487,7 +489,7 @@ mr_yunnan_missions_second = {
 		    }
 	}  
         ynn_conquer_kham = {
-		icon = mission_steppe_warriors
+		icon = mng_deal_kama_kagyu
 		position = 3
 		required_missions = {ynn_conquer_dali}
 		provinces_to_highlight = {
@@ -573,7 +575,7 @@ mr_yunnan_missions_second = {
     }
   }
         ynn_conquer_tibet = {
-		icon = mission_steppe_warriors
+		icon = mission_religious_harmony
 		position = 5
 		required_missions = {ynn_align_tibet}
 		provinces_to_highlight = {
@@ -656,6 +658,9 @@ mr_yunnan_missions_second = {
 								culture = oirats
 								culture = khalkha
 								culture = chahar
+								culture = chahari
+								culture = tumed
+								culture = kharchin
 							}
 						}
 						change_culture = altaic_new

@@ -1,7 +1,7 @@
 # - Chachapoyas
 
-# owner = CYA
-# controller = CYA
+owner = CYA
+controller = CYA
 culture = chachapoyan
 religion = inti
 capital = "Kuelap"
@@ -10,8 +10,8 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-# is_city = yes
-# add_core = CYA
+is_city = yes
+add_core = CYA
 
 
 
@@ -19,6 +19,6 @@ discovered_by = south_american
 discovered_by = andean
 discovered_by = CHM
 
-# fort_15th = yes
+fort_15th = yes
 
 1444.11.12 = { trade_goods = unknown }

@@ -2322,3 +2322,44 @@ wazir_egyptian_ideas = {
 		core_creation = -0.15
 	}
 }
+
+baghdadi_ideas = {
+	start = {
+		technology_cost = -0.05
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		governing_capacity_modifier = 0.1
+	}
+
+	trigger = {
+		tag = IRQ
+	}
+	free = yes		#will be added at load.
+
+	irq_the_round_city = {
+		development_cost = -0.1
+	}
+	irq_sunni_caliphate = {
+		church_loyalty_modifier = 0.1
+		prestige = 1
+	}
+	irq_ayyarun = {
+		land_morale = 0.15
+	}
+	irq_caliphal_universalism = {
+		dhimmi_loyalty_modifier = 0.1
+		num_accepted_cultures = 2
+	}
+	irq_abbasid_architecture = {
+		great_project_upgrade_cost = -0.1
+		build_cost = -0.15
+	}
+	irq_vassal_sultans = { 
+		liberty_desire_from_subject_development = -0.20
+	}
+	irq_caliphal_reconquest = { 
+		province_warscore_cost = -0.1
+	}
+}

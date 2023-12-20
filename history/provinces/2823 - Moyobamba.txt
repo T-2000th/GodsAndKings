@@ -1,7 +1,7 @@
 # - Moyobamba
 
-# owner = CYA
-# controller = CYA
+owner = CYA
+controller = CYA
 culture = chachapoyan
 religion = inti
 capital = "Moyobamba"
@@ -10,8 +10,8 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-# is_city = yes
-# add_core = CYA
+is_city = yes
+add_core = CYA
 
 
 

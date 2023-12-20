@@ -1,0 +1,96 @@
+namespace = mrLevantFlavor
+
+province_event = { # Conquest of Damascus
+	id = mrLevantFlavor.1
+	title = mrLevantFlavor.1.t
+	picture = BIG_ARABIAN_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = { province_id = 382 }
+
+	desc = {
+		trigger = { owner = { is_levantine_crusader_state = yes } }
+		desc = mrLevantFlavor.1.da
+	}
+	desc = {
+		trigger = { owner = { is_levantine_crusader_state = no } }
+		desc = mrLevantFlavor.1.db
+	}
+
+	option = {
+		name = mrLevantFlavor.1.oa
+		trigger = { owner = { is_levantine_crusader_state = yes } }
+		owner = { add_prestige_or_monarch_power = { amount = 10 } }
+	}
+
+	option = {
+		name = mrLevantFlavor.1.ob
+		trigger = { owner = { is_levantine_crusader_state = no } }
+		owner = { add_prestige_or_monarch_power = { amount = 10 } }
+	}
+}
+
+province_event = { # Conquest of Antioch
+	id = mrLevantFlavor.2
+	title = mrLevantFlavor.2.t
+	picture = COPTIC_CITY_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = { province_id = 2313 }
+
+	desc = mrLevantFlavor.2.da
+
+	option = {
+		name = mrLevantFlavor.2.oa
+		owner = { add_prestige_or_monarch_power = { amount = 10 } }
+	}
+}
+
+province_event = { # Conquest of Jerusalem!
+	id = mrLevantFlavor.3
+	title = mrLevantFlavor.3.t
+	picture = BYZ_JERUSALEM_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = { province_id = 379 }
+
+	desc = mrLevantFlavor.3.d
+
+	option = {
+		name = mrLevantFlavor.3.oa
+		trigger = { owner = { religion_group = christian } }
+		owner = { add_prestige_or_monarch_power = { amount = 25 } }
+	}
+
+	option = {
+		name = mrLevantFlavor.3.ob
+		trigger = { owner = { religion_group = muslim } }
+		owner = { add_prestige_or_monarch_power = { amount = 25 } }
+	}
+
+	option = {
+		name = mrLevantFlavor.3.oc
+		highlight = yes
+		trigger = {
+			NOT = {
+				owner = {
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+						religion_group = jewish_group
+					}
+				}
+			}
+		}
+		owner = { add_prestige_or_monarch_power = { amount = 25 } }
+	}
+
+	option = {
+		name = mrLevantFlavor.3.od
+		trigger = { owner = { religion_group = jewish_group } }
+		owner = { add_prestige_or_monarch_power = { amount = 25 } }
+	}
+}

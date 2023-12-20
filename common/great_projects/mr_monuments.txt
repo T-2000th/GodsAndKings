@@ -283,7 +283,7 @@ mr_house_of_wisdom = {
 			idea_cost = -0.10
 			innovativeness_gain = 0.25
 			harmonization_speed = 0.15
-			monthly_piety_accelerator = 0.1
+			monthly_piety_accelerator = 0.001
 		}
 		on_upgraded = {
 			owner = {

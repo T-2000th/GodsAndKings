@@ -45,7 +45,7 @@ province_event = {
 	trigger = {
 		# OBS! These checks are also hard coded in WouldBecomeShogunIfTaking() for AI and interface reasons. Change code too if this trigger changes.
 		province_id = 1020
-		NOT = event_target:leader_of_shugo
+		NOT = { controller = { tag = event_target:leader_of_shugo }  }
 		#owner = {
 		#	OR = {
 		#		has_reform = daimyo
@@ -173,7 +173,7 @@ province_event = {
 					country_event = { id = japan.2 }
 				}
 			}
-			#Case - new owner is not the new shogun, previous one is dead -> all former daimyos become independent daimyo
+			#Case - new owner is not the new shogun, previous one is dead -> all former daimyos become independent daimyo / You somehow killed Japan while **NOT** having them integrated the Shugo
 			if = {
 				limit = {
 					NOT = {
@@ -184,7 +184,12 @@ province_event = {
 					}
 				}
 				every_country = {
-					limit = { has_reform = daimyo }
+					limit = {
+						OR = {
+							has_reform = daimyo 
+							is_subject_of_type = shugo_vassal
+						} 
+					}
 					overlord = {
 						free_vassal = PREV
 					}
@@ -197,13 +202,19 @@ province_event = {
 			if = {
 				limit = {
 					any_country = {
-						is_subject_of_type = daimyo_vassal
+						OR = {
+							is_subject_of_type = shugo_vassal
+							is_subject_of_type = daimyo_vassal
+						}
 						NOT = { overlord = { has_reform = shogunate } }
 					}
 				}
 				every_country = {
 					limit = {
-						is_subject_of_type = daimyo_vassal
+						OR = {
+							is_subject_of_type = shugo_vassal
+							is_subject_of_type = daimyo_vassal
+						}
 						NOT = { overlord = { has_reform = shogunate } }
 					}
 					overlord = {
