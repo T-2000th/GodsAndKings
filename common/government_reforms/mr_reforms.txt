@@ -1231,3 +1231,46 @@ wazir_republic = {
 		wr_nubians
 	}
 }
+
+qara_order_reform = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+			#has_unlocked_government_reform = {
+			#	government_reform = qara_order_reform
+			#}
+			tag = BLK
+	}
+	trigger = {
+		OR = {
+		    tag = BLK
+				OR = {
+					hidden_trigger = {
+						has_reform = qara_order_reform
+					}
+					have_had_reform = qara_order_reform
+				}
+			has_unlocked_government_reform_tooltip = {
+				government_reform = qara_order_reform
+			}
+		}
+	}
+	
+	modifiers = {
+		war_exhaustion = -0.02
+		global_autonomy = -0.05
+		army_tradition_from_battle = 0.5
+	}
+	
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+		generals_become_rulers = yes
+		royal_marriage = yes
+		republican_name = yes	
+	}
+	
+	government_abilities = { qaraunas_confidence_mechanic }
+	
+	has_term_election = no
+}

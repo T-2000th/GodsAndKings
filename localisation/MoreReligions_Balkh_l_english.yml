@@ -16,6 +16,7 @@
  BLK_barlas_revolt1_TT: "The Barlas Revolt will be delayed until 1453"
  BLK_barlas_revolt2_TT: "The Barlas Revolt will be delayed until 1460"
  BLK_barlas_revolt3_TT: "The Barlas Revolt will be avoided"
+ confidence_kill_ruler_TT: "Our men will lose confidence in our Noyan, overthrowing him and replacing him with a new general."
  
  #White Horde Modifiers
  
@@ -30,8 +31,25 @@
  MR_balkh_flavor.3.t: "The Qara'unas back down"
  MR_balkh_flavor.3.d: "The time has come to rid the realm of the Qara'unas for good. Their rule has led to regression, the people suffer while they fund their egotistical architectural projects in Balkh. The Jalairs, Suldus, and Arlat all stand behind [TRS.Monarch.GetName].\n\nThe Qara'unas have retreated to their mountain bases and do not seem to have any intentions of preventing us from asserting our sovereignity. It seems we will have to take the fight to their doorstep..."
  MR_balkh_flavor.3.a: "Cowards, their day will come."
+ MR_balkh_flavor.4.t: "The General's Coup"
+ MR_balkh_flavor.4.d: " "
+ MR_balkh_flavor.4.a: "More competent hands."
+ MR_balkh_flavor.5.t: "A Family Connection - Command"
+ MR_balkh_flavor.5.d: " "
+ MR_balkh_flavor.5.a: "Just a spoonful..."
+ MR_balkh_flavor.5.b: "Positions are gained by merit, not connections."
+ MR_balkh_flavor.6.t: "A Family Connection - Counsel"
+ MR_balkh_flavor.6.d: " "
+ MR_balkh_flavor.6.a: "Just a spoonful...."
+ MR_balkh_flavor.6.b: "Positions are gained by merit, not connections."
  
  #Misc
  TRS_new: "Mawarannahr"
  TRS_new_ADJ: "Mawarannahri"
+ qara_order_reform: "Qara'unas Order"
+ qara_order_reform_desc: "WIP"
+ qaraunas_confidence_mechanic: "Noyan Confidencce"
+ ability_qaraunas_confidence_mechanic: "§YNoyan Confidencce§!"
+ qaraunas_confidence: "Confidence"
+ qaraunas_confidence_desc: "The Qara'unas function ìn a unique way, different to the other tribes hailing from the Ulus of Chagatai. They are a military group formed out of garrisons stationed on the edge of the realm. They know neither ruling class nor nobility. Rulers were appointed throughout history from all different groups, and ruled by might.\n\nThe men of the Qara'unas blame the nepotism of Husayn for the decline of their order, so they won't take kindly to the throne becoming hereditary. Any prospective ruler of the Qara'unas must keep the confidence of the soldiers, lest they be replaced.\n\n\n§YNoyan Confidence§! can be earned by:\nWinning battles (§J+0.5§!)\nWinning battles with our leader commanding (§J+1§!)\nConquering Provinces (§J+0.25§!)\n\n§YNoyan Confidence§! can be lost by:\nLosing Battles (§R-0.5§!)\nLosing Battles with our leader commanding (§R-1§!)\nLosing Wars (§R-45§!)\n\n"
  

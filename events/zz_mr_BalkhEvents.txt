@@ -108,3 +108,112 @@ country_event = {
 		hidden_effect = { add_truce_with = FROM }			
 	}	
 }
+
+country_event = {
+	id = MR_balkh_flavor.4 #Coup
+	title = MR_balkh_flavor.4.t
+	desc = MR_balkh_flavor.4.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+	   tag = BLK 
+	   NOT = { government = republic }
+    }	
+
+    mean_time_to_happen = {
+	months = 100
+
+	modifier = {
+		factor = 0.5
+		NOT = { mil = 4 }
+	   }
+    }
+	
+	option = {
+		name = MR_balkh_flavor.4.a #CoupThisBozo
+		
+        define_ruler = {
+         dynasty = "Qara'unas"
+         adm = 3
+         dip = 3
+         mil = 5
+         age = 35
+         claim = 100
+         }		
+		change_government = republic
+		add_government_reform = qara_order_reform
+		hidden_effect = { add_republican_tradition = 40 }
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.5 #NepotismHireAdvisor
+	title = MR_balkh_flavor.5.t
+	desc = MR_balkh_flavor.5.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    mean_time_to_happen = {
+	months = 300
+    }
+	
+	option = {
+		name = MR_balkh_flavor.5.a #Hire
+		
+        define_advisor = {
+         type = commandant
+         skill = 2
+         culture = ROOT
+         religion = ROOT
+		 discount = yes
+        }
+		
+		add_government_power = {
+	     mechanic_type = qaraunas_confidence_mechanic
+         power_type = qaraunas_confidence
+	     value = -10
+        }
+	}	
+	option = {
+		name = MR_balkh_flavor.5.b #NoNepotism
+				
+		add_government_power = {
+	     mechanic_type = qaraunas_confidence_mechanic
+         power_type = qaraunas_confidence
+	     value = 5
+        }
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.6 #NepotismHireGeneral
+	title = MR_balkh_flavor.6.t
+	desc = MR_balkh_flavor.6.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    mean_time_to_happen = {
+	months = 300
+    }
+	
+	option = {
+		name = MR_balkh_flavor.6.a #Hire
+		
+        create_general = { tradition = 70 }
+		
+		add_government_power = {
+	     mechanic_type = qaraunas_confidence_mechanic
+         power_type = qaraunas_confidence
+	     value = -10
+        }
+	}	
+	option = {
+		name = MR_balkh_flavor.6.b #NoNepotism
+				
+		add_government_power = {
+	     mechanic_type = qaraunas_confidence_mechanic
+         power_type = qaraunas_confidence
+	     value = 5
+        }
+	}	
+}

@@ -603,6 +603,7 @@ republic = {
 		#Mamluks
 		egyptian_government_reform
 		#GnK
+		qara_order_reform
 	}
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
@@ -650,6 +651,7 @@ republic = {
 				#G&K
 				mr_greek_poleocracy_reform 
 				wazir_republic
+				qara_order_reform
 			}
 		}
 		republican_virtues = {

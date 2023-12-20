@@ -1,0 +1,41 @@
+qaraunas_confidence_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		has_dlc = "Domination"
+	}
+
+	powers = {
+		qaraunas_confidence = {
+			gui = qaraunas_confidence_gov_mech
+			default = 50
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = 0
+			scaled_modifier = {
+			start_value = 50
+			end_value = 100
+				modifier = {
+					land_morale = 0.10
+					yearly_army_professionalism = 0.0025
+					republican_tradition = 0.5
+				}
+			}
+			reverse_scaled_modifier = {
+			start_value = 0	
+			end_value = 50
+				modifier = {
+					land_morale = -0.10
+					yearly_army_professionalism = -0.0025
+					republican_tradition = -0.5
+				}
+			}
+			on_min_reached = {
+			custom_tooltip = confidence_kill_ruler_TT
+			hidden_effect = {
+				ROOT = { kill_ruler = yes }
+				}
+			}
+		}
+	}
+}
