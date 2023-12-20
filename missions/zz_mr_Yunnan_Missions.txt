@@ -465,10 +465,12 @@ mr_yunnan_missions_second = {
 		}
 		effect = {
 			    dali_area = {add_nationalism = -30}	
+				661 = {
 				add_great_project_tier = {
                   type = mr_three_pagodas
                   tier = 1
-               }
+                  }
+			   }
 				
        		    kham_area = {
 				limit = {
