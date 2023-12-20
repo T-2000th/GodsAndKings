@@ -83,6 +83,10 @@ crusader_missions_1_minors = {
 					which = cs_num_coasts_raided
 					value = 0
 				}
+				set_variable = {
+					which = cs_raid_reward_target
+					value = 5
+				}
 			}
 		}
 	}

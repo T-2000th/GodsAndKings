@@ -518,3 +518,40 @@ country_event = {
 		name = "dummy"
 	}
 }
+
+country_event = {
+	id = mrCrusaderEvents.12
+	title = mrCrusaderEvents.12.t
+	picture = BARBARY_PIRATES_eventPicture
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		is_levantine_crusader_state = yes
+		mission_completed = cs_raiding_menace
+		check_variable = { # is cs_num_coasts_raided >= cs_raid_reward_target
+			which = cs_num_coasts_raided
+			which = cs_raid_reward_target
+		}
+	}
+
+	desc = mrCrusaderEvents.12.d
+
+	option = {
+		name = mrCrusaderEvents.12.a
+
+		random_owned_province = {
+			limit = { has_port = yes }
+			add_value_to_random_dev = { value = 2 }
+		}
+
+		hidden_effect = { # So need to raid more to trigger again
+			change_variable = {
+				which = cs_raid_reward_target
+				value = 5
+			}
+		}
+	}
+}

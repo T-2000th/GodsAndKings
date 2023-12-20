@@ -509,17 +509,18 @@ crown_agenda_exploit_thrice_effect = {
 	}
 }
 
-add_random_dev = {
+# Add $value$ dev to one category, uniform random
+add_value_to_random_dev = {
 	random_list = {
 		1 = {
-			add_base_tax = 1
+			add_base_tax = $value$
 		}
 		1 = {
-			add_base_production = 1
+			add_base_production = $value$
 		}
 		1 = {
-			add_base_manpower = 1
+			add_base_manpower = $value$
 		}
 	}
- 
+
 }
