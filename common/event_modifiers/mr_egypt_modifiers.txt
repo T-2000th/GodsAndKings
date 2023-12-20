@@ -2,3 +2,15 @@ egy_justified_war_mod = {
 	land_morale = 0.1
 	manpower_recovery_speed = 0.2
 }
+
+egy_economic_boom = {
+	development_cost = -0.1
+	global_trade_goods_size_modifier = 0.1
+	global_tax_modifier = 0.1
+}
+
+egy_desert_campaigns = {
+	land_attrition = -0.33
+	global_supply_limit_modifier = 0.25
+	cavalry_power = 0.1
+}

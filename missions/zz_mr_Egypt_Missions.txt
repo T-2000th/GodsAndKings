@@ -6,6 +6,60 @@ egypt_missions_first = {
 	potential = {
 		tag = EGY
 	}
+
+	egypt_conquest_west_1 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 1
+		required_missions = { }
+
+		provinces_to_highlight = {
+			province_id = 358
+		}
+
+		trigger = {
+			358 = {
+				infantry_in_province = 10
+				cavalry_in_province = 5
+			}
+		}
+
+		effect = {
+			cyrenaica_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	egypt_conquest_west_2 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 2
+		required_missions = { egypt_conquest_west_1 }
+
+		provinces_to_highlight = {
+			area = cyrenaica_area
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			cyrenaica_area = {
+				type = all
+				owned_by = ROOT
+			}
+			treasury = 200
+		}
+
+		effect = {
+			add_treasury = -200
+			add_country_modifier = {
+				name = egy_desert_campaigns
+				duration = 18250 # 50 years
+			}
+
+			add_permanent_claim = tripolitania_area
+			add_permanent_claim = fezzan_area
+			add_permanent_claim = djerba_area
+		}
+	}
 }
 
 egypt_missions_second = {
@@ -15,6 +69,103 @@ egypt_missions_second = {
 	has_country_shield = yes
 	potential = {
 		tag = EGY
+	}
+
+	egypt_development_1 = { # Dev upper nile, then vassalize makuria as a border march
+		icon = mission_egyptian_mamluk_soldier
+		position = 1
+		required_missions = { }
+
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				area = vostani_area
+				area = said_area
+			}
+			NOT = { development = 9 }
+		}
+
+		trigger = {
+			NOT = {
+				any_owned_province = {
+					OR = {
+						area = vostani_area
+						area = said_area
+					}
+					NOT = { development = 9 }
+				}
+			}
+		}
+
+		effect = {
+			add_permanent_claim_multi_provinces = { target = said_area }
+			add_permanent_claim_multi_provinces = { target = gulf_of_arabia_area }
+		}
+	}
+
+	egypt_development_2 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 2
+		required_missions = { egypt_development_1 }
+
+		provinces_to_highlight = {
+			OR = {
+				area = said_area
+				area = gulf_of_arabia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			said_area = {
+				type = all
+				owned_by = root
+			}
+			gulf_of_arabia_area = {
+				type = all
+				owned_by = root
+			}
+		}
+		effect = {
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = MAK
+			}
+		}
+	}
+
+	egypt_development_3 = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 2
+		required_missions = { egypt_development_2 }
+
+		trigger = {
+			MAK = {
+				is_subject_of = ROOT
+				is_subject_of_type = march
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					region = egypt_region
+				}
+				num_of_buildings_in_province = 1
+			}
+		}
+
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = egy_economic_boom
+				duration = 3650
+			}
+
+			MAK = {
+				add_permanent_claim_multi_provinces = { target = dongola_area }
+				add_permanent_claim_multi_provinces = { target = red_sea_coast_area }
+				add_permanent_claim_multi_provinces = { target = upper_nubia_area }
+			}
+		}
 	}
 }
 
@@ -136,6 +287,7 @@ egypt_missions_fifth = {
 			palestine_area = {
 				any_province = {
 					is_claim = ROOT
+					NOT = { owned_by = ROOT }
 				}
 			}
 		}
