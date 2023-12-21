@@ -2,7 +2,7 @@
 
 owner = HUN
 controller = HUN 
-culture = karpaten # Transylvanian Saxons
+culture = swabian # Transylvanian Saxons
 religion = catholic
 capital = "Brasov"
 trade_goods = wool
