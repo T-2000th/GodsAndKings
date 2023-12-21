@@ -284,37 +284,37 @@ country_event = {
 
 
 # The Wangara and the Portuguese
-country_event = {
-	id = flavor_mal.4
-	title = flavor_mal.4.t
-	desc = flavor_mal.4.d
-	picture = ECONOMY_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = MAL
-		exists = POR
-		is_year = 1455 #ie after the initial, more violent encounters.
-		any_owned_province = {
-			has_port = yes
-			has_discovered = POR
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-	}
-
-	option = {
-		name = flavor_mal.4.a
-		add_country_modifier = {
-			name = mal_portuguese_traders
-			duration = -1
-		}
-	}
-}
-
+#country_event = {
+#	id = flavor_mal.4
+#	title = flavor_mal.4.t
+#	desc = flavor_mal.4.d
+#	picture = ECONOMY_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = MAL
+#		exists = POR
+#		is_year = 1455 #ie after the initial, more violent encounters.
+#		any_owned_province = {
+#			has_port = yes
+#			has_discovered = POR
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 180
+#	}
+#
+#	option = {
+#		name = flavor_mal.4.a
+#		add_country_modifier = {
+#			name = mal_portuguese_traders
+#			duration = -1
+#		}
+#	}
+#}
+#
 #Portuguese Traders Meddle in Local Politics.
 country_event = {
 	id = flavor_mal.5
@@ -372,62 +372,62 @@ country_event = {
 }
 
 #Increasing Islamisation of the Aristocracy
-country_event = {
-	id = flavor_mal.6
-	title = flavor_mal.6.t
-	desc = flavor_mal.6.d
-	picture = MUSLIM_ANIMIST_DISPUTE_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = MAL
-		religion_group = muslim
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
-		name = flavor_mal.6.a	#Convert our people!
-		add_piety = 0.15
-		if = {
-			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
-			}
-			add_reform_progress_small_effect = yes
-		}
-		add_country_modifier = {
-			name = mal_islamisation_of_the_aristocracy
-			duration = -1
-		}
-		if = {
-			limit = {
-				has_dlc = "Origins"
-			}
-			custom_tooltip = flavor_mal.6.a.tt
-			hidden_effect = {
-				set_country_flag = mal_decide_for_conversion
-			}
-		}
-	}
-	
-	option = {
-		name = flavor_mal.6.b	#Let us not rock the boat.
-		add_stability_or_adm_power = yes
-		add_piety = -0.15
-		if = {
-			limit = {
-				has_dlc = "Origins"
-			}
-			custom_tooltip = flavor_mal.6.b.tt
-			hidden_effect = {
-				set_country_flag = mal_decide_for_tolerance
-			}
-		}
-	}
-}
+#country_event = {
+#	id = flavor_mal.6
+#	title = flavor_mal.6.t
+#	desc = flavor_mal.6.d
+#	picture = MUSLIM_ANIMIST_DISPUTE_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = MAL
+#		religion_group = muslim
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 12
+#	}
+#
+#	option = {
+#		name = flavor_mal.6.a	#Convert our people!
+#		add_piety = 0.15
+#		if = {
+#			limit = {
+#				NOT = { has_completed_all_reforms_trigger = yes }
+#			}
+#			add_reform_progress_small_effect = yes
+#		}
+#		add_country_modifier = {
+#			name = mal_islamisation_of_the_aristocracy
+#			duration = -1
+#		}
+#		if = {
+#			limit = {
+#				has_dlc = "Origins"
+#			}
+#			custom_tooltip = flavor_mal.6.a.tt
+#			hidden_effect = {
+#				set_country_flag = mal_decide_for_conversion
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = flavor_mal.6.b	#Let us not rock the boat.
+#		add_stability_or_adm_power = yes
+#		add_piety = -0.15
+#		if = {
+#			limit = {
+#				has_dlc = "Origins"
+#			}
+#			custom_tooltip = flavor_mal.6.b.tt
+#			hidden_effect = {
+#				set_country_flag = mal_decide_for_tolerance
+#			}
+#		}
+#	}
+#}
 
 #Unsafe Roads
 country_event = {
@@ -558,112 +558,112 @@ country_event = {
 }
 
 #Rise of Kaabu
-country_event = {
-	id = flavor_mal.8
-	title = flavor_mal.8.t
-	desc = flavor_mal.8.d
-	picture = CIVIL_WAR_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = MAL
-		NOT = { exists = KBU }
-		is_year = 1475
-		religion_group = muslim
-		any_owned_province = {
-			is_core = KBU
-			culture = senegambian
-			religion = shamanism
-			is_capital = no
-		}
-		NOT = { has_country_flag = mal_appeased_kaabu }
-	}
-	
-	mean_time_to_happen = {
-		months = 450
-		
-		modifier = {
-			factor = 0.7
-			any_owned_province = {
-				is_core = KBU
-				has_province_modifier = mal_unsafe_roads
-			}
-		}
-		modifier = {
-			factor = 0.7
-			any_owned_province = {
-				is_core = KBU
-				has_province_modifier = mal_portuguese_meddling
-			}
-		}
-		modifier = {
-			factor = 0.7
-			has_country_modifier = mal_islamisation_of_the_aristocracy
-		}
-		# modifier = {
-			# factor = 0.7
-			# has_disaster = decline_of_mali
-		# }
-	}
-	
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					is_core = KBU
-					culture = senegambian
-					religion = shamanism
-					is_capital = no
-				}
-			set_province_flag = centre_of_kaabu_rebelion
-			}
-			set_country_flag = kaabu_broke_into_rebelion
-		}
-	}
-	
-	option = {
-		name = flavor_mal.8.a
-		ai_chance = { factor = 90 }
-		every_owned_province = {
-			limit = {
-				is_core = KBU
-				culture = senegambian
-				not = { has_province_flag = centre_of_kaabu_rebelion }
-			}
-			spawn_rebels = {
-				type = nationalist_rebels
-				size = 1
-			}
-		}
-		random_owned_province = {
-			limit = {
-				has_province_flag = centre_of_kaabu_rebelion
-			}
-			spawn_rebels = {
-				type = nationalist_rebels
-				size = 2
-				leader = "Sami Koli Jeenung"
-			}
-			clr_province_flag = centre_of_kaabu_rebelion
-		}
-	}
-	
-	option = {
-		name = flavor_mal.8.b
-		ai_chance = { factor = 10 }
-		release = KBU
-		KBU = {
-			define_ruler = {
-				name = "Sama Koli"
-				dynasty = "Jeenung"
-				claim = 100
-			}
-		}
-	}
-
-}
-
+#	country_event = {
+#	id = flavor_mal.8
+#	title = flavor_mal.8.t
+#	desc = flavor_mal.8.d
+#	picture = CIVIL_WAR_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = MAL
+#		NOT = { exists = KBU }
+#		is_year = 1475
+#		religion_group = muslim
+#		any_owned_province = {
+#			is_core = KBU
+#			culture = senegambian
+#			religion = shamanism
+#			is_capital = no
+#		}
+#		NOT = { has_country_flag = mal_appeased_kaabu }
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 450
+#		
+#		modifier = {
+#			factor = 0.7
+#			any_owned_province = {
+#				is_core = KBU
+#				has_province_modifier = mal_unsafe_roads
+#			}
+#		}
+#		modifier = {
+#			factor = 0.7
+#			any_owned_province = {
+#				is_core = KBU
+#				has_province_modifier = mal_portuguese_meddling
+#			}
+#		}
+#		modifier = {
+#			factor = 0.7
+#			has_country_modifier = mal_islamisation_of_the_aristocracy
+#		}
+#		# modifier = {
+#			# factor = 0.7
+#			# has_disaster = decline_of_mali
+#		# }
+#	}
+#	
+#	immediate = {
+#		hidden_effect = {
+#			random_owned_province = {
+#				limit = {
+#					is_core = KBU
+#					culture = senegambian
+#					religion = shamanism
+#					is_capital = no
+#				}
+#			set_province_flag = centre_of_kaabu_rebelion
+#			}
+#			set_country_flag = kaabu_broke_into_rebelion
+#		}
+#	}
+#	
+#	option = {
+#		name = flavor_mal.8.a
+#		ai_chance = { factor = 90 }
+#		every_owned_province = {
+#			limit = {
+#				is_core = KBU
+#				culture = senegambian
+#				not = { has_province_flag = centre_of_kaabu_rebelion }
+#			}
+#			spawn_rebels = {
+#				type = nationalist_rebels
+#				size = 1
+#			}
+#		}
+#		random_owned_province = {
+#			limit = {
+#				has_province_flag = centre_of_kaabu_rebelion
+#			}
+#			spawn_rebels = {
+#				type = nationalist_rebels
+#				size = 2
+#				leader = "Sami Koli Jeenung"
+#			}
+#			clr_province_flag = centre_of_kaabu_rebelion
+#		}
+#	}
+#	
+#	option = {
+#		name = flavor_mal.8.b
+#		ai_chance = { factor = 10 }
+#		release = KBU
+#		KBU = {
+#			define_ruler = {
+#				name = "Sama Koli"
+#				dynasty = "Jeenung"
+#				claim = 100
+#			}
+#		}
+#	}
+#
+#}
+#
 ########################################
 # Events for Mali
 #
@@ -672,80 +672,80 @@ country_event = {
 
 # Decline of Mali Disaster
 # Disaster start
-country_event = {
-	id = flavor_mal.9
-	title = flavor_mal.9.t
-	desc = flavor_mal.9.d
-	picture = MALI_DECLINE_eventPicture
-
-	is_triggered_only = yes
-	major = yes
-
-	immediate = {
-		hidden_effect = {
-			add_stability = -1
-			set_country_flag = started_decline_of_mali
-		}
-	}
-
-	option = {
-		name = flavor_mal.9.a
-		tooltip = {
-			add_stability = -1
-		}
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Disaster ends
-country_event = {
-	id = flavor_mal.10
-	title = flavor_mal.10.t
-	desc = flavor_mal.10.d
-	picture = MALI_RULER_eventPicture
-
-	is_triggered_only = yes
-	major = yes
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = had_decline_of_mali
-			clr_country_flag = started_decline_of_mali
-			clr_country_flag = mal_disaster_province_attempted_independence
-			clr_country_flag = mal_disaster_independence_attempt
-			clr_country_flag = mal_disaster_had_vassal_punishment
-			clr_country_flag = mal_disaster_peasants_rose
-			clr_country_flag = mal_disaster_had_scandal
-			every_owned_province = {
-				limit = {
-					OR = {
-						has_province_modifier = mal_nobles_take_over
-						has_province_modifier = mal_burghers_take_over
-					}
-				}
-				remove_province_modifier = mal_nobles_take_over
-				remove_province_modifier = mal_burghers_take_over
-			}
-			remove_country_modifier = mal_radical_clergy
-			remove_country_modifier = mal_radical_dhimmi
-			remove_country_modifier = mal_the_declining_authority_of_mali
-		}
-	}
-
-	option = {
-		name = flavor_mal.10.a
-		add_adm_power = 100
-		add_dip_power = 100
-		add_mil_power = 100
-
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
+#country_event = {
+#	id = flavor_mal.9
+#	title = flavor_mal.9.t
+#	desc = flavor_mal.9.d
+#	picture = MALI_DECLINE_eventPicture
+#
+#	is_triggered_only = yes
+#	major = yes
+#
+#	immediate = {
+#		hidden_effect = {
+#			add_stability = -1
+#			set_country_flag = started_decline_of_mali
+#		}
+#	}
+#
+#	option = {
+#		name = flavor_mal.9.a
+#		tooltip = {
+#			add_stability = -1
+#		}
+#
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+#}
+#
+## Disaster ends
+#country_event = {
+#	id = flavor_mal.10
+#	title = flavor_mal.10.t
+#	desc = flavor_mal.10.d
+#	picture = MALI_RULER_eventPicture
+#
+#	is_triggered_only = yes
+#	major = yes
+#
+#	immediate = {
+#		hidden_effect = {
+#			set_country_flag = had_decline_of_mali
+#			clr_country_flag = started_decline_of_mali
+#			clr_country_flag = mal_disaster_province_attempted_independence
+#			clr_country_flag = mal_disaster_independence_attempt
+#			clr_country_flag = mal_disaster_had_vassal_punishment
+#			clr_country_flag = mal_disaster_peasants_rose
+#			clr_country_flag = mal_disaster_had_scandal
+#			every_owned_province = {
+#				limit = {
+#					OR = {
+#						has_province_modifier = mal_nobles_take_over
+#						has_province_modifier = mal_burghers_take_over
+#					}
+#				}
+#				remove_province_modifier = mal_nobles_take_over
+#				remove_province_modifier = mal_burghers_take_over
+#			}
+#			remove_country_modifier = mal_radical_clergy
+#			remove_country_modifier = mal_radical_dhimmi
+#			remove_country_modifier = mal_the_declining_authority_of_mali
+#		}
+#	}
+#
+#	option = {
+#		name = flavor_mal.10.a
+#		add_adm_power = 100
+#		add_dip_power = 100
+#		add_mil_power = 100
+#
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+#}
 
 # Pretender to Mali
 # country_event = {
