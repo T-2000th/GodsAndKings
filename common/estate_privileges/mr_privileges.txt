@@ -904,3 +904,93 @@ estate_church_mr_imperial_introspection = {
 	}
 	cooldown_years = 20
 }
+estate_merchants_agojio_clearing = {
+	icon = GFX_estate_burghers_develop_agojio
+	loyalty = 0.05
+	influence = 0.10
+	is_valid = {
+		mission_completed = mr_mali_exploration_fourth
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				continent = south_america
+				continent = north_america
+			}
+		}
+	}
+	can_select = {
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			or = {
+				continent = south_america
+				continent = north_america
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = develop_agojio_TT
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owner = {
+						OR = {
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = crown_colony  
+							}
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = private_enterprise   
+							}
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = self_governing_colony   
+							}
+						}
+					}
+					NOT = {
+						has_province_modifier = clearing_the_agojio
+					}
+					has_terrain = jungle
+				}
+				add_province_modifier = {
+					name = clearing_the_agojio
+					duration = -1
+				}
+			}
+		}	
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owner = {
+						OR = {
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = crown_colony  
+							}
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = private_enterprise   
+							}
+							is_subject_of_type_with_overlord = { 
+								who = ROOT 
+								type = self_governing_colony   
+							}
+						}
+						
+					}
+					has_province_modifier = clearing_the_agojio
+				}
+				remove_province_modifier = clearing_the_agojio
+			}
+		}
+	}
+	penalties = {
+		global_tax_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

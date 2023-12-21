@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_estate_burghers_develop_agojio"
+		texturefile = "gfx/interface/estate_burghers_develop_agojio.dds"
+	}	
+	
+}

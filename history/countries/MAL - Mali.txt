@@ -88,12 +88,12 @@ change_estate_land_share = {
 }
 1444.1.1 = {
 	monarch = {
-		name = "Abu Bakr III"
+		name = "Abubakir III"
 		#monarch_name = "Abu Bakr III"
 		dynasty = "Keita"
-		dip = 3
-		mil = 3
-		adm = 5
+		dip = 6
+		mil = 4
+		adm = 3
 		birth_date = 1398.1.1
 		#death_date = 1460.1.1
 	}

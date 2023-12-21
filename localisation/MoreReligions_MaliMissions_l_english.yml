@@ -3,14 +3,38 @@
 #Mission Titles:
 mr_mali_exploration_first_title: "Into the Beyond"
 mr_mali_exploration_second_title: "The Second Great Voyage"
+mr_mali_exploration_third_title: "Establish Frontier Cities"
+mr_mali_exploration_fourth_title: "The Colony of Bilenmani"
+mr_mali_exploration_fifth_title: "The Country of Plenty"
+mr_mali_exploration_sixth_title: "Feeding the Empire"
 
 
 #Mission Descriptions
 
 #Tooltips 
 num_of_coastal_tiles_explored: "Explore every §YCoastal§! in the §YGuinea§! Region."
+enable_agojio_clearing: "This will enable the §YClearing the Agojio§! Burghers Privilege."
+yes_change_price_potato: "£yes£If we complete this mission while havin §Y4§! §YPotato§! provinces that meet the requirement, we will increase the Price of Potatos by §Y15%§! for 15 Years."
+no_change_price_potato: "£no£If we complete this mission while havin §Y4§! §YPotato§! provinces that meet the requirement, we will increase the Price of Potatos by §Y15%§! for 15 Years."
+yes_change_price_maize: "£yes£If we complete this mission while havin §Y4§! §YMaize§! provinces that meet the requirement, we will increase the Price of Maize by §Y15%§! for 15 Years."
+no_change_price_maize: "£no£If we complete this mission while havin §Y4§! §YMaize§! provinces that meet the requirement, we will increase the Price of Maize by §Y15%§! for 15 Years."
+yes_change_price_tomato: "£yes£If we complete this mission while havin §Y4§! §YTomato§! provinces that meet the requirement, we will increase the Price of Tomatoes by §Y15%§! for 15 Years."
+no_change_price_tomato: "£no£If we complete this mission while havin §Y4§! §YTomato§! provinces that meet the requirement, we will increase the Price of Tomatoes by §Y15%§! for 15 Years."
+gain_extra_bonus_yes: "£yes£If we complete this mission while owning all of the Banda Oriental Area, all province in the area will gain the following:"
+gain_extra_bonus_no: "£no£If we complete this mission while owning all of the Banda Oriental Area, all province in the area will gain the following:"
 
 #Modifiers
- explorer_mindset: "Exploring the Highlands"
+ explorer_mindset: "Beyond the Seas"
  expanded_colonial_efforts: "Expanded Local Colonial Efforts"
  two_random_province_colonies: "A Random Colony will recieve two bordering Frontiers with §Y400§! Settlers."
+ colonial_ventures_bilenmani: "Colonial Ventures"
+ clearing_the_agojio: "Clearing the Agojio"
+ port_development: "Port Development"
+ feeding_the_empire: "Feeding the Empire"
+ babele_river_south: "Shoreline of the Bawajirio"
+
+#Extra
+develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
+estate_merchants_agojio_clearing: "Clearing the Agojio"
+estate_merchants_agojio_clearing_desc: "The Agojio Rainforest is as mighty as the great jungles of the African continent. It would be difficult for anyone to clear these dense regions of forest and nature, but with some extra funds and diverted manpower, we can strip these lands bare!"
+wajirio_goods: "Goods from Wajirio"

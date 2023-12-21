@@ -953,7 +953,7 @@ tomato = {
 		governing_capacity_modifier = 0.10
 	}
 	province = {
-		local_defensiveness = 0.1
+		local_prosperity_growth = 0.1
 	}
 	chance = {
 		factor = 30
@@ -975,7 +975,7 @@ maize = {
 		governing_capacity_modifier = 0.10
 	}
 	province = {
-		local_defensiveness = 0.1
+		land_forcelimit = 0.5
 	}
 	chance = {
 		factor = 30

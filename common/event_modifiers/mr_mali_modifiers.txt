@@ -1,8 +1,26 @@
 explorer_mindset = {
-	improve_relation_modifier = 0.1
-	spy_offence = 0.15
+	naval_attrition = -0.25
 }
 expanded_colonial_efforts = {
 	local_colony_cost_modifier = -0.5
 	local_colonial_growth = 25
+}
+colonial_ventures_bilenmani = {
+	global_tariffs = 0.1
+	colonists = 1
+}
+port_development = {
+	local_development_cost = -0.1
+}
+clearing_the_agojio = {
+	local_development_cost = -0.1
+	local_build_cost = -0.20
+}
+babele_river_south = {
+	trade_goods_size_modifier = 0.10
+	local_governing_cost = -0.15
+}
+feeding_the_empire = {
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.15
 }

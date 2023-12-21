@@ -300,6 +300,7 @@ estate_burghers = {
 		estate_burghers_cordoban_scholars
 		estate_burghers_control_over_the_coinage_catalonia
 		estate_burghers_crusaders_grant_italian_quarter
+		estate_merchants_agojio_clearing
 	}
 
 	agendas = {

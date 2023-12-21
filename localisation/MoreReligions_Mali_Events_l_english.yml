@@ -2,7 +2,6 @@
  mr_MaliFlavor.1.t: "The Second Great Journey"
  mr_MaliFlavor.1.d: "The previous night had been quite the terror. Between the fierce winds and crashing waves, few Malian sailors could sleep peacefully, let alone those manning the sails and steering the mighty vessel. Yet that was not what kept them awake at night. What kept their eyes wide, what kept their stomachs churning, what made them nearly giddy with excitement was what they saw two days prior - Gulls, flying overhead. They were close. So, so very close.\n\nThe next day, the dawn broke. When each sailor rose from their cot they approached the bow of the ship. There, in the distance, they could see it, piercing above the waves. Land. Trees, much like those of the southern Temne lands, stretch over the sandy beaches. As they cried out in joy, these Colonists pressed further until they touched down upon the shores of this new land. They didn’t know it, but they were to become some of the first old world explorers since the vikings of old to actually settle on this new land. They sent one of their ships back, returning for more supplies as they established a camp.\n\nThe Mansa was overjoyed. The new continent had been finally reached by their hands, not just explored and mapped on a page. In a short decree, the Mansa diverted several thousand shells towards this project - their legacy would be one of exploration, colonization, and the discovery of the west."
 
-mr_MaliFlavor.1.a: "Send more colonists to chart out nearby settelments!"
+mr_MaliFlavor.1.a: "Send more colonists to chart out nearby settlements!"
 mr_MaliFlavor.1.b: "All of our support must go to the new settlement!"
-
-
+mr_maliflavor.1.event_insight: "§GEvent Insight:§!\n\nThis event will detail our voyage to the new world, and give us the option of improvince our current colony or expanding it to province nearby."

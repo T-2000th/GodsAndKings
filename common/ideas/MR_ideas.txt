@@ -1371,7 +1371,7 @@ SEV_ideas = {
 
 MAL_ideas = {
 	start = {
-		range = 0.50 #To ensure naval focus too
+		range = 0.33 #To ensure naval focus too
 		tolerance_heathen = 3
 	}
 
@@ -1389,16 +1389,16 @@ MAL_ideas = {
 		diplomatic_reputation = 1
 	}
 	mal_second = {
-		colonists = 1 #global_trade_goods_size_modifier = 0.1
+		colonists = 1
 	}
-	mal_third = { #Added dev cost, just though it was quirky
+	mal_third = { 
 		leader_land_fire = 1
 		fire_damage = 0.05
 	}
 	mal_fourth = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	mal_fifth = { #Reworked to be about how he CAME BACK
+	mal_fifth = {
 		leader_land_shock = 1
 		shock_damage = 0.05
 	}

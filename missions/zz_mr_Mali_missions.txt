@@ -12,9 +12,33 @@ branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_exploration_first = {
+		icon = mission_ne_great_lakes_conquest
+		position = 7
+		required_missions = {
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+				OR = {
+					north_america = { has_discovered = ROOT }
+					south_america = { has_discovered = ROOT }
+					new_world = { has_discovered = ROOT }
+				}
+			}
+			num_of_explorers = 1
+		}
+		effect = {
+			add_ruler_modifier = {
+				name = explorer_mindset
+				duration = -1
+			}
+			add_sailors = 2000
+		}
+	}
 	mr_mali_exploration_second = {
 		icon = mission_caribbean_cn
-		position = 2
+		position = 8
 		required_missions = {
 			mr_mali_exploration_first
 		}
@@ -34,6 +58,296 @@ branch_2 = {
 			country_event = {
 				id = mr_MaliFlavor.1
 			}
+			custom_tooltip = mr_maliflavor.1.event_insight
+		}
+	}
+	mr_mali_exploration_third = {
+		icon = mission_colonise_brazil
+		position = 9
+		required_missions = {
+			mr_mali_exploration_second
+		}
+		provinces_to_highlight = {
+			region = brazil_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				is_city = yes
+				colonial_region = colonial_brazil
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colonial_ventures_bilenmani
+				duration = 9125
+			}
+			brazil_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mr_mali_exploration_fourth = {
+		icon = mission_colonize_the_west
+		position = 11
+		required_missions = {
+			mr_mali_exploration_third
+		}
+		provinces_to_highlight = {
+			region = brazil_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				is_city = yes
+				colonial_region = colonial_brazil
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				is_city = yes
+				colonial_region = colonial_brazil
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			763 = {
+				add_province_modifier = {
+					name = port_development
+					duration = -1
+				}
+			}
+			colombia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			custom_tooltip = enable_agojio_clearing
+		}
+	}
+	mr_mali_exploration_fifth = {
+		icon = mission_pue_irrigation_cannals
+		position = 12
+		required_missions = {
+			mr_mali_exploration_fourth
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_la_plata
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				is_city = yes
+				colonial_region = colonial_la_plata
+			}
+		}
+		effect = {
+			colonial_la_plata = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			define_conquistador = {
+				shock = 2
+				fire = 2
+				manuever = 1
+			}
+			if = {
+				limit = {
+					banda_oriental_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = gain_extra_bonus_yes
+				tooltip = {
+					add_province_modifier = {
+						name = babele_river_south
+						duration = 12775
+					}
+				}
+			}
+			else = {
+				custom_tooltip = gain_extra_bonus_no
+				tooltip = {
+					add_province_modifier = {
+						name = babele_river_south
+						duration = 12775
+					}
+				}
+			}
+		}
+	}
+	mr_mali_exploration_sixth = {
+		icon = mission_iroquois_food_surplus
+		position = 13
+		required_missions = {
+			mr_mali_exploration_fifth
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_la_plata
+			OR = {
+				trade_goods = potato
+				trade_goods = maize
+				trade_goods = tomato
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_production_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				is_city = yes
+				OR = {
+					trade_goods = potato
+					trade_goods = maize
+					trade_goods = tomato
+				}
+				has_production_building_trigger = yes
+				colonial_region = colonial_la_plata
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = feeding_the_empire
+				duration = 10950
+			}
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 4
+						is_city = yes
+						trade_goods = potato
+						has_production_building_trigger = yes
+						colonial_region = colonial_la_plata
+					}
+				}
+				custom_tooltip = yes_change_price_potato
+			}
+			else = {
+				custom_tooltip = no_change_price_potato
+			}
+			custom_tooltip = " "
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 4
+						is_city = yes
+						trade_goods = tomato
+						has_production_building_trigger = yes
+						colonial_region = colonial_la_plata
+					}
+				}
+				custom_tooltip = yes_change_price_tomato
+			}
+			else = {
+				custom_tooltip = no_change_price_tomato
+			}
+			custom_tooltip = " "
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 4
+						is_city = yes
+						trade_goods = maize
+						has_production_building_trigger = yes
+						colonial_region = colonial_la_plata
+					}
+				}
+				custom_tooltip = yes_change_price_maize
+			}
+			else = {
+				custom_tooltip = no_change_price_maize
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 4
+							is_city = yes
+							trade_goods = potato
+							has_production_building_trigger = yes
+							colonial_region = colonial_la_plata
+						}
+					}
+					change_price = {
+						trade_goods = potato
+						key = wajirio_goods
+						value = 0.15
+						duration = 5475
+					}
+				}
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 4
+							is_city = yes
+							trade_goods = tomato
+							has_production_building_trigger = yes
+							colonial_region = colonial_la_plata
+						}
+					}
+					change_price = {
+						trade_goods = tomato
+						key = wajirio_goods
+						value = 0.15
+						duration = 5475
+					}
+				}
+				if = {
+					limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 4
+							is_city = yes
+							trade_goods = maize
+							has_production_building_trigger = yes
+							colonial_region = colonial_la_plata
+						}
+					}
+					change_price = {
+						trade_goods = maize
+						key = wajirio_goods
+						value = 0.15
+						duration = 5475
+					}
+				}
+			}
 		}
 	}
 }
@@ -43,41 +357,7 @@ branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
-	mr_mali_exploration_first = {
-		icon = mission_ne_great_lakes_conquest
-		position = 1
-		required_missions = {
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = num_of_coastal_tiles_explored
-				NOT = {
-					any_province = {
-						region = guinea_region
-						has_port = yes
-						NOT = {
-							has_discovered = ROOT
-						}
-					}
-				}
-			}
-			calc_true_if = {
-				all_province ={
-					continent = south_america
-					has_discovered = ROOT
-				}
-				amount = 3
-			}
-		}
-		effect = {
-			add_ruler_modifier = {
-				name = explorer_mindset
-				duration = -1
-			}
-			add_sailors = 2000
-			
-		}
-	}
+	
 }
 branch_4 = {
 	slot = 4
