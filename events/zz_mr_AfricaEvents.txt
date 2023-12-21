@@ -785,6 +785,7 @@ country_event = {
 	
 	option = {
 		name = afr_prelude.0.a # We must prepare to fight, for God won't fight for us.
+		custom_tooltip = afr_looming_war
 		hidden_effect = {
 			QYW = {
 				country_event = {
@@ -805,6 +806,9 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+		NOT = { war_with = AFR }
+	}
 	
 	option = {
 		name = afr_prelude.1.a # We will keep tabs on this...
@@ -829,6 +833,9 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+		NOT = { war_with = QYW }
+	}
 	
 	option = {
 		name = afr_prelude.2.a # Is this how we must treat eachother?
@@ -858,6 +865,9 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = {
+		NOT = { war_with = QYW }
+	}
 	
 	option = {
 		name = afr_prelude.3.a # History indeed rhymes...
@@ -892,6 +902,9 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
+	trigger = {
+		NOT = { war_with = AFR }
+	}
 	
 	option = {
 		name = afr_prelude.4.a # Our time has come!
