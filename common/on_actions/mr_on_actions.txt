@@ -769,6 +769,13 @@ on_province_culture_converted = {
 			}
 		}
 	}
+
+	# Don't let people keep the spirit that negates the non-accepted culture
+	# penalties if they (presumably) convert to accepted
+	if = {
+		limit = { has_province_modifier = cs_european_settlers }
+		remove_province_modifier = cs_european_settlers
+	}
 }
 on_bi_yearly_pulse_3 = {
 
@@ -1479,5 +1486,26 @@ on_province_owner_change = {
 on_death_election = {
 	events = {
 		mr_egypt.2 #wazir election on death
+	}
+}
+
+on_province_owner_change = {
+	events = {
+		mrLevantFlavor.1
+		mrLevantFlavor.2
+		mrLevantFlavor.3
+	}
+}
+
+on_raid_coast = {
+	if = {
+		limit = {
+			is_levantine_crusader_state = yes
+			has_country_modifier = cs_fearsome_raiders
+		}
+		change_variable = {
+			which = cs_num_coasts_raided
+			value = 1
+		}
 	}
 }
