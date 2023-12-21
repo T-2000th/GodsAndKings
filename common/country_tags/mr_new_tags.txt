@@ -189,6 +189,9 @@ MND = "countries/Manado.txt"
 KNW = "countries/Konawe.txt"
 BGI = "countries/Benggai.txt"
 
+JAV = "countries/Java.txt"
+SLW = "countries/Sulawesi.txt"
+
 #Burma
 BMA = "countries/Burma.txt"
 

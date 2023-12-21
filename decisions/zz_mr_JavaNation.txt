@@ -1,0 +1,78 @@
+country_decisions = {
+
+	java_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_java_flag }
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = JAV }
+			OR = {
+				culture = javanese
+				culture = balinese
+			}
+			NOT = { has_reform = steppe_horde }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_java_area
+				area = surabaya_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns = 627
+			owns = 2691
+			owns = 4794
+			owns = 629
+			owns = 4793
+			owns = 628
+			owns = 2692
+			owns = 631
+		}
+		effect = {
+			change_tag = JAV
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			central_java_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = JAV
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_java_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			grant_independence = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

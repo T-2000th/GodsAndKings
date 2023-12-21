@@ -86,9 +86,9 @@
  BMA:0 "Burma"
  BMA_ADJ:0 "Burmese"
  
- GGG:0 "Gangganegara"
- GGG_ADJ: "Gangganegaran"
- GGG_ADJ2: "Gangganegaran"
+ GGG:0 "Gangga Negara"
+ GGG_ADJ: "Gangga Negara"
+ GGG_ADJ2: "Gangga Negara"
  
  KDI: "Kediri"
  KDI_ADJ: "Kediran"
@@ -150,4 +150,10 @@
  BFK_ADJ: "Bakufu"
  BFK_ADJ2: "Bakufu"
  BFK_ADJ2: "Bakufu"
+ 
+ JAV: "Java"
+ JAV_ADJ: "Javanese"
+ 
+ SLW: "Sulawesi"
+ SLW_ADJ: "Sulawesian"
  
