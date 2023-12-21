@@ -426,3 +426,12 @@ is_french_bishop_elector = {
 		tag = NYN
 	}
 }
+
+is_staple_crop = {
+	trade_goods = grain
+	trade_goods = rice
+	trade_goods = vegetables
+	trade_goods = potato
+	trade_goods = tomato
+	trade_goods = maize
+}

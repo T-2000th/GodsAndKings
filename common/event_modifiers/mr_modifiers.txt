@@ -260,6 +260,11 @@ mahayana_leader_ma = {
 	naval_morale = 0.15
 }
 
+#trade goods
 mr_naval_rum = {
 	sailors_recovery_speed = 0.15
+}
+
+mr_sculptors_golden_age = {
+	monthly_splendor = 2
 }
