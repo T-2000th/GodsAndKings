@@ -1,4 +1,4 @@
-mr_island_primacy = {
+mr_homeland_primacy = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 16
 	available = {
@@ -6,7 +6,7 @@ mr_island_primacy = {
 	}
 
 	powers = {
-		mr_island_primacy_1 = {
+		mr_homeland_primacy_1 = {
 			gui = shugo_dominance_gov_mech
 			min = 0
 			max = 100
@@ -17,7 +17,11 @@ mr_island_primacy = {
 			#monarch_power = <adm/mil/dip> #specify if the power also gains from the ruler's skill value. Don't specify if you don't want this feature
 			scaled_modifier = {
 				trigger = { always = yes }
-				modifier = { development_cost_in_primary_culture = -0.50 }
+				modifier = {
+					development_cost_modifier = 0.1
+					development_cost_in_primary_culture = -0.50
+					development_cost = 1.0
+				}
 				start_value = 0
 				end_value = 100
 				extend_beyond_value = yes
@@ -46,7 +50,7 @@ mr_island_primacy = {
 	# for each of these, you'll need to add a string for the generated modifier id and an icon.
 	
 	 interactions = {
-		mr_island_supremacy_relocate_dev = {
+		mr_homeland_primacy_relocate_dev = {
 			gui = <string> #link to the gui that will be used to display this power. By default, it will be government_interaction_type if not specified. New versions of this will need to contain the same elements so they can be filled in.
 			icon = GFX_crusader_ability_ADM
 			#cost_type = mr_island_primacy_1 # which progress type we're spending (if any)
@@ -58,18 +62,7 @@ mr_island_primacy = {
 				}
 			}
 			effect = {
-				random_owned_province = {
-					limit = {
-						is_territory = yes
-						development = 4
-					}
-					if = {
-						limit = {
-							development = 4
-						}
-						
-					}
-				}
+				relocate_dev_effect = yes
 			}
 			cooldown_years = 10
 			cooldown_token = mr_island_supremacy_relocate_dev
