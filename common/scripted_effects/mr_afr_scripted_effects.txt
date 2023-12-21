@@ -1,0 +1,331 @@
+# Just made the below Adn Advisor at random trigger for the cooperation decision between Africa and the Fatimids, made the other 2 for sake of completeness.
+# Anyone who sees this code is free to reuse it if they wish.
+hire_random_adm_advisor = {
+	random_list = {
+		1 = {
+			define_advisor = {
+				type = treasurer
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}		
+		1 = {
+			define_advisor = {
+				type = philosopher
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = artist
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}	
+		1 = {
+			define_advisor = {
+				type = theologian
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}	
+		1 = {
+			define_advisor = {
+				type = master_of_mint
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}	
+		1 = {
+			define_advisor = {
+				type = inquisitor
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = natural_scientist
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+	}
+}
+
+hire_random_dip_advisor = {
+	random_list = {
+		1 = {
+			define_advisor = {
+				type = statesman
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = diplomat
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = naval_reformer
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = trader
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = colonial_governor
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = navigator
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = spymaster
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+	}
+}
+
+hire_random_mil_advisor = {
+	random_list = {
+		1 = {
+			define_advisor = {
+				type = army_organiser
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = army_reformer
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = commandant
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = grand_captain
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = recruitmaster
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = fortification_expert
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+		1 = {
+			define_advisor = {
+				type = quartermaster
+				[[skill]skill = $skill$]
+				[[culture]culture = $culture$]
+				[[religion]religion = $religion$]
+				[[female]female = $female$]
+				[[age]age = $age$]
+				[[max_age]max_age = $max_age$]
+				[[min_age]min_age = $min_age$]
+				[[min_age]min_age = $min_age$]
+				[[cost_multiplier]cost_multiplier = $cost_multiplier$]
+				[[location]location = $location$]
+			}
+		}
+	}
+}

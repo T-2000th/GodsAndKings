@@ -34,6 +34,7 @@ on_startup = {
 		mr_startup_events.11
 		mr_startup_events.12
 		mr_startup_events.13
+		afr_prelude.0 # Lore context event, also triggers the build-up to war
 	}
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
 #Song siege counting variable
@@ -1475,6 +1476,49 @@ on_death_election = {
 }
 
 on_province_owner_change = {
+	if = { 
+		limit = { 
+			owner = { has_estate_privilege = estate_nobles_integrate_the_amazigh }
+			culture = berber
+			has_terrain = desert
+		}
+		add_province_modifier = {
+			name = afr_autonomy_of_the_amazigh
+			duration = -1
+		}
+	}
+	if = { 
+		limit = { 
+			owner = { has_estate_privilege = estate_burghers_development_of_the_maghreb }
+		}
+		if = {
+			limit = {
+				has_terrain = drylands
+			}
+			add_province_modifier = {
+				name = afr_development_in_the_drylands
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_terrain = highlands
+			}
+			add_province_modifier = {
+				name = afr_development_in_the_highlands
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_terrain = mountain
+			}
+			add_province_modifier = {
+				name = afr_development_in_the_mountains
+				duration = -1
+			}
+		}
+	}
 	events = {
 		mrLevantFlavor.1
 		mrLevantFlavor.2
@@ -1491,6 +1535,51 @@ on_raid_coast = {
 		change_variable = {
 			which = cs_num_coasts_raided
 			value = 1
+		}
+	}
+	
+	# Code taken directly from Ortus Gentium. Which was based off EE's code.
+	save_event_target_as = raider
+	FROM = {
+		every_neighbor_province = {
+			limit = {
+				NOT = { is_sea = yes }
+			}
+			event_target:raider = { 
+				if = {
+					limit = {
+						has_country_flag = recieve_half_of_raid_income
+						is_subject = yes
+					}
+					PREV = {
+						export_to_variable = {
+							which = raided_dev
+							value = trigger_value:development
+						}
+						multiply_variable = {
+							which = raided_dev
+							value = 0.5
+						}
+						while = {
+							limit = {
+								check_variable = {
+									which = raided_dev
+									value = 1
+								}
+							}
+							subtract_variable = {
+								which = raided_dev
+								value = 1
+							}
+							PREV = {
+								overlord = {
+									add_treasury = 1
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

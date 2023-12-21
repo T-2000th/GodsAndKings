@@ -1,0 +1,185 @@
+afr_atop_the_walls_of_tunis = {
+	land_morale = 0.10
+	defensiveness = 0.10
+}
+
+afr_the_grand_game_mod = {
+	diplomatic_reputation = 1
+	spy_offence = 0.10
+}
+
+afr_emirs_of_tunisia = {
+	min_local_autonomy = 10
+	local_religious_unity_contribution = -1
+	local_tax_modifier = 0.10
+}
+
+afr_victory_in_the_trade_wars = {
+	ship_trade_power_modifier = 0.10 # Intentionally made to modify the second idea
+	naval_morale = 0.1
+}
+
+afr_designs_on_the_zayyanids = {
+	num_accepted_cultures = 1
+	army_tradition_from_battle = 0.50
+}
+
+afr_fortifications_of_tripoli = {
+	local_fort_maintenance_modifier = -0.50
+}
+
+afr_african_assistance = {
+	leader_land_shock = 1
+	monthly_reform_progress_modifier = 0.10
+}
+
+afr_autonomy_of_the_amazigh = {
+	min_local_autonomy = 25
+	local_manpower_modifier = 0.10
+	local_development_cost = -0.25
+}
+
+afr_alliance_over_the_sea = {
+	trade_efficiency = 0.10
+	shock_damage = 0.05
+}
+
+afr_how_the_tables_have_turned = {
+	technology_cost = -0.05
+	ship_trade_power_modifier = 0.10
+}
+
+afr_african_authority = {
+	privateer_efficiency = 0.20
+	hostile_attrition = 1
+}
+
+afr_end_of_the_moors = {
+	province_warscore_cost = -0.10
+	manpower_recovery_speed = 0.10
+}
+
+free_moroccan_acceptance = {
+	num_accepted_cultures = 1
+}
+
+afr_peace_in_the_maghreb = {
+	diplomatic_upkeep = 2
+	improve_relation_modifier = 0.10
+}
+
+afr_andalucian_cooperation = {
+	local_unrest = -2
+	local_development_cost_modifier = -0.05
+}
+
+afr_end_of_the_morsicos = {
+	stability_cost_modifier = -0.10
+}
+
+afr_entreport_of_the_west = {
+	local_development_cost_modifier = -0.10
+	trade_value = 10
+}
+
+afr_payments_to_the_fatimids = {
+	tax_income = -48.00 # 4 ducats a month go down the drain
+}
+
+afr_paranoid_court = {
+	local_unrest = 5
+	local_defensiveness = -0.10
+}
+
+afr_administrative_assistance = {
+	administrative_efficiency = 0.05
+	stability_cost_modifier = -0.10
+}
+
+afr_diplomatic_cooperation = {
+	diplomatic_reputation = 2
+	improve_relation_modifier = 0.10
+}
+
+afr_crusaders_and_arabs = {
+	land_morale = 0.1
+	drill_gain_modifier = 0.2
+}
+
+afr_joint_administration_of_the_holy_land = {
+	tax_income = -24.00
+	global_manpower_modifier = -0.1
+	land_forcelimit_modifier = -0.05
+}
+
+afr_joint_administration_of_the_holy_land_egy = {
+	tax_income = 24.00
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+}
+
+afr_jewels_of_africa = {
+	gold_depletion_chance_modifier = -0.5
+	local_development_cost_modifier = -0.10
+}
+
+afr_spreading_our_prosperity = {
+	technology_cost = -0.05
+	global_prosperity_growth = 0.25
+}
+
+afr_great_works_of_tunis = {
+	monthly_splendor = 1
+	allowed_num_of_buildings = 1
+	center_of_trade_upgrade_cost = -0.25
+}
+
+afr_court_of_catholics_and_arabs = {
+	advisor_pool = 1
+	religious_unity = 0.1
+}
+
+afr_emperors_of_africa = {
+	religious_unity = 0.25
+	diplomatic_reputation = 1
+	legitimacy = 0.5
+}
+
+afr_wealth_of_the_caravans = {
+	global_trade_goods_size_modifier = 0.10
+	caravan_power = 0.25
+}
+
+afr_hub_of_the_caravans = {
+	local_build_cost = -0.10
+	local_tax_modifier = 0.25
+	center_of_trade_upgrade_cost = -0.25
+}
+
+afr_development_in_the_drylands = {
+	local_development_cost = -0.05
+}
+
+afr_development_in_the_highlands = {
+	local_development_cost = -0.10
+}
+
+afr_development_in_the_mountains = {
+	local_development_cost = -0.175
+}
+
+afr_pearl_of_the_maghreb = {
+	province_trade_power_value = 10
+	trade_goods_size_modifier = 0.50
+	local_development_cost = -0.10
+}
+
+afr_religious_sycentrism = {
+	global_tax_modifier = 0.10
+	cav_to_inf_ratio = 0.10
+}
+
+afr_mercantile_cooperation = {
+	trade_efficiency = 0.10
+	dip_tech_cost_modifier = -0.1
+}

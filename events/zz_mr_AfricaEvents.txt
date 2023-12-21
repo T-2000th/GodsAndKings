@@ -1,0 +1,904 @@
+namespace = afr_events
+
+country_event = {
+	id = afr_events.1 # Pleas from the Kingdom of Africa
+	title = afr_events.1.t
+	desc = afr_events.1.d
+	picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_mission = afr_the_grand_game
+	}
+	
+	option = {
+		name = afr_events.1.a # Send them as much funding as they need.
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 4
+				diplomatic_reputation = 2
+			}
+			modifier = {
+				factor = 4
+				has_opinion = {
+					who = AFR
+					value = 150
+				}
+			}
+		}
+		add_treasury = -100
+		AFR = {
+			add_treasury = 100
+		}
+	}
+
+	option = {
+		name = afr_events.1.b # We can only send them a moderate sum.
+		ai_chance = {
+			factor = 1
+		}
+		add_treasury = -50
+		AFR = {
+			add_treasury = 50
+		}
+	}
+
+	option = {
+		name = afr_events.1.c # Send them the bare minimum.
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 4
+				NOT = {
+					diplomatic_reputation = 1
+				}
+			}
+		}
+		add_treasury = -25
+		AFR = {
+			add_treasury = 25
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.2 # End of the Kairouan Rebellion
+	title = afr_events.2.t
+	desc = afr_events.2.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_events.2.a # The ways of old will work once more.
+		ai_chance = {
+			factor = 3
+		}
+		tunisia_area = {
+			add_province_modifier = {
+				name = afr_emirs_of_tunisia
+				duration = -1
+			}
+		}
+
+		341 = {
+			add_base_production = 2
+		}
+	}
+
+	option = {
+		name = afr_events.2.b # Leaving them be has hurt us twice before. There will not be a third.
+		ai_chance = {
+			factor = 2
+		}
+		add_adm_power = 100
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					area = tunisia_area
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = catholic
+				add_devastation = 10
+			}
+		}
+		custom_tooltip = convert_provinces_catholic
+		tunisia_area = {
+			tooltip = {
+				add_devastation = 10
+			}
+		}
+		random_owned_province = {
+			limit = {
+				area = tunisia_area
+			}
+			sunni_rebels = 2
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.3 # Coronation of the King of Africa
+	title = afr_events.3.t
+	desc = afr_events.3.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_events.3.a # A glorious day for us indeed!
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		add_government_reform = rex_africae
+	}
+}
+
+country_event = {
+	id = afr_events.4 # The Corsairs of Algiers
+	title = afr_events.4.t
+	desc = afr_events.4.d
+	picture = BUCCANEERS_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_events.4.a # We may be Christians, but these men are valuable.
+		custom_tooltip = afr_establish_algeria
+		hidden_effect = {
+			every_province = {
+				limit = {
+					is_core = TLC
+					NOT = {
+						area = kabylia_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_core = ALG
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ALG
+					}
+				}
+				release = ALG
+			}
+			else = {
+				random_subject_country = {
+					limit = {
+						any_owned_province = {
+							is_core = ALG
+						}
+					}
+					release = ALG
+				}
+			}
+			create_march = ALG
+			ALG = {
+				set_country_flag = recieve_half_of_raid_income
+				change_government = monarchy
+				add_government_reform = barbary_sultanate_reform
+			}
+		}
+		custom_tooltip = recieve_half_subject_raid
+	}
+
+	option = {
+		name = afr_events.4.b # Algeria is ours to rule directly.
+		add_country_modifier = {
+			name = afr_african_authority
+			duration = 7300
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.5 # The Embassy of the Maghreb
+	title = afr_events.5.t
+	desc = afr_events.5.d
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = afr_events.5.a # An unorthodox aggrement, but a welcome one.
+		ai_chance = {
+			factor = 9 # AI will basically always accept it.
+		}
+		hidden_effect = {
+			set_global_flag = embassy_of_the_maghreb
+			AFR = {
+				set_country_flag = afr_embassy_established
+			}
+			set_country_flag = afr_embassy_established
+		}
+		add_trust = {
+			who = AFR
+			value = 20
+			mutual = yes
+		}
+		capital_scope = {
+			add_province_triggered_modifier = afr_embassy_of_the_maghreb
+		}
+		custom_tooltip = afr_explain_embassy
+		hidden_effect = {
+			AFR = {
+				capital_scope = {
+					add_province_triggered_modifier = afr_embassy_of_the_maghreb
+				}
+			}			
+		}
+	}
+
+	option = {
+		name = afr_events.5.b # We will not accept this much cooperation with heathens!
+		ai_chance = {
+			factor = 1
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = zan_declined_embassy
+		}
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+	}
+}
+
+
+country_event = {
+	id = afr_events.6 # Protection of the Kings of Africa
+	title = afr_events.6.t
+	desc = afr_events.6.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_mission = afr_emirs_of_morrocco
+	}
+	
+	option = {
+		name = afr_events.6.a # It is our only option.
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = 25
+				alliance_with = AFR
+			}
+			modifier = {
+				factor = 10
+				ai_attitude = {
+					who = AFR
+					attitude = attitude_threatened
+				}
+			}
+		}
+		AFR = {
+			create_vassal = ROOT
+		}
+		add_liberty_desire = -100
+	}
+
+	option = {
+		name = afr_events.6.b # We will never accept suzerainity under these pretenders!
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 25
+				ai_attitude = {
+					who = AFR
+					attitude = attitude_rivalry
+				}
+			}
+			modifier = {
+				factor = 25
+				ai_attitude = {
+					who = AFR
+					attitude = attitude_outraged
+				}
+			}
+		}
+		reverse_add_casus_belli = {
+			type = cb_vassalize_mission
+			target = AFR
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.7 # Fate of the Moriscos of Iberia
+	title = afr_events.7.t
+	desc = afr_events.7.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_events.7.a # Bring these men into our administration.
+		define_advisor = {
+			type = statesman
+			culture = andalucian
+			skill = 3
+			cost_multiplier = 0.25
+		}	
+		custom_tooltip = every_owned_andalucian_province
+		tooltip = {
+			add_province_modifier = {
+				name = afr_andalucian_cooperation
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = andalucian
+				}
+				add_province_modifier = {
+					name = afr_andalucian_cooperation
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = afr_events.7.b # We admire the Arabs, not the Moors. Unleash the Portuguese.
+		add_country_modifier = {
+			name = afr_end_of_the_morsicos
+			duration = 9125
+		}
+
+		upper_andalucia_area = {
+			change_religion = catholic
+			add_devastation = 25
+		}
+		lower_andalucia_area = {
+			change_religion = catholic
+			add_devastation = 25
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.8 # An Offer From Africa
+	title = afr_events.8.t
+	desc = afr_events.8.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = afr_events.8.a # It's time to reopen the Canal of the Pharoahs.
+		ai_chance = {
+			factor = 1 # They will for sure accept.
+		}
+		hidden_effect = {
+			add_treasury = 20000 # Required due to the normal cost
+			set_country_flag = unlock_suez_early
+		}
+		add_treasury = -2500
+		4316 = {
+			add_great_project = {
+				type = suez_canal # Like in vanilla, this reuses the Suez Canal. However, unlike vanilla, this actually costs some money.
+			}
+		}
+		hidden_effect = {
+			add_treasury = -20000
+		}
+		custom_tooltip = afr_expected_to_pay_other_half
+		hidden_effect = {
+			AFR = {
+				country_event = {
+					id = afr_events.9
+				}
+			}
+		}
+	}
+
+	option = {
+		name = afr_events.8.b # Nay, it's still too expensive.
+		ai_chance = {
+			factor = 0
+		}
+		add_prestige = -10
+		reverse_add_opinion = {
+			who = AFR
+			modifier = afr_rejected_our_offer
+		}
+	}
+} 
+
+country_event = {
+	id = afr_events.9 # Our Part of the Deal
+	title = afr_events.9.t
+	desc = afr_events.9.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		tag = EGY
+	}
+	
+	option = {
+		name = afr_events.9.a # We will pay the cost up-front.
+		ai_chance = {
+			factor = 1 
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 2500 # AI won't bankrupt itself by paying upfront when it can't afford it.
+				}
+			}
+		}
+		add_treasury = -2500
+		reverse_add_opinion = {
+			who = EGY
+			modifier = afr_trustworthy_partner
+		}
+	}
+
+	option = {
+		name = afr_events.9.b # We will pay it over time.
+		ai_chance = {
+			factor = 1 
+			modifier = {
+				factor = 0
+				treasury = 2500 
+			}
+		}
+		add_prestige = -10
+		add_country_modifier = {
+			name = afr_payments_to_the_fatimids
+			duration = 3650
+		}
+	}
+} 
+
+
+country_event = {
+	id = afr_events.10 # Cooperation Between the King and the Viziers
+	title = afr_events.10.t
+	desc = afr_events.10.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_country_flag = afr_cooperation_decision
+	}
+
+	
+	option = {
+		name = afr_events.10.a # Administrative matters are our concern at the moment.
+		AFR = {
+			custom_tooltip = gain_vizier_adm_advisor
+			hidden_effect = {
+				hire_random_adm_advisor = {
+					culture = al_misr_arabic
+					skill = 3
+					cost_multiplier = 0.5
+				}
+			}
+			add_country_modifier = {
+				name = afr_administrative_assistance
+				duration = 7300
+			}
+		}
+		EGY = {
+			change_estate_land_share = {
+				estate = all
+				share = -5
+			}
+			add_country_modifier = {
+				name = afr_administrative_assistance
+				duration = 7300
+			}			
+		}
+	}
+
+	option = {
+		name = afr_events.10.b # We should closen our ties even more!
+		AFR = {
+			capital_scope = {
+				random_list = {
+					1 = {
+						add_base_tax = 1
+					}
+					1 = {
+						add_base_production = 1
+					}
+					1 = {
+						add_base_manpower = 1
+					}
+				}
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = afr_diplomatic_cooperation
+				duration = 7300
+			}
+		}
+		EGY = {
+			custom_tooltip = gain_relations_with_christians
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion_group = christian
+					} 
+					add_opinion = {
+						who = EGY
+						modifier = afr_reputation_amongst_christendom
+					}
+				}
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = afr_diplomatic_cooperation
+				duration = 7300
+			}			
+		}
+	}
+
+	option = {
+		name = afr_events.10.c # Together, no army can stand in our way!
+		AFR = {
+			# Relies on Egypt's army tradition
+			if = {
+				limit = {
+					EGY = {
+						NOT = { army_tradition = 40 }
+					}
+				}
+				create_general = {
+					tradition = 30
+				}
+			}
+			else_if = {
+				limit = {
+					EGY = {
+						army_tradition = 40
+						NOT = { army_tradition = 60 }
+					}
+				}
+				create_general = {
+					tradition = 50
+				}
+			}
+			else_if = {
+				limit = { 
+					EGY = { army_tradition = 60 } 
+				}
+				create_general = {
+					tradition = 70
+				}
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = afr_crusaders_and_arabs
+				duration = 7300
+			}
+		}
+		EGY = {
+			add_mil_power = 100
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = afr_crusaders_and_arabs
+				duration = 7300
+			}						
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.11 # A Condominium in the Holy Land
+	title = afr_events.11.t
+	desc = afr_events.11.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_mission = afr_condominium_in_bethelem
+	}
+
+	
+	option = {
+		name = afr_events.11.a # Accept the offer, so that the religions of the book may live in peace.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 20
+				has_opinion = {
+					who = AFR
+					value = 190
+				}
+			}
+			modifier = {
+				factor = 20
+				NOT = {
+					army_size = AFR
+				}
+			}
+		}
+		hidden_effect = {
+			palestine_area = {
+				add_core = KOJ
+			}
+		}
+		release = KOJ
+		AFR = {
+			vassalize = KOJ
+			add_country_modifier = {
+				name = afr_joint_administration_of_the_holy_land
+				duration = -1
+				desc = until_revoke_condominium_decision
+			}
+		}
+		add_country_modifier = {
+			name = afr_joint_administration_of_the_holy_land_egy
+			duration = -1
+			desc = until_revoke_condominium_decision
+		}
+	}
+
+	option = {
+		name = afr_events.11.b # Palestine is and will forever be ours.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 30
+				AFR = {
+					NOT = {
+						diplomatic_reputation = 2
+					}
+				}
+			}
+		}
+		reverse_add_opinion = {
+			who = AFR
+			modifier = afr_rejected_our_offer
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.12 # Furthening our Cultural Ties
+	title = afr_events.12.t
+	desc = afr_events.12.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	
+	option = {
+		name = afr_events.12.a # At last, the ambitions of our forefathers are fulfilled!
+		set_government_rank = 3
+		change_primary_culture = siqilliyan
+		custom_tooltip = all_maghrebi_provinces_convert
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = maghrebi
+				}
+				change_culture = siqilliyan
+			}
+		}
+		custom_tooltip = " "
+		add_country_modifier = {
+			name = afr_emperors_of_africa
+			duration = -1
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.13 # Rites From The East
+	title = afr_events.13.t
+	desc = christian_school_events.20.d # Reuses the base Religious School desc
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+
+	
+	option = {
+		name = afr_events.13.a # Adopt the rite of Antioch.
+		ai_chance = {
+			factor = 1
+		}
+		set_religious_school = {
+			group = christian
+			school = mr_antiochian_rite
+		}
+	}
+
+	option = {
+		name = afr_events.13.b # We will continue with what we have.
+		ai_chance = {
+			factor = 0
+		}
+		add_stability_or_adm_power_per_stab = {
+			amount = 1
+		}
+	}
+}
+
+country_event = {
+	id = afr_events.14 # Pax Africana
+	title = afr_events.14.t
+	desc = afr_events.14.d
+	picture = ST_PETERS_CHURCH_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = AFR
+		mission_completed = afr_let_the_gold_flow
+		mission_completed = afr_finish_the_job
+		mission_completed = afr_the_berber_tribes
+		mission_completed = afr_condominium_in_bethelem
+		mission_completed = afr_our_republican_partners
+		mission_completed = afr_cathedral_of_tunis
+		mission_completed = afr_religious_studies
+		mission_completed = afr_pearl_of_the_maghreb
+		mission_completed = afr_arab_norman_civilization
+	}
+
+	
+	option = {
+		name = afr_events.14.a
+		add_prestige_or_monarch_power = {
+			amount = 25
+		}
+		custom_tooltip = " "
+		custom_tooltip = afr_inferno_thanks
+	}
+}
+
+# Prelude flavor events that force war between Africa and the rebellion sooner or later
+namespace = afr_prelude
+
+country_event = {
+	id = afr_prelude.0 # The Shadow over the African Kingdom
+	title = afr_prelude.0.t
+	desc = afr_prelude.0.d
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = AFR
+		NOT = {
+			is_year = 1446
+		}
+	}
+	
+	option = {
+		name = afr_prelude.0.a # We must prepare to fight, for God won't fight for us.
+		hidden_effect = {
+			QYW = {
+				country_event = {
+					id = afr_prelude.1
+					days = 365
+					random = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = afr_prelude.1 # Factionalism of the African Court
+	title = afr_prelude.1.t
+	desc = afr_prelude.1.d
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = afr_prelude.1.a # We will keep tabs on this...
+		custom_tooltip = afr_support_rebellion
+		hidden_effect = {
+			AFR = {
+				country_event = {
+					id = afr_prelude.2
+					days = 180
+					random = 15
+				}			
+			}
+		}
+	}
+}
+
+country_event = {
+	id = afr_prelude.2 # Rumors of Dissent
+	title = afr_prelude.2.t
+	desc = afr_prelude.2.d
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = afr_prelude.2.a # Is this how we must treat eachother?
+		add_stability = -1
+		341 = {
+			add_province_modifier = {
+				name = afr_paranoid_court
+				duration = 1825
+			}
+		}
+		hidden_effect = {
+			set_country_flag = afr_sabatoge_active	
+			country_event = {
+				id = afr_prelude.3
+				days = 180
+				random = 15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = afr_prelude.3 # The Rebellion of [GetYear]
+	title = afr_prelude.3.t
+	desc = afr_prelude.3.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = afr_prelude.3.a # History indeed rhymes...
+		custom_tooltip = afr_war_inveitable
+		custom_tooltip = " "
+		341 = {
+			spawn_rebels = {
+				size = 1
+				type = sunni_rebels
+				friend = QYW
+			}
+			add_permanent_claim = QYW
+		}
+		hidden_effect = {
+			QYW = {
+				country_event = {
+					id = afr_prelude.4
+					days = 5
+					random = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = afr_prelude.4 # The Last Stand of Africa
+	title = afr_prelude.4.t
+	desc = afr_prelude.4.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	option = {
+		name = afr_prelude.4.a # Our time has come!
+		declare_war_with_cb = {
+			casus_belli = cb_conquest
+			who = AFR
+			war_goal_province = 341
+		}
+	}
+}

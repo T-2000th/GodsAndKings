@@ -3220,3 +3220,34 @@ free_bishop_electors = {
 
 	war_name = FREE_BISHOP_ELECTORS_WAR_NAME
 }
+
+superiority_finish_the_reconquista = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_finish_the_reconquista
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = THE_FINAL_RECONQUSITA
+}
