@@ -27,6 +27,7 @@ crusader_missions_1_minors = {
 		}
 
 		effect = {
+			add_treasury = -100
 			capital_scope = {
 				add_building = grand_shipyard
 			}
@@ -47,17 +48,6 @@ crusader_missions_1_minors = {
 			add_country_modifier = {
 				name = cs_naval_buildup
 				duration = 9125
-			}
-			random_owned_province = {
-				limit = {
-					has_port = yes
-				}
-				add_unit_construction = {
-					amount = 5
-					type = transport
-					speed = 0.1
-					cost = 0
-				}
 			}
 		}
 	}
@@ -82,6 +72,10 @@ crusader_missions_1_minors = {
 				set_variable = {
 					which = cs_num_coasts_raided
 					value = 0
+				}
+				set_variable = {
+					which = cs_raid_reward_target
+					value = 5
 				}
 			}
 		}
@@ -194,27 +188,30 @@ crusader_missions_1_antioch = {
 		}
 
 		effect = {
-			if = {
-				limit = {
-					SIC = {
-						exists = yes
-						is_subject = no
+			custom_tooltip = ati_older_ties_effect_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						SIC = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = SIC
 					}
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					target = SIC
+				else = {
+					add_permanent_claim_multi_provinces = { target = sicily_area }
+					add_permanent_claim_multi_provinces = { target = western_sicily_area }
 				}
-			}
-			else = {
-				add_permanent_claim_multi_provinces = { target = sicily_area }
-				add_permanent_claim_multi_provinces = { target = western_sicily_area }
-			}
-			if = {
-				limit = { marriage_with = SIC }
-				add_country_modifier = {
-					name = cs_flexible_marriages
-					duration = 3650
+				if = {
+					limit = { marriage_with = SIC }
+					add_country_modifier = {
+						name = cs_flexible_marriages
+						duration = 3650
+					}
 				}
 			}
 		}
@@ -234,8 +231,8 @@ crusader_missions_1_antioch = {
 		}
 
 		trigger = {
-			sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
-			western_sicily_area = { country_or_non_sovereign_subject_holds = ROOT }
+			sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			western_sicily_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		effect = {
@@ -268,6 +265,7 @@ crusader_missions_1_antioch = {
 					target = PAP
 				}
 			}
+			custom_tooltip = ati_both_homes_of_bohemond_effect_tt
 			add_prestige_or_monarch_power = { amount = 50 }
 			add_splendor = 200
 			add_country_modifier = {
@@ -483,7 +481,6 @@ crusader_missions_branch_placeholders = {
 	slot = 2
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		is_levantine_crusader_state = yes
 		NOT = {
@@ -542,7 +539,6 @@ crusader_missions_domination_path = {
 	slot = 2
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		is_levantine_crusader_state = yes
 		has_country_flag = cs_domination_path
@@ -670,7 +666,6 @@ crusader_missions_diplomatic_path = {
 	slot = 2
 	generic = no
 	ai = yes
-	has_country_shield = yes
 	potential = {
 		is_levantine_crusader_state = yes
 		has_country_flag = cs_diplomatic_path
