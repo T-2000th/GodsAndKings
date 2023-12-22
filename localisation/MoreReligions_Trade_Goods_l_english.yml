@@ -141,6 +141,10 @@
  PEWTER_DISHES: "Pewter Kitchenware"
  SCULPTORS_GOLDEN_AGE: "Sculptor's Golden Age"
  RISSOTO: "Rissoto"
+ REISLAND_FORESTS: "Reisland Lumber Exports"
+ BIG_BUILDINGS: "Advanced Masonry"
+ SPERMACETI: "Spermaceti Processessing"
+ ICE_HOUSES: "Ice Houses"
  
  #provinces
  mr_hamburg_beer_breweries: "Hamburg Beer Industry"
@@ -179,6 +183,22 @@
  mr_prices.7.a: "Truly a marvel!"
  
  mr_prices.8.t: "Rice in Europe"
- mr_prices.8.d: "Rice has been known to Europeans for centuries, dating back to possibly even Roman times. It has made resurrgences within the continent brought by Arabs in Iberia and Sicilian contact in Africa. Wide scale rice production has never taken hold though because previous regions were not conducive to to it.\nItaly however, is well suited, especially the fertile Po valley; and with the increased introduction of rice into Italy from Venetian trade routes to the east, several farmers have made attempts to create their own farms of this exotic grain."
+ mr_prices.8.d: "Rice has been known to Europeans for centuries, dating back to possibly even Roman times. It has made resurgences within the continent brought by Arabs in Iberia and Sicilian contact in Africa. Wide scale rice production has never taken hold though because previous regions were not conducive to it.\nItaly however, is well suited, especially the fertile Po valley; and with the increased introduction of rice into Italy from Venetian trade routes to the east, several farmers have made attempts to create their own farms of this exotic grain."
  mr_prices.8.a: "I would like to try some!"
  mr_prices.8.b: "I prefer bread, if its all the same."
+ 
+ mr_prices.9.t: "The Vast Forests of Reisland"
+ mr_prices.9.d: "Ever since [Root.Culture.GetName] settlers first set foot in Reisland, they were bewildered by the veritable sea of trees which streched to the horizon and upwards to dizzying heights. These great old growths once served as a boon for colonists building their first settlments but with an established core territory they have begun to export this wood abroad."
+ mr_prices.9.a: "Get to building!"
+ 
+ mr_prices.10.t: "Advancements in Structural Engineering"
+ mr_prices.10.d: "Churches and temples were once built with time-tested but simplistic methods. As the Egyptians exhibited their spendor and power with great masses of stone, and the Chinese bringing nature to heel with its great canals, it is now us who stand at the forefront of Man's innovation. The great Complex at [big_building.GetName], once a simple place of worship, has been transformed and upgraded with towering structures and impressive facades. The master builder responsible for this impressive feat was educated in the principles of practical Geometry.\n\nPilgrims travel from across the country and beyond to behold the spires which reach for the heavens, and students are being educated under the master builder now."
+ mr_prices.10.a: "Magnificent!"
+ 
+ mr_prices.11.t: "Increased Demand for Whale Oil"
+ mr_prices.11.d: "Spermaceti is a substance found within the head of a sperm whale, which could yield nearly 2000 liters of material. In the past it was not valued as much as the meat and blubber which could be harvested from the body, but new processing techniques have made it much more useful. It can now be turned into a clean burning and nearly odorless fuel - fantastic for candles, lanterns, and other lighting sources."
+ mr_prices.11.a: "Good thing there are so many whales out there!"
+ 
+ mr_prices.13.t: "Ice Houses in [Root.GetName]"
+ mr_prices.13.d: "Returning from a journey to Persia, a merchant brought back a curious description of a sort of building which had stood since ancient times. It was a dome-shaped structure shaped in such a way that cooling air would keep things in side at near freezing temperatures. By the request of a wealthy patron, one was built on his estate with the merchant's supervision. The ability to keep ice year round was an appealing prospect - evident in how many were commissioned after the first."
+ mr_prices.13.a: "Cool!"
