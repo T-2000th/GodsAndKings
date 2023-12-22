@@ -14,5 +14,6 @@ native_hostileness = 0
 owner = JOL
 controller = JOL
 add_core = JOL
-
+discovered_by = MAL
+discovered_by = JOL
 1444.11.12 = { trade_goods = unknown }
