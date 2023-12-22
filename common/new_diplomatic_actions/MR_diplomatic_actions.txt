@@ -1,3 +1,119 @@
+smuggle_opium = {
+
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		has_country_flag = BLK_finest_opium
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 30
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_30_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 30
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 24
+					}
+				}
+				full_idea_group = spy_ideas
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_24_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 24
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_subject = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+				FROM = { is_subject = no }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = FROM }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_BE_NEIGHBOR_TT
+				is_neighbor_of = FROM
+			}
+		}
+		if = {
+			limit = { 
+				FROM = {
+				has_country_flag = has_ROOT_crack 
+				  }			
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAS_OPIUM_ALREADY_TT
+				NOT = { 
+				FROM = {
+				has_country_flag = has_ROOT_crack 
+				  }									
+				}
+			}
+		}			
+	}
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -24
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -30
+			}
+		}
+		FROM = {
+		add_country_modifier = {
+			name = crack_epidemic
+			duration = 7305  
+		 }
+		set_country_flag = has_ROOT_crack
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 50
+		}
+	}
+}
+
+
 mr_vassalize_tributary = {
     category = influence          # Which diplomatic action list the action will appear in.
 	

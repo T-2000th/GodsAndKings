@@ -356,6 +356,7 @@ PYG = "countries/Prayagraj.txt"
 EWH = "countries/Etawah.txt"
 RHM = "countries/Ranthambore.txt"
 DVI = "countries/Devagiri.txt"
+ETK = "countries/Enetkheg.txt"
 
 KCP = "countries/Kanchipuram.txt"
 CDD = "countries/Cuddalore.txt"
