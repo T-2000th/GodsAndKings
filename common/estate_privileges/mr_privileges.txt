@@ -939,7 +939,10 @@ estate_nobles_integrate_the_amazigh = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					culture = berber
+					OR = {
+						culture = berber
+						culture = tunisian
+					}
 					has_terrain = desert
 				}
 				add_province_modifier = {

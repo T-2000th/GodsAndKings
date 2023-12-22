@@ -391,6 +391,7 @@ country_event = {
 		4316 = {
 			add_great_project = {
 				type = suez_canal # Like in vanilla, this reuses the Suez Canal. However, unlike vanilla, this actually costs some money.
+				instant = yes
 			}
 		}
 		hidden_effect = {

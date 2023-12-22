@@ -74,6 +74,12 @@ mr_africa_slot_1_upper = {
 					add_permanent_claim = ROOT
 				}
 			}
+			custom_tooltip = afr_vision_on_west_africa
+			hidden_effect = {
+				sahara_region = {
+					discover_country = ROOT
+				}
+			}
 		}
 	}
 
@@ -113,6 +119,7 @@ mr_africa_slot_1_upper = {
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
+					discover_country = ROOT
 				}
 				guinea_region = {
 					limit = {
@@ -120,6 +127,7 @@ mr_africa_slot_1_upper = {
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
+					discover_country = ROOT
 				}
 				sahel_region = {
 					limit = {
@@ -127,8 +135,10 @@ mr_africa_slot_1_upper = {
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
+					discover_country = ROOT
 				}
 			}
+			custom_tooltip = afr_vision_on_rest_africa
 		}
 	}
 
@@ -1128,6 +1138,10 @@ mr_africa_slot_5_upper = {
 			}
 			custom_tooltip = " "
 			custom_tooltip = afr_both_unlock_cooperation_decision
+			custom_tooltip = " "
+			palestine_area = {
+				add_permanent_claim = EGY
+			}
 		}
 	}
 
@@ -1373,8 +1387,8 @@ mr_africa_slot_4_lower = {
 		trigger = {
 			has_idea_group = humanist_ideas
 			NOT = {
-				any_province = {
-					NOT = { religion = ROOT }
+				any_owned_province = {
+					has_owner_religion = no
 					unrest = 1
 				}
 			}

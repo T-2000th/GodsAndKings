@@ -9,7 +9,7 @@ afr_the_grand_game_mod = {
 }
 
 afr_emirs_of_tunisia = {
-	min_local_autonomy = 10
+	local_tolerance_of_heathens = 3
 	local_religious_unity_contribution = -1
 	local_tax_modifier = 0.10
 }
@@ -92,7 +92,7 @@ afr_paranoid_court = {
 }
 
 afr_administrative_assistance = {
-	administrative_efficiency = 0.05
+	global_autonomy = -0.1
 	stability_cost_modifier = -0.10
 }
 
@@ -131,7 +131,7 @@ afr_spreading_our_prosperity = {
 afr_great_works_of_tunis = {
 	monthly_splendor = 1
 	allowed_num_of_buildings = 1
-	center_of_trade_upgrade_cost = -0.25
+	local_center_of_trade_upgrade_cost = -0.25
 }
 
 afr_court_of_catholics_and_arabs = {
@@ -153,7 +153,7 @@ afr_wealth_of_the_caravans = {
 afr_hub_of_the_caravans = {
 	local_build_cost = -0.10
 	local_tax_modifier = 0.25
-	center_of_trade_upgrade_cost = -0.25
+	local_center_of_trade_upgrade_cost = -0.25
 }
 
 afr_development_in_the_drylands = {

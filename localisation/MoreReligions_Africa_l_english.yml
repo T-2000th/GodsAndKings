@@ -52,7 +52,7 @@
   afr_if_conquered_berbers:0 "If we conquered the §YBerber§! tribes:"
   estate_nobles_integrate_the_amazigh:0 "Integrate the Amazigh"
   estate_nobles_integrate_the_amazigh_desc:0 "We have given special privileges to our Amazigh population in exchange for their service on the battlefield and in administration."
-  all_berber_provinces:0 "All §YBerber§! provinces that are deserts will recieve:"
+  all_berber_provinces:0 "All §YBerber§! and §YTunisian§! provinces that are deserts will recieve:"
   afr_autonomy_of_the_amazigh:0 "Autonomy of the Amazigh"
   desc_afr_autonomy_of_the_amazigh:0 "The Berbers here have special privileges granting them increased autonomy."
   remove_autonomy_of_the_amazigh:0 "All provinces will lose the 'Autonomy of the Amazigh' modifier."
@@ -86,6 +86,7 @@
   recieve_half_subject_raid:0 "We will recieve §Ghalf§! the ¤ our subject gains from raids."
   afr_events.4.b:0 "Algeria is ours to rule directly."
   afr_african_authority:0 "African Authority"
+  afr_vision_on_west_africa:0 "We will gain vision on the §YSahara§! region."
 
   afr_fatamid_glamour_title:0 "Fatimid Glamour"
   afr_fatamid_glamour_desc:0 "We have long marvelled at the riches and glamour of the Fatimid court, with our [Root.Monarch.GetTitle]s having often taken on elements of Arab culture in an attempt to emulate their success. Whilst many would have expected our idols to the east to be overthrown long ago, they in fact persist, rich as ever. As such, now that we've regained our footing, perhaps we should properly make peace with them and establish a benefical relationship for us both."
@@ -161,6 +162,7 @@
   estate_burghers_crusader_frontiers_desc:0 "We will send our more problematic and more zealous individuals southwards into the Sahara to establish settlements and subjguate the oases in the name of the Crown of Africa."
   unlock_privilege_estate_burghers_crusader_frontiers_tt:0 "Unlock the §Y[Root.GetBurghersOrFallbackName]§! '§YCrusader Frontiers§!' estate privilege.\nThis estate privilege will allow us to establish §YSiberian Frontiers§!."
   unlocked_privilege_estate_burghers_crusader_frontiers_tt:0 "Unlocked this estate privilege."
+  afr_vision_on_rest_africa:0 "We will also gain vision on any of the above provinces."
 
   afr_a_king_and_wazirs_title:0 "A King and Viziers"
   afr_a_king_and_wazirs_desc:0 "Despite our alliance and embassies, there is an overall lack of cooperation between our government in [Root.Capital.GetName] and the government of Fatimid Egypt in [EGY.Capital.GetName]. This cannot stand if we wish to make this alliance last perpetually, we need to create a closer cooperation between our two realms so that we may resolve any future disputes and create a further basis for our realms to prosper and for us to share in that prosperity."

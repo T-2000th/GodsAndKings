@@ -1479,7 +1479,10 @@ on_province_owner_change = {
 	if = { 
 		limit = { 
 			owner = { has_estate_privilege = estate_nobles_integrate_the_amazigh }
-			culture = berber
+			OR = {
+				culture = berber
+				culture = tunisian
+			}
 			has_terrain = desert
 		}
 		add_province_modifier = {
