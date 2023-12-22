@@ -1271,7 +1271,10 @@ forbidden_city = {
 	#can we build it?
 	build_trigger = {
 		owner = {
-			has_reform = celestial_empire
+			OR = {
+				has_reform = celestial_empire
+				has_reform = empire_of_light_reform
+			}
 		}
 	}
 
@@ -1288,14 +1291,20 @@ forbidden_city = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		owner = {
-			has_reform = celestial_empire
+			OR = {
+				has_reform = celestial_empire
+				has_reform = empire_of_light_reform
+			}
 		}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		owner = {
-			has_reform = celestial_empire
+			OR = {
+				has_reform = celestial_empire
+				has_reform = empire_of_light_reform
+			}
 		}
 	}
 
@@ -6148,6 +6157,10 @@ borobudur_temple = {
 				culture_group = malay
 				province_is_or_accepts_culture = yes
 			}
+			AND = {
+				culture_group = moluccan_group
+				province_is_or_accepts_culture = yes
+			}
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -6169,6 +6182,10 @@ borobudur_temple = {
 				culture_group = malay
 				province_is_or_accepts_culture = yes
 			}
+			AND = {
+				culture_group = moluccan_group
+				province_is_or_accepts_culture = yes
+			}
 			province_is_buddhist_or_accepts_buddhism = yes
 		}
 	}
@@ -6178,6 +6195,10 @@ borobudur_temple = {
 		OR = {
 			AND = {
 				culture_group = malay
+				province_is_or_accepts_culture = yes
+			}
+			AND = {
+				culture_group = moluccan_group
 				province_is_or_accepts_culture = yes
 			}
 			province_is_buddhist_or_accepts_buddhism = yes
@@ -9112,7 +9133,7 @@ heddal_stave_church = {
 
 versailles = {
 	# province it starts in
-	start = 183
+	start = 4945
 
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
 	date = 1444.01.01 #1623 hunting lodge
@@ -13365,9 +13386,7 @@ imam_hussein_al-abbas = {
 	type = monument
 
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = shiite
-		}
+		is_shiite = yes
 	}
 
 	on_built = {
@@ -13377,15 +13396,11 @@ imam_hussein_al-abbas = {
 	}
 
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = shiite
-		}
+		is_shiite = yes
 	}
 
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = shiite
-		}
+		is_shiite = yes
 	}
 
 	keep_trigger = {
@@ -19008,6 +19023,8 @@ imperial_city_kyoto = {
 			}
 		}
 	}
+}
+
 	kazan_kremlin = {
 		start = 1082
 		date = 1214.12.2 #Built: 10th�16th centuries
@@ -20037,4 +20054,4 @@ imperial_city_kyoto = {
 				}
 			}
 		}
-}
+	}

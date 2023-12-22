@@ -8,7 +8,7 @@ grain = {
 }
 
 wine = {
-	base_price = 2.5
+	base_price = 3.5
 }
 
 wool = {
@@ -186,7 +186,7 @@ nutmeg = {
 	base_price = 5
 }
 tumeric = {
-	base_price = 5
+	base_price = 4
 }
 honey = {
 	base_price = 3

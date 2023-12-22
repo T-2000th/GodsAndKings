@@ -477,3 +477,21 @@ mr_egypt.4.t: "Sitt al-Mulk's Palace Coup"
 mr_egypt.4.d: "It happened subtly enough to go unnoticed initially, but as the months have gone by, more and more of the [Root.Monarch.GetTitle]'s key supporters have associated less with [Root.Monarch.GetHerHim] and more with Sitt al-Mulk. Now, her intentions are clear when she, a collection of notable ministers and commanders, and a retinue of Mamluks have besieged [Root.Monarch.GetName]'s palace, demanding [Root.GetSheHe] hand over the position of [Root.Monarch.GetTitle] to Sitt al-Mulk."
 mr_egypt.4.a: "I've been beaten at my own game..."
 mr_egypt.4.b: "I won't fall without a fight!"
+
+
+mrLevantFlavor.1.t: "Capture of the Jasmine City"
+mrLevantFlavor.1.da: "Long has Damascus, the Jewel of Syria, been the seat of the fiercest and most dedicated opponents to our Christian presence in the Levant, from Emir Duqaq just after the First Crusade to the long reign of the perfidious Mamelukes in our present day. With the momentous capture of such a wealthy, well-fortified city, our position in Syria is immensely strengthened. There is nowhere between our strongholds to hide but the treacherous desert, and our armies will be unmatched by all but perhaps the Wazir of Egypt or the Ilkhan himself."
+mrLevantFlavor.1.db: "Damascus, called the Jasmine City by poets, and the Jewel of Syria by traders and greedy monarchs, has been a hub of commerce and known for the excellency of its arms manufacturers for centuries. With the Christian hold on the coast of Syria, those who would not trade with them either for matters of principle, or to avoid their tariffs, have scant choices besides a caravan thorugh the Syrian Desert to the walls of Damascus. Our capture of the city shall be a huge boon to our fortunes."
+mrLevantFlavor.1.oa: "Glory to God!"
+mrLevantFlavor.1.ob: "And a fine jewel she is!"
+
+mrLevantFlavor.2.t: "Capture of Antioch"
+mrLevantFlavor.2.da: "One of the most significant cities of the Eastern Mediterranean since the successors of Alexander in ancient times, Antioch was more recently the economic and cultural hub of the Christian lands of Outremer for the last three hundred years, even when the Holy City of Jerusalem was under Christian dominion. With its commanding position in the Silk Road trade and excellent defensive geography, Antioch is an asset to any ruler."
+mrLevantFlavor.2.oa: "That citadel really is a long way up that hill."
+
+mrLevantFlavor.3.t: "Capture of Jerusalem"
+mrLevantFlavor.3.d: "Constantinople may have once been called the City of the World's Desire, but in the last 1000 years, much more blood has been spilled over the Holy City of all People of the Book than that ruined husk of past glory. Unfortunately, all this conflict led to the city being long eclipsed as a trade center and urban hub by Damascus, Antioch, and even Aleppo and the ports of Sidon, Tyre, and Tripoli. None of this, however, can diminish the immense religious importance and prestige to be derived by holding the city, and if we could should choose to make safe the pilgrimmage routes once again, perhaps the city could reach new heights under our rule!"
+mrLevantFlavor.3.oa: "Deus vult!"
+mrLevantFlavor.3.ob: "Allahuakbar!"
+mrLevantFlavor.3.oc: "I don't see what the big deal is."
+mrLevantFlavor.3.od: "Finally home in the City of David!"
