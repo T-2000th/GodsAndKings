@@ -188,6 +188,7 @@ GOR = "countries/Gorontalo.txt"
 MND = "countries/Manado.txt"
 KNW = "countries/Konawe.txt"
 BGI = "countries/Benggai.txt"
+WAJ = "countries/Wajo.txt"
 
 JAV = "countries/Java.txt"
 SLW = "countries/Sulawesi.txt"

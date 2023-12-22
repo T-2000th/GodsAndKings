@@ -1,6 +1,6 @@
 
-owner = LUW
-controller = LUW
+owner = WAJ
+controller = WAJ
 culture = southern_sulawesi
 religion = nusantara
 capital = "Wajo"
@@ -10,7 +10,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = LUW
+add_core = WAJ
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim

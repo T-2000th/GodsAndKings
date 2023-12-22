@@ -79,8 +79,10 @@ country_decisions = {
 			if = {
 				limit = {
 					government = tribal
+					has_reform = sulawesian_confederacy
 				}
 				change_government = monarchy
+				has_reform = sulawesian_confederacy
 			}
 		}
 		ai_will_do = {
