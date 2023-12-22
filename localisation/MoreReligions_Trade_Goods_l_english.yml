@@ -138,11 +138,15 @@
  RIGISH_MEAD: "Rigish Mead"
  RUM_RATION: "Naval Rum"
  SKIM_MILK_CHEESE: "Spiced Skim Milk Cheeses"
+ PEWTER_DISHES: "Pewter Kitchenware"
+ SCULPTORS_GOLDEN_AGE: "Sculptor's Golden Age"
+ RISSOTO: "Rissoto"
  
  #provinces
  mr_hamburg_beer_breweries: "Hamburg Beer Industry"
  mr_rigish_mead: "Rigish Mead"
  mr_mead_production: "State Sponsored Mead Production"
+ mr_sculptors_golden_age: "Influx of Sculptors"
  
  #price change events
  mr_prices.1.t: "Hopped Beer"
@@ -160,7 +164,21 @@
  mr_prices.4.t: "The Rum Ration"
  mr_prices.4.d: "The High Seas are a rough and tough environment where even the hardiest of sailors need something to take the edge off and to find reprieve far from home. A glass of rum lights a fire in the stomach and can provide a warmth reminescent of the family hearth. In addition to bolstering the morale of our men at sea, we can see the benefits of unspoiling and relatively light rations, as well as the promise of a daily imbibment as a motivating factor for recruitment."
  mr_prices.4.a: "Up Spirits!"
+ mr_naval_rum: "Naval Rum Ration"
 
  mr_prices.5.t: "Spiced Skim Milk Cheese"
  mr_prices.5.d: "During the production of butter, skim milk is a runoff byproduct. It is not typically desired and sometimes even given to pigs to fatten them. In the province of [cheese_skim_place.GetName], farmers have developed and interesting method of improving its taste and quality: infusion of spices. The process of impressing these flavors has become the norm with foreign and local spices. The quality improvement is so drastic that the once undesireable cheese has come to match the popularity of mainstream regional cheeses in some communities."
  mr_prices.5.a: "Delicious!"
+
+ mr_prices.6.t: "Pewter Kitchenware"
+ mr_prices.6.d: "Pewter is an alloy composed primarily of tin, with smaller amounts of antimony, and silver, copper, or lead. It is a soft, easily malleable material with a silvery luster that has become fashionable amongst not only the nobility but also the merchant class of [Root.GetName]. A plate or knife or spoon are common implments, but even jewelry, teapots, and candlesticks have pewter versions."
+ mr_prices.6.a: "I'll take two!"
+ 
+ mr_prices.7.t: "Sculptor's Golden Age"
+ mr_prices.7.d: "In [Root.Capital.GetName], famed sculptor [Adm_Advisor.GetName] has attracted aspiring artists from across the country seeking to learn his techniques. He has become renowned as a genius artist who claims that sculpting is 'merely freeing form from the stone.' Upon seeing his works, it is easy to see that [Adm_Advisor.GetName] is understating; fabric falls upon delicately carved bodies and musculature is precisely displayed with such candor it is easy to forget it was once a chunk of stone. Meanwhile, his first students gather around for their first lesson..."
+ mr_prices.7.a: "Truly a marvel!"
+ 
+ mr_prices.8.t: "Rice in Europe"
+ mr_prices.8.d: "Rice has been known to Europeans for centuries, dating back to possibly even Roman times. It has made resurrgences within the continent brought by Arabs in Iberia and Sicilian contact in Africa. Wide scale rice production has never taken hold though because previous regions were not conducive to to it.\nItaly however, is well suited, especially the fertile Po valley; and with the increased introduction of rice into Italy from Venetian trade routes to the east, several farmers have made attempts to create their own farms of this exotic grain."
+ mr_prices.8.a: "I would like to try some!"
+ mr_prices.8.b: "I prefer bread, if its all the same."
