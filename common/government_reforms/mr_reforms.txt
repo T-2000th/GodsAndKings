@@ -1231,3 +1231,42 @@ wazir_republic = {
 		wr_nubians
 	}
 }
+
+bugis_elective = {
+	icon = "elective_monarchy"
+	potential = {
+		primary_culture = southern_sulawesi
+	}
+	legacy_equivalent = elective_monarchy_legacy
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		vassal_income = 0.15
+		vassal_forcelimit_bonus = 1
+		max_absolutism = -40
+		nobles_influence_modifier = 0.15
+		female_advisor_chance = 0.25
+	}
+
+	conditional = {
+		allow = { 
+			has_dlc = "Mandate of Heaven"
+		}
+		custom_attributes = {
+			has_tributaries = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		has_ruler_election = yes
+	}
+	ai = {
+		factor = 0.5
+	}
+}

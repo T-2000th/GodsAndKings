@@ -82,7 +82,16 @@ country_decisions = {
 					has_reform = sulawesian_confederacy
 				}
 				change_government = monarchy
-				has_reform = sulawesian_confederacy
+				add_government_reform = sulawesian_confederacy
+			}
+			
+			if = {
+				limit = {
+					government = tribal
+					has_reform = bugis_elective
+				}
+				change_government = monarchy
+				add_government_reform = bugis_elective
 			}
 		}
 		ai_will_do = {

@@ -145,6 +145,7 @@ monarchy = {
 				mr_athenian_kingdom_reform
 				nusantaran_sultanate
 				sulawesian_confederacy
+				bugis_elective
 				medieval_caliphate
 			}
 		}
@@ -1030,6 +1031,7 @@ tribal = {
 				#Turkomen
 				turkoman_ottoman_institutions
 				sulawesian_confederacy
+				bugis_elective
 			}
 		}
 		tribal_cultural_values = {
