@@ -160,30 +160,58 @@ crusader_missions_1_antioch = {
 		position = 2
 
 		provinces_to_highlight = {
-			is_capital_of = SIC
+			OR = {
+				is_capital_of = SIC
+				is_capital_of = TTS
+			}
 		}
 
 		trigger = {
 			OR = {
-				SIC = {
-					AND = {
-						marriage_with = ROOT
-						has_opinion = {
-							who = ROOT
-							value = 150
+				custom_trigger_tooltip = {
+					tooltip = ati_older_ties_trigger_tt_1
+
+					OR = {
+						SIC = {
+							marriage_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+						TTS = {
+							marriage_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
 						}
 					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = ati_older_ties_trigger_tt_2
 
-				AND = {
-					is_rival = SIC
-					has_spy_network_in = {
-						who = SIC
-						value = 80
+					OR = {
+						SIC = {
+							is_enemy = ROOT
+							has_spy_network_from = {
+								who = ROOT
+								value = 80
+							}
+						}
+						TTS = {
+							is_enemy = ROOT
+							has_spy_network_from = {
+								who = ROOT
+								value = 80
+							}
+						}
 					}
 				}
-
-				NOT = { exists = SIC }
+				AND = {
+					NOT = { exists = SIC }
+					NOT = { exists = TTS }
+				}
 			}
 		}
 
@@ -202,12 +230,29 @@ crusader_missions_1_antioch = {
 						target = SIC
 					}
 				}
+				else_if = {
+					limit = {
+						TTS = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = TTS
+					}
+				}
 				else = {
 					add_permanent_claim_multi_provinces = { target = sicily_area }
 					add_permanent_claim_multi_provinces = { target = western_sicily_area }
 				}
 				if = {
-					limit = { marriage_with = SIC }
+					limit = { 
+						OR = {
+							marriage_with = SIC
+							marriage_with = TTS
+						} 
+					}
 					add_country_modifier = {
 						name = cs_flexible_marriages
 						duration = 3650
