@@ -289,11 +289,11 @@ mild_winter = {
 	#mr_pontic
 	5309 5310 5308 5306 5307 5311 5313 5314 5318 5319
 	5323 #mr_armenia
-	4307 5386 5385 5383 5384 #mr_anatolia
+	4307 5386 5385 5383 5384 5520 #mr_anatolia
 	5393 #mr_caucasus
-	5441 5437 5442#mr_balkans
+	5441 5437 5442 #mr_balkans
 	5462 5463 5465 5466 5473 5474 5475 5476 #MR China
-	5502 5503 #mr_carpathia
+	5502 5503 5504 5509 #mr_carpathia
 }
 
 #Example: Inland Europe & Scandinavia
@@ -376,11 +376,11 @@ normal_winter = {
 	#mr_germany
 	5068 5069 5070 5071 5072 5073 5074 5075 5076 5077 5078 5079 5080 5081 5082 5083 5085 5086 5087 5088 5089 5090 5091 5093 5094 5095 5096 5097 5098 5099 5100 5101 5102 5103 5104 5105 5106 5107
 	5286 5312 #mr_russia
-	5320 5322#mr_armenia
+	5320 5322 #mr_armenia
 	5392 5390 #mr_anatolia
-	5394 5395 5396 5397 463#mr_caucasus
-	5443 5446 5438 5439 5440#mr_balkans
-	5500 5501 #mr_carpathia
+	5394 5395 5396 5397 463 #mr_caucasus
+	5443 5446 5438 5439 5440 #mr_balkans
+	5500 5501 5505 5506 5507 5508 5510 5511 5512 5513 5514 #mr_carpathia
 }
 
 #Example: Russia & Lappland
@@ -472,6 +472,9 @@ impassable = {
 	5030 #vatnajokull
 	5398 #Eastern Caucasus
 	5499 #Guinean Mountains
+	5510 5511 5512 5513 5514 # MR carpathia
+	5525 5526 # Mr Anatolia
+	5527 # Mr Balkans
 }
 
 mild_monsoon = {

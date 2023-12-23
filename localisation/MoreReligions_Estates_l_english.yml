@@ -35,6 +35,9 @@ estate_privileges_and_agendas_events.3.MR1: "The Proposal of the Shugo"
  ilk_political_1_title: "Management of the State"
  estate_church_waldensian_studies: "Counter-Heresy Studies"
  estate_church_waldensian_studies_desc: "We will fund and establish the creation of counter-heresy seminars for any aspiring Basque clergymen. For in order to properly fight against the dangers and evils of heresy, a missionary must first understand and know what they are fighting against. Know thy enemy."
+ estate_church_ambiguous_allegience: "Ambiguous Allegience"
+ estate_church_ambiguous_allegience_desc: "Even thought traces of Christianity in the Romanian region can be found as early as the fourth century, for over a thousand years the political allegience of the locals has been ambiguous at best. Simply referring to themselves as Christians, it has been relatively easy to Even in the wake of the formation of our principality we have "
+ estate_church_ambiguous_allegience_custom_tooltip: "§G+25§! Opinion with Orthodox Christians."
 
  #Nobility
  estate_nobles_rice_wine: "Siamese Liquor Monopolies"

@@ -131,9 +131,12 @@ country_event = {
 				school = mr_cologne_rite
 			}
 		}
-		else_if = { # Corfu is a special case, their primary culture is Aegean Greek, so they follow Byzantine Rite Catholic
+		else_if = { # Special cases of Catholics that follow the Byzantine Rite
 			limit = {
-				tag = CEP
+				OR = {
+					tag = CEP
+					tag = WAL
+				}
 			}
 			set_religious_school = {
 				group = christian
@@ -471,7 +474,10 @@ country_event = {
 			OR = {
 				religion = mr_maronite
 				religion = orthodox
-				tag = CEP # Byzantine Rite Orthodox Greeks is immensely funny
+				OR = {
+					tag = CEP
+					tag = WAL
+				}
 			}
 			ai = no
 		}

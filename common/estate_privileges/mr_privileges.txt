@@ -904,3 +904,38 @@ estate_church_mr_imperial_introspection = {
 	}
 	cooldown_years = 20
 }
+estate_church_ambiguous_allegience = {
+	icon = estate_church_WAL_ambiguous_church_allegience
+	loyalty = -0.10
+	influence = -0.15
+	is_valid = {
+		tag = WAL
+		religion = catholic
+	}
+	on_granted = {
+		every_country = {
+			limit = {
+				religion = orthodox
+			}
+			add_opinion = {
+				who = root
+				modifier = same_religion
+				multiplier = 1
+				years = 400
+			}
+		}
+	}
+	conditional_modifier = {
+	}
+	can_select = {
+		religion = catholic
+	}
+	penalties = {
+		global_heretic_missionary_strength = -1
+		tax_income = -0.5
+		prestige_decay = 0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
