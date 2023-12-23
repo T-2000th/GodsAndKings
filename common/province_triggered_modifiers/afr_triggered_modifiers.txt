@@ -1,0 +1,34 @@
+afr_embassy_of_the_maghreb = { 
+	potential = { 
+		has_global_flag = embassy_of_the_maghreb
+	}
+	trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = ally_has_embassy
+				has_country_flag = afr_embassy_established
+				any_ally = {
+					has_country_flag = afr_embassy_established
+				}
+			}
+		}
+	}
+	diplomatic_upkeep = 1
+	production_efficiency = 0.10
+	galley_power = 0.10
+	local_institution_spread = 0.25
+}
+
+afr_cathedral_of_tunis = { 
+	potential = { 
+		owner = {
+			mission_completed = afr_cathedral_of_tunis
+		}
+	}
+	trigger = {
+		has_tax_building_trigger = yes
+	}
+	local_development_cost_modifier = -0.10
+	local_tax_modifier = 0.10
+	papal_influence = 0.5
+}

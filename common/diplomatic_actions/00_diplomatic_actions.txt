@@ -481,13 +481,25 @@ annexationaction = {
 	condition = {
 		tooltip = CANNOT_ANNEX
 		potential = {
-			FROM = {
-				has_country_modifier = tur_mamlukian_administration
+			OR = {
+				FROM = {
+					has_country_modifier = tur_mamlukian_administration
+				}
+				AND = {
+					FROM = { tag = KOJ }
+					has_country_modifier = afr_joint_administration_of_the_holy_land
+				}
 			}
 		}
 		allow = {
 			FROM = {
 				NOT = { has_country_modifier = tur_mamlukian_administration }
+			}
+			NOT = {
+				AND = {
+					FROM = { tag = KOJ }
+					has_country_modifier = afr_joint_administration_of_the_holy_land
+				}
 			}
 		}
 	}

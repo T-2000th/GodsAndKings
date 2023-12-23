@@ -237,7 +237,7 @@ country_event = {
 	
 	option = {
 		name = mr_prices.8.a
-		ai_chance = { factor  = 80 }
+		ai_chance = { factor = 80 }
 		change_price = {
 			trade_goods = rice
 			key = RISSOTO
@@ -252,11 +252,179 @@ country_event = {
 	
 	option = {
 		name = mr_prices.8.a
-		ai_chance = { factor  = 20 }
+		ai_chance = { factor = 20 }
 		change_price = {
 			trade_goods = rice
 			key = RISSOTO
 			value = 0.05
+			duration = -1
+		}
+	}
+}
+
+#The Vast Forests of Reisland
+country_event = {
+	id = mr_prices.9
+	title = mr_prices.9.t
+	desc = mr_prices.9.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		num_of_provinces_in_states = 10
+		lumber = 1
+		capital_scope = { superregion = north_america_superregion }
+	}
+	mean_time_to_happen = { years = 10 }
+	
+	option = {
+		name = mr_prices.9.a
+		random_owned_province = {
+			limit = { trade_goods = lumber }
+			add_base_production = 2
+		}
+		change_price = {
+			trade_goods = lumber
+			key = REISLAND_FORESTS
+			value = -0.25
+			duration = -1
+		}
+	}
+}
+
+#Advancements in Engineering
+country_event = {
+	id = mr_prices.10
+	title = mr_prices.10.t
+	desc = mr_prices.10.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		OR = {
+			innovativeness = 50
+			natural_scientist = 4
+		}
+		cathedral = 1
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	immediate = {
+		random_owned_province = {
+			limit = { has_building = cathedral }
+			save_event_target_as = big_building
+		}
+	}
+	
+	option = {
+		name = mr_prices.10.a
+		add_splendor = 50
+		add_prestige = 10
+		change_price = {
+			trade_goods = lumber
+			key = BIG_BUILDINGS
+			value = 0.25
+			duration = -1
+		}
+	}
+}
+
+#Whale Oil
+country_event = {
+	id = mr_prices.11
+	title = mr_prices.11.t
+	desc = mr_prices.11.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		is_year = 1650
+		whales = 1
+	}
+	mean_time_to_happen = { years = 100 }
+	
+	option = {
+		name = mr_prices.11.a
+		change_price = {
+			trade_goods = whales
+			key = SPERMACETI
+			value = 0.25
+			duration = -1
+		}
+	}
+}
+
+# #Ambergris
+# country_event = {
+	# id = mr_prices.12
+	# title = mr_prices.12.t
+	# desc = mr_prices.12.d
+	# picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	# fire_only_once = yes
+	# major = yes
+	# trigger = {
+		# whales = 1
+	# }
+	# mean_time_to_happen = { years = 100 }
+	
+	# option = {
+		# name = mr_prices.12.a
+		# change_price = {
+			# trade_goods = whales
+			# key = SPERMACETI
+			# value = 0.25
+			# duration = -1
+		# }
+	# }
+# }
+
+#Ice Houses
+country_event = {
+	id = mr_prices.13
+	title = mr_prices.13.t
+	desc = mr_prices.13.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		OR = {
+			AND = {
+				is_year = 1550
+				trading_part = {
+					trade_goods = ice
+					value = 0.1
+				}
+			}
+			AND = {
+				is_year = 1600
+				trading_part = {
+					trade_goods = ice
+					value = 0.05
+				}
+			}
+			AND = {
+				is_year = 1700
+				ice = 1
+			}
+		}
+	}
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = mr_prices.12.a
+		change_price = {
+			trade_goods = ice
+			key = ICE_HOUSES
+			value = 0.30
 			duration = -1
 		}
 	}
