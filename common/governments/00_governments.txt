@@ -146,6 +146,8 @@ monarchy = {
 				nusantaran_sultanate
 				sulawesian_confederacy
 				medieval_caliphate
+				# Added for Africa (Inferno)
+				rex_africae
 			}
 		}
 		hereditary_vs_nobility = {
