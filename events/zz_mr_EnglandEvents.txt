@@ -1,5 +1,12 @@
 namespace = mr_england
 
+#1,2,3,4,5,6,8,101,102 - mission triggered events
+#2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
+#7,7002-7012 - Lollardy Conclusions (required flavor)
+#7013 - Lollardy Flavor
+#9,9002-9004 - Royal Woods events
+#1001-1009 - Crown Agendas Event System
+
 #A United Kingdom
 country_event = {
 	id = mr_england.1
