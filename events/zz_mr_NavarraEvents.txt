@@ -335,6 +335,26 @@ country_event = {
 			} 
 		}
 	}
+    id = navarra_events.11
+    title = navarra_events.11.t
+    desc = navarra_events.11.d
+    picture = RELIGIOUS_WARS_eventPicture
+    fire_only_once = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = "navarra_events.11.1"
+        NAV = {
+            create_union = FROM 
+            if = { limit = { LON = { junior_union_with = CAS } }
+              create_union = LON
+            } 
+            if = { 
+             limit = { CAS = { junior_union_with = LON } }
+              create_union = CAS
+            } 
+        }
+    }
 }
 country_event = {
 	id = navarra_events.12

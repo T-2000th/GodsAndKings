@@ -1,6 +1,10 @@
 #modified
-	#3, 24 trigger
-
+	#3 trigger
+	#8 now includes tumeric, ginger, nutmeg
+	#19 trigger
+	#20 grants 50 firearms inst in capital
+	#22 now includes tumeric, ginger, nutmeg
+	#24 trigger
 ####################################################
 # Price Change Events
 # written by Johan Andersson & Henrik Lohmander
@@ -537,6 +541,24 @@ country_event = {
 			value = 0.5
 			duration = -1
 		}
+		change_price = {
+			trade_goods = nutmeg
+			key = SPICE_TRADE
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = tumeric
+			key = SPICE_TRADE
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = ginger
+			key = SPICE_TRADE
+			value = 0.5
+			duration = -1
+		}
 		add_years_of_income  = 0.25
 		add_prestige = 20
 	}
@@ -611,7 +633,55 @@ country_event = {
 			duration = 730
 		}
 		change_price = {
-			trade_goods = wine
+			trade_goods = grapes
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = olives
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = vegetables
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = tomato
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = maize
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = citrus
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = maize
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = fruit
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = rice
 			key = HUAYNAPUTINA
 			value = -0.75
 			duration = 730
@@ -1002,7 +1072,8 @@ country_event = {
 	major = yes
 
 	trigger = {
-		dip_tech = 22
+		has_institution = state_navy_inst
+		#dip_tech = 22
 		num_of_ports = 3
 		NOT = { has_global_flag = permanent_navies_happened }
 	}
@@ -1017,6 +1088,12 @@ country_event = {
 			trade_goods = naval_supplies
 			key = PERMANENT_NAVIES
 			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = lumber
+			key = PERMANENT_NAVIES
+			value = 0.2
 			duration = -1
 		}
 		change_price = {
@@ -1054,9 +1131,14 @@ country_event = {
 		months = 1
 	}
 	
-	
 	option = {
 		name = prices.20.a
+		capital_scope = {
+			add_institution_embracement = {
+				which = firearms_institution
+				value = 50
+			}
+		}
 		change_price = {
 			trade_goods = copper
 			key = BRONZE_CANNONS
@@ -1088,7 +1170,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 1
 	}
-	
 	
 	option = {
 		name = prices.21.a
@@ -1143,6 +1224,24 @@ country_event = {
 		change_price = {
 			trade_goods = spices
 			key = DECLINE_OF_SPICE_TRADE
+			value = -0.4
+			duration = -1
+		}
+		change_price = {
+			trade_goods = nutmeg
+			key = SPICE_TRADE
+			value = -0.4
+			duration = -1
+		}
+		change_price = {
+			trade_goods = tumeric
+			key = SPICE_TRADE
+			value = -0.4
+			duration = -1
+		}
+		change_price = {
+			trade_goods = ginger
+			key = SPICE_TRADE
 			value = -0.4
 			duration = -1
 		}
@@ -1941,7 +2040,7 @@ country_event = {
 	trigger = {
 		NOT = { has_global_flag = paper_in_bureaucracies }
 		adm_tech = 6
-		has_institution = feudalism
+		has_institution = renaissance
 		OR = {
 			num_of_cities = 50
 			colony = 1 #1 Colonial Country
@@ -2134,6 +2233,24 @@ country_event = {
 			trade_goods = livestock
 			key = COLUMBIAN_EXCHANGE
 			value = 0.25
+			duration = -1
+		}
+		change_price = {
+			trade_goods = potato
+			key = COLUMBIAN_EXCHANGE
+			value = 0.20
+			duration = -1
+		}
+		change_price = {
+			trade_goods = tomato
+			key = COLUMBIAN_EXCHANGE
+			value = 0.20
+			duration = -1
+		}
+		change_price = {
+			trade_goods = maize
+			key = COLUMBIAN_EXCHANGE
+			value = 0.20
 			duration = -1
 		}
 	}

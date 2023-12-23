@@ -59,7 +59,7 @@ military_supplies = {
 		mil_tech_cost_modifier = -0.1
 	}
 	province = {
-		discipline = 0.01
+		local_unrest = -5
 	}
 	chance = {
 		factor = 0
@@ -127,7 +127,7 @@ steel = {
 		global_regiment_cost = -0.15
 	}
 	province = {
-		fire_damage_received = -0.01
+		land_forcelimit = 2
 	}
 	chance = {
 		factor = 0
@@ -139,7 +139,7 @@ gunpowder = {
 		siege_ability = 0.10
 	}
 	province = {
-		fire_damage = 0.05
+		fire_damage = 0.02
 	}
 	chance = {
 		factor = 0
@@ -648,7 +648,7 @@ horses = {
 		cavalry_power = 0.15
 	}
 	province = {
-		cavalry_cost = -0.006
+		cavalry_cost = -0.005
 	}
 	chance = {
 		factor = 5

@@ -1259,3 +1259,40 @@ wazir_republic = {
 		wr_nubians
 	}
 }
+
+# Again, as with other files, just integrate this into mr_reforms.txt! (Inferno)
+
+rex_africae = { 
+	icon = "divine_guidance_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = rex_africae
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = rex_africae
+			}
+		}
+	}
+
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+
+	modifiers = {
+		# General modifiers
+		manpower_recovery_speed = 0.15
+		development_cost = -0.05
+		# Crusader origins
+		tolerance_own = 2
+		# The below are meant to represent the usage of native governance
+		num_accepted_cultures = 2
+		nobles_influence_modifier = 0.05
+		max_absolutism = -10
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_divine_idea_group = yes
+		enables_estate_dhimmi = yes # Catholic Dhimmi!
+	}
+}

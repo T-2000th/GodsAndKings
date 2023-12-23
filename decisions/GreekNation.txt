@@ -47,6 +47,7 @@ country_decisions = {
 			}
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
+			NOT = { tag = CST }
 			NOT = { tag = TUR }
 			NOT = { tag = BYZ }
 			NOT = { exists = BYZ }

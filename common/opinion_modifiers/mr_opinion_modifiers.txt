@@ -56,6 +56,26 @@ went_on_hajj = {
 	opinion = 50
 	yearly_decay = 0.5
 }
+
+afr_rejected_our_offer = {
+	opinion = -50
+	yearly_decay = -2.5
+}
+
+afr_trustworthy_partner = {
+	opinion = 50
+	yearly_decay = 2.5
+}
+
+afr_reputation_amongst_christendom = {
+	opinion = 50
+	yearly_decay = 5	
+}
+
+afr_broke_our_promise = {
+	opinion = -100
+	yearly_decay = -5		
+}
 annexed_marali = {
 	opinion = -50
 	yearly_decay = 2
