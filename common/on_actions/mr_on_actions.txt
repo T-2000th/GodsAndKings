@@ -1540,7 +1540,6 @@ on_raid_coast = {
 			value = 1
 		}
 	}
-	
 	# Code taken directly from Ortus Gentium. Which was based off EE's code.
 	save_event_target_as = raider
 	FROM = {
