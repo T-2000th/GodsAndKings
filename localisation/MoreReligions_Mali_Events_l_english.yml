@@ -5,3 +5,12 @@
 mr_MaliFlavor.1.a: "Send more colonists to chart out nearby settlements!"
 mr_MaliFlavor.1.b: "All of our support must go to the new settlement!"
 mr_maliflavor.1.event_insight: "§GEvent Insight:§!\n\nThis event will detail our voyage to the new world, and give us the option of improvince our current colony or expanding it to province nearby."
+
+mr_MaliFlavor.2.t: "The Importation of Sugar"
+mr_MaliFlavor.2.d: "Sugar is not native to this new land in the far west. Nor is it native to our homeland, either. It originated from a far eastern land, where the climate is warm and the rains are plentiful. However, this new island of Hayti seems to be a place where we can reasonable grow this crop. We shall take this valuable good and establish our own holding of it in the new world, so that we can dominate the Reisland Trade."
+mr_MaliFlavor.2.a: "Bring in the Foreign Sugar Cane!"
+mr_MaliFlavor.2.b: "Bring in the Domestic Sugar Cane!"
+mr_MaliFlavor.2.c: "Perhaps another time."
+
+exporting_sugar: "Exporting Foreign Sugar"
+exporting_sugar_1: "Exporting Local Sugar"

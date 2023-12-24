@@ -1,5 +1,4 @@
 ﻿l_english:
- l_english:
 #Mission Titles:
 mr_mali_exploration_first_title: "Into the Beyond"
 mr_mali_exploration_second_title: "The Second Great Voyage"
@@ -7,6 +6,11 @@ mr_mali_exploration_third_title: "Establish Frontier Cities"
 mr_mali_exploration_fourth_title: "The Colony of Bilenmani"
 mr_mali_exploration_fifth_title: "The Country of Plenty"
 mr_mali_exploration_sixth_title: "Feeding the Empire"
+mr_mali_exploration_seventh_title: "Invade the Western Isles"
+mr_mali_exploration_eighth_title: "Subjugate the Taino"
+mr_mali_exploration_ninth_title: "Fields of Sugar"
+mr_mali_exploration_tenth_title: "Found New Tarabot"
+mr_mali_exploration_eleventh_title: "Lumber Yards of Bilenmani"
 
 
 #Mission Descriptions
@@ -22,6 +26,15 @@ yes_change_price_tomato: "£yes£If we complete this mission while havin §Y4§!
 no_change_price_tomato: "£no£If we complete this mission while havin §Y4§! §YTomato§! provinces that meet the requirement, we will increase the Price of Tomatoes by §Y15%§! for 15 Years."
 gain_extra_bonus_yes: "£yes£If we complete this mission while owning all of the Banda Oriental Area, all province in the area will gain the following:"
 gain_extra_bonus_no: "£no£If we complete this mission while owning all of the Banda Oriental Area, all province in the area will gain the following:"
+no_farma_tt: "All §YFarma Vassals§! must have §Y100 Opinion§! and less than §Y50 Liberty Desire§!."
+invaders_of_mali: "Malian Sea Raiders"
+given_subsidies_or_cash: "Either have +20 Relations Modifier from Send Gift with @GAO Gao or Subsidize 30% of  @GAO Gao's Income."
+enable_growth_of_sugar_decisions: "This will enable the §YGrowth of Sugar§! Decisions." 
+sale_of_sugar_TT: "One of the following must be true:\n\nOwn a province with the §YSugar§! Trade Good.\nHave §Y+100§! Opinion with an owner of a Province with §YSugar§! as its Trade Good.\n\n§TWe can only export sugar from a province one time!§!"
+highlighted_provinces_get_tax: "Every province that meets the requirement will gain §Y2 Base Taxation§! and §Y2 Base Production§!."
+create_naval_supplies: "Three Random Provinces in the §YOld World§! with §YLumber§! or §YTropical Wood§! will become §YNaval Supplies§!."
+every_province_meets_requirement: "Every province that meets the Mission Requirements will receive the following:"
+
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -32,9 +45,22 @@ gain_extra_bonus_no: "£no£If we complete this mission while owning all of the 
  port_development: "Port Development"
  feeding_the_empire: "Feeding the Empire"
  babele_river_south: "Shoreline of the Bawajirio"
+ align_the_taino: "Subjugating the Kasike"
+merchants_of_carib: "Fields of Sugar and Rum"
+tarabot_city: "Tarabot City"
+bilenmani_lumber: "Bilenmani Lumber"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
 estate_merchants_agojio_clearing: "Clearing the Agojio"
 estate_merchants_agojio_clearing_desc: "The Agojio Rainforest is as mighty as the great jungles of the African continent. It would be difficult for anyone to clear these dense regions of forest and nature, but with some extra funds and diverted manpower, we can strip these lands bare!"
 wajirio_goods: "Goods from Wajirio"
+estate_nobles_malian_farmas: "Reliance on the Farma"
+estate_nobles_malian_farmas_desc: "By the mid-15th Century, the Malian governance relied on a mixture of local elites and Malian lords working in tandem. This allowed for stability across the empire, solidifying the rule of the Mansa over his vassals. They have control over their territory and supply arms and coin to their overlord. However, this does have the side effect of a weak direct administration. There are parts of his own empire that the Mansa wouldn't dare cross through for fear of his own safety - and this concept extends to his vassals, who exist outside of his command."
+malian_farma_TT_1: "Every owned province with the same culture group but NOT our core culture will recieve the following:\n§R+25§! Minimum Autonomy\nEvery owned province not in our culture group will recieve the following:\n§R+35§! Minimum Autonomy"
+malian_farma_TT_2: "Every owned province with the same culture group but NOT our core culture will recieve the following:\n§G-25§! Minimum Autonomy\nEvery owned province not in our culture group will recieve the following:\n§G-35§! Minimum Autonomy"
+import_sugar_mal_title: "Import Sugar"
+import_sugar_mal_desc: "We shall bring the valuable sugar cane of the east into the Reislands of the west!"
+enable_jahanke: "This will enable the §YJakhanke Murabit§! Holy Order."
+jakhanke_murabit: "Jakhanke Murabit"
+jakhanke_murabit_desc: "Clerics from the Soninke peoples of West Africa, they went to the Reislands because they saw it as a place to not only escape the corrupting power of the nobility, but they also followed the trade lines stretching across the Atlantic sea. From here, they taught their tradition to local peoples across the new continent, establishing brotherhoods and mosques to convert the people of this new land."

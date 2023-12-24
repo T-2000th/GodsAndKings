@@ -1,9 +1,8 @@
-add_adm_tech = 15
-andes_superregion = {
+dominica_area = {
 	add_core = ROOT
 	cede_province = ROOT
 }
-south_america_superregion = {
+hispaniola_area = {
 	add_core = ROOT
 	cede_province = ROOT
 }

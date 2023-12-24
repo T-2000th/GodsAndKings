@@ -1,0 +1,67 @@
+country_decisions = {
+	import_sugar_mal = {
+		color = { 195 160 20 }
+		potential = {
+			is_random_new_world = no
+			mission_completed = mr_mali_exploration_eighth
+			NOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					OR = {
+						area = dominica_area
+						area = hispaniola_area
+					}
+					OR = {
+						trade_goods = rum
+						trade_goods = sugar
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			trade_goods = sugar
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = sale_of_sugar_TT
+				OR = {
+					any_province = {
+						trade_goods = sugar
+						owner = {
+							capital_scope = {
+								NOT = {
+									OR = {
+										continent = south_america
+										continent = north_america
+									}
+								}
+							}
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+					any_owned_province = {
+						NOT = {
+							or = {
+								continent = south_america
+								continent = north_america
+							}
+						}
+						trade_goods = sugar
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = mr_MaliFlavor.2
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

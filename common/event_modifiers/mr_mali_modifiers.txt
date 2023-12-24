@@ -24,3 +24,35 @@ feeding_the_empire = {
 	global_manpower_modifier = 0.1
 	manpower_recovery_speed = 0.15
 }
+malian_farma_1 = {
+	min_local_autonomy = 35
+}
+malian_farma = {
+	min_local_autonomy = 25
+}
+invaders_of_mali = {
+	landing_penalty = -1
+}
+align_the_taino = {
+	province_trade_power_modifier = 0.1	
+	local_build_cost = -0.25	
+}
+exporting_sugar = {
+	production_efficiency = -0.10
+	tax_income = 12
+}
+exporting_sugar_1 = {
+	production_efficiency = -0.10
+	province_trade_power_modifier = 0.1	
+}
+merchants_of_carib = {
+	merchants = 1
+}
+tarabot_city = {
+	colonists = 1
+	colony_development_boost = 1	
+}
+bilenmani_lumber = {
+	trade_goods_size = 0.5	
+	trade_value = 2.5
+}

@@ -1268,3 +1268,72 @@ estate_burghers_development_of_the_maghreb = {
 		factor = 5
 	}
 }
+estate_nobles_malian_farmas = {
+	icon = GFX_estate_nobles_malian_farmas
+	land_share = 5
+	max_absolutism = -25
+	loyalty = 0.05
+	influence = 0.10
+	can_select = {
+		tag = MAL
+		is_subject = no
+	}
+	is_valid = {
+		always = yes
+	}
+	benefits = {
+		reduced_liberty_desire_on_same_continent = 15
+	}
+	penalties = {
+	}
+	on_granted = {
+		custom_tooltip = malian_farma_TT_1
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				culture_group = ROOT
+				NOT = {
+					culture = ROOT
+				}
+			}
+			add_province_modifier = {
+				name = malian_farma
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					culture_group = ROOT
+				}
+			}
+			add_province_modifier = {
+				name = malian_farma_1
+				duration = -1
+			}
+		}
+	}
+	can_revoke = {
+	}
+	on_revoked = {
+		custom_tooltip = malian_farma_TT_2
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = malian_farma_1
+			}
+			remove_province_modifier = malian_farma_1
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = malian_farma
+			}
+			remove_province_modifier = malian_farma
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -181,7 +181,7 @@ cb_shugo_independence = {
 
 	war_goal = defend_capital_independence
 }
-cb_disloyal_marali = {
+cb_disloyal_farma = {
 	valid_for_subject = no
 
 	is_triggered_only = yes

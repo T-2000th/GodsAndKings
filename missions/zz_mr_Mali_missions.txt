@@ -167,7 +167,13 @@ branch_2 = {
 			}
 		}
 		effect = {
-			colonial_la_plata = {
+			define_conquistador = {
+				shock = 2
+				fire = 2
+				manuever = 1
+			}
+			custom_tooltip = ""
+			la_plata_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { 
@@ -179,11 +185,7 @@ branch_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			define_conquistador = {
-				shock = 2
-				fire = 2
-				manuever = 1
-			}
+			custom_tooltip = ""
 			if = {
 				limit = {
 					banda_oriental_area = {
@@ -357,7 +359,292 @@ branch_3 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
-	
+	mr_mali_farma_first = {
+		icon = mission_son_fetishist_alliances
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject_of_type_with_overlord = {
+					who = ROOT
+					type = farma_subject
+				} 
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				liberty_desire = 50
+				
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = no_farma_tt
+				NOT = {
+					any_country = {
+						is_subject_of_type_with_overlord = {
+							who = ROOT
+							type = farma_subject
+						} 
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+						liberty_desire = 50
+					}
+				}
+			}
+			GAO = {
+				OR = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = core_farma_subject
+					}
+					custom_trigger_tooltip = {
+						tooltip = given_subsidies_or_cash
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+							value = 20
+						}
+						subsidised_percent_amount = { 
+							value = 0.30
+						}
+					}
+				}
+				
+			}
+		}
+		effect = {
+			add_prestige = 10
+		}
+	}
+	mr_mali_exploration_seventh = {
+		icon = mission_invade_island
+		position = 10
+		required_missions = {
+			mr_mali_exploration_third
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				colonial_region = colonial_the_carribean
+				value = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = invaders_of_mali
+				duration = 5475
+			}
+			hispaniola_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dominica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_cuba_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cuba_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		}
+	}
+	mr_mali_exploration_tenth = {
+		icon = mission_imperial_cities
+		position = 12
+		required_missions = {
+			mr_mali_exploration_fourth
+		}
+		provinces_to_highlight = {
+			province_id = 763
+			NOT = {
+				AND = {
+					has_trade_building_trigger = yes
+					has_manpower_building_trigger = yes
+					development = 10
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			763 = {
+				has_trade_building_trigger = yes
+				has_manpower_building_trigger = yes
+				development = 10
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			763 = {
+				add_province_modifier = {
+					name = tarabot_city
+					duration = 5475
+				}
+			}
+			custom_tooltip = enable_jahanke
+		}
+	}
+	mr_mali_exploration_eleventh = {
+		icon = mission_che_botanical_exports
+		position = 13
+		required_missions = {
+			mr_mali_exploration_tenth
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_brazil
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				development = 8
+			}
+			OR = {
+				trade_goods = lumber
+				trade_goods = tropical_wood
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				colonial_region = colonial_brazil
+				OR = {
+					trade_goods = lumber
+					trade_goods = tropical_wood
+				}
+				development = 8
+				value = 8
+			}
+		}
+		effect = {
+			custom_tooltip = every_province_meets_requirement
+			tooltip = {
+				add_province_modifier = {
+					name = bilenmani_lumber
+					duration = -1
+				}
+			}
+			custom_tooltip = create_naval_supplies
+			hidden_effect = {
+				every_province = {
+					limit = {
+						colonial_region = colonial_brazil
+						OR = {
+							trade_goods = lumber
+							trade_goods = tropical_wood
+						}
+						development = 8
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_province_modifier = {
+						name = bilenmani_lumber
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = lumber
+							trade_goods = tropical_wood
+						}
+						NOT = {
+							OR = {
+								continent = north_america
+								continent = south_america
+							}
+							
+						}
+					}
+					add_building = mrb_lumberyard
+					change_trade_goods = naval_supplies
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = lumber
+							trade_goods = tropical_wood
+						}
+						NOT = {
+							OR = {
+								continent = north_america
+								continent = south_america
+							}
+							
+						}
+					}
+					add_building = mrb_lumberyard
+					change_trade_goods = naval_supplies
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							trade_goods = lumber
+							trade_goods = tropical_wood
+						}
+						NOT = {
+							OR = {
+								continent = north_america
+								continent = south_america
+							}
+							
+						}
+					}
+					add_building = mrb_lumberyard
+					change_trade_goods = naval_supplies
+				}
+			}
+		}
+	}
 }
 branch_4 = {
 	slot = 4
@@ -365,6 +652,133 @@ branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_exploration_eighth = {
+		icon = mission_colonize_the_caribbean
+		position = 11
+		required_missions = {
+			mr_mali_exploration_seventh
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_cuba_area
+				area = cuba_area
+				area = dominica_area
+				area = hispaniola_area
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			east_cuba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cuba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dominica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hispaniola_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+		
+			dominica_area = {
+				add_province_modifier = {
+					name = align_the_taino
+					duration = -1
+				}
+			}
+			hispaniola_area = {
+				add_province_modifier = {
+					name = align_the_taino
+					duration = -1
+				}
+			}
+			custom_tooltip = enable_growth_of_sugar_decisions
+			carribeans_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mr_mali_exploration_ninth = {
+		icon = mission_wine_monopolies
+		position = 13
+		required_missions = {
+			mr_mali_exploration_eighth
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = dominica_area
+				area = hispaniola_area
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						trade_goods = sugar
+						trade_goods = rum
+					}
+					has_production_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = dominica_area
+					area = hispaniola_area
+				}
+				OR = {
+					trade_goods = sugar
+					trade_goods = rum
+				}
+				has_production_building_trigger = yes
+				value = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = merchants_of_carib
+				duration = -1
+			}
+			custom_tooltip = highlighted_provinces_get_tax
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = dominica_area
+							area = hispaniola_area
+						}
+						OR = {
+							trade_goods = sugar
+							trade_goods = rum
+						}
+						has_production_building_trigger = yes
+					}
+					add_base_production = 2
+					add_base_tax = 2
+				}
+			}
+		}
+	}
 
 }
 branch_5 = {

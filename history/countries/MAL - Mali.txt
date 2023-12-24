@@ -26,7 +26,7 @@ change_estate_land_share = {
 	estate = estate_church
 	share = 7
 }
-
+set_estate_privilege = estate_nobles_malian_farmas
 #Kings of Mali
 1308.1.1 = {
 	monarch = {

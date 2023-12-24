@@ -383,7 +383,7 @@ greek_export_olive_oil = {
 		}
 	}
 }
-reign_in_marali = {
+reign_in_farma = {
 	category = influence
 
 	alert_index = 5
@@ -394,7 +394,7 @@ reign_in_marali = {
 	is_visible = {
 		FROM = {
 			is_subject_of = ROOT
-			is_subject_of_type = marali_subject
+			is_subject_of_type = farma_subject
 		}
 	}
 	is_allowed = {
@@ -425,22 +425,22 @@ reign_in_marali = {
 	}
 	on_accept = {
 		create_subject = {
-			subject_type = core_marali_subject
+			subject_type = core_farma_subject
 			subject = FROM
 			keep_liberty_desire = yes
 		}
 		FROM = {
 			change_country_color = { country = ROOT }
 		}
-		custom_tooltip = every_marali_subject
+		custom_tooltip = every_farma_subject
 		hidden_effect = {
 			every_subject_country = {
 				limit ={
-					is_subject_of_type = marali_subject
+					is_subject_of_type = farma_subject
 				}
 				add_opinion = {
 					who = ROOT
-					modifier = annexed_marali
+					modifier = annexed_farma
 				}
 				add_liberty_desire = 25
 			}
@@ -450,7 +450,7 @@ reign_in_marali = {
 	}
 
 	ai_will_do = { # this is a trigger
-		always = yes	#There is never a reason for the Malians to not want to integrate their Marali
+		always = yes	#There is never a reason for the Malians to not want to integrate their Farma
 	}
 
 	ai_acceptance = {
@@ -526,7 +526,7 @@ reign_in_marali = {
 }
 
 # Call Eyalet into wars
-call_marali_into_wars = {
+call_farma_into_wars = {
 	category = influence
 
 	require_acceptance = no
@@ -534,7 +534,7 @@ call_marali_into_wars = {
 	is_visible = {
 		FROM = {
 			is_subject_of = ROOT
-			is_subject_of_type = marali_subject
+			is_subject_of_type = farma_subject
 		}
 	}
 	is_allowed = {

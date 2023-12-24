@@ -63,3 +63,127 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = mr_MaliFlavor.2
+	title = mr_MaliFlavor.2.t
+	desc = mr_MaliFlavor.2.d
+	picture = SONGHAI_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.2.a
+		trigger = {
+			any_province = {
+				trade_goods = sugar
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				owner = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					capital_scope = {
+						NOT = {
+							OR = {
+								continent = south_america
+								continent = north_america
+							}
+						}
+					}
+				}
+			}
+		}
+		random_province = {
+			limit = {
+				OR = {
+					area = dominica_area
+					area = hispaniola_area
+				}
+				NOT = {
+					OR = {
+						trade_goods = sugar
+						trade_goods = rum
+					}
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			change_trade_goods = sugar
+		}
+		random_province = {
+			limit = {
+				trade_goods = sugar
+				owner = {
+					capital_scope = {
+						NOT = {
+							or = {
+								continent = south_america
+								continent = north_america
+							}
+						}
+					}
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			add_province_modifier = {
+				name = exporting_sugar
+				duration = 3650
+			}
+		}
+		add_treasury = -100
+	}
+
+	option = {
+		name = mr_MaliFlavor.2.b
+		trigger = {
+			any_owned_province = {
+				NOT = {
+					OR = {
+						continent = south_america
+						continent = north_america
+					}
+				}
+				trade_goods = sugar
+			}
+		}
+		random_province = {
+			limit = {
+				OR = {
+					area = dominica_area
+					area = hispaniola_area
+				}
+				NOT = {
+					OR = {
+						trade_goods = sugar
+						trade_goods = rum
+					}
+				}
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			change_trade_goods = sugar
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					or = {
+						continent = south_america
+						continent = north_america
+					}
+				}
+				trade_goods = sugar
+			}
+			add_province_modifier = {
+				name = exporting_sugar_1
+				duration = 3650
+			}
+		}
+		add_treasury = -50
+	}
+	option = {
+		name = mr_MaliFlavor.2.c
+	}
+}
