@@ -1,12 +1,12 @@
 #REGIONBALKANS
-# 5506 - Balta
+# 5507 - Valcea
 
 owner = WAL
 controller = WAL
 culture = romanian
 religion = orthodox
-capital = "Ramnic"
-trade_goods = iron # Poiana Ruscă Mountains
+capital = "Râmnic"
+trade_goods = salt # Ocna Mare
 hre = no
 base_tax = 1
 base_production = 1
