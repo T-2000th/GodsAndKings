@@ -216,3 +216,12 @@ cb_finish_the_reconquista = {
 
 	war_goal = superiority_finish_the_reconquista
 }
+
+cb_farma_subjugation_war = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 60
+
+	war_goal = take_capital_farma_war
+}

@@ -172,7 +172,7 @@ branch_2 = {
 				fire = 2
 				manuever = 1
 			}
-			custom_tooltip = ""
+			custom_tooltip = " "
 			la_plata_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -185,7 +185,7 @@ branch_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			custom_tooltip = ""
+			custom_tooltip = " "
 			if = {
 				limit = {
 					banda_oriental_area = {
@@ -423,6 +423,139 @@ branch_3 = {
 		}
 		effect = {
 			add_prestige = 10
+		}
+	}
+	mr_mali_jolof_first = {
+		icon = mission_claim_the_canaries
+		position = 7
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 1096
+			NOT = {
+				OR = {
+					is_claim = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		trigger = {
+			1096 = {
+				OR = {
+					is_claim = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					1096 = {
+						is_claim = ROOT
+						country_or_non_sovereign_subject_holds = JOL
+					}
+				}
+				custom_tooltip = yes_get_jolof_event
+				tooltip = {
+					JOL = {
+						country_event = {
+							id = mr_MaliFlavor.3
+						}
+					}
+				}
+				custom_tooltip = jolof_event_info
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						1096 = {
+							is_claim = ROOT
+							country_or_non_sovereign_subject_holds = JOL
+						}
+					}
+				}
+				custom_tooltip = no_get_jolof_event
+				tooltip = {
+					JOL = {
+						country_event = {
+							id = mr_MaliFlavor.3
+						}
+					}
+				}
+				custom_tooltip = jolof_event_info
+			}
+			if = {
+				limit = {
+					1096 = {
+						OR = {
+							AND = {
+								is_claim = ROOT
+								NOT = { country_or_non_sovereign_subject_holds = JOL }
+							}
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				custom_tooltip = yes_get_jolof_claims
+				tooltip = {
+					jolof_area = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						1096 = {
+							OR = {
+								AND = {
+									is_claim = ROOT
+									NOT = { country_or_non_sovereign_subject_holds = JOL }
+								}
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = no_get_jolof_claims
+				tooltip = {
+					jolof_area = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						1096 = {
+							is_claim = ROOT
+							country_or_non_sovereign_subject_holds = JOL
+						}
+					}
+					JOL = {
+						country_event = {
+							id = mr_MaliFlavor.3
+						}
+					}
+				}
+				else = {
+					jolof_area = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
 		}
 	}
 	mr_mali_exploration_seventh = {

@@ -1,8 +1,3 @@
-dominica_area = {
-	add_core = ROOT
-	cede_province = ROOT
-}
-hispaniola_area = {
-	add_core = ROOT
-	cede_province = ROOT
+every_owned_province = {
+	change_religion = ROOT
 }

@@ -14,3 +14,17 @@ mr_MaliFlavor.2.c: "Perhaps another time."
 
 exporting_sugar: "Exporting Foreign Sugar"
 exporting_sugar_1: "Exporting Local Sugar"
+
+
+mr_MaliFlavor.3.t: "The Binkenedugu Dispute"
+mr_MaliFlavor.3.d: "The isle of Binkenedugu was dicovered by the Malian Mansa, Mohammad ibn Qu in the mid 14th Century. But, despite calling the islands lush and green, they never properly settled these lands. Our own sailors, eager to explore this new land, set off on their own. When they settled the islands in 1414, there was some diplomatic grumblings from the Keita line, but we smoothed it over with clever words and charming smiles. Now, they claim ownership over these isles in their ever expansive push to the west. They cite Qu's voyages as a reason, of which they do have some argument, but we remain stedfast in our claim as well. In the end, the Princes of the confederation met and discussed what to do next, and..."
+
+mr_MaliFlavor.3.a: "The isles shall become theirs."
+mr_MaliFlavor.3.b: "Their claim holds no merit! Begone!"
+
+mr_MaliFlavor.4.t: "The Princes Respond"
+mr_MaliFlavor.4.d: "A breatheless courtier runs into the great Mansa's chambers. Barely able to speak, he bows before relaying the message that the princes deliberated over for days."
+mr_MaliFlavor.4.a: "They agreed? A wonderful response!"
+mr_MaliFlavor.4.b: "They refuse!? Such insolence!"
+gain_ability_to_diplo_vassalize_jolof: "We shall gain the ability to diplomatically make @JOL Jolof a §YFarma§!"
+gain_ability_to_declare_war_for_farma: "We will gain the §YEstablish Farma§! Casus Belli on @JOL Jolof."

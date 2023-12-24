@@ -523,3 +523,13 @@ add_value_to_random_dev = {
 		}
 	}
 }
+
+farma_name_effect = {
+	set_country_flag = has_farma_country_name
+	set_country_flag = has_overriden_name_flag
+	override_country_name = $tag$
+}
+
+farma_dynamic_name_change_effect = {
+	if = { limit = { tag = JOL } eyalet_name_effect = { tag = FR1 } }
+}

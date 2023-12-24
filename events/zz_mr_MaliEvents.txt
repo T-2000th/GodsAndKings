@@ -187,3 +187,108 @@ country_event = {
 		name = mr_MaliFlavor.2.c
 	}
 }
+country_event = {
+	id = mr_MaliFlavor.3
+	title = mr_MaliFlavor.3.t
+	desc = mr_MaliFlavor.3.d
+	picture = SONGHAI_RULER_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mr_MaliFlavor.3.a
+		1096 = {
+			cede_province = MAL
+			add_core = MAL
+		}
+		MAL = {
+			add_trust = {
+				who = ROOT
+				value = 30
+				mutual = yes
+			}
+			hidden_effect = {
+				set_country_flag = MAL_happy
+			}
+		}
+		MAL = {
+			country_event = {
+				id = mr_MaliFlavor.4
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				MAL = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 1.5
+					owes_favors = { 
+						who = MAL 
+						value = 15 
+			 	 	}
+			}
+			modifier = {
+				factor = 1.25
+				has_opinion_modifier = {
+					who = MAL
+					modifier = sent_gift
+					value = 20
+				}
+			}
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.3.b
+		MAL = {
+			add_trust = {
+				who = ROOT
+				value = -50
+				mutual = yes
+			}
+			hidden_effect = {
+				set_country_flag = MAL_mad
+			}
+		}
+		MAL = {
+			country_event = {
+				id = mr_MaliFlavor.4
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = {
+	id = mr_MaliFlavor.4
+	title = mr_MaliFlavor.4.t
+	desc = mr_MaliFlavor.4.d
+	picture = SONGHAI_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			has_country_flag = MAL_happy
+		}
+		name = mr_MaliFlavor.4.a
+		custom_tooltip = gain_ability_to_diplo_vassalize_jolof
+	}
+
+	option = {
+		trigger = {
+			has_country_flag = MAL_mad
+		}
+		name = mr_MaliFlavor.4.a
+		custom_tooltip = gain_ability_to_declare_war_for_farma
+		add_casus_belli = {
+			type = cb_farma_subjugation_war
+			target = FROM
+		}
+	}
+}
