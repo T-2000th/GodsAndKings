@@ -508,3 +508,28 @@ crown_agenda_exploit_thrice_effect = {
 		}
 	}
 }
+`
+city_building_effect = {
+	if = {
+		limit = {
+			has_province_modifier = city_building_modifier
+			development = 9
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.7
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = city_building_modifier			
+			development = 16
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.8
+			}
+		}
+	}
+}
