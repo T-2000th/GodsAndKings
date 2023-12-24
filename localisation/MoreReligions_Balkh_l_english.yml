@@ -9,6 +9,8 @@
  balkh_revolt_3_desc: " "
  balkh_revolt_4_title: "Unified Realm"
  balkh_revolt_4_desc: " "
+ balkh_makran_port_title: "Push to the Sea"
+ balkh_makran_port_desc: " "
  
  #Balkh Tooltips
  BLK_barlas_revolt_TT: "§TTransoxiana will revolt in 1448 if the relevant missions are not completed in time§!"
@@ -18,9 +20,17 @@
  BLK_barlas_revolt3_TT: "The Barlas Revolt will be avoided"
  confidence_kill_ruler_TT: "Our men will lose confidence in our Noyan, overthrowing him and replacing him with a new general."
  HAS_OPIUM_ALREADY_TT: "Our opium has already flooded the streets of [From.Capital.GetName]."
+ city_building_modifier_TT: "\nThis modifier will be replaced when the province reaches 16 development."
+ BLK_conversion_reward_TT: "\nIf we pursue a path of §Gconversion without compromise§!, then we will receive the following reward:\n"
+ BLK_compromise_reward_TT: "\nIf we pursue a path of §Tcompromise§!, then we will receive the following reward:\n"
  
  #Balkh Modifiers
  crack_epidemic: "Opium Epidemic"
+ city_building_modifier: "City Construction"
+ balkh_seaport: "Seaport of Heroes"
+ cashmere_wool: "Kashmir Wool"
+ kashmir_saffron: "Mongra Saffron"
+ balkh_zeal: "Religious Zeal"
  
  #Balkh Events
  MR_balkh_flavor.1.t: "The Barlas Revolt of [GetYear]"
@@ -59,5 +69,7 @@
  smuggle_opium_desc: "Smuggle Opium will reduce the size of our §Y[From.GetName]§! Spy Network by §R30.00§! and have the following effects:\nProduction Efficiency: §R-10%§!\nMorale of Armies: §R-10%§!"
  smuggle_opium_tooltip: "Spread the addictive substance amongst the population of the target."
  smuggle_opium_alert_tooltip: "We can smuggle opium"
+ ETKislam: "Al-Hindiyyah"
+ ETKislam_ADJ: "Al-Hind"
  
  

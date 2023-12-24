@@ -2,3 +2,23 @@ crack_epidemic = {
     land_morale = -0.1
 	production_efficiency = -0.1
 }
+city_building_modifier = {
+    local_development_cost = -0.55
+}
+balkh_seaport = {
+    local_sailors_modifier = 1
+	local_ship_cost = -0.1
+	local_ship_repair = 0.5
+    province_trade_power_modifier = 1
+    allowed_num_of_manufactories = 1
+}
+cashmere_wool = {
+    trade_goods_size = 3
+}
+kashmir_saffron = {
+    trade_goods_size = 1
+}
+balkh_zeal = {
+    missionaries = 1
+	global_missionary_strength = 0.04
+}

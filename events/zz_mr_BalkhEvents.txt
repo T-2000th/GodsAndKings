@@ -217,3 +217,149 @@ country_event = {
         }
 	}	
 }
+
+country_event = {
+	id = MR_balkh_flavor.7 #SilverDeposits
+	title = MR_balkh_flavor.7.t
+	desc = MR_balkh_flavor.7.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.7.a #Silver
+		
+		2231 = { change_trade_goods = silver }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.8 #PortofNegudarabad
+	title = MR_balkh_flavor.8.t
+	desc = MR_balkh_flavor.8.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	    2231 = {
+		remove_province_modifier = city_building_modifier
+	   }
+	}
+	option = {
+		name = MR_balkh_flavor.8.a #Build
+		
+		2231 = { 		 
+		add_province_modifier = { 
+		  name = balkh_seaport
+		  duration = -1
+          }		  
+		center_of_trade = 2
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.9 #KashmirGoods
+	title = MR_balkh_flavor.9.t
+	desc = MR_balkh_flavor.9.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.9.a #Wool
+		
+		2074 = { 		 
+		add_province_modifier = { 
+		  name = cashmere_wool
+		  duration = -1
+          }		  
+		}
+		4521 = { 		 
+		add_province_modifier = { 
+		  name = cashmere_wool
+		  duration = -1
+          }		  
+		}
+		2073 = { 		 
+		add_province_modifier = { 
+		  name = cashmere_wool
+		  duration = -1
+          }		  
+		}		
+	}
+
+	option = {
+		name = MR_balkh_flavor.9.b #Saffron
+		
+		508 = { 	
+        change_trade_goods = saffron		
+		add_province_modifier = { 
+		  name = kashmir_saffron
+		  duration = -1
+          }		  
+		}
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.10 #IndianApproach
+	title = MR_balkh_flavor.10.t
+	desc = MR_balkh_flavor.10.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.10.a #Compromise
+		
+		custom_tooltip = balkh_compromise_path_TT
+		hidden_effect = { set_country_flag = balkh_compromise_path }	
+	}
+
+	option = {
+		name = MR_balkh_flavor.10.b #Conversion
+		
+		custom_tooltip = balkh_conversion_path_TT
+		hidden_effect = { set_country_flag = balkh_conversion_path }	
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.11 #IndianFormation
+	title = MR_balkh_flavor.11.t
+	desc = MR_balkh_flavor.11.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.10.a #RegularFormation
+		trigger = { has_country_flag = balkh_compromise_path }
+		
+         change_tag = ETK	
+         restore_country_name = yes		 
+	}
+
+	option = {
+		name = MR_balkh_flavor.10.b #IslamicState
+		trigger = { has_country_flag = balkh_conversion_path }
+		
+		change_tag = ETK
+		ROOT = { override_country_name = ETKislam } 
+     	522 = { add_reform_center = sunni }	
+	}
+
+    after = { 
+	country_event = { 
+	 id = MR_balkh_flavor.12
+	 days = 7
+	 }
+    }	
+}
