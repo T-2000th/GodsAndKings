@@ -2,7 +2,7 @@ country_decisions = {
 	latin_repayment_decision = {
 		major = yes
 		potential = {
-			tag = LAT
+			tag = LAE
 			custom_trigger_tooltip = {
 				tooltip = LAT_VEN_TT		
 				NOT = {
@@ -20,7 +20,7 @@ country_decisions = {
 				AND = {
 					exists = VEN
 					reverse_has_opinion = {
-						who = LAT
+						who = LAE
 						value = 100
 					}
 				}

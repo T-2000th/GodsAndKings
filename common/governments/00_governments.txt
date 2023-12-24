@@ -147,6 +147,8 @@ monarchy = {
 				sulawesian_confederacy
 				bugis_elective
 				medieval_caliphate
+				# Added for Africa (Inferno)
+				rex_africae
 			}
 		}
 		hereditary_vs_nobility = {
