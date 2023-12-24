@@ -217,22 +217,15 @@ dependency = {
 }
 dependency = {
 	subject_type = "tributary_state"
-	first = WAJ
+	first = LUW
+	second = WAJ
+	start_date = 1444.1.1
+	end_date = 1502.1.1
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = LUW
 	second = BNE
-	start_date = 1444.1.1
-	end_date = 1502.1.1
-}
-dependency = {
-	subject_type = "tributary_state"
-	first = LUW
-	second = TID
-	start_date = 1444.1.1
-	end_date = 1502.1.1
-}
-dependency = {
-	subject_type = "tributary_state"
-	first = LUW
-	second = TER
 	start_date = 1444.1.1
 	end_date = 1502.1.1
 }

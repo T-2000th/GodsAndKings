@@ -1,0 +1,35 @@
+#discover SEA sea tiles on startup
+
+namespace = mrSEA
+
+country_event = {
+	id = mrSEA.1
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+		culture_group = malayan
+		culture_group = moluccan_group
+		NOT = { year = 1445 }
+	}
+
+	immediate = {
+		1350 = { discovery_country = ROOT }
+		1351 = { discovery_country = root }
+		1352 = { discovery_country = root }
+		1353 = { discovery_country = root }
+		1354 = { discovery_country = root }
+		1355 = { discovery_country = root }
+		1356 = { discovery_country = root }
+		1401 = { discovery_country = root }
+		2696 = { discovery_country = root }
+		635 = { discovery_country = root }
+	}
+
+	option = {
+		name = "dummy"
+	}
+}

@@ -24,6 +24,30 @@ discovered_by = TER
 discovered_by = TID
 discovered_by = indian
 
+discovered_by = BRS
+discovered_by = DLI
+discovered_by = NIS
+discovered_by = MTW
+discovered_by = IND
+discovered_by = MLY
+discovered_by = PAH
+discovered_by = GGG
+discovered_by = CHN
+discovered_by = KEL
+discovered_by = KED
+discovered_by = BDU
+discovered_by = KDI
+discovered_by = TGJ
+discovered_by = BEU
+discovered_by = BNE
+discovered_by = SOP
+discovered_by = KNW
+discovered_by = BGI
+discovered_by = MMJ
+discovered_by = SIG
+discovered_by = GOR
+discovered_by = MND
+
 
 
 
