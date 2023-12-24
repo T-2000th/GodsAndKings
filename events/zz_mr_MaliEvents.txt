@@ -200,18 +200,10 @@ country_event = {
 		1096 = {
 			cede_province = MAL
 			add_core = MAL
+			remove_core = ROOT
 		}
 		MAL = {
-			add_trust = {
-				who = ROOT
-				value = 30
-				mutual = yes
-			}
-			hidden_effect = {
-				set_country_flag = MAL_happy
-			}
-		}
-		MAL = {
+			set_country_flag = MAL_happy
 			country_event = {
 				id = mr_MaliFlavor.4
 			}
@@ -219,7 +211,7 @@ country_event = {
 		ai_chance = {
 			factor = 40
 			modifier = {
-				factor = 1.5
+				factor = 1.25
 				MAL = {
 					diplomatic_reputation = 2
 				}
@@ -232,7 +224,7 @@ country_event = {
 			 	 	}
 			}
 			modifier = {
-				factor = 1.25
+				factor = 1.5
 				has_opinion_modifier = {
 					who = MAL
 					modifier = sent_gift
@@ -284,11 +276,120 @@ country_event = {
 		trigger = {
 			has_country_flag = MAL_mad
 		}
-		name = mr_MaliFlavor.4.a
+		name = mr_MaliFlavor.4.b
 		custom_tooltip = gain_ability_to_declare_war_for_farma
+		break_alliance = JOL
 		add_casus_belli = {
 			type = cb_farma_subjugation_war
-			target = FROM
+			target = JOL
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.5
+	title = mr_MaliFlavor.5.t
+	desc = mr_MaliFlavor.5.d
+	picture = MALI_RULER_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = MAL_happy
+		}
+		
+	}
+	
+	option = {
+		name = mr_MaliFlavor.5.a
+		MAL = {
+			create_subject = {
+				who = ROOT
+				subject_type = farma_subject
+			}
+		}
+		farma_dynamic_name_change_effect = yes
+		MAL = {
+			set_country_flag = mali_subject_jol
+			country_event = {
+				id = mr_MaliFlavor.6
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.6
+				trust = { 
+					who = MAL 
+					value = 80 
+				}
+			}
+			modifier = {
+				factor = 1.6
+					owes_favors = { 
+						who = MAL 
+						value = 50 
+			 	 	}
+			}
+			modifier = {
+				factor = 1.6
+				trust = {
+					who = MAL 
+				 	value = 90 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.5.b
+		MAL = {
+			country_event = {
+				id = mr_MaliFlavor.6
+			}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				trust = { who = MAL value = 90 }
+				owes_favors = { 
+					who = MAL 
+					value = 50 
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mr_MaliFlavor.6
+	title = mr_MaliFlavor.6.t
+	desc = mr_MaliFlavor.6.d
+	picture = ASKIA_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.6.a
+		trigger = {
+			has_country_flag = mali_subject_jol
+		}
+		add_prestige = 20
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = mali_subject_jol
+			}	
+		}
+		name = mr_MaliFlavor.6.b
+		custom_tooltip = gain_ability_to_declare_war_for_farma
+		break_alliance = JOL
+		add_casus_belli = {
+			type = cb_farma_subjugation_war
+			target = JOL
 		}
 	}
 }

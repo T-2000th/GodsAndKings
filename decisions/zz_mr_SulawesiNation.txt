@@ -1,0 +1,102 @@
+country_decisions = {
+
+	sulawesi_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sulawesi_flag }
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SLW }
+			OR = {
+				culture = sulawesi
+				culture = southern_sulawesi
+			}
+			NOT = { has_reform = steppe_horde }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = makassar_area
+				area = sulawesi_area
+				area = south_sulawesi_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			makassar_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sulawesi_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_sulawesi_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			}
+		effect = {
+			change_tag = SLW
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			lesser_sunda_islands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = SLW
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_sulawesi_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					government = tribal
+					has_reform = sulawesian_confederacy
+				}
+				change_government = monarchy
+				add_government_reform = sulawesian_confederacy
+			}
+			
+			if = {
+				limit = {
+					government = tribal
+					has_reform = bugis_elective
+				}
+				change_government = monarchy
+				add_government_reform = bugis_elective
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

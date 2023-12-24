@@ -35,7 +35,7 @@ po_establish_farma = {
 	effect = { # Defaults to empty effect (which makes error log entry but is safe)
 		create_subject = {
 			who = FROM
-			subject_type = core_farma_subject
+			subject_type = farma_subject
 		}		
 		FROM = {
 			# clr_country_flag = got_invasion_cb_fabricated_by_@ROOT
@@ -45,9 +45,9 @@ po_establish_farma = {
 					NOT = { has_reform = celestial_empire }
 					NOT = { has_reform = shogunate }
 				}
-				set_country_flag = has_farma_color
-				set_country_flag = has_overriden_color_flag
-				change_country_color = { country = ROOT } 
+				#set_country_flag = has_farma_color
+				#set_country_flag = has_overriden_color_flag
+				#change_country_color = { country = ROOT } 
 				farma_dynamic_name_change_effect = yes
 			}
 		}

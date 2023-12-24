@@ -1,6 +1,6 @@
 country_decisions = {
 	import_sugar_mal = {
-		color = { 195 160 20 }
+		color = { 253 229 101 }
 		potential = {
 			is_random_new_world = no
 			mission_completed = mr_mali_exploration_eighth
@@ -61,6 +61,49 @@ country_decisions = {
 		}		
 		ai_will_do = {
 			factor = 1
+		}
+		ai_importance = 400
+	}
+	integrate_jol = {
+		color = { 253 229 101 }
+		potential = {
+			exists = JOL
+			has_country_flag = MAL_happy
+			JOL = {
+				is_free_or_tributary_trigger = yes
+			}
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = JOL
+		}
+		allow = {
+			JOL = {
+				NOT = {
+					OR = {
+						num_of_cities = 10
+						num_of_cities = MAL
+					}
+				}
+				trust = {
+					who = ROOT
+					value = 70
+				}
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+		}
+		effect = {
+			JOL = {
+				country_event = {
+					id = mr_MaliFlavor.5
+				}
+			}
+			custom_tooltip = jolof_farma_decision_requirements
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		ai_importance = 400
 	}

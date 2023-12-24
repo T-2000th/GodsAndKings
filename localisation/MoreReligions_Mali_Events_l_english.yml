@@ -28,3 +28,14 @@ mr_MaliFlavor.4.a: "They agreed? A wonderful response!"
 mr_MaliFlavor.4.b: "They refuse!? Such insolence!"
 gain_ability_to_diplo_vassalize_jolof: "We shall gain the ability to diplomatically make @JOL Jolof a §YFarma§!"
 gain_ability_to_declare_war_for_farma: "We will gain the §YEstablish Farma§! Casus Belli on @JOL Jolof."
+
+
+mr_MaliFlavor.5.t: "The Farma of Jolof"
+mr_MaliFlavor.5.d: "We have recieved a notification from the Mansa of Mali, and quite the shocking one at that. They believe that our relationship of alliance is not suitable enough - they protect us from outside harm and supply us with merchants and traders, so it is far more applicable to call us a territory in their empire. This is not exactly an uncommon thought, and many of our nobles agree that we would fair better against the changing world underneath Malian protection. However, some princes reject this notion, claiming our sovereignty to their dying breath. We must make a decision, lest the Mansa grows impatient."
+mr_MaliFlavor.5.a: "Together, we shall see a beautiful new dawn."
+mr_MaliFlavor.5.b: "They must be mad. If they want our land, they can come and take it!"
+
+mr_MaliFlavor.6.t: "The Fate of the Confederation"
+mr_MaliFlavor.6.d: "We knew our proposal would be audatious. We were asking a confederation of several princes in Jolof to all bend the knee to us in subjugation, to give up their rights and privileges as rulers to be underneath us. However, we also knew that we had every right to press this claim. We are far larger, far more powerful, and far more influential in their secret court meetings than they think. So when our demand was sent, we patiently waited a response. When the messenger arrived, his face was calm - he clearly rehearsed what he was about to say."
+mr_MaliFlavor.6.a: "The Confederation shall join the Empire!"
+mr_MaliFlavor.6.b: "The fools dare refuse? Time to end this Confederation!"

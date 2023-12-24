@@ -558,6 +558,94 @@ branch_3 = {
 			}
 		}
 	}
+	mr_mali_jolof_second = {
+		icon = mission_mal_fighting_musa
+		position = 9
+		required_missions = {
+			mr_mali_jolof_first
+		}
+		provinces_to_highlight = {
+			area = jolof_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			jolof_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			jolof_area = {
+				add_province_modifier = {
+					name = development_of_the_senegal
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					JOL = {
+						is_subject_of_type_with_overlord = {
+							who = ROOT
+							type = farma_subject
+						}
+					}
+				}
+				custom_tooltip = if_jolof_raise_yes
+				tooltip = {
+					add_country_modifier = {
+						name = jolof_farma
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						JOL = {
+							is_subject_of_type_with_overlord = {
+								who = ROOT
+								type = farma_subject
+							}
+						}
+					}
+				}
+				custom_tooltip = if_jolof_raise_no
+				tooltip = {
+					add_country_modifier = {
+						name = jolof_farma
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						JOL = {
+							is_subject_of_type_with_overlord = {
+								who = ROOT
+								type = farma_subject
+							}
+						}
+					}
+					MAL = {
+						create_subject = {
+							subject_type = core_farma_subject
+							subject = JOL
+						}
+					}
+					JOL = {
+						change_country_color = { country = ROOT }
+						add_country_modifier = {
+							name = jolof_farma
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
 	mr_mali_exploration_seventh = {
 		icon = mission_invade_island
 		position = 10

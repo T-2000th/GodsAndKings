@@ -12,6 +12,7 @@ mr_mali_exploration_ninth_title: "Fields of Sugar"
 mr_mali_exploration_tenth_title: "Found New Tarabot"
 mr_mali_exploration_eleventh_title: "Lumber Yards of Bilenmani"
 mr_mali_jolof_first_title: "The Isles of Muhammad Qu"
+mr_mali_jolof_second_title: "Fate of the Confederation"
 
 
 #Mission Descriptions
@@ -39,8 +40,10 @@ yes_get_jolof_event: "£yes£If we complete this mission while @JOL §YJolof§! 
 no_get_jolof_event: "£no£If we complete this mission while @JOL §YJolof§! owns [1096.GetName], we will gain the following:"
 yes_get_jolof_claims: "£yes£Otherwise, we will gain the following:"
 no_get_jolof_claims: "£no£Otherwise, we will gain the following:"
-jolof_event_info: "We will ask the Princes of @JOL §YJolof§! to grant us ownership of [1096.GetName].\nBase Chance of Success: §Y40%§!\n@JOL owes @MAL §Y15§! Favors: §G+20%§!\n@MAL has §Y2§! Diplomatic Reputation: §G+20%§!\n@JOL has at least §Y+20§! Opinion of @MAL through Gifts Sent: §G+10%§!\n"
-
+jolof_event_info: "We will ask the Princes of @JOL §YJolof§! to grant us ownership of [1096.GetName].\nBase Chance of Success: §Y40%§!\n@JOL owes @MAL §Y15§! Favors: §G+20%§!\n@JOL has at least §Y+20§! Opinion of @MAL through Gifts Sent: §G+20%§!\n@MAL has §Y2§! Diplomatic Reputation: §G+10%§!\n"
+jolof_farma_decision_requirements: "We will ask the Princes of @JOL §YJolof§! to become a §YFarma§! of the @MAL §YMali Empire§!.\nBase Chance of Success: §Y30%§!\n@JOL owes @MAL §Y50§! Favors: §G+20%§!\n@JOL has at least §+80§! Trust of @MAL: §G+20%§!\n@JOL has at least §Y90§! Trust of @MAL: §G+20%§!\n"
+if_jolof_raise_yes: "£yes£If @JOL Jolof is a §YFarma§! when we complete this mission, they will be upgraded to a §YCore Farma§!. They will also gain the following modifier:"
+if_jolof_raise_no: "£no£If @JOL Jolof is a §YFarma§! when we complete this mission, they will be upgraded to a §YCore Farma§!. They will also gain the following modifier:"
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -55,6 +58,8 @@ jolof_event_info: "We will ask the Princes of @JOL §YJolof§! to grant us owner
 merchants_of_carib: "Fields of Sugar and Rum"
 tarabot_city: "Tarabot City"
 bilenmani_lumber: "Bilenmani Lumber"
+jolof_farma: "The Farma of Jolof"
+development_of_the_senegal: "Development of the Senegal Estuary"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -70,6 +75,8 @@ import_sugar_mal_desc: "We shall bring the valuable sugar cane of the east into 
 enable_jahanke: "This will enable the §YJakhanke Murabit§! Holy Order."
 jakhanke_murabit: "Jakhanke Murabit"
 jakhanke_murabit_desc: "Clerics from the Soninke peoples of West Africa, they went to the Reislands because they saw it as a place to not only escape the corrupting power of the nobility, but they also followed the trade lines stretching across the Atlantic sea. From here, they taught their tradition to local peoples across the new continent, establishing brotherhoods and mosques to convert the people of this new land."
+integrate_jol_title: "Integrate the Jolof"
+integrate_jol_desc: "The Jolof Princes have held on to power underneath our shadow for long enough. It is time to bring them into the fold."
 
 
 #Cbs
@@ -82,6 +89,7 @@ take_capital_farma_war:0 "Take the capital"
 take_capital_farma_war_desc:0 "War goal is to take the capital."
 cb_farma_subjugation_war:0 "Malian Campaign of Conquest"
 cb_farma_subjugation_war_desc:0 "Their territory is our rightful claim. They shall serve us as our loyal Farma!"
+MALIAN_INVASION_WAR_NAME:0 "$ORDER$$FIRST$ Invasion of $SECOND_NAME$"
 
 #Farma Names
 FR1: "Jolof-Farma"

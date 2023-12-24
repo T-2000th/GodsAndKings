@@ -56,3 +56,10 @@ bilenmani_lumber = {
 	trade_goods_size = 0.5	
 	trade_value = 2.5
 }
+jolof_farma = {
+	liberty_desire = -20
+	global_tax_modifier = 0.1
+}
+development_of_the_senegal = {
+	local_development_cost = -0.10
+}
