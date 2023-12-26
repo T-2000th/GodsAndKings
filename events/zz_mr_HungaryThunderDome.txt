@@ -37,7 +37,7 @@ country_event = {
 			release = AAB
 			release = KSZ
 			release = KNN
-			release = JAA
+			# release = JAA # they can't really be annexed in time
 			1951 = {
 				cede_province = JAA
 			}
@@ -63,6 +63,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = CSA
@@ -130,6 +132,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = AAB
@@ -197,6 +201,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = KSZ
@@ -264,11 +270,12 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = KNN
 				}
-				add_accepted_culture = transylvanian 
 				define_ruler = {
 					name = "Arpad"
 					dynasty = "Kan"
@@ -332,6 +339,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = JAA
@@ -1873,3 +1882,47 @@ country_event = {
 		add_mil_power = 100
 	}
 }
+
+# country_event = { # Wallachia is informed of the civil war
+# 	id = HUN_flavor.22
+# 	title = HUN_flavor.22.t
+# 	desc = HUN_flavor_22.d
+# 	picture = MILITARY_CAMP_eventPicture
+
+# 	major = no
+
+# 	fire_only_once = yes
+
+# 	is_triggered_only = yes
+
+# 	option = { # Stay loyal to the Hungarian Crown
+# 		name = HUN_flavor.22.a
+# 		custom_tooltip = HUN_flavor.22.loyalty_custom_tooltip
+# 		trigger = {
+# 			ai = no
+# 		}
+# 	}
+# 	option = { # Pledge loyalty to the Joannite Knights
+# 		name = HUN_flavor.22.b
+# 		custom_tooltip = HUN_flavor.22.loyalty_custom_tooltip
+# 		grant_independence = yes
+# 		JAA = {
+# 			create_march = WAL
+# 		}
+# 		join_all_defensive_wars_of = JAA
+# 		join_all_offensive_wars_of = JAA
+# 		trigger = {
+# 			ai = no
+# 		}
+# 	}
+# 	option = { #stay out of it
+# 		name = HUN_flavor.22.c
+# 		grant_independence = yes
+# 		every_country = {
+# 			limit = {
+# 				war_with = WAL
+# 			}
+# 			white_peace = WAL
+# 		}
+# 	}
+# }
