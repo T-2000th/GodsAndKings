@@ -11,9 +11,10 @@ native_size = 40
 native_ferocity = 4
 native_hostileness = 3
 discovered_by = sub_saharan
-add_permanent_province_modifier = {
-	name = mr_sahara
-	duration = -1
-}
+owner = TKR
+controller = TKR
+add_core = TKR
+trade_goods = wool
+is_city = yes
 
 1444.11.12 = { trade_goods = unknown }
