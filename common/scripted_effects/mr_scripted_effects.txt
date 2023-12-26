@@ -523,6 +523,22 @@ add_value_to_random_dev = {
 		}
 	}
 }
+build_flagship_mission_reward = {
+	set_country_flag = flagship_mission_flag
+	if = {
+		limit = {
+			tag = MAL
+		}
+		random_owned_province = {
+			limit = { has_port = yes }
+			create_flagship = { 
+				name = "Mohammad ibn Qu"
+				type = heavy_ship 
+			}
+		}
+	}
+	clr_country_flag = flagship_mission_flag
+}
 
 farma_name_effect = {
 	set_country_flag = has_farma_country_name
