@@ -94,23 +94,27 @@ set_estate_privilege = estate_nobles_malian_farmas
 		dip = 6
 		mil = 4
 		adm = 3
-		birth_date = 1398.1.1
+		birth_date = 1421.1.1
 		#death_date = 1460.1.1
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = just_personality
 	add_ruler_personality = secretive_personality
+	set_ai_personality = {
+		personality = ai_colonialist
+		locked = yes
+	}
 }
 1444.1.1 = {
 	heir = {
 		name = "Gao"
 		dynasty = "Keita"
 		monarch_name = "Gao"
-		adm = 2
-		mil = 4
-		dip = 1
+		adm = 3
+		dip = 4
+		mil = 3
 		claim = 90
-		birth_date = 1425.1.1
+		birth_date = 1440.1.1
 		death_date = 1445.1.1
 	}
 }

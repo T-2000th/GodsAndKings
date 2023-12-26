@@ -11,8 +11,21 @@ mr_mali_exploration_eighth_title: "Subjugate the Taino"
 mr_mali_exploration_ninth_title: "Fields of Sugar"
 mr_mali_exploration_tenth_title: "Found New Tarabot"
 mr_mali_exploration_eleventh_title: "Lumber Yards of Bilenmani"
+mr_mali_exploration_twelth_title: "The Canals of Koulikorio"
+mr_mali_exploration_thirteen_title: "Consolidate Bakirio"
+mr_mali_exploration_fourteen_title: "The Kingdom in the Sky"
+mr_mali_exploration_fifteen_title: "Hills of Gold and Silver"
+mr_mali_exploration_sixteen_title: "Split the World in Two"
+mr_mali_exploration_seventeen_title: "Mansa of All Reisland"
+mr_mali_naval_first_title: "Shipyards of Gambia"
+mr_mali_naval_second_title: "The Mansa's Fleet"
+mr_mali_naval_third_title: "Gain our Sea Legs"
+mr_mali_naval_fourth_title: "The Kansala Naval Acadamy"
+
 mr_mali_jolof_first_title: "The Isles of Muhammad Qu"
 mr_mali_jolof_second_title: "Fate of the Confederation"
+
+
 
 
 #Mission Descriptions
@@ -44,6 +57,16 @@ jolof_event_info: "We will ask the Princes of @JOL §YJolof§! to grant us owner
 jolof_farma_decision_requirements: "We will ask the Princes of @JOL §YJolof§! to become a §YFarma§! of the @MAL §YMali Empire§!.\nBase Chance of Success: §Y30%§!\n@JOL owes @MAL §Y50§! Favors: §G+20%§!\n@JOL has at least §+80§! Trust of @MAL: §G+20%§!\n@JOL has at least §Y90§! Trust of @MAL: §G+20%§!\n"
 if_jolof_raise_yes: "£yes£If @JOL Jolof is a §YFarma§! when we complete this mission, they will be upgraded to a §YCore Farma§!. They will also gain the following modifier:"
 if_jolof_raise_no: "£no£If @JOL Jolof is a §YFarma§! when we complete this mission, they will be upgraded to a §YCore Farma§!. They will also gain the following modifier:"
+access_to_mercenaries: "\nThis will give us access to the §YReisland Ansari§! Mercenary Company, soliders willing to fight to spread the true faith in the new world.\n\nThis will grant our subject in §YColonial Bakirio§! access to the §YMusica Company§!, fierce soldiers native to the hills of their tribe."
+gold_silver_mal: "Every §YGold§! or §YSilver§! province in §YColonial Kulubio§! that we our a subject owns will gain the following:"
+enable_panama_canal_early: "This will remove the technological requirement for the §YPanama Canal§!"
+mansa_of_all_reisland: "The Mansa of All Reislands"
+MANSA_OF_ALL_REISLAND: "The Mansa of ALl Reislands"
+trade_in_all_regions: "We will gain §G+10§! Trade Power in all Trade Nodes in §YSouth Reisland§!"
+treasure_fleets_of_mali: "Expanded Treasure Fleets"
+shipyard_dev: "Shipyard Development"
+build_flagship_mal: "This will spawn a §YFlagship§! for @MAL §YMali§! with the following modifiers:\n§G+100%§! Fleet exploration Range\n§G+15%§! Flagship Cannons\n§G+50%§! Flaghship Durability\n§G+1§! Fleet Movement Speed Modifier"
+
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -60,6 +83,8 @@ tarabot_city: "Tarabot City"
 bilenmani_lumber: "Bilenmani Lumber"
 jolof_farma: "The Farma of Jolof"
 development_of_the_senegal: "Development of the Senegal Estuary"
+koulikoria_harbor: "Koulikorio Harbor"
+digging_for_gold_mali: "Digging for Gold"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -77,7 +102,14 @@ jakhanke_murabit: "Jakhanke Murabit"
 jakhanke_murabit_desc: "Clerics from the Soninke peoples of West Africa, they went to the Reislands because they saw it as a place to not only escape the corrupting power of the nobility, but they also followed the trade lines stretching across the Atlantic sea. From here, they taught their tradition to local peoples across the new continent, establishing brotherhoods and mosques to convert the people of this new land."
 integrate_jol_title: "Integrate the Jolof"
 integrate_jol_desc: "The Jolof Princes have held on to power underneath our shadow for long enough. It is time to bring them into the fold."
-
+merc_reisland_ansari: "Reisland Ansari"
+merc_musica_company: "Musica Company"
+malian_reisland_fleet: "Malian Reisland Fleet"
+malian_reisland_fleet_desc: "Our navy is relatively new, with our prior attempts at building one being primarily focused on river fleets. We have forged our new naval tradition in the sea, sailing against great waves and battling against pirates and foreign ships. Our ships are fast and agile, using flags and signals to maintain cohesion even in intense battles."
+malian_resilience: "Malian Coastal Hunters"
+malian_resilience_desc: "The coasts of Africa and Reisland are filled with hostile and dangerous pirates. To defend ourselves, we must prepare for attacks on all sides with reinforced hulls to withstand both cannon and musket shot."
+malian_explorers: "Malian Explorers"
+malian_explorers_desc: "The great explorers of the Mali Empire have charted out the far corners of Reisland. Their expertise in navigating challenging waters and foreign lands make them excellent at their job."
 
 #Cbs
 po_establish_farma: "Establish Farma"

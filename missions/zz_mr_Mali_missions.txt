@@ -4,7 +4,248 @@ branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
-
+	mr_mali_naval_first = {
+		icon = mission_galleys_in_port
+		position = 7
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1114
+				province_id = 2241
+				province_id = 5210
+			}
+			NOT = {
+				AND = {
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+				
+			}
+		}
+		trigger = {
+			1114 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			2241 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			5210 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			1114 = {
+				add_province_modifier = {
+					name = shipyard_dev
+					duration = -1
+				}
+			}
+			2241 = {
+				add_province_modifier = {
+					name = shipyard_dev
+					duration = -1
+				}
+			}
+			5210 = {
+				add_province_modifier = {
+					name = shipyard_dev
+					duration = -1
+				}
+			}
+		}
+	}
+	mr_mali_naval_second = {
+		icon = mission_galleys_in_port
+		position = 8
+		required_missions = {
+			mr_mali_naval_first
+		}
+		trigger = {
+			num_of_heavy_ship = 10
+			navy_size_percentage = 1
+		}
+		effect = {
+			custom_tooltip = build_flagship_mal
+			hidden_effect = {
+				build_flagship_mission_reward = yes
+			}
+		}
+	}
+	mr_mali_exploration_twelth = {
+		icon = mission_ne_birch_bark_canoes
+		position = 12
+		required_missions = {
+			mr_mali_exploration_fourth
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_colombia
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				is_city = yes
+				colonial_region = colonial_colombia
+			}
+			831 = {
+				has_trade_building_trigger = yes
+				development = 8
+			}
+		}
+		effect = {
+			831 = {
+				add_province_modifier = {
+					name = koulikoria_harbor
+					duration = -1
+				}
+			}
+			add_years_of_trade_income = {
+					years = 5
+			}
+		}
+	}
+	mr_mali_exploration_thirteen = {
+		icon = mission_new_kingdom_of_granada
+		position = 14
+		required_missions = {
+			mr_mali_exploration_twelth
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_colombia
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				is_city = yes
+				colonial_region = colonial_colombia
+			}
+		}
+		effect = {
+			peru_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = access_to_mercenaries
+		}
+	}
+	mr_mali_exploration_fourteen = {
+		icon = mission_potosi_silver
+		position = 15
+		required_missions = {
+			mr_mali_exploration_thirteen
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_peru
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				is_city = yes
+				colonial_region = colonial_peru
+			}
+		}
+		effect = {
+			custom_tooltip = gold_silver_mal
+			tooltip = {
+				add_province_modifier = {
+					name = digging_for_gold_mali
+					duration = 5475
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							trade_goods = silver
+							trade_goods = gold
+						}
+						colonial_region = colonial_peru
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_province_modifier = {
+						name = digging_for_gold_mali
+						duration = 5475
+					}
+				}
+			}
+			upper_peru_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mr_mali_exploration_fifteen = {
+		icon = mission_war_chest
+		position = 16
+		required_missions = {
+			mr_mali_exploration_fourteen
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_peru
+			OR = {
+				trade_goods = gold
+				trade_goods = silver
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					base_production = 8
+				}
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_peru
+				OR = {
+					trade_goods = gold
+					trade_goods = silver
+				}
+				base_production = 8
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = treasure_fleets_of_mali
+				duration = -1
+			}
+			define_advisor = {
+				type = master_of_mint 
+				discount = yes
+				skill = 3
+				culture = ROOT
+				religion = ROOT
+			}
+		}
+	}
 }
 branch_2 = {
 	slot = 2
@@ -347,6 +588,126 @@ branch_2 = {
 						key = wajirio_goods
 						value = 0.15
 						duration = 5475
+					}
+				}
+			}
+		}
+	}
+	mr_mali_exploration_sixteen = {
+		icon = mission_raid_christian_trade
+		position = 15
+		required_missions = {
+			mr_mali_exploration_thirteen
+		}
+		provinces_to_highlight = {
+			province_id = 835
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					num_of_times_improved_by_owner = 10
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			835 = {
+				country_or_non_sovereign_subject_holds = ROOT
+					num_of_times_improved_by_owner = 10
+					has_trade_building_trigger = yes
+			}
+			treasury = 2500
+		}
+		effect = {
+			add_treasury = -2500
+			835 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			custom_tooltip = enable_panama_canal_early
+		}
+	}
+	mr_mali_exploration_seventeen = {
+		icon = mission_mali_flag
+		position = 17
+		required_missions = {
+			mr_mali_exploration_fifteen
+			mr_mali_exploration_sixteen
+		}
+		provinces_to_highlight = {
+			OR = {
+				continent = south_america
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			south_america = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mansa_of_all_reisland
+				duration = -1
+			}
+			custom_tooltip = trade_in_all_regions
+			hidden_effect = {
+				835 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				800 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				809 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				1536 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				2868 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				1531 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
+					}
+				}
+				2935 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 10
+						key = MANSA_OF_ALL_REISLAND
 					}
 				}
 			}
