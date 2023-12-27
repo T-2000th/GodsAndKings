@@ -1092,26 +1092,32 @@ silistria_area = { #+burgas/Varna full
 }
 
 wallachia_area = { #5 full
+	color = { 161  126  128 }
 	161 2998 5505 5508 5509
 }
 
 oltenia_area = { # 5 full
+	color = { 45  118  84 }
 	160 4531 4532 5506 5507
 }
 
 moldavia_area = { #5 full
+	color = { 136  157  23 }
 	268 4529 5500 5501 5503
 }
 
 lower_moldavia_area = { #5 full
+color = { 129  200  158 }
 	1756 2405 4530 5502 5504
 }
 
 transylvania_area = { #4 #Northern Transylvania + Beszterce full
+	color = { 29  62  137 }
 	157 158 1952 4127 5438
 }
 
-southern_transylvania_area = { #3+ brazov/deva full
+southern_transylvania_area = { #3+ brasov/deva full
+	color = { 211  207  173 }
 	156 1951 4128 5439 5440
 }
 
