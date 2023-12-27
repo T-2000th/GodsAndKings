@@ -1071,8 +1071,8 @@ macedonia_area = { #5 (Macedonia) full
 	148 1853 3001 4702 4780
 }
 
-morea_area = { #4 Central Greece & Crete full
-	145 146 163 1773 4701
+morea_area = { #4 Central Greece + Thebes full
+	145 146 1773 4701 5523
 }
 
 northern_greece_area = { #3 #Northern Greece full
@@ -1092,18 +1092,32 @@ silistria_area = { #+burgas/Varna full
 }
 
 wallachia_area = { #5 full
-	160 161 2998 4531 4532
+	color = { 161  126  128 }
+	161 2998 5505 5508 5509
+}
+
+oltenia_area = { # 5 full
+	color = { 45  118  84 }
+	160 4531 4532 5506 5507
 }
 
 moldavia_area = { #5 full
-	268 1756 2405 4529 4530
+	color = { 136  157  23 }
+	268 4529 5500 5501 5503
+}
+
+lower_moldavia_area = { #5 full
+color = { 129  200  158 }
+	1756 2405 4530 5502 5504
 }
 
 transylvania_area = { #4 #Northern Transylvania + Beszterce full
+	color = { 29  62  137 }
 	157 158 1952 4127 5438
 }
 
-southern_transylvania_area = { #3+ brazov/deva full
+southern_transylvania_area = { #3+ brasov/deva full
+	color = { 211  207  173 }
 	156 1951 4128 5439 5440
 }
 
@@ -1120,6 +1134,7 @@ rascia_area = { #4 +nis full
 }
 
 albania_area = { #4 +tirana full
+	color = { 181  0  20 }
 	143 4174 4175 4750 5441
 }
 
@@ -1205,17 +1220,22 @@ erzurum_area = { #3	Erzurum and Trebizond +riza/bayburt full
 }
 
 hudavendigar_area = { #3 +balikesir/inegol full
-	316 317 2296 5381 5382
+	316 317 2296 5382 5519
 }
 
-germiyan_area = { #4 +usak full
+germiyan_area = { #4 +Akshehir full
 	color = { 234 145 65 }
-	322 1848 4308 4311 5383
+	322 4308 4311 5383 5520
 }
 
 aydin_area = { #5 full
 	color = { 239 70 86 }
-	318 319 2297 2298 4309
+	318 2297 4309 5518 5381
+}
+
+teke_area = {
+	color = { 108 48 130 }
+	5388 2298 5517 319 1848
 }
 
 ankara_area = { #3 +corum/beypazari full
@@ -1235,9 +1255,13 @@ karaman_area = { #4 +nigde full
 	323 324 2301 4307 5386
 }
 
-cukurova_area = { #3 +mersin/alanya full
+cukurova_area = { #3 -cyprus +mersin +sis +selefkia full
 	color = { 50 177 200 }
-	321 327 2302 5387 5388
+	327 2302 5387 5515 5516
+}
+
+crete_and_cyprus_area = {
+	5524 163 5521 321 5522
 }
 
 aleppo_area = { #4 +Iskenderun full

@@ -1,7 +1,8 @@
 government = monarchy
 add_government_reform = feudalism_reform
-primary_culture = hungarian
-add_accepted_culture = transylvanian 
+primary_culture = cuman
+add_accepted_culture = hungarian
+add_accepted_culture = shwoveh
 religion = orthodox
 technology_group = eastern
 historical_friend = BLH

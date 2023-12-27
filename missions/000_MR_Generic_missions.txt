@@ -84,7 +84,8 @@ generic_missions_2 = { #naval line
 	slot = 2
 	generic = yes
 	ai = no
-	potential = { always = yes }
+	# Below is just a temp measure to force the game to not load these for Africa
+	potential = { NOT = { tag = AFR } }
 	
 	g_mission_sea_access = {
 		icon = mission_build_up_to_force_limit

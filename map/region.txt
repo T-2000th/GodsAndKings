@@ -294,6 +294,8 @@ carpathia_region = {
 		southern_transylvania_area
 		wallachia_area
 		moldavia_area
+		lower_moldavia_area
+		oltenia_area
 	}
 }
 
@@ -360,6 +362,8 @@ anatolia_region = {
 		ankara_area
 		aegean_archipelago_area
 		germiyan_area
+		teke_area
+		crete_and_cyprus_area
 	}
 }
 

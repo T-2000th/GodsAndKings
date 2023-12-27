@@ -1,20 +1,22 @@
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
-primary_culture = romanian
-religion = orthodox
+primary_culture = wallachian
+add_accepted_culture = swabian
+religion = catholic
 technology_group = eastern
-capital = 161 # Tîrgoviste
+capital = 5505 # Tîrgoviste
 
 
 1386.1.1 = {
 	monarch = {
 		name = "Mircea I"
 		dynasty = "Basarab"
-		adm = 2
-		dip = 2
-		mil = 1
+		adm = 5
+		dip = 6
+		mil = 4
 	}
+	set_estate_privilege = estate_church_ambiguous_allegience
 }
 
 1397.1.1 = {
@@ -139,13 +141,14 @@ capital = 161 # Tîrgoviste
 	heir = {
 		name = "Mircea"
 		monarch_name = "Mircea II"
-		dynasty = "Basarab"
+		dynasty = "Draculesti"
 		birth_date = 1428.1.1
 		death_date = 1447.1.1 #Buried Alive
 		claim = 95
-		adm = 2
-		dip = 1
-		mil = 2
+		adm = 5
+		dip = 3
+		mil = 4
+		leader = { name = "Mircea II"	type = general	fire = 3	shock = 4	manuever = 4	siege = 1 }
 	}
 }
 
