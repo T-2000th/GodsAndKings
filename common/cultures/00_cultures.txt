@@ -1369,6 +1369,9 @@ latin = {
 			"de Rohan-Polduc" "da Fonseca"
 		}
 	}
+	siqilliyan = { # Sicilo-Arab culture
+		primary = AFR
+	}
 	male_names = {
 		Abbondanzio Abbondio Abelardo Abelino Achille Adalberto Adelfo Adelmio Adelmo Adone
 		Agapito Agostino Aimone Alamanno Alarico Adriano
