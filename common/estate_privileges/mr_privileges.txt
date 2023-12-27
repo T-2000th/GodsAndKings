@@ -932,9 +932,9 @@ estate_church_ambiguous_allegience = {
 		religion = catholic
 	}
 	penalties = {
-		global_heretic_missionary_strength = -1
-		tax_income = -0.5
-		prestige_decay = 0.5
+		global_missionary_strength = -1
+		global_tax_modifier = -0.1
+		prestige_decay = 0.25
 	}
 	ai_will_do = {
 		factor = 0
