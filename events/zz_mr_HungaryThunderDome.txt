@@ -1886,13 +1886,27 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
+		custom_tooltip = HUN_flavor.21.a.custom_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					WAL = {
+						exists = yes
+						is_at_war = no
+						ai = yes
+					}
+				}
+				vassalize = WAL
+			}
+		}
+
 	}
 }
 
 country_event = { # Wallachia is informed of the civil war
 	id = HUN_flavor.22
 	title = HUN_flavor.22.t
-	desc = HUN_flavor_22.d
+	desc = HUN_flavor.22.d
 	picture = MILITARY_CAMP_eventPicture
 
 	major = no
