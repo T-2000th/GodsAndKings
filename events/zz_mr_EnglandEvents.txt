@@ -1,11 +1,15 @@
 namespace = mr_england
 
-#1,2,3,4,5,6,8,101,102 - mission triggered events
-#2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
-#7,7002-7012 - Lollardy Conclusions (required flavor)
-#7013 - Lollardy Flavor
-#9,9002-9004 - Royal Woods events
+#1,2,3,4,5,6 - mission triggered events
+#7 - Lollardy Conclusions (required flavor)
+#8 - mission triggered events
+#9 - Royal Woods events
+#101,102 - mission triggered events
 #1001-1009 - Crown Agendas Event System
+#2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
+#7002-7012 - Lollardy Conclusions (required flavor)
+#7013 - Lollardy Flavor
+#9002-9004 - Royal Woods events
 
 #A United Kingdom
 country_event = {
@@ -2478,5 +2482,198 @@ country_event = {
 				modifier = eng_wood_dealer
 			}
 		}
+	}
+}
+###############################
+#Flavor Pulse Events - People
+###############################
+#John Capgrave
+country_event = {
+	id = mr_england.10
+	title = mr_england.10.t
+	desc = mr_england.10.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1420
+		NOT = { is_year = 1460 }
+		primary_culture = english
+		religion = catholic
+		num_of_provinces_in_states = 2
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.10.a
+		add_papal_influence = 10
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.10.b
+		add_prestige = 5
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.10.c
+		define_advisor = {
+			name = "John Capgrave"
+			cost_multiplier = 0.9
+			skill = 1
+			type = theologian
+			culture = english
+			religion = catholic
+		}
+	}
+}
+#Henry Fortescue
+country_event = {
+	id = mr_england.11
+	title = mr_england.11.t
+	desc = mr_england.11.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1424
+		NOT = { is_year = 1464 }
+		primary_culture = english
+		num_of_provinces_in_states = 2
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.11.a
+		add_adm_power = 25
+		change_government_reform_progress = 15
+	}
+}
+#William Caxton
+country_event = {
+	id = mr_england.12
+	title = mr_england.12.t
+	desc = mr_england.12.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1452
+		NOT = { is_year = 1492 }
+		primary_culture = english
+		num_of_provinces_in_states = 2
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			tag = KNT
+		}
+	}
+	
+	option = {
+		name = mr_england.12.a
+		if = {
+			limit = { tag = KNT }
+			235 = {
+				add_institution_embracement = {
+					which = printing_press
+					value = 25
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = { province_group = england_region }
+				add_institution_embracement = {
+					which = printing_press
+					value = 25
+				}
+			}
+		}
+	}
+}
+#Robert Boyd
+country_event = {
+	id = mr_england.13
+	title = mr_england.13.t
+	desc = mr_england.13.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1453
+		NOT = { is_year = 1493 }
+		exists = YRK
+		OR = {
+			tag = YRK
+			tag = SCO
+		}
+	}
+	mean_time_to_happen = { days = 2 } #increased to (60%)
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.13.a
+		
+		define_advisor = {
+			name = "Robert Boyd"
+			cost_multiplier = 0.5
+			skill = 2
+			type = statesman
+			culture = scottish
+			religion = ROOT
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.13.b
+		
+		define_advisor = {
+			name = "Robert Boyd"
+			cost_multiplier = 0.5
+			skill = 2
+			type = diplomat
+			culture = scottish
+			religion = ROOT
+		}
+	}
+}
+#Finghin Ó Mathghamhna
+country_event = {
+	id = mr_england.14
+	title = mr_england.14.t
+	desc = mr_england.14.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1456
+		NOT = { is_year = 1496 }
+		OR = {
+			primary_culture = english
+			primary_culture = irish
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.14.a
+		trigger = { primary_culture = english }
+		add_prestige = 10
+	}
+		name = mr_england.14.a
+		trigger = { primary_culture = irish }
+		add_splendor = 20
 	}
 }

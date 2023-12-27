@@ -405,3 +405,35 @@
  mr_england.102.a: "The Royal Woods System is our cornerstone!"
  mr_england.102.b: "The forests of lands across the sea will fuel our expansion!"
  mr_england.102.c: "A fruitful alliance with [eng_wood_dealer.GetName] will free to produce other things."
+ 
+ mr_england.10.t: "John Capgrave"
+ mr_england.10.d: "John Capgrave was a historian and theologian. He is known for documenting the lives of saints, and created the first collection of the lives of English Saints after returning from a visit to Rome. He is currently in the midsts of recounting a history of England, especially during the Hundred Years Anarchy, though the many documents and lives lost during the ordeal are not making it easy."
+ mr_england.10.a: "A great work for English Christians."
+ mr_england.10.b: "Good luck to him."
+ 
+ mr_england.11.t: "Henry Fortescue"
+ mr_england.11.d: "Under the [Root.Monarch.GetTitle] [Root.Monarch.GetName], Fortescue served as Justice of the Crown. During his tenure, he also penned 'The Laws of the Kingdom of England,' an impressive text which served as the cornerstone of codified English Law as the Kingdom transitioned away from common law."
+ mr_england.11.a: "We need more like him."
+ 
+ mr_england.12.t: "William Caxton"
+ mr_england.12.d: "As a trader making regular trips between the North Sea League cities, William Caxton was the first known Englishman to have taken an interest in the newly emerging technology of presses. It was after a return trip from Amsterdam that he recounted the usefulness of the press for diseminating thought - likely a contributing factor for the independently-minded Dutch. Caxton quickly assembled the first press in England; his first print, a copy of Chaucer's Tales of Canterbury."
+ mr_england.12.a: "Interesting."
+ 
+ mr_england.13.t: "Robert Boyd"
+ mr_england.13.d: "First Lord Boyd of Scotland was knighted by [SCO.Monarch.GetTitle] [SCO.Monarch.GetName] for his exceptional statecraft. He was sent to York to negotiate cooperative action against the southerners and the worrying consolidation of the Kingdom of England under [ENG.Monarch.GetName]."
+ mr_england.13.a: "He must have a way with words."
+ mr_england.13.b: "Best of luck!" 
+ 
+ mr_england.14.t: "Finghin O Mathghamhna"
+ mr_england.14.d: "A local lord from Cork, Mathghamhna was a learned writer, educated to write not only in his native tounge of Irish, but also English and Latin. His works and translated texts serve as a bridge between the two islands's cultures."
+ mr_england.14.a: "Interesting."
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ mr_england..t: "
+ mr_england..d: "
+ mr_england..a: "

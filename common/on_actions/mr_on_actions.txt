@@ -1411,6 +1411,10 @@ on_yearly_pulse_2 = {
 		mr_england.7011
 		mr_england.7012
 	}
+	random_events = {
+		13 = mr_england.10
+		1000 = 0
+	}
 }
 
 # THIS = Province, FROM = Country
