@@ -1,21 +1,18 @@
-#1951 - Hunyad
+#4128 - Kyralifold
 
 owner = HUN
 controller = HUN 
-culture = transylvanian #Transylvanian Saxons
+culture = shwoveh #Transylvanian Saxons
 religion = catholic
 capital = "Sibiu"
-trade_goods = cloth
+trade_goods = iron
 hre = no
 base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-fort_15th = yes #Fortified Region
 add_core = HUN
 add_core = TRA
-add_building = mrb_textileprocessor
-set_province_flag = was_wool_province
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
