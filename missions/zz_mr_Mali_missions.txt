@@ -59,7 +59,7 @@ branch_1 = {
 		}
 	}
 	mr_mali_naval_second = {
-		icon = mission_galleys_in_port
+		icon = mission_corsairs_of_the_north_sea
 		position = 8
 		required_missions = {
 			mr_mali_naval_first
@@ -67,11 +67,64 @@ branch_1 = {
 		trigger = {
 			num_of_heavy_ship = 10
 			navy_size_percentage = 1
+			naval_reformer = 1
 		}
 		effect = {
 			custom_tooltip = build_flagship_mal
 			hidden_effect = {
 				build_flagship_mission_reward = yes
+			}
+		}
+	}
+	mr_mali_naval_third = {
+		icon = mission_disrupt_portuguese_trade
+		position = 10
+		required_missions = {
+			mr_mali_naval_second
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mr_naval_third_tt
+				check_variable = {
+					which = naval_battle_counter_MAL
+					value = 15
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = enable_malian_fun
+
+			add_country_modifier = {
+				name = malian_winners
+				duration = 12775
+			}
+		}
+	}
+	mr_mali_naval_fourth = {
+		icon = mission_son_military_expertise
+		position = 11
+		required_missions = {
+			mr_mali_naval_third
+		}
+		trigger = {
+			naval_tradition = 50
+			OR = {
+				has_idea_group = naval_ideas
+				has_idea_group = maritime_ideas
+			}
+			1114 = {
+				has_building = university
+			}
+		}
+		effect = {
+			custom_tooltip = build_academy
+			hidden_effect = {
+				1114 = {
+					add_great_project_tier = {
+						type = mr_guinala_academy
+						tier = 2
+					}
+				}
 			}
 		}
 	}

@@ -50,13 +50,15 @@ on_startup = {
 	if = {
 		limit = {
 			tag = MAL
+			NOT = {
+				check_variable = {
+					which = naval_battle_counter_MAL
+					value = 1
+				}
+			}
 		}
 		set_variable = {
-			which = coastal_tiles_variable_1
-			value = 0
-		}
-		set_variable = {
-			which = coastal_tiles_variable_2
+			which = naval_battle_counter_MAL
 			value = 0
 		}
 	}
@@ -309,6 +311,26 @@ on_battle_won_unit = {
 		unit_owner = {
 			add_army_professionalism = 0.001
 			add_legitimacy = 0.5
+		}
+	}
+	if = {
+		limit ={
+			location = {
+				is_sea = yes
+			}
+			unit_owner = {
+				tag = MAL
+				NOT = {
+					check_variable = {
+						which = naval_battle_counter_MAL
+						value = 15
+					}
+				}
+			}
+		}
+		change_variable = {
+			which = naval_battle_counter_MAL
+			value = 1
 		}
 	}
 }

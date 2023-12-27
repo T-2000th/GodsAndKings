@@ -65,7 +65,12 @@ MANSA_OF_ALL_REISLAND: "The Mansa of ALl Reislands"
 trade_in_all_regions: "We will gain §G+10§! Trade Power in all Trade Nodes in §YSouth Reisland§!"
 treasure_fleets_of_mali: "Expanded Treasure Fleets"
 shipyard_dev: "Shipyard Development"
-build_flagship_mal: "This will spawn a §YFlagship§! for @MAL §YMali§! with the following modifiers:\n§G+100%§! Fleet exploration Range\n§G+15%§! Flagship Cannons\n§G+50%§! Flaghship Durability\n§G+1§! Fleet Movement Speed Modifier"
+build_flagship_mal: "This will spawn a §YFlagship§! for @MAL §YMali§! called the §T'Muhammad ibn Qu'§!, with the following modifiers:\n§G+100%§! Fleet exploration Range\n§G+15%§! Flagship Cannons\n§G+50%§! Flagship Durability\n§G+1§! Fleet Movement Speed Modifier"
+naval_battle_counter_MAL: "Naval Battle Wins"
+mr_naval_third_tt: "Win at least §Y15§! Naval Battles. Current: §Y[Root.naval_battle_counter_MAL.GetValue]§!"
+enable_malian_fun: "This will enable the §YMalian Naval Doctrine§!\n"
+build_academy: "This will build the §YGuinala Naval Academy§!, and upgrade it to level 2."
+
 
 
 #Modifiers
@@ -85,6 +90,7 @@ jolof_farma: "The Farma of Jolof"
 development_of_the_senegal: "Development of the Senegal Estuary"
 koulikoria_harbor: "Koulikorio Harbor"
 digging_for_gold_mali: "Digging for Gold"
+malian_winners: "Naval Masters"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -110,6 +116,9 @@ malian_resilience: "Malian Coastal Hunters"
 malian_resilience_desc: "The coasts of Africa and Reisland are filled with hostile and dangerous pirates. To defend ourselves, we must prepare for attacks on all sides with reinforced hulls to withstand both cannon and musket shot."
 malian_explorers: "Malian Explorers"
 malian_explorers_desc: "The great explorers of the Mali Empire have charted out the far corners of Reisland. Their expertise in navigating challenging waters and foreign lands make them excellent at their job."
+mr_guinala_academy: "Guinala Naval Academy"
+malian_treasure_fleets: "Malian Treasure Fleets"
+malian_treasure_fleets_desc: "Mali and its massive colonial holdings require a strong and powerful fleet to guide them through the harsh Atlantic ocean. To ensure that the Malian Empire gains the great treasures of the new world, strong admirals with powerful ships protect our fleets, making sure that we get the riches and rewards of the Reislands."
 
 #Cbs
 po_establish_farma: "Establish Farma"
