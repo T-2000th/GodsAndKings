@@ -3,7 +3,7 @@
 
 owner = MOL
 controller = MOL
-culture = romanian
+culture = moldavian
 religion = orthodox
 capital = "Bacau"
 trade_goods = horses #Pechenegs and Cumans liked to breed their horses here

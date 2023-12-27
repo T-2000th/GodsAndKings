@@ -3,7 +3,7 @@
 
 owner = WAL
 controller = WAL
-culture = romanian
+culture = wallachian
 religion = orthodox
 capital = "Tîrgoviste"
 trade_goods = honey

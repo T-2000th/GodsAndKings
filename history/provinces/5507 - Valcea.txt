@@ -3,9 +3,9 @@
 
 owner = WAL
 controller = WAL
-culture = romanian
+culture = wallachian
 religion = orthodox
-capital = "Râmnic"
+capital = "Ramnic"
 trade_goods = salt # Ocna Mare
 hre = no
 base_tax = 1

@@ -3,7 +3,7 @@
 
 owner = JAA
 controller = JAA  
-culture = romanian
+culture = wallachian
 religion = catholic
 capital = "Severin"
 trade_goods = copper # Baia de Arama mine

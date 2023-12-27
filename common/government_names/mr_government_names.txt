@@ -103,7 +103,12 @@ mr_romanian_monarchy_war = {
 	trigger = {
 		government = monarchy
 		is_at_war = yes
-		primary_culture = romanian
+		or = {
+			primary_culture = romanian
+			primary_culture = transylvanian
+			primary_culture = wallachian
+			primary_culture = moldavian
+		}
 	}
 }
 
@@ -152,6 +157,12 @@ mr_romanian_monarchy_peace = {
 
 	trigger = {
 		government = monarchy
-		primary_culture = romanian
+		or = {
+			primary_culture = romanian
+			primary_culture = transylvanian
+			primary_culture = wallachian
+			primary_culture = moldavian
+		}
+		
 	}
 }

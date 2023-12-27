@@ -3,7 +3,7 @@
 
 owner = MOL
 controller = MOL
-culture = swabian
+culture = shwoveh
 religion = catholic
 hre = no
 base_tax = 1

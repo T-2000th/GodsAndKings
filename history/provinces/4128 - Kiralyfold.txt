@@ -2,7 +2,7 @@
 
 owner = HUN
 controller = HUN 
-culture = swabian #Transylvanian Saxons
+culture = shwoveh #Transylvanian Saxons
 religion = catholic
 capital = "Sibiu"
 trade_goods = iron

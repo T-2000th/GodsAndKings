@@ -192,6 +192,9 @@ HUN_flavor.20.da: "We have reclaimed our capital! The fight is on!"
 HUN_flavor.20.b: "We're so back!"
 knn_has_content: "\n§YCURRENTLY ONLY TAG WITH COMPLETE CONTENT!§!"
 accepted_crimean: "Accepted Kipchack"
+HUN_flavor.22.t: "The Hungarian Crown Collapsed"
+HUN_flavor.22.d: "It would seem that the authority of the Hungarian kings in Pest has crumbled, with different princes backed up by various oligarchs and powers stacking their claim for the throne. With this, our duties of vassalage are nullified, for the time being."
+HUN_flavor.22.a: "Best stay out of it."
 
  ##Heinan
  shenist_tradition: "Traditional Heir"

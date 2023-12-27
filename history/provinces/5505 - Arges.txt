@@ -3,7 +3,7 @@
 
 owner = WAL
 controller = WAL
-culture = romanian
+culture = wallachian
 religion = catholic
 capital = "Curtea de Arges"
 trade_goods = grapes
