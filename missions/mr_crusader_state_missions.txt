@@ -215,6 +215,9 @@ crusader_missions_1_antioch = {
 					NOT = { exists = SIC }
 					NOT = { exists = TTS }
 				}
+				# Bypass in case you got an early claim/free PU due to same dynasty
+				SIC = { is_subject_of = ROOT }
+				TTS = { is_subject_of = ROOT }
 			}
 		}
 
