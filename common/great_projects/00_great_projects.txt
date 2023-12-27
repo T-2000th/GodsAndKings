@@ -214,6 +214,7 @@ suez_canal = {
 				adm_tech = 22
 				mission_completed = mam_highway_empire
 				mission_completed = mr_ifat_nubia_5
+				has_country_flag = unlock_suez_early
 			}
 		}
 	}
