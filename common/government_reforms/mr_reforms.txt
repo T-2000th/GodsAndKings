@@ -1296,3 +1296,33 @@ rex_africae = {
 		enables_estate_dhimmi = yes # Catholic Dhimmi!
 	}
 }
+
+mr_malian_kingdom = {
+	icon = "musa_rule"
+	allow_normal_conversion = no
+	potential = {
+		tag = MAL
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+
+	modifiers = {
+		# General modifiers
+		legitimacy = 1
+		tolerance_own = 1
+		# Malian Empire
+		governing_capacity_modifier = 0.1	
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_aristocratic_idea_group = yes
+		enables_plutocratic_idea_group = yes
+	}
+
+	factions = {
+		malian_court 
+		malian_guilds 
+		malian_merchants 
+	}
+}

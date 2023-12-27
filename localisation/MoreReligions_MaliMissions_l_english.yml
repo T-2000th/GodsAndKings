@@ -25,6 +25,10 @@ mr_mali_naval_fourth_title: "The Kansala Naval Acadamy"
 mr_mali_jolof_first_title: "The Isles of Muhammad Qu"
 mr_mali_jolof_second_title: "Fate of the Confederation"
 
+mr_mali_guinean_first_title: "Into the Jungle"
+mr_mali_guinean_second_title: "Prepare for our Invasion"
+mr_mali_guinean_third_title: "The Southern Expedition"
+
 
 
 
@@ -68,9 +72,15 @@ shipyard_dev: "Shipyard Development"
 build_flagship_mal: "This will spawn a §YFlagship§! for @MAL §YMali§! called the §T'Muhammad ibn Qu'§!, with the following modifiers:\n§G+100%§! Fleet exploration Range\n§G+15%§! Flagship Cannons\n§G+50%§! Flagship Durability\n§G+1§! Fleet Movement Speed Modifier"
 naval_battle_counter_MAL: "Naval Battle Wins"
 mr_naval_third_tt: "Win at least §Y15§! Naval Battles. Current: §Y[Root.naval_battle_counter_MAL.GetValue]§!"
-enable_malian_fun: "This will enable the §YMalian Naval Doctrine§!\n"
+enable_malian_fun: "This will enable the §YMalian Treasure Fleet Naval Doctrine§!\n"
 build_academy: "This will build the §YGuinala Naval Academy§!, and upgrade it to level 2."
-
+every_province_in_guinea_area: "§YMali§! gains a permanent claim on the §YGuinea§! Provinces"
+discover_every_guinean_province: "Discover all §YGuinea§! provinces."
+own_every_guinean_province: "Own or have a non-sovereign subject country own all §YGuinea§! provinces."
+gain_modifier_TT_yes: "£yes£If we complete this mission while directly owning all §YGuinea§! provinces, these provinces will gain the following:"
+gain_modifier_TT_no: "£no£If we complete this mission while directly owning all §YGuinea§! provinces, these provinces will gain the following:"
+temne_farma_tt_no: "£no£If we complete this mission while @TEE §YTemne§! ownes all §YGuinea§! provinces. they will be automatically upgraded to a §YCore Farma§!.\n"
+temne_farma_tt_yes: "£yes£If we complete this mission while @TEE §YTemne§! ownes all §YGuinea§! provinces. they will be automatically upgraded to a §YCore Farma§!.\n"
 
 
 #Modifiers
@@ -91,6 +101,8 @@ development_of_the_senegal: "Development of the Senegal Estuary"
 koulikoria_harbor: "Koulikorio Harbor"
 digging_for_gold_mali: "Digging for Gold"
 malian_winners: "Naval Masters"
+clearing_the_highlands: "Clearing the Highlands"
+land_mapping_mal: "Mapping the Forests"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -119,6 +131,8 @@ malian_explorers_desc: "The great explorers of the Mali Empire have charted out 
 mr_guinala_academy: "Guinala Naval Academy"
 malian_treasure_fleets: "Malian Treasure Fleets"
 malian_treasure_fleets_desc: "Mali and its massive colonial holdings require a strong and powerful fleet to guide them through the harsh Atlantic ocean. To ensure that the Malian Empire gains the great treasures of the new world, strong admirals with powerful ships protect our fleets, making sure that we get the riches and rewards of the Reislands."
+is_in_guinea_area: "Is a §YGuinean§! Province."
+
 
 #Cbs
 po_establish_farma: "Establish Farma"
@@ -132,6 +146,17 @@ cb_farma_subjugation_war:0 "Malian Campaign of Conquest"
 cb_farma_subjugation_war_desc:0 "Their territory is our rightful claim. They shall serve us as our loyal Farma!"
 MALIAN_INVASION_WAR_NAME:0 "$ORDER$$FIRST$ Invasion of $SECOND_NAME$"
 
+#Governments
+mr_malian_kingdom: "Malian Kingdom"
+mr_malian_kingdom_desc: "The Malian Kingdom is a semi-decentraized state, run by different political factions across the Empire. At the fringes, the Farma govern provinces while the core metropolitan are run by the central power of the Mansa himself."
+malian_court: "Grand Council"
+malian_court_FACTION_DESC: "The Grand Council of Mali are advisors and a collection of nobles to the Mansa. They gather at the Mashwar, where the emirs, the preachers, the Sufis, the judges, and the legal experts spoke their minds to their monarch."
+malian_guilds: "Hunter's Guild"
+malian_guilds_FACTION_DESC: "The Donson Ton are a group of talented warriors, hunters, and soldiers from across the Mandika peoples. They disagree with the concept of hereditary rule, and instead push for a meritocracy, where kingship is determined by martial skill or personal ability."
+malian_merchants: "Foreign Merchants"
+malian_merchants_FACTION_DESC: "The Berber merchants of North Africa and beyond bring with them Islam, and are crucial to maintaining a positive diplomatic reputation with the rest of the Ummah. They wish for Mali to be a more traditional Islamic state, and as such clash with local religious authority."
 #Farma Names
 FR1: "Jolof-Farma"
 FR1_ADJ: "Jolof-Farma"
+FR2: "Mane-Farma"
+FR2_ADJ: "Mane Farma"

@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = mr_malian_kingdom
 primary_culture = mali
 religion = sunni
 technology_group = sub_saharan

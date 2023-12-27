@@ -149,6 +149,7 @@ monarchy = {
 				# Added for Africa (Inferno)
 				rex_africae
 				mr_empire_of_japan_reformed 
+				mr_malian_kingdom
 			}
 		}
 		hereditary_vs_nobility = {

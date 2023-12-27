@@ -29,6 +29,7 @@ country_decisions = {
 				culture = songhai
 				value = 11
 			}
+			is_free_or_tributary_trigger = yes
 			owns_core_province = 1133
 			owns_core_province = 2269
 			owns_core_province = 2262

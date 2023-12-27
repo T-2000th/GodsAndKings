@@ -547,5 +547,6 @@ farma_name_effect = {
 }
 
 farma_dynamic_name_change_effect = {
-	if = { limit = { tag = JOL } eyalet_name_effect = { tag = FR1 } }
+	if = { limit = { tag = JOL } farma_name_effect = { tag = FR1 } }
+	if = { limit = { tag = TEE } farma_name_effect = { tag = FR2 }}
 }

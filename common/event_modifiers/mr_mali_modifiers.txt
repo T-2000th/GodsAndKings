@@ -86,3 +86,9 @@ shipyard_dev = {
 malian_winners = {
 	naval_tradition_from_battle = 0.5
 }
+land_mapping_mal = {
+	land_attrition = -0.25
+}
+clearing_the_highlands = {
+	local_build_cost = -0.25
+}

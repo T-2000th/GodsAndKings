@@ -4,9 +4,240 @@ branch_1 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_guinean_first = {
+		icon = mission_mal_west_african_great_power
+		position = 1
+		required_missions = {
+
+		}
+		
+		provinces_to_highlight = {
+			is_in_guinea_area = yes
+			NOT = {
+				has_discovered = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = discover_every_guinean_province
+				NOT = {
+					any_province = {
+						is_in_guinea_area = yes
+						NOT = {
+							has_discovered = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			define_general = {
+				shock = 1
+				fire = 2
+				manuever = 2
+				siege = 1
+			}
+			custom_tooltip = every_province_in_guinea_area
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_in_guinea_area = yes
+						NOT = {
+							AND = {
+								is_core = ROOT
+								is_permanent_claim = ROOT
+							}
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	mr_mali_guinean_second = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = {
+			mr_mali_guinean_first
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_country = {
+						capital_scope = {
+							is_in_guinea_area = yes
+						}
+						has_spy_network_from = {
+							who = ROOT
+							value = 35
+						}
+					}
+					amount = 2
+				}
+				calc_true_if = {
+					all_country = {
+						capital_scope = {
+							is_in_guinea_area = yes
+						}
+						has_spy_network_from = {
+							who = ROOT
+							value = 50
+						}
+					}
+					amount = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = land_mapping_mal
+				duration = 3650
+			}
+			TEE = {
+				add_liberty_desire = -25
+			}
+		}
+	}
+	mr_mali_guinean_third = {
+		icon = mission_kon_conquer_ksj
+		position = 5
+		required_missions = {
+			mr_mali_guinean_second
+		}
+		provinces_to_highlight = {
+			is_in_guinea_area = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = own_every_guinean_province
+				NOT = {
+					any_province = {
+						is_in_guinea_area = yes
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							is_in_guinea_area = yes
+							NOT = {
+								country_or_non_sovereign_subject_holds = TEE
+							}
+						}
+					}
+				}
+				custom_tooltip = temne_farma_tt_yes
+			}
+			else_if = {
+				limit = {
+					any_province = {
+						is_in_guinea_area = yes
+						NOT = {
+							country_or_non_sovereign_subject_holds = TEE
+						}
+					}
+				}
+				custom_tooltip = temne_farma_tt_no
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							is_in_guinea_area = yes
+							NOT = {
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = gain_modifier_TT_yes
+				tooltip = {
+					add_province_modifier = {
+						name = clearing_the_highlands
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_province = {
+						is_in_guinea_area = yes
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				custom_tooltip = gain_modifier_TT_no
+				tooltip = {
+					add_province_modifier = {
+						name = clearing_the_highlands
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							any_province = {
+								is_in_guinea_area = yes
+								NOT = {
+									country_or_non_sovereign_subject_holds = TEE
+								}
+							}
+						}
+					}
+					create_subject = {
+						who = TEE
+						subject_type = core_farma_subject
+					}
+					TEE = {
+						change_country_color = { country = ROOT }
+						farma_dynamic_name_change_effect = yes
+					}
+				}
+				else = {
+					add_dip_power = 250
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_province = {
+								is_in_guinea_area = yes
+								NOT = {
+									owned_by = ROOT
+								}
+							}
+						}
+					}
+					every_owned_province = {
+						limit = {
+							is_in_guinea_area = yes
+						}
+						add_province_modifier = {
+							name = clearing_the_highlands
+							duration = -1
+						}
+					}
+				}
+				
+			}
+		}
+	}
 	mr_mali_naval_first = {
 		icon = mission_galleys_in_port
-		position = 7
+		position = 8
 		required_missions = {
 		}
 		provinces_to_highlight = {
@@ -60,7 +291,7 @@ branch_1 = {
 	}
 	mr_mali_naval_second = {
 		icon = mission_corsairs_of_the_north_sea
-		position = 8
+		position = 9
 		required_missions = {
 			mr_mali_naval_first
 		}
@@ -78,7 +309,7 @@ branch_1 = {
 	}
 	mr_mali_naval_third = {
 		icon = mission_disrupt_portuguese_trade
-		position = 10
+		position = 11
 		required_missions = {
 			mr_mali_naval_second
 		}
@@ -102,7 +333,7 @@ branch_1 = {
 	}
 	mr_mali_naval_fourth = {
 		icon = mission_son_military_expertise
-		position = 11
+		position = 12
 		required_missions = {
 			mr_mali_naval_third
 		}
@@ -130,7 +361,7 @@ branch_1 = {
 	}
 	mr_mali_exploration_twelth = {
 		icon = mission_ne_birch_bark_canoes
-		position = 12
+		position = 13
 		required_missions = {
 			mr_mali_exploration_fourth
 		}
@@ -165,7 +396,7 @@ branch_1 = {
 	}
 	mr_mali_exploration_thirteen = {
 		icon = mission_new_kingdom_of_granada
-		position = 14
+		position = 15
 		required_missions = {
 			mr_mali_exploration_twelth
 		}
@@ -200,7 +431,7 @@ branch_1 = {
 	}
 	mr_mali_exploration_fourteen = {
 		icon = mission_potosi_silver
-		position = 15
+		position = 16
 		required_missions = {
 			mr_mali_exploration_thirteen
 		}
@@ -257,7 +488,7 @@ branch_1 = {
 	}
 	mr_mali_exploration_fifteen = {
 		icon = mission_war_chest
-		position = 16
+		position = 17
 		required_missions = {
 			mr_mali_exploration_fourteen
 		}
@@ -308,7 +539,7 @@ branch_2 = {
 	potential = { tag = MAL } 
 	mr_mali_exploration_first = {
 		icon = mission_ne_great_lakes_conquest
-		position = 7
+		position = 8
 		required_missions = {
 		}
 		trigger = {
@@ -332,7 +563,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_second = {
 		icon = mission_caribbean_cn
-		position = 8
+		position = 9
 		required_missions = {
 			mr_mali_exploration_first
 		}
@@ -357,7 +588,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_third = {
 		icon = mission_colonise_brazil
-		position = 9
+		position = 10
 		required_missions = {
 			mr_mali_exploration_second
 		}
@@ -395,7 +626,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_fourth = {
 		icon = mission_colonize_the_west
-		position = 11
+		position = 12
 		required_missions = {
 			mr_mali_exploration_third
 		}
@@ -443,7 +674,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_fifth = {
 		icon = mission_pue_irrigation_cannals
-		position = 12
+		position = 13
 		required_missions = {
 			mr_mali_exploration_fourth
 		}
@@ -508,7 +739,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_sixth = {
 		icon = mission_iroquois_food_surplus
-		position = 13
+		position = 14
 		required_missions = {
 			mr_mali_exploration_fifth
 		}
@@ -648,7 +879,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_sixteen = {
 		icon = mission_raid_christian_trade
-		position = 15
+		position = 16
 		required_missions = {
 			mr_mali_exploration_thirteen
 		}
@@ -681,7 +912,7 @@ branch_2 = {
 	}
 	mr_mali_exploration_seventeen = {
 		icon = mission_mali_flag
-		position = 17
+		position = 18
 		required_missions = {
 			mr_mali_exploration_fifteen
 			mr_mali_exploration_sixteen
@@ -841,7 +1072,7 @@ branch_3 = {
 	}
 	mr_mali_jolof_first = {
 		icon = mission_claim_the_canaries
-		position = 7
+		position = 8
 		required_missions = {
 		}
 		provinces_to_highlight = {
@@ -974,7 +1205,7 @@ branch_3 = {
 	}
 	mr_mali_jolof_second = {
 		icon = mission_mal_fighting_musa
-		position = 9
+		position = 10
 		required_missions = {
 			mr_mali_jolof_first
 		}
@@ -1062,7 +1293,7 @@ branch_3 = {
 	}
 	mr_mali_exploration_seventh = {
 		icon = mission_invade_island
-		position = 10
+		position = 11
 		required_missions = {
 			mr_mali_exploration_third
 		}
@@ -1138,7 +1369,7 @@ branch_3 = {
 	}
 	mr_mali_exploration_tenth = {
 		icon = mission_imperial_cities
-		position = 12
+		position = 13
 		required_missions = {
 			mr_mali_exploration_fourth
 		}
@@ -1173,7 +1404,7 @@ branch_3 = {
 	}
 	mr_mali_exploration_eleventh = {
 		icon = mission_che_botanical_exports
-		position = 13
+		position = 14
 		required_missions = {
 			mr_mali_exploration_tenth
 		}
@@ -1289,7 +1520,7 @@ branch_4 = {
 	potential = { tag = MAL } 
 	mr_mali_exploration_eighth = {
 		icon = mission_colonize_the_caribbean
-		position = 11
+		position = 12
 		required_missions = {
 			mr_mali_exploration_seventh
 		}
@@ -1355,7 +1586,7 @@ branch_4 = {
 	}
 	mr_mali_exploration_ninth = {
 		icon = mission_wine_monopolies
-		position = 13
+		position = 14
 		required_missions = {
 			mr_mali_exploration_eighth
 		}

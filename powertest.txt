@@ -1,1 +1,7 @@
-build_flagship_mission_reward = yes
+every_province = {
+	limit = {
+		is_in_guinea_area = yes
+	}
+	cede_province = TEE
+	add_core = TEE
+}

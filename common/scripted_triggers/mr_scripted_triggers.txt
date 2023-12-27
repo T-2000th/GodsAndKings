@@ -435,3 +435,19 @@ is_staple_crop = {
 	trade_goods = tomato
 	trade_goods = maize
 }
+
+is_in_guinea_area = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_guinea_area
+		OR = {
+			area = eastern_guniea_area
+			province_id = 1118
+			province_id = 2242
+			province_id = 1119
+			province_id = 5202
+			province_id = 5201
+			province_id = 5203
+			area = west_africa_coast_area
+		}
+	}
+}
