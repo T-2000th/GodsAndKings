@@ -7,83 +7,85 @@
 namespace = flavor_wal
 normal_or_historical_nations = yes
 
-# Vlad the Impaler!
-country_event = {
-	id = flavor_wal.1
-	title = "flavor_wal.EVTNAME1"
-	desc = "flavor_wal.EVTDESC1"
-	picture = IMPALED_SOLDIERS_eventPicture
+# Vlad the Impaler! 
+# Commented because it wouldn't make much sense for Vlad III to be as agressive as he was irl, unless the Bulgarians took him instead of the Ottomans :shruge:
+# Also the initial event itself doesn't make much sense since he didn't usurp his brother either, both him and his father died at the same time
+# country_event = {
+# 	id = flavor_wal.1
+# 	title = "flavor_wal.EVTNAME1"
+# 	desc = "flavor_wal.EVTDESC1"
+# 	picture = IMPALED_SOLDIERS_eventPicture
 	
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	is_triggered_only = yes # To avoid Vlad trying to usurp his father
+# 	is_triggered_only = yes # To avoid Vlad trying to usurp his father
 	
-	trigger = {
-		tag = WAL
-		NOT = { is_year = 1477 }
-	}
+# 	trigger = {
+# 		tag = WAL
+# 		NOT = { is_year = 1477 }
+# 	}
 	
-	option = {
-		name = "flavor_wal.EVTOPTA1"
-		define_ruler = {
-			name = "Vlad Tepes"
-			dynasty = "Draculesti"
-			adm = 1
-			dip = 0
-			mil = 5
-			age = 23
-		}
-		define_ruler_to_general = {
-			fire = 3
-			shock = 4
-			manuever = 4
-			siege = 0
-		}
-		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
-			change_statists_vs_orangists = 1
-		}
-		if = {
-			limit = {
-				has_dlc = "Rights of Man" 
-			}
-			hidden_effect = { add_ruler_personality = cruel_personality }
-		}
-		add_adm_power = 50
-		TUR = {
-			add_opinion = {
-				who = ROOT
-				modifier = opinion_displeased
-				years = 50
-			}
-		}
-	}
-	option = {
-		name = "flavor_wal.EVTOPTB1"
-		ai_chance = {
-			factor = 0
-		}
-		random_owned_province = {
-			limit = { is_in_capital_area = yes }
-			spawn_rebels = {
-				type = pretender_rebels
-				size = 1
-				culture = romanian
-				leader = "Vlad Tepes"
-				leader_dynasty = "Draculesti"
-			}
-		}
-		TUR = {
-			add_opinion = {
-				who = ROOT
-				modifier = opinion_good_relations
-				years = 50
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = "flavor_wal.EVTOPTA1"
+# 		define_ruler = {
+# 			name = "Vlad Tepes"
+# 			dynasty = "Draculesti"
+# 			adm = 1
+# 			dip = 0
+# 			mil = 5
+# 			age = 23
+# 		}
+# 		define_ruler_to_general = {
+# 			fire = 3
+# 			shock = 4
+# 			manuever = 4
+# 			siege = 0
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_states_general_mechanic = yes
+# 			}
+# 			change_statists_vs_orangists = 1
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_dlc = "Rights of Man" 
+# 			}
+# 			hidden_effect = { add_ruler_personality = cruel_personality }
+# 		}
+# 		add_adm_power = 50
+# 		TUR = {
+# 			add_opinion = {
+# 				who = ROOT
+# 				modifier = opinion_displeased
+# 				years = 50
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "flavor_wal.EVTOPTB1"
+# 		ai_chance = {
+# 			factor = 0
+# 		}
+# 		random_owned_province = {
+# 			limit = { is_in_capital_area = yes }
+# 			spawn_rebels = {
+# 				type = pretender_rebels
+# 				size = 1
+# 				culture = romanian
+# 				leader = "Vlad Tepes"
+# 				leader_dynasty = "Draculesti"
+# 			}
+# 		}
+# 		TUR = {
+# 			add_opinion = {
+# 				who = ROOT
+# 				modifier = opinion_good_relations
+# 				years = 50
+# 			}
+# 		}
+# 	}
+# }
 
 # The Impalement of the Sultan (alt history)
 # By Daniel Tolman

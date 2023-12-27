@@ -432,6 +432,7 @@ estate_church = {
 		estate_church_waldensian_studies
 		estate_church_ilkhanate_dervish
 		estate_church_mr_imperial_introspection
+		estate_church_ambiguous_allegience
 	}
 
 	agendas = {
