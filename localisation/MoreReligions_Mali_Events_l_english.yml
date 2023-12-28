@@ -43,3 +43,28 @@ mr_MaliFlavor.6.b: "The fools dare refuse? Time to end this Confederation!"
 mr_MaliFlavor.7.t: "A New Land Discovered!"
 mr_MaliFlavor.7.d: "Spurred by the great Mohammad Qu's voyages to Binkenedugu, our Mansa [Root.Monarch.GetName] has decided to launch his own mission to the far west of the world. Utilizing Cordoban ship designs with sailors from the Jolof and Futa Jallon region, these great vessels sailed beyond the currents of the cape, reaching the far west in a matter of months. There, they discovered great forests of green, filled with strange and foreign creatures and people alike. They didn't have supplies to remain, so they returned back with a few captives and trinkets - but that was enough to light the fire of discovery within the Mansa's heart. He ordered new journeys, another great mission filled with gold and farmers, to establish a permanent base in these new colonies. The Malian Age of Exploration has begun!"
 mr_MaliFlavor.7.a: "The world just became much larger..."
+
+
+mr_MaliFlavor.8.t: "The Bakirio Food Revolution"
+mr_MaliFlavor.8.d: "Historically, Mali has been primarily focused on the use of basic grains to produce large amounts of food. This is not uncommon for the vast majority of the world - food simply was bland at this point. However, with the introduction of fruits and vegetables like tomato and maize, alongside new spices like sugar and peppers, and with the general wealth afforded to the upper class of the Mandinka, a cuisine revolution took place. Dishes like the classical Jollof Rice became infused with tomatoes to increase the taste, peanut paste and sugar were infused to create dishes such as Maafe, further enhanced by the spices and peppers both local and foreign. The traditional method of sharing food with friends and family alike out of a single plate continues, as the need for quantity is replaced by a desire for higher quality foods."
+mr_MaliFlavor.8.a: "Grab a plate - avoid the beans!"
+further_food_innovations_to_come: "More food innovations will occur..."
+new_malian_cuisine: "New Malian Cuisine"
+
+ mr_MaliFlavor.9.t: "A Refreshing Change"
+ mr_MaliFlavor.9.d: "With our trade reaching truly global heights, we now incorporate ingredients not only from our local ports but also those of the far away lands of the east. In the coasts of southern asia, a root is grown that carries with it a bitter yet savory taste. This ginger we have incorporated with our Reisland sugars to create the delicious drink called jinjinbere, enjoyed across our empire. We have imported much of the tea to our coastal province of [5210.GetName], where it is grown extensively. Another phenomenon has also occurred, where the importance of tea has led to an explosion of tea shops and cafes dotted along the ports, roads, and in virtually every major city. It is customary for three servings of tea to be had for everyone involved, giving time for conversation and connection to truly arise in these changing and turbulent times."
+ mr_MaliFlavor.9.a: "First is life, second is love, and third is death."
+home_of_ginger: "Ginger Port"
+
+
+mr_MaliFlavor.10.t: "The Food Hegemony"
+mr_MaliFlavor.10.d: "With our empire growing larger and larger, there is little keeping our Bambara traditions from spreading throughout most of the wider african continent. From the coasts of the Senegal to the oases of Kanem, our traditions and culture spread far and wide. This can be seen in many different ways, but one curious way is in food. Local regional foods have become blended with our own, so now Jollof Rice can be seen in the lower Niger Delta made by Igbo cooks, putting their own spin and take on the classic dish. Pies and pastries made in the coasts by foreign merchants are now made in some of the wealthier castles in the far northern deserts, while tea is impossible to escape. We have expanded our culture, but have not overtaken the local ones."
+mr_MaliFlavor.10.a: "Dig in!"
+spreading_of_food: "Malian Food Hegemony"
+
+mr_MaliFlavor.11.t: "A South Reisland Delicacy!"
+mr_MaliFlavor.11.d: "When we landed in the southern reisland states, a curious development began. Throughout all of our settlements, more and more people began buying the maize produced by the local Muscogee, even more than in any other province. Upon investigating this, we discovered that our local population had begun to take the recipe for their meal, commonly known as “Grits”, and had transformed it into a fried delicacy. People from all over the new settlements have been enjoying and devouring these juicy fried goodness - even our own Mansa has taken to devouring them whole. This has led to a slight health problem for our Mansa, but truly, they seem just quite ecstatic about the food - so who are we to judge?"
+fried_grits: "All provinces in the Mississippi region and the Southeast region that produce Maize will receive the following:"
+spreading_the_grits: "Fried Grits!"
+the_best_grits_around: "The Best Food in the World!"
+mr_MaliFlavor.11.a: "Oh, just one more wouldn't hurt..."

@@ -1,7 +1,7 @@
 every_province = {
 	limit = {
-		is_in_guinea_area = yes
+		trade_goods = horses
 	}
-	cede_province = TEE
-	add_core = TEE
+	add_core = ROOT
+	cede_province = ROOT
 }

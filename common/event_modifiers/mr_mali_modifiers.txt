@@ -98,3 +98,22 @@ naval_forcelimit_MAL = {
 plus_good_production = {
 	trade_goods_size = 1
 }
+new_malian_cuisine = {
+	manpower_in_culture_group_provinces = 0.10
+	manpower_in_own_culture_provinces = 0.15
+}
+home_of_ginger = {
+	trade_goods_size = 0.5
+}
+spreading_of_food = {
+	manpower_in_accepted_culture_provinces = 0.10
+	relation_with_other_culture = 25
+}
+spreading_the_grits = {
+	local_unrest = -1
+	local_development_cost = -0.05
+}
+the_best_grits_around = {
+	monarch_lifespan = -0.25
+	all_power_cost = -0.025	
+}

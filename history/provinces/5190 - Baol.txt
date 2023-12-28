@@ -1,4 +1,4 @@
-# No previous file for Siine
+# No previous file for Baol
 
 owner = JOL
 controller = JOL
@@ -6,7 +6,7 @@ add_core = JOL
 is_city = yes
 culture = senegambian 
 religion = shamanism #Fetishism
-capital = "Siine"
+capital = "Baol"
 trade_goods = grain
 hre = no
 base_tax = 3 

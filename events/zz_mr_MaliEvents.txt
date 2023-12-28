@@ -443,3 +443,139 @@ country_event = {
 		}
 	}
 }
+country_event = { #Bakirio Food Revolution
+	id = mr_MaliFlavor.8
+	title = mr_MaliFlavor.8.t
+	desc = mr_MaliFlavor.8.d
+	picture = AFRICAN_SOCIAL_GATHERING_eventPicture
+	
+	trigger = {
+		has_global_flag = columbian_exchange_happened
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = mr_MaliFlavor.8.a
+		add_country_modifier = {
+			name = new_malian_cuisine
+			duration = 10950
+		}
+		custom_tooltip = further_food_innovations_to_come
+		set_country_flag = malian_food_flag
+	}
+}
+
+country_event = { #A Refereshing Change
+	id = mr_MaliFlavor.9
+	title = mr_MaliFlavor.9.t
+	desc = mr_MaliFlavor.9.d
+	picture = AFRICAN_SOCIAL_GATHERING_eventPicture
+
+	trigger = {
+		has_country_flag = malian_food_flag
+		5210 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		calc_true_if = {
+			all_province = {
+				has_discovered = ROOT
+				trade_goods = ginger
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = mr_MaliFlavor.9.a
+		5210 = {
+			change_trade_goods = ginger
+			add_province_modifier = {
+				name = home_of_ginger
+				duration = -1
+			}
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+	}
+}
+country_event = { #The West African Cuisine Scene
+	id = mr_MaliFlavor.10
+	title = mr_MaliFlavor.10.t
+	desc = mr_MaliFlavor.10.d
+	picture = AFRICAN_SOCIAL_GATHERING_eventPicture
+
+	trigger = {
+		has_country_flag = malian_food_flag
+		num_of_accepted_cultures = 2
+		government_rank = 3
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = mr_MaliFlavor.10.a
+		add_country_modifier = {
+			name = spreading_of_food
+			duration = 10950
+		}
+	}
+}
+
+country_event = {
+	id = mr_MaliFlavor.11
+	title = mr_MaliFlavor.11.t
+	desc = mr_MaliFlavor.11.d
+	picture = FARMING_WIFE_eventPicture
+
+	trigger = {
+		has_country_flag = malian_food_flag
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			OR = {
+				region = mississippi_region
+				region = southeast_america_region
+			}
+			trade_goods = maize
+			value = 5
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.11.a
+		add_ruler_modifier = {
+			name = the_best_grits_around 
+			duration = -1
+		}
+		custom_tooltip = fried_grits
+		tooltip = {
+			add_province_modifier = {
+				name = spreading_the_grits
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						region = mississippi_region
+						region = southeast_america_region
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+					trade_goods = maize
+				}
+				add_province_modifier = {
+					name = spreading_the_grits
+					duration = 9125
+				}
+			}
+		}
+	}
+}

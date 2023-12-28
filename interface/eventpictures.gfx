@@ -794,4 +794,9 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/ABYSS_eventPicture.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "AFRICAN_SOCIAL_GATHERING_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AOW/AFRICAN_SOCIAL_GATHERING_eventPicture.dds"
+		alwaystransparent = yes
+	}
 }
