@@ -186,5 +186,16 @@ spriteTypes = {
 		texturefile = "gfx//interface//faction_red_frame.tga"
 		transparencecheck = yes
 	}	
-
+	spriteType = {
+		name = "GFX_faction_malian_merchants"	
+		texturefile = "gfx//interface//malian_merchants.tga"
+	}	
+	spriteType = {
+		name = "GFX_faction_malian_court"	
+		texturefile = "gfx//interface//malian_court.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_malian_guilds"	
+		texturefile = "gfx//interface//malian_guilds.tga"
+	}	
 }

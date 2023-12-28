@@ -96,8 +96,10 @@ core_farma_subject = {
 	must_accept_cta_from_overlord = no
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
+	joins_overlords_wars = yes
+	joins_colonial_wars = yes
 
-	restoration_cb = cb_disloyal_eyalet
+	restoration_cb = cb_disloyal_farma
 
 	# Subject Interactions:
 

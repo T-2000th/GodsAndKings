@@ -404,26 +404,33 @@ reign_in_farma = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
+				NOT = { FROM = { liberty_desire = 50 } }
 			}
 		}
 		if = {
 			limit = {
-				reverse_has_opinion = {
-					who = FROM
-					value = 125
+				FROM = {
+					has_opinion = {
+						who = FROM
+						value = 125
+					}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_OPINION_LOW_TT
-				reverse_has_opinion = {
-					who = FROM
-					value = 125
+				NOT = {
+					FROM = {
+						has_opinion = {
+							who = FROM
+							value = 125
+						}
+					}
 				}
 			}
 		}
 	}
 	on_accept = {
+		farma_dynamic_name_change_effect = yes
 		create_subject = {
 			subject_type = core_farma_subject
 			subject = FROM

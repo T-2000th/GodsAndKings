@@ -62,9 +62,30 @@ mr_MaliFlavor.10.d: "With our empire growing larger and larger, there is little 
 mr_MaliFlavor.10.a: "Dig in!"
 spreading_of_food: "Malian Food Hegemony"
 
-mr_MaliFlavor.11.t: "A South Reisland Delicacy!"
+mr_MaliFlavor.11.t: "A South Reislandia Delicacy!"
 mr_MaliFlavor.11.d: "When we landed in the southern reisland states, a curious development began. Throughout all of our settlements, more and more people began buying the maize produced by the local Muscogee, even more than in any other province. Upon investigating this, we discovered that our local population had begun to take the recipe for their meal, commonly known as “Grits”, and had transformed it into a fried delicacy. People from all over the new settlements have been enjoying and devouring these juicy fried goodness - even our own Mansa has taken to devouring them whole. This has led to a slight health problem for our Mansa, but truly, they seem just quite ecstatic about the food - so who are we to judge?"
 fried_grits: "All provinces in the Mississippi region and the Southeast region that produce Maize will receive the following:"
 spreading_the_grits: "Fried Grits!"
 the_best_grits_around: "The Best Food in the World!"
 mr_MaliFlavor.11.a: "Oh, just one more wouldn't hurt..."
+
+
+#Malian Faction events
+mr_MaliFlavor.12.t: "The Court is Split"
+mr_MaliFlavor.12.a: "We shall go to the Council for Support!"
+
+mr_MaliFlavor.13.t: "Faction Demand Restitution"
+mr_MaliFlavor.13.a: "Expand our Infrastructure"
+
+mr_MaliFlavor.16.t: "All Parties are Content"
+mr_mali_flavor.16.a: "The Grand Council will be pleased."
+
+mr_MaliFlavor.17.t: "The Factions Revolt!"
+mr_MaliFlavor.17.a: "The Council backs a candidate!"
+
+
+
+how_to_complete_task_a_and_reward: "We must §YExpand infrastructure§! in one of our states.\n\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
+task_a_win: "Gained Support of Council"
+task_a_desc: "Council Quest"
+desc_task_a_desc: "We must §YExpand infrastructure§! in one of our states.\n\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"

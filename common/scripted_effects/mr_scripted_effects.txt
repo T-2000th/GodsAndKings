@@ -550,3 +550,19 @@ farma_dynamic_name_change_effect = {
 	if = { limit = { tag = JOL } farma_name_effect = { tag = FR1 } }
 	if = { limit = { tag = TEE } farma_name_effect = { tag = FR2 }}
 }
+
+remove_quest_stuff = {
+	if = {
+		limit = {
+			has_ruler_modifier = task_a_desc
+		}
+		remove_country_modifier = task_a_desc
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_a
+		}
+		clr_ruler_flag = task_a
+	}
+	
+}

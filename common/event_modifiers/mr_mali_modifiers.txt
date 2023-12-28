@@ -117,3 +117,9 @@ the_best_grits_around = {
 	monarch_lifespan = -0.25
 	all_power_cost = -0.025	
 }
+task_a_win = {
+	advisor_cost = -0.15
+}
+task_a_desc = {
+	prestige = 0.01
+}

@@ -412,6 +412,7 @@ on_new_monarch = {
 		christian_school_events.20 #no rite
 		eastern_school_events.20
 		christian_school_events.21 #no reformed denomination
+		#mr_MaliFlavor.12
 	}
 }
 on_monarch_death = {
@@ -755,6 +756,18 @@ on_expanded_infrastructure = {
 		}
 		set_province_flag = mr_expanded_for_crown_agenda
 		save_global_event_target_as = crown_agenda_infrastructure
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_ruler_modifier = task_a_desc
+			}
+		}
+		FROM = {
+			country_event = {
+				id = mr_MaliFlavor.16
+			}
+		}
 	}
 }
 on_province_culture_converted = {
