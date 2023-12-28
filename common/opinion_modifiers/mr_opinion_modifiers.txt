@@ -60,3 +60,7 @@ eng_wood_dealer = {
 	opinion = 30
 	yearly_decay = 0
 }
+mr_boyd_mission = {
+	opinion = 50
+	yearly_decay = 1
+}

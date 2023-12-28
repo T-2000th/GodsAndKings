@@ -32,10 +32,29 @@
  
  eng_m_ireland_2_title: "End the Gaelic Resurgence"
  eng_m_ireland_2_desc: "During the Anarchy, Ireland was temporarily freed from English incursions. During that time, a unique political diarchy developed, relieving the island from the rule of petty lords. Ireland was once on a trajectory for a renaissance of their own..."
- eng_m_ireland_2_TT: "Events will occur to slowly convert §YIrish§! to §YAnglo-Hibernian§!"
+ eng_m_ireland_2_TT: "Events will occur to slowly convert §YIrish§! to §YAnglo-Hibernian§!\nUnlock §YLenient Oversight of Ireland§! path."
+ eng_m_ireland_2b_TT: "Unlock §YOppression of Ireland§! path."
  
  eng_m_ireland_3_title: "Assimilation of Ireland"
  eng_m_ireland_3_desc: "As English settlers and leaders moved to Ireland under the auspicies of supplanting local gaelic rule, the integration became more and more natural. Unlike the Norman rule that preceeded Black Death wherein the Normans were absorbed into local culture, the opposite has occured, thanks to an lenient but firm approach."
+ 
+ eng_m_ireland_oppress_3_title: "Irish Anglicization"
+ eng_m_ireland_oppress_3_desc: ""
+ eng_m_ireland_oppress_3_TT: "Events will occur when §Yforts§! are constructed in §YIreland§! to determine its province's enterprise."
+ 
+ eng_m_ireland_oppress_4_title: "Enterprises of Ireland"
+ eng_m_ireland_oppress_4_desc: ""
+ 
+ eng_m_ireland_4_title: "Army of Ireland"
+ eng_m_ireland_4_desc: ""
+ eng_m_ireland_4_TT: "Units recruited in §YIreland§! will §Grefund 250 manpower§!"
+ 
+ eng_m_ire_dummy_path_3_title: "[Root.GetPreviewColorTEU][Root.GetSelectableMissionTitle][Root.GetPreviewColorTEU_end]"
+ eng_m_ire_dummy_path_4_title: "[Root.GetPreviewColorTEU][Root.GetSelectableMissionTitle][Root.GetPreviewColorTEU_end]"
+ eng_m_ire_dummy_path_3_desc: "[Root.GetSelectableMissionDescription]"
+ eng_m_ire_dummy_path_4_desc: "[Root.GetSelectableMissionDescription]"
+ eng_lenient_oversight_path_effects_tt: "\nIf §Y[Root.GetName]§! chooses the §YLenient Oversight§! Path, the following effects will occur:"
+ eng_ireland_oppression_effects_tt: "\nIf §Y[Root.GetName]§! chooses the §YIrish Oppression§! Path, the following effects will occur:"
  
  eng_m_naval_1_title: "Port of Yarmouth"
  eng_m_naval_1_desc: "Yarmouth is a very old city with a long tradition of shipbuilding, sail-making, and all manner of naval production, unsurprisingly. More importantly, its strategic location makes it a valuable location for power projection over the Channel."
@@ -66,11 +85,7 @@
  eng_m_army_2_desc: ""
  cheaper_UU_upgrades: "[Root.GetName] gets '§YModel Army§!' until the end of the game, giving the following effects:\n§PElite Unit§! Upgrade Cost: §G-10.0%§!"
  eng_model_army_wins_count: "Battles Won"
- 
- eng_m_ireland_4_title: "Army of Ireland"
- eng_m_ireland_4_desc: ""
- eng_m_ireland_4_TT: "Units recruited in §YIreland§! will §Grefund 250 manpower§!"
- 
+
  eng_m_timber_title: "Timber Security"
  eng_m_timber_desc: ""
  eng_m_timber_trigger_TT: "§YRoyal Forests§! system is no longer in decline"
@@ -138,6 +153,8 @@
  mr_eng_pacification: "England Pacified"
  mr_naval_maintenance: "Revitalized Naval Supply Industry"
  mr_eng_government_reforms: "Ministerial Consolidation"
+ eng_active_conversion: "Active Conversion"
+ eng_lenient_oversight: "Lenient Oversight"
  mr_lollard_conc_3: ""
  mr_lollard_conc_3b: ""
  mr_lollard_conc_4: ""
@@ -154,6 +171,11 @@
  NO_CONFESSIONS_LOLLARD: ""
  CLERICAL_AUTONOMY_LOLLARD: ""
  CLERICAL_AUTONOMY_LOLLARD_LOYALTY: ""
+ mr_eng_colonize_ireland: "Reisland Penal Colonies"
+ mr_eng_the_twenty_plantations: "The Twenty Plantations"
+ mr_eng_colonial_experience: "Legacy of Colonial Aspirations"
+ mr_eng_private_plantation: "Private Plantations
+ mr_eng_colonial_assets: "Colonial Fodder"
  
  ### misc
  mr_anglo_hibernian: "Anglo-Hibernian"
@@ -231,6 +253,12 @@
  mr_england.2009.t: "William Seanlaoich"
  mr_england.2009.d: "Born to Irish father John and English mother Mary in a village on the outskirts of Dublin, William Seanlaoich's early life is sparesly recorded, with scant documents only revealing an education in Latin and Greek - not unusual of grammar school attendants. Regardless of his upbringing, much of his known life comes after his first breakout play in London. As playwright, his theatrical productions quickly gained fame throughout London, and then England. His work is often cited as the origin of several Irish loanwords popularized and brought into the English language which persevere even today: ciotóg, craic, and moran, to name a few. Today, even those unfamiliar with theater and poetry will likely know 'Dream of a Midsummer Night,' 'Alexander,' and 'The Merchant of Genoa.'"
  mr_england.2009.a: "I'm looking forward to the next one!"
+ 
+ mr_england.2010.t: "Plantation of [Root.GetName]"
+ mr_england.2010.d: "Although the ruling class has been supplanted with thoroughly Anglicized Irish, the general populace is still native of great number and evermore disatisfied with the tight grasp on the island. The Plantation Scheme was devised by Crown advisors to completely pacify Ireland and simultaneously extract all the wealth it could from the land and its people."
+ mr_england.2010.a: "Let private merchants handle it."
+ mr_england.2010.b: "Administer order directly."
+ mr_england.2010.c: "Enact unfulfillable contracts of servitude."
  
  mr_england.3.t: "Two Islands, One State"
  mr_england.3.d: "Since the conquest of Ireland, the people of have quickly taken to adopting the English language, followed closely by adopting many of the cultural practices of people in England proper. Reports have even gone so far as to call the people of Dublin 'More English than the English themselves,' despite it being the premier center of Irish culture only decades before. With the impetus of conquering Ireland being uniting both Kingdoms under the same crown, it would not be unreasonable to finally officialize this permanent union of crowns into one."
@@ -428,12 +456,26 @@
  mr_england.14.d: "A local lord from Cork, Mathghamhna was a learned writer, educated to write not only in his native tounge of Irish, but also English and Latin. His works and translated texts serve as a bridge between the two islands's cultures."
  mr_england.14.a: "Interesting."
  
+ mr_england.14.t: "Finghin O Mathghamhna"
+ mr_england.14.d: "A local lord from Cork, Mathghamhna was a learned writer, educated to write not only in his native tounge of Irish, but also English and Latin. His works and translated texts serve as a bridge between the two islands's cultures."
+ mr_england.14.a: "Interesting."
+ 
+ mr_england.15.t: "Richard Neville"
+ mr_england.15.d: "The House of Neville descends from an old family in the north of England. During the Hundred Years Anarchy, the family rose to prominence eventually seizing control of the English throne. A nephew of the [Root.Monarch.GetTitle] [Root.Monarch.GetName], Richard Neville gained some noteriety as a young man in the final years of the Anarchy, and was subsequently awarded a position as Captain of Calais. The position was highly regarded and sought after because of the office's role in designating tariffs and trade from the mainland through the port."
+ mr_england.15.a: "We should recall him for military service."
+ mr_england.15.b: "He should keep his post."
+ 
+ mr_england.16.t: "William Warham"
+ mr_england.16.d: "Bishop of London, William Warham, has made quite the name for himself. He is well known among clerical circles for his rivalry with other bishops in England. His position in London has insulated him from much recourse, but the choice to keep him emplaced is ultimately the decision of the Crown. Unfortunately the politics of the Church all but guarantee that ousting him from London would see him promoted to Archbishop if recalled to Canterbury."
+ mr_england.16.a: "Keep him close."
+ MR_BISHOP_OF_LONDON_OUSTED: "Bishop of London Ousted"
+ 
+ mr_england.17.t: "Edward Poyning"
+ mr_england.17.d: ""
+ mr_england.17.a: ""
  
  
  
- 
- 
- 
- mr_england..t: "
- mr_england..d: "
- mr_england..a: "
+ mr_england.x.t: "
+ mr_england.x.d: "
+ mr_england.x.a: "

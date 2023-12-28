@@ -107,39 +107,39 @@
 	# death_date = 1469.1.1 #died
 # }
 
-advisor = {
-	advisor_id = 221
-	name = "Ó Mathghamhna" #Finghin Ó Mathghamhna, scholar and translator of English books into Irish 
-	location = 376 #Connaught
-	discount = yes
-	skill = 1
-	type = artist
-	date = 1456.1.1 #40 years before his death (birth date is unknown)
-	death_date = 1496.1.1 #died
-}
+# advisor = {
+	# advisor_id = 221
+	# name = "Ó Mathghamhna" #Finghin Ó Mathghamhna, scholar and translator of English books into Irish 
+	# location = 376 #Connaught
+	# discount = yes
+	# skill = 1
+	# type = artist
+	# date = 1456.1.1 #40 years before his death (birth date is unknown)
+	# death_date = 1496.1.1 #died
+# }
 
-#also as an overrated leader present
-advisor = {
-	advisor_id = 222
-	name = "Richard Neville" #16th Earl of Warwick, used his wealth and power to help depose Henry VI 
-	location = 237 #Oxfordshire (Oxford)
-	discount = yes
-	skill = 3
-	type = statesman 
-	date = 1458.11.22 #30 years old
-	death_date = 1471.4.14 #died
-}
+# #also as an overrated leader present
+# advisor = {
+	# advisor_id = 222
+	# name = "Richard Neville" #16th Earl of Warwick, used his wealth and power to help depose Henry VI 
+	# location = 237 #Oxfordshire (Oxford)
+	# discount = yes
+	# skill = 3
+	# type = statesman 
+	# date = 1458.11.22 #30 years old
+	# death_date = 1471.4.14 #died
+# }
 
-advisor = {
-	advisor_id = 223
-	name = "William Warham" #diplomat in the service of Henry VII 
-	location = 234 #Wessex 
-	discount = yes
-	skill = 1
-	type = diplomat 
-	date = 1480.1.1 #30 years old
-	death_date = 1532.1.1 #died
-}
+# advisor = {
+	# advisor_id = 223
+	# name = "William Warham" #diplomat in the service of Henry VII 
+	# location = 234 #Wessex 
+	# discount = yes
+	# skill = 1
+	# type = diplomat 
+	# date = 1480.1.1 #30 years old
+	# death_date = 1532.1.1 #died
+# }
 
 advisor = {
 	advisor_id = 224
@@ -153,18 +153,18 @@ advisor = {
 	death_date = 1521.1.1 #died
 }
 
-advisor = {
-	advisor_id = 225
-	name = "Erasmus" #Desiderius Erasmus, most important humanist 
-	location = 236 #London (because of Praise of folly being published in England)
-	discount = yes
-	skill = 3
-	culture = dutch
-	religion = catholic
-	type = philosopher 
-	date = 1496.10.27 #30 years old
-	death_date = 1536.7.12 #died
-}
+# advisor = {
+	# advisor_id = 225
+	# name = "Erasmus" #Desiderius Erasmus, most important humanist 
+	# location = 236 #London (because of Praise of folly being published in England)
+	# discount = yes
+	# skill = 3
+	# culture = dutch
+	# religion = catholic
+	# type = philosopher 
+	# date = 1496.10.27 #30 years old
+	# death_date = 1536.7.12 #died
+# }
 
 advisor = {
 	advisor_id = 226

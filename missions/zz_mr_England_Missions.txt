@@ -435,7 +435,7 @@ england_missions_irish_branch = {
 	has_country_shield = yes
 	potential = { tag = ENG }
 	
-	eng_m_ireland = { 
+	eng_m_ireland = { #Retake Ireland
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_united_kingdom }
 		position = 3
@@ -454,22 +454,23 @@ england_missions_irish_branch = {
 			add_mil_power = 100
 		}
 	}
-	eng_m_ireland_2 = {
+	eng_m_ireland_2 = { #End the Gaelic Resurgence
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_ireland }
 		position = 3
 		provinces_to_highlight = {
 			province_group = ireland_region
 			OR = {
-				NOT = { local_autonomy = 5 }
-				NOT = { unrest = 1 }
-				is_state_core = ROOT
+				local_autonomy = 10
+				unrest = 1
+				nationalism = 1
+				NOT = { is_state_core = ROOT }
 			}
 		}
 		trigger = {
 			ireland_region = {
 				type = all 
-				NOT = { local_autonomy = 5 }
+				NOT = { local_autonomy = 10 }
 				NOT = { unrest = 1 }
 				NOT = { nationalism = 1 }
 				is_state_core = ROOT
@@ -486,12 +487,132 @@ england_missions_irish_branch = {
 			}
 		}
 	}
+}
+#####
+england_missions_irish_dummy_branch = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = ENG
+		NOT = { has_country_flag = eng_lenient_oversight_flag }
+		NOT = { has_country_flag = eng_ireland_oppression_flag }
+	}
+	
+	eng_m_ire_dummy_path_3 = {
+		icon = mission_unknown_mission
+		required_missions = { eng_m_ireland_2 }
+		position = 4
+		provinces_to_highlight = {
+			province_group = ireland_region
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = {
+				ireland_region = {
+					type = all 
+					culture = mr_anglo_hibernian
+				}
+				calc_true_if = {
+					amount = 11
+					ireland_region = {
+						owned_by = ROOT
+						culture = mr_anglo_hibernian
+						num_of_times_improved = 3
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = eng_lenient_oversight_path_effects_tt
+			country_event = { id = mr_england.3 }
+			add_country_modifier = {
+				name = eng_anglo_hibernian_union
+				duration = -1
+			}
+			custom_tooltip = eng_ireland_oppression_effects_tt
+			add_country_modifier = {
+				name = mr_eng_colonize_ireland
+				duration = -1
+			}
+			custom_tooltip = eng_m_ireland_oppress_3_TT
+		}
+	}
+	eng_m_ire_dummy_path_4 = {
+		icon = mission_unknown_mission
+		required_missions = {
+			eng_m_ire_dummy_path_3
+			eng_m_army_2
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_group = ireland_region
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = {
+				calc_true_if = {
+					amount = 10
+					province_group = ireland_region
+					owned_by = ROOT
+					has_forcelimit_building_trigger = yes
+					base_manpower = 8
+				}
+				ireland_region = {
+					type = all
+					owned_by = ROOT
+					culture = mr_anglo_hibernian
+					has_building = counting_house
+					fort_level = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = eng_lenient_oversight_path_effects_tt
+			custom_tooltip = eng_m_ireland_4_TT
+			custom_tooltip = eng_ireland_oppression_effects_tt
+			ireland_region = {
+				limit = { has_province_modifier = eng_active_conversion }
+				remove_province_modifier = eng_active_conversion
+			}
+			ireland_region = {
+				add_province_modifier = {
+					 name = mr_eng_the_twenty_plantations
+					 duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mr_eng_colonial_experience
+				duration = -1
+			}
+		}
+	}
+}
+######
+england_missions_lenient_irish_branch = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = ENG
+		has_country_flag = eng_lenient_oversight_flag
+	}
+	
 	eng_m_ireland_3 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_ireland_2 }
 		position = 4
 		provinces_to_highlight = {
 			province_group = ireland_region
+			NOT = { culture = mr_anglo_hibernian }
 		}
 		trigger = {
 			ireland_region = {
@@ -505,7 +626,6 @@ england_missions_irish_branch = {
 					remove_province_modifier = eng_ire_subsidies
 				}
 			}
-		
 			country_event = { id = mr_england.3 }
 			add_country_modifier = {
 				name = eng_anglo_hibernian_union
@@ -522,6 +642,8 @@ england_missions_irish_branch = {
 		position = 5
 		provinces_to_highlight = {
 			province_group = ireland_region 
+			has_forcelimit_building_trigger = no
+			NOT = { base_manpower = 8 }
 		}
 		trigger = {
 			calc_true_if = {
@@ -537,7 +659,90 @@ england_missions_irish_branch = {
 		}
 	}
 }
-
+#####
+england_missions_oppress_irish_branch = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = ENG
+		has_country_flag = eng_ireland_oppression_flag
+	}
+	
+	eng_m_ireland_oppress_3 = { #Irish Anglicization
+		icon = mission_build_up_to_force_limit
+		required_missions = { eng_m_ireland_2 }
+		position = 4
+		provinces_to_highlight = {
+			province_group = ireland_region
+			OR = {
+				NOT = { culture = mr_anglo_hibernian }
+				AND = {	
+					NOT = { culture = mr_anglo_hibernian }
+					NOT = { num_of_times_improved = 3 }
+				}
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				amount = 11
+				ireland_region = {
+					owned_by = ROOT
+					culture = mr_anglo_hibernian
+					num_of_times_improved = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mr_eng_colonize_ireland
+				duration = -1
+			}
+			custom_tooltip = eng_m_ireland_oppress_3_TT
+		}
+	}
+	eng_m_ireland_oppress_4 = { #Enterprises of Ireland
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+			eng_m_ireland_oppress_3
+			eng_m_army_2
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_group = ireland_region
+			NOT = { has_building = workshop }
+			NOT = { fort_level = 1 }
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			ireland_region = {
+				type = all
+				owned_by = ROOT
+				culture = mr_anglo_hibernian
+				has_building = counting_house
+				fort_level = 1
+			}
+		}
+		effect = {
+			ireland_region = {
+				limit = { has_province_modifier = eng_active_conversion }
+				remove_province_modifier = eng_active_conversion
+			}
+			ireland_region = {
+				add_province_modifier = {
+					 name = mr_eng_the_twenty_plantations
+					 duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = mr_eng_colonial_experience
+				duration = -1
+			}
+		}
+	}
+}
+#####
 england_missions_naval_branch = {
 	slot = 5
 	generic = no

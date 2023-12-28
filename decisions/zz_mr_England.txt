@@ -74,7 +74,7 @@ country_decisions = {
 			adm_power = 10
 		}
 		effect = {
-			random_owned_area = {
+			random_owned_province = {
 				limit = {
 					province_group = ireland_region
 					local_autonomy = 10

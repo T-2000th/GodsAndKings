@@ -488,6 +488,14 @@ fort_15th = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = { mission_completed = eng_m_ireland_oppress_3 }
+			THIS = {
+				province_event = {
+					id = mr_england.2010
+				}
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -870,6 +878,14 @@ fort_16th = {
 			add_province_modifier = {
 				name = estate_nobles_development_of_castles_mod
 				duration = -1
+			}
+		}
+		if = {
+			limit = { mission_completed = eng_m_ireland_oppress_3 }
+			THIS = {
+				province_event = {
+					id = mr_england.2010
+				}
 			}
 		}
 	}
@@ -1440,6 +1456,14 @@ fort_17th = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = { mission_completed = eng_m_ireland_oppress_3 }
+			THIS = {
+				province_event = {
+					id = mr_england.2010
+				}
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
@@ -1887,6 +1911,14 @@ fort_18th = {
 			add_province_modifier = {
 				name = estate_nobles_development_of_castles_mod
 				duration = -1
+			}
+		}
+		if = {
+			limit = { mission_completed = eng_m_ireland_oppress_3 }
+			THIS = {
+				province_event = {
+					id = mr_england.2010
+				}
 			}
 		}
 	}

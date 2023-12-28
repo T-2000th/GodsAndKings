@@ -4,6 +4,9 @@ namespace = mr_england
 #7 - Lollardy Conclusions (required flavor)
 #8 - mission triggered events
 #9 - Royal Woods events
+#10-12 - Historical Figures flavor events
+#13 - York/Scotland flavor event
+#14-17 - Historical Figures flavor events
 #101,102 - mission triggered events
 #1001-1009 - Crown Agendas Event System
 #2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
@@ -97,6 +100,7 @@ country_event = {
 		name = mr_england.2001.a
 		custom_tooltip = eng_m_ireland_2_TT
 		hidden_effect = { set_country_flag = eng_lenient_oversight_flag }
+		swap_non_generic_missions = yes
 		random_owned_province = {
 			limit = { province_group = ireland_region }
 			change_culture = mr_anglo_hibernian
@@ -111,14 +115,20 @@ country_event = {
 	}
 	option = {
 		name = mr_england.2001.b
+		custom_tooltip = eng_m_ireland_2b_TT
+		hidden_effect = { set_country_flag = eng_ireland_oppression_flag }
+		swap_non_generic_missions = yes
 		random_owned_province = {
-			limit = { province_group = ireland_region }
+			limit = { 
+				province_group = ireland_region
+				NOT = { province_id = 4951 } #dublin
+			}
 			change_culture = mr_anglo_hibernian
 		}
 		every_owned_province = {
 			limit = { province_group = ireland_region }
 			add_province_modifier ={
-				name = eng_active_coversion
+				name = eng_active_conversion
 				duration = -1
 			}
 		}
@@ -471,6 +481,61 @@ country_event = {
 			type = artist
 			cost_multiplier = 0.5
 		}
+	}
+}
+
+#Irish Plantations
+province_event = {
+	id = mr_england.2010
+	title = mr_england.2010.t
+	desc = mr_england.2010.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_province_flag = eng_made_plantation }
+		#triggered by building fort in ireland after completing mission eng_m_ireland_oppress_3
+		#only happens once per province
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = { #private enterprises
+		name = mr_england.2010.a
+		if = {
+			limit = { has_t2_goods = no }
+			change_trade_goods = unknown
+		}
+		else = {
+			add_base_production = 1
+		}
+		add_province_modifier = {
+			name = mr_eng_private_plantation
+			duration = -1
+		}
+		remove_province_modifier = eng_active_conversion
+	}
+	
+	option = { #crown enterprises
+		name = mr_england.2010.b
+		add_province_modifier = {
+			name = mr_eng_crown_enterprise
+			duration = -1
+		}
+		remove_province_modifier = eng_active_conversion
+	}
+	
+	option = { #Unfulfillable Contracts of Servitude
+		name = mr_england.2010.b
+		change_trade_goods = slaves
+		add_province_modifier = {
+			name = mr_eng_colonial_assets
+			duration = -1
+		}
+		remove_province_modifier = eng_active_conversion
+	}
+	
+	after = {
+		set_province_flag = eng_made_plantation
 	}
 }
 
@@ -2632,6 +2697,18 @@ country_event = {
 			culture = scottish
 			religion = ROOT
 		}
+		SCO = {
+			add_opinion = {
+				who = YRK
+				modifier = mr_boyd_mission
+			}
+		}
+		YRK = {
+			add_opinion = {
+				who = SCO
+				modifier = mr_boyd_mission
+			}
+		}
 	}
 	option = {
 		ai_chance = { factor = 1 }
@@ -2644,6 +2721,18 @@ country_event = {
 			type = diplomat
 			culture = scottish
 			religion = ROOT
+		}
+		SCO = {
+			add_opinion = {
+				who = YRK
+				modifier = mr_boyd_mission
+			}
+		}
+		YRK = {
+			add_opinion = {
+				who = SCO
+				modifier = mr_boyd_mission
+			}
 		}
 	}
 }
@@ -2672,8 +2761,102 @@ country_event = {
 		trigger = { primary_culture = english }
 		add_prestige = 10
 	}
+	option = {
 		name = mr_england.14.a
 		trigger = { primary_culture = irish }
 		add_splendor = 20
+	}
+}
+#Richard Neville
+country_event = {
+	id = mr_england.15
+	title = mr_england.15.t
+	desc = mr_england.15.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1458
+		NOT = { is_year = 1498 }
+		dynasty = "Neville"
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.15.a
+		define_general = {
+			name = "Richard Neville"
+			tradition = 60
+			culture = english
+		}
+	}
+	option = {
+		name = mr_england.15.b
+		define_advisor  = {
+			type = trader
+			name = "Richard Neville"
+			skill = 2
+			cost_multiplier = 0.75
+			religion = ROOT
+			culture = english
+		}
+	}
+}
+#William Warham
+country_event = {
+	id = mr_england.16
+	title = mr_england.16.t
+	desc = mr_england.16.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1480
+		NOT = { is_year = 1520 }
+		primary_culture = english
+		religion = catholic
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.16.a
+		add_estate_influence_modifier = {
+			estate = estate_church
+			desc = MR_BISHOP_OF_LONDON_OUSTED
+			influence = -5
+			duration = 9125
+		}
+	}
+	option = {
+		name = mr_england.16.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+}
+#Edward Poyning
+country_event = {
+	id = mr_england.17
+	title = mr_england.17.t
+	desc = mr_england.17.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1489
+		NOT = { is_year = 1529 }
+		primary_culture = english
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.17.a
 	}
 }

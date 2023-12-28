@@ -21,14 +21,42 @@ eng_anglo_hibernian_union = {
 	manpower_in_culture_group_provinces = 0.1
 }
 
-eng_active_coversion = {
-	local_culture_conversion_cost = 0.20
-	local_unrest = 3
+eng_active_conversion = {
+	local_culture_conversion_cost = -0.2
+	local_culture_conversion_time = 5.0
+	local_unrest = 5
+}
+
+mr_eng_colonize_ireland = {
+	colonist_placement_chance = 0.05
+	colony_cost_modifier = -0.1
 }
 
 eng_lenient_oversight = {
-	local_culture_conversion_cost = 1.5
+	local_culture_conversion_cost = 2
 	local_tax_modifier = -0.1
+}
+
+mr_eng_the_twenty_plantations = {
+	trade_goods_size_modifier = 1
+}
+
+mr_eng_colonial_experience = {
+	reduced_liberty_desire = 15
+}
+
+mr_eng_private_plantation = {
+	local_tax_modifier = -0.20
+	province_trade_power_modifier = 0.5
+}
+
+mr_eng_colonial_assets = {
+	global_colonial_growth = 1
+}
+
+mr_eng_crown_enterprise = {
+	local_production_efficiency = 0.25
+	local_governing_cost_increase = 2
 }
 
 eng_ire_subsidies = {
@@ -93,7 +121,7 @@ mr_eng_model_army = {
 }
 
 mr_eng_crown_guard = {
-	fire_damage = 0.20
+	fire_damage = 0.10
 }
 
 eng_m_neglected_royal_woods = {
