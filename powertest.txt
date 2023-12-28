@@ -1,6 +1,6 @@
 every_province = {
 	limit = {
-		trade_goods = horses
+		continent = south_america
 	}
 	add_core = ROOT
 	cede_province = ROOT
