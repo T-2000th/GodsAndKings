@@ -380,6 +380,9 @@ HUN_flavor.22.a: "Best stay out of it."
  navarra_events.18.1: "The University of Seville bought it and the students wondered what else lay beneath."
  navarra_events.18.2: "The King bought it, displaying it and saying "We Conquered the Sea"."
  navarra_events.18.3: "A Catalonian Merchant bought it, holding a feast in Barcelona that lasted days."
+ 
+ consort_events.314.f: "Two can play at this game..."
+ consort_events.314.f.tt: "[Root.Monarch.GetTitle] §Y[Root.Monarch.GetName] [Root.Monarch.Dynasty.GetName]§! will seduce and begin an affair with The Treasurer §Y[Root.Adm_Advisor.GetName]§!'s wife."
 
 ##Baghdad Events
 mr_baghdad_flavor.1.t: "The Caged Caliph"
@@ -499,3 +502,4 @@ mrLevantFlavor.3.oa: "Deus vult!"
 mrLevantFlavor.3.ob: "Allahuakbar!"
 mrLevantFlavor.3.oc: "I don't see what the big deal is."
 mrLevantFlavor.3.od: "Finally home in the City of David!"
+
