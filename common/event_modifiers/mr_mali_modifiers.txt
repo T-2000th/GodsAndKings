@@ -92,3 +92,9 @@ land_mapping_mal = {
 clearing_the_highlands = {
 	local_build_cost = -0.25
 }
+naval_forcelimit_MAL = {
+	naval_forcelimit_modifier = 0.25
+}
+plus_good_production = {
+	trade_goods_size = 1
+}

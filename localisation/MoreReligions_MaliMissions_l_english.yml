@@ -28,7 +28,10 @@ mr_mali_jolof_second_title: "Fate of the Confederation"
 mr_mali_guinean_first_title: "Into the Jungle"
 mr_mali_guinean_second_title: "Prepare for our Invasion"
 mr_mali_guinean_third_title: "The Southern Expedition"
+mr_mali_guinean_fourth_title: "The Mane Lumberyards"
 
+
+mr_mali_farma_first_title: "Align the Farma"
 
 
 
@@ -47,7 +50,7 @@ gain_extra_bonus_yes: "£yes£If we complete this mission while owning all of th
 gain_extra_bonus_no: "£no£If we complete this mission while owning all of the Banda Oriental Area, all province in the area will gain the following:"
 no_farma_tt: "All §YFarma Vassals§! must have §Y100 Opinion§! and less than §Y50 Liberty Desire§!."
 invaders_of_mali: "Malian Sea Raiders"
-given_subsidies_or_cash: "Either have +20 Relations Modifier from Send Gift with @GAO Gao or Subsidize 30% of  @GAO Gao's Income."
+given_subsidies_or_cash: "Either have +20 Relations Modifier from Send Gift with @GAO Gao or Subsidize 30% of @GAO Gao's Income."
 enable_growth_of_sugar_decisions: "This will enable the §YGrowth of Sugar§! Decisions." 
 sale_of_sugar_TT: "One of the following must be true:\n\nOwn a province with the §YSugar§! Trade Good.\nHave §Y+100§! Opinion with an owner of a Province with §YSugar§! as its Trade Good.\n\n§TWe can only export sugar from a province one time!§!"
 highlighted_provinces_get_tax: "Every province that meets the requirement will gain §Y2 Base Taxation§! and §Y2 Base Production§!."
@@ -81,6 +84,7 @@ gain_modifier_TT_yes: "£yes£If we complete this mission while directly owning 
 gain_modifier_TT_no: "£no£If we complete this mission while directly owning all §YGuinea§! provinces, these provinces will gain the following:"
 temne_farma_tt_no: "£no£If we complete this mission while @TEE §YTemne§! ownes all §YGuinea§! provinces. they will be automatically upgraded to a §YCore Farma§!.\n"
 temne_farma_tt_yes: "£yes£If we complete this mission while @TEE §YTemne§! ownes all §YGuinea§! provinces. they will be automatically upgraded to a §YCore Farma§!.\n"
+goods_produced_production_TT: "If we have an available §YLumber§! or §YTropical Wood§! province, it will be transformed into §YNaval Supplies§!.\n\nAll provinces that meet the requirements will gain the following:"
 
 
 #Modifiers
@@ -103,6 +107,7 @@ digging_for_gold_mali: "Digging for Gold"
 malian_winners: "Naval Masters"
 clearing_the_highlands: "Clearing the Highlands"
 land_mapping_mal: "Mapping the Forests"
+naval_forcelimit_MAL: "Lumber of the Mane"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
