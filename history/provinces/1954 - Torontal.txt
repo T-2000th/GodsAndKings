@@ -3,7 +3,7 @@
 owner = HUN
 controller = HUN 
 culture = hungarian
-religion = catholic
+religion = orthodox
 capital = "Nagybecskerek"
 trade_goods = grain
 hre = no

@@ -37,7 +37,8 @@ country_event = {
 			release = AAB
 			release = KSZ
 			release = KNN
-			release = JAA
+			# release = JAA # they can't really be annexed in time
+			release_all_subjects = yes
 			1951 = {
 				cede_province = JAA
 			}
@@ -46,6 +47,11 @@ country_event = {
 			}
 			5439 = { 
 				cede_province = JAA 
+			}
+			WAL = {
+				country_event = {
+					id = HUN_flavor.22
+				}
 			}
 		}
 		hidden_effect = {
@@ -63,6 +69,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = CSA
@@ -130,6 +138,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = AAB
@@ -197,6 +207,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = KSZ
@@ -264,11 +276,12 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = KNN
 				}
-				add_accepted_culture = transylvanian 
 				define_ruler = {
 					name = "Arpad"
 					dynasty = "Kan"
@@ -332,6 +345,8 @@ country_event = {
 						NOT = {
 							area = wallachia_area
 							area = moldavia_area
+							area = oltenia_area
+							area = lower_moldavia_area
 						}
 					}
 					add_core = JAA
@@ -1871,5 +1886,55 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
+		custom_tooltip = HUN_flavor.21.a.custom_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					WAL = {
+						exists = yes
+						is_at_war = no
+						ai = yes
+					}
+				}
+				vassalize = WAL
+			}
+		}
+
 	}
+}
+
+country_event = { # Wallachia is informed of the civil war
+	id = HUN_flavor.22
+	title = HUN_flavor.22.t
+	desc = HUN_flavor.22.d
+	picture = MILITARY_CAMP_eventPicture
+
+	major = no
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #stay out of it
+		name = HUN_flavor.22.a
+	}
+	# option = { # Stay loyal to the Hungarian Crown
+	# 	name = HUN_flavor.22.b
+	# 	custom_tooltip = HUN_flavor.22.loyalty_custom_tooltip
+	# 	trigger = {
+	# 		ai = no
+	# 	}
+	# }
+	# option = { # Pledge loyalty to the Joannite Knights
+	# 	name = HUN_flavor.22.c
+	# 	custom_tooltip = HUN_flavor.22.loyalty_custom_tooltip
+	# 	JAA = {
+	# 		create_march = WAL
+	# 	}
+	# 	join_all_defensive_wars_of = JAA
+	# 	join_all_offensive_wars_of = JAA
+	# 	trigger = {
+	# 		ai = no
+	# 	}
+	# }
 }

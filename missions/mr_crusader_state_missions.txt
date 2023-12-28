@@ -129,7 +129,7 @@ crusader_missions_1_antioch = {
 		is_or_was_tag = { tag = ATI }
 	}
 
-	ati_old_claims = {
+	ati_old_claims = { # Annex Cilicia
 		icon = mission_among_the_great_powers
 		required_missions = { }
 		position = 1
@@ -139,6 +139,7 @@ crusader_missions_1_antioch = {
 				province_id = 327
 				province_id = 2302
 				province_id = 5387
+				province_id = 5515
 			}
 		}
 
@@ -146,11 +147,13 @@ crusader_missions_1_antioch = {
 			327 = { country_or_non_sovereign_subject_holds = root }
 			2302 = { country_or_non_sovereign_subject_holds = root }
 			5387 = { country_or_non_sovereign_subject_holds = root }
+			5515 = { country_or_non_sovereign_subject_holds = root }
 		}
 
 		effect = {
 			add_prestige_or_monarch_power = { amount = 25 }
 			add_adm_power = 50
+			add_permanent_claim = 5516
 		}
 	}
 
@@ -212,6 +215,9 @@ crusader_missions_1_antioch = {
 					NOT = { exists = SIC }
 					NOT = { exists = TTS }
 				}
+				# Bypass in case you got an early claim/free PU due to same dynasty
+				SIC = { is_subject_of = ROOT }
+				TTS = { is_subject_of = ROOT }
 			}
 		}
 
@@ -247,11 +253,11 @@ crusader_missions_1_antioch = {
 					add_permanent_claim_multi_provinces = { target = western_sicily_area }
 				}
 				if = {
-					limit = { 
+					limit = {
 						OR = {
 							marriage_with = SIC
 							marriage_with = TTS
-						} 
+						}
 					}
 					add_country_modifier = {
 						name = cs_flexible_marriages

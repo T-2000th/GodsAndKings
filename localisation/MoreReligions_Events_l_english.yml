@@ -190,8 +190,12 @@ HUN_flavor.20.d: "Our capital has fallen, and so our time in the sun has ended."
 HUN_flavor.20.a: "It's never been more over..."
 HUN_flavor.20.da: "We have reclaimed our capital! The fight is on!"
 HUN_flavor.20.b: "We're so back!"
+HUN_flavor.21.a.custom_tooltip: "If Wallachia still exists and is not at war, we will regain our vassal."
 knn_has_content: "\n§YCURRENTLY ONLY TAG WITH COMPLETE CONTENT!§!"
 accepted_crimean: "Accepted Kipchack"
+HUN_flavor.22.t: "The Hungarian Crown Collapsed"
+HUN_flavor.22.d: "It would seem that the authority of the Hungarian kings in Pest has crumbled, with different princes backed up by various oligarchs and powers stacking their claim for the throne. With this, our duties of vassalage are nullified, for the time being."
+HUN_flavor.22.a: "Best stay out of it."
 
  ##Heinan
  shenist_tradition: "Traditional Heir"

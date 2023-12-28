@@ -11022,7 +11022,7 @@ bara_katra = {
 }
 
 bran_castle = {
-	start = 4128 #Királyföld
+	start = 5439 #Brasov
 	date = 1357.01.01
 	time = { months = 0	}
 	build_cost = 0
@@ -11038,18 +11038,12 @@ bran_castle = {
 					NOT = { has_country_flag = teu_can_utilize_bran_castle }
 				}
 			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
 			OR = {
-				AND = {
-					culture_group = carpathian
-					province_is_or_accepts_culture = yes
-				}
-				AND = {
-					culture = roman
-					province_is_or_accepts_culture = yes
-				}
+				culture_group = germanic
+				culture_group = carpathian
+				culture = roman
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 
@@ -11066,18 +11060,12 @@ bran_castle = {
 					NOT = { has_country_flag = teu_can_utilize_bran_castle }
 				}
 			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
 			OR = {
-				AND = {
-					culture_group = carpathian
-					province_is_or_accepts_culture = yes
-				}
-				AND = {
-					culture = roman
-					province_is_or_accepts_culture = yes
-				}
+				culture_group = germanic
+				culture_group = carpathian
+				culture = roman
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 
@@ -11088,18 +11076,12 @@ bran_castle = {
 					NOT = { has_country_flag = teu_can_utilize_bran_castle }
 				}
 			}
-			culture_group = carpathian
-			province_is_or_accepts_culture = yes
 			OR = {
-				AND = {
-					culture_group = carpathian
-					province_is_or_accepts_culture = yes
-				}
-				AND = {
-					culture = roman
-					province_is_or_accepts_culture = yes
-				}
+				culture_group = germanic
+				culture_group = carpathian
+				culture = roman
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 

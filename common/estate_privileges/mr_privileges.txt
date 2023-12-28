@@ -905,7 +905,41 @@ estate_church_mr_imperial_introspection = {
 	cooldown_years = 20
 }
 
-# Just merge the contents of this file into mr_privileges.txt when integrating content. :) (Inferno)
+estate_church_ambiguous_allegience = {
+	icon = estate_church_WAL_ambiguous_church_allegience
+	loyalty = -0.10
+	influence = -0.15
+	is_valid = {
+		tag = WAL
+		religion = catholic
+	}
+	on_granted = {
+		every_country = {
+			limit = {
+				religion = orthodox
+			}
+			add_opinion = {
+				who = root
+				modifier = same_religion
+				multiplier = 1
+				years = 400
+			}
+		}
+	}
+	conditional_modifier = {
+	}
+	can_select = {
+		religion = catholic
+	}
+	penalties = {
+		global_missionary_strength = -1
+		global_tax_modifier = -0.1
+		prestige_decay = 0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 estate_nobles_integrate_the_amazigh = {
 	icon = estate_eunuchs_outwards_perfection_privilege
@@ -1049,7 +1083,7 @@ estate_dhimmi_promote_multicultural_positions = {
 	on_granted = {
 		custom_tooltip = turkoman_well_connected_chace_tt
 		hidden_effect = {
-			set_country_flag = turkoman_triple_trait_chance			
+			set_country_flag = turkoman_triple_trait_chance
 		}
 	}
 	on_revoked = {
@@ -1062,7 +1096,7 @@ estate_dhimmi_promote_multicultural_positions = {
 		custom_tooltip = afr_odds_trait_normal
 		hidden_effect = {
 			clr_country_flag = turkoman_triple_trait_chance
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 0
@@ -1146,7 +1180,7 @@ estate_burghers_development_of_the_maghreb = {
 					}
 					remove_province_modifier = afr_development_in_the_mountains
 				}
-			}			
+			}
 		}
 	}
 	on_invalid = {
@@ -1171,8 +1205,8 @@ estate_burghers_development_of_the_maghreb = {
 					}
 					remove_province_modifier = afr_development_in_the_mountains
 				}
-			}			
-		}		
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 5
