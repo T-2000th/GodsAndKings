@@ -137,6 +137,16 @@ philosopher = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 }
 
 ######################################################
@@ -289,6 +299,16 @@ natural_scientist = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 }
 
 ######################################################
@@ -409,7 +429,16 @@ artist = {
 			global_missionary_strength = 0.005
 		}
 	}
-	
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 }
 
 ######################################################
@@ -530,6 +559,16 @@ treasurer = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -677,6 +716,16 @@ theologian = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 
@@ -816,6 +865,16 @@ master_of_mint = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -980,6 +1039,16 @@ inquisitor = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tax_from_advisors 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 		modifier = {
@@ -1093,6 +1162,16 @@ statesman = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1189,6 +1268,16 @@ naval_reformer = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 		modifier = {
@@ -1293,6 +1382,16 @@ trader = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1382,6 +1481,16 @@ spymaster = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1458,6 +1567,16 @@ colonial_governor = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 		modifier = {
@@ -1551,6 +1670,16 @@ diplomat = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1636,6 +1765,16 @@ navigator = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_trade_from_advisors 
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+		}
+	}	
 	chance = {
 		factor = 1
 		modifier = {
@@ -1711,6 +1850,16 @@ army_reformer = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}		
 	chance = {
 		factor = 1
 	}
@@ -1798,6 +1947,16 @@ army_organiser = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1886,6 +2045,16 @@ commandant = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -1953,6 +2122,16 @@ quartermaster = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -2023,6 +2202,16 @@ recruitmaster = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 	}
@@ -2094,6 +2283,16 @@ fortification_expert = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 		
@@ -2161,6 +2360,16 @@ grand_captain = {
 			global_missionary_strength = 0.005
 		}
 	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = balkh_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			army_tradition = 0.2
+		}
+	}	
 	chance = {
 		factor = 1
 	}
