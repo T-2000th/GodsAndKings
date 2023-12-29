@@ -435,3 +435,16 @@ is_staple_crop = {
 	trade_goods = tomato
 	trade_goods = maize
 }
+
+is_greek = {
+	OR = {
+		primary_culture = greek
+		primary_culture = epirote
+		primary_culture = micrasiate
+		primary_culture = peloponnesian
+		primary_culture = aegean
+		primary_culture = borean
+		primary_culture = griko
+		primary_culture = pontic_greek
+	}
+}
