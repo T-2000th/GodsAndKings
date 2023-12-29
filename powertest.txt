@@ -1,30 +1,7 @@
-148 = {
-					add_province_modifier = {
-						name = greek_population_boom
-						duration = 1095
-					}
-				}
-				144 = {
-					add_province_modifier = {
-						name = greek_population_boom
-						duration = 1095
-					}
-				}
-				4701 = {
-					add_province_modifier = {
-						name = greek_population_boom
-						duration = 1095
-					}
-				}
-				146 = {
-					add_province_modifier = {
-						name = greek_population_boom
-						duration = 1095
-					}
-				}
-				149 = {
-					add_province_modifier = {
-						name = greek_population_boom
-						duration = 1095
-					}
-				}
+every_province = {
+	limit = {
+		continent = south_america
+	}
+	add_core = ROOT
+	cede_province = ROOT
+}

@@ -2,7 +2,7 @@
 
 owner = BUL
 controller = BUL
-culture = bulgarian
+culture = crimean
 religion = orthodox
 capital = "Tolcu"
 trade_goods = wool

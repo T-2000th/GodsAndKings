@@ -1500,9 +1500,15 @@ mr_gsc_missions_fourth = {
 				culture = miao
 				value = 6
 			}
+			OR = {
 			num_of_owned_provinces_with = {
 				culture = zhuang
 				value = 3
+			}
+			num_of_owned_provinces_with = {
+				culture = zhuang_new
+				value = 3
+			}			
 			}
 		}
 		effect = {

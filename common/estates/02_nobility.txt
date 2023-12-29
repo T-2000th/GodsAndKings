@@ -490,6 +490,9 @@ estate_nobles = {
 		estate_nobles_mr_balanced_szlachta
 		estate_nobles_diet_right_aragon
 		estate_nobles_mr_warlord_aristocracy_gsc
+		# To be integrated, African privileges (Inferno)
+		estate_nobles_integrate_the_amazigh
+		estate_nobles_sicilian_reliance
 	}
 
 	agendas = {

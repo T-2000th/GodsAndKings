@@ -426,3 +426,25 @@ is_french_bishop_elector = {
 		tag = NYN
 	}
 }
+
+is_staple_crop = {
+	trade_goods = grain
+	trade_goods = rice
+	trade_goods = vegetables
+	trade_goods = potato
+	trade_goods = tomato
+	trade_goods = maize
+}
+
+is_greek = {
+	OR = {
+		primary_culture = greek
+		primary_culture = epirote
+		primary_culture = micrasiate
+		primary_culture = peloponnesian
+		primary_culture = aegean
+		primary_culture = borean
+		primary_culture = griko
+		primary_culture = pontic_greek
+	}
+}

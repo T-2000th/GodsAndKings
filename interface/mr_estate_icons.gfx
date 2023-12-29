@@ -1,0 +1,3 @@
+spriteTypes = {
+	spriteType = { name = "estate_church_WAL_ambiguous_church_allegience" texturefile = "gfx/interface/privileges/estate_church_WAL_ambiguous_church_allegience.dds" } 
+}

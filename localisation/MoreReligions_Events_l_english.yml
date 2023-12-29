@@ -190,8 +190,12 @@ HUN_flavor.20.d: "Our capital has fallen, and so our time in the sun has ended."
 HUN_flavor.20.a: "It's never been more over..."
 HUN_flavor.20.da: "We have reclaimed our capital! The fight is on!"
 HUN_flavor.20.b: "We're so back!"
+HUN_flavor.21.a.custom_tooltip: "If Wallachia still exists and is not at war, we will regain our vassal."
 knn_has_content: "\n§YCURRENTLY ONLY TAG WITH COMPLETE CONTENT!§!"
 accepted_crimean: "Accepted Kipchack"
+HUN_flavor.22.t: "The Hungarian Crown Collapsed"
+HUN_flavor.22.d: "It would seem that the authority of the Hungarian kings in Pest has crumbled, with different princes backed up by various oligarchs and powers stacking their claim for the throne. With this, our duties of vassalage are nullified, for the time being."
+HUN_flavor.22.a: "Best stay out of it."
 
  ##Heinan
  shenist_tradition: "Traditional Heir"
@@ -230,9 +234,9 @@ accepted_crimean: "Accepted Kipchack"
  MR_ifat_flavor.1.b: "We shall rule from the port of Zeila"
  MR_ifat_flavor.1.d: "placeholder"
 
- MR_ifat_flavor.12.t: "Afar Raids on Ifat"
- MR_ifat_flavor.12.d: "The Afar and Ifat have held a truce since we were forced to acknowledge their independence in 1435. However, the Afar, like many of the tribes of the northern plains, value raiding and attacking cities for wealth and prosperity. So, in 1444, the Afar launched a raid across the border regions with the Ifat, raiding homes, villages, and even the city of Zeila itself. The Ifat Sultan demanded an apology and restitution, but it did not come. So now, as relations crumble and the truce comes to a close, war seems inevitable between the two sultans."
- MR_ifat_flavor.12.a: "They have gone too far!"
+ MR_ifat_flavor.2.t: "Afar Raids on Ifat"
+ MR_ifat_flavor.2.d: "The Afar and Ifat have held a truce since we were forced to acknowledge their independence in 1435. However, the Afar, like many of the tribes of the northern plains, value raiding and attacking cities for wealth and prosperity. So, in 1444, the Afar launched a raid across the border regions with the Ifat, raiding homes, villages, and even the city of Zeila itself. The Ifat Sultan demanded an apology and restitution, but it did not come. So now, as relations crumble and the truce comes to a close, war seems inevitable between the two sultans."
+ MR_ifat_flavor.2.a: "They have gone too far!"
 
  MR_ifat_flavor.3.t: "Purchase of Chaul"
  MR_ifat_flavor.3.d: "We have recieved a message from a kingdom far across the waves..."
@@ -376,6 +380,9 @@ accepted_crimean: "Accepted Kipchack"
  navarra_events.18.1: "The University of Seville bought it and the students wondered what else lay beneath."
  navarra_events.18.2: "The King bought it, displaying it and saying "We Conquered the Sea"."
  navarra_events.18.3: "A Catalonian Merchant bought it, holding a feast in Barcelona that lasted days."
+ 
+ consort_events.314.f: "Two can play at this game..."
+ consort_events.314.f.tt: "[Root.Monarch.GetTitle] §Y[Root.Monarch.GetName] [Root.Monarch.Dynasty.GetName]§! will seduce and begin an affair with The Treasurer §Y[Root.Adm_Advisor.GetName]§!'s wife."
 
 ##Baghdad Events
 mr_baghdad_flavor.1.t: "The Caged Caliph"
@@ -495,3 +502,4 @@ mrLevantFlavor.3.oa: "Deus vult!"
 mrLevantFlavor.3.ob: "Allahuakbar!"
 mrLevantFlavor.3.oc: "I don't see what the big deal is."
 mrLevantFlavor.3.od: "Finally home in the City of David!"
+

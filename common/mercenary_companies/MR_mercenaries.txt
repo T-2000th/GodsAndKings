@@ -116,3 +116,32 @@ merc_redshanks_upgraded = {
 		shock_damage = 0.15
 	}
 }
+
+# Like the privileges, I'd just merge this into MR_mercenaries.txt. (Inferno)
+
+merc_amazigh_vanguard = {
+    regiments_per_development = 0.03 
+
+    cost_modifier = 0.66 
+
+    home_province = 2456 
+	cavalry_weight = 0.4
+	artillery_weight = 0.1
+	cavalry_cap = 6
+
+    min_size = 4
+
+    sprites = { dlc080_shm_sprite_pack muslimgfx_sprite_pack } # Reuses Bedouin Auxillaries packs
+
+    trigger = {
+        has_unlocked_merc_company = {
+			merc_company = merc_amazigh_vanguard
+		}
+    }
+
+    modifier = { 
+       shock_damage = 0.10 # Older shock tactics
+	   movement_speed = 0.25 # Helps with movement
+	   reinforce_speed = -0.25 # Meant to encourage using them to strike and then pull back
+    }
+}

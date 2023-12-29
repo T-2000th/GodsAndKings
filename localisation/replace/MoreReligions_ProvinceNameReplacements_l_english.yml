@@ -499,10 +499,26 @@
  PROV4705: "Komotini"
  PROV_ADJ4705: "Komotini"
 
+ PROV5387: "Tarsus"
+ PROV_ADJ5387: "Tarsian"
+
  TUN: "Ifriqiya"
  TUN_ADJ: "Ifriqiyan"
 
  tunisian_nation_title: "Form Ifriqiyan Nation"
- 
+
+ PROV161: "Dâmbovita"
+ PROV_ADJ161: "Dâmbovitean"
+ PROV4531: "Teleorman"
+ PROV_ADJ4531: "Teleorman"
+ PROV321: "Nicosia"
+ PROV_ADJ321: "Nicosian"
+
+ wallachia_area: "Muntenia"
+ moldavia_area: "Upper Moldavia"
+ cukurova_area: "Cilicia"
+
  MLK: "Ararat"
  MLK_ADJ: "Araratits
+
+
