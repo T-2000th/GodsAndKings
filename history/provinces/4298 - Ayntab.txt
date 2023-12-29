@@ -2,7 +2,7 @@
 
 owner = ATI
 controller = ATI
-culture = turkish
+culture = mr_safaviyya
 religion = sunni
 capital = "Ayntab"
 trade_goods = wool

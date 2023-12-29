@@ -3,7 +3,7 @@
 owner = MEN
 controller = MEN
 culture = borean #Should not be Greek or Orthodox in 1444. Its status as a majority Greek city dates to at least after the 17th Century / Lol lmao oops
-religion = sunni
+religion = orthodox
 capital = "Izmirni"
 trade_goods = cotton #Major producer and exporter of Cotton
 hre = no
