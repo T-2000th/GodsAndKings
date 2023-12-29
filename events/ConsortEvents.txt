@@ -5194,6 +5194,16 @@ country_event = {
 		}
 		divorce_consort_effect = yes
 	}
+	
+	#FuckHisWife
+	option = {
+	    trigger = { ruler_has_personality_ancestor = { key = silver_tongue } }
+		name = consort_events.314.f
+		custom_tooltip = consort_events.314.f.tt
+		highlight = yes	
+		
+		add_prestige = 10		
+	}	
 }
 
 #Questions concerning legitimacy 
