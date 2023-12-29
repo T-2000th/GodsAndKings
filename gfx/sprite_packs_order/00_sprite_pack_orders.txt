@@ -36,7 +36,11 @@ dlc003_rus_sprite_pack = 70
 dlc005_usa_sprite_pack = 71 # to override British colonial 
 
 # Purple Phoenix
-dlc006_byz_sprite_pack = 20
+# dlc006_byz_sprite_pack = 20 # bad
+MR_greek_base_sprite_pack = 71 # base greeks
+MR_greek_muslim_sprite_pack = 72 # muslim greeks
+MR_greek_catholic_sprite_pack = 72 # catholic greeks
+MR_greek_istinople_sprite_pack = 73 # istinople t1
 
 # Conquistadors and Colonials
 dlc011_spa_sprite_pack = 70

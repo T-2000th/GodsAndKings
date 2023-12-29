@@ -1,0 +1,111 @@
+MR_greek_base_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		is_greek = yes
+		NOT = {
+			OR = {
+				religion = catholic
+				religion_group = muslim
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = TRE_INFANTRY_1
+		1 = TRE_INFANTRY_2
+		2 = TRE_INFANTRY_3
+		3 = TRE_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+        0 = TRE_CAVALRY_1
+        1 = TRE_CAVALRY_2
+        2 = TRE_CAVALRY_3
+        3 = TRE_CAVALRY_3
+   	 }
+	
+	sprite_artillery = {
+		0 = TRE_ARTILLERY_1
+		1 = TRE_ARTILLERY_2
+		2 = TRE_ARTILLERY_3
+		3 = TRE_ARTILLERY_4
+	}
+}
+
+MR_greek_muslim_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		is_greek = yes
+		religion_group = muslim
+	}
+
+	sprite_infantry = {
+		0 = BYZ_INFANTRY_1
+		1 = BYZ_INFANTRY_2
+		2 = BYZ_INFANTRY_3
+		3 = BYZ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+        0 = BYZ_CAVALRY_1
+        1 = BYZ_CAVALRY_2
+        2 = BYZ_CAVALRY_3
+        3 = BYZ_CAVALRY_3
+   	 }
+	
+	sprite_artillery = {
+		0 = BYZ_ARTILLERY_1
+		1 = BYZ_ARTILLERY_2
+		2 = BYZ_ARTILLERY_3
+		3 = BYZ_ARTILLERY_4
+	}
+}
+
+MR_greek_catholic_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		is_greek = yes
+		religion = catholic
+	}
+
+	sprite_infantry = {
+		0 = CYP_INFANTRY_1
+		1 = CYP_INFANTRY_2
+		2 = CYP_INFANTRY_3
+		3 = CYP_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+        0 = CYP_CAVALRY_1
+        1 = CYP_CAVALRY_2
+        2 = CYP_CAVALRY_3
+        3 = CYP_CAVALRY_3
+   	 }
+	
+	sprite_artillery = {
+		0 = CYP_ARTILLERY_1
+		1 = CYP_ARTILLERY_2
+		2 = CYP_ARTILLERY_3
+		3 = CYP_ARTILLERY_4
+	}
+}
+
+MR_greek_istinople_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		is_greek = yes
+		tag = CST
+	}
+
+	sprite_infantry = {
+		0 = BYZ_INFANTRY_1
+	}
+
+	sprite_cavalry = {
+        0 = BYZ_CAVALRY_1
+   	 }
+	
+	sprite_artillery = {
+		0 = BYZ_ARTILLERY_1
+	}
+}
