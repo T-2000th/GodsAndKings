@@ -343,6 +343,9 @@ dlc102_bos_sprite_pack = 20
 dlc102_ser_sprite_pack = 30
 dlc102_hun_sprite_pack = 20
 dlc102_wal_sprite_pack = 30
+MR_outcarpathian_romanian_sprite_pack = 40 # Wallachians and Moldavians
+MR_transylvanian_sprite_pack = 40 # Transylvanians
+# MR_cuman_sprite_pack = 40 # Cum men
 
 # Emperor Beyond the Alps
 dlc103_sav_sprite_pack = 40
