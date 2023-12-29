@@ -3,7 +3,7 @@
 owner = TUR
 controller = TUR
 culture = micrasiate
-religion = shiite
+religion = orthodox
 capital = "Biga"
 trade_goods = lumber
 hre = no
