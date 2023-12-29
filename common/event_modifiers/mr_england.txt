@@ -109,7 +109,7 @@ mr_scottish_lowland_conversion_fast = {
 }
 
 mr_highlander_recruitment = {
-	local_manpower_modifier = 0.5
+	local_manpower_modifier = 0.20
 }
 
 mr_sco_hide_trade = {

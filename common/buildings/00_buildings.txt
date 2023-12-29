@@ -489,11 +489,12 @@ fort_15th = {
 			}
 		}
 		if = {
-			limit = { mission_completed = eng_m_ireland_oppress_3 }
-			THIS = {
-				province_event = {
-					id = mr_england.2010
-				}
+			limit = {
+				FROM = { mission_completed = eng_m_ireland_oppress_3 }	
+				NOT = { has_province_flag = eng_made_plantation }
+			}
+			province_event = {
+				id = mr_england.2010
 			}
 		}
 	}
@@ -882,7 +883,7 @@ fort_16th = {
 		}
 		if = {
 			limit = { mission_completed = eng_m_ireland_oppress_3 }
-			THIS = {
+			FROM = {
 				province_event = {
 					id = mr_england.2010
 				}
@@ -1458,7 +1459,7 @@ fort_17th = {
 		}
 		if = {
 			limit = { mission_completed = eng_m_ireland_oppress_3 }
-			THIS = {
+			FROM = {
 				province_event = {
 					id = mr_england.2010
 				}
@@ -1915,7 +1916,7 @@ fort_18th = {
 		}
 		if = {
 			limit = { mission_completed = eng_m_ireland_oppress_3 }
-			THIS = {
+			FROM = {
 				province_event = {
 					id = mr_england.2010
 				}

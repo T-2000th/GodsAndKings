@@ -221,11 +221,72 @@ england_missions_4_openers = {
 			}
 		}
 	}
+}
+
+england_missions_4_scotland_dummy = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = { tag = ENG }
+	
+	eng_m_scotland_2_dummy = {
+		icon = mission_unknown_mission
+		required_missions = { eng_m_scotland }
+		position = 3
+		provinces_to_highlight = {
+			province_group = scotland_region
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = redshanks_2_TT
+			scotland_region = {
+				type = all
+				add_province_modifier = {
+					name = mr_highlander_recruitment
+					duration = -1
+				}
+			}
+		}
+	}
+	eng_m_scotland_3_dummy = {
+		icon = mission_unknown_mission
+		required_missions = { eng_m_scotland_2 }
+		position = 4
+		provinces_to_highlight = {
+			province_group = scotland_region
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		}
+		effect = {
+			
+		}
+	}
+}
+
+england_missions_4_scotland = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = ENG
+		
+	}
 	
 	eng_m_scotland_2 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_scotland }
-		position = 2
+		position = 3
 		provinces_to_highlight = {
 			province_group = scotland_region
 			culture = highland_scottish
@@ -253,6 +314,54 @@ england_missions_4_openers = {
 					duration = -1
 				}
 			}
+		}
+	}
+	eng_m_scotland_3 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { eng_m_scotland_2 }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			
+		}
+		effect = {
+			
+		}
+	}
+}
+
+england_missions_4_scotland_oppress = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = { tag = ENG }
+	
+	eng_m_oppress_scotland_2 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { eng_m_scotland }
+		position = 3
+		provinces_to_highlight = {
+		}
+		trigger = {
+			
+		}
+		effect = {
+			
+		}
+	}
+	eng_m_oppress_scotland_3 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { eng_m_oppress_scotland_2 }
+		position = 4
+		provinces_to_highlight = {
+		}
+		trigger = {
+			
+		}
+		effect = {
+			
 		}
 	}
 }
@@ -580,9 +689,6 @@ england_missions_irish_dummy_branch = {
 			custom_tooltip = eng_ireland_oppression_effects_tt
 			ireland_region = {
 				limit = { has_province_modifier = eng_active_conversion }
-				remove_province_modifier = eng_active_conversion
-			}
-			ireland_region = {
 				add_province_modifier = {
 					 name = mr_eng_the_twenty_plantations
 					 duration = -1
@@ -711,7 +817,7 @@ england_missions_oppress_irish_branch = {
 		position = 5
 		provinces_to_highlight = {
 			province_group = ireland_region
-			NOT = { has_building = workshop }
+			NOT = { has_building = counting_house }
 			NOT = { fort_level = 1 }
 			NOT = { owned_by = ROOT }
 		}
@@ -727,9 +833,6 @@ england_missions_oppress_irish_branch = {
 		effect = {
 			ireland_region = {
 				limit = { has_province_modifier = eng_active_conversion }
-				remove_province_modifier = eng_active_conversion
-			}
-			ireland_region = {
 				add_province_modifier = {
 					 name = mr_eng_the_twenty_plantations
 					 duration = -1
@@ -753,7 +856,7 @@ england_missions_naval_branch = {
 	eng_m_naval_1 = { #port of yarmouth
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_wight }
-		position = 3
+		position = 4
 		provinces_to_highlight = {
 			province_id = 4949
 		}
@@ -792,7 +895,7 @@ england_missions_naval_branch = {
 	eng_m_naval_2 = { #royal navy shipyards
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_naval_1 }
-		position = 4
+		position = 5
 		provinces_to_highlight = {
 			owned_by = ROOT
 			has_port = yes
@@ -828,7 +931,7 @@ england_missions_naval_branch = {
 	eng_m_naval_4 = { #overseas expansion
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_naval_2 }
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			has_port = yes
 			continent = europe
@@ -868,7 +971,7 @@ england_missions_naval_branch_b = {
 	eng_m_naval_3 = { #national lumberyards
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_naval_1 }
-		position = 4
+		position = 5
 		provinces_to_highlight = {
 			owned_by = ROOT
 			trade_goods = lumber
@@ -920,7 +1023,7 @@ england_missions_naval_branch_b = {
 	eng_m_timber = { #Royal Woods Act
 		icon = mission_build_up_to_force_limit
 		required_missions = { eng_m_naval_3 }
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {

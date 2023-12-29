@@ -10,6 +10,7 @@ namespace = mr_england
 #101,102 - mission triggered events
 #1001-1009 - Crown Agendas Event System
 #2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
+#2010 - Plantation Event in oppression branch
 #7002-7012 - Lollardy Conclusions (required flavor)
 #7013 - Lollardy Flavor
 #9002-9004 - Royal Woods events
@@ -98,6 +99,7 @@ country_event = {
 	
 	option = {
 		name = mr_england.2001.a
+		ai_chance = { factor = 50 }
 		custom_tooltip = eng_m_ireland_2_TT
 		hidden_effect = { set_country_flag = eng_lenient_oversight_flag }
 		swap_non_generic_missions = yes
@@ -105,8 +107,7 @@ country_event = {
 			limit = { province_group = ireland_region }
 			change_culture = mr_anglo_hibernian
 		}
-		every_owned_province = {
-			limit = { province_group = ireland_region }
+		ireland_region = {
 			add_province_modifier ={
 				name = eng_lenient_oversight
 				duration = -1
@@ -115,6 +116,13 @@ country_event = {
 	}
 	option = {
 		name = mr_england.2001.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				religion = mr_lollard
+			}
+		}
 		custom_tooltip = eng_m_ireland_2b_TT
 		hidden_effect = { set_country_flag = eng_ireland_oppression_flag }
 		swap_non_generic_missions = yes
@@ -125,8 +133,7 @@ country_event = {
 			}
 			change_culture = mr_anglo_hibernian
 		}
-		every_owned_province = {
-			limit = { province_group = ireland_region }
+		ireland_region = {
 			add_province_modifier ={
 				name = eng_active_conversion
 				duration = -1
@@ -493,7 +500,6 @@ province_event = {
 	
 	is_triggered_only = yes
 	trigger = {
-		NOT = { has_province_flag = eng_made_plantation }
 		#triggered by building fort in ireland after completing mission eng_m_ireland_oppress_3
 		#only happens once per province
 	}
@@ -525,7 +531,7 @@ province_event = {
 	}
 	
 	option = { #Unfulfillable Contracts of Servitude
-		name = mr_england.2010.b
+		name = mr_england.2010.c
 		change_trade_goods = slaves
 		add_province_modifier = {
 			name = mr_eng_colonial_assets
@@ -1346,6 +1352,7 @@ country_event = {
 	desc = mr_england.8.d
 	picture = POPE_PREACHING_eventPicture
 	
+	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
 		#triggered by mission eng_m_scotland
@@ -1354,10 +1361,18 @@ country_event = {
 	
 	option = {
 		name = mr_england.8.a
-		every_owned_province = {
-			limit = {
-				culture = highland_scottish
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_reform = mr_absolutist_england_reform
 			}
+		}
+		hidden_effect = { set_country_flag = eng_friendly_flag }
+		custom_tooltip = eng_m_scotland_path_TT
+		swap_non_generic_missions = yes
+		every_owned_province = {
+			limit = { culture = highland_scottish }
 			add_province_modifier = {
 				name = mr_scottish_lowland_conversion
 				duration = 36500
@@ -1367,10 +1382,12 @@ country_event = {
 	
 	option = {
 		name = mr_england.8.b
+		ai_chance = { factor = 50 }
+		hidden_effect = { set_country_flag = eng_oppress_flag }
+		custom_tooltip = eng_m_scotland_path2_TT
+		swap_non_generic_missions = yes
 		every_owned_province = {
-			limit = {
-				culture = highland_scottish
-			}
+			limit = { culture = highland_scottish }
 			add_province_modifier = {
 				name = mr_scottish_lowland_conversion_fast
 				duration = 36500

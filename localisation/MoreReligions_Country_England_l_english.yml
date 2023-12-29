@@ -40,7 +40,7 @@
  
  eng_m_ireland_oppress_3_title: "Irish Anglicization"
  eng_m_ireland_oppress_3_desc: ""
- eng_m_ireland_oppress_3_TT: "Events will occur when §Yforts§! are constructed in §YIreland§! to determine its province's enterprise."
+ eng_m_ireland_oppress_3_TT: "Events will occur when §Yforts§! are constructed in §YIreland§! to determine its province's enterprise.\n§RAvoid finishing forts on the same day.§!"
  
  eng_m_ireland_oppress_4_title: "Enterprises of Ireland"
  eng_m_ireland_oppress_4_desc: ""
@@ -77,6 +77,15 @@
  eng_m_scotland_2_title: "Recruit the Highlanders"
  eng_m_scotland_2_desc: "The Highlanders, once defeated, remain a formidable fighting force, owing to the rough lands they settle. Their integration into the Kingdom can be a great boon to our future army and securing the British Isles and lands abroad."
  redshanks_2_TT: "Unlocks a cheaper and stronger version of the §YRedshanks§! mercenary company"
+ 
+ eng_m_scotland_3_title: "Connect the North"
+ eng_m_scotland_3_desc: "A reason for the longstanding seperation between the north and south of Britain is simply the geographical challenges and distances that stand between the two. Now that Scotland has been brought under the authority of the Crown, we should take the initiative to permanently connect them to the Capital."
+ 
+ eng_m_scotland_2_dummy_title: "[Root.GetPreviewColorTEU][Root.GetSelectableMissionTitle][Root.GetPreviewColorTEU_end]"
+ eng_m_scotland_2_dummy_desc: "[Root.GetSelectableMissionDescription]"
+ 
+ eng_m_scotland_3_dummy_title: "[Root.GetPreviewColorTEU][Root.GetSelectableMissionTitle][Root.GetPreviewColorTEU_end]"
+ eng_m_scotland_3_dummy_desc: "[Root.GetSelectableMissionDescription]"
  
  eng_m_army_1_title: "Founding the Crown Guard"
  eng_m_army_1_desc: ""
@@ -174,7 +183,8 @@
  mr_eng_colonize_ireland: "Reisland Penal Colonies"
  mr_eng_the_twenty_plantations: "The Twenty Plantations"
  mr_eng_colonial_experience: "Legacy of Colonial Aspirations"
- mr_eng_private_plantation: "Private Plantations
+ mr_eng_private_plantation: "Private Plantations"
+ mr_eng_crown_enterprise: "Crown Plantations"
  mr_eng_colonial_assets: "Colonial Fodder"
  
  ### misc
@@ -254,7 +264,7 @@
  mr_england.2009.d: "Born to Irish father John and English mother Mary in a village on the outskirts of Dublin, William Seanlaoich's early life is sparesly recorded, with scant documents only revealing an education in Latin and Greek - not unusual of grammar school attendants. Regardless of his upbringing, much of his known life comes after his first breakout play in London. As playwright, his theatrical productions quickly gained fame throughout London, and then England. His work is often cited as the origin of several Irish loanwords popularized and brought into the English language which persevere even today: ciotóg, craic, and moran, to name a few. Today, even those unfamiliar with theater and poetry will likely know 'Dream of a Midsummer Night,' 'Alexander,' and 'The Merchant of Genoa.'"
  mr_england.2009.a: "I'm looking forward to the next one!"
  
- mr_england.2010.t: "Plantation of [Root.GetName]"
+ mr_england.2010.t: "Plantation of [This.GetName]"
  mr_england.2010.d: "Although the ruling class has been supplanted with thoroughly Anglicized Irish, the general populace is still native of great number and evermore disatisfied with the tight grasp on the island. The Plantation Scheme was devised by Crown advisors to completely pacify Ireland and simultaneously extract all the wealth it could from the land and its people."
  mr_england.2010.a: "Let private merchants handle it."
  mr_england.2010.b: "Administer order directly."
@@ -351,6 +361,8 @@
  mr_england.8.d: "On the island of Iona, the representatives of the Clans of the Scottish Highlands convened with a delegation of the Crown. The weak presence of feudal peerages and dominance of the Clann system will prove to be a challenge for the Crown, given nothing is done to ease them into the Kingdom. After several days of discussion, the Crown delegates discuss amongst themselves the two options they've settled on: education of heirs in English, as well as the introduction of English into clerical life - among other methods - in an effort for longterm, but stable integration; or a more heavy handed approach of banning Gaelic and other Scottish traditions - the downsides of which are apparent."
  mr_england.8.a: "We should institue longterm policies for assimilating the Clans."
  mr_england.8.b: "We should take active measures to push for assimilation."
+ eng_m_scotland_path_TT: "Unlock §YHighlands Integration§! path."
+ eng_m_scotland_path2_TT: "Unlock §YConquest of the Scots§! path."
  
  mr_england.9.t: "Decline of the [Root.GetName] Royal Forest"
  mr_england.9.d: "First enacted by William the Conqueror, Forest Law has existed within England as a means of game preservation. Since then, Forest Law has evolved through various addendums and the Magna Carta itself, but altogether steadily declining in importance.  This is especially apparent now, as recent surveys through [Root.GetName] reveal that the overcutting has made large swathes barren - likely felled to create and repair the Crown Navy."

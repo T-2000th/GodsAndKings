@@ -1,8 +1,14 @@
+ireland_region = {
+	cede_province = ENG
+	add_core = ENG
+}
 
-		# clr_estate_influence_modifier = {
-			# estate = estate_church
-			# desc = NO_CONFESSIONS_LOLLARD
-			# influence = -10
-			# duration = -1
-		# }
-		clr_estate_influence_modifier = NO_CONFESSIONS_LOLLARD
+complete_mission = eng_m_ireland_oppress_3
+
+country_event = {
+	id = mr_england.2001
+}
+
+country_event = {
+	id = debug_events.1
+}
