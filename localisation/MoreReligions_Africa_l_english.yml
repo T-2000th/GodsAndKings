@@ -115,6 +115,7 @@
   afr_events.6.b:0 "We will never accept suzerainity under these pretenders!"
   afr_chances_of_success:0 "We will attempt to convince the emirates of @MOR §YMorocco§! to accept us as their suzerain.\nBase Chance of Success: §Y50%§!\nAllied to @AFR: §G+25%§!\nHas §YThreatened§! attitude towards @AFR: §G+10%§!\nHas §YRivalry§! or §YOutraged§! attitude towards @AFR: §R-25%§!"
   regardless:0 "Regardless:"
+  free_slot_for_moroccan:0 "§YMoroccan§! Acceptance"
 
   afr_finish_the_job_title:0 "Finish the Job"
   afr_finish_the_job_desc:0 "Despite the success of crusades elsewhere, Iberia has fallen into an eternal stalemate after the Battle of Jerez in 1231. There are always skirmishes, and always infighting, but nothing ever changes. However, now that we have surrounded Qurtabah, it's time we finish what Castile and Leon could not. It's time that we finish the Reconqusita once and for all, either by marching into Andalucia ourselves or by forming a coalition with the remaining Iberian powers."
@@ -142,7 +143,7 @@
   afr_trade_of_alexandria_desc:0 "The Fatimids have for a long time been one of the trading capitals of the Mediterranean, with the Nile naturally being an important river and their other ports having become entrepots for many a merchant. Naturally, with us becoming the major power of the western Mediterranean, it wouldn't hurt to try and reach an agreement with the hegemon of the eastern Mediterranean."
   afr_entreport_of_the_west:0 "Entrepot of the West"
   afr_buff_monetary_policy:0 "The §Y[Root.GetBurghersOrFallbackName]§! '§YControl over Monetary Policy§!' estate privilege will §Gno longer§! incur any §YAll Powers Cost§! penalty."
-  afr_explain_canal_of_the_pharoahs:0 "We will send an offer to @EGY §YEgypt§!, offering to help pay half the cost of repairing the §YCanal of the Pharoahs§!.\nIf we do not have §Y2500§! ¤, we will be able to pay our share over time. However, this will cost §R4§! ¤ per month."
+  afr_explain_canal_of_the_pharoahs:0 "We will send an offer to @EGY §YEgypt§!, offering to help pay half the cost of repairing the §YCanal of the Pharoahs§!.\nIf we do not have §Y5000§! ¤, we will be able to pay our share over time. However, this will cost §R8§! ¤ per month."
   afr_events.8.t:0 "An Offer from Africa"
   afr_events.8.d:0 "Once, the Red Sea and the Mediterranean were connected by an ancient canal, established by Necho II over 2,000 years ago. This canal, the Canal of the Pharoahs, was a cornerpiece of trade in the region. However, in 767, the Abbasids closed the canal to stop supplies from reaching a rebellion in Mecca and Medina, and it has fallen into disrepair since. Many a man has thought of restoring it, but have found the cost too much to bear.\n\nHowever, a diplomat has just arrived from our friends in Africa, offerring to help pay the cost of this restoration. With them having emerged as a major center of trade in their own right, it's a honor that they have chosen to cooperate with us to advance our mutual prosperity. However, they still insist that we pay part of the cost ourselves."
   afr_events.8.a:0 "It's time to reopen the Canal of the Pharoahs."
@@ -233,7 +234,7 @@
   afr_events.12.t:0 "Furthening our Cultural Ties"
   afr_events.12.d:0 "Even since even before the establishment of the Kingdom of Africa, we have admired the culture of the Arabic world, and have sought to emulate their prosperity and glamour. However, despite this, the Sicilo-Norman culture of the ruling class and the Arab culture of the rest of Africa have stayed seperate, which has the potential to brew tensions, making our Arab subjects feel under represented and oppressed. This has hurt us many times already, with rebellion after rebellion, and constant factionalism amongst our Arab subjects. As such, we've been encouraging an even further multicultural administration in recent years, and it appears that it has begun to pay off, for the boundaries between the cultures have begun to blur. A Sicilian and an Arab walk by eachother on the street and see eachother less and less as different and more and more as one single people.\n\nA new culture has begun to emerge that promises to bring together the best of both worlds, fulfilling the wishes of our forefathers and completing what the Outremer states could not in their blinded zealotry."
   afr_events.12.a:0 "At last, the ambitions of our forefathers are fulfilled!"
-  all_maghrebi_provinces_convert:0 "All provinces we own that are in the §YMaghrebi§! culture group will §Gconvert§! to §YSiqilliyan§!."
+  all_maghrebi_provinces_convert:0 "Certain owned provinces in the §YMaghrebi§! culture group will §Gconvert§! to §YSiqilliyan§!."
   afr_emperors_of_africa:0 "Emperors of Africa"
 
   afr_cathedral_of_tunis_title:0 "Cathedral of Tunis"
