@@ -1,9 +1,11 @@
 MR_outcarpathian_romanian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = wallachian
-		primary_culture = moldavian
-		primary_culture = romanian
+		OR = {
+			primary_culture = wallachian
+			primary_culture = moldavian
+			primary_culture = romanian
+		}
 	}
 
 	sprite_infantry = {
