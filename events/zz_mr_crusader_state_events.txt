@@ -555,3 +555,27 @@ country_event = {
 		}
 	}
 }
+
+# Clean up european settlers modifier from Crusader Support if culture is now
+# accepted
+country_event = {
+	id = mrCrusaderEvents.13
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_levantine_crusader_state = yes
+		has_government_mechanic = crusader_mechanic
+	}
+
+	immediate = {
+		every_owned_province = {
+			limit = { has_province_modifier = cs_european_settlers }
+
+			if = {
+				limit = { province_is_or_accepts_culture = ROOT}
+				remove_province_modifier = cs_european_settlers
+			}
+		}
+	}
+}
