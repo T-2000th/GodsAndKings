@@ -27,6 +27,10 @@ egypt_missions_first = {
 			cyrenaica_area = {
 				add_claim = ROOT
 			}
+			add_faction_influence = {
+				faction = wr_berbers
+				influence = 5
+			}
 		}
 	}
 
@@ -52,12 +56,17 @@ egypt_missions_first = {
 			add_treasury = -200
 			add_country_modifier = {
 				name = egy_desert_campaigns
-				duration = 18250 # 50 years
+				duration = 10950 # 30 years
 			}
 
-			add_permanent_claim = tripolitania_area
-			add_permanent_claim = fezzan_area
-			add_permanent_claim = djerba_area
+			add_permanent_claim_multi_provinces = { target = tripolitania_area }
+			add_permanent_claim_multi_provinces = { target = fezzan_area }
+			add_permanent_claim_multi_provinces = { target = djerba_area }
+
+			add_faction_influence = {
+				faction = wr_berbers
+				influence = 10
+			}
 		}
 	}
 }
@@ -71,7 +80,7 @@ egypt_missions_second = {
 		tag = EGY
 	}
 
-	egypt_development_1 = { # Dev upper nile, then vassalize makuria as a border march
+	egypt_development_1 = { # Dev upper nile, then secure rest of egypt region
 		icon = mission_egyptian_mamluk_soldier
 		position = 1
 		required_missions = { }
@@ -100,6 +109,10 @@ egypt_missions_second = {
 		effect = {
 			add_permanent_claim_multi_provinces = { target = said_area }
 			add_permanent_claim_multi_provinces = { target = gulf_of_arabia_area }
+			add_faction_influence = {
+				faction = wr_nubians
+				influence = 10
+			}
 		}
 	}
 
@@ -127,25 +140,35 @@ egypt_missions_second = {
 			}
 		}
 		effect = {
-			add_casus_belli = {
-				type = cb_vassalize_mission
-				target = MAK
+			add_permanent_claim_multi_provinces = { target = egypt_region }
+			add_permanent_claim = 2324
+			add_faction_influence = {
+				faction = wr_nubians
+				influence = 10
 			}
 		}
 	}
 
 	egypt_development_3 = {
 		icon = mission_egyptian_mamluk_soldier
-		position = 2
+		position = 3
 		required_missions = { egypt_development_2 }
 
-		trigger = {
-			MAK = {
-				is_subject_of = ROOT
-				is_subject_of_type = march
+		provinces_to_highlight = {
+			OR = {
+				region = egypt_region
+				province_id = 2324
 			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			owns_all_provinces = {
+				region = egypt_region
+			}
+			owns = 2324
 			num_of_owned_provinces_with = {
-				value = 8
+				value = 10
 				OR = {
 					region = egypt_region
 				}
@@ -159,11 +182,9 @@ egypt_missions_second = {
 				name = egy_economic_boom
 				duration = 3650
 			}
-
-			MAK = {
-				add_permanent_claim_multi_provinces = { target = dongola_area }
-				add_permanent_claim_multi_provinces = { target = red_sea_coast_area }
-				add_permanent_claim_multi_provinces = { target = upper_nubia_area }
+			add_faction_influence = {
+				faction = wr_nubians
+				influence = 15
 			}
 		}
 	}
@@ -259,6 +280,11 @@ egypt_missions_fourth = {
 					duration = 3650
 				}
 			}
+
+			add_faction_influence = {
+				faction = wr_mamluks
+				influence = 5
+			}
 		}
 	}
 }
@@ -300,6 +326,10 @@ egypt_missions_fifth = {
 				name = egy_justified_war_mod
 				duration = 3650
 			}
+			add_faction_influence = {
+				faction = wr_mamluks
+				influence = 5
+			}
 		}
 	}
 
@@ -327,6 +357,11 @@ egypt_missions_fifth = {
 					add_claim = ROOT
 				}
 			}
+
+			add_faction_influence = {
+				faction = wr_mamluks
+				influence = 10
+			}
 		}
 	}
 
@@ -352,6 +387,11 @@ egypt_missions_fifth = {
 			country_event_with_insight = {
 				id = mr_egypt.3
 				insight_tooltip = egypt_conquest_east_3_event_insight_tt
+			}
+
+			add_faction_influence = {
+				faction = wr_mamluks
+				influence = 15
 			}
 		}
 	}
@@ -387,6 +427,11 @@ egypt_missions_fifth = {
 		effect = {
 			add_years_of_income = 2
 			add_permanent_claim_multi_provinces = { target = mashriq_region }
+
+			add_faction_influence = {
+				faction = wr_mamluks
+				influence = 10
+			}
 		}
 	}
 }

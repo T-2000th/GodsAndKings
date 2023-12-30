@@ -18,8 +18,10 @@
  egypt_conquest_west_2_desc: "REPLACE_ME"
  egypt_development_1_title: "Develop Upper Nile"
  egypt_development_1_desc: "REPLACE_ME"
- egypt_development_2_title: "Southern Security"
+ egypt_development_2_title: "Expand South"
  egypt_development_2_desc: "REPLACE_ME"
+ egypt_development_3_title: "Edge of Nubia"
+ egypt_development_3_desc: "REPLACE_ME"
 
 
 ## ------------------------ Modifiers ------------------------------------------
