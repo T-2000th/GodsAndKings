@@ -220,6 +220,7 @@ indep_samanta_reform = {
 		NOT = {
 			tag = RJP
 		}
+		culture_group = western_aryan
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
