@@ -19,10 +19,6 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = nomad_group
 discovered_by = indian
-add_province_modifier = {
-	name = cs_stables_of_edessa
-	duration = -1
-}
 
 
 1444.11.12 = { trade_goods = unknown }

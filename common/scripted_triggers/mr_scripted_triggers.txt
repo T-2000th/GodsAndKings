@@ -143,13 +143,27 @@ can_have_varangians = {
 is_levantine_crusader_state = {
 	# Crusaders = Antioch, Cyprus, Edessa, Lebanon, Tripoli
 	# Also keep it valid for Jerusalem
-	OR = {
-		tag = ATI
-		tag = CYP
-		tag = EDD
-		tag = LEB
-		tag = TPO
-		tag = KOJ
+	custom_trigger_tooltip = {
+		tooltip = is_levantine_crusader_state_tt
+
+		OR = {
+			tag = ATI
+			tag = CYP
+			tag = EDD
+			tag = LEB
+			tag = TPO
+			tag = KOJ
+		}
+	}
+}
+
+cs_valid_for_settlers = { # Province scope
+	custom_trigger_tooltip = {
+		tooltip = cs_valid_for_settlers_tt
+
+		superregion = near_east_superregion
+		NOT = { has_province_flag = got_european_settlers }
+		NOT = { is_capital = yes }
 	}
 }
 
@@ -434,4 +448,17 @@ is_staple_crop = {
 	trade_goods = potato
 	trade_goods = tomato
 	trade_goods = maize
+}
+
+is_greek = {
+	OR = {
+		primary_culture = greek
+		primary_culture = epirote
+		primary_culture = micrasiate
+		primary_culture = peloponnesian
+		primary_culture = aegean
+		primary_culture = borean
+		primary_culture = griko
+		primary_culture = pontic_greek
+	}
 }

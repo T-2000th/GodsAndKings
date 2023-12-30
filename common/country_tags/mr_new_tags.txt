@@ -292,6 +292,12 @@ CST = "countries/Istinopol.txt"
 #Anatolia
 CLC = "countries/Cilicia.txt"
 ALV = "countries/Alevi.txt"
+AHI = "countries/Ahis.txt"
+HJE = "countries/Hajiemirids.txt" 
+HMD = "countries/Hamidids.txt"
+KRE = "countries/Karesids.txt"
+PRW = "countries/Perwanids.txt" 
+TEK = "countries/Teke.txt"
 
 #Caucasus
 ABK = "countries/Abkhazia.txt"
