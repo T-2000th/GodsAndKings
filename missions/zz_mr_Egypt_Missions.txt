@@ -156,15 +156,16 @@ egypt_missions_second = {
 
 		provinces_to_highlight = {
 			OR = {
-				region = egypt_region
+				area = lower_nubia_area
 				province_id = 2324
 			}
 			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			owns_all_provinces = {
-				region = egypt_region
+			lower_nubia_area = {
+				type = all
+				owned_by = ROOT
 			}
 			owns = 2324
 			num_of_owned_provinces_with = {
