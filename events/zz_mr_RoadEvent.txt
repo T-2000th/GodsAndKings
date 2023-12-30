@@ -13,22 +13,61 @@ country_event = {
 	}
 
 	immediate = {
-		pathfinder_effect = yes
+		pathfinder_effect = yes #determines paths from capital
+		pathfinder_effect_2 = yes #determines paths from player selected CoT
 	}
-
+	
 	option = {
-		name = mr_roads.1
+		name = mr_roads.1.f
+		
+	}
+	
+	option = {
+		name = mr_roads.1.a
+		trigger = {
+			has_saved_event_target = endpoint
+		}
 		every_owned_province = {
 			limit = {
-				has_province_flag = pathfinding_P
+				OR = {
+					has_province_flag = pathfinding_P
+					is_capital = yes
+				}
 			}
 			add_base_tax = 100
 		}
+		event_target:endpoint = { set_province_flag = connected_to_capital }
+	}
+	option = {
+		name = mr_roads.1.b
+		trigger = {
+			NOT = { has_saved_event_target = endpoint }
+		}
+		custom_tooltip = no_trade_centers_in_range
+	}
+	
+	option = {
+		name = mr_roads.1.c
+		trigger = {
+			has_saved_event_target = endpoint2
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_flag = pathfinding_P2
+					has_province_flag = expansion_node
+				}
+			}
+			add_base_tax = 100
+		}
+		event_target:endpoint2 = { set_province_flag = connected_to_capital }
 	}
 	
 	after = {
 		every_owned_province = {
 			clr_province_flag = pathfinding_P
+			clr_province_flag = pathfinding_O
+			clr_province_flag = expansion_node
 		}
 	}
 }

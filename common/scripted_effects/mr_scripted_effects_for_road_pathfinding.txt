@@ -1,34 +1,34 @@
 #flags used
 #expansion_node - for provinces connected to capital
-#pathways_exhausted - for provinces where all trade paths are exhausted
 #pathfinding_RX - Pathfinding placeholder for Ring X
 #pathfinding_P - Province is good for using as a path
+#pathfinding_O - Province is Origin for non capital pathfind
 
+#pathfinder for capital province
 pathfinder_effect = {
 	#determines starting province
-	random_owned_province = {
-		limit = {
-			OR = {
-				AND = {
-					is_capital = yes
-					NOT = { has_province_flag = pathways_exhausted }
-				}
-				AND = {
-					has_province_flag = expansion_node
-					NOT = { has_province_flag = pathways_exhausted }
-				}
-			}
-		}
-		set_province_flag = pathfinding_P	
+	capital_scope = {
 		#starts ring expansion preliminary
-		every_neighbor_province = { set_province_flag = pathfinding_R1 } #every neighbor of expan. node or capital
+		every_neighbor_province = {
+			limit = { owned_by = ROOT }
+			set_province_flag = pathfinding_R1	
+		} #every neighbor of expan. node or capital
 	}
 	if = {
 		limit = {
 			any_owned_province = {
 				province_has_center_of_trade_of_level = 1
 				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag =  connected_to_capital }
 			}
+		}
+		random_owned_province = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag =  connected_to_capital }
+			}
+			save_event_target_as = endpoint
 		}
 		R1_reverse_pathfind_effect = yes
 	}
@@ -40,16 +40,26 @@ pathfinder_effect = {
 					NOT = { has_province_flag = pathfinding_R1 }
 					NOT = { has_province_flag = expansion_node }
 					is_capital = no
+					owned_by = ROOT
 				}
 				set_province_flag = pathfinding_R2
 			}
 		}
 		if = {
-			limit = {
+			limit = { #if there is a valid CoT to connect to, it will draw a line there
 				any_owned_province = {
 					province_has_center_of_trade_of_level = 1
 					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag =  connected_to_capital }
 				}
+			}
+			random_owned_province = { #designates the province it is connecting to as done
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag =  connected_to_capital }
+				}
+				save_event_target_as = endpoint
 			}
 			R2_reverse_pathfind_effect = yes
 		}
@@ -62,6 +72,7 @@ pathfinder_effect = {
 						NOT = { has_province_flag = pathfinding_R1 }
 						NOT = { has_province_flag = expansion_node }
 						is_capital = no
+						owned_by = ROOT
 					}
 					set_province_flag = pathfinding_R3
 				}
@@ -71,7 +82,16 @@ pathfinder_effect = {
 					any_owned_province = {
 						province_has_center_of_trade_of_level = 1
 						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag =  connected_to_capital }
 					}
+				}
+				random_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag =  connected_to_capital }
+					}
+					save_event_target_as = endpoint
 				}
 				R3_reverse_pathfind_effect = yes
 			}
@@ -85,6 +105,7 @@ pathfinder_effect = {
 							NOT = { has_province_flag = pathfinding_R1 }
 							NOT = { has_province_flag = expansion_node }
 							is_capital = no
+							owned_by = ROOT
 						}
 						set_province_flag = pathfinding_R4
 					}
@@ -94,7 +115,16 @@ pathfinder_effect = {
 						any_owned_province = {
 							province_has_center_of_trade_of_level = 1
 							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag =  connected_to_capital }
 						}
+					}
+					random_owned_province = {
+						limit = {
+							province_has_center_of_trade_of_level = 1
+							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag =  connected_to_capital }
+						}
+						save_event_target_as = endpoint
 					}
 					R4_reverse_pathfind_effect = yes
 				}
@@ -109,6 +139,7 @@ pathfinder_effect = {
 								NOT = { has_province_flag = pathfinding_R1 }
 								NOT = { has_province_flag = expansion_node }
 								is_capital = no
+								owned_by = ROOT
 							}
 							set_province_flag = pathfinding_R5
 						}
@@ -118,7 +149,16 @@ pathfinder_effect = {
 							any_owned_province = {
 								province_has_center_of_trade_of_level = 1
 								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag =  connected_to_capital }
 							}
+						}
+						random_owned_province = {
+							limit = {
+								province_has_center_of_trade_of_level = 1
+								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag =  connected_to_capital }
+							}
+							save_event_target_as = endpoint
 						}
 						R5_reverse_pathfind_effect = yes
 					}
@@ -134,6 +174,7 @@ pathfinder_effect = {
 									NOT = { has_province_flag = pathfinding_R1 }
 									NOT = { has_province_flag = expansion_node }
 									is_capital = no
+									owned_by = ROOT
 								}
 								set_province_flag = pathfinding_R6
 							}
@@ -143,7 +184,16 @@ pathfinder_effect = {
 								any_owned_province = {
 									province_has_center_of_trade_of_level = 1
 									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag =  connected_to_capital }
 								}
+							}
+							random_owned_province = {
+								limit = {
+									province_has_center_of_trade_of_level = 1
+									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag =  connected_to_capital }
+								}
+								save_event_target_as = endpoint
 							}
 							R6_reverse_pathfind_effect = yes
 						}
@@ -160,6 +210,7 @@ pathfinder_effect = {
 										NOT = { has_province_flag = pathfinding_R1 }
 										NOT = { has_province_flag = expansion_node }
 										is_capital = no
+										owned_by = ROOT
 									}
 									set_province_flag = pathfinding_R7
 								}
@@ -169,9 +220,21 @@ pathfinder_effect = {
 									any_owned_province = {
 										province_has_center_of_trade_of_level = 1
 										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag =  connected_to_capital }
 									}
 								}
+								random_owned_province = {
+									limit = {
+										province_has_center_of_trade_of_level = 1
+										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag =  connected_to_capital }
+									}
+									save_event_target_as = endpoint
+								}
 								R7_reverse_pathfind_effect = yes
+							}
+							else = {
+								#nothing
 							}
 						}
 					}
@@ -196,19 +259,12 @@ clear_remaining_flags_effect = {
 
 #does not require while loop because it just finds adj. prov.
 R1_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R1
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	random_owned_province = {
 		limit = {
-			OR = {
-				is_capital = yes
-				province_has_center_of_trade_of_level = 1
-			}
+			is_capital = yes
 			any_neighbor_province = {
 				has_province_flag = pathfinding_P
 			}
@@ -218,11 +274,7 @@ R1_reverse_pathfind_effect = {
 	clear_remaining_flags_effect = yes
 }
 R2_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R2
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #Eliminates R2
@@ -247,6 +299,7 @@ R2_reverse_pathfind_effect = {
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -254,31 +307,40 @@ R2_reverse_pathfind_effect = {
 	}
 	clear_remaining_flags_effect = yes
 }
+
+#repeatable cases
 R3_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R3
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
-	every_owned_province = { #Eliminates R3
+	every_owned_province = { #Eliminates extraneous R3
 		limit = {
 			has_province_flag = pathfinding_R3
 			NOT = { has_province_flag = pathfinding_P }
 		}
 		clr_province_flag = pathfinding_R3
 	}
-	every_owned_province = { #eliminates R2
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R2
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #eliminates R1
 		limit = {
@@ -286,24 +348,17 @@ R3_reverse_pathfind_effect = {
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R1
 	}
-	random_owned_province = { #selects R2 path
-		limit = {
-			has_province_flag = pathfinding_R2
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
 	random_owned_province = { #selects R1 path
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -312,11 +367,7 @@ R3_reverse_pathfind_effect = {
 	clear_remaining_flags_effect = yes
 }
 R4_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R4
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #Eliminates R4
@@ -326,27 +377,49 @@ R4_reverse_pathfind_effect = {
 		}
 		clr_province_flag = pathfinding_R4
 	}
-	every_owned_province = { #eliminates R3
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R3
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R3
 	}
-	every_owned_province = { #eliminates R2
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R2
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #eliminates R1
 		limit = {
@@ -354,33 +427,17 @@ R4_reverse_pathfind_effect = {
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R1
 	}
-	random_owned_province = { #selects R3 path
-		limit = {
-			has_province_flag = pathfinding_R3
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R2 path
-		limit = {
-			has_province_flag = pathfinding_R2
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
 	random_owned_province = { #selects R1 path
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -389,11 +446,7 @@ R4_reverse_pathfind_effect = {
 	clear_remaining_flags_effect = yes
 }
 R5_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R5
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #Eliminates R5
@@ -403,38 +456,71 @@ R5_reverse_pathfind_effect = {
 		}
 		clr_province_flag = pathfinding_R5
 	}
-	every_owned_province = { #eliminates R4
+	every_owned_province = { #eliminates R4 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R4
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R4
 	}
-	every_owned_province = { #eliminates R3
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R3
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R3
 	}
-	every_owned_province = { #eliminates R2
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R2
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #eliminates R1
 		limit = {
@@ -442,42 +528,17 @@ R5_reverse_pathfind_effect = {
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R1
 	}
-	random_owned_province = { #selects R4 path
-		limit = {
-			has_province_flag = pathfinding_R4
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R3 path
-		limit = {
-			has_province_flag = pathfinding_R3
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R2 path
-		limit = {
-			has_province_flag = pathfinding_R2
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
 	random_owned_province = { #selects R1 path
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -486,11 +547,7 @@ R5_reverse_pathfind_effect = {
 	clear_remaining_flags_effect = yes
 }
 R6_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R6
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #Eliminates R6
@@ -500,49 +557,93 @@ R6_reverse_pathfind_effect = {
 		}
 		clr_province_flag = pathfinding_R6
 	}
-	every_owned_province = { #eliminates R5
+	every_owned_province = { #eliminates R5 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R5
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R5
 	}
-	every_owned_province = { #eliminates R4
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R4 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R4
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R4
 	}
-	every_owned_province = { #eliminates R3
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R3
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R3
 	}
-	every_owned_province = { #eliminates R2
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R2
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #eliminates R1
 		limit = {
@@ -550,51 +651,17 @@ R6_reverse_pathfind_effect = {
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R1
 	}
-	random_owned_province = { #selects R5 path
-		limit = {
-			has_province_flag = pathfinding_R5
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R4 path
-		limit = {
-			has_province_flag = pathfinding_R4
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R3 path
-		limit = {
-			has_province_flag = pathfinding_R3
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R2 path
-		limit = {
-			has_province_flag = pathfinding_R2
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
 	random_owned_province = { #selects R1 path
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -603,11 +670,7 @@ R6_reverse_pathfind_effect = {
 	clear_remaining_flags_effect = yes
 }
 R7_reverse_pathfind_effect = {
-	random_owned_province = {
-		limit = {
-			province_has_center_of_trade_of_level = 1
-			has_province_flag = pathfinding_R7
-		}
+	event_target:endpoint = {
 		set_province_flag = pathfinding_P
 	}
 	every_owned_province = { #Eliminates R7
@@ -617,58 +680,427 @@ R7_reverse_pathfind_effect = {
 		}
 		clr_province_flag = pathfinding_R7
 	}
-	every_owned_province = { #eliminates R6
+	every_owned_province = { #eliminates R6 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R6
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R7
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R6
 	}
-	every_owned_province = { #eliminates R5
+	random_owned_province = { #selects R6 path
+		limit = {
+			has_province_flag = pathfinding_R6
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R7
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R5 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R5
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R5
 	}
-	every_owned_province = { #eliminates R4
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R4 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R4
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R4
 	}
-	every_owned_province = { #eliminates R3
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R3
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
 				}
 			}
 		}
 		clr_province_flag = pathfinding_R3
 	}
-	every_owned_province = { #eliminates R2
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
 		limit = {
 			has_province_flag = pathfinding_R2
 			NOT = {
 				any_neighbor_province = {
 					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
 				}
 			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+
+
+################################
+################################
+#################################flags used
+#expansion_node - for provinces connected to capital
+#pathfinding_RX - Pathfinding placeholder for Ring X
+#pathfinding_P - Province is good for using as a path
+#pathfinding_O - Province is Origin for non capital pathfind
+
+#pathfinder for capital province
+pathfinder_effect = {
+	#determines starting province
+	capital_scope = {
+		#starts ring expansion preliminary
+		every_neighbor_province = {
+			limit = { owned_by = ROOT }
+			set_province_flag = pathfinding_R1	
+		} #every neighbor of expan. node or capital
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag =  connected_to_capital }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag =  connected_to_capital }
+			}
+			save_event_target_as = endpoint
+		}
+		R1_reverse_pathfind_effect = yes
+	}
+	else = {
+		every_owned_province = {  #every neighbor of R1 that isnt already flagged
+			limit = { has_province_flag = pathfinding_R1 }
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_province_flag = pathfinding_R1 }
+					NOT = { has_province_flag = expansion_node }
+					is_capital = no
+					owned_by = ROOT
+				}
+				set_province_flag = pathfinding_R2
+			}
+		}
+		if = {
+			limit = { #if there is a valid CoT to connect to, it will draw a line there
+				any_owned_province = {
+					province_has_center_of_trade_of_level = 1
+					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag =  connected_to_capital }
+				}
+			}
+			random_owned_province = { #designates the province it is connecting to as done
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag =  connected_to_capital }
+				}
+				save_event_target_as = endpoint
+			}
+			R2_reverse_pathfind_effect = yes
+		}
+		else = {
+			every_owned_province = {  #every neighbor of R2 that isnt already flagged
+				limit = { has_province_flag = pathfinding_R2 }
+				every_neighbor_province = {
+					limit = {
+						NOT = { has_province_flag = pathfinding_R2 }
+						NOT = { has_province_flag = pathfinding_R1 }
+						NOT = { has_province_flag = expansion_node }
+						is_capital = no
+						owned_by = ROOT
+					}
+					set_province_flag = pathfinding_R3
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						province_has_center_of_trade_of_level = 1
+						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag =  connected_to_capital }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag =  connected_to_capital }
+					}
+					save_event_target_as = endpoint
+				}
+				R3_reverse_pathfind_effect = yes
+			}
+			else = {
+				every_owned_province = {  #every neighbor of R3 that isnt already flagged
+					limit = { has_province_flag = pathfinding_R3 }
+					every_neighbor_province = {
+						limit = {
+							NOT = { has_province_flag = pathfinding_R3 }
+							NOT = { has_province_flag = pathfinding_R2 }
+							NOT = { has_province_flag = pathfinding_R1 }
+							NOT = { has_province_flag = expansion_node }
+							is_capital = no
+							owned_by = ROOT
+						}
+						set_province_flag = pathfinding_R4
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_has_center_of_trade_of_level = 1
+							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag =  connected_to_capital }
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_has_center_of_trade_of_level = 1
+							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag =  connected_to_capital }
+						}
+						save_event_target_as = endpoint
+					}
+					R4_reverse_pathfind_effect = yes
+				}
+				else = {
+					every_owned_province = {  #every neighbor of R4 that isnt already flagged
+						limit = { has_province_flag = pathfinding_R4 }
+						every_neighbor_province = {
+							limit = {
+								NOT = { has_province_flag = pathfinding_R4 }
+								NOT = { has_province_flag = pathfinding_R3 }
+								NOT = { has_province_flag = pathfinding_R2 }
+								NOT = { has_province_flag = pathfinding_R1 }
+								NOT = { has_province_flag = expansion_node }
+								is_capital = no
+								owned_by = ROOT
+							}
+							set_province_flag = pathfinding_R5
+						}
+					}
+					if = {
+						limit = {
+							any_owned_province = {
+								province_has_center_of_trade_of_level = 1
+								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag =  connected_to_capital }
+							}
+						}
+						random_owned_province = {
+							limit = {
+								province_has_center_of_trade_of_level = 1
+								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag =  connected_to_capital }
+							}
+							save_event_target_as = endpoint
+						}
+						R5_reverse_pathfind_effect = yes
+					}
+					else = {
+						every_owned_province = {  #every neighbor of R5 that isnt already flagged
+							limit = { has_province_flag = pathfinding_R5 }
+							every_neighbor_province = {
+								limit = {
+									NOT = { has_province_flag = pathfinding_R5 }
+									NOT = { has_province_flag = pathfinding_R4 }
+									NOT = { has_province_flag = pathfinding_R3 }
+									NOT = { has_province_flag = pathfinding_R2 }
+									NOT = { has_province_flag = pathfinding_R1 }
+									NOT = { has_province_flag = expansion_node }
+									is_capital = no
+									owned_by = ROOT
+								}
+								set_province_flag = pathfinding_R6
+							}
+						}
+						if = {
+							limit = {
+								any_owned_province = {
+									province_has_center_of_trade_of_level = 1
+									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag =  connected_to_capital }
+								}
+							}
+							random_owned_province = {
+								limit = {
+									province_has_center_of_trade_of_level = 1
+									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag =  connected_to_capital }
+								}
+								save_event_target_as = endpoint
+							}
+							R6_reverse_pathfind_effect = yes
+						}
+						else = {
+							every_owned_province = {  #every neighbor of R6 that isnt already flagged
+								limit = { has_province_flag = pathfinding_R6 }
+								every_neighbor_province = {
+									limit = {
+										NOT = { has_province_flag = pathfinding_R6 }
+										NOT = { has_province_flag = pathfinding_R5 }
+										NOT = { has_province_flag = pathfinding_R4 }
+										NOT = { has_province_flag = pathfinding_R3 }
+										NOT = { has_province_flag = pathfinding_R2 }
+										NOT = { has_province_flag = pathfinding_R1 }
+										NOT = { has_province_flag = expansion_node }
+										is_capital = no
+										owned_by = ROOT
+									}
+									set_province_flag = pathfinding_R7
+								}
+							}
+							if = {
+								limit = {
+									any_owned_province = {
+										province_has_center_of_trade_of_level = 1
+										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag =  connected_to_capital }
+									}
+								}
+								random_owned_province = {
+									limit = {
+										province_has_center_of_trade_of_level = 1
+										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag =  connected_to_capital }
+									}
+									save_event_target_as = endpoint
+								}
+								R7_reverse_pathfind_effect = yes
+							}
+							else = {
+								#nothing
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#7 rings should be enough for any distance between any two CoT's/Capitals
+}
+
+clear_remaining_flags_effect = {
+	every_owned_province = {
+		clr_province_flag = pathfinding_R1
+		clr_province_flag = pathfinding_R2
+		clr_province_flag = pathfinding_R3
+		clr_province_flag = pathfinding_R4
+		clr_province_flag = pathfinding_R5
+		clr_province_flag = pathfinding_R6
+		clr_province_flag = pathfinding_R7
+	}
+}
+
+#does not require while loop because it just finds adj. prov.
+R1_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	random_owned_province = {
+		limit = {
+			is_capital = yes
+			any_neighbor_province = {
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+R2_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates R2
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = { has_province_flag = pathfinding_P }
 		}
 		clr_province_flag = pathfinding_R2
 	}
@@ -683,55 +1115,11 @@ R7_reverse_pathfind_effect = {
 		}
 		clr_province_flag = pathfinding_R1
 	}
-	random_owned_province = { #selects R6 path
-		limit = {
-			has_province_flag = pathfinding_R6
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R5 path
-		limit = {
-			has_province_flag = pathfinding_R5
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R4 path
-		limit = {
-			has_province_flag = pathfinding_R4
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R3 path
-		limit = {
-			has_province_flag = pathfinding_R3
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
-	random_owned_province = { #selects R2 path
-		limit = {
-			has_province_flag = pathfinding_R2
-			any_neighbor_province = {
-				has_province_flag = pathfinding_P
-			}
-		}
-		set_province_flag = pathfinding_P
-	}
 	random_owned_province = { #selects R1 path
 		limit = {
 			has_province_flag = pathfinding_R1
 			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
 				has_province_flag = pathfinding_P
 			}
 		}
@@ -739,3 +1127,1314 @@ R7_reverse_pathfind_effect = {
 	}
 	clear_remaining_flags_effect = yes
 }
+
+#repeatable cases
+R3_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates extraneous R3
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = { has_province_flag = pathfinding_P }
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+R4_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates R4
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = { has_province_flag = pathfinding_P }
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+R5_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates R5
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = { has_province_flag = pathfinding_P }
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+R6_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates R6
+		limit = {
+			has_province_flag = pathfinding_R6
+			NOT = { has_province_flag = pathfinding_P }
+		}
+		clr_province_flag = pathfinding_R6
+	}
+	every_owned_province = { #eliminates R5 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+R7_reverse_pathfind_effect = {
+	event_target:endpoint = {
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #Eliminates R7
+		limit = {
+			has_province_flag = pathfinding_R7
+			NOT = { has_province_flag = pathfinding_P }
+		}
+		clr_province_flag = pathfinding_R7
+	}
+	every_owned_province = { #eliminates R6 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R6
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R7
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R6
+	}
+	random_owned_province = { #selects R6 path
+		limit = {
+			has_province_flag = pathfinding_R6
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R7
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R5 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P
+			}
+		}
+		set_province_flag = pathfinding_P
+	}
+	clear_remaining_flags_effect = yes
+}
+
+################################
+################################
+################################
+
+#pathfinder for non-capital province
+pathfinder_effect_2 = {
+	#determines starting province
+	clear_remaining_flags_effect = yes #in case any remain from capital pathfinding
+	random_owned_province = {
+		limit = {
+			cavalry_in_province = 1
+			NOT = { cavalry_in_province = 2 }
+			has_province_flag = connected_to_capital
+		}
+		set_province_flag = expansion_node
+		every_neighbor_province = {
+			limit = { owned_by = ROOT }
+			set_province_flag = pathfinding_R1	
+		} #every neighbor of expan. node or capital
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag = connected_to_capital }
+			}
+		}
+		random_owned_province = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+				has_province_flag = pathfinding_R1
+				NOT = { has_province_flag = connected_to_capital }
+			}
+			save_event_target_as = endpoint2
+		}
+		R1_reverse_pathfind_effect2 = yes
+	}
+	else = {
+		every_owned_province = {  #every neighbor of R1 that isnt already flagged
+			limit = { has_province_flag = pathfinding_R1 }
+			every_neighbor_province = {
+				limit = {
+					NOT = { has_province_flag = pathfinding_R1 }
+					NOT = { has_province_flag = expansion_node }
+					owned_by = ROOT
+				}
+				set_province_flag = pathfinding_R2
+			}
+		}
+		if = {
+			limit = { #if there is a valid CoT to connect to, it will draw a line there
+				any_owned_province = {
+					province_has_center_of_trade_of_level = 1
+					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag = connected_to_capital }
+				}
+			}
+			random_owned_province = { #designates the province it is connecting to as done
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					has_province_flag = pathfinding_R2
+					NOT = { has_province_flag = connected_to_capital }
+				}
+				save_event_target_as = endpoint2
+			}
+			R2_reverse_pathfind_effect2 = yes
+		}
+		else = {
+			every_owned_province = {  #every neighbor of R2 that isnt already flagged
+				limit = { has_province_flag = pathfinding_R2 }
+				every_neighbor_province = {
+					limit = {
+						NOT = { has_province_flag = pathfinding_R2 }
+						NOT = { has_province_flag = pathfinding_R1 }
+						NOT = { has_province_flag = expansion_node }
+						owned_by = ROOT
+					}
+					set_province_flag = pathfinding_R3
+				}
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						province_has_center_of_trade_of_level = 1
+						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag = connected_to_capital }
+					}
+				}
+				random_owned_province = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						has_province_flag = pathfinding_R3
+						NOT = { has_province_flag = connected_to_capital }
+					}
+					save_event_target_as = endpoint2
+				}
+				R3_reverse_pathfind_effect2 = yes
+			}
+			else = {
+				every_owned_province = {  #every neighbor of R3 that isnt already flagged
+					limit = { has_province_flag = pathfinding_R3 }
+					every_neighbor_province = {
+						limit = {
+							NOT = { has_province_flag = pathfinding_R3 }
+							NOT = { has_province_flag = pathfinding_R2 }
+							NOT = { has_province_flag = pathfinding_R1 }
+							NOT = { has_province_flag = expansion_node }
+							owned_by = ROOT
+						}
+						set_province_flag = pathfinding_R4
+					}
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							province_has_center_of_trade_of_level = 1
+							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag = connected_to_capital }
+						}
+					}
+					random_owned_province = {
+						limit = {
+							province_has_center_of_trade_of_level = 1
+							has_province_flag = pathfinding_R4
+							NOT = { has_province_flag = connected_to_capital }
+						}
+						save_event_target_as = endpoint2
+					}
+					R4_reverse_pathfind_effect2 = yes
+				}
+				else = {
+					every_owned_province = {  #every neighbor of R4 that isnt already flagged
+						limit = { has_province_flag = pathfinding_R4 }
+						every_neighbor_province = {
+							limit = {
+								NOT = { has_province_flag = pathfinding_R4 }
+								NOT = { has_province_flag = pathfinding_R3 }
+								NOT = { has_province_flag = pathfinding_R2 }
+								NOT = { has_province_flag = pathfinding_R1 }
+								NOT = { has_province_flag = expansion_node }
+								owned_by = ROOT
+							}
+							set_province_flag = pathfinding_R5
+						}
+					}
+					if = {
+						limit = {
+							any_owned_province = {
+								province_has_center_of_trade_of_level = 1
+								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag = connected_to_capital }
+							}
+						}
+						random_owned_province = {
+							limit = {
+								province_has_center_of_trade_of_level = 1
+								has_province_flag = pathfinding_R5
+								NOT = { has_province_flag = connected_to_capital }
+							}
+							save_event_target_as = endpoint2
+						}
+						R5_reverse_pathfind_effect2 = yes
+					}
+					else = {
+						every_owned_province = {  #every neighbor of R5 that isnt already flagged
+							limit = { has_province_flag = pathfinding_R5 }
+							every_neighbor_province = {
+								limit = {
+									NOT = { has_province_flag = pathfinding_R5 }
+									NOT = { has_province_flag = pathfinding_R4 }
+									NOT = { has_province_flag = pathfinding_R3 }
+									NOT = { has_province_flag = pathfinding_R2 }
+									NOT = { has_province_flag = pathfinding_R1 }
+									NOT = { has_province_flag = expansion_node }
+									owned_by = ROOT
+								}
+								set_province_flag = pathfinding_R6
+							}
+						}
+						if = {
+							limit = {
+								any_owned_province = {
+									province_has_center_of_trade_of_level = 1
+									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag = connected_to_capital }
+								}
+							}
+							random_owned_province = {
+								limit = {
+									province_has_center_of_trade_of_level = 1
+									has_province_flag = pathfinding_R6
+									NOT = { has_province_flag = connected_to_capital }
+								}
+								save_event_target_as = endpoint2
+							}
+							R6_reverse_pathfind_effect2 = yes
+						}
+						else = {
+							every_owned_province = {  #every neighbor of R6 that isnt already flagged
+								limit = { has_province_flag = pathfinding_R6 }
+								every_neighbor_province = {
+									limit = {
+										NOT = { has_province_flag = pathfinding_R6 }
+										NOT = { has_province_flag = pathfinding_R5 }
+										NOT = { has_province_flag = pathfinding_R4 }
+										NOT = { has_province_flag = pathfinding_R3 }
+										NOT = { has_province_flag = pathfinding_R2 }
+										NOT = { has_province_flag = pathfinding_R1 }
+										NOT = { has_province_flag = expansion_node }
+										owned_by = ROOT
+									}
+									set_province_flag = pathfinding_R7
+								}
+							}
+							if = {
+								limit = {
+									any_owned_province = {
+										province_has_center_of_trade_of_level = 1
+										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag = connected_to_capital }
+									}
+								}
+								random_owned_province = {
+									limit = {
+										province_has_center_of_trade_of_level = 1
+										has_province_flag = pathfinding_R7
+										NOT = { has_province_flag = connected_to_capital }
+									}
+									save_event_target_as = endpoint2
+								}
+								R7_reverse_pathfind_effect2 = yes
+							}
+							else = {
+								#nothing
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#7 rings should be enough for any distance between any two CoT's/Capitals
+}
+
+#does not require while loop because it just finds adj. prov.
+R1_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	random_owned_province = {
+		limit = {
+			has_province_flag = expansion_node
+			any_neighbor_province = {
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+R2_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates R2
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+
+#repeatable cases
+R3_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates extraneous R3
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+R4_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates R4
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+R5_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates R5
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+R6_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates R6
+		limit = {
+			has_province_flag = pathfinding_R6
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R6
+	}
+	every_owned_province = { #eliminates R5 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+R7_reverse_pathfind_effect2 = {
+	event_target:endpoint2 = {
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #Eliminates R7
+		limit = {
+			has_province_flag = pathfinding_R7
+			NOT = { has_province_flag = pathfinding_P2 }
+		}
+		clr_province_flag = pathfinding_R7
+	}
+	every_owned_province = { #eliminates R6 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R6
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R7
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R6
+	}
+	random_owned_province = { #selects R6 path
+		limit = {
+			has_province_flag = pathfinding_R6
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R7
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R5 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R5
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R6
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R5
+	}
+	random_owned_province = { #selects R5 path
+		limit = {
+			has_province_flag = pathfinding_R5
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R6
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R4 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R4
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R5
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R4
+	}
+	random_owned_province = { #selects R4 path
+		limit = {
+			has_province_flag = pathfinding_R4
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R5
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R3 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R3
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R4
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R3
+	}
+	random_owned_province = { #selects R3 path
+		limit = {
+			has_province_flag = pathfinding_R3
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R4
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R2 not adj to P
+		limit = {
+			has_province_flag = pathfinding_R2
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R3
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R2
+	}
+	random_owned_province = { #selects R2 path
+		limit = {
+			has_province_flag = pathfinding_R2
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R3
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	every_owned_province = { #eliminates R1
+		limit = {
+			has_province_flag = pathfinding_R1
+			NOT = {
+				any_neighbor_province = {
+					has_province_flag = pathfinding_R2
+					has_province_flag = pathfinding_P2
+				}
+			}
+		}
+		clr_province_flag = pathfinding_R1
+	}
+	random_owned_province = { #selects R1 path
+		limit = {
+			has_province_flag = pathfinding_R1
+			any_neighbor_province = {
+				has_province_flag = pathfinding_R2
+				has_province_flag = pathfinding_P2
+			}
+		}
+		set_province_flag = pathfinding_P2
+	}
+	clear_remaining_flags_effect = yes
+}
+
