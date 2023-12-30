@@ -450,6 +450,18 @@ on_siege_won_province = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			superregion = india_superregion
+			controller = {
+				has_country_modifier = balkh_zeal
+				NOT = { is_core = ROOT }
+			}
+		}
+		controller = {
+			add_permanent_claim = ROOT
+		}
+	}	
 }
 on_new_monarch = {
 	mr_maitreya_effect = yes

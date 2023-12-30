@@ -508,7 +508,6 @@ crown_agenda_exploit_thrice_effect = {
 		}
 	}
 }
-`
 city_building_effect = {
 	if = {
 		limit = {
