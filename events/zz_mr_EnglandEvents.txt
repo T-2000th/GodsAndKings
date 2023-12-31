@@ -6,7 +6,7 @@ namespace = mr_england
 #9 - Royal Woods events
 #10-12 - Historical Figures flavor events
 #13 - York/Scotland flavor event
-#14-17 - Historical Figures flavor events
+#14-21 - Historical Figures flavor events
 #101,102 - mission triggered events
 #1001-1009 - Crown Agendas Event System
 #2001-2009 - Flavor events triggered by lenient oversight choice in ireland branch
@@ -1371,7 +1371,7 @@ country_event = {
 		custom_tooltip = mr_eng_prods_are_more_likely
 	}
 	option = {
-		name = mr_england.7014.a
+		name = mr_england.7014.b
 		add_country_modifier = {
 			name = mr_eng_wycliffe_isolation
 			duration = 9125
