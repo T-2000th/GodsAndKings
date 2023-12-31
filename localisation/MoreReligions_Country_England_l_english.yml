@@ -357,6 +357,12 @@
  mr_england.7013.d: "The original Wycliffe Bible included twelve principles - grieveances againt the Catholic Church - which were cited by early Wycliffites. Once the state had adopted Wycliffite theology, its review of the principles, and subsequent removal of problematic Conclusions, were quickly disseminated. Soon the original twelve were forgotten and detractors silenced.\n\nAs it turns out, many of these purists simply retreated into isolated communities. Many of them continue to preach the original Twelve, and have driven many to a great fervor, fueled by the anger that the state had take such brazen measures to manipulate the faith."
  mr_england.7013.a: "We reap what we sow, I suppose."
  
+ mr_england.7014.t: "Wycliffites Discuss the Reformation"
+ mr_england.7014.d: "The spread of Luther's heresy throughout Europe is unlike any before it; perhaps it has appeared at a particularlly inopportune time for the Church or maybe it is simply just resonant with the masses. Regardless, Lutheran ideas have arrived at our doorstep. Wycliffe clerics are abuzz decrying this point and praising that point. There seems to be no common consensus just yet, but as discourse continues on the continent, it appears that much of their nobility are backing this new heresy to reduce Papist influence in the court. In [Root.GetName], Wycliffites had excised itself from politics long ago, with only a minor role in the court itself."
+ mr_england.7014.a: "What harm is there in listening to them?"
+ mr_england.7014.b: "We must be wary of foreign radicals."
+ mr_eng_prods_are_more_likely: "§YWycliffite§! provinces will begin to convert to §YProtestant§!."
+ 
  mr_england.8.t: "Statutes of Iona"
  mr_england.8.d: "On the island of Iona, the representatives of the Clans of the Scottish Highlands convened with a delegation of the Crown. The weak presence of feudal peerages and dominance of the Clann system will prove to be a challenge for the Crown, given nothing is done to ease them into the Kingdom. After several days of discussion, the Crown delegates discuss amongst themselves the two options they've settled on: education of heirs in English, as well as the introduction of English into clerical life - among other methods - in an effort for longterm, but stable integration; or a more heavy handed approach of banning Gaelic and other Scottish traditions - the downsides of which are apparent."
  mr_england.8.a: "We should institue longterm policies for assimilating the Clans."
@@ -483,8 +489,31 @@
  MR_BISHOP_OF_LONDON_OUSTED: "Bishop of London Ousted"
  
  mr_england.17.t: "Edward Poyning"
- mr_england.17.d: ""
- mr_england.17.a: ""
+ mr_england.17.d: "Sir Edward Poynings was a commissioner serving under the Crown in Calais. During his service, he kept the coasts of Calais free of piracy and was even called upon by local Low Countries leaders to help defend against Church incursions against the native heresies. Although the Crown was releuctant to award him, lest they bring the ire of the Church upon them, his accolades were impossible to ignore. He was knighted in 1489, but recalled to help administer the recently conquered Irish. His commission over Ireland is remembered as effecient but tyrannical, dismantling the former diarchial parliament, and replacing it with institutions of the English Crown."
+ mr_england.17.a: "Results are all that matters."
+ 
+ mr_england.18.t: "Thomas Howard"
+ mr_england.18.d: "Born into the lineage for Duke of Norfolk, Thomas Howard lived a typical nobleman's life until he gained distinction in the conquest of Scotland. For his achievements in the field, he was awarded the distinction of the Knight of the Garter and climbing the ladder found himself a spot on the Crown Privy Council. He served in multiple capacities: Lord Treasurer, Deputy of Ireland, and Lord Admiral, though not always at the same time."
+ mr_england.18.a: "We need our finances straightened out."
+ mr_england.18.b: "A new deputy is needed in Ireland."
+ mr_england.18.c: "A new admiral is needed for our growing navy."
+ 
+ mr_england.19.t: "Thomas Wolsey"
+ mr_england.19.d1: "Thomas Wolsey was a Catholic bishop highly involved in English politics. He was appointed as Archbishop of York in 1514, giving him presedence over a majority of the English clergy. This level of influence put him next to the King, often allowing him to provide direct advise not only in matters of faith, but also statescraft. One would be right to be wary of such unilaterally given advice, but his words led often to visible results; revisions on taxation, the justice system, monastic organization, even overseas diplomacy to name a few successes."
+ mr_england.19.d2: "Even among the horizontal hierarchy of the Wycliffe Church, Thomas Wolsey stood out amongst the rest; his ability to preach and careful, diplomatic demeanour put him at the front - not top - of the clergy. Originally gaining fame in York, his calculating words extended his reach all the way to London as he became an advisor of sorts to several English nobles. Eventually, he was requested for an audience with the Crown Privy Council and the [Root.Monarch.GetTitle] himself."
+ mr_england.19.a: "Heed his advice."
+ mr_england.19.b: "Heed his advice."
+ 
+ mr_england.20.t: "Thomas More"
+ mr_england.20.d1: "Thomas More was born in London and studied at Oxford under a classical education where he became incredibly profecient in both Greek and Latin; it is said he is as fluent in Latin as his native tounge. After University he served as a lawyer, quickly gaining infamy in representing nobles against the [Root.Monarch.GetTitle]. He was also very outspoken against the various new heretical movements founded by Luther and Zwingli. Despite these, he remained steadfast in faith and law. In 1516, he published the now famous political treatise 'Utopia,' a socio-political satire on the ideal state."
+ mr_england.20.d2: "Thomas More was born in London and studied at Oxford under a classical education where he became incredibly profecient in both Greek and Latin; it is said he is as fluent in Latin as his native tounge. After University he opted to become a monk, invited to Rotterdam by his good friend Erasmus. During his time in Holland he became increasingly more interested with the local Brethren's practices and the new theological debates opened by Luther and Zwingli. Despite his desire to adopt a monastic life, he felt it necessary to carry his learnings with him back to the Wycliffe clerics in England. His seminal work, 'Nusquama' envisioned a utopian island with strict adhereance to Papal edict; a cursory read reveals it to be a thinly veiled crticism on the ills of the Church as it imagines Catholic Doctrine taken to the extreme."
+ mr_england.20.a: "Sounds like an interesting read."
+ mr_england.20.b: "Sounds like an interesting read."
+ 
+ mr_england.21.t: "William Tyndale"
+ mr_england.21.d: "As the Protestant Reformation swept through Europe, the question of translated Bibles was often brought to the forefront. Why should the Bible only be able for the educated few, schooled in Latin? William Tyndale, a biblical scholar and linguist, took his request first to English Church leaders where he was promptly rejected. Fleeing to Germany, he found that the Archbishop of Cologne would sponsor his request, eventually securing approval from the Pope himself."
+ mr_england.21.a: "Straight to the presses!"
+ mr_england.21.b: "We cannot also approve."
  
  
  

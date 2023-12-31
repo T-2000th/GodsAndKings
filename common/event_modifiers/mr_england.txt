@@ -247,3 +247,7 @@ mr_lollard_conc_11 = {
 mr_lollard_revealed = {
 	tolerance_own = -2
 }
+mr_eng_wycliffe_isolation = {
+	global_religious_conversion_resistance = 0.5
+	tolerance_own = 2
+}

@@ -141,17 +141,17 @@
 	# death_date = 1532.1.1 #died
 # }
 
-advisor = {
-	advisor_id = 224
-	name = "Edward Poyning" #Lord Deputy to King Henry VII of England, known from Poyning's Law
-	location = 373 #Meath  (don't know better location)
-	discount = yes
-	skill = 1
-	culture = english
-	type = statesman 
-	date = 1489.1.1 #30 years old
-	death_date = 1521.1.1 #died
-}
+# advisor = {
+	# advisor_id = 224
+	# name = "Edward Poyning" #Lord Deputy to King Henry VII of England, known from Poyning's Law
+	# location = 373 #Meath  (don't know better location)
+	# discount = yes
+	# skill = 1
+	# culture = english
+	# type = statesman 
+	# date = 1489.1.1 #30 years old
+	# death_date = 1521.1.1 #died
+# }
 
 # advisor = {
 	# advisor_id = 225
@@ -166,49 +166,49 @@ advisor = {
 	# death_date = 1536.7.12 #died
 # }
 
-advisor = {
-	advisor_id = 226
-	name = "Thomas Howard" #3rd Duke of Norfolk, prominent Tudor politician, Lord High Treasurer.
-	location = 238 #East Anglia (Norfolk) 
-	discount = yes
-	skill = 2
-	type = treasurer #could also be statesman 
-	date = 1503.1.1 #30 years old
-	death_date = 1554.8.25 #died
-}
+# advisor = {
+	# advisor_id = 226
+	# name = "Thomas Howard" #3rd Duke of Norfolk, prominent Tudor politician, Lord High Treasurer.
+	# location = 238 #East Anglia (Norfolk) 
+	# discount = yes
+	# skill = 2
+	# type = treasurer #could also be statesman 
+	# date = 1503.1.1 #30 years old
+	# death_date = 1554.8.25 #died
+# }
 
-advisor = {
-	advisor_id = 227
-	name = "Thomas Wolsey" #most powerful person in England, besides the King, for many years  
-	location = 236 #London
-	discount = yes
-	skill = 3
-	type = statesman #could also be diplomat 
-	date = 1505.1.1 #30 years old
-	death_date = 1530.11.28 #died
-}
+# advisor = {
+	# advisor_id = 227
+	# name = "Thomas Wolsey" #most powerful person in England, besides the King, for many years  
+	# location = 236 #London
+	# discount = yes
+	# skill = 3
+	# type = statesman #could also be diplomat 
+	# date = 1505.1.1 #30 years old
+	# death_date = 1530.11.28 #died
+# }
 
-advisor = {
-	advisor_id = 228
-	name = "Thomas More" #occupied many public offices, including that of Lord Chancellor  
-	location = 236 #London
-	discount = yes
-	skill = 2
-	type = statesman #could also be philosopher because of Utopia
-	date = 1508.2.7 #30 years old
-	death_date = 1535.7.6 #died
-}
+# advisor = {
+	# advisor_id = 228
+	# name = "Thomas More" #occupied many public offices, including that of Lord Chancellor  
+	# location = 236 #London
+	# discount = yes
+	# skill = 2
+	# type = statesman #could also be philosopher because of Utopia
+	# date = 1508.2.7 #30 years old
+	# death_date = 1535.7.6 #died
+# }
 
-advisor = {
-	advisor_id = 229
-	name = "William Tyndale" #translated the Bible into the Early Modern English  
-	location = 234 #Wessex (Gloucester) 
-	discount = yes
-	skill = 2
-	type = theologian 
-	date = 1514.1.1 #30 years old
-	death_date = 1536.10.6 #died
-}
+# advisor = {
+	# advisor_id = 229
+	# name = "William Tyndale" #translated the Bible into the Early Modern English  
+	# location = 234 #Wessex (Gloucester) 
+	# discount = yes
+	# skill = 2
+	# type = theologian 
+	# date = 1514.1.1 #30 years old
+	# death_date = 1536.10.6 #died
+# }
 
 advisor = {
 	advisor_id = 230
