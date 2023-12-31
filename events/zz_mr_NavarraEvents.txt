@@ -5,8 +5,8 @@ country_event = {
 	desc = navarra_events.1.d
 	picture = BAD_WITH_MONARCH_eventPicture
 	fire_only_once = yes
-	is_triggered_only = yes 
-	
+	is_triggered_only = yes
+
 	option = {
 		name = "navarra_events.1.1"
 		define_heir = {
@@ -20,7 +20,7 @@ country_event = {
 			country_event = {
 				id = navarra_events.2
 			}
-		}	
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -36,14 +36,14 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "navarra_events.1.2"
 		NAV = {
 			country_event = {
 			id = navarra_events.3
 			}
-		}	
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -56,7 +56,7 @@ country_event = {
 					is_rival = NAV
 				}
 			}
-		}	
+		}
 	}
 }
 country_event = {
@@ -66,7 +66,7 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.2.1"
 		add_prestige = 10
@@ -79,7 +79,7 @@ country_event = {
 	picture = CONQUEST_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.3.1"
 		NAV = {
@@ -98,14 +98,14 @@ country_event = {
 	picture = CONQUEST_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.4.1"
 		NAV = {
 			country_event = {
 				id = navarra_events.5
 			}
-		}	
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -123,7 +123,7 @@ country_event = {
 			country_event = {
 				id = navarra_events.6
 			}
-		}	
+		}
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -131,7 +131,7 @@ country_event = {
 				NAV = {
 					has_heir = no
 				}
-			}	
+			}
 		}
 	}
 }
@@ -142,14 +142,14 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.5.1"
 		NAV = {
 			create_union = POR
 		}
 	}
-}	
+}
 country_event = {
 	id = navarra_events.6
 	title = navarra_events.6.t
@@ -157,7 +157,7 @@ country_event = {
 	picture = CONQUEST_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.6.1"
 		NAV = {
@@ -168,7 +168,7 @@ country_event = {
 			}
 		}
 	}
-}	
+}
 country_event = {
 	id = navarra_events.7
 	title = navarra_events.7.t
@@ -176,7 +176,7 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.7.1"
 		NAV = {
@@ -228,7 +228,7 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.8.1"
 		NAV = {
@@ -243,7 +243,7 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.9.1"
 		NAV = {
@@ -262,7 +262,7 @@ country_event = {
 	picture = RELIGIOUS_WARS_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.10.1"
 		NAV = {
@@ -318,18 +318,18 @@ country_event = {
     picture = RELIGIOUS_WARS_eventPicture
     fire_only_once = yes
     is_triggered_only = yes
-    
+
     option = {
         name = "navarra_events.11.1"
         NAV = {
-            create_union = FROM 
+            create_union = FROM
             if = { limit = { LON = { junior_union_with = CAS } }
               create_union = LON
-            } 
-            if = { 
+            }
+            if = {
              limit = { CAS = { junior_union_with = LON } }
               create_union = CAS
-            } 
+            }
         }
     }
 }
@@ -340,7 +340,7 @@ country_event = {
 	picture = RELIGIOUS_WARS_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.12.1"
 		NAV = {
@@ -359,7 +359,7 @@ country_event = {
 	picture = BATTLE_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.13.1"
 		NAV = {
@@ -373,8 +373,8 @@ country_event = {
 				factor  = 20
 				NAV = {
 					army_strength = {
-									who = CBD
-									value = 1.1
+						who = CBD
+						value = 1.1
 					}
 				}
 			}
@@ -396,10 +396,10 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-					factor = 50
-					CBD = {
-						is_rival = NAV
-					}
+				factor = 50
+				CBD = {
+					is_rival = NAV
+				}
 			}
 		}
 	}
@@ -411,7 +411,7 @@ country_event = {
 	picture = BATTLE_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.14.1"
 		NAV = {
@@ -426,7 +426,7 @@ country_event = {
 	picture = BATTLE_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.15.1"
 		NAV = {
@@ -449,7 +449,7 @@ country_event = {
 	major_trigger = {
 		continent = europe
 	}
-	
+
 	option = {
 		name = "navarra_events.16.1"
 		add_country_modifier = {
@@ -475,7 +475,7 @@ country_event = {
 		inherit = VAL
 		inherit = MJO
 	}
-}	
+}
 country_event = {
 	id = navarra_events.17
 	title = navarra_events.17.t
@@ -484,7 +484,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	major = yes
-	
+
 	option = {
 		name = "navarra_events.17.1"
 		change_price = {
@@ -502,18 +502,18 @@ country_event = {
 	picture = ABYSS_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "navarra_events.18.1"
 		change_innovativeness = 30
-		
+
 	}
-	
+
 	option = {
 		name = "navarra_events.18.2"
 		add_prestige = 100
 	}
-	
+
 	option = {
 		name = "navarra_events.18.3"
 		add_treasury = 10000
