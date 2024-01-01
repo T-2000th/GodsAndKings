@@ -282,16 +282,17 @@ advisor = {
 	death_date = 1598.8.4 #died
 }
 
-advisor = {
-	advisor_id = 236
-	name = "Francis Walsingham" #spymaster of Queen Elizabeth I of England   
-	location = 235 #Kent (Chislehurst)
-	discount = yes
-	skill = 3
-	type = spymaster
-	date = 1559.1.1 #elected to House of Commons
-	death_date = 1590.4.16 #died
-}
+#vanilla event flavor_eng.9116
+# advisor = {
+	# advisor_id = 236
+	# name = "Francis Walsingham" #spymaster of Queen Elizabeth I of England   
+	# location = 235 #Kent (Chislehurst)
+	# discount = yes
+	# skill = 3
+	# type = spymaster
+	# date = 1559.1.1 #elected to House of Commons
+	# death_date = 1590.4.16 #died
+# }
 
 advisor = {
 	advisor_id = 237
@@ -383,16 +384,17 @@ advisor = {
 	death_date = 1626.4.9 #died
 }
 
-advisor = {
-	advisor_id = 245
-	name = "William Shakespeare" #The greatest writer of all   
-	location = 236 #London
-	discount = yes
-	skill = 3
-	type = artist
-	date = 1592.4.26 #28 years old, playwright in London
-	death_date = 1616.4.23 #died
-}
+#can get from either flavor_eng.9205 or mr_england.2009 
+# advisor = {
+	# advisor_id = 245
+	# name = "William Shakespeare" #The greatest writer of all   
+	# location = 236 #London
+	# discount = yes
+	# skill = 3
+	# type = artist
+	# date = 1592.4.26 #28 years old, playwright in London
+	# death_date = 1616.4.23 #died
+# }
 
 advisor = {
 	advisor_id = 246
@@ -819,16 +821,17 @@ advisor = {
 	death_date = 1745.10.19 #died
 }
 
-advisor = {
-	advisor_id = 284
-	name = "Robert Walpole" #first 'Prime Minister' of Great Britain
-	location = 238 #East Anglia
-	discount = yes
-	skill = 3
-	type = statesman 
-	date = 1701.1.1 #Entered Parliament
-	death_date = 1745.3.18 #died
-}
+# vanilla event flavor_eng.9140
+# advisor = {
+	# advisor_id = 284
+	# name = "Robert Walpole" #first 'Prime Minister' of Great Britain
+	# location = 238 #East Anglia
+	# discount = yes
+	# skill = 3
+	# type = statesman 
+	# date = 1701.1.1 #Entered Parliament
+	# death_date = 1745.3.18 #died
+# }
 
 advisor = {
 	advisor_id = 285
@@ -926,16 +929,17 @@ advisor = {
 	death_date = 1791.3.2 #died
 }
 
-advisor = {
-	advisor_id = 293
-	name = "W. Pitt the Elder" #war minister during the Seven Years' War. Thoroughly tied to history of England
-	location = 236 #London 
-	discount = yes
-	skill = 3
-	type = statesman
-	date = 1735.1.1 #Entered Parliament
-	death_date = 1778.5.11 #died
-}
+#vanilla event flavor_eng.9144
+# advisor = {
+	# advisor_id = 293
+	# name = "W. Pitt the Elder" #war minister during the Seven Years' War. Thoroughly tied to history of England
+	# location = 236 #London 
+	# discount = yes
+	# skill = 3
+	# type = statesman
+	# date = 1735.1.1 #Entered Parliament
+	# death_date = 1778.5.11 #died
+# }
 
 advisor = {
 	advisor_id = 294
@@ -1171,16 +1175,17 @@ advisor = {
 	death_date = 1823.1.26 #died
 }
 
-advisor = {
-	advisor_id = 315
-	name = "W. Pitt the Younger" #served as Prime Minister from 1783 to 1801. Consolidated the powers of his office
-	location = 235 #Kent  
-	discount = yes
-	skill = 3
-	type = statesman
-	date = 1781.1.1 #Entered Parliament
-	death_date = 1806.1.23 #died
-}
+#vanilla event flavor_eng.9150
+# advisor = {
+	# advisor_id = 315
+	# name = "W. Pitt the Younger" #served as Prime Minister from 1783 to 1801. Consolidated the powers of his office
+	# location = 235 #Kent  
+	# discount = yes
+	# skill = 3
+	# type = statesman
+	# date = 1781.1.1 #Entered Parliament
+	# death_date = 1806.1.23 #died
+# }
 
 advisor = { 
 	advisor_id = 316

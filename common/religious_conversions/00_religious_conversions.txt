@@ -491,6 +491,11 @@ protestant_center_of_reformation = {
 			religion = orthodox
 		}		
 		modifier = {
+			factor = 2
+			religion = mr_lollard
+			owner = { has_country_flag = me_eng_wycliffe_convert }
+		}
+		modifier = {
 			factor = 0.5
 			has_state_edict = edict_religion_enforced
 		}

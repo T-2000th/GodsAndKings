@@ -1903,7 +1903,7 @@ christian = {
 				duration = 3650
 			}
 			country_event = {
-				id = mr_england.7
+				id = mr_lollard.7
 			}
 			set_variable = {
 				which = lollardConclusionProgress

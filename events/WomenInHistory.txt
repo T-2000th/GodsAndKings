@@ -1,5 +1,8 @@
 #modified
 	#11 trigger
+	#21 FOO, moved to english famous people pulse set, desc
+	#61 FOO, moved to english famous people pulse set, trigger
+	#61 FOO, moved to english famous people pulse set, trigger
 
 ########################################
 # Events for Women in History
@@ -1491,27 +1494,18 @@ country_event = {
 	title = women_history_events.21.t
 	desc = women_history_events.21.d
 	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
-
+	
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
+		is_year = 1795
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		is_year = 1775
-		NOT = {
-			has_global_flag = wih_jane_austen_flag
-		}
 	}
 	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_jane_austen_flag
-		}
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = women_history_events.21.a
@@ -4080,29 +4074,18 @@ country_event = {
 	desc = women_history_events.61.d
 	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
 
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
+		is_year = 1652
+		NOT = { is_year = 1705 }
 		OR = {
 			tag = ENG
 			tag = GBR
 		}
-		is_year = 1632
-		NOT = {
-			is_year = 1705
-		}
-		NOT = {
-			has_global_flag = wih_elizabethwilbraham_flag
-		}
 	}
 	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_elizabethwilbraham_flag
-		}
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = women_history_events.61.a
@@ -5323,27 +5306,18 @@ country_event = {
 	desc = women_history_events.78.d
 	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
 
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
+		is_year = 1781
 		OR = {
 			tag = ENG
 			tag = GBR
 			tag = FRA
 		}
-		is_year = 1761
-		NOT = {
-			has_global_flag = wih_marietussaud_flag
-		}
 	}
 	
-	mean_time_to_happen = {
-		months = 200
-	}
-	
-	immediate = {
-		hidden_effect = {
-			set_global_flag = wih_marietussaud_flag
-		}
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = women_history_events.78.a

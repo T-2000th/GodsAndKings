@@ -6,6 +6,7 @@
 	#9106 unchanged
 	#9107 desc
 	#9108 unchanged
+	#9109 unchanged
 	#9111 trigger changed/rearranged
 	
 	#9112 trigger rearranged - make sure to tie into mission later
@@ -13,17 +14,23 @@
 	#9113 trigger changed, FOO, removed
 	#9114 desc
 	#9115 unchanged
-	#9117 desc
-	#9109 deprecated vanilla, unchanged
-	#9122 mtth
-	#9201 FOO, special person
+	#9116 FOO, desc,  changed to fire on pulse with other historical figure events
+	#9117 desc, changed to fire on pulse with other historical figure events
+	#9118 unchanged
+	#9119 unchanged
+	#9121 desc
+	#9122 mtth factors
+	#9124 trigger changed
+	#9140 FOO, changed to fire on pulse with other historical figure events
+	#9150 FOO, changed to fire on pulse with other historical figure events
+	#9201 FOO, changed to fire on pulse with other historical figure events
 	#9202 FOO
 	#9203 FOO
 	#9204 FOO
- 	#9205 trigger to only happen on non-lenient oversight path; changed trigger order
+ 	#9205 FOO, changed to fire on pulse with other historical figure events, trigger to only happen on non-lenient oversight path; changed trigger order
 	
-	#9250
-	#9251
+	#9250 War of Roses events, removed
+	#9251 War of Roses events, removed
 	#9237 War of Roses events, removed
 	
 	#9880 Removed (oxbridge)
@@ -860,6 +867,7 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9116"
 	picture = ADVISOR_eventPicture
 
+	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
 		is_year = 1550
@@ -873,16 +881,14 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
-		NOT = { advisor_exists = 236 }
+		#NOT = { advisor_exists = 236 }
 		OR = {
 			owns = 235		# Kent
 			owns = 236		# London
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
+	mean_time_to_happen = { days = 1 }
 
 	option = {			# An Excellent Minister!
 		name = "EXCELLENTMINISTER"
@@ -923,8 +929,8 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9117"
 	picture = ADVISOR_eventPicture
 
+	is_triggered_only = yes
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1537
 		NOT = { is_year = 1579 }
@@ -940,9 +946,7 @@ country_event = {
 		owns = 236		# London
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {				# Reform
 		name = "flavor_eng.EVTOPTA9117"
@@ -1121,7 +1125,6 @@ country_event = {
 	picture = ECONOMY_eventPicture
 
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1500
 		NOT = { is_year = 1600 }
@@ -1166,7 +1169,6 @@ country_event = {
 	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
-
 	trigger = {
 		is_year = 1500
 		NOT = { is_year = 1650 }
@@ -1253,10 +1255,14 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 1200
-		# modifier = {
-			# factor = 0.5
-			# mission_completed = conquer_ireland
-		# }
+		modifier = {
+			factor = 0.5
+			has_country_flag = eng_ireland_oppression_flag
+		}
+		modifier = {
+			factor = 0
+			mission_completed = eng_m_ireland_4
+		}
 	}
 
 	option = {			# We are not amused!
@@ -1412,6 +1418,7 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
+		has_parliament = yes
 		government = monarchy
 		has_country_flag = refusal_of_petition_of_rights
 	}
@@ -1725,9 +1732,10 @@ country_event = {
 	title = "flavor_eng.EVTNAME9140"
 	desc = "flavor_eng.EVTDESC9140"
 	picture = ADVISOR_eventPicture
-
+	
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9140 }
 		is_year = 1700
 		NOT = { is_year = 1745 }
 		OR = {
@@ -1739,20 +1747,15 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
-		NOT = { advisor_exists = 284 }
+		NOT = { dynasty = "Neville" }
+		#NOT = { advisor_exists = 284 }
 		OR = {
 			owns = 238		# East Anglia
 			owns = 236		# London
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
-
-	immediate = {
-		set_country_flag = ENG_had_event_9140
-	}
+	mean_time_to_happen = { days = 1 }
 	
 	option = {		# An Excellent Minister!
 		name = "EXCELLENTMINISTER"
@@ -1930,9 +1933,9 @@ country_event = {
 	title = "flavor_eng.EVTNAME9144"
 	desc = "flavor_eng.EVTDESC9144"
 	picture = ADVISOR_eventPicture
-
-	fire_only_once = yes
 	
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		is_year = 1735
 		NOT = { is_year = 1778 }
@@ -1945,12 +1948,29 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
-		NOT = { advisor_exists = 293 }
+		#NOT = { advisor_exists = 293 }
 		owns = 236		# London
 	}
 
-	mean_time_to_happen = {
-		months = 300
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_province = {
+					is_overseas = yes
+				}
+			}			
+			random_owned_province = {
+				limit = { is_overseas = yes }
+				save_event_target_as = governor_province
+			}
+		}
+		else = {
+			random_owned_province = {
+				save_event_target_as = governor_province
+			}
+		}
 	}
 	
 	option = {		# An Excellent Minister!
@@ -1992,8 +2012,9 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9150"
 	picture = ADVISOR_eventPicture
 
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = ENG_had_event_9150 }
 		is_year = 1781
 		NOT = { is_year = 1806 }
 		OR = {
@@ -2005,21 +2026,14 @@ country_event = {
 			tag = GBR
 			tag = AVE
 		}
-		NOT = { advisor_exists = 315 }
 		OR = {
 			owns = 235		# Kent
 			owns = 236		# London
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
+	mean_time_to_happen = { days = 1 }
 
-	immediate = {
-		set_country_flag = ENG_had_event_9150
-	}
-	
 	option = {		# An Excellent Minister!
 		name = "EXCELLENTMINISTER"
 		add_adm_power = 25
@@ -2311,6 +2325,7 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9201"
 	picture = ECONOMY_eventPicture
 
+	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
 		is_year = 1776
@@ -2326,9 +2341,7 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
+	mean_time_to_happen = { days = 1 }
 
 	option = {				# Ok
 		name = "EXCELLENT"
@@ -2458,7 +2471,8 @@ country_event = {
 	}
 }
 
-# Shakespeare - alt event for anglo-irish shakespeare
+#Shakespeare
+#mr_england.2009 is the alt history event for anglo-irish shakespeare
 #if you do lenient oversight in ireland
 country_event = {
 	id = flavor_eng.9205
@@ -2466,13 +2480,12 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9205"
 	picture = ECONOMY_eventPicture
 	
+	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
 		is_year = 1593
 		NOT = { is_year = 1616 }
-		#NOT = { has_country_flag = ENG_had_event_9205 }
 		NOT = { has_country_flag = eng_lenient_oversight_flag }
-		NOT = { advisor_exists = 245 }
 		OR = {
 			AND = {
 				tag = ENG
@@ -2484,14 +2497,8 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 300
-	}
+	mean_time_to_happen = { days = 1 }
 	
-	# immediate = {
-		# set_country_flag = ENG_had_event_9205
-	# }
-
 	option = {				# Ok
 		name = "GLORYTOOURNATION"
 		define_advisor = {

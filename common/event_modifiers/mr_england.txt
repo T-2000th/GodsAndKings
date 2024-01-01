@@ -249,5 +249,6 @@ mr_lollard_revealed = {
 }
 mr_eng_wycliffe_isolation = {
 	global_religious_conversion_resistance = 0.5
+	tolerance_heretic = -4
 	tolerance_own = 2
 }

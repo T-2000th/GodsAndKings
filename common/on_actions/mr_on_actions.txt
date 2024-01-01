@@ -1397,22 +1397,50 @@ on_harmonized_yogavacara = {
 	}
 }
 on_yearly_pulse_2 = {
+	#lollard Conclusion event set
 	events = {
-		mr_england.7
-		mr_england.7002
-		mr_england.7003
-		mr_england.7004
-		mr_england.7005
-		mr_england.7006
-		mr_england.7007
-		mr_england.7008
-		mr_england.7009
-		mr_england.7010
-		mr_england.7011
-		mr_england.7012
+		mr_lollard.1
+		mr_lollard.2
+		mr_lollard.3
+		mr_lollard.4
+		mr_lollard.5
+		mr_lollard.6
+		mr_lollard.7
+		mr_lollard.8
+		mr_lollard.9
+		mr_lollard.10
+		mr_lollard.11
+		mr_lollard.12
 	}
 	random_events = {
-		13 = mr_england.10
+		#basic triggers require english primary culture
+		13 = mr_england.10 #1420-1460 (John Capgrave)
+		13 = mr_england.11 #1424-1464 (Henry Fortescue)
+		13 = mr_england.12 #1452-1492 (William Caxton)
+		13 = mr_england.13 #1453-1493 (Robert Boyd)
+		13 = mr_england.14 #1456-1496 (Finghin O Mathghamhna)
+		13 = mr_england.15 #1458-1498 (Richard Neville)
+		13 = mr_england.16 #1480-1520 (William Warham)
+		13 = mr_england.17 #1489-1529 (Edward Poyning)
+		13 = mr_england.18 #1503-1543 (Thomas Howard)
+		13 = mr_england.19 #1514-1554 (Thomas Wolsey)
+		13 = mr_england.21 #1514-1554 (William Tyndale)
+		13 = mr_england.22 #1515-1555 (Thomas Cromwell)
+		13 = mr_england.20 #1516-1556 (Thomas More)
+		
+		#all ~40%, basic triggers by tag
+		13 = flavor_eng.9116 #1550-1590, 40y (Walsingham)
+		13 = flavor_eng.9117 #1537-1579, 42y (Thomas Gresham)
+		23 = flavor_eng.9205 #1593-1616, 23y (Shakespeare - ENG)
+		13 = flavor_eng.9140 #1700-1745, 45y (Walpole)
+		13 = flavor_eng.9144 #1735-1778, 43y (Pitt Elder)
+		40 = flavor_eng.9201 #1776-1790, 14y (Adam Smith)
+		24 = flavor_eng.9150 #1781-1806, 25y (Pitt Younger)
+		
+		11 = women_history_events.61 #1652-1705, 53y (Elizabeth Wilbraham)
+		14 = women_history_events.78 #1781-end 39y (Marie Tussaud)
+		24 = women_history_events.21 #1795-end, 26y (Jane Austen)
+		
 		1000 = 0
 	}
 }
