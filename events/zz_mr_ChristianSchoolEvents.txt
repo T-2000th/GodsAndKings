@@ -22,7 +22,7 @@ country_event = {
 		desc = christian_school_events.20.dd
 	}
 	picture = MYSTIC_IN_PRAYER_eventPicture
-	
+
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		OR = {
@@ -51,7 +51,7 @@ country_event = {
 			AND = {
 				religion = orthodox
 				has_orthodox_rite_trigger = no
-			}		
+			}
 			AND = {
 				religion = coptic
 				has_coptic_rite_trigger = no
@@ -60,10 +60,10 @@ country_event = {
 	}
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = christian_school_events.20.a #Gives areas historical school of region
-		trigger = {	
+		trigger = {
 			ai = yes
 		}
 		if = { #milan follows ambrosian
@@ -166,7 +166,7 @@ country_event = {
 					religion = mr_maronite
 				}
 				capital_scope = {
-					OR = {							
+					OR = {
 						region = horn_of_africa_region
 						region = egypt_region
 					}
@@ -184,7 +184,7 @@ country_event = {
 					religion = mr_maronite
 				}
 				capital_scope = {
-					OR = {							
+					OR = {
 						region = anatolia_region
 						region = caucasia_region
 						region = persia_region
@@ -204,6 +204,15 @@ country_event = {
 			set_religious_school = {
 				group = christian
 				school = mr_byzantine_rite
+			}
+		}
+		else_if = { # Crusaders default to Antiochean rite
+			limit = {
+				is_levantine_crusader_state = yes
+			}
+			set_religious_school = {
+				group = christian
+				school = mr_antiochian_rite
 			}
 		}
 	}
@@ -500,6 +509,7 @@ country_event = {
 			OR = {
 				religion = mr_maronite
 				religion = coptic
+				is_levantine_crusader_state = yes
 			}
 			ai = no
 		}
@@ -544,7 +554,7 @@ country_event = {
 	title = christian_school_events.21.t
 	desc = christian_school_events.21.d
 	picture = MYSTIC_IN_PRAYER_eventPicture
-	
+
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion = reformed
@@ -558,7 +568,7 @@ country_event = {
 	}
 
 	is_triggered_only = yes
-	
+
 	option = { #presbyterian
 		name = christian_school_events.21.a
 		ai_chance = {
@@ -643,16 +653,16 @@ country_event = {
 	title = christian_school_events.20.t
 	desc = christian_school_events.20.d
 	picture = MYSTIC_IN_PRAYER_eventPicture
-	
+
 	is_triggered_only = yes
 	trigger = { } #fired by decision mr_change_catholic_rite
 
 	is_triggered_only = yes
-	
+
 	option = { #go back
 		name = christian_school_events.20.x
 	}
-	
+
 #####################
 	option = { #Roman Rite unavailable
 		name = christian_school_events.20.b
@@ -670,7 +680,7 @@ country_event = {
 						has_opinion = {
 							who = ROOT
 							value = 150
-						} 
+						}
 					}
 				}
 			}
@@ -695,7 +705,7 @@ country_event = {
 					has_opinion = {
 						who = ROOT
 						value = 150
-					} 
+					}
 				}
 			}
 		}
@@ -720,7 +730,7 @@ country_event = {
 			school = mr_latin_rite
 		}
 	}
-########################	
+########################
 	option = { #Ambrosian Rite unavailable
 		name = christian_school_events.20.a1
 		trigger = {
@@ -774,7 +784,7 @@ country_event = {
 			school = mr_ambrosian_rite
 		}
 	}
-########################	
+########################
 	option = { #Aquelian Rite unavailable
 		name = christian_school_events.20.i
 		trigger = {
@@ -828,7 +838,7 @@ country_event = {
 			school = mr_aqueilian_rite
 		}
 	}
-########################	
+########################
 	option = { # Rite unavailable
 		name = christian_school_events.20.j
 		trigger = {
@@ -882,7 +892,7 @@ country_event = {
 			school = mr_braga_rite
 		}
 	}
-########################	
+########################
 	option = { #Durham Rite unavailable
 		name = christian_school_events.20.k
 		trigger = {
@@ -936,7 +946,7 @@ country_event = {
 			school = mr_durham_rite
 		}
 	}
-########################	
+########################
 	option = { #Mozarbic Rite unavailable
 		name = christian_school_events.20.l
 		trigger = {
@@ -1010,7 +1020,7 @@ country_event = {
 			school = mr_mozarbic_rite
 		}
 	}
-########################	
+########################
 	option = { #Sarum Rite unavailable
 		name = christian_school_events.20.m
 		trigger = {
@@ -1062,7 +1072,7 @@ country_event = {
 			school = mr_sarum_rite
 		}
 	}
-########################	
+########################
 	option = { #Carmelite Rite unavailable
 		name = christian_school_events.20.n
 		trigger = {
@@ -1127,7 +1137,7 @@ country_event = {
 			school = mr_carmelite_rite
 		}
 	}
-########################	
+########################
 	option = { #Nidaros Rite unavailable
 		name = christian_school_events.20.o
 		trigger = {
@@ -1187,7 +1197,7 @@ country_event = {
 			school = mr_nidaros_rite
 		}
 	}
-########################	
+########################
 	option = { #Carthusian Rite unavailable
 		name = christian_school_events.20.p
 		trigger = {
@@ -1241,7 +1251,7 @@ country_event = {
 			school = mr_carthusian_rite
 		}
 	}
-########################	
+########################
 	option = { #Cologne Rite unavailable
 		name = christian_school_events.20.q
 		trigger = {
@@ -1313,7 +1323,7 @@ country_event = {
 			school = mr_cologne_rite
 		}
 	}
-########################	
+########################
 	option = { #Metz Rite unavailable
 		name = christian_school_events.20.r
 		trigger = {
@@ -1367,7 +1377,7 @@ country_event = {
 			school = mr_metz_rite
 		}
 	}
-########################	
+########################
 	option = { #Lyonese Rite unavailable
 		name = christian_school_events.20.s
 		trigger = {
@@ -1421,7 +1431,7 @@ country_event = {
 			school = mr_lyonese_rite
 		}
 	}
-########################	
+########################
 	option = { #Uppsala Rite unavailable
 		name = christian_school_events.20.v
 		trigger = {
@@ -1475,7 +1485,7 @@ country_event = {
 			school = mr_uppsala_rite
 		}
 	}
-########################	
+########################
 	option = { #Esztergom Rite unavailable
 		name = christian_school_events.20.u
 		trigger = {
@@ -1542,7 +1552,7 @@ country_event = { #choose rite refresh
 	title = christian_school_events.23.t
 	desc = christian_school_events.23.d
 	picture = MYSTIC_IN_PRAYER_eventPicture
-	
+
 	hidden = yes
 	is_triggered_only = yes
 	mean_time_to_happen = { days = 1 }
