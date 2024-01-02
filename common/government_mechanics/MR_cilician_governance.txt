@@ -126,41 +126,36 @@ cilician_mechanic = {
 			cost_type = cilician_mil_power
 			cost = 100
 			trigger = {
-				any_owned_province = {
-					NOT = {
-						culture_group = french
-					}
-					NOT = {
-						has_province_modifier = cs_european_settlers
-					}
-				}
+				accepted_culture = turkish
 			}
 			effect = {
-				random_owned_province = {
+			
+			random_owned_province = {
+			ROOT = {
+				qizilbash_cavalry_unit = PREV
+				}
+			}
+			create_general = { 
+			tradition = 50
+			culture = turkish
+			}
+				any_owned_province = {
 					limit = {
-						OR = {
-							has_owner_accepted_culture = yes
-							culture = ROOT
-						}
+							culture = turkish
 						NOT = {
-							has_province_modifier = cs_european_settlers
+							has_province_modifier = cil_turkish_aut
 						}
 					}
-					add_base_manpower = 2
-					change_culture = occitain
-					change_religion = root
-					custom_tooltip = negate_culture_penalty_TT
-					hidden_effect = {
 						add_province_modifier = {
-							name = cs_european_settlers
-							duration = -1
+							name = cil_turkish_aut
+							duration = 3650
 						}
-					}
 				}
 				add_country_modifier = {
-					name = cs_french_strategists
+					name = cil_turkish_gen
 					duration = 3650
 				}
+				
 			}
 			cooldown_years = 10
 			ai_chance = {
