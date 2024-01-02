@@ -553,6 +553,29 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+### cilician governance ###
+	spriteType = {
+		name = "GFX_cilician_ability_ADM"
+		texturefile = "gfx//interface//government_mechanics/cilician_governance/cilician_ability_ADM.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_cilician_ability_DIP"
+		texturefile = "gfx//interface//government_mechanics/cilician_governance/cilician_ability_DIP.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+		
+	}
+
+	spriteType = {
+		name = "GFX_cilician_ability_MIL"
+		texturefile = "gfx//interface//government_mechanics/cilician_governance/cilician_ability_MIL.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
 	
 	##Maitreyan Zealotry
 	

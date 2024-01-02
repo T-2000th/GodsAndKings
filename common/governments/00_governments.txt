@@ -148,6 +148,8 @@ monarchy = {
 				medieval_caliphate
 				# Added for Africa (Inferno)
 				rex_africae
+				# Added for Cilicia (NameTag)
+				cilician_kingdom
 			}
 		}
 		hereditary_vs_nobility = {

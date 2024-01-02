@@ -1268,3 +1268,38 @@ rex_africae = {
 		enables_estate_dhimmi = yes # Catholic Dhimmi!
 	}
 }
+
+cilician_kingdom = { 
+	icon = "mission_to_kill_pirates_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = cilician_kingdom
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = cilician_kingdom
+			}
+		}
+	}
+
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+
+	modifiers = {
+		prestige = 0.5
+		global_tax_modifier = 0.15
+		improve_relation_modifier = 0.10
+		rival_border_fort_maintenance = -0.30
+		advisor_pool = 1
+		all_estate_influence_modifier = 0.05
+		
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+
+	}		
+	government_abilities = {
+			cilician_mechanic
+		}
+}
