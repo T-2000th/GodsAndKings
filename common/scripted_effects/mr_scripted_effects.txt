@@ -564,5 +564,17 @@ remove_quest_stuff = {
 		}
 		clr_ruler_flag = task_a
 	}
+	if = {
+		limit = {
+			has_ruler_modifier = task_b_desc
+		}
+		remove_country_modifier = task_b_desc
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_b
+		}
+		clr_ruler_flag = task_b
+	}
 	
 }

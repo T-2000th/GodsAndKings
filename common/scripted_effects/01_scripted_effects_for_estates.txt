@@ -4639,6 +4639,14 @@ on_completed_agenda_effect = {
 			value = -0.5
 		}
 	}
+	if = {
+		limit = {
+			has_ruler_flag = task_b
+		}
+		country_event = {
+			id = mr_MaliFlavor.16
+		}
+	}
 	clr_auto_complete_flag = yes
 }
 

@@ -120,6 +120,12 @@ the_best_grits_around = {
 task_a_win = {
 	advisor_cost = -0.15
 }
+task_b_win = {
+	all_estate_loyalty_equilibrium = 0.075
+}
 task_a_desc = {
+	prestige = 0.01
+}
+task_b_desc = {
 	prestige = 0.01
 }

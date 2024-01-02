@@ -76,6 +76,7 @@ mr_MaliFlavor.12.a: "We shall go to the Council for Support!"
 
 mr_MaliFlavor.13.t: "Faction Demand Restitution"
 mr_MaliFlavor.13.a: "Expand our Infrastructure"
+mr_MaliFlavor.13.b: "Complete an Estate Agenda"
 
 mr_MaliFlavor.16.t: "All Parties are Content"
 mr_mali_flavor.16.a: "The Grand Council will be pleased."
@@ -85,7 +86,14 @@ mr_MaliFlavor.17.a: "The Council backs a candidate!"
 
 
 
-how_to_complete_task_a_and_reward: "We must §YExpand infrastructure§! in one of our states.\n\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
+how_to_complete_task_a_and_reward: "We must §YExpand infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
+how_to_complete_task_b_and_reward: "We must §YComplete an Estate Agenda§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
+
+
+
 task_a_win: "Gained Support of Council"
 task_a_desc: "Council Quest"
-desc_task_a_desc: "We must §YExpand infrastructure§! in one of our states.\n\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+desc_task_a_desc: "We must §YExpand infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+task_b_desc: "Council Quest"
+desc_task_b_desc: "We must §YComplete an Estate Agenda§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+task_b_win: "Gained Support of Council"

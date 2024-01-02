@@ -639,9 +639,12 @@ country_event = { #The Court is Split!
 			id = mr_MaliFlavor.13
 			days = 1
 		}
+		hidden_effect = {
+			set_ruler_flag = support_the_guilds
+		}
 	}
 	option = {
-		name = mr_MaliFlavor.11.b
+		name = mr_MaliFlavor.12.b
 		add_faction_influence = {
 			faction = malian_merchants
 			influence = 15
@@ -650,6 +653,9 @@ country_event = { #The Court is Split!
 		country_event = {
 			id = mr_MaliFlavor.13
 			days = 1
+		}
+		hidden_effect = {
+			set_ruler_flag = support_the_merchants
 		}
 	}
 }
@@ -661,7 +667,7 @@ country_event = { #Court Faction
 	
 	is_triggered_only = yes
 
-	option = {
+	option = { #Task A for Court
 		trigger = {
 			has_ruler_flag = support_the_court
 		}
@@ -682,6 +688,28 @@ country_event = { #Court Faction
 			set_ruler_flag = task_a
 		}
 	}
+
+	option = { #Task B for Court
+		trigger = {
+			has_ruler_flag = support_the_court
+		}
+		name = mr_MaliFlavor.13.b
+		add_ruler_modifier = {
+			name = task_b_desc
+			duration = -1
+		}
+		custom_tooltip = how_to_complete_task_b_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_b_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_court
+			set_ruler_flag = task_b
+		}
+	}
 }
 country_event = {
 	id = mr_MaliFlavor.16
@@ -699,6 +727,15 @@ country_event = {
 			}
 			add_ruler_modifier = {
 				name = task_a_win
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_b
+			}
+			add_ruler_modifier = {
+				name = task_b_win
 				duration = -1
 			}
 		}
@@ -731,13 +768,17 @@ country_event = {
 					flag = task_a
 					days = 3650
 				}
+				had_ruler_flag = {
+					flag = task_b
+					days = 3650
+				}
 			}
 		}
 		random_owned_province = {
 			spawn_rebels = {
 				type = pretender_rebels
  			    size = 3
-				dynasty = ROOT
+				leader_dynasty = "Keita"
 			}
 		}
 	}
