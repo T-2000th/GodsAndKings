@@ -1,3 +1,6 @@
+##233,221, move to ireland events later
+#220 move to scotland events
+
 #####################################################################
 #
 # ADVISORS FOR THE REGION 'BRITISH ISLES'
@@ -210,49 +213,49 @@
 	# death_date = 1536.10.6 #died
 # }
 
-advisor = {
-	advisor_id = 230
-	name = "Thomas Cromwell" #1st Earl of Essex, important political figure of the reign of Henry VIII of England.
-	location = 236 #London
-	discount = yes
-	skill = 2
-	type = statesman 
-	date = 1515.1.1 #30 years old
-	death_date = 1540.7.28 #died
-}
+# advisor = {
+	# advisor_id = 230
+	# name = "Thomas Cromwell" #1st Earl of Essex, important political figure of the reign of Henry VIII of England.
+	# location = 236 #London
+	# discount = yes
+	# skill = 2
+	# type = statesman 
+	# date = 1515.1.1 #30 years old
+	# death_date = 1540.7.28 #died
+# }
 
-advisor = {
-	advisor_id = 231
-	name = "Thomas Cranmer" #protestant Archbishop of Canterbury, founder of the Church of England
-	location = 235 #Kent (Canterbury)
-	discount = yes
-	skill = 3
-	type = theologian 
-	date = 1519.7.2 #30 years old
-	death_date = 1556.3.21 #died
-}
+# advisor = {
+	# advisor_id = 231
+	# name = "Thomas Cranmer" #protestant Archbishop of Canterbury, founder of the Church of England
+	# location = 235 #Kent (Canterbury)
+	# discount = yes
+	# skill = 3
+	# type = theologian 
+	# date = 1519.7.2 #30 years old
+	# death_date = 1556.3.21 #died
+# }
 
-advisor = {
-	advisor_id = 232
-	name = "William Paulet" #1st Marquess of Winchester, held many high positions  
-	location = 234 #Wessex 
-	discount = yes
-	skill = 2
-	type = statesman 
-	date = 1529.1.1 #46 years old, political career started then
-	death_date = 1572.3.10 #died
-}
+# advisor = {
+	# advisor_id = 232
+	# name = "William Paulet" #1st Marquess of Winchester, held many high positions  
+	# location = 234 #Wessex 
+	# discount = yes
+	# skill = 2
+	# type = statesman 
+	# date = 1529.1.1 #46 years old, political career started then
+	# death_date = 1572.3.10 #died
+# }
 
-advisor = {
-	advisor_id = 233
-	name = "Maghnus Ó Domhnaill" #wrote the biography of the saint Betha Columcille 
-	location = 372 #Ulster (Carrickfergus)
-	discount = yes
-	skill = 1
-	type = artist #could also be statesman, Between 1537 and 1555 he was chieftain of Tír Conaill
-	date = 1530.1.1 #30 years old?
-	death_date = 1560.1.1 #death date unknown, 30 years after start
-}
+# advisor = {
+	# advisor_id = 233
+	# name = "Maghnus Ó Domhnaill" #wrote the biography of the saint Betha Columcille 
+	# location = 372 #Ulster (Carrickfergus)
+	# discount = yes
+	# skill = 1
+	# type = artist #could also be statesman, Between 1537 and 1555 he was chieftain of Tír Conaill
+	# date = 1530.1.1 #30 years old?
+	# death_date = 1560.1.1 #death date unknown, 30 years after start
+# }
 
 advisor = {
 	advisor_id = 234
@@ -271,16 +274,16 @@ advisor = {
 # Era #2  1540 - 1630   (25/25 used currently) 
 #####################################################################
 
-advisor = {
-	advisor_id = 235
-	name = "William Cecil" #1st Baron Burghley, chief advisor of Queen Elizabeth I for most of her reign
-	location = 243 #Lincoln (Bourne)
-	discount = yes
-	skill = 3
-	type = statesman
-	date = 1558.10.17 #38 years old, appointed Secretary of State by Elizabeth I
-	death_date = 1598.8.4 #died
-}
+# advisor = {
+	# advisor_id = 235
+	# name = "William Cecil" #1st Baron Burghley, chief advisor of Queen Elizabeth I for most of her reign
+	# location = 243 #Lincoln (Bourne)
+	# discount = yes
+	# skill = 3
+	# type = statesman
+	# date = 1558.10.17 #38 years old, appointed Secretary of State by Elizabeth I
+	# death_date = 1598.8.4 #died
+# }
 
 #vanilla event flavor_eng.9116
 # advisor = {
@@ -294,27 +297,27 @@ advisor = {
 	# death_date = 1590.4.16 #died
 # }
 
-advisor = {
-	advisor_id = 237
-	name = "Thomas Butler" #3rd Earl of Ormonde, Lord High Treasurer of Ireland 
-	location = 373 #Meath
-	discount = yes
-	skill = 1
-	type = statesman
-	date = 1561.1.1 #30 years old
-	death_date = 1614.1.1 #died
-}
+# advisor = {
+	# advisor_id = 237
+	# name = "Thomas Butler" #3rd Earl of Ormonde, Lord High Treasurer of Ireland 
+	# location = 373 #Meath
+	# discount = yes
+	# skill = 1
+	# type = statesman
+	# date = 1561.1.1 #30 years old
+	# death_date = 1614.1.1 #died
+# }
 
-advisor = {
-	advisor_id = 238
-	name = "William Byrd" #one of the most celebrated English composers in the Renaissance   
-	location = 236 #London 
-	discount = yes
-	skill = 2
-	type = artist
-	date = 1570.1.1 #30 years old
-	death_date = 1623.7.4 #died
-}
+# advisor = {
+	# advisor_id = 238
+	# name = "William Byrd" #one of the most celebrated English composers in the Renaissance   
+	# location = 236 #London 
+	# discount = yes
+	# skill = 2
+	# type = artist
+	# date = 1570.1.1 #30 years old
+	# death_date = 1623.7.4 #died
+# }
 
 #could be an explorer from 1562-1571
 advisor = {

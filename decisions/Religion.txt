@@ -291,36 +291,37 @@ country_decisions = {
 		}
 	}
 	
-	dissolution_of_the_monasteries = {
-		potential = {
-			NOT = { has_country_modifier = the_dissolution_of_the_monasteries }
-			OR = {
-				religion = protestant
-				religion = reformed
-				AND = {
-					religion = catholic
-					has_country_modifier = the_statue_in_restraint_of_appeals
-				}
-			}
-		}
-		allow = {
-			# Raises the king to be the legal authority in all religious matters
-			adm = 4
-		}
-		effect = {	
-			add_country_modifier = {
-				name = "the_dissolution_of_the_monasteries"
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { 
-				NOT = { stability = 0 }
-				factor = 0
-			}
-		}
-	}
+	# England Only Event mr_england.22
+	# dissolution_of_the_monasteries = {
+		# potential = {
+			# NOT = { has_country_modifier = the_dissolution_of_the_monasteries }
+			# OR = {
+				# religion = protestant
+				# religion = reformed
+				# AND = {
+					# religion = catholic
+					# has_country_modifier = the_statue_in_restraint_of_appeals
+				# }
+			# }
+		# }
+		# allow = {
+			# # Raises the king to be the legal authority in all religious matters
+			# adm = 4
+		# }
+		# effect = {	
+			# add_country_modifier = {
+				# name = "the_dissolution_of_the_monasteries"
+				# duration = -1
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+			# modifier = { 
+				# NOT = { stability = 0 }
+				# factor = 0
+			# }
+		# }
+	# }
 	
 	popery_act = {
 		potential = {

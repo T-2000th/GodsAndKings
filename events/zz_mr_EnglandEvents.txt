@@ -2102,11 +2102,13 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.14.a
 		trigger = { primary_culture = english }
 		add_prestige = 10
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.14.a
 		trigger = { primary_culture = irish }
 		add_splendor = 20
@@ -2130,6 +2132,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.15.a
 		define_general = {
 			name = "Richard Neville"
@@ -2138,6 +2141,7 @@ country_event = {
 		}
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.15.b
 		define_advisor  = {
 			type = trader
@@ -2168,6 +2172,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.16.a
 		add_estate_influence_modifier = {
 			estate = estate_church
@@ -2177,6 +2182,7 @@ country_event = {
 		}
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.16.b
 		add_estate_loyalty = {
 			estate = estate_church
@@ -2204,10 +2210,12 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.17.a
 		add_mil_power = 50
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.17.b
 		define_advisor = {
 			type = grand_captain
@@ -2238,6 +2246,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.18.a
 		define_advisor = {
 			type = treasurer
@@ -2249,6 +2258,7 @@ country_event = {
 		}
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.18.b
 		define_advisor = {
 			type = fortification_expert
@@ -2260,6 +2270,7 @@ country_event = {
 		}
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.18.c
 		define_advisor = {
 			type = naval_reformer
@@ -2388,6 +2399,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.21.a
 		add_adm_power = 150
 		add_estate_loyalty = {
@@ -2396,11 +2408,13 @@ country_event = {
 		}
 	}
 	option = {
+		ai_chance = { factor = 1 }
 		name = mr_england.21.b
 		add_stability_or_adm_power = yes
 	}
 }
 # #Thomas Cromwell
+#replaces dissolution_of_monasteries decision
 country_event = {
 	id = mr_england.22
 	title = mr_england.22.t
@@ -2410,19 +2424,287 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
-		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		#triggered by yearly pulse random event weight 40:1000 (76% chance)
 		is_year = 1515
 		NOT = { is_year = 1555 }
+		primary_culture = english
+		NOT = { religion = mr_lollard }
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		ai_chance = { factor = 5 }
+		name = mr_england.22.a
+		add_adm_power = 50
+		add_country_modifier = {
+			name = the_dissolution_of_the_monasteries
+			duration = -1
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.22.b
+		#nothing
+	}
+}
+#Thomas Cranmer
+country_event = {
+	id = mr_england.23
+	title = mr_england.23.t
+	desc = mr_england.23.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 20:1000 (50% chance)
+		is_year = 1519
+		NOT = { is_year = 1559 }
+		primary_culture = english
+		NOT = { religion = mr_lollard }
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		ai_chance = { factor = 5 }
+		name = mr_england.23.a
+		add_adm_power = -100
+		add_country_modifier = {
+			name = mr_eng_book_of_common_prayer
+			duration = -1
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.23.b
+		#nothing
+	}
+}
+#William Paulet
+country_event = {
+	id = mr_england.24
+	title = mr_england.24.t
+	desc = mr_england.24.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1513
+		NOT = { is_year = 1553 }
 		primary_culture = english
 	}
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = mr_england.22.a
-		
+		name = mr_england.24.a
+		define_advisor = {
+			type = statesman
+			name = "William Paulet"
+			skill = 3
+			cost_multiplier = 0.5
+			religion = ROOT
+			culture = english
+		}
+	}
+}
+#Maghnus Ó Domhnaill
+country_event = {
+	id = mr_england.25
+	title = mr_england.25.t
+	desc = mr_england.25.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1530
+		NOT = { is_year = 1570 }
+		OR = {
+			primary_culture = irish
+			has_country_flag = eng_lenient_oversight_flag
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.25.a
+		if = {
+			limit = {
+				primary_culture = irish
+			}
+			add_splendor = 40
+		}
+		else = {
+			add_prestige = 5
+		}
+		define_advisor = {
+			type = artist
+			name = "Maghnus Ó Domhnaill"
+			skill = 2
+			cost_multiplier = 0.9
+			religion = ROOT
+			culture = english
+		}
+	}
+}
+#William Cecil
+country_event = {
+	id = mr_england.26
+	title = mr_england.26.t
+	desc = mr_england.26.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1558
+		NOT = { is_year = 1598 }
+		primary_culture = english
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.26.a
+		define_advisor = {
+			type = statesman
+			name = "William Cecil"
+			skill = 2
+			cost_multiplier = 0.8
+			religion = ROOT
+			culture = english
+		}
 	}
 	option = {
-		name = mr_england.22.b
-		
+		ai_chance = { factor = 1 }
+		name = mr_england.26.b
+		define_advisor = {
+			type = treasurer
+			name = "William Cecil"
+			skill = 2
+			cost_multiplier = 0.8
+			religion = ROOT
+			culture = english
+		}
+	}
+}
+#Thomas Butler
+country_event = {
+	id = mr_england.27
+	title = mr_england.27.t
+	desc = mr_england.27.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1561
+		NOT = { is_year = 1601 }
+		owns = 373
+		primary_culture = english
+		NOT = { has_country_flag = eng_lenient_oversight_flag }
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.27.a
+		add_mil_power = 75
+	}
+}
+#William Byrd
+country_event = {
+	id = mr_england.28
+	title = mr_england.28.t
+	desc = mr_england.28.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1570
+		NOT = { is_year = 1610 }
+		OR = {
+			primary_culture = english
+			owns = 238 #essex
+		}
+	}
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = mr_england.28.a
+		add_country_modifier = {
+			name = mr_eng_william_byrd
+			duration = 18250
+		}
+	}
+}
+#John Hawkins
+country_event = {
+	id = mr_england.29
+	title = mr_england.29.t
+	desc = mr_england.29.d
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		#triggered by yearly pulse random event weight 13:1000 (40% chance)
+		is_year = 1562
+		NOT = { is_year = 1602 }
+		primary_culture = english
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			mission_completed = eng_m_naval_2
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.29.a
+		define_advisor = {
+			type = naval_reformer
+			name = "John Hawkins"
+			skill = 3
+			cost_multiplier = 0.5
+			religion = ROOT
+			culture = english
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.29.b
+		define_admiral = {
+			name = "John Hawkins"
+			fire = 5
+			shock = 3
+			manuever = 4
+			siege = 1
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.29.c
+		define_explorer = {
+			name = "John Hawkins"
+			fire = 5
+			shock = 1
+			manuever = 6
+			siege = 1
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = mr_england.29.d
+		add_navy_tradition = 15
+		add_prestige = 25
 	}
 }

@@ -1425,8 +1425,15 @@ on_yearly_pulse_2 = {
 		13 = mr_england.18 #1503-1543 (Thomas Howard)
 		13 = mr_england.19 #1514-1554 (Thomas Wolsey)
 		13 = mr_england.21 #1514-1554 (William Tyndale)
-		13 = mr_england.22 #1515-1555 (Thomas Cromwell)
+		40 = mr_england.22 #1515-1555 (Thomas Cromwell) 75%, replaces dissolution of monastries - not for lollards
 		13 = mr_england.20 #1516-1556 (Thomas More)
+		20 = mr_england.23 #1519-1559 (Thomas Cranmer) 50%
+		13 = mr_england.24 #1513-1553 (William Paulet)
+		13 = mr_england.25 #1530-1570 (Maghnus Ó Domhnaill)
+		13 = mr_england.26 #1558-1598 (William Cecil)
+		13 = mr_england.27 #1561-1601 (Thomas Butler)
+		13 = mr_england.28 #1570-1610 (William Byrd)
+		13 = mr_england.29 #1562-1602 (John Hawkins)
 		
 		#all ~40%, basic triggers by tag
 		13 = flavor_eng.9116 #1550-1590, 40y (Walsingham)

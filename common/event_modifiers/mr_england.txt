@@ -252,3 +252,9 @@ mr_eng_wycliffe_isolation = {
 	tolerance_heretic = -4
 	tolerance_own = 2
 }
+mr_eng_book_of_common_prayer = {
+	tolerance_own = 0.5
+}
+mr_eng_william_byrd = {
+	monthly_splendor = 1
+}

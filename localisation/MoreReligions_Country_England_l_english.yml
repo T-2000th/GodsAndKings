@@ -169,6 +169,7 @@
  mr_eng_crown_enterprise: "Crown Plantations"
  mr_eng_colonial_assets: "Colonial Fodder"
  mr_eng_wycliffe_isolation: "Wycliffite Isolation"
+ mr_eng_william_byrd: "William Byrd's Compositions"
  
  ### misc
  mr_anglo_hibernian: "Anglo-Hibernian"
@@ -378,7 +379,7 @@
  mr_england.12.d: "As a trader making regular trips between the North Sea League cities, William Caxton was the first known Englishman to have taken an interest in the newly emerging technology of presses. It was after a return trip from Amsterdam that he recounted the usefulness of the press for diseminating thought - likely a contributing factor for the independently-minded Dutch. Caxton quickly assembled the first press in England; his first print, a copy of Chaucer's Tales of Canterbury."
  mr_england.12.a: "Interesting."
  
- mr_england.13.t: "Robert Boyd"
+ mr_england.13.t: "Robert Boyd, 1st Lord Boyd"
  mr_england.13.d: "First Lord Boyd of Scotland was knighted by [SCO.Monarch.GetTitle] [SCO.Monarch.GetName] for his exceptional statecraft. He was sent to York to negotiate cooperative action against the southerners and the worrying consolidation of the Kingdom of England under [ENG.Monarch.GetName]."
  mr_england.13.a: "He must have a way with words."
  mr_england.13.b: "Best of luck!" 
@@ -387,11 +388,7 @@
  mr_england.14.d: "A local lord from Cork, Mathghamhna was a learned writer, educated to write not only in his native tounge of Irish, but also English and Latin. His works and translated texts serve as a bridge between the two islands's cultures."
  mr_england.14.a: "Interesting."
  
- mr_england.14.t: "Finghin O Mathghamhna"
- mr_england.14.d: "A local lord from Cork, Mathghamhna was a learned writer, educated to write not only in his native tounge of Irish, but also English and Latin. His works and translated texts serve as a bridge between the two islands's cultures."
- mr_england.14.a: "Interesting."
- 
- mr_england.15.t: "Richard Neville"
+ mr_england.15.t: "Richard Neville, Earl of Warwick"
  mr_england.15.d: "The House of Neville descends from an old family in the north of England. During the Hundred Years Anarchy, the family rose to prominence eventually seizing control of the English throne. A nephew of the [Root.Monarch.GetTitle] [Root.Monarch.GetName], Richard Neville gained some noteriety as a young man in the final years of the Anarchy, and was subsequently awarded a position as Captain of Calais. The position was highly regarded and sought after because of the office's role in designating tariffs and trade from the mainland through the port."
  mr_england.15.a: "We should recall him for military service."
  mr_england.15.b: "He should keep his post."
@@ -428,7 +425,43 @@
  mr_england.21.a: "Straight to the presses!"
  mr_england.21.b: "We cannot also approve."
  
+ mr_england.22.t: "Thomas Cromwell's Religious Reforms"
+ mr_england.22.d: "During the British Reformation, Thomas Cromwell was a massive proponent for several anti-papist reforms. He started as a lowly statesman, climbing the ranks until he was seated on the [Root.Monarch.GetTitle]'s Privy Council. Much of the work he is remembered for revolves around breaking religious doctrine with Rome; he is responsible for dissolving the monasteries around Britain, disbanding most of the monastic orders as well as some somewhat iconoclastic practices of dismantling and destroying 'idolatrous' statues, screens, and images."
+ mr_england.22.a: "He has the right idea!"
+ mr_england.22.b: "He is overstepping! It is my decision!"
  
+ mr_england.23.t: "Thomas Cranmer's Religious Reforms"
+ mr_england.23.d: "The British Reformation brought to the forefront many religious leaders and thinkers, who each wanted their own say on the seperation of Britain from Rome. Thomas Cranmer was once such figure; as the Archbishop of Canterbury, he pushed heavily for the primacy of the Crown. One of his lasting legacies was the publication of the Book of Common Prayer, a prayer book written in English."
+ mr_england.23.a: "Publish and distribute it."
+ mr_england.23.a: "We have other things to worry about."
+ 
+ mr_england.24.t: "William Paulet, 1st Marquess of Winchester"
+ mr_england.24.d: "William Paulet served as a statement in over a dozen or so different capacities, leading a long career in the service of the Crown. From being sheriff, steward, governor, and even sitting on the Privy Council, Paulet navigated a the tumultuous period that was the British Reformation with ease. When asked how he managed, he responded with 'By being a willow, not an oak.'"
+ mr_england.24.a: ""
+ 
+ mr_england.25.t: "Maghnus Ó Domhnaill"
+ mr_england.25.d: "During the Irish Golden Age, Maghnus Ó Domhnaill worked to settle the differences between his own, and the O'Neil Clan. The small spat during the Golden Age could have easily spiralled out of control were it not for his even temperment and cool head. Later in his life he dictated a biography of a saint in 'Life of Saint Columbkille' in the Irish language. He continued to be a poet till his death, where many of his poems - in Irish - survive today."
+ mr_england.25.a: "A writer to remember."
+ 
+ mr_england.26.t: "William Cecil, 1st Baron Burghley"
+ mr_england.26.d: "William Cecil served on the Privy Council of [Root.Monarch.GetTitle] [Root.Monarch.GetName], offering advice on both domestic politics and economic policy during different roles. He advocated heavily for the continued centralization of the British Isles under a [Root.Religion.GetName] state."
+ mr_england.26.a: "We should listen to political suggestions."
+ mr_england.26.b: "We should listen to his economic suggestions."
+ 
+ mr_england.27.t: "Thomas Butler, 10th Earl of Ormond"
+ mr_england.27.d: "Butler was born in Ireland, and after becoming of age, he quickly became absorbed into the various internal and external conflicts of the land. He spent much of tenure dealing with the Earls of Desmond, who had a long-standing feud with his own House. He eventually ascended to the [Root.Monarch.GetTitle]'s Privy Council on matters of Ireland, being recognized for his successes in putting down several rebellions."
+ mr_england.27.a: "" 
+ 
+ mr_england.28.t: "William Byrd"
+ mr_england.28.d: "William Byrd comes from a wealthy family from Essex. Little is known about his early life besides that he began to first practice music professionally at Lincoln Cathedearl in 1563, at the age of 23. Although he grew to become a very devout Catholic, it did not stop him from contributing to Protestant church's musical traditions as well. From his youth to his late years he saw steady growth, eventually becoming one of the most prolific composers in Britain, creating hundreds of pieces before his death. "
+ mr_england.28.a: "Beautiful!"
+ 
+ mr_england.29.t: "John Hawkins"
+ mr_england.29.d: "John Hawkins served on the Privy Council of [Root.Monarch.GetTitle] [Root.Monarch.GetName], and was responsible for a significant expansion of the Crown Navy as well as improving its day to day operations, owing to his and his familiy's background in shipbuilding at Plymouth. Hawkins not only served in the highest official capacity as a Privy Council Advisor, but also as a commander, privateer, and slaver."
+ mr_england.29.a: "He can best serve on the Council."
+ mr_england.29.b: "He can get a lot done at sea."
+ mr_england.29.c: "Fund his expeditions."
+ mr_england.29.d: "Slavery is abhorent."
  
  mr_england.x.t: "
  mr_england.x.d: "
