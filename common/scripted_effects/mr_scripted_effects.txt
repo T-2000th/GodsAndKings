@@ -554,27 +554,21 @@ farma_dynamic_name_change_effect = {
 remove_quest_stuff = {
 	if = {
 		limit = {
-			has_ruler_modifier = task_a_desc
-		}
-		remove_country_modifier = task_a_desc
-	}
-	if = {
-		limit = {
 			has_ruler_flag = task_a
 		}
 		clr_ruler_flag = task_a
 	}
 	if = {
 		limit = {
-			has_ruler_modifier = task_b_desc
-		}
-		remove_country_modifier = task_b_desc
-	}
-	if = {
-		limit = {
 			has_ruler_flag = task_b
 		}
 		clr_ruler_flag = task_b
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_c
+		}
+		clr_ruler_flag = task_c
 	}
 	
 }

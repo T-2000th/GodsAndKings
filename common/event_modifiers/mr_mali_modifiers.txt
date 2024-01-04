@@ -77,7 +77,7 @@ koulikoria_harbor = {
 }
 digging_for_gold_mali = {
 	local_development_cost_modifier = -0.10
-	local_production_efficiency = 0.1	
+	local_years_of_nationalism = -15
 }
 treasure_fleets_of_mali = {
 	treasure_fleet_income = 0.15
@@ -126,14 +126,11 @@ the_best_grits_around = {
 	all_power_cost = -0.025	
 }
 task_a_win = {
-	advisor_cost = -0.15
+	advisor_cost = -0.10
 }
 task_b_win = {
 	all_estate_loyalty_equilibrium = 0.075
 }
-task_a_desc = {
-	prestige = 0.01
-}
-task_b_desc = {
-	prestige = 0.01
+task_c_win = {
+	build_time = -0.10
 }

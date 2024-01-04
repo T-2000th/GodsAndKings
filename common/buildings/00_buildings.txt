@@ -558,6 +558,18 @@ courthouse = {
 				duration = -1 
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_c
+				}
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -1595,6 +1607,18 @@ town_hall = {
 			add_province_modifier = {
 				name = fra_improved_court_houses_modifier
 				duration = -1 
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_c
+				}
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
 			}
 		}
 	}

@@ -1,0 +1,38 @@
+custom_button = {
+    name = faction_a_1 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_factions = yes
+		tag = MAL
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_TT
+			NOT = {
+				OR = {
+					has_ruler_flag = task_a
+					has_ruler_flag = task_b
+					has_ruler_flag = task_c
+					has_ruler_flag = support_the_court
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_TT_go
+			NOT = {
+				OR = {
+					has_ruler_modifier= task_b_win
+					has_ruler_modifier= task_a_win
+					has_ruler_modifier= task_c_win
+				}
+			}
+		}
+	} #Determines when the button is clickable
+    effect = {
+		set_ruler_flag = support_the_court
+		country_event = {
+			id = mr_MaliFlavor.13
+		}
+		play_sound = alert_new
+	} #Effect
+	tooltip = "Faction Quest"
+}

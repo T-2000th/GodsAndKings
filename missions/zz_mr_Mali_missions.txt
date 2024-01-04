@@ -509,7 +509,7 @@ branch_1 = {
 		}
 	}
 	mr_mali_exploration_fourteen = {
-		icon = mission_potosi_silver
+		icon = mission_malian_cusco
 		position = 16
 		required_missions = {
 			mr_mali_exploration_thirteen

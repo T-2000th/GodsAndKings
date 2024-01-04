@@ -15,26 +15,41 @@
 ### Titular for Overlord
 #Ex: "On a mission to visit the [Son of Heaven]"
 defined_text = {
-    name = MINGWANG_INFLUENCE_AMOUNT
-
+    name = GetFACTION_A_MALI_INFO
+    random = no
     text = {
-        localisation_key = POSITIVE_MINGWANG
+        localisation_key = string_FACTION_A_MALI_YES
         trigger = {
-            check_variable = {
-				which = maitreyan_power_counter_change
-				value = 0
+            tag = MAL
+            NOT = {
+				OR = {
+					has_ruler_flag = task_a
+					has_ruler_flag = task_b
+                    has_ruler_flag = task_c
+					has_ruler_flag = support_the_court
+				}
 			}
         }
     }
     text = {
-        localisation_key = NEGATIVE_MINGWANG
+        localisation_key = string_FACTION_A_MALI_NO_1
         trigger = {
-            NOT = {
-               check_variable = {
-			    	which = maitreyan_power_counter_change
-			    	value = 0
-		    	}
-            }
-        }
+            tag = MAL
+            has_ruler_flag = task_a
+		}
+    }
+    text = {
+        localisation_key = string_FACTION_A_MALI_NO_2
+        trigger = {
+            tag = MAL
+            has_ruler_flag = task_b
+		}
+    }
+    text = {
+        localisation_key = string_FACTION_A_MALI_NO_3
+        trigger = {
+            tag = MAL
+            has_ruler_flag = task_c
+		}
     }
 }

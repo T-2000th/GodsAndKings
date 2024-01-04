@@ -74,11 +74,13 @@ mr_MaliFlavor.11.a: "Oh, just one more wouldn't hurt..."
 mr_MaliFlavor.12.t: "The Court is Split"
 mr_MaliFlavor.12.a: "We shall go to the Council for Support!"
 
-mr_MaliFlavor.13.t: "Faction Demand Restitution"
+mr_MaliFlavor.13.t: "Debates in the Malian Court"
+mr_MaliFlavor.13.d: "Since the days of Sundiata the Great, our empire has relied on the factions within the state to organize and maintain the empire. But more than merely relying on them, we are simultaneously held hostage by them. The Grand Council has evolved from a supportive aid to the Mansa to a faction that influences succession and can stage small scale rebellions. The Hunter’s Guild manages large portions of the army and has risen to a prominence that they cannot be ignored any longer. Meanwhile, the Foreign Merchants have risen in power within our upper ranks as the faithful rely on scholars and texts that these far off travelers bring. We must placate them in order to survive and advance into the next era with peace and stability."
 mr_MaliFlavor.13.a: "Expand our Infrastructure"
 mr_MaliFlavor.13.b: "Complete an Estate Agenda"
+mr_MaliFlavor.13.c: "Construct a Courthouse"
 
-mr_MaliFlavor.16.t: "All Parties are Content"
+mr_MaliFlavor.16.t: "Faction Quest Completed"
 mr_mali_flavor.16.a: "The Grand Council will be pleased."
 
 mr_MaliFlavor.17.t: "The Factions Revolt!"
@@ -88,12 +90,19 @@ mr_MaliFlavor.17.a: "The Council backs a candidate!"
 
 how_to_complete_task_a_and_reward: "We must §YExpand infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
 how_to_complete_task_b_and_reward: "We must §YComplete an Estate Agenda§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
+how_to_complete_task_c_and_reward: "We must §YBuild a New Courthouse.§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!\n\nIf we succeed, we will gain the following:"
 
 
-
+faction_quest_TT: "Not already completing a §YFaction Quest§!\n\n[Root.GetFACTION_A_MALI_INFO]"
+string_FACTION_A_MALI_YES: ""
+string_FACTION_A_MALI_NO_1: "We must §YExpand Infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+string_FACTION_A_MALI_NO_2: "We must §YComplete an Estate Agenda.§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+string_FACTION_A_MALI_NO_3: "We must §YBuild a New Courthouse.§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+faction_quest_TT_go: "Has not already finished this §YFaction's Quest§! in [Root.Monarch.GetName]'s lifetime."
 task_a_win: "Gained Support of Council"
 task_a_desc: "Council Quest"
-desc_task_a_desc: "We must §YExpand infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
+desc_task_a_desc: "We must §YExpand Infrastructure§! in one of our states.\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
 task_b_desc: "Council Quest"
 desc_task_b_desc: "We must §YComplete an Estate Agenda§!\n§TThis must be done in 10 Years, or else the Council will stage a revolt!§!"
 task_b_win: "Gained Support of Council"
+task_c_win: "Gained Support of Council"
