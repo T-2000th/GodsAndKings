@@ -1146,9 +1146,70 @@ branch_3 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
-		}
+			dendi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sahara_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}
+			azbin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_volta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2267 = {
+				add_permanent_claim = ROOT
+			}
+			2268 = {
+				add_permanent_claim = ROOT
+			}
+			5340 = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = loyal_farma
+				duration = 7300
+			}
 	}
+}
 	mr_mali_jolof_first = {
 		icon = mission_claim_the_canaries
 		position = 8
@@ -1597,6 +1658,84 @@ branch_4 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_northeast_first = {
+		icon = per_establish_eastern_defenses
+		position = 2
+		required_missions = {
+			mr_mali_farma_first
+		}
+		provinces_to_highlight = {
+			OR = { 
+				area = western_sahara_area
+				area = azbin_area
+				province_id = 5340
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = no
+			}
+		}
+		trigger = {
+			western_sahara_area = {
+				type = all
+				OR = {
+                   			 country_or_non_sovereign_subject_holds = ROOT
+                    			 is_empty = yes
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = azbin_area
+			}
+			5340 = {
+				has_fort_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2274 = {
+				has_fort_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ajjer_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			east_azbin_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+					  is_city = yes
+				}
+				add_permanent_claim = ROOT 
+			}
+			central_sahara_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			5340 = {
+				add_province_modifier = {
+				name = saharan_fortress
+				duration = -1
+				}
+			}
+			2274 = {
+				add_province_modifier = {
+				name = saharan_fortress
+				duration = -1
+				}
+			}
+		}
+			
+	
+	}
+
 	mr_mali_exploration_eighth = {
 		icon = mission_colonize_the_caribbean
 		position = 12

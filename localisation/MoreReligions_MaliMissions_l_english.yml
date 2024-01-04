@@ -32,6 +32,7 @@ mr_mali_guinean_fourth_title: "The Mane Lumberyards"
 
 
 mr_mali_farma_first_title: "Align the Farma"
+mr_mali_northeast_first_title: "Defend Our Eastern Flank"
 
 
 
@@ -108,6 +109,8 @@ malian_winners: "Naval Masters"
 clearing_the_highlands: "Clearing the Highlands"
 land_mapping_mal: "Mapping the Forests"
 naval_forcelimit_MAL: "Lumber of the Mane"
+loyal_farma: "Loyalty of the Farma"
+saharan_fortress: "Saharan Fortress"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
