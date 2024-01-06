@@ -693,9 +693,15 @@ nav_missions_2 = {
 		position = 8
 
 		trigger = {
-			has_estate_privilege = estate_burghers_naval_school_right
-			naval_reformer = 1
-
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+				has_estate_privilege = estate_burghers_naval_school_right
+			}
+			else = {
+				naval_reformer = 1
+			}
 			CBD = {
 				OR = {
 					AND = {
@@ -1002,8 +1008,19 @@ nav_missions_3 = {
 			area = aragon_area
 		}
 		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+				has_estate_privilege = estate_nobles_diet_right
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_nobility
+					value = 3
+				}
+			}
 			tag_has_opinion_of_root_or_is_dead = { tag = ARA opinion = 120 }
-			has_estate_privilege = estate_nobles_diet_right
 		}
 		effect = {
 			valencia_area = {
@@ -1026,9 +1043,20 @@ nav_missions_3 = {
 			area = catalonia_area
 		}
 		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}	
+				has_estate_privilege = estate_burghers_control_over_the_coinage
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_burghers
+					value = 3
+				}
+			}
 			tag_has_opinion_of_root_or_is_dead = { tag = CAT opinion = 120 }
-			has_estate_privilege = estate_burghers_control_over_the_coinage
-		}
+		}	
 		effect = {
 			baleares_area = {
 				add_permanent_claim = CAT
@@ -1051,8 +1079,19 @@ nav_missions_3 = {
 		}
 		# TODO: Idk what to do to make this make sense if Bearn is dead/kicked out of their home provs
 		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}	
+				has_estate_privilege = estate_church_expand_the_theology
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 3
+				}
+			}	
 			tag_has_opinion_of_root_or_is_dead = { tag = BRN opinion = 120 }
-			has_estate_privilege = estate_church_expand_the_theology
 			176 = { has_owner_religion = yes }
 		}
 		effect = {
@@ -1128,6 +1167,7 @@ nav_missions_3 = {
 				name = misto_sharpshooters
 				duration = -1
 			}
+			custom_tooltip = federal_guard
 		}
 	}
 
@@ -1167,6 +1207,7 @@ nav_missions_3 = {
 				name = iberian_parliament
 				duration = -1
 			}
+			custom_tooltip = iberian_reform
 		}
 	}
 
