@@ -238,10 +238,18 @@ nav_missions_1 = {
 			tag_has_opinion_of_root_or_is_dead = { tag = CAS opinion = 200 }
 			tag_has_opinion_of_root_or_is_dead = { tag = LON opinion = 200 }
 
-			country_or_non_sovereign_subject_holds = 231 # In case subject tags don't exist
-			country_or_non_sovereign_subject_holds = 206
-			country_or_non_sovereign_subject_holds = 219
-			country_or_non_sovereign_subject_holds = 208
+			231 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			206 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			219 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			208 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}	
 
 			employed_advisor = {
 				category = ADM
