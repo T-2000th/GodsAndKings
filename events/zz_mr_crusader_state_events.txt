@@ -5,9 +5,9 @@ normal_or_historical_nations = yes
 # Choice in mission tree branch--conquest or diplomacy
 country_event = {
 	id = mrCrusaderEvents.1
-
 	title = mrCrusaderEvents.1.t
 	desc = mrCrusaderEvents.1.d
+	picture = SEJM_eventPicture
 
 	is_triggered_only = yes
 
@@ -61,6 +61,7 @@ country_event = {
 	id = mrCrusaderEvents.2
 	title = mrCrusaderEvents.2.t
 	desc = mrCrusaderEvents.2.d
+	picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 
 	is_triggered_only = yes
 
@@ -178,7 +179,7 @@ province_event = {
 	id = mrCrusaderEvents.4
 	title = mrCrusaderEvents.4.t
 	desc = mrCrusaderEvents.4.d
-	picture = GFX_farm_estate
+	picture = FARMING_WIFE_eventPicture
 
 	is_triggered_only = yes
 
@@ -486,8 +487,11 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_levantine_crusader_state = yes
-		NOT = { year = 1445 }
+		OR = {
+			is_levantine_crusader_state = yes
+			tag = CLC
+		}
+		NOT = { is_year = 1445 }
 	}
 
 	immediate = {
@@ -500,18 +504,21 @@ country_event = {
 		caucasia_region = {
 			discover_country = root
 		}
-		1326 = { discovery_country = root }
-		1329 = { discovery_country = root }
-		1334 = { discovery_country = root }
-		1335 = { discovery_country = root }
-		1892 = { discovery_country = root }
-		1894 = { discovery_country = root }
-		4170 = { discovery_country = root }
-		4172 = { discovery_country = root }
-		4178 = { discovery_country = root }
-		4179 = { discovery_country = root }
-		4333 = { discovery_country = root }
-		4347 = { discovery_country = root }
+		astrakhan_area = { discover_country = root }
+		lower_yik_area = { discover_country = root }
+		1326 = { discover_country = root }
+		1329 = { discover_country = root }
+		1334 = { discover_country = root }
+		1335 = { discover_country = root }
+		1892 = { discover_country = root }
+		1893 = { discover_country = root }
+		1894 = { discover_country = root }
+		4170 = { discover_country = root }
+		4172 = { discover_country = root }
+		4178 = { discover_country = root }
+		4179 = { discover_country = root }
+		4333 = { discover_country = root }
+		4347 = { discover_country = root }
 	}
 
 	option = {
@@ -573,9 +580,13 @@ country_event = {
 			limit = { has_province_modifier = cs_european_settlers }
 
 			if = {
-				limit = { province_is_or_accepts_culture = ROOT}
+				limit = { province_is_or_accepts_culture = yes}
 				remove_province_modifier = cs_european_settlers
 			}
 		}
+	}
+
+	option = {
+		name = "dummy"
 	}
 }
