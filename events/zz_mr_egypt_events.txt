@@ -353,9 +353,8 @@ country_event = {
 			has_government_attribute = enables_nepotism
 		}
 		ai_chance = { factor = 10 }
-		else = {
-			add_scaled_republican_tradition = -4
-		}
+
+		add_scaled_republican_tradition = -4
 		if = {
 			limit = {
 				republic_with_female_rulers_trigger = yes
@@ -560,9 +559,7 @@ country_event = {
 			has_government_attribute = enables_nepotism
 		}
 		ai_chance = { factor = 10 }
-		else = {
-			add_scaled_republican_tradition = -4
-		}
+		add_scaled_republican_tradition = -4
 		if = {
 			limit = {
 				republic_with_female_rulers_trigger = yes
