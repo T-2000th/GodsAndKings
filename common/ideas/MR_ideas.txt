@@ -2363,3 +2363,44 @@ baghdadi_ideas = {
 		province_warscore_cost = -0.1
 	}
 }
+
+CLC_ideas = {
+	start = {
+		defensiveness = 0.1
+		diplomatic_upkeep = 1
+	}
+
+	bonus = {
+		core_creation = -0.1
+	}
+
+	trigger = {
+		tag = CLC
+	}
+	free = yes		#will be added at load.
+
+	CLC_first = {
+		manpower_in_true_faith_provinces = 0.15
+	}
+	CLC_second = {
+		all_estate_loyalty_equilibrium = 0.05
+		prestige_decay = -0.1
+	}
+	CLC_third = {
+		global_missionary_strength = 0.2
+	}
+	CLC_fourth = {
+		leader_land_shock = 1
+		loot_amount = 0.33
+	}
+	CLC_fifth = {
+		ship_power_propagation = 0.25
+		trade_steering = 0.10
+	}
+	CLC_sixth = { 
+		global_trade_goods_size_modifier = 0.20
+	}
+	CLC_seventh = { 
+		institution_spread_from_true_faith = 0.15
+	}
+}
