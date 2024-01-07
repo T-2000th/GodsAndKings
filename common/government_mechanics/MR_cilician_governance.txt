@@ -32,6 +32,7 @@ cilician_mechanic = {
 			cost_type = cilician_adm_power
 			cost = 100
 			trigger = {
+<<<<<<< Updated upstream
 				any_owned_province = {
 					NOT = {
 						culture_group = germanic
@@ -69,6 +70,40 @@ cilician_mechanic = {
 					name = cs_saxon_architects
 					duration = 3650
 				}
+=======
+			
+				}
+			effect = {
+			custom_tooltip = cil_cru_heir_tt
+			if = {    
+				limit = { NOT = { corruption = 1 }  }
+					random_list = { 
+						33 = { change_heir_adm = 1 }        
+						33 = { change_heir_dip = 1 }
+						33 = { change_heir_mil = 1 }            
+					}
+				}
+			else = { add_corruption = -2 }
+			custom_tooltip = cil_crusader_tt
+				every_owned_province  = {
+                          limit = {
+                            owned_by = ROOT 
+							is_core = ROOT
+                        NOT = {
+                            has_province_modifier = cil_crusader_inf
+							}
+						}
+                        add_province_modifier = {
+                            name = cil_crusader_inf
+                            duration = 3650
+                        }
+					}
+			add_country_modifier = {
+					name = cil_crusader_dom
+					duration = 3650
+				}
+				
+>>>>>>> Stashed changes
 			}
 			cooldown_years = 10
 			ai_chance = {
@@ -80,6 +115,7 @@ cilician_mechanic = {
 			cost_type = cilician_dip_power
 			cost = 100
 			trigger = {
+<<<<<<< Updated upstream
 				any_owned_province = {
 					NOT = {
 						culture_group = latin
@@ -115,6 +151,56 @@ cilician_mechanic = {
 					name = cs_sicilian_sailors
 					duration = 3650
 				}
+=======
+				
+			}
+			effect = {
+			
+			random_owned_province = {
+			limit = { has_port = yes }
+			ROOT = {
+			light_ship = PREV
+				}
+				ROOT = {
+			light_ship = PREV
+				}
+				ROOT = {
+			light_ship = PREV
+				}
+				ROOT = {
+			light_ship = PREV
+				}
+				ROOT = {
+			light_ship = PREV
+				}
+			}
+			create_admiral = { 
+				tradition = 50
+				add_manuever = 1
+				culture_group = latin
+				}
+			custom_tooltip = cil_venetian_modifier_tt
+			every_owned_province  = {
+                          limit = {
+							has_port = yes
+                            owned_by = ROOT 
+							is_core = ROOT
+                        NOT = {
+                            has_province_modifier = cil_venetian_tra
+                        }
+                    }
+                        add_province_modifier = {
+                            name = cil_venetian_tra
+                            duration = 3650
+                        }
+				}
+			
+			add_country_modifier = {
+					name = cil_venetian_sup
+					duration = 3650
+				}
+				
+>>>>>>> Stashed changes
 			}
 			cooldown_years = 10
 			ai_chance = {
@@ -129,6 +215,10 @@ cilician_mechanic = {
 				accepted_culture = turkish
 			}
 			effect = {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 			create_unit_forcelimit_percentage = {
 					type = cavalry
 					special_unit_category = qizilbash_cavalry_unit
@@ -139,7 +229,11 @@ cilician_mechanic = {
 			add_shock = 1
 			culture = turkish
 				}
+<<<<<<< Updated upstream
 			
+=======
+			custom_tooltip = cil_turkish_tt
+>>>>>>> Stashed changes
 			every_owned_province  = {
                           limit = {
                             owned_by = ROOT 
