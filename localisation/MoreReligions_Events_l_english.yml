@@ -503,3 +503,6 @@ mrLevantFlavor.3.ob: "Allahuakbar!"
 mrLevantFlavor.3.oc: "I don't see what the big deal is."
 mrLevantFlavor.3.od: "Finally home in the City of David!"
 
+
+tag_has_opinion_of_root_or_is_dead_TT: "[ROOT.GetTag] has an opinion of $opinion$ with [FROM.GetTag]"
+

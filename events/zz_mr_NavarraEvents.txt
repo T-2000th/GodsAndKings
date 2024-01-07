@@ -24,11 +24,11 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 5
+				factor = 1.1
 				has_heir = no
 			}
 			modifier = {
-				factor = 55
+				factor = 2
 				trust = {
 					who = NAV
 						value = 70
@@ -47,11 +47,11 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 55
+				factor = 2
 				has_heir = yes
 			}
 			modifier = {
-				factor = 100
+				factor = 1000
 				POR = {
 					is_rival = NAV
 				}
@@ -109,10 +109,10 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 50
+				factor = 2
 				trust = {
 					who = NAV
-						value = 70
+					value = 70
 				}
 			}
 		}
@@ -127,9 +127,16 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 30
+				factor = 1.6
 				NAV = {
 					has_heir = no
+				}
+			}
+			modifier = {
+				factor = 0
+				trust = {
+					who = NAV
+					value = 70
 				}
 			}
 		}
@@ -187,17 +194,17 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 30
+				factor = 1.6
 				trust = {
 					who = NAV
 						value = 70}
 			}
 			modifier = {
-				factor  = 20
+				factor  = 1.4
 				NAV = {
 					army_strength = {
-									who = GAL
-									value = 1.1
+						who = GAL
+						value = 1.1
 					}
 				}
 			}
@@ -213,9 +220,22 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 50
+				factor = 2
 				NAV = {
 					is_excommunicated = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				trust = {
+					who = NAV
+					value = 70
+				}
+				NAV = {
+					army_strength = {
+						who = GAL
+						value = 1.1
+					}
 				}
 			}
 		}
@@ -273,18 +293,18 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 30
+				factor = 1.6
 				trust = {
 					who = NAV
 						value = 70
 				}
 			}
 			modifier = {
-				factor  = 20
+				factor = 1.4
 				NAV = {
 					army_strength = {
-									who = GAL
-									value = 1.1
+						who = GAL
+						value = 1.1
 					}
 				}
 			}
@@ -300,12 +320,25 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 50
+				factor = 2
 				CAS = {
 					is_rival = NAV
 				}
 				LON = {
 					is_rival = NAV
+				}
+			}
+			modifier = {
+				factor = 0
+				trust = {
+					who = NAV
+					value = 70
+				}
+				NAV = {
+					army_strength = {
+						who = GAL
+						value = 1.1
+					}
 				}
 			}
 		}
@@ -370,7 +403,7 @@ country_event = {
 		ai_chance = {
 			factor = 30
 			modifier = {
-				factor  = 20
+				factor = 1.6
 				NAV = {
 					army_strength = {
 						who = CBD
@@ -379,7 +412,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 1.3
 				NAV = {
 					diplomatic_reputation = 4
 				}
@@ -396,9 +429,21 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 50
+				factor = 2
 				CBD = {
 					is_rival = NAV
+				}
+			}
+			modifier = {
+				factor = 0
+				NAV = {
+					army_strength = {
+						who = CBD
+						value = 1.1
+					}
+				}
+				NAV = {
+					diplomatic_reputation = 4
 				}
 			}
 		}
@@ -447,7 +492,9 @@ country_event = {
 	is_triggered_only = yes
 	major = yes
 	major_trigger = {
-		continent = europe
+		capital_scope = {
+			continent = europe
+		}
 	}
 
 	option = {
