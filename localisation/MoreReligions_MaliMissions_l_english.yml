@@ -34,6 +34,10 @@ mr_mali_guinean_fourth_title: "The Mane Lumberyards"
 
 mr_mali_farma_first_title: "Align the Farma"
 mr_mali_northeast_first_title: "Defend Our Eastern Flank"
+mr_mali_northeast_second_title: "Follow the Caravans"
+
+mr_mali_sahara_first_title: "Shore of the Sahara"
+mr_mali_sahara_second_title: "Restore the Ghanaian Trade Routes"
 
 
 
@@ -111,7 +115,9 @@ clearing_the_highlands: "Clearing the Highlands"
 land_mapping_mal: "Mapping the Forests"
 naval_forcelimit_MAL: "Lumber of the Mane"
 loyal_farma: "Loyalty of the Farma"
+cooperation_with_tuareg: "Cooperation with the Tuareg"
 saharan_fortress: "Saharan Fortress"
+restoring_walata: "Restoration of Walata"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"

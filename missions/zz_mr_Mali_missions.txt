@@ -1208,8 +1208,8 @@ branch_3 = {
 				name = loyal_farma
 				duration = 7300
 			}
+		}
 	}
-}
 	mr_mali_jolof_first = {
 		icon = mission_claim_the_canaries
 		position = 8
@@ -1676,12 +1676,9 @@ branch_4 = {
 			}
 		}
 		trigger = {
-			western_sahara_area = {
-				type = all
-				OR = {
-                   			 country_or_non_sovereign_subject_holds = ROOT
-                    			 is_empty = yes
-				}
+			owns_all_provinces = {
+				area = western_sahara_area
+				is_city = yes
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 4
@@ -1735,7 +1732,79 @@ branch_4 = {
 			
 	
 	}
-
+	mr_mali_northeast_second = {
+		icon = mission_bedouins
+		position = 3
+		required_missions = {
+			mr_mali_northeast_first
+		}
+		provinces_to_highlight = {
+			OR = { 
+				area = ajjer_area
+				area = east_azbin_area
+				area = central_sahara_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = no
+			}
+		}
+		trigger = {
+			ajjer_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_sahara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			owns_all_provinces = {
+				area = east_azbin_area
+				is_city = yes
+			}
+			OR = {
+				accepted_culture = tuareg
+				any_subject_country = {
+					primary_culture = tuareg
+					total_development = 50
+					liberty_desire = 0
+				}
+			}
+		}
+		effect = { 
+			maghreb_region = {
+				discover_country = MAL
+			}
+			5343 = {
+				center_of_trade = 1
+			}
+			north_saharan_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			} 
+			fezzan_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			ouled_nail_area = {
+				limit = {
+					  NOT = { is_core = ROOT }
+					  NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT 
+			}
+			add_country_modifier ={
+				name = cooperation_with_tuareg
+				duration = -1
+			}
+		}
+	}
 	mr_mali_exploration_eighth = {
 		icon = mission_colonize_the_caribbean
 		position = 12
@@ -1871,5 +1940,167 @@ branch_5 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_sahara_first = {
+		icon = arb_riyadh
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 5220
+				province_id = 5221
+				province_id = 5224
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = no
+			}
+		}
+		trigger = {
+			TMB = {
+				is_subject_of_type_with_overlord = {
+					who = MAL
+					type = core_farma_subject
+				}
+			}
+			TKR = {
+				is_subject_of_type_with_overlord = {
+					who = MAL
+					type = core_farma_subject
+				}
+			}
+			5221 = {
+				num_of_units_in_province = {
+					who = MAL
+					amount = 1
+				}
+			}
+			5220 = {
+				num_of_units_in_province = {
+					who = MAL
+					amount = 1
+				}
+			}
+			5224 = {
+				num_of_units_in_province = {
+					who = MAL
+					amount = 1
+				}
+			}
+		}
+		effect = {
+			seize_empty_province_effect = { province = 5224 }
+			seize_empty_province_effect = { province = 5220 }
+			seize_empty_province_effect = { province = 5221 }
+			5220 = {
+				add_province_modifier = {
+					name = restoring_walata
+					duration = -1
+				}
+			}
+		}
+	}
+	mr_mali_sahara_second = {
+		icon = mission_zim_strong_rulership
+		position = 2
+		required_missions = {
+			mr_mali_sahara_first
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2246
+				province_id = 5220
+			}
+			NOT = {
+					has_trade_building_trigger = yes
+					development = 10
+			}
+		}
+		trigger = {
+			5220 = {
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+				development = 10
+			}
+			2246 = {
+				owned_by = ROOT
+				has_trade_building_trigger = yes
+				development = 10
+			}
+		}
+		effect = {
+			5220 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_center_of_trade_level = 1
+			}
+			2246 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				center_of_trade = 1
+				change_province_name = "Koumbi Saleh"
+				rename_capital = "Koumbi Saleh"
+			}
+			seize_empty_province_effect = { province = 1127 }
+			if = {
+				limit = {
+					exists = SOS
+				}
+				add_casus_belli = {
+					target = SOS
+					type = cb_farma_subjugation_war
+					months = 180
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = SOS
+					}
+				}
+				tafilalt_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { 
+							owner = {
+								is_subject_of = ROOT
+							}
+						}
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sus_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { 
+							owner = {
+								is_subject_of = ROOT
+							}
+						}
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_morocco_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { 
+							owner = {
+								is_subject_of = ROOT
+							}
+						}
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				5215 = {
+					add_permanent_claim = ROOT
+				}
+			}
 
+		}
+	}
 }

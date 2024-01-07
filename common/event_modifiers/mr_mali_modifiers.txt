@@ -1,9 +1,15 @@
 explorer_mindset = {
 	naval_attrition = -0.25
 }
+cooperation_with_tuareg = {
+	may_establish_frontier = yes
+}
 saharan_fortress = {
 	fort_level = 1
 	local_fort_maintenance_modifier = -0.25
+}
+restoring_walata = {
+	local_development_cost = -0.30
 }
 expanded_colonial_efforts = {
 	local_colony_cost_modifier = -0.5
