@@ -3,54 +3,59 @@ nav_missions_1 = {
 	slot = 4
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = NAV
 	}
 	has_country_shield = yes
-	
+
 	nav_galicias_son = {
 		icon = mission_union_with_portugal
 		required_missions = {}
 		position = 2
-		
+
 		provinces_to_highlight = {
 			area = beieras_area
 		}
 		trigger = {
 			OR = {
 				POR = {
-						has_opinion = {
-							who = ROOT
-							value = 120
-						}
+					has_opinion = {
+						who = ROOT
+						value = 120
+					}
 				}
 				POR = {
-						is_rival = ROOT
-						}
+					is_rival = ROOT
+				}
 				POR = {
-						exists = no
-						}
+					exists = no
+				}
 				POR = {
-						is_subject = yes
-						}
+					is_subject = yes
+				}
 			}
-		}	
+		}
 		effect = {
-			POR = {
-				country_event = {
-				id = navarra_events.1
+			if = {
+				limit = { POR = { is_subject = no } }
+				POR = {
+					country_event = { id = navarra_events.1 }
 				}
 			}
+			else = {
+				add_treasury = 50
+			}
+
 			custom_tooltip = luso_basque_wedding
 		}
-	}	
-	
+	}
+
 	nav_tame_fanatics = {
 		icon = mission_intervene_in_castile
 		required_missions = {nav_galicias_son}
 		position = 3
-		
+
 		provinces_to_highlight = {
 			area = beieras_area
 		}
@@ -64,28 +69,33 @@ nav_missions_1 = {
 					}
 				}
 				POR = {
-						is_subject = yes
-						}
+					is_subject = yes
+				}
 				POR = {
-						exists = no
-						}
+					exists = no
+				}
 			}
 		}
 		effect = {
-			POR = {
-				country_event = {
-				id = navarra_events.4
+			if = {
+				limit = { POR = { is_subject = no } }
+				POR = {
+					country_event = { id = navarra_events.4 }
 				}
 			}
+			else = {
+				add_permanent_claim_multi_provinces = { target = beieras_area }
+			}
+
 			custom_tooltip = tame_portugal
 		}
-	}	
-	
+	}
+
 	nav_to_santiago = {
 		icon = mission_european_church
 		required_missions = {nav_tame_fanatics}
 		position = 4
-		
+
 		provinces_to_highlight = {
 			area = galicia_area
 		}
@@ -93,91 +103,92 @@ nav_missions_1 = {
 			OR = {
 				POR = {
 					is_subject = yes
-					}
+				}
 				POR = {
-						exists = no
+					exists = no
 				}
 			}
 		}
 		effect = {
 			GAL = {
-				country_event = {
-				id = navarra_events.7
-				}
+				country_event = { id = navarra_events.7 }
 			}
 			custom_tooltip = warden_santiago
 		}
 	}
-	
+
 	nav_asturian_legacy = {
 		icon = mission_reclaim_andalucia
 		required_missions = {nav_to_santiago}
-		position = 5 
-		
+		position = 5
+
 		provinces_to_highlight = {
 			OR = {
 				area = leon_area
 				area = castille_area
 				area = asturias_area
 			}
-		}	
+		}
 		trigger = {
-			OR = {
-				CAS = {
-					has_opinion = {
+			CAS = {
+				OR = {
+					AND = { # Likes us
+						has_opinion = {
 							who = ROOT
 							value = 120
-					}
-						trust = {
-						who = NAV
-						value = 70
 						}
+						trust = {
+							who = ROOT
+							value = 70
+						}
+					}
+					is_rival = ROOT # Hates us
+					is_subject = yes
+					exists = no
 				}
-				LON = {
-					has_opinion = {
+			}
+			# Same thing
+			LON = {
+				OR = {
+					AND = { # Likes us
+						has_opinion = {
 							who = ROOT
 							value = 120
-					}
+						}
 						trust = {
-						who = NAV
-						value = 70
+							who = ROOT
+							value = 70
 						}
+					}
+					is_rival = ROOT # Hates us
+					is_subject = yes
+					exists = no
 				}
-				CAS = {
-						is_rival = ROOT
-						}
-				LON = {
-						is_rival = ROOT
-						}			
 			}
 		}
 		effect = {
-              if = { 
-               limit = { CAS = { is_subject = yes } }
-                 add_permanent_claim_multi_provinces = { target = castille_area } 
-				 add_permanent_claim_multi_provinces = { target = asturias_area } 
-                }
-              else =  { 
-                CAS = { 				
-				 country_event = {
-				 id = navarra_events.10
-				   } 
-                  }
-				} 
-				
-              if = { 
-               limit = { LON = { is_subject = yes } }
-                 add_permanent_claim_multi_provinces = { target = leon_area } 
-				 add_permanent_claim_multi_provinces = { target = asturias_area } 
-                }
-              else =  { 
-                LON = { 				
-				 country_event = {
-				 id = navarra_events.10
-				   } 
-                  }
+			if = {
+				limit = { CAS = { is_subject = yes } }
+				add_permanent_claim_multi_provinces = { target = castille_area }
+				add_permanent_claim_multi_provinces = { target = asturias_area }
+			}
+			else =  {
+				CAS = {
+					country_event = { id = navarra_events.10 }
 				}
-				
+			}
+
+			if = {
+				limit = { LON = { is_subject = yes } }
+				add_permanent_claim_multi_provinces = { target = leon_area }
+				add_permanent_claim_multi_provinces = { target = asturias_area }
+			}
+			else =  {
+				LON = {
+					country_event = { id = navarra_events.10 }
+				}
+			}
+
 			custom_tooltip = iberian_thunderdome
 		}
 	}
@@ -186,100 +197,56 @@ nav_missions_1 = {
 		icon = mission_restore_faith_in_the_throne
 		required_missions = {nav_asturian_legacy}
 		position = 6
-		
+
 		provinces_to_highlight = {
-			province_id = 207
+			OR = {
+				AND = {
+					province_id = 207
+					NOT = { has_building = courthouse }
+				}
+				is_capital_of = CAS
+				is_capital_of = LON
+			}
+
 		}
 		trigger = {
 			207 = {
 				has_building = courthouse
 			}
-			OR = {
-				CAS = {
-					has_opinion = {
-							who = ROOT
-							value = 120
-					}
-				}
-				CAS = {
-					exists = no
-				}
-			}
-			OR = {
-				LON = {
-					has_opinion = {
-							who = ROOT
-							value = 120
-					}
-				}
-				LON = {
-					exists = no
-				}
-			}
+
+			tag_has_opinion_of_root_or_is_dead = { tag = CAS opinion = 120 }
+			tag_has_opinion_of_root_or_is_dead = { tag = LON opinion = 120 }
 		}
 		effect = {
 			207 = {
-				add_permanent_province_modifier = {
+				add_province_modifier = {
 					name = covadonga_court
 					duration = -1
 				}
 			}
 		}
 	}
-	
+
 	nav_court_hopping = {
 		icon = imperial_ascendancy
 		required_missions = {nav_covadonga}
 		position = 7
-		
+
 		trigger = {
-			OR = {
-				POR = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}
-				POR = {
-					exists = no
-				}
-			}
-			OR = {
-				GAL = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}
-				GAL = {
-					exists = no
-				}
-			}
-			OR = {
-				CAS = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}
-				CAS = {
-					exists = no
-				}
-			}
-			OR = {
-				LON = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}
-				LON = {
-					exists = no
-				}
-			}	
+			tag_has_opinion_of_root_or_is_dead = { tag = POR opinion = 200 }
+			tag_has_opinion_of_root_or_is_dead = { tag = GAL opinion = 200 }
+			tag_has_opinion_of_root_or_is_dead = { tag = CAS opinion = 200 }
+			tag_has_opinion_of_root_or_is_dead = { tag = LON opinion = 200 }
+
+			# In case subject tags don't exist
+			231 = { country_or_non_sovereign_subject_holds = root }
+			206 = { country_or_non_sovereign_subject_holds = root }
+			219 = { country_or_non_sovereign_subject_holds = root }
+			208 = { country_or_non_sovereign_subject_holds = root }
+
 			employed_advisor = {
 				category = ADM
-			}	
+			}
 			employed_advisor = {
 				category = DIP
 			}
@@ -294,61 +261,57 @@ nav_missions_1 = {
 			}
 		}
 	}
-	
+
 	nav_federal_emperor = {
 		icon = lead_the_empire
 		required_missions = {nav_court_hopping}
 		position = 8
-		
+
 		trigger = {
-			ROOT = {
-				is_emperor = yes
-			}
+			is_emperor = yes
 		}
+
 		effect = {
 			add_imperial_influence = 50
 		}
 	}
-	
+
 	nav_a_new_world = {
 		icon = mission_caribbean_cn
 		required_missions = {}
 		position = 10
-		
+
 		provinces_to_highlight = {
 			province_id = 980
 		}
 		trigger = {
-			ROOT = {
 			has_discovered = 980
-			}
-		}	
+		}
 		effect = {
-			ROOT = {
-				add_country_modifier = {
-					name = sailor_stories
-					duration = 3650
-				}
-			}	
+			add_country_modifier = {
+				name = sailor_stories
+				duration = 3650
+			}
 		}
 	}
-	
+
 	nav_terranova = {
 		icon = mission_rb_colonise_canada
 		required_missions = {nav_a_new_world}
 		position = 11
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 981
 				province_id = 2573
 				province_id = 980
 			}
-		}	
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
-			owns = 981
-			owns = 2573
-			owns = 980
+			owns_or_non_sovereign_subject_of = 981
+			owns_or_non_sovereign_subject_of = 2573
+			owns_or_non_sovereign_subject_of = 980
 		}
 		effect = {
 			981 = {
@@ -364,24 +327,24 @@ nav_missions_1 = {
 				country_event = {
 				id = navarra_events.17
 				}
-			}	
+			}
 		}
 	}
-	
+
 	nav_bay_of_plenty = {
 		icon = mission_settlers_north_america
 		required_missions = {nav_terranova}
 		position = 12
-		
+
 		provinces_to_highlight = {
 			OR = {
-				province_id = 968
-				province_id = 2561
-				province_id = 967
-				province_id = 2010
-				province_id = 2560
-				province_id = 965
+				area = connecticut_valley_area
+				area = massachusetts_bay_area
+				area = new_york_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			is_city = no
+			has_port = yes
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -390,95 +353,84 @@ nav_missions_1 = {
 					area = connecticut_valley_area
 					area = massachusetts_bay_area
 					area = new_york_area
-				}	
+				}
 				is_city = yes
+				has_port = yes
 			}
-		}		
+		}
 		effect = {
-			968 = {
-				change_trade_goods = whales
+			connecticut_valley_area = {
+				limit = {
+					has_port = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				add_permanent_province_modifier = {
 					name = baskonia_berria
 					duration = -1
 				}
 			}
-			2561 = {
-				change_trade_goods = whales
+			massachusetts_bay_area = {
+				limit = {
+					has_port = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				add_permanent_province_modifier = {
 					name = baskonia_berria
 					duration = -1
 				}
 			}
-			967 = {
-				change_trade_goods = whales
+			new_york_area = {
+				limit = {
+					has_port = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				add_permanent_province_modifier = {
 					name = baskonia_berria
 					duration = -1
 				}
 			}
-			2010 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = baskonia_berria
-					duration = -1
-				}
-			}
-			2560 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = baskonia_berria
-					duration = -1
-				}
-			}
+
 			965 = {
 				center_of_trade = 2
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = baskonia_berria
-					duration = -1
-				}
 			}
 		}
 	}
-	
+
 	nav_south_grazing = {
 		icon = mission_rb_conquer_wales
 		required_missions = {nav_bay_of_plenty}
 		position = 13
-		
+
 		provinces_to_highlight = {
 			area = buenos_aires_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			ROOT = {
-				owns_all_provinces = {
-					area = buenos_aires_area
-				}
+			buenos_aires_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			ROOT = {
-				add_permanent_claim = 1988
-			}
+			add_permanent_claim = 1988
+
 			add_country_modifier = {
 				name = frontier_supplies
 				duration = 3650
 			}
 		}
 	}
-	
+
 	nav_even_further_beyond = {
 		icon = mission_plus_ultra
 		required_missions = {nav_south_grazing}
 		position = 14
-		
+
 		provinces_to_highlight = {
 			province_id = 1988
 		}
 		trigger = {
-			ROOT = {
-				owns = 1988
-			}
+			owns = 1988
 		}
 		effect = {
 			1988 = {
@@ -493,62 +445,40 @@ nav_missions_1 = {
 			}
 		}
 	}
-	
+
 	nav_blue_whale_hunting = {
 		icon = mission_galleys_in_port
 		required_missions = {nav_even_further_beyond}
 		position = 15
-		
+
 		provinces_to_highlight = {
 			area = northern_polynesia_area
 		}
 		trigger = {
-			ROOT = {
-				owns_all_provinces = {
-					area = northern_polynesia_area
-				}
+			owns_all_provinces = {
+				area = northern_polynesia_area
 			}
 		}
 		effect = {
-			1240 = {
+			northern_polynesia_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = ocean_kingdom
 					duration = -1
 				}
 			}
-			4934 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = ocean_kingdom
-					duration = -1
-				}
-			}
-			4935 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = ocean_kingdom
-					duration = -1
-				}
-			}
-			4936 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = ocean_kingdom
-					duration = -1
-				}
-			}
+
 			alaska_area = {
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
+
 	nav_orca_hunting = {
 		icon = support_the_bulk_trades
 		required_missions = {nav_blue_whale_hunting}
 		position = 16
-		
+
 		provinces_to_highlight = {
 			area = alaska_area
 		}
@@ -560,57 +490,34 @@ nav_missions_1 = {
 			}
 		}
 		effect = {
-			979 = {
+			alaska_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = frontier_freedom
 					duration = -1
 				}
 			}
-			2611 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = frontier_freedom
-					duration = -1
-				}
-			}
-			978 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = frontier_freedom
-					duration = -1
-				}
-			}
-			2612 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = frontier_freedom
-					duration = -1
-				}
-			}
-			ROOT = {
-				add_permanent_claim = 1243
-				add_permanent_claim = 1989
-			}
+
+			add_permanent_claim = 1243
+			add_permanent_claim = 1989
 		}
 	}
-	
+
 	nav_sperm_whale_hunting = {
 		icon = mission_raid_christian_trade
 		required_missions = {nav_orca_hunting}
 		position = 17
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1243
 				province_id = 1989
 			}
-		}	
+			NOT = { owned_by = ROOT }
+		}
 		trigger = {
-			ROOT = {
-				owns = 1243
-				owns = 1989
-			}
+			owns = 1243
+			owns = 1989
 		}
 		effect = {
 			1243 = {
@@ -629,14 +536,14 @@ nav_missions_1 = {
 			}
 		}
 	}
-}	
+}
 
 nav_missions_2 = {
-	
+
 	slot = 2
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = NAV
 	}
@@ -646,7 +553,7 @@ nav_missions_2 = {
 		icon = spa_reform_tercios
 		required_missions = {}
 		position = 2
-		
+
 		trigger = {
 			army_size_percentage = 1.0
 			num_of_generals = 1
@@ -658,19 +565,19 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_walls_of_navarra = {
 		icon = alpine_defenses
 		required_missions = {nav_prepare_levy}
 		position = 3
-		
+
 		provinces_to_highlight = {
 			province_id = 210
 		}
 		trigger = {
 			210 = {
 				has_building = fort_15th
-				}
+			}
 		}
 		effect = {
 			210 = {
@@ -678,18 +585,20 @@ nav_missions_2 = {
 					type = mr_olito_palace
 					tier = 1
 				}
-			}	
+			}
 		}
 	}
-	
+
 	nav_aragon_reconquista = {
 		icon = mission_protect_albania
 		required_missions = {nav_walls_of_navarra}
 		position = 4
-		
+
 		provinces_to_highlight = {
 			area = valencia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
+		# TODO: Total mismatch of trigger and effect???
 		trigger = {
 			OR = {
 				VAL = {
@@ -699,53 +608,45 @@ nav_missions_2 = {
 				is_subject = yes
 				}
 			}
-		}	
+		}
 		effect = {
 			alentejo_area = {
 				add_core = POR
 			}
 		}
 	}
-	
+
 	nav_unleash_fanatics = {
 		icon = kingdom_of_heaven
 		required_missions = {nav_aragon_reconquista}
 		position = 5
-		
+
 		provinces_to_highlight = {
 			area = alentejo_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			OR = {
-				POR = {
-					is_subject = yes
-					}
-				POR = {
-						exists = no
-				}
-			}
-			ROOT = {
-				owns_all_provinces = {
-					area = alentejo_area
-				}
+			alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_papal_influence = 50
 		}
 	}
-	
+
 	nav_show_mercy_cordoba = {
 		icon = mission_restore_caliphate_of_cordoba
 		required_missions = {nav_unleash_fanatics}
 		position = 6
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = lower_andalucia_area
 				area = upper_andalucia_area
 			}
-		}	
+		}
 		trigger = {
 			total_development = CBD
 		}
@@ -763,22 +664,21 @@ nav_missions_2 = {
 		icon = mission_develop_cordoba
 		required_missions = {nav_show_mercy_cordoba}
 		position = 7
-		
+
 		trigger = {
-			OR = {
-				CBD = {
-					is_subject = yes
-					has_opinion = {
-					who = ROOT
-					value = 120
+			CBD = {
+				OR = {
+					AND = {
+						is_subject_of = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 120
+						}
 					}
-				}
-				CBD = {
-						exists = no
+					exists = no
 				}
 			}
-			
-		}	
+		}
 		effect = {
 			hidden_effect = {
 				set_estate_privilege = estate_burghers_cordoban_scholars
@@ -786,30 +686,36 @@ nav_missions_2 = {
 			custom_tooltip = cordoban_researcher
 		}
 	}
-	
+
 	nav_mozarabic_nautics = {
 		icon = mission_sailor_boat
 		required_missions = {nav_keys_of_cordoba}
 		position = 8
-		
+
 		trigger = {
-			has_estate_privilege = estate_burghers_naval_school_right
-			naval_reformer = 1
-			OR = {
-				CBD = {
-					is_subject = yes
-					has_opinion = {
-					who = ROOT
-					value = 200
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+				has_estate_privilege = estate_burghers_naval_school_right
+			}
+			else = {
+				naval_reformer = 1
+			}
+			CBD = {
+				OR = {
+					AND = {
+						is_subject_of = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
 					}
-				}	
-				CBD = {
-						exists = no
-					}
-				
+					exists = no
+				}
 			}
 		}
-			
+
 		effect = {
 			add_country_modifier = {
 				name = moor_sailed_whalers
@@ -873,55 +779,40 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_redirect_trade = {
-		icon = unite_the_league 
+		icon = unite_the_league
 		required_missions = {}
 		position = 10
-		
+
 		provinces_to_highlight = {
 			province_id = 1293
 		}
 		trigger = {
-			ROOT = {
 			1293 = { #sevilla
 				trade_share = {
 					country = ROOT
 					share = 30
-					}
 				}
-			}	
+			}
 		}
 		effect = {
 			213 = {
-				add_permanent_province_modifier = {
-				name = economic_capital_of_iberia
-				duration = -1
-				}
-			}	
+				add_permanent_province_modifier = { name = economic_capital_of_iberia duration = -1 }
+			}
 		}
 	}
-	
+
 	nav_integrate_catalonia = {
 		icon = purely_for_commerce
 		required_missions = {nav_redirect_trade}
 		position = 11
-		
+
 		provinces_to_highlight = {
 			area = catalonia_area
 		}
 		trigger = {
-			OR = {
-				CAT = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}	
-				CAT = {
-					exists = no
-				}
-			}
+			tag_has_opinion_of_root_or_is_dead = { tag = CAT opinion = 200 }
 			trader = 1
 		}
 		effect = {
@@ -931,14 +822,18 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_eel_lair = {
 		icon = mission_look_west
 		required_missions = {nav_integrate_catalonia}
 		position = 12
-		
+
 		provinces_to_highlight = {
-			province_id = 1504
+			OR = {
+				province_id = 1500
+				province_id = 1516
+			}
+			NOT = { is_strongest_trade_power = ROOT }
 		}
 		trigger = {
 			1500 = { 	#chesapeake_bay
@@ -955,12 +850,12 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_the_vasconian_lane = {
 		icon = mission_the_triangle_trade
 		required_missions = {nav_eel_lair}
 		position = 13
-		
+
 		provinces_to_highlight = {
 			province_id = 1466
 		}
@@ -969,14 +864,9 @@ nav_missions_2 = {
 				1466 = { 	#ivory_coast
 					is_strongest_trade_power = ROOT
 				}
-				MAL = {
-					has_opinion = {
-					who = ROOT
-					value = 200
-					}
-				}
+				tag_has_opinion_of_root_or_is_dead = { tag = MAL opinion = 200 }
 			}
-		}	
+		}
 		effect = {
 			add_mercantilism = 5
 			add_country_modifier = {
@@ -985,12 +875,12 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_basque_ocean = {
 		icon = mission_naval_kingdom
 		required_missions = {nav_the_vasconian_lane}
 		position = 14
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1466
@@ -999,7 +889,8 @@ nav_missions_2 = {
 				province_id = 1460
 				province_id = 1490
 			}
-		}	
+			NOT = { is_strongest_trade_power = ROOT }
+		}
 		trigger = {
 			1466 = { 	#ivory_coast
 				is_strongest_trade_power = ROOT
@@ -1021,12 +912,12 @@ nav_missions_2 = {
 			add_government_reform = thalassocracy_reform_basque
 		}
 	}
-	
+
 	nav_invest_in_whale_processing = {
 		icon = mission_industrial_forging
 		required_missions = {}
 		position = 15
-		
+
 		trigger = {
 			workshop = 10
 			production_leader = {
@@ -1040,12 +931,12 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_industrialize_economy = {
 		icon = mission_rb_central_belt_coal_mining
 		required_missions = {nav_invest_in_whale_processing}
 		position = 16
-		
+
 		trigger = {
 			wharf = 30
 		}
@@ -1056,12 +947,12 @@ nav_missions_2 = {
 			}
 		}
 	}
-	
+
 	nav_global_whale_oil_monopoly = {
 		icon = mission_rb_build_furnaces
 		required_missions = {nav_industrialize_economy}
 		position = 17
-		
+
 		trigger = {
 			trading_bonus = {
 				trade_goods = whales
@@ -1079,21 +970,21 @@ nav_missions_2 = {
 }
 
 nav_missions_3 = {
-	
+
 	slot = 3
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = NAV
 	}
 	has_country_shield = yes
-	
+
 	nav_secure_heir = {
 		icon = mission_subjugate_navarra
 		required_missions = {}
 		position = 1
-		
+
 		trigger = {
 			has_heir = yes
 			num_of_royal_marriages = 1
@@ -1107,23 +998,29 @@ nav_missions_3 = {
 			}
 		}
 	}
-	
+
 	nav_aragon_nobility = {
 		icon = spa_infantes_aragon
 		required_missions = {nav_secure_heir}
 		position = 2
-		
+
 		provinces_to_highlight = {
 			area = aragon_area
 		}
 		trigger = {
-			ARA = {
-				has_opinion = {
-				who = ROOT
-				value = 120
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+				has_estate_privilege = estate_nobles_diet_right
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_nobility
+					value = 3
 				}
 			}
-			has_estate_privilege = estate_nobles_diet_right
+			tag_has_opinion_of_root_or_is_dead = { tag = ARA opinion = 120 }
 		}
 		effect = {
 			valencia_area = {
@@ -1133,26 +1030,32 @@ nav_missions_3 = {
 			hidden_effect = {
 				remove_estate_privilege = estate_nobles_diet_right
 				set_estate_privilege = estate_nobles_diet_right_aragon
-			}	
+			}
 		}
 	}
-	
+
 	nav_catalonia_merchants = {
 		icon = mission_guilds_of_barcelona
 		required_missions = {nav_aragon_nobility}
 		position = 3
-		
+
 		provinces_to_highlight = {
 			area = catalonia_area
 		}
 		trigger = {
-			CAT = {
-				has_opinion = {
-				who = ROOT
-				value = 120
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}	
+				has_estate_privilege = estate_burghers_control_over_the_coinage
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_burghers
+					value = 3
 				}
 			}
-			has_estate_privilege = estate_burghers_control_over_the_coinage
+			tag_has_opinion_of_root_or_is_dead = { tag = CAT opinion = 120 }
 		}	
 		effect = {
 			baleares_area = {
@@ -1162,35 +1065,40 @@ nav_missions_3 = {
 			hidden_effect = {
 				remove_estate_privilege = estate_burghers_control_over_the_coinage
 				set_estate_privilege = estate_burghers_control_over_the_coinage_catalonia
-			}	
+			}
 		}
 	}
-	
+
 	nav_bearn_clergy = {
 		icon = crush_heretic_strongholds
 		required_missions = {nav_catalonia_merchants}
 		position = 4
-		
+
 		provinces_to_highlight = {
 			province_id = 176
 		}
+		# TODO: Idk what to do to make this make sense if Bearn is dead/kicked out of their home provs
 		trigger = {
-			BRN = {
-				has_opinion = {
-				who = ROOT
-				value = 120
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}	
+				has_estate_privilege = estate_church_expand_the_theology
+			}
+			else = {
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 3
 				}
 			}	
-			has_estate_privilege = estate_church_expand_the_theology
-			176 = {
-				has_owner_religion = yes
-			}
+			tag_has_opinion_of_root_or_is_dead = { tag = BRN opinion = 120 }
+			176 = { has_owner_religion = yes }
 		}
 		effect = {
 			hidden_effect = {
 				remove_estate_privilege = estate_church_expand_the_theology
 				set_estate_privilege = estate_church_waldensian_studies
-			}	
+			}
 			pyrenees_area = {
 				add_permanent_claim = ROOT
 			}
@@ -1203,28 +1111,27 @@ nav_missions_3 = {
 			custom_tooltip = bearn_clergy
 		}
 	}
-	
+
 	nav_forward_watchposts = {
 		icon = take_the_bishoprics
 		required_missions = {nav_bearn_clergy}
 		position = 5
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4695
 				province_id = 175
 			}
-		}	
+			NOT = { owned_by = ROOT }
+		}
 		trigger = {
-			ROOT = {
-				owns = 4695
-				owns = 175
-			}
 			4695 = {
 				has_building = fort_15th
+				owned_by = ROOT
 			}
 			175 = {
 				has_building = fort_15th
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -1233,15 +1140,15 @@ nav_missions_3 = {
 					type = mr_carcasonne
 					tier = 1
 				}
-			}	
+			}
 		}
 	}
-	
+
 	nav_misto_peasants = {
 		icon = mission_peasantry
 		required_missions = {nav_forward_watchposts}
 		position = 6
-		
+
 		provinces_to_highlight = {
 			province_id = 4970
 		}
@@ -1260,41 +1167,38 @@ nav_missions_3 = {
 				name = misto_sharpshooters
 				duration = -1
 			}
+			custom_tooltip = federal_guard
 		}
 	}
-	
+
 	nav_iberian_federation = {
 		icon = hispaniae
 		required_missions = {nav_misto_peasants nav_keys_of_cordoba nav_court_hopping}
 		position = 8
-		
+
 		provinces_to_highlight = {
 			region = iberia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			iberia_region = {
-				country_or_non_sovereign_subject_holds = ROOT
 				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			ROOT = {
-				country_event = {
-				id = navarra_events.16
-				}
-			}	
+			country_event = { id = navarra_events.16 }
 			set_government_rank = 3
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 25 }
 			custom_tooltip = iberian_fed
 		}
 	}
-	
+
 	nav_expanded_cortes = {
 		icon = mission_among_the_great_powers
 		required_missions = {nav_iberian_federation}
 		position = 9
-		
+
 		trigger = {
 			current_size_of_parliament = 30
 		}
@@ -1303,17 +1207,20 @@ nav_missions_3 = {
 				name = iberian_parliament
 				duration = -1
 			}
+			custom_tooltip = iberian_reform
 		}
 	}
-	
+
 	nav_native_fur_trade = {
 		icon = trade_with_the_natives
 		required_missions = {}
 		position = 12
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
+			root_or_subject_owns_and_colonized = no
 		}
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
@@ -1326,16 +1233,17 @@ nav_missions_3 = {
 				name = native_fur_trade
 				duration = -1
 			}
-		}	
+		}
 	}
-	
+
 	nav_state_travelers = {
 		icon = mississippi_company
 		required_missions = {nav_native_fur_trade}
 		position = 13
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
+			root_or_subject_owns_and_colonized = no
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1356,9 +1264,10 @@ nav_missions_3 = {
 		icon = mission_iberian_conquistador
 		required_missions = {nav_state_travelers}
 		position = 14
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
+			root_or_subject_owns_and_colonized = no
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1374,14 +1283,15 @@ nav_missions_3 = {
 			}
 		}
 	}
-	
+
 	nav_pampas_cornucopia = {
 		icon = mission_pol_breadbasket_europe
 		required_missions = {nav_hellish_paradise}
 		position = 15
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_la_plata
+			root_or_subject_owns_and_colonized = no
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1397,17 +1307,17 @@ nav_missions_3 = {
 			}
 		}
 	}
-	
+
 	nav_global_network = {
 		icon = a.e.i.o.u.
 		required_missions = {nav_pampas_cornucopia}
 		position = 16
-		
+
 		trigger = {
 			ROOT = {
 			colony = 5
 			}
-		}	
+		}
 		effect = {
 			add_country_modifier = {
 				name = global_network
@@ -1415,18 +1325,18 @@ nav_missions_3 = {
 			}
 		}
 	}
-	
+
 	nav_euskal_bakea = {
 		icon = mission_mare_nostrum
 		required_missions = {nav_global_network}
 		position = 17
-		
+
 		trigger = {
-				NOT = {
-					any_subject_country = {
-						liberty_desire = 10
-					}
+			NOT = {
+				any_subject_country = {
+					liberty_desire = 10
 				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1435,12 +1345,12 @@ nav_missions_3 = {
 			}
 		}
 	}
-	
+
 	nav_abyss_stared_back = {
 		icon = navarra_abyss
 		required_missions = {nav_global_whale_oil_monopoly nav_euskal_bakea nav_sperm_whale_hunting}
 		position = 18
-		
+
 		provinces_to_highlight = {
 			province_id = 1674
 		}
@@ -1452,28 +1362,28 @@ nav_missions_3 = {
 				country_event = {
 				id = navarra_events.18
 				}
-			}	
+			}
 		}
 	}
-	
-}	
+
+}
 
 nav_missions_4 = {
-	
+
 	slot = 1
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = NAV
 	}
 	has_country_shield = yes
-	
+
 	nav_naval_funding = {
 		icon = mission_aragonese_navy
 		required_missions = {}
 		position = 3
-		
+
 		trigger = {
 			naval_forcelimit = 20
 		}
@@ -1484,14 +1394,14 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_basque_marines = {
 		icon = mission_danish_navy
 		required_missions = {nav_naval_funding}
 		position = 4
-		
+
 		trigger = {
-			num_of_marines = 1
+			num_of_marines = 4
 			navy_size_percentage = 0.7
 		}
 		effect = {
@@ -1501,14 +1411,14 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_integrate_whalers = {
 		icon = overshadow_venice
 		required_missions = {nav_basque_marines}
 		position = 5
-		
+
 		trigger = {
-			num_of_marines = 6
+			num_of_marines = 8
 		}
 		effect = {
 			add_country_modifier = {
@@ -1517,12 +1427,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_royal_nau = {
 		icon = mission_launch_a_flagship
 		required_missions = {nav_integrate_whalers}
 		position = 6
-		
+
 		trigger = {
 			has_flagship = yes
 		}
@@ -1533,12 +1443,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_federal_fleet = {
 		icon = mission_sea_battles
 		required_missions = {nav_royal_nau}
 		position = 9
-		
+
 		trigger = {
 			num_of_heavy_ship = 10
 			num_of_galley = 30
@@ -1550,12 +1460,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_foreign_fleetmen = {
 		icon = mission_russian_navy
 		required_missions = {nav_federal_fleet}
 		position = 10
-		
+
 		trigger = {
 			num_accepted_cultures = 3
 		}
@@ -1566,12 +1476,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_professional_marine_force = {
 		icon = mission_redcoats
 		required_missions = {nav_foreign_fleetmen}
 		position = 11
-		
+
 		trigger = {
 			army_professionalism = 0.40
 		}
@@ -1581,13 +1491,13 @@ nav_missions_4 = {
 				duration = -1
 			}
 		}
-	}	
-	
+	}
+
 	nav_world_class_mariners = {
 		icon = mission_marines
 		required_missions = {nav_professional_marine_force}
 		position = 12
-		
+
 		provinces_to_highlight = {
 			province_id = 1426
 		}
@@ -1601,12 +1511,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_nautical_pioneers = {
 		icon = mission_exploration
 		required_missions = {nav_world_class_mariners}
 		position = 13
-		
+
 		trigger = {
 			OR = {
 				has_country_flag = circumnavigation_first
@@ -1620,12 +1530,12 @@ nav_missions_4 = {
 			}
 		}
 	}
-	
+
 	nav_maritime_commisars = {
 		icon = mission_expanded_leidang
 		required_missions = {nav_nautical_pioneers}
 		position = 14
-		
+
 		trigger = {
 			OR = {
 				full_idea_group = naval_ideas
@@ -1643,36 +1553,40 @@ nav_missions_4 = {
 }
 
 nav_missions_5 = {
-	
+
 	slot = 5
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = NAV
 	}
 	has_country_shield = yes
-	
+
 	nav_coastal_fish_markets = {
 		icon = mission_fish_markets
 		required_missions = {}
 		position = 3
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 209
 				province_id = 4985
 				province_id = 173
 			}
-		}	
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
 		trigger = {
 			209 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				has_building = marketplace
 			}
 			4985 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				has_building = marketplace
 			}
 			173 = {
+				country_or_non_sovereign_subject_holds = ROOT
 				has_building = marketplace
 			}
 		}
@@ -1680,15 +1594,15 @@ nav_missions_5 = {
 			209 = {
 				center_of_trade = 1
 			}
-		}	
+		}
 	}
-	
-	
+
+
 	nav_whalers_of_bizkaia = {
 		icon = crusader_fleet
 		required_missions = {nav_coastal_fish_markets}
 		position = 4
-		
+
 		provinces_to_highlight = {
 			province_id = 209
 		}
@@ -1704,12 +1618,12 @@ nav_missions_5 = {
 			}
 		}
 	}
-	
+
 	nav_dominate_bay_of_biscay = {
 		icon = mission_african_gold
 		required_missions = {nav_whalers_of_bizkaia}
 		position = 5
-		
+
 		provinces_to_highlight = {
 			province_id = 1276
 		}
@@ -1723,14 +1637,14 @@ nav_missions_5 = {
 				name = deep_sea_fishing
 				duration = 7300
 			}
-		}	
+		}
 	}
-	
+
 	nav_deep_sea_expeditions = {
 		icon = mission_portuguese_interference
 		required_missions = {nav_dominate_bay_of_biscay}
 		position = 6
-		
+
 		provinces_to_highlight = {
 			province_id = 367
 		}
@@ -1746,13 +1660,13 @@ nav_missions_5 = {
 				duration = 3650
 			}
 		}
-	}	
+	}
 
 	nav_atlantic_whaling_outposts = {
 		icon = mission_rb_conquer_the_isles
 		required_missions = {nav_deep_sea_expeditions}
 		position = 9
-		
+
 		provinces_to_highlight = {
 			province_id = 367
 		}
@@ -1784,66 +1698,37 @@ nav_missions_5 = {
 			}
 		}
 	}
-	
+
 	nav_follow_pods_north = {
 		icon = mission_rb_settle_the_north
 		required_missions = {nav_atlantic_whaling_outposts}
 		position = 10
-		
+
 		provinces_to_highlight = {
 			area = greenland_area
+			root_or_subject_owns_and_colonized = no
 		}
 		trigger = {
-			ROOT = {
-				owns_all_provinces = {
-					area = greenland_area
-				}
+			owns_all_provinces = {
+				area = greenland_area
 			}
 		}
 		effect = {
-			5048 = {
+			greenland_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = icey_penal_colony
 					duration = -1
 				}
 			}
-			1105 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = icey_penal_colony
-					duration = -1
-				}
-			}
-			1104 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = icey_penal_colony
-					duration = -1
-				}
-			}
-			5047 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = icey_penal_colony
-					duration = -1
-				}
-			}
-			5046 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = icey_penal_colony
-					duration = -1
-				}
-			}	
 		}
 	}
-	
+
 	nav_follow_pods_south = {
 		icon = mission_rb_increase_our_reach
 		required_missions = {nav_follow_pods_north}
 		position = 11
-		
+
 		provinces_to_highlight = {
 			area = south_atlantic_islands_area
 		}
@@ -1853,47 +1738,13 @@ nav_missions_5 = {
 					area = south_atlantic_islands_area
 				}
 			}
-		}	
+		}
 		effect = {
 			cape_of_good_hope_area = {
 				add_permanent_claim = ROOT
-			}	
-			1097 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = insular_communities
-					duration = -1
-				}
 			}
-			1795 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = insular_communities
-					duration = -1
-				}
-			}
-			1306 = 	{
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = insular_communities
-					duration = -1
-				}
-			}
-			1098 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = insular_communities
-					duration = -1
-				}
-			}
-			2025 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = insular_communities
-					duration = -1
-				}
-			}
-			1095 = {
+
+			south_atlantic_islands_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = insular_communities
@@ -1902,7 +1753,7 @@ nav_missions_5 = {
 			}
 		}
 	}
-	
+
 	nav_antarctic_fishing = {
 		icon = colonize_the_cape
 		required_missions = {nav_follow_pods_south}
@@ -1910,30 +1761,21 @@ nav_missions_5 = {
 		provinces_to_highlight = {
 			area = cape_of_good_hope_area
 		}
-		
+
+		provinces_to_highlight = {
+			area = cape_of_good_hope_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { has_building = shipyard }
+				NOT = { has_building = dock }
+			}
+		}
+
 		trigger = {
-			ROOT = {
-				owns_all_provinces = {
-					area = cape_of_good_hope_area
-				}
-			}
-			1177 = {
-				has_building = shipyard
-				has_building = dock
-			}
-			1175 = {
-				has_building = shipyard
-				has_building = dock
-			}
-			1179 = {
-				has_building = shipyard
-				has_building = dock
-			}
-			833 = {
-				has_building = shipyard
-				has_building = dock
-			}
-			1180 = {
+			cape_of_good_hope_area = {
+				type = all
+
+				owned_by = ROOT
 				has_building = shipyard
 				has_building = dock
 			}
@@ -1945,35 +1787,8 @@ nav_missions_5 = {
 			indian_ocean_islands_area = {
 				add_permanent_claim = ROOT
 			}
-			1177 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = cape_shipyard
-					duration = -1
-				}
-			}
-			1175 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = cape_shipyard
-					duration = -1
-				}
-			}
-			1179 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = cape_shipyard
-					duration = -1
-				}
-			}
-			833 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = cape_shipyard
-					duration = -1
-				}
-			}
-			1180 = {
+
+			cape_of_good_hope_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = cape_shipyard
@@ -1982,78 +1797,42 @@ nav_missions_5 = {
 			}
 		}
 	}
-	
+
 	nav_indian_toll = {
 		icon = mission_portuguese_ceylon
 		required_missions = {nav_antarctic_fishing}
 		position = 13
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = indian_ocean_islands_area
 				area = mascarenes_area
 			}
-		}	
+		}
 		trigger = {
-			ROOT = {
-				owns_all_provinces = {
-					area = indian_ocean_islands_area
-				}
-				owns_all_provinces = {
-					area = mascarenes_area
-				}
+			owns_all_provinces = {
+				area = indian_ocean_islands_area
 			}
-		}	
+			owns_all_provinces = {
+				area = mascarenes_area
+			}
+		}
 		effect = {
-			1103 = {
+			indian_ocean_islands_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = indian_toll
 					duration = -1
 				}
 			}
-			1102 = {
+			mascarenes_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = indian_toll
 					duration = -1
 				}
 			}
-			1100 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = indian_toll
-					duration = -1
-				}
-			}
-			1248 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = indian_toll
-					duration = -1
-				}
-			}
-			1101 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = indian_toll
-					duration = -1
-				}
-			}
-			1999 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = indian_toll
-					duration = -1
-				}
-			}
-			1998 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = indian_toll
-					duration = -1
-				}
-			}
+
 			taiwan_area = {
 				add_permanent_claim = ROOT
 			}
@@ -2064,10 +1843,12 @@ nav_missions_5 = {
 		icon = mission_trade_with_cathay
 		required_missions = {nav_indian_toll}
 		position = 14
-		
+
 		provinces_to_highlight = {
 			area = taiwan_area
+			NOT = { owned_by = ROOT }
 		}
+
 		trigger = {
 			ROOT = {
 				owns_all_provinces = {
@@ -2076,27 +1857,13 @@ nav_missions_5 = {
 			}
 		}
 		effect = {
-			738 = {
+			taiwan_area = {
 				change_trade_goods = whales
 				add_permanent_province_modifier = {
 					name = faraoese_cliffs
 					duration = -1
 				}
 			}
-			2155 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = faraoese_cliffs
-					duration = -1
-				}
-			}
-			2154 = {
-				change_trade_goods = whales
-				add_permanent_province_modifier = {
-					name = faraoese_cliffs
-					duration = -1
-				}
-			}
-		}	
-	}		
-}	
+		}
+	}
+}

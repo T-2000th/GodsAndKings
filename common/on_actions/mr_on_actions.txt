@@ -1591,3 +1591,14 @@ on_raid_coast = {
 		}
 	}
 }
+# country
+on_parliament_debate_succeeded = {
+    on_parliament_debate_succeeded_effect = yes
+    increase_issue_passed_counter = yes
+    if = {
+        limit = {
+            mission_completed = nav_expanded_cortes
+        }
+        change_government_reform_progress = 25
+    }
+}

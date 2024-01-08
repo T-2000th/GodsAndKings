@@ -462,3 +462,20 @@ is_greek = {
 		primary_culture = pontic_greek
 	}
 }
+
+tag_has_opinion_of_root_or_is_dead = {
+	$tag$ = {
+		OR = {
+			has_opinion = {
+				who = ROOT
+				value = $opinion$
+			}
+			exists = no
+		}
+	}
+}
+
+root_or_subject_owns_and_colonized = {
+	is_city = yes
+	country_or_non_sovereign_subject_holds = ROOT
+}
