@@ -502,3 +502,415 @@ country_event = {
 		set_country_flag = balkh_tradition_from_advisors
 	}		
 }
+
+country_event = {
+	id = MR_balkh_flavor.16 #SubjugatedTime
+	title = MR_balkh_flavor.16.t
+	desc = MR_balkh_flavor.16.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.16.a #Yes
+		ai_chance = { factor = 60 }	
+
+		FROM = { country_event = { id = MR_balkh_flavor.17 } }
+	}
+	option = {
+		name = MR_balkh_flavor.16.b #No
+		ai_chance = { 
+			factor = 40 
+			modifier = {
+				factor = 0
+				religion = FROM
+			}
+		}
+		
+		declare_war_with_cb = {
+			who = FROM
+			casus_belli = cb_crusade
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.17 #Vassalised
+	title = MR_balkh_flavor.17.t
+	desc = MR_balkh_flavor.17.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.17.a #Yes	
+
+		vassalize = FROM
+		FROM = { 
+			change_religion = ROOT
+            capital_scope = { change_religion = ROOT }			
+		}		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.18 #ViceroyaltyofBengal
+	title = MR_balkh_flavor.18.t
+	desc = MR_balkh_flavor.18.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.18.a #Establish It
+		ai_chance = { factor = 90 }	
+		
+		add_country_modifier = {
+			name = BLK_bengali_viceroy
+			duration = -1
+			}
+		custom_tooltip = bengal_viceroyal_TT	
+		hidden_effect = {	
+		bengal_region = {
+			type = all 
+			add_province_modifier = {
+				name = BLK_viceroyalty_possession
+				duration = -1
+				}
+			}
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.18.b #Don't Establish it
+		ai_chance = { factor = 10 }
+		
+		add_prestige_or_monarch_power = { amount = 25 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.19 #SunTemple
+	title = MR_balkh_flavor.19.t
+	desc = MR_balkh_flavor.19.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.19.a #Replace it
+		ai_chance = { factor = 100 }	
+		
+		 552 = {
+			destroy_great_project = { type = sun_temple_konarak }
+			add_great_project = { type = sun_mosque_konarak instant = yes }
+			add_great_project_tier = { 
+				type = sun_mosque_konarak 
+				tier = 1
+				}
+			}
+		add_treasury = -250	
+	}
+	option = {
+		name = MR_balkh_flavor.19.b #Don't Replace it
+		ai_chance = { factor = 0 }
+		
+		remove_country_modifier = balkh_zeal
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.20 #BalijaTitles
+	title = MR_balkh_flavor.20.t
+	desc = MR_balkh_flavor.20.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.20.a #Hire Them for Admin
+		ai_chance = { factor = 80 }	
+		
+		define_advisor = { 
+			type = treasurer
+			culture = telegu
+			skill = 3
+			discount = yes
+		}
+		define_advisor = { 
+			type = trader
+			culture = telegu
+			skill = 3
+			discount = yes
+		}		
+	}	
+	option = {
+		name = MR_balkh_flavor.20.b #Promise them Tamil Lands
+		ai_chance = { factor = 20 }	
+		
+		define_general = {
+			shock = 6
+			fire = 2
+			manuever = 4 
+			siege = 4
+		}
+		custom_tooltip = telegu_separatism_clear_TT
+		all_owned_provinces = {
+			limit = { culture = telegu }
+			add_separatism = -40
+		}
+		custom_tooltip = telegu_favouring_TT
+		set_country_flag = telegu_favouring
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.21 #ViceroyaltyofCoromandel
+	title = MR_balkh_flavor.21.t
+	desc = MR_balkh_flavor.21.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.21.a #Establish It
+		ai_chance = { factor = 90 }	
+		
+		add_country_modifier = {
+			name = BLK_coromandel_viceroy
+			duration = -1
+			}
+		custom_tooltip = coromandel_viceroyal_TT	
+		hidden_effect = {	
+		coromandel_region = {
+			type = all 
+			add_province_modifier = {
+				name = BLK_viceroyalty_possession
+				duration = -1
+				}
+			}
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.21.b #Don't Establish it
+		ai_chance = { factor = 10 }
+		
+		add_prestige_or_monarch_power = { amount = 25 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.22 #Tooth
+	title = MR_balkh_flavor.22.t
+	desc = MR_balkh_flavor.22.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.22.a #Ransom It
+		ai_chance = { factor = 100 }	
+		
+		random_country = { 
+		 limit = { 
+		  religion = buddhism 
+		  NOT = { has_country_flag = BLK_made_offer_tooth }
+		  }
+		 country_event = { id = MR_balkh_flavor.23 days = 3 }
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.22.b #Don't do a thing
+		ai_chance = { factor = 0 }
+		
+		remove_country_modifier = balkh_zeal 
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.23 #PropositionJoe
+	title = MR_balkh_flavor.23.t
+	desc = MR_balkh_flavor.23.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	immediate = { set_country_flag = BLK_made_offer_tooth }
+	
+	option = {
+		name = MR_balkh_flavor.23.a #100
+		ai_chance = { factor = 25 }	
+		
+		ETK = { country_event = { id = MR_balkh_flavor.24 } }
+	}
+	option = {
+		name = MR_balkh_flavor.23.b #1000
+		ai_chance = { factor = 25 }
+		
+		ETK = { country_event = { id = MR_balkh_flavor.25 } }
+	}
+	option = {
+		name = MR_balkh_flavor.23.c #2500
+		ai_chance = { factor = 25 }
+		
+		ETK = { country_event = { id = MR_balkh_flavor.26 } }
+	}	
+	option = {
+		name = MR_balkh_flavor.23.d #LmaoIAin'tNoToothFairy
+		ai_chance = { factor = 25 }
+		
+		random_country = { 
+		 limit = { 
+		  religion = buddhism 
+		  NOT = { has_country_flag = BLK_made_offer_tooth }
+		  }
+		 country_event = { id = MR_balkh_flavor.23 days = 3 } 
+		}		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.24 #AnOfferYouCannotRefuse#100
+	title = MR_balkh_flavor.24.t
+	desc = MR_balkh_flavor.24.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.24.a #Acceptable
+		ai_chance = { factor = 50 }	
+		
+		add_treasury = 100
+		FROM = { country_event = { id = MR_balkh_flavor.27a } }
+	}
+	option = {
+		name = MR_balkh_flavor.24.b #HellNaw
+		ai_chance = { factor = 50 }
+		
+		random_country = { 
+		 limit = { 
+		  religion = buddhism 
+		  NOT = { has_country_flag = BLK_made_offer_tooth }
+		  }
+		 country_event = { id = MR_balkh_flavor.23 days = 3 }
+		}		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.25 #AnOfferYouCannotRefuse#1000
+	title = MR_balkh_flavor.25.t
+	desc = MR_balkh_flavor.25.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.25.a #Acceptable
+		ai_chance = { factor = 75 }	
+		
+		add_treasury = 1000
+		FROM = { country_event = { id = MR_balkh_flavor.27b } }
+	}
+	option = {
+		name = MR_balkh_flavor.25.b #NAW
+		ai_chance = { factor = 25 }
+		
+		random_country = { 
+		 limit = { 
+		  religion = buddhism 
+		  NOT = { has_country_flag = BLK_made_offer_tooth }
+		  }
+		 country_event = { id = MR_balkh_flavor.23 days = 3 }
+		}		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.26 #AnOfferYouCannotRefuse#2500
+	title = MR_balkh_flavor.26.t
+	desc = MR_balkh_flavor.26.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.26.a #WE'RE RICH! 
+		ai_chance = { factor = 100 }	
+		
+		add_treasury = 2500
+		FROM = { country_event = { id = MR_balkh_flavor.27c } }
+	}
+	option = {
+		name = MR_balkh_flavor.26.b #Nah dog
+		ai_chance = { factor = 0 }
+		
+		random_country = { 
+		 limit = { 
+		  religion = buddhism 
+		  NOT = { has_country_flag = BLK_made_offer_tooth }
+		  }
+		 country_event = { id = MR_balkh_flavor.23 days = 3 }
+		}		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.27a #Artefact
+	title = MR_balkh_flavor.27a.t
+	desc = MR_balkh_flavor.27a.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.27a.a #YummyTooth
+		ai_chance = { factor = 100 }	
+		
+		add_treasury = -100
+		add_country_modifier = { 
+		 name = BLK_buddha_tooth 
+		 duration = -1
+		 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.27b #Artefact
+	title = MR_balkh_flavor.27b.t
+	desc = MR_balkh_flavor.27b.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.27b.a #YummyTooth
+		ai_chance = { factor = 100 }	
+		
+		add_treasury = -1000
+		add_country_modifier = { 
+		 name = BLK_buddha_tooth 
+		 duration = -1
+		 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.27c #Artefact
+	title = MR_balkh_flavor.27c.t
+	desc = MR_balkh_flavor.27c.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.27c.a #YummyTooth
+		ai_chance = { factor = 100 }	
+		
+		add_treasury = -2500
+		add_country_modifier = { 
+		 name = BLK_buddha_tooth 
+		 duration = -1
+		 }
+	}		
+}

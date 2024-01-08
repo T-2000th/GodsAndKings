@@ -870,6 +870,11 @@ on_bi_yearly_pulse_3 = {
 }
 
 # province
+on_province_owner_change = {
+	events = {
+		kannauj.1			#Fall of the current Maharaja
+	}
+}	
 on_province_religion_converted = {
 	if = {
 		limit = {

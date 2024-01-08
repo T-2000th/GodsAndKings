@@ -16,3 +16,7 @@ army_tradition = {
 	janissaries_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 }
+
+BLK_rajput_prince = {
+	diplomatic_upkeep = 1	
+}

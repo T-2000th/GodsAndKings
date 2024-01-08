@@ -1115,3 +1115,155 @@ amber = {
 		}
 	}
 }
+opium = {
+	color = { 0.71 0.93 0.39 }
+	modifier = {
+		fire_damage_received = -0.05
+	}
+	province = {
+		local_unrest = -2
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+				NOT = {
+					OR = {
+						superregion = india_superregion
+						superregion = persia_superregion
+					}
+				}
+		}
+	}
+}
+cinnamon = {
+	color = { 0.80 0.60 0.40 }
+	modifier = {
+		monarch_lifespan = 0.15
+	}
+	province = {
+		trade_value_modifier = 0.15
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+				NOT = {
+					OR = {
+						superregion = india_superregion
+						superregion = china_superregion
+					}
+				}
+		}
+	}
+}
+perfume = {
+	color = { 0.64 0.20 0.92 }
+	modifier = {
+		heir_chance = 1
+	}
+	province = {
+		local_prosperity_growth = 0.05
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+				NOT = {
+					OR = {
+						superregion = india_superregion
+						region = france_region
+						region = italy_region 
+					}
+				}
+		}
+	}
+}
+flax = { #copied from wool
+	color = { 0.49 0.19 0.19  }
+	modifier = {
+		global_ship_cost = -0.05
+	}
+	province = {
+		local_friendly_movement_speed = 0.10
+	}
+	chance = {
+		factor = 30
+		modifier = {
+			factor = 0
+			area = newfoundland_area
+		}
+		modifier = {
+			factor = 0 #taghaza salt mine
+			province_id = 5224
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = glacier
+				has_terrain = marsh
+				has_terrain = jungle
+				has_terrain = farmlands
+				has_terrain = coastline
+				has_terrain = hills
+				has_terrain = forest
+				has_terrain = woods
+				region = central_africa_region
+				AND = {
+					has_climate = tropical
+					NOT = { area = paraguay_area }
+					NOT = { area = chaco_area }
+				}
+				AND = {
+					has_climate = arctic
+					NOT = { region = tibet_region }
+				}
+				AND = {
+					has_winter = severe_winter
+					NOT = { region = tibet_region }
+					NOT = { region = hindusthan_region }
+					NOT = { region = central_asia_region }
+					NOT = { region = caucasia_region }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				region = carribeans_region
+				region = brazil_region
+				region = colombia_region
+				region = southeast_america_region
+				region = mississippi_region
+			}
+			NOT = { has_terrain = mountain }
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = grasslands
+				has_terrain = hills
+				has_terrain = forest
+				has_terrain = woods
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_terrain = desert
+				has_terrain = savannah
+				has_terrain = highlands
+				has_terrain = drylands
+				has_climate = arid
+			}
+		}
+		modifier = {
+			factor = 1.5
+			region = central_asia_region
+		}
+		modifier = {
+			factor = 1.5
+			region = tibet_region
+		}
+	}
+}

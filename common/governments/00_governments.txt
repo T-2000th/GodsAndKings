@@ -125,6 +125,7 @@ monarchy = {
 				halych_government
 				samanta_vassal_reform
 				maharajadhiraja_reform
+				indep_samanta_reform
 				kingdom_of_light_reform
 				empire_of_light_reform
 				mr_empire_of_japan

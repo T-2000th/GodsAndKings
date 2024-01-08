@@ -36,3 +36,37 @@ balkh_khwarazmian_slayer = {
     land_morale = 0.05
     diplomatic_reputation = 1	
 }
+balkh_masters_of_hindustan = {
+    governing_capacity = 200	
+}
+balkh_masters_of_hindustan_bihari = {
+    fire_damage = 0.05
+}
+balkh_masters_of_hindustan_nepali = {
+    infantry_power = 0.05	
+}
+BLK_bengal_missionary = {
+    missionaries = 1
+}
+BLK_bengali_entrepot = {
+    merchants = 1
+}
+BLK_hill_campaigns = {
+    land_attrition = -0.15
+	reinforce_cost_modifier = -0.15
+}
+BLK_viceroyalty_possession = {
+	min_local_autonomy = 40
+}
+BLK_bengali_viceroy = {
+	governing_capacity_modifier = 0.25
+}
+BLK_coromandel_viceroy = {
+	governing_capacity_modifier = 0.25
+}
+BLK_trade_master_ceylon = {
+	center_of_trade_upgrade_cost = -0.2
+}
+BLK_buddha_tooth = {
+	tolerance_own = 1
+}

@@ -108,7 +108,16 @@
  balkh_trade_from_advisors_TT: "\nOur diplomatic advisors will now grant §G+5%§! Trade Efficiency per advisor level."
  balkh_tradition_from_advisors_TT: "\nOur military advisors will now grant §G+0.2§! Yearly Army Tradition per advisor level."
  BLK_demand_subjugation_TT: "We will demand the conversion & subjugation of the Rajput Princes.\nShould any decline, they will declare war on us."
- BLK_bengal_CoR: "We will gain a §GSunni§! Centre of Reformation in a random owned §YBengali§! port."
+ BLK_bengal_CoR: "If we don't have one active already, then we will gain a §GSunni§! Centre of Reformation in a random owned §YBengali§! port.\nOtherwise we will receive §G+1§! Missionary for §Y35 Years§!."
+ BLK_western_aryan_vassals_TT: "Vassals that are §YIndependent Samanta States§! will have their relation cost offset."
+ BLK_hindustan_bonus_TT: "If all Nepali culture provinces are controlled by us or our non-tributary subjects, then we will get §YGorkhali Footmen§! for §Y20 years§! giving the following effects:\nInfantry Combat Ability: §G+5%§!\n\nIf all Bihari culture provinces are controlled by us or our non-tributary subjects, then we will get §YBihari Purbiya§! for §Y20 years§! giving the following effects:\nLand Fire Damage: §G+5%§!"
+ balkh_decide_fate_TT: "Decided on an approach to India"
+ bengal_viceroyal_TT: "We will gain §R+40§! minimum autonomy in all our §YBengal region§! provinces.\n\nThis can be revoked through decision at any time, removing the country modifier with it."
+ garjati_assimilation_TT: "§YGarjati§! provinces that follow the §RAnimist§! faith will be converted to §G[Root.Religion.GetName]§!. §YGarjati§! Provinces that are already §G[Root.Religion.GetName]§! will grant us a one-time boost of §G+1500§! manpower instead.\n\n"
+ telegu_favouring_TT: "\n\nSelecting this option will outrage the Tamils - we will get a discounted trader instead of the upgraded trade policy reward when we conquer the Tamil Kingdoms."
+ BLK_propagate_tamil_reward_TT: "\nThe trading policy §YPropagate Religion§! will now only require §G15%§! trade power in a node."
+ telegu_separatism_clear_TT: "We will lose all separatism in our §YTelegu§! provinces"
+ coromandel_viceroyal_TT: "We will gain §R+40§! minimum autonomy in all our §YCoromandel region§! provinces.\n\nThis can be revoked through decision at any time, removing the country modifier with it."
  
  #Balkh Modifiers
  crack_epidemic: "Opium Epidemic"
@@ -120,6 +129,14 @@
  balkh_elephants: "Jharkhandi Elephants"
  balkh_sindh_conquest: "Islamic Assimilation"
  balkh_imperial_ambitions: "Imperial Ambitions"
+ balkh_masters_of_hindustan: "Masters of Hindustan"
+ balkh_masters_of_hindustan_nepali: "Gorkhali Footmen"
+ balkh_masters_of_hindustan_bihari: "Bihari Purbiya"
+ BLK_hill_campaigns: "Lessons of the Hill Campaigns"
+ BLK_bengal_missionary: "Bengal"
+ BLK_bengali_entrepot: "Bengali Entrepot"
+ BLK_viceroyalty_possession: "Governed by Viceroyalty"
+ BLK_bengali_viceroy: "Viceroyalty of Bengal"
  
  #Balkh Events
  MR_balkh_flavor.1.t: "The Barlas Revolt of [GetYear]"
@@ -177,10 +194,25 @@
  MR_balkh_flavor.15.a: "[Root.Adm_Advisor.GetName]'s financial management skills will make him a great fit."
  MR_balkh_flavor.15.b: "[Root.Dip_Advisor.GetName]'s intricate knowledge of the markets will serve the role well."
  MR_balkh_flavor.15.c: "[Root.Mil_Advisor.GetName]'s battlefield exprience will prepare the realm for our oncoming wars."
- MR_balkh_flavor.16.t: "The Rajput Princes"
+ MR_balkh_flavor.16.t: "Demands of Al-Hind"
  MR_balkh_flavor.16.d: " "
- MR_balkh_flavor.16.a: "Issue the demands."
- 
+ MR_balkh_flavor.16.a: "We have no choice..."
+ MR_balkh_flavor.16.b: "We will never surrender!"
+ MR_balkh_flavor.17.t: "The new Amir of [From.GetName]"
+ MR_balkh_flavor.17.d: "The Rajput Prince of [From.GetName] has made the wise decision of converting to Islam. He has sworn allegiance to [Root.Monarch.GetTitle] [Root.Monarch.GetName] and in return will be permitted to retain his holdings as the new Amir of [From.GetName]."
+ MR_balkh_flavor.17.a: "A wise choice."
+ MR_balkh_flavor.18.t: "Viceroyalty of Bengal"
+ MR_balkh_flavor.18.d: " "
+ MR_balkh_flavor.18.a: "Establish it, we can't spare the resources."
+ MR_balkh_flavor.18.b: "Nonsense! We will govern it from [Root.Capital.GetName]."
+ MR_balkh_flavor.19.t: "The Temple of Konark "
+ MR_balkh_flavor.19.d: " "
+ MR_balkh_flavor.19.a: "Tear it down, we shall build a grand mosque in its place."
+ MR_balkh_flavor.19.b: "We cannot risk upsetting the believers."
+ MR_balkh_flavor.20.t: "The Balija"
+ MR_balkh_flavor.20.d: " "
+ MR_balkh_flavor.20.a: "They will serve our economy well with their expertise."
+ MR_balkh_flavor.20.b: "Promise them lands to the South if they join our expedition."
  
  
  #Misc
@@ -199,5 +231,6 @@
  smuggle_opium_alert_tooltip: "We can smuggle opium"
  ETKislam: "Al-Hindiyyah"
  ETKislam_ADJ: "Al-Hind"
+ sun_mosque_konarak: "Sun Mosque in Konarak"
  
  

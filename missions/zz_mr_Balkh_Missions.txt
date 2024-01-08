@@ -350,6 +350,13 @@ mr_balkh_indian_missions3 = {
 		position = 6
 		provinces_to_highlight = { area = upper_doab_area }
 		trigger = {
+		 custom_trigger_tooltip = {
+		  tooltip = balkh_decide_fate_TT
+		  OR = { 
+			has_country_flag = balkh_conversion_path
+			has_country_flag = balkh_compromise_path
+			}
+		 }		
          upper_doab_area = {
 		  type = all
 		  owned_by = ROOT
@@ -592,10 +599,8 @@ mr_balkh_indian_missions_east = {
 		position = 7
 		provinces_to_highlight = { province_id = 4497 }
 		trigger = {
-         upper_doab_area = {
-		  type = all
+         4497 = {
 		  owned_by = ROOT
-		  is_core = ROOT
 		  if = { 
 		   limit = { ROOT = { has_country_flag = balkh_conversion_path } }
 		   custom_trigger_tooltip = {
@@ -606,12 +611,19 @@ mr_balkh_indian_missions_east = {
 		  }		
 		}
 		effect = {
+		set_country_flag = BLK_rajput_vassals_flag
+		custom_tooltip = BLK_western_aryan_vassals_TT
 		if = {
          limit = { NOT = { has_country_flag = balkh_compromise_path } }
-         custom_tooltip = BLK_conversion_reward_TT 
-		 country_event = { id = MR_balkh_flavor.16 }
+         custom_tooltip = BLK_conversion_reward_TT 	 
 		 custom_tooltip = BLK_demand_subjugation_TT
-		 }		
+		 hidden_effect = {
+			every_country = {
+				limit = { has_reform = indep_samanta_reform }
+					country_event = { id = MR_balkh_flavor.16 }
+			  }
+			}
+		  }		
 		}
 	}
 	balkh_conquer_hindustan = {
@@ -635,8 +647,29 @@ mr_balkh_indian_missions_east = {
 		 }
 		}
 		effect = {
-		
+			set_government_rank = 3
+			add_country_modifier = { 
+				name = balkh_masters_of_hindustan
+				duration = -1
+			}
+			custom_tooltip = BLK_hindustan_bonus_TT
+			hidden_effect = {
+			if = {
+				limit = { owns_all_provinces = { culture = nepali } }
+				add_country_modifier = { 
+					name = balkh_masters_of_hindustan_nepali
+					duration = 7300
+				}				
+			}
+			if = {
+				limit = { owns_all_provinces = { culture = bihari } }
+				add_country_modifier = { 
+					name = balkh_masters_of_hindustan_bihari
+					duration = 7300
+				}				
+			}			
 		}
+	  }
 	}
 	balkh_conquer_jharkhand = {
 		icon = mission_build_up_to_force_limit
@@ -695,13 +728,30 @@ mr_balkh_indian_missions_east = {
 		 }
 		}
 		effect = {
+		add_country_modifier = {
+			name = BLK_bengali_entrepot
+			duration = -1 
+			}			
+		add_permanent_claim_multi_provinces = { target = arakan_area }		
 		if = {
          limit = { NOT = { has_country_flag = balkh_compromise_path } }
          custom_tooltip = BLK_conversion_reward_TT 
 		 custom_tooltip = BLK_bengal_CoR
-		   561 = { 
-			 add_reform_center = sunni
-			}		   
+		 hidden_effect = {
+			if = {
+				limit = { has_friendly_reformation_center = no }
+				561 = { 
+					add_reform_center = sunni
+					}		   
+				}
+			else = {
+				add_country_modifier = { 
+					name = BLK_bengal_missionary
+					duration = 12775
+					hidden = yes
+				}
+			  }
+			}
 		  }
 	   }			
 	}
@@ -760,7 +810,10 @@ mr_balkh_indian_missions_east = {
 		 }		 
 		}
 		effect = {
-		
+		add_country_modifier = {
+			name = BLK_hill_campaigns
+			duration = 12775
+			}
 		}
 	}		
 	balkh_bengal_consolidation = {
@@ -789,7 +842,7 @@ mr_balkh_indian_missions_east = {
 		 }
 		}
 		effect = {
-		
+			country_event = { id = MR_balkh_flavor.18 }
 		}
 	}	
 }
@@ -832,7 +885,7 @@ mr_balkh_missions_india_east_coast = {
 		 }
 		}
 		effect = {
-		
+			country_event = { id = MR_balkh_flavor.19 }
 		}
 	}
 	balkh_garjati_conquest = {
@@ -848,10 +901,73 @@ mr_balkh_missions_india_east_coast = {
 		 }
 		} 
 		trigger = {
-
+			owns_all_provinces = { culture = garjati }
 		}
 		effect = {
-		
+			custom_tooltip = garjati_assimilation_TT
+			2048 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			4448 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			4446 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			4447 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			4451 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			553 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}
+			4450 = { 
+				if = { 
+				 limit = { religion = ROOT }
+				  owner = { add_manpower = 1.5 }
+				}
+				else = { 
+				 change_religion = ROOT 
+				}
+			}			
 		}
 	}
 	balkh_telugu_conquest = {
@@ -882,7 +998,7 @@ mr_balkh_missions_india_east_coast = {
 		 }
 		}
 		effect = {
-		
+			country_event = { id = MR_balkh_flavor.20 } 
 		}
 	}
 	balkh_madurai_conquest = {
@@ -915,8 +1031,34 @@ mr_balkh_missions_india_east_coast = {
 		 owns_core_province = 536
 		}
 		effect = {
-		
-		}
+		if = {
+		 limit = { NOT = { has_country_flag = telegu_favouring } }
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_conversion_path } }
+          custom_tooltip = BLK_compromise_reward_TT 		
+		  enable_trading_policy = { policy = maximize_profit_upgraded }
+		  enable_trading_policy = { policy = establish_communities_upgraded }
+		  hidden_effect = { 
+		   disable_trading_policy = { policy = maximize_profit }
+		   disable_trading_policy = { policy = establish_communities }
+		   }
+		  }
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+          custom_tooltip = BLK_conversion_reward_TT 		
+		  custom_tooltip = BLK_propagate_tamil_reward_TT
+		  set_country_flag = 15_trade_power_for_propogate_religion
+		  }		 
+		 }
+		 else = { 
+		  define_advisor = { 
+			type = trader
+			culture = tamil
+			skill = 3
+			discount = yes
+		 }		 
+	    }
+	  }
 	}
 	balkh_lankan_conquest = {
 		icon = mission_build_up_to_force_limit
@@ -960,7 +1102,24 @@ mr_balkh_missions_india_east_coast = {
 		 }
 		}
 		effect = {
-		
+		 572 = { 
+		  add_province_modifier = { 
+		   name = city_building_modifier
+		   duration = -1
+		   }
+          change_province_name = "Kalanpu" 
+		  rename_capital = "Kalanpu"		   
+		 }
+		custom_tooltip = city_building_modifier_TT
+		add_country_modifier = {
+		 name = BLK_trade_master_ceylon	
+		 duration = 36500
+		 }
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+          custom_tooltip = BLK_conversion_reward_TT 		
+		  country_event = { id = MR_balkh_flavor.22 }	
+		  }			 
 		}
 	}
 	balkh_coromandel_consolidation = {
@@ -990,7 +1149,7 @@ mr_balkh_missions_india_east_coast = {
 		 }
 		}
 		effect = {
-		
+		 country_event = { id = MR_balkh_flavor.21 }
 		}
 	}	
 }

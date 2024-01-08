@@ -374,6 +374,17 @@ muslim = {
 	sunni = {
 		color = { 0 153 0 }
 		icon = 5
+		allowed_center_conversion = {
+			hinduism
+			shaivism
+			shaktism
+			svetembara
+			smarta
+			digambara
+			sikhism
+			mr_tunggal_dharma
+			mr_nizari
+		}		
 		country = {
 			cav_to_inf_ratio = 0.10
 			global_tax_modifier = 0.1

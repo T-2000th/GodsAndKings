@@ -257,3 +257,15 @@ tin = {
 amber = {
 	base_price = 7
 }
+opium = {
+	base_price = 4.5
+}
+cinnamon = {
+	base_price = 8
+}
+perfume = {
+	base_price = 6
+}
+flax = {
+	base_price = 2.5
+}
