@@ -1,4 +1,5 @@
 every_province = {
+
 				limit = {
 
 						OR = {
@@ -14,4 +15,5 @@ every_province = {
 						}
 				}
 				decolonize = this
-			}
+}
+
