@@ -59,7 +59,7 @@ afr_end_of_the_moors = {
 	manpower_recovery_speed = 0.10
 }
 
-free_moroccan_acceptance = {
+free_slot_for_moroccan = {
 	num_accepted_cultures = 1
 }
 
@@ -83,7 +83,7 @@ afr_entreport_of_the_west = {
 }
 
 afr_payments_to_the_fatimids = {
-	tax_income = -48.00 # 4 ducats a month go down the drain
+	tax_income = -96.00 # 8 ducats a month go down the drain
 }
 
 afr_paranoid_court = {

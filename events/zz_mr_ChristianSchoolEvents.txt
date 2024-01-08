@@ -31,6 +31,13 @@ country_event = {
 			religion = orthodox
 			religion = coptic
 		}
+		# Specific exemption for Africa's usage of the Antiochian rite.
+		NOT = {
+			AND = {
+				mission_completed = afr_religious_studies
+				has_religious_school = mr_antiochian_rite
+			}
+		}
 		OR = {
 			has_religious_school = no
 			AND = {
