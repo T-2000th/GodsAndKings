@@ -1688,7 +1688,7 @@ BLK_ideas = { #Balkh
 	}
 }
 
-KZH_ideas = { #White Horde 
+KZH_ideas = { #White Horde
 	start = {
 		cavalry_power = 0.20
 		tolerance_heathen = 3
@@ -1699,7 +1699,7 @@ KZH_ideas = { #White Horde
 	free = yes
 	trigger = {
               OR = 	{
-	           tag = KZH 
+	           tag = KZH
 			   tag = SHY
 			   tag = NOG
 			    }
@@ -2218,15 +2218,15 @@ ABH_ideas = { #Big into Military, but also very Religious.
 		global_missionary_strength = 0.02
 		monthly_piety_accelerator = 0.001
 	}
-	ABH_fourth = { #Hegemon of Alkebulan 
-		province_warscore_cost = -0.15	
+	ABH_fourth = { #Hegemon of Alkebulan
+		province_warscore_cost = -0.15
 	}
 	ABH_fifth = { #Protecting the Horn
 		naval_morale_damage = 0.10
 		heavy_ship_power = 0.05
 	}
 	ABH_sixth = { #The Gates of Harar
-		great_project_upgrade_cost = -0.15	
+		great_project_upgrade_cost = -0.15
 	}
 	ABH_seventh = { #Beyond the Sand and Seas
 		colonists = 1
@@ -2356,10 +2356,10 @@ baghdadi_ideas = {
 		great_project_upgrade_cost = -0.1
 		build_cost = -0.15
 	}
-	irq_vassal_sultans = { 
+	irq_vassal_sultans = {
 		liberty_desire_from_subject_development = -0.20
 	}
-	irq_caliphal_reconquest = { 
+	irq_caliphal_reconquest = {
 		province_warscore_cost = -0.1
 	}
 }
@@ -2397,10 +2397,10 @@ CLC_ideas = {
 		ship_power_propagation = 0.25
 		trade_steering = 0.10
 	}
-	CLC_sixth = { 
-		global_trade_goods_size_modifier = 0.20
+	CLC_sixth = {
+		global_trade_goods_size_modifier = 0.10
 	}
-	CLC_seventh = { 
+	CLC_seventh = {
 		institution_spread_from_true_faith = 0.15
 	}
 }
