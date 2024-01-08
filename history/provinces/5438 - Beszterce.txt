@@ -2,7 +2,7 @@
 
 owner = HUN
 controller = HUN 
-culture = ruthenian
+culture = cuman
 religion = orthodox
 capital = "Beszterce"
 trade_goods = stone

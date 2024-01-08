@@ -1,20 +1,18 @@
 #REGIONBALKANS
-# Giurgiu
+# 5506 - Balta
 
-owner = BUL
-controller = BUL  
-culture = romanian
+owner = JAA
+controller = JAA
+culture = wallachian
 religion = orthodox
-capital = "Giurgiu"
-trade_goods = livestock
+capital = "Calafat"
+trade_goods = fish
 hre = no
 base_tax = 1
-base_production = 3
-base_manpower = 2
+base_production = 1
+base_manpower = 1
 is_city = yes
-add_core = BUL
-fort_15th = yes
-add_local_autonomy = 60
+add_core = JAA
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL

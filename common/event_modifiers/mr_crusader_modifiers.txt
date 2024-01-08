@@ -114,7 +114,7 @@ cs_many_manufactories = {
 
 cs_fearsome_raiders = {
 	may_perform_slave_raid = yes
-	galley_hullsize = 0.1
+	galley_hull_size_modifier = 0.1
 	galley_power = 0.1
 }
 

@@ -43,7 +43,7 @@ technology = { #Feudal Monarchy
 	year = 1420
 	expects_institution = {
 		feudalism = 0.15
-		renaissance = 0.15
+		
 	}
 
 	#Monarchies
@@ -59,7 +59,7 @@ technology = { #Medieval Administration
 	year = 1440
 	expects_institution = {
 		feudalism = 0.30
-		renaissance = 0.30
+		
 	}
 
 	production_efficiency	=	0.02
@@ -71,7 +71,7 @@ technology = { #Temples
 	year = 1453
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.50
+		
 	}
 
 	# Temple
@@ -84,7 +84,7 @@ technology = { #National Ideas
 	year = 1466
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.50
+		renaissance = 0.15
 	}
 
 	allowed_idea_groups = 1
@@ -96,7 +96,7 @@ technology = { #Workshop
 	year = 1479
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.50
+		renaissance = 0.3
 	}
 
 	#Workshop
