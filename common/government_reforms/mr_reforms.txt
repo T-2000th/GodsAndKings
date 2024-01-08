@@ -207,7 +207,6 @@ maharajadhiraja_reform = {
 		liberty_desire_from_subject_development = -0.25
 		diplomatic_reputation = 2
 	}
-
 }
 indep_samanta_reform = {
 	icon = "articles_of_agreement"
@@ -216,11 +215,11 @@ indep_samanta_reform = {
 	lock_level_when_selected = yes
 	legacy_equivalent = feudal_monarchy
 	potential = {
+	    have_had_reform = samanta_vassal_reform
 		is_subject = no
 		NOT = {
 			tag = RJP
 		}
-		culture_group = western_aryan
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
