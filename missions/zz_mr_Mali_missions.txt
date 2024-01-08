@@ -1517,7 +1517,6 @@ branch_3 = {
 					country_event = {
 						id = mr_MaliFlavor.15
 					}
-					custom_tooltip = event_insightMali15
 				}
 			
 			}
@@ -1537,7 +1536,6 @@ branch_3 = {
 					country_event = {
 						id = mr_MaliFlavor.15
 					}
-					custom_tooltip = event_insightMali15
 				}
 			}
 			katsina_area = {

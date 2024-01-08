@@ -315,7 +315,12 @@ GRE_permanent_power_projection = {
 	power = 1
 	decay = no
 }
-
+MAL_permanent_power_projection = {
+	max = 25
+	min = 0
+	power = 1
+	decay = no
+}
 
 mam_defeated_ottomans_pp = {
 	max = 15

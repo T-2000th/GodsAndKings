@@ -111,6 +111,8 @@ if_KNM_farma_no: "£no£If we complete this mission while having @KNM §YKanem§
 if_KNM_annexed_yes: "\n£yes£If we complete this mission while owning all provinces in the §YBornu§! and §YKanem§! area and §YMarghi§!, all provinces highlighted will gain the following:"
 if_KNM_annexed_no: "\n£no£If we complete this mission while owning all provinces in the §YBornu§! and §YKanem§! area and §YMarghi§!, all provinces highlighted will gain the following:"
 all_provinces_in_katsina_hausa_zazzau_transfer: "All provinces in the §YKatsina§!, §YKano§!, and §YZazzau§! Areas will be transferred to a new @HAU §YHausa§! Subject."
+GRE_permanent_power_projection: "Greek Power Projection"
+MAL_permanent_power_projection: "Defeated Kanem"
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
