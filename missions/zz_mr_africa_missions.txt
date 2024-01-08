@@ -340,8 +340,9 @@ mr_africa_slot_1_upper = {
 						}
 					}
 					add_country_modifier = {
-						name = free_moroccan_acceptance
+						name = free_slot_for_moroccan
 						duration = -1
+						hidden = yes
 					}
 					add_accepted_culture = moroccan
 					add_country_modifier = {
@@ -831,7 +832,6 @@ mr_africa_slot_4_upper = {
 				has_adm_advisor_3 = yes
 			}
 			EGY = {
-				treasury = 2500 # So that they can pay their part.
 				owes_favors = {
 					who = ROOT
 					value = 20
