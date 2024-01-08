@@ -409,21 +409,21 @@ reign_in_farma = {
 		}
 		if = {
 			limit = {
-				FROM = {
-					has_opinion = {
-						who = FROM
-						value = 125
+				NOT = {
+					FROM = {
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
 					}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = FROM_IS_OPINION_LOW_TT
-				NOT = {
-					FROM = {
-						has_opinion = {
-							who = FROM
-							value = 125
-						}
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 125
 					}
 				}
 			}

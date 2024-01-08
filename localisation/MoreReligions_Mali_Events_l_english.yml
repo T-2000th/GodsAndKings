@@ -69,6 +69,24 @@ spreading_the_grits: "Fried Grits!"
 the_best_grits_around: "The Best Food in the World!"
 mr_MaliFlavor.11.a: "Oh, just one more wouldn't hurt..."
 
+event_insightMali15: "§GEvent Insight:§! This event will explore the reorganization of the state of @GBI Gobir into a loyal confederation of Hausa States.\n"
+mr_MaliFlavor.15.t: "The Fate of the Hausa"
+mr_MaliFlavor.15.d: "The House Gobir has risen to be a dominant challenger to the Kanem’s dominance over their fellow Hausan states. Hausaland was, for a time, a series of ever changing power dynamics between the different houses of Kano, Zazzau, Katagum, and many others, However, in the 14th Century, the lords of Kanem sent forth a series of raids to claim subjugation of many of the eastern powers, simultaneously converting many of them to Islam. Gobir stubbornly refused, placing many defenses and fortifications alongside their border with the new Kanem vassals, hoping it would protect them. Little did they know, their real challenge would come from the west.\n\nTheir defeat at the hands of the Mansa was inevitable, but it wasn’t without merit. Their cavalry held firm for many days of battle, and their great walled cities stood strong against our many nights of siege warfare. With their defeat, we have claimed the true protectorate over the Hausa people, and we shall organize their territory into a proper unified state. We shall place a remnant of the Gobir at the head of this confederation in order to ingratiate them into our realm with some peace and dignity, to bring them closer rather than drive them away."
+mr_MaliFlavor.15.a: "...now, to integrate the other cities."
+
+mr_MaliFlavor.14.t: "Hausa Hegemony Established"
+mr_MaliFlavor.14.d: "With the defeat of the Kanem Empire at the field of battle, we gathered all the Sarki that we now rule over at the capital city of the Hausa, Gobir. While many of them had previous issues or disputes, our presence calmed the princes - or perhaps scared them into silence. Either way, the Sarki were silent as we explained our new plan for the lands of the Hausa-Farma. They will exist within a federation, a combined and unified entity that shall bend the knee to the Mansa but shall be allowed to govern and administer their land as best they desire, and so long as they follow the rules and laws of the Empire and do not attack Muslim merchants or Malian officials, they shall be as they were before - free to rule and govern as they please. The Sakri agreed, and the great Hausan confederation was born on that day under the watchful eye of the Mansa."
+mr_MaliFlavor.14.a: "And thus, Hausaland is born!"
+mr_MaliFlavor.14.b: "And thus, Hausa is unified!"
+
+mr_MaliFlavor.114.t: "The Hausa Rebellion"
+mr_MaliFlavor.114.d: "In the midst of our war, our diplomats have reported good news - the Sakris of Hausa have joined on our side! They seek to rebel against their tyranical overlords and work for us, so we shall use this opportunity to defeat them once and for all!"
+mr_MaliFlavor.114.a: "Rally them to our forces!"
+
+mr_MaliFlavor.115.t: "The Fate of Kanem"
+mr_MaliFlavor.115.d: "The Sultans of Kanem have been brought to heel - their era of dominating the lands surrounding the great Lake Tchad have come to a close. However, their legacy is one that stretches beyond the setting sun of their empire. Their location at the middle of a trans-Saharan trade network allowed them access to the resources and goods of the West African lands and the ideas and scholars of the far north, particularly in Islam. The Sayfawa dynasty centered its state around its religious practice, defining their military excursions and slave trade through the lens of the faithful versus heretics and heathens. Thus, in the 13th Century, when the Fatimid Dynasty of Egypt sent scholars to secure trade connections, they brought with them the Ismaili tradition of the Hafizi, and brought them into said faith.\n\nMali, on the other hand, was and always has been a Maliki state since its initial conversion to Islam. In our conquest of the region, we have faced severe challenges maintaining control and dominance over the region, partially due to our outwardly hostile rhetoric towards this heretical tradition. While our Mansa can debate with local rulers as much as he wants, these small religious spats have the habit of turning violent when local rulers use it as a justification to revolt against our state. Something must be done to assist in the management of the Kanem Farma."
+mr_MaliFlavor.115.a: "Remove the Sayfawa, install a Keita!"
+mr_MaliFlavor.115.b: "We shall let sleeping dogs lie, for now."
 
 #Malian Faction events
 mr_MaliFlavor.12.t: "The Court is Split"

@@ -873,7 +873,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_diplomacy_lead_core_farma_subject"
-		texturefile = "gfx//interface//icon_diplomacy_lead_core_farma_subject.dds"
+		texturefile = "gfx//interface//icon_diplomacy_lead_core_marali_subject.dds"
 	}
 	spriteType = {
 		name = "GFX_diplomacy_am_core_farma_subject"

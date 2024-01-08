@@ -140,3 +140,31 @@ task_b_win = {
 task_c_win = {
 	build_time = -0.10
 }
+fresh_recruits_SONG = {
+	vassal_manpower_bonus = 0.15
+	vassal_forcelimit_bonus = 0.1
+}
+songhai_bonus = {
+	global_manpower_modifier = 0.2
+}
+gao_modifier = {
+	local_governing_cost = -0.25
+}
+max_promoted_songhai = {
+	num_accepted_cultures = 1
+}
+leader_of_hausa = {
+	diplomatic_upkeep = 1
+	caravan_power = 0.2
+}
+removing_kanem_legacy = {
+	local_missionary_strength = 0.02
+	local_autonomy = -0.1
+	local_unrest = -3
+}
+local_mali_speed = {
+	local_friendly_movement_speed = 0.15
+}
+global_mali_speed = {
+	movement_speed = 0.1
+}

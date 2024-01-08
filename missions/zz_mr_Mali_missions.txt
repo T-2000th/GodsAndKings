@@ -1210,6 +1210,730 @@ branch_3 = {
 			}
 		}
 	}
+	mr_mali_farma_second = {
+		icon = mission_the_songhai_campaign
+		required_missions = {
+			mr_mali_farma_first
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = dendi_area
+				area = gao_state_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			dendi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gao_state_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					dendi_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = GAO
+					}
+					gao_state_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = GAO
+					}
+				}
+				custom_tooltip = if_gao_vassal_yes
+				tooltip = {
+					add_country_modifier = {
+						name = fresh_recruits_SONG
+						duration = 7300
+					}
+				}
+				custom_tooltip = vassal_gains
+				tooltip = {
+					add_country_modifier = {
+						name = songhai_bonus
+						duration = 7300
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							dendi_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = GAO
+							}
+							gao_state_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = GAO
+							}
+						}
+					}
+				}
+				custom_tooltip = if_gao_vassal_no
+				tooltip = {
+					add_country_modifier = {
+						name = fresh_recruits_SONG
+						duration = 7300
+					}
+				}
+				custom_tooltip = vassal_gains
+				tooltip = {
+					add_country_modifier = {
+						name = songhai_bonus
+						duration = 7300
+					}
+				}
+			}
+			if = {
+				limit = {
+					dendi_area = {
+						type = all
+						owned_by = ROOT
+					}
+					gao_state_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = gao_owned_root_yes
+				tooltip = {
+					add_province_modifier = {
+						name = gao_modifier
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							dendi_area = {
+								type = all
+								owned_by = ROOT
+							}
+							gao_state_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = gao_owned_root_no
+				tooltip = {
+					add_province_modifier = {
+						name = gao_modifier
+						duration = -1
+					}
+				}
+			}
+			zazzau_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			1148 = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = GBI
+				}
+				add_casus_belli = {
+					type = cb_farma_subjugation_war
+					target = GBI
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						dendi_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = GAO
+						}
+						gao_state_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = GAO
+						}
+					}
+					add_country_modifier = {
+						name = fresh_recruits_SONG
+						duration = 7300
+					}
+					GAO = {
+						add_country_modifier = {
+							name = songhai_bonus
+							duration = 7300
+						}
+					}
+				}
+				if = {
+					limit = {
+						dendi_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = GAO
+						}
+						gao_state_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = GAO
+						}
+						NOT = {
+							GAO = {
+								is_subject_of_type_with_overlord = {
+									who = MAL
+									type = core_farma_subject
+								}
+							}
+						}
+					}
+					create_subject = {
+						subject_type = core_farma_subject
+						subject = GAO
+					}
+					GAO = {
+						change_country_color = {
+							country = ROOT
+						}
+						farma_dynamic_name_change_effect = yes
+					}
+				}
+				if = {
+					limit = {
+						dendi_area = {
+							type = all
+							owned_by = ROOT
+						}
+						gao_state_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					1133 = {
+						add_province_modifier = {
+							name = gao_modifier
+							duration = -1
+						}
+					}
+					inherit = GAO
+				}
+				if = {
+					limit = {
+						dendi_area = {
+							type = all
+							owned_by = ROOT
+						}
+						gao_state_area = {
+							type = all
+							owned_by = ROOT
+						}
+						NOT = {
+							accepted_culture = songhai
+						}
+					}
+					add_country_modifier = {
+						name = max_promoted_songhai
+						duration = -1
+					}
+					add_accepted_culture = songhai
+				}
+				else_if = {
+					limit = {
+						dendi_area = {
+							type = all
+							owned_by = ROOT
+						}
+						gao_state_area = {
+							type = all
+							owned_by = ROOT
+						}
+						accepted_culture = songhai
+					}
+					add_country_modifier = {
+						name = max_promoted_songhai
+						duration = -1
+					}
+					add_dip_power = 100
+				}
+			}
+		}
+	}
+	mr_mali_farma_third = {
+		icon = mission_kon_conquer_kub
+		required_missions = {
+			mr_mali_farma_second
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = zazzau_area
+				owned_by = GBI
+				province_id = 1148
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			zazzau_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1148 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = {
+				limit = {
+					exists = GBI
+				}
+				GBI = {
+					is_subject_of_type_with_overlord = {
+						who = MAL
+						type = farma_subject
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					GBI = {
+						is_subject_of_type_with_overlord = {
+							who = ROOT
+							type = farma_subject
+						}
+					}
+				}
+				custom_tooltip = if_gbi_farma_yes
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.15
+					}
+					custom_tooltip = event_insightMali15
+				}
+			
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						GBI = {
+							is_subject_of_type_with_overlord = {
+								who = ROOT
+								type = farma_subject
+							}
+						}
+					}
+				}
+				custom_tooltip = if_gbi_farma_no
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.15
+					}
+					custom_tooltip = event_insightMali15
+				}
+			}
+			katsina_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hausa_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			if = {
+				limit = {
+					exists = KNM
+				}
+				add_casus_belli = {
+					type = cb_hausa_war
+					target = KNM
+				}
+				custom_tooltip = explain_cb
+			}
+			custom_tooltip = " "
+			if = {
+				limit = {
+					has_spy_network_in = {
+						who = KNM
+						value = 50
+					}
+				}
+				custom_tooltip = liberty_desire_KNM_yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_spy_network_in = {
+							who = KNM
+							value = 50
+						}
+					}
+					
+				}
+				custom_tooltip = liberty_desire_KNM_no
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						GBI = {
+							is_subject_of_type_with_overlord = {
+								who = ROOT
+								type = farma_subject
+							}
+						}
+					}
+					country_event = {
+						id = mr_MaliFlavor.15
+					}
+				}
+				if = {
+					limit = {
+						has_spy_network_in = {
+							who = KNM
+							value = 50
+						}
+					}
+					KNM = {
+						every_subject_country = {
+							limit = {
+								culture = hausa
+							}
+							add_liberty_desire = 50
+						}
+					}
+				}
+			}
+		}
+	}
+	mr_mali_farma_fourth = {
+		icon = mission_invade_kanem
+		required_missions = {
+			mr_mali_farma_third
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = katsina_area
+				area = hausa_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			katsina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hausa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			kanem_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bornu_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2285 = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			add_permanent_power_projection = {
+				type = GRE_permanent_power_projection
+				amount = 25
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = leader_of_hausa
+				duration = 7300 
+			}
+			add_casus_belli = {
+				target = KNM
+				type = cb_farma_subjugation_war
+				months = 180
+			}
+		}
+	}
+	mr_mali_farma_fifth = {
+		icon = per_recruit_the_qizilbash
+		required_missions = {
+			mr_mali_farma_fourth
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = kanem_area
+				area = bornu_area
+				province_id = 2285
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kanem_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			bornu_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			2285 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			kurdufan_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			darfur_central_sahara_area = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			if = {
+				limit = {
+					bornu_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = KNM
+					}
+					kanem_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = KNM
+					}
+					2285 = {
+						country_or_non_sovereign_subject_holds = KNM
+					}
+					KNM = {
+						is_subject_of = MAL
+					}
+				}
+				custom_tooltip = if_KNM_farma_yes
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.115
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							bornu_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = KNM
+							}
+							kanem_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = KNM
+							}
+							2285 = {
+								country_or_non_sovereign_subject_holds = KNM
+							}
+							KNM = {
+								is_subject_of = MAL
+							}
+						}
+					}
+				}
+				custom_tooltip = if_KNM_farma_no
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.115
+					}
+				}
+			}
+			if = {
+				limit = {
+					bornu_area = {
+						type = all
+						owned_by = ROOT
+					}
+					kanem_area = {
+						type = all
+						owned_by = ROOT
+					}
+					2285 = {
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = if_KNM_annexed_yes
+				tooltip = {
+					add_province_modifier = {
+						name = removing_kanem_legacy
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						and = {
+							bornu_area = {
+								type = all
+								owned_by = ROOT
+							}
+							kanem_area = {
+								type = all
+								owned_by = ROOT
+							}
+							2285 = {
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = if_KNM_annexed_no
+				tooltip = {
+					add_province_modifier = {
+						name = removing_kanem_legacy
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						bornu_area = {
+							type = all
+							owned_by = KNM
+						}
+						kanem_area = {
+							type = all
+							owned_by = KNM
+						}
+						2285 = {
+							owned_by = KNM
+						}
+						KNM = {
+							is_subject_of = MAL
+						}
+					}
+					country_event = {
+						id = mr_MaliFlavor.115
+					}
+				}
+				if = {
+					limit = {
+						bornu_area = {
+							type = all
+							owned_by = ROOT
+						}
+						kanem_area = {
+							type = all
+							owned_by = ROOT
+						}
+						2285 = {
+							owned_by = ROOT
+						}
+					}
+					bornu_area = {
+						add_province_modifier = {
+							name = removing_kanem_legacy
+							duration = -1
+						}
+					}
+					kanem_area = {
+						add_province_modifier = {
+							name = removing_kanem_legacy
+							duration = -1
+						}
+					}
+					2285 = {
+						add_province_modifier = {
+							name = removing_kanem_legacy
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	mr_mali_farma_sixth = {
+		icon = mission_traverse_the_sahara
+		required_missions = {
+			mr_mali_farma_fifth
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = kurdufan_area
+				area = darfur_central_sahara_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kurdufan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			darfur_central_sahara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			horn_of_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kurdufan_area = {
+				add_province_modifier = {
+					name = local_mali_speed
+					duration = -1
+				}
+			}
+			darfur_central_sahara_area = {
+				add_province_modifier = {
+					name = local_mali_speed
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = global_mali_speed
+				duration = -1
+			}
+		}
+	}
 	mr_mali_jolof_first = {
 		icon = mission_claim_the_canaries
 		position = 8

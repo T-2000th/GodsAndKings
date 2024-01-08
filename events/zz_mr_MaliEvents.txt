@@ -581,6 +581,242 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = mr_MaliFlavor.114
+	title = mr_MaliFlavor.114.t
+	desc = mr_MaliFlavor.114.d
+	picture = AFRICAN_DISCIPLINE_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {		
+		is_in_war = {
+			casus_belli = cb_hausa_war
+    		attacker_leader = ROOT
+		}
+		calc_true_if = {
+			all_country = {
+				culture = hausa
+				is_subject_of = KNM
+				liberty_desire = 50
+			}
+			amount = 1
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			KNM = {
+				every_subject_country = {
+					limit = {
+						culture = hausa
+						liberty_desire = 50
+					}
+					set_country_flag = release_in_event_MAL
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.114.a
+		KNM = {
+			every_subject_country = {
+				limit = {
+					has_country_flag = release_in_event_MAL
+				}
+				grant_independence = yes
+				MAL = {
+					create_subject = {
+						subject = PREV
+						subject_type = farma_subject
+					}
+				}
+				set_country_flag = to_be_annexed_MAL
+				add_liberty_desire = -50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mr_MaliFlavor.14
+	title = mr_MaliFlavor.14.t
+	desc = mr_MaliFlavor.14.d
+	picture = ASKIA_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.14.a
+		trigger = {
+			NOT = {
+				HAU = {
+					OR = {
+						is_subject_of_type_with_overlord = {
+							who = MAL
+							type = farma_subject
+						}
+						is_subject_of_type_with_overlord = {
+							who = MAL
+							type = core_farma_subject
+						}
+					}
+				}
+			}
+			NOT = {
+				exists = HAU
+			}
+		}
+		custom_tooltip = all_provinces_in_katsina_hausa_zazzau_transfer
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					OR = {
+						has_country_flag = to_be_annexed_MAL
+						culture = hausa
+					}
+					NOT = { tag = HAU }
+				}
+				every_owned_province = {
+					add_core = HAU
+					cede_province = HAU
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = katsina_area
+						area = hausa_area
+						area = zazzau_area
+					}
+				}
+				cede_province = HAU
+				add_core = HAU
+			}
+		}
+		create_subject = {
+			subject = HAU
+			subject_type = core_farma_subject
+		}
+		HAU = {
+			add_historical_friend = MAL	
+			change_country_color = {
+				country = ROOT
+			}
+			farma_dynamic_name_change_effect = yes
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.14.b
+		trigger = {
+			HAU = {
+				OR = {
+					is_subject_of_type_with_overlord = {
+						who = MAL
+						type = farma_subject
+					}
+					is_subject_of_type_with_overlord = {
+						who = MAL
+						type = core_farma_subject
+					}
+				}
+			}
+		}
+		custom_tooltip = all_provinces_in_katsina_hausa_zazzau_transfer
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					OR = {
+						has_country_flag = to_be_annexed_MAL
+						culture = hausa
+					}
+					NOT = { tag = HAU }
+				}
+				every_owned_province = {
+					add_core = HAU
+					cede_province = HAU
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = katsina_area
+						area = hausa_area
+						area = zazzau_area
+					}
+				}
+				cede_province = HAU
+				add_core = HAU
+			}
+		}
+		create_subject = {
+			subject = HAU
+			subject_type = core_farma_subject
+		}
+		HAU = {
+			change_country_color = {
+				country = ROOT
+			}
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.15
+	title = mr_MaliFlavor.15.t
+	desc = mr_MaliFlavor.15.d
+	picture = AFRICAN_CHIEFTAIN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.15.a
+		GBI = {
+			add_liberty_desire = -50
+			change_tag = HAU
+			add_historical_friend = MAL	
+			farma_dynamic_name_change_effect = yes
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.115
+	title = mr_MaliFlavor.115.t
+	desc = mr_MaliFlavor.115.d
+	picture = MALI_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.115.a
+		KNM = {
+			change_religion = ROOT
+			kill_ruler = yes
+			define_ruler = {
+				dynasty = ROOT
+				culture = ROOT
+				religion = ROOT
+			}
+			add_liberty_desire = -35
+		}
+		random_province = {
+			limit = {
+				owned_by = KNM
+			}
+			spawn_rebels = {
+				size = 3
+				leader_dynasty = "Sayfawa"
+				type = pretender_rebels
+			}
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.115.b
+		add_liberty_desire = -15
+		add_dip_power = 100
+	}
+}
 country_event = { #The Court is Split!
 	id = mr_MaliFlavor.12
 	title = mr_MaliFlavor.12.t

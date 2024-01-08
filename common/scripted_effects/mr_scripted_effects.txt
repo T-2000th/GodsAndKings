@@ -548,7 +548,10 @@ farma_name_effect = {
 
 farma_dynamic_name_change_effect = {
 	if = { limit = { tag = JOL } farma_name_effect = { tag = FR1 } }
-	if = { limit = { tag = TEE } farma_name_effect = { tag = FR2 }}
+	if = { limit = { tag = TEE } farma_name_effect = { tag = FR2 } }
+	if = { limit = { tag = GAO } farma_name_effect = { tag = FR3 } }
+	if = { limit = { tag = HAU } farma_name_effect = { tag = FR4 } }
+	if = { limit = { tag = KNM } farma_name_effect = { tag = FR5 } }
 }
 
 remove_quest_stuff = {
