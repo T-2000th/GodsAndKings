@@ -207,7 +207,26 @@ maharajadhiraja_reform = {
 		liberty_desire_from_subject_development = -0.25
 		diplomatic_reputation = 2
 	}
-
+}
+indep_samanta_reform = {
+	icon = "articles_of_agreement"
+	allow_convert = no
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	potential = {
+	    have_had_reform = samanta_vassal_reform
+		is_subject = no
+		NOT = {
+			tag = RJP
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		land_morale = 0.05
+		global_tax_modifier = 0.15
+	}
 }
 kingdom_of_light_reform = {
 	icon = "feudal_theocracy"
@@ -1305,5 +1324,30 @@ rex_africae = {
 		locked_government_type = yes
 		enables_divine_idea_group = yes
 		enables_estate_dhimmi = yes # Catholic Dhimmi!
+	}
+}
+thalassocracy_reform_basque = {
+	icon = "admiralty_reform"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = IBF
+			tag = NAV
+		}
+	}	
+	trigger = {
+		mission_completed = nav_basque_ocean
+	}
+	modifiers = {
+		center_of_trade_upgrade_cost = -0.1
+		trade_company_investment_cost = -0.1
+		naval_forcelimit_modifier = 0.25
+		global_trade_power = 0.15
+	}
+	custom_attributes = {
+		can_establish_trade_protectorates = yes
+	}
+	ai = {
+		factor = 1
 	}
 }

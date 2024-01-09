@@ -52,7 +52,7 @@ outremer_region = {
 	377 1849 2313 4298 5379 # aleppo_area
 	378 382 1855 4297 5043 # syria_area
 	405 4270 4271 5044 5045 # syrian_desert_area
-	327 2302 5387 # Cilicia/Little Armenia
-	321 2308 407 4268 # Cyprus, Edessa, Ar-Raqqah, Aqbah
+	327 2302 5387 5515 5516 # Cilicia/Little Armenia
+	321 2308 407 4268 5521 5522 # Cyprus, Edessa, Ar-Raqqah, Aqbah
 	365 5284 2315 5375 # Sinai peninsula
 }

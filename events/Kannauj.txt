@@ -1,0 +1,283 @@
+########################################
+# Kannauj Events                       #
+########################################
+
+namespace = kannauj
+
+# The DYNASTYNAME maharaja has fallen!
+province_event = {
+	id = kannauj.1
+	title = "kannauj.EVTNAME1"
+	picture = COURT_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	desc = {
+		trigger = {
+			owner = { has_reform = maharajadhiraja_reform }
+			FROM = {
+				has_reform = maharajadhiraja_reform
+			}
+		}
+		desc = kannauj.EVTDESC1
+	}
+	
+	desc = {
+		trigger = {
+			owner = { has_reform = maharajadhiraja_reform }
+			FROM = {
+				NOT = { has_reform = maharajadhiraja_reform }
+			}
+		}
+		desc = kannauj.1.db
+	}
+	
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_reform = maharajadhiraja_reform }
+			}
+		}
+		desc = kannauj.1.dc
+	}
+	
+	trigger = {
+		#
+		province_id = 4497
+		#owner = {
+		#	OR = {
+		#		has_reform = samanta_vassal_reform
+		#		has_reform = indep_samanta_reform
+		#	}
+		#}
+	}
+	
+	immediate = {
+		#Save new owner as maharaja if valid
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = {
+						OR = {
+							has_reform = samanta_vassal_reform
+							has_reform = indep_samanta_reform
+						}
+					}
+					add_core = 4497
+					set_capital = 4497
+					grant_independence = yes
+					add_government_reform = maharajadhiraja_reform
+					save_event_target_as = new_maharaja
+				}
+			}
+		}
+		#Handle samanta transfer
+		hidden_effect = {
+			#Case - new owner is the new maharaja, previous still lives -> all samantas get transferred from the previous to the new one
+			if = {
+				limit = {
+					FROM = { exists = yes }
+					owner = { has_reform = maharajadhiraja_reform }
+					FROM = { has_reform = maharajadhiraja_reform }
+				}
+				#Degrade the previous maharaja to samanta level
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = samanta_vassal
+						}
+						set_country_flag = tobe_samanta_of_new_mahraja
+						grant_independence = yes
+					}
+					event_target:new_maharaja = {
+						vassalize = FROM
+					}
+					set_government_rank = 1
+					add_government_reform = samanta_vassal_reform
+				}
+				#Vassalize all of the former samantas
+				#NOTE: originally, it was intended that samantas, who are at war with the maharaja, should not be vassalized
+				every_country = {
+					limit = {
+						has_country_flag = tobe_samanta_of_new_mahraja
+					}
+					event_target:new_maharaja = {
+						vassalize = PREV
+					}
+				}
+				owner = {
+					country_event = {
+						id = kannauj.4
+						days = 1
+					}
+				}
+			}
+			#Case - new owner is not the new maharaja, previous still lives -> all samantas get free
+			if = {
+				limit = {
+					FROM = { exists = yes }
+					NOT = { owner = { has_reform = maharajadhiraja_reform } }
+					FROM = { has_reform = maharajadhiraja_reform }
+				}
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = samanta_vassal
+						}
+						grant_independence = yes
+						if = {
+							limit = {
+								has_reform = samanta_vassal_reform
+							}
+							add_government_reform = indep_samanta_reform
+						}
+					}
+					add_government_reform = indep_samanta_reform
+				}
+			}
+			#Case - new owner is maharaja, previous maharaja is dead -> all samantas become subjects of the new maharaja
+			if = {
+				limit = {
+					NOT = {
+						FROM = { exists = yes }
+					}
+					owner = { has_reform = maharajadhiraja_reform }
+				}
+				every_country = {
+					limit = {
+						has_reform = samanta_vassal_reform
+						NOT = { war_with = event_target:new_maharaja }
+					}
+					event_target:new_maharaja = {
+						vassalize = PREV
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = samanta_vassal_reform
+						war_with = event_target:new_maharaja
+					}
+					add_government_reform = indep_samanta_reform
+				}
+			}
+			#Case - new owner is not the new maharaja, previous one is dead -> all former samantas become independent samantas
+			if = {
+				limit = {
+					NOT = {
+						FROM = { exists = yes }
+					}
+					NOT = {
+						owner = { has_reform = maharajadhiraja_reform }
+					}
+				}
+				every_country = {
+					limit = { has_reform = samanta_vassal_reform }
+					overlord = {
+						free_vassal = PREV
+					}
+					add_government_reform = indep_samanta_reform
+				}
+			}
+		}
+		#Catch all remaining samatas and let them free
+		hidden_effect = {
+			if = {
+				limit = {
+					any_country = {
+						is_subject_of_type = samanta_vassal
+						NOT = { overlord = { has_reform = maharajadhiraja_reform } }
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of_type = samanta_vassal
+						NOT = { overlord = { has_reform = maharajadhiraja_reform } }
+					}
+					overlord = {
+						free_vassal = PREV
+					}
+					if = {
+						limit = {
+							has_reform = samanta_vassal_reform
+						}
+						remove_government_reform = samanta_vassal_reform
+						add_government_reform = indep_samanta_reform
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "kannauj.EVTOPTA1"
+		if = {
+			limit = {
+				owner = { has_reform = maharajadhiraja_reform }
+			}
+			custom_tooltip = claiming_the_maharaja_tooltip
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner = { has_reform = maharajadhiraja_reform }
+				}
+			}
+			owner = {
+				if = {
+					limit = { NOT = { has_country_flag = destroyed_maharaja } }
+					add_prestige = 20
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+					set_country_flag = destroyed_maharaja
+				}
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = kannauj.4
+	title = kannauj.4.t
+	desc = kannauj.4.desc
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = { #We don't follow a bully
+		every_country = {
+			limit = {
+				has_country_flag = tobe_samanta_of_new_mahraja
+			}
+			clr_country_flag = tobe_samanta_of_new_mahraja
+			if = {
+				limit = {
+					war_with = ROOT
+					is_subject_of = ROOT
+				}
+				grant_independence = yes
+				if = {
+					limit = {
+						has_reform = samanta_vassal_reform
+					}
+					add_government_reform = indep_samanta_reform
+				}
+				#The Maharaja should be able to retake his defected samantas
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 300
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

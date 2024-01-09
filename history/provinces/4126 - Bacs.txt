@@ -2,7 +2,7 @@
 
 owner = HUN
 controller = HUN 
-culture = hungarian
+culture = cuman
 religion = mr_bogomil
 capital = "Bács"
 trade_goods = lumber
