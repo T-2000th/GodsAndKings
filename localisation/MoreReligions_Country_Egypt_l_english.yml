@@ -34,4 +34,4 @@
 
  mr_egypt_create_al_franj_title: "Create Al-Franj"
  mr_egypt_create_al_franj_desc: "REPLACE_ME"
- mr_create_franj_crusader_tt: "Any extant §Ycrusader state§! is a subject of §Y[Root.GetName].§!"
+ mr_create_franj_crusader_tt: "All §Ycrusader states§! are subjects of §Y[Root.GetName].§!"

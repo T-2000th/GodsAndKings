@@ -45,6 +45,7 @@ country_decisions = {
 				FRJ = {
 					add_treasury = 200
 					add_manpower = 10 # 10k
+					add_prestige = 25
 					add_adm_power = 200
 					add_dip_power = 200
 					add_mil_power = 200
@@ -65,7 +66,7 @@ country_decisions = {
 				}
 			}
 
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 
 		ai_will_do = {
