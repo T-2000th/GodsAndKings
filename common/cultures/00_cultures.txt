@@ -9902,6 +9902,9 @@ sahelian = {
 			Zakiya Zakiyya Zaray Zayna Zaynab Zinat Zubaida Zulaykha Zulekha
 		}
 	}
+	sara = {
+
+	}
 	kanuri = {
 		primary = KBO
 		dynasty_names = {
@@ -10362,6 +10365,18 @@ kongo_group = {
 	sawabantu = {
 
 	}
+	semibantu = {
+
+	}
+	gbaya = {
+
+	}
+	banda = {
+
+	}
+	azande = {
+
+	}
 	dynasty_names = {
 		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
 	}
@@ -10682,6 +10697,18 @@ sudanese = {
 
 	acholi = {
 
+	}
+	toudou = {
+
+	}
+	nuer = {
+
+	}
+	dinka = {
+
+	}
+	bari = {
+		
 	}
 	nubian = {
 		primary = MAK
