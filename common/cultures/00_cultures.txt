@@ -1928,8 +1928,8 @@ french	= {
 		primary = ATI
 		dynasty_names = {
 			"de Terremonde" "de Ibelin" "Le Puy" "de Milly" "de Montreal" Létrange Brisebarre Aleman
-			Montfort Guînes Hauteville "of Saint Omer" Hainaut Lusignan Taranto Ingelger "of Boulogne"
-			"of Béarn" "of Fauquembergues" "of Courtenay" "de la Roche" Tocco Villehardouin Zaccaria Zeno
+			Montfort Guînes Hauteville "de Saint Omer" Hainaut Lusignan Taranto Ingelger "of Boulogne"
+			"of Béarn" "of Fauquembergues" "de Courtenay" "de la Roche" Tocco Villehardouin Zaccaria Zeno
 			"of Crispo" Fadrique Pallavicino Sommaripa Gattilusio Ghisi Grenier Orsini "of Brindisi"
 			"de Poitiers"
 		}
