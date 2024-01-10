@@ -2,7 +2,7 @@
 
 # owner = CAB
 # controller = CAB
-# culture = carib
+culture = carib
 discovered_by = south_american
 religion = animism
 capital = "Uyapari"
