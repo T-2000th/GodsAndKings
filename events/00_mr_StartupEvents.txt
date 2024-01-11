@@ -78,8 +78,15 @@ country_event = {
 
 	option = { #toulousse
 		name = mr_startup_events.1.a
-		trigger = {
-			tag = TOU }
+		trigger = { tag = TOU }
+		# Enable Toulouse's mission previews here.
+		hidden_effect = {
+			enable_branching_mission_review_of_batch = { key = TOU }
+			change_variable = {
+				which = can_preview_missions_var
+				value = 1
+			}
+		}
 	}
 
 	option = { #france,PU's, and vassals

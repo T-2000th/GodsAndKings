@@ -50,6 +50,12 @@ country_event = {
 		add_prestige = 10
 		add_dip_power = 50
 	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = tou_cathar_king
+		}
+	}
 }
 
 #Disaster info

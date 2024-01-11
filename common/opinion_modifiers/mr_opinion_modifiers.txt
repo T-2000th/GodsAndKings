@@ -77,3 +77,12 @@ afr_broke_our_promise = {
 	yearly_decay = -5		
 }
 
+tou_denied_personal_heresy = {
+	opinion = 25
+	yearly_decay = 1		
+}
+
+tou_refused_to_denounce_heresy = {
+	opinion = -50
+	yearly_decay = -2.5
+}

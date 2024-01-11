@@ -145,3 +145,30 @@ merc_amazigh_vanguard = {
 	   reinforce_speed = -0.25 # Meant to encourage using them to strike and then pull back
     }
 }
+
+merc_iberian_zealots = {
+    regiments_per_development = 0.04 
+
+    cost_modifier = 0.66 
+
+    home_province = 214 
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+	cavalry_cap = 4
+
+    min_size = 4
+
+    sprites = { westerngfx_sprite_pack } # Reuses Bedouin Auxillaries packs
+
+    trigger = {
+        has_unlocked_merc_company = {
+			merc_company = merc_iberian_zealots
+		}
+    }
+
+    modifier = { 
+        infantry_power = 0.10
+        morale_damage_received = -0.25
+        recover_army_morale_speed = -0.25
+    }
+}

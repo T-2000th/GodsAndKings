@@ -1,0 +1,874 @@
+mr_toulouse_slot_2_upper = {
+	slot = 2
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+	}
+		
+	tou_the_cathar_king = {
+		icon = chivalry_is_not_dead
+		required_missions = { }
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = has_had_cathar_king_event
+				has_country_flag = tou_cathar_king
+			}
+		}
+		effect = {
+			custom_tooltip = tou_remained_catholic
+			tooltip = {
+				custom_tooltip = all_catholics_gain_25_opinion
+				add_country_modifier = {
+					name = tou_triumph_of_political_matters
+					duration = 3650
+				}
+			}
+
+			custom_tooltip = tou_went_cathar
+			tooltip = {
+				change_ruler_stat = {
+					type = dip
+					amount = 1
+				}
+			}
+			custom_tooltip = " "
+			custom_tooltip = tou_choose_branching_missions
+
+			hidden_effect = {
+				clr_country_flag = can_choose_TOU_1_branching_missions
+				clr_country_flag = can_choose_TOU_2_branching_missions
+				clr_country_flag = can_choose_TOU_3_branching_missions
+				clr_country_flag = has_batch_1_active
+				change_variable = {
+					which = can_preview_missions_var
+					value = -1
+				}
+				if = {
+					limit = {
+						religion = catholic
+					}
+					every_country = {
+						limit = {
+							religion = catholic
+						}
+						add_opinion = {
+							who = ROOT
+							modifier = tou_denied_personal_heresy
+						}
+					}
+					add_country_modifier = {
+						name = tou_triumph_of_political_matters
+						duration = 3650
+					}
+					clr_country_flag = tou_cathar
+					set_country_flag = tou_catholic
+					swap_non_generic_missions = yes
+				}
+				else_if = {
+					limit = { 
+						religion = mr_cathar
+					}
+					change_ruler_stat = {
+						type = dip
+						amount = 1
+					}
+					clr_country_flag = tou_catholic
+					set_country_flag = tou_cathar
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}	
+}
+
+mr_toulouse_slot_1_branch_nil = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+		NOT = { has_country_flag = tou_cathar }
+		NOT = { has_country_flag = tou_catholic }
+	}
+
+	tou_branch_mission_1 = {
+		icon = mission_unknown_mission
+		required_missions = { tou_the_cathar_king }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = tou_branch_mission_1_desc
+				always = no
+			}
+		}
+		effect = { }
+	}
+
+	tou_branch_mission_4 = {
+		icon = mission_unknown_mission
+		required_missions = { tou_branch_mission_1 tou_branch_mission_3 }
+		position = 5
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = tou_branch_mission_1_desc
+				always = no
+			}
+		}
+		effect = { }
+	}
+}
+
+mr_toulouse_slot_2_branch_nil = {
+	slot = 2
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+		NOT = { has_country_flag = tou_cathar }
+		NOT = { has_country_flag = tou_catholic }
+	}
+
+	tou_branch_mission_2 = {
+		icon = mission_unknown_mission
+		required_missions = { tou_the_cathar_king }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = tou_branch_mission_1_desc
+				always = no
+			}
+		}
+		effect = { }
+	}
+
+	tou_branch_mission_3 = {
+		icon = mission_unknown_mission
+		required_missions = { tou_branch_mission_2 }
+		position = 4
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = tou_branch_mission_1_desc
+				always = no
+			}
+		}
+		effect = { }
+	}
+}
+
+mr_toulouse_slot_2_branch_lower = {
+	slot = 2
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+	}
+
+	tou_princes_of_iberia = {
+		icon = mission_castillian_aggression
+		required_missions = { tou_descend_upon_aragon }
+		position = 5
+		trigger = {
+			OR = {
+				any_ally = {
+					capital_scope = {
+						region = iberia_region
+					}
+					religion_group = ROOT # To prevent converting Qurtubah this way.
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					trust = {
+						who = ROOT
+						value = 70
+					}
+				}
+				any_country = {
+					capital_scope = {
+						region = iberia_region
+					}
+					religion_group = ROOT
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = tou_alliance_iberia
+			tooltip = {
+				add_country_modifier = {
+					name = tou_along_the_coast
+					duration = -1
+				}
+
+				custom_tooltip = our_ally_also_recieves_modifier
+				custom_tooltip = " "
+				custom_tooltip = tou_convert_ally
+			}
+			custom_tooltip = " "
+			custom_tooltip = tou_insult_iberia
+			tooltip = {
+				add_ruler_personality = conqueror_personality
+				custom_tooltip = tou_claim_christian_iberia
+			}
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						any_ally = {
+							capital_scope = {
+								region = iberia_region
+							}
+							religion_group = ROOT # To prevent converting Qurtubah this way.
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+							trust = {
+								who = ROOT
+								value = 70
+							}
+						}
+					}
+					add_country_modifier = {
+						name = tou_along_the_coast
+						duration = -1
+					}
+
+					random_ally = {
+						limit = {
+							capital_scope = {
+								region = iberia_region
+							}
+							religion_group = ROOT # To prevent converting Qurtubah this way.
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+							trust = {
+								who = ROOT
+								value = 70
+							}
+						}
+
+						add_country_modifier = {
+							name = tou_along_the_coast
+							duration = -1
+						}
+						if = {
+							limit = { NOT = { religion = ROOT } }
+							country_event = {
+								id = mr_tou_events.4
+							}
+						}
+					}
+				}
+				else = {
+					add_ruler_personality = conqueror_personality
+					every_province = {
+						limit = {
+							region = iberia_region
+							religion_group = ROOT
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+mr_toulouse_slot_3_upper = {
+	slot = 3
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+	}
+		
+	tou_lion_of_bordeaux = {
+		icon = tou_lion_of_bordeaux
+		required_missions = { tou_look_outwards tou_the_cathar_king }
+		position = 2
+		provinces_to_highlight = {
+			area = guyenne_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = mr_tou_events.1
+			}
+			custom_tooltip = " "
+			pyrenees_area = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = { is_year = 1450 }
+				}
+				guyenne_area = {
+					add_core = ROOT
+				}
+			}
+		}
+	}
+
+	tou_gascon_strongholds = {
+		icon = spa_new_capital
+		required_missions = { tou_lion_of_bordeaux }
+		position = 3
+		provinces_to_highlight = {
+			area = pyrenees_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = accept_gascon_free
+			hidden_effect = {
+				add_country_modifier = {
+					name = free_slot_for_gascon
+					duration = -1
+					hidden = yes
+				}
+				add_accepted_culture = gascon
+			}
+			custom_tooltip = tou_random_gascon_fort
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+						culture = gascon
+					}
+					upgrade_fort_building = yes
+				}
+			}
+			custom_tooltip = " "
+			massif_central_area = {
+				add_permanent_claim = ROOT
+			}
+			poitou_area = {
+				add_permanent_claim = ROOT
+			}
+			aragon_area = {
+				add_permanent_claim = ROOT
+			}
+			catalonia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tou_descend_upon_aragon = {
+		icon = king_of_aragon
+		required_missions = { tou_gascon_strongholds }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = catalonia_area
+				area = aragon_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aragon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = mr_tou_events.3
+			}
+			custom_tooltip = " "
+			change_ruler_stat = {
+				type = mil
+				amount = 1
+			}
+		}
+	}
+}
+
+mr_toulouse_slot_4_upper = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+	}
+		
+	tou_look_outwards = {
+		icon = personal_diplomacy
+		required_missions = { }
+		position = 1
+		trigger = {
+			num_of_allies = 2
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = tou_aligned_with_the_accursed
+				duration = 3650
+			}
+
+			guyenne_area = {
+				add_permanent_claim = ROOT
+			}
+			provence_area = {
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			custom_tooltip = tou_timed_element
+		}
+	}
+	
+	tou_our_swiss_friends = {
+		icon = mercenary_companies
+		required_missions = { tou_look_outwards }
+		position = 2
+		trigger = {
+			OR = {
+				LBG = {
+					OR = {
+						alliance_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				AND = {
+					any_hired_mercenary_company = {
+						custom_trigger_tooltip = {
+							tooltip = tou_hire_free_swiss_guard
+							template = merc_free_swiss_guard
+						}
+					}
+					has_mil_advisor = yes
+				}
+			}
+		}
+		effect = {
+			tooltip = {
+				add_country_modifier = {
+					name = tou_swiss_expertise
+					duration = 9125
+				}				
+			}
+
+			custom_tooltip = tou_alliance_lower_burgundy
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					add_country_modifier = {
+						name = tou_swiss_expertise_enhanced
+						duration = 9125
+					}
+					LBG = {
+						add_favors = {
+							who = ROOT
+							amount = 10
+						}
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = tou_swiss_expertise
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
+
+	tou_fields_of_burgundy = {
+		icon = mission_rb_repatriate_burgundy
+		required_missions = { tou_lion_of_bordeaux tou_avenge_raymond }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = west_burgundy_area
+				area = bourgogne_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_burgundy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bourgogne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = {
+				limit = { ai = no }
+				OR = {
+					has_spy_network_in = {
+						who = FRA
+						value = 20
+					}
+					has_won_war_against = {
+						who = FRA
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = tou_show_of_strength
+			hidden_effect = {
+				FRA = {
+					every_subject_country = {
+						add_liberty_desire = 25
+					}
+				}
+			}
+			add_country_modifier = {
+				name = tou_ensnaring_the_french
+				duration = 7300
+			}
+
+			custom_tooltip = tou_provence_assist
+			tooltip = {
+				PRO = {
+					override_country_name = arles
+					add_country_modifier = {
+						name = tou_restoration_of_the_arelat_throne
+						duration = -1
+					}
+				}
+			}
+
+			custom_tooltip = otherwise
+			tooltip = {
+				define_advisor = {
+					type = statesman
+					skill = 3
+					culture = burgundian
+					cost_multiplier = 0.5
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						PRO = {
+							is_subject_of = ROOT
+						}
+						west_burgundy_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = PRO
+						}
+						bourgogne_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = PRO
+						}
+					}
+					PRO = {
+						override_country_name = arles
+						add_country_modifier = {
+							name = tou_restoration_of_the_arelat_throne
+							duration = -1
+						}
+					}
+				}
+				else = {
+					define_advisor = {
+						type = statesman
+						skill = 3
+						culture = cosmopolitan_french
+						cost_multiplier = 0.5
+					}					
+				}
+			}
+		}
+	}
+
+	tou_to_the_loire = {
+		icon = capture_adriatic_ports
+		required_missions = { tou_gascon_strongholds tou_fields_of_burgundy }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = poitou_area
+				area = massif_central_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			poitou_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT				
+			}
+			massif_central_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = tou_lose_ae_france
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							region = france_region
+						}
+					}
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -15
+					}
+				}
+			}
+			add_country_modifier = {
+				name = tou_securing_occitania
+				duration = 9125
+			}
+
+			if = {
+				limit = { FRA = { valid_for_personal_unions_trigger = yes } }
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = FRA
+					months = -1
+				}
+			}
+			else = {
+				france_region = { add_permanent_claim = ROOT }
+			}
+		}
+	}
+}
+
+mr_toulouse_slot_5_upper = {
+	slot = 5
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = TOU
+	}
+		
+	tou_avenge_raymond = {
+		icon = negotiate_for_avignon
+		required_missions = { tou_look_outwards }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				AND = {
+					area = savoy_dauphine_area
+					NOT = {
+						ROOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								area = savoy_dauphine_area
+								value = 3
+							}
+						}
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			provence_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				area = savoy_dauphine_area
+				value = 3
+			}
+			PRO = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = mr_tou_events.2
+			}
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = tou_putting_down_berenguers_heirs
+				duration = 9125
+			}
+
+			piedmont_area = {
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = { is_year = 1450 }
+				}
+				provence_area = {
+					add_core = ROOT
+				}
+				savoy_dauphine_area = {
+					add_core = ROOT
+				}
+			}
+		}
+	}
+
+	tou_gateway_of_italy = {
+		icon = unify_piedmont
+		required_missions = { tou_avenge_raymond }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = savoy_dauphine_area
+				area = piedmont_area
+				area = liguria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			savoy_dauphine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT			
+			}
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT					
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tou_gateway_of_italy
+				duration = 9125
+			}
+
+			custom_tooltip = tou_destabilize_padana_league
+			hidden_effect = {
+				if = {
+					limit = {
+						has_spy_network_in = {
+							who = PDN
+							value = 25
+						}
+						any_country = {
+							is_subject_of = PDN
+						}
+					}
+					PDN = {
+						every_subject_country = {
+							add_liberty_desire = 25
+						}
+						add_manpower = -10
+					}
+					add_manpower = 10
+				}
+			}
+			custom_tooltip = " "
+			lombardy_area = {
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				add_permanent_claim = ROOT
+			}
+			emilia_romagna_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tou_crush_the_league = {
+		icon = alpine_fortifications
+		required_missions = { tou_gateway_of_italy }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = lombardy_area
+				area = po_valley_area
+				area = emilia_romagna_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT			
+			}
+			emilia_romagna_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT					
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					OR = {
+						culture = lombard
+						culture = romagnan
+					}
+					num_of_times_improved = 3
+					value = 3
+				}
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = artist
+				skill = 3
+				cost_multiplier = 0.5
+				culture = lombard
+			}
+			custom_tooltip = tou_enhance_patronage_of_the_arts
+			custom_tooltip = " "
+			tuscany_area = {
+				add_permanent_claim = ROOT
+			}
+			lazio_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

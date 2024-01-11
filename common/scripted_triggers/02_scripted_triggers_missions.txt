@@ -1,0 +1,404 @@
+# This file contains all triggers which are are needed for dynamic effects, but have more than 512 characters in total.
+tur_al_andalus_eyalet_limit_a = {
+	OR = {
+		any_subject_country = {
+			religion = ROOT
+			owns = 225
+			owns = 223
+			owns = 226
+			owns = 224
+			num_of_owned_provinces_with = {
+				region = iberia_region
+				value = 10
+			}
+			capital_scope = {
+				region = iberia_region
+			}
+		}
+		any_ally = {
+			religion = ROOT
+			owns = 225
+			owns = 223
+			owns = 226
+			owns = 224
+			num_of_owned_provinces_with = {
+				region = iberia_region
+				value = 10
+			}
+			capital_scope = {
+				region = iberia_region
+			}
+		}
+	}
+}
+
+BYZ_roman_empire_decision_trigger = {
+	OR = {
+		#Core Regions
+		region = anatolia_region
+		region = egypt_region
+		region = italy_region
+		region = france_region
+		region = iberia_region
+		region = mashriq_region
+		region = balkan_region
+		#England
+		area = east_midlands_area
+		area = west_midlands_area
+		area = yorkshire_area
+		area = wessex_area
+		area = home_counties_area
+		area = east_anglia_area
+		area = wales_area
+		area = scottish_marches_area
+		#Areas within South Germany
+		area = romandie_area
+		area = upper_rhineland_area
+		area = romandie_area
+		area = alsace_area
+		area = palatinate_area
+		area = lower_rhineland_area
+		area = carinthia_area
+		province_id = 85 #cologne
+		area = north_brabant_area
+		area = brabant_area
+		area = flanders_area
+		area = wallonia_area
+		province_id = 96 #zeeland
+		area = inner_austria_area
+		area = austria_proper_area
+		area = tirol_area
+		area = east_bavaria_area
+		area = lower_bavaria_area
+		area = upper_bavaria_area
+		area = upper_swabia_area
+		area = lower_swabia_area
+		area = switzerland_area
+		#Carthage
+		area = barbary_coast_area
+		area = kabylia_area
+		area = tunisia_area
+		area = djerba_area
+		area = tripolitania_area
+		area = northern_morocco_area
+		area = algiers_area
+		province_id = 343
+		#Danubia
+		area = transdanubia_area
+	}
+	NOT = { area = lower_nubia_area }
+	NOT = { area = iraq_arabi_area }
+	NOT = { area = basra_area }
+}
+
+BYZ_has_rights_of_man = {
+	has_dlc = "Rights of Man"
+}
+
+BYZ_has_leviathan = {
+	has_dlc = "Leviathan"
+}
+
+BYZ_eligible_province_for_culture_conversion = {
+	OR = {
+		area = aydin_area
+		area = hudavendigar_area
+		AND = {
+			owner = {
+				mission_completed = BYZ_avenge_1071
+			}
+			region = anatolia_region
+		}
+	}
+}
+
+BYZ_reached_pronia_slot_limit = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = current_amount_of_pronoiars
+			value = modifier:pronoia_amount_check_influence
+		}
+		export_to_variable = {
+			variable_name = max_amount_of_pronoiars
+			value = modifier:num_of_pronoiars
+		}
+		check_variable = {
+			which = current_amount_of_pronoiars
+			which = max_amount_of_pronoiars
+		}
+	}
+}
+
+BYZ_enough_pronoia_slots = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = current_amount_of_pronoiars
+			value = modifier:pronoia_amount_check_influence
+		}
+		export_to_variable = {
+			variable_name = max_amount_of_pronoiars
+			value = modifier:num_of_pronoiars
+		}
+		NOT = {
+			check_variable = {
+				which = current_amount_of_pronoiars
+				which = max_amount_of_pronoiars
+			}
+		}
+	}
+}
+
+BYZ_branch_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_this_is_a_branching_mission
+		always = no
+	}
+}
+
+byz_is_in_middle_east_or_europe = {
+	capital_scope = {
+		OR = {
+			superregion = europe_superregion
+			superregion = eastern_europe_superregion
+			superregion = near_east_superregion
+			superregion = persia_superregion
+			region = maghreb_region
+		}
+	}
+}
+
+BYZ_historical_interest_against_ottomans = {
+	OR = {
+		tag = POL
+		tag = LIT
+		tag = HUN
+		tag = HAB
+		tag = ALB
+	}
+}
+
+BYZ_is_not_latin_empire = {
+	if = {
+		limit = {
+			tag = LAE
+			religion = catholic
+		}
+		custom_trigger_tooltip = {
+			tooltip = BYZ_may_not_complete_as_catholic_latin_empire
+			always = no
+		}
+	}
+}
+
+has_orthodox_religious_icon_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_has_religious_icon
+		OR = {
+			current_icon = icon_michael
+			current_icon = icon_eleusa
+			current_icon = icon_pancreator
+			current_icon = icon_nicholas
+			current_icon = icon_climacus
+		}
+	}
+}
+
+# Changed: All triggers related to branch preview to fit with G&K.
+has_branching_missions = {
+	OR = {
+		#v1.0
+		has_mission = mr_sicily_religion_1
+		has_mission = crusader_missions_2_pre_branch
+		#v1.1
+		has_mission = tou_the_cathar_king
+	}
+}
+
+has_preview_mission_flag = {
+	check_variable = {
+		which = can_preview_missions_var
+		value = 1
+	}
+}
+
+can_preview_batch = {
+	has_country_flag = has_batch_$batch$_active
+}
+
+can_preview_mission_of_key_and_batch = {
+	has_country_flag = can_choose_$key$_$batch$_branching_missions
+}
+can_preview_mission_of_key = {
+	or = {
+		can_preview_mission_of_key_and_batch = { key = $key$ batch = 1 }
+		can_preview_mission_of_key_and_batch = { key = $key$ batch = 2 }
+		can_preview_mission_of_key_and_batch = { key = $key$ batch = 3 }
+	}
+}
+can_preview_missions = {
+	custom_trigger_tooltip = {
+		tooltip = preview_missions_decision_ct
+		OR = {
+			#v1.0
+			can_preview_mission_of_key = { key = SIC }
+			can_preview_mission_of_key = { key = CRU }
+			#v1.1
+			can_preview_mission_of_key = { key = TOU }
+		}
+	}
+}
+
+not_in_mission_preview_mode = {
+	if = {
+		limit = {
+			check_variable = {
+				which = can_preview_missions_var
+				value = 1
+			}
+			can_preview_mission_of_key = { key = $key$ }
+		}
+		custom_trigger_tooltip = {
+			tooltip = BYZ_we_are_in_preview
+			always = no
+		}
+	}
+}
+
+has_selected_a_branch = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_a_branch_tt
+		OR = {
+			#v1.0
+			#SIC
+			AND = {
+				OR = {
+					has_country_flag = sic_frat_1
+					has_country_flag = sic_frat_2
+				}
+				can_preview_mission_of_key_and_batch = { key = SIC batch = $batch$ }
+			}
+			#CRU
+			AND = {
+				OR = {
+					has_country_flag = cs_domination_path
+					has_country_flag = cs_diplomatic_path
+				}
+				can_preview_mission_of_key_and_batch = { key = SIC batch = $batch$ }
+			}
+			#v1.1
+			#TOU
+			AND = {
+				OR = {
+					has_country_flag = tou_catholic
+					has_country_flag = tou_cathar
+				}
+				can_preview_mission_of_key_and_batch = { key = TOU batch = $batch$ }
+			}
+		}
+	}
+}
+
+num_of_mission_branches_2 = {
+	OR = {
+		#v1.0
+		can_preview_mission_of_key_and_batch = { key = SIC batch = $batch$ }
+		can_preview_mission_of_key_and_batch = { key = CRU batch = $batch$ }	
+		#v1.1
+		can_preview_mission_of_key_and_batch = { key = TOU batch = $batch$ }	
+	}
+}
+
+num_of_mission_branches_3 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#Dummy
+}
+
+num_of_mission_branches_4 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#Dummy
+}
+
+num_of_mission_branches_5 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#Dummy
+}
+num_of_mission_branches = {
+	num_of_mission_branches_$value$ = { batch = $batch$ }
+}
+
+currently_selected_branch_1 = {
+	OR = {
+		#v1.0
+		#SIC
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = SIC batch = $batch$ }
+			has_country_flag = sic_frat_1
+		}
+		#CRU
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = CRU batch = $batch$ }
+			has_country_flag = cs_domination_path
+		}
+		#v1.1
+		#TOU
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = TOU batch = $batch$ }
+			has_country_flag = tou_catholic
+		}
+	}
+}
+currently_selected_branch_2 = {
+	OR = {
+		#v1.0
+		#SIC
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = SIC batch = $batch$ }
+			has_country_flag = sic_frat_2
+		}
+		#CRU
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = CRU batch = $batch$ }
+			has_country_flag = cs_diplomatic_path
+		}
+		#v1.1
+		#TOU
+		AND = {
+			can_preview_mission_of_key_and_batch = { key = TOU batch = $batch$ }
+			has_country_flag = tou_cathar
+		}
+	}
+}
+currently_selected_branch_3 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#dummy
+}
+currently_selected_branch_4 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#dummy
+}
+currently_selected_branch_5 = {
+	always = no
+	has_country_flag = has_$batch$_batch	#dummy
+}
+currently_selected_branch = {
+	currently_selected_branch_$value$ = { batch = $batch$ }
+}
+
+can_select_branch_1 = {
+	hidden_trigger = { always = yes } 
+}
+can_select_branch_2 = {
+	hidden_trigger = { always = yes } 
+}
+can_select_branch_3 = {
+	hidden_trigger = { or = { always = yes has_country_flag = has_$batch$_batch } }
+}
+can_select_branch_4 = {
+	hidden_trigger = { or = { always = yes has_country_flag = has_$batch$_batch } }
+}
+can_select_branch_5 = {
+	hidden_trigger = { or = { always = yes has_country_flag = has_$batch$_batch } }
+}
+can_select_branch = {
+	can_select_branch_$value$ = { batch = $batch$ }
+}

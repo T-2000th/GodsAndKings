@@ -1,0 +1,228 @@
+namespace = mr_tou_events
+
+country_event = {
+	id = mr_tou_events.1 # The City of Bordeaux
+	title = mr_tou_events.1.t
+	desc = mr_tou_events.1.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mr_tou_events.1.a # A second capital!
+		174 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = {
+				name = tou_second_capital_of_the_south
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = mr_tou_events.1.b # [174.GetName] has been in the spotlight for too long. It's time for us to shine.
+		174 = {
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -1
+		}
+		custom_tooltip = tou_dev_transferred_to_capital
+		capital_scope = {
+			hidden_effect = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+			add_province_modifier = {
+				name = tou_new_capital_of_the_south
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mr_tou_events.2 # The Marquisate of Provence
+	title = mr_tou_events.2.t
+	desc = mr_tou_events.2.d
+	picture = DIPLOMACY_SIGNING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mr_tou_events.2.a # Restore the title across the Rhone.
+		hidden_effect = {
+			provence_area = {
+				add_core = PRO
+			}
+		}
+		if = { 
+			limit = { NOT = { exists = PRO } }
+			release = PRO
+		}
+		hidden_effect = {
+			provence_area = {
+				cede_province = PRO
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					area = savoy_dauphine_area
+				}
+				cede_province = PRO
+				add_core = PRO
+			}
+		}
+		custom_tooltip = tou_provence_recieves_gains
+		create_march = PRO
+		PRO = {
+			add_government_reform = provencal_marquisate
+		}
+		custom_tooltip = " "
+		west_burgundy_area = {
+			add_permanent_claim = PRO
+		}
+		bourgogne_area = {
+			add_permanent_claim = PRO
+		}
+	}
+
+	option = {
+		name = mr_tou_events.2.b # Provence must be integrated!
+		if = {
+			limit = {
+				PRO = { is_subject_of = ROOT }
+			}
+			inherit = PRO
+		}
+		provence_area = {
+			add_local_autonomy = -25
+			add_nationalism = -5
+		}
+		custom_tooltip = " "
+		west_burgundy_area = {
+			add_permanent_claim = PRO
+		}
+		bourgogne_area = {
+			add_permanent_claim = PRO
+		}
+	}
+}
+
+country_event = {
+	id = mr_tou_events.3 # Descent upon the Kingdom of Aragon
+	title = mr_tou_events.3.t
+	desc = mr_tou_events.3.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mr_tou_events.3.a # Integrate them as our southern frontier.
+		ai_chance = {
+			factor = 3
+		}
+		add_country_modifier = {
+			name = tou_iberian_frontier
+			duration = 7300
+		}
+		
+		unlock_merc_company = {
+			merc_company = merc_iberian_zealots
+		}
+		custom_tooltip = aragon_and_catalonia_areas
+		tooltip = {
+			add_province_modifier = {
+				name = tou_the_southern_frontier
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			aragon_area = {
+				add_province_modifier = {
+					name = tou_the_southern_frontier
+					duration = -1
+				}
+			}
+			catalonia_area = {
+				add_province_modifier = {
+					name = tou_the_southern_frontier
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_tou_events.3.b # Revenge is sweeter than good governance.
+		add_years_of_income = 1
+		aragon_area = {
+			add_base_production = -2
+			add_base_manpower = -2
+			add_base_tax = -2
+			add_devastation = 25
+		}
+		catalonia_area = {
+			add_base_production = -2
+			add_base_manpower = -2
+			add_base_tax = -2
+			add_devastation = 25			
+		}
+	}
+}
+
+country_event = {
+	id = mr_tou_events.4 # Missionaries from [From.GetName]
+	title = mr_tou_events.4.t
+	desc = mr_tou_events.4.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		has_mission = tou_princes_of_iberia
+	}
+	
+	option = {
+		name = mr_tou_events.4.a # We would gladly convert for the sake of our relationship.
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 25
+				trust = {
+					who = FROM
+					value = 90
+				}
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					OR = {
+						has_advisor = theologian
+						has_advisor = inquisitor
+					}
+				}
+			}
+			modifier = {
+				factor = 25
+				FROM = {
+					dip = 5
+				}
+			}
+		}
+		change_religion = FROM
+	}
+
+	option = {
+		name = mr_tou_events.4.b # A step too far...
+		ai_chance = {
+			factor = 75
+		}
+		reverse_add_opinion = {
+			who = TOU
+			modifier = tou_refused_to_denounce_heresy
+		}
+	}
+}

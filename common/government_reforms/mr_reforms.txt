@@ -1268,3 +1268,37 @@ rex_africae = {
 		enables_estate_dhimmi = yes # Catholic Dhimmi!
 	}
 }
+
+provencal_marquisate = { 
+	icon = "generic_people"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = provencal_marquisate
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = provencal_marquisate
+			}
+		}
+	}
+
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+
+	modifiers = {
+		fort_maintenance_modifier = -0.25
+		land_forcelimit_modifier = 0.10
+		governing_capacity_modifier = -0.25
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
