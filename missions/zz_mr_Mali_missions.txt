@@ -2825,4 +2825,168 @@ branch_5 = {
 
 		}
 	}
+	mr_mali_rivers_first = {
+		icon = mng_tame_china_sorrow
+		position = 14
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_group = senegal_river_region 
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			senegal_river_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+		}
+		effect = {
+			senegal_river_region = {
+				add_province_modifier = {
+					name = senegal_river_ports
+					duration = -1
+				}
+			}
+		}
+	}
+	mr_mali_rivers_second = {
+		icon = mission_mal_restore_the_mali_empire
+		position = 16
+		required_missions = {
+			mr_mali_rivers_first
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_group = upper_niger_river_region 
+				province_id = 1117
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 10
+				}
+			}
+			NOT = {
+				AND = {
+					province_id = 1117
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			upper_niger_river_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+			1117 = {
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			upper_niger_river_region = {
+				add_province_modifier = {
+					name = upper_niger_river_farms
+					duration = -1
+				}
+			}
+			1117 = {
+				add_province_modifier = {
+					name = futa_jallon_bridge
+					duration = -1
+				}
+			}
+		}
+	}
+	mr_mali_rivers_third = {
+		icon = mam_highway_empire
+		position = 17
+		required_missions = {
+			mr_mali_rivers_second
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_group = lower_niger_river_region 
+				province_id = 5187
+				province_id = 2294
+				province_id = 1147
+			}
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 10
+				}
+			}
+			NOT = {
+				AND = {
+					OR = {
+						province_id = 5187
+						province_id = 2294
+						province_id = 1147
+					}
+					has_dock_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			lower_niger_river_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+			5187 = {
+				has_dock_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2294 = {
+				has_dock_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1147 = {
+				has_dock_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			lower_niger_river_region = {
+				add_province_modifier = {
+					name = lower_niger_river_camps
+					duration = -1
+				}
+			}
+			custom_tooltip = benin_warri_nun_get_tt
+			tooltip = {
+				add_province_modifier = {
+					name = niger_ports
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				5187 = {
+					add_province_modifier = {
+						name = niger_ports
+						duration = -1
+					}
+				}
+				2294 = {
+					add_province_modifier = {
+						name = niger_ports
+						duration = -1
+					}
+				}
+				1147 = {
+					add_province_modifier = {
+						name = niger_ports
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 }

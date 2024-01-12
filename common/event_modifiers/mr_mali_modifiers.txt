@@ -168,3 +168,24 @@ local_mali_speed = {
 global_mali_speed = {
 	movement_speed = 0.1
 }
+senegal_river_ports = {
+	local_sailors = 500
+	local_build_cost = -0.15
+	local_development_cost = -0.05
+}
+upper_niger_river_farms = {
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.15
+}
+futa_jallon_bridge = {
+	allowed_num_of_buildings = 1
+	trade_value = 10
+}
+niger_ports = {
+	local_ship_cost = -0.15
+	local_ship_repair = 0.30
+}
+lower_niger_river_camps = {
+	local_state_maintenance_modifier = -0.10
+	local_production_efficiency = 0.075
+}

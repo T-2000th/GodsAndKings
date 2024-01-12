@@ -56,3 +56,13 @@ outremer_region = {
 	321 2308 407 4268 5521 5522 # Cyprus, Edessa, Ar-Raqqah, Aqbah
 	365 5284 2315 5375 # Sinai peninsula
 }
+senegal_river_region = {
+	1113 2237 2240 #Jolof
+	1120 5192 2248 1117 2245 #Mali
+}
+upper_niger_river_region = {
+	5204 1121 2248 5191 2249 1123 5182 2261 5183 2259 2262 5176
+}
+lower_niger_river_region = {
+	5177 1133 5178 2268 5180 1142 1143 2293 1145 1146 2289 5187 2294 1147
+}

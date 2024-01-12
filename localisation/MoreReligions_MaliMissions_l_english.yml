@@ -45,7 +45,9 @@ mr_mali_northeast_second_title: "Follow the Caravans"
 mr_mali_sahara_first_title: "Shore of the Sahara"
 mr_mali_sahara_second_title: "Restore Ghanaian Cities"
 
-
+mr_mali_rivers_first_title: "The Ports of the Senegal"
+mr_mali_rivers_second_title: "Develop the Jeliba"
+mr_mali_rivers_third_title: "The Great River Bends"
 
 #Mission Descriptions
 
@@ -113,6 +115,7 @@ if_KNM_annexed_no: "\n£no£If we complete this mission while owning all provinc
 all_provinces_in_katsina_hausa_zazzau_transfer: "All provinces in the §YKatsina§!, §YKano§!, and §YZazzau§! Areas will be transferred to a new @HAU §YHausa§! Subject."
 GRE_permanent_power_projection: "Greek Power Projection"
 MAL_permanent_power_projection: "Defeated Kanem"
+benin_warri_nun_get_tt: "Benin, Warri, and Nun will get the following:"
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -147,6 +150,11 @@ leader_of_hausa: "Leader of the Hausa"
 removing_kanem_legacy: "Removing the Legacy of Kanem"
 local_mali_speed: "Darfur Pathways"
 global_mali_speed: "Camel Riding Masters"
+senegal_river_ports: "Ports on the Senegal"
+lower_niger_river_camps: "Lower Niger Camps"
+niger_ports: "Ports of Oya"
+futa_jallon_bridge: "The Great Futa Jallon Bridge"
+upper_niger_river_farms: "Farmland of the Empire"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -213,6 +221,12 @@ malian_merchants: "Foreign Merchants"
 malian_merchants_FACTION_DESC: "The Berber merchants of North Africa and beyond bring with them Islam, and are crucial to maintaining a positive diplomatic reputation with the rest of the Ummah. They wish for Mali to be a more traditional Islamic state, and as such clash with local religious authority."
 malian_merchants_influence: "Foreign Merchant Influence"
 favor_the_guild_tt: "\nWe will ask the faction for support, in exchange they shall request we fulfill their wishes.\n"
+
+#Province Groups
+upper_niger_river_region: "Upper Niger River"
+lower_niger_river_region: "Lower Niger River"
+senegal_river_region: "Senegal River"
+
 #Farma Names
 FR1: "Jolof-Farma"
 FR1_ADJ: "Jolof"
