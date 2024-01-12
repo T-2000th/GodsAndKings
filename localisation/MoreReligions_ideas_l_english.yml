@@ -894,6 +894,25 @@ irq_vassal_sultans_desc: "When the word was first used a title of rulership in t
 irq_caliphal_reconquest: "Caliphal Reconquest"
 irq_caliphal_reconquest_desc: "From the perspective of Baghdad, the Abbasid Empire never collapsed. It never even truly shrunk. Ever since the Anarchy of Samarra in the 10th century, our governors in the periphery of our empire simply slipped away from our direct control while still ruling in our name. Thus, when the Caliph's armies set out to conquer, we are simply walking in our own backyard, reasserting our authority over errant vassals."
 
+#Iberian ideas
+IBF_ideas: "Iberian Ideas"
+IBF_ideas_start: "Iberian Traditions"
+IBF_ideas_bonus: "Iberian Ambition"
+ibf_basque_dreams: "Basque Idealism"
+ibf_basque_dreams_desc: "It all started with a dream, a dream to unite and bring prosperity to all of Iberia. Now we have finally achieved that dream the time of the Golden Whale is nigh."
+ibf_portuguese_determination: "Portuguese Discipline"
+ibf_portuguese_determination_desc: "Though the reconquista may be over, the fervor in the hearts of the Portuguese Knights still burns as bright as the midday sun. Let us use this fervor to stoke the fires of our national armies."
+ibf_galician_devotion: "Galician Devotion"
+ibf_galician_devotion_desc: "From the heights of Santiago, to the streets of Coruna. We witness and see the devotion and patience of the Galicians. We must all aspire to reach such enlightment and inner peace."
+ibf_asturian_legacy: "Asturian Legacy"
+ibf_asturian_legacy_desc: "Like our Visigothic forefathers, we once more hold control over all of Iberia. Learn from the mistakes of the past, rule this land well and let it never again fall to enemy incursions."
+ibf_catalonian_coinage: "Catalonian Coinage"
+ibf_catalonian_coinage_desc: "Into the markets of Barcelona flows the wealth of the world. A prosperity unlike any other has been gifted to us thanks to the hardwork and financial savvyness of the Catalonian merchants. We shall give them the greatest honor, for all of Iberia shall use the Catalunid coin."
+ibf_moorish_innovation: "Muslim Innovation"
+ibf_moorish_innovation_desc: "Our fate has been intrinsically linked to that of the Moors and Islam. Ever since they pierced into Iberia they brought with them innovations and technological wonders unlike any other. They forever changed the face of Iberia and now in turn, we shall always welcome, honor, and remember the gifts of Islam."
+ibf_iberian_citizenship: "Federal Citizenship"
+ibf_iberian_citizenship_desc: "The world we envision is one not limited to only Iberia. Our borders shall stretch from Sea to Sea, and such a realm needs citizens to work, serve and live. After all, what is nation anyway? If people as culturally different as Basque, Andalusian, Portuguese or Catalonian can live and work together, there's no reason other cultures across the world can't be part of our great Federation!"
+
 
 #Malian Ideas 2
 mal_first: "Authority of the Mansa"

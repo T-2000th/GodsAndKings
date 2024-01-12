@@ -387,10 +387,9 @@ country_event = {
 			add_treasury = 20000 # Required due to the normal cost
 			set_country_flag = unlock_suez_early
 		}
-		add_treasury = -2500
 		4316 = {
 			add_great_project = {
-				type = suez_canal # Like in vanilla, this reuses the Suez Canal. However, unlike vanilla, this actually costs some money.
+				type = suez_canal # Like in vanilla, this reuses the Suez Canal. However, unlike vanilla, this actually costs some money for Africa.
 				instant = yes
 			}
 		}
@@ -439,11 +438,11 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					treasury = 2500 # AI won't bankrupt itself by paying upfront when it can't afford it.
+					treasury = 5000 # AI won't bankrupt itself by paying upfront when it can't afford it.
 				}
 			}
 		}
-		add_treasury = -2500
+		add_treasury = -5000
 		reverse_add_opinion = {
 			who = EGY
 			modifier = afr_trustworthy_partner
@@ -689,11 +688,41 @@ country_event = {
 		change_primary_culture = siqilliyan
 		custom_tooltip = all_maghrebi_provinces_convert
 		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					culture_group = maghrebi
+			tunisia_area = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
 				}
-				change_culture = siqilliyan
+			}
+			2954 = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
+				}
+			}
+			354 = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
+				}
+			}
+			2461 = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
+				}
+			}
+			336 = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
+				}
+			}
+			343 = {
+				if = {
+					limit = { owned_by = ROOT }
+					change_culture = siqilliyan
+				}
 			}
 		}
 		custom_tooltip = " "

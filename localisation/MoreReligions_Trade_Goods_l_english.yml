@@ -132,6 +132,18 @@
  amber: "Amber"
  amberDESC: "A jewel-like substance of golden liquid beauty."
  
+ opium: "Opium"
+ opiumDESC: "The dried latex harvested from the breadseed poppy which possesses anaesthetic properties. The populace asserts that it is utilised for strictly medicinal purposes."
+ 
+ perfume: "Perfume"
+ perfumeDESC: "Meticulously crafted blends of aromatics. We don't all want to smell unpleasant!"
+ 
+ cinnamon: "Cinnamon"
+ cinnamonDESC: "A spice obtained from the inner bark of the cinnamon tree. Adds a nice kick to your meals!"
+ 
+ flax: "Flax"
+ flaxDESC: " "
+ 
  #price change keys
  HOPPED_BEER: "Hopped Beer"
  PURITY_LAW: "Purity Laws"
