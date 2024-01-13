@@ -237,7 +237,7 @@ branch_1 = {
 	}
 	mr_mali_guinean_fourth = {
 		icon = mission_colonial
-		position = 7
+		position = 6
 		required_missions = {
 			mr_mali_guinean_third
 		}
@@ -616,6 +616,219 @@ branch_2 = {
 	ai = yes
 	has_country_shield = yes
 	potential = { tag = MAL } 
+	mr_mali_yoruba_first = {
+		icon = mission_mal_subjugate_zaf
+		position = 2
+		required_missions = {
+			mr_mali_farma_first
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = upper_volta_area
+				province_id = 2267
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			upper_volta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2267 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			atacora_oueme_area = {
+				limit = {
+					NOT = { is_core = ROOT}
+					NOT = { is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_volta_area = {
+				limit = {
+					NOT = { is_core = ROOT}
+					NOT = { is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = recruit_mossi_raiders
+				duration = 5475
+			}
+		}
+	}
+	mr_mali_yoruba_second = {
+		icon = mission_conquer_benin
+		position = 3
+		required_missions = {
+			mr_mali_yoruba_first
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = atacora_oueme_area 
+				area = lower_volta_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			atacora_oueme_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_volta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			lower_niger_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			benin_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			1151 = {
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				type = cb_farma_subjugation_war
+				target = YRE
+			}
+			add_ruler_modifier = {
+				name = invasion_of_yorubaland
+				duration = -1
+			}
+		}
+	}
+	mr_mali_yoruba_third = {
+		icon = mission_establish_the_black_guard
+		position = 4
+		required_missions = {
+			mr_mali_yoruba_second
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lower_niger_area
+				area = benin_area
+				province_id = 1151
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lower_niger_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			benin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1151 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			adamawa_plateau_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { is_permanent_claim = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			define_advisor = {
+				type = fortification_expert
+				skill = 3
+				culture = yoruba
+				religion = shamanism
+				discount = yes
+			}
+
+		}
+	}
+	mr_mali_yoruba_fourth = {
+		icon = mission_mal_more_tolerance_to_heathens
+		position = 5
+		required_missions = {
+			mr_mali_yoruba_third
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1146
+			}
+			NOT = {
+					has_tax_building_trigger = yes
+					development = 15
+			}
+		}
+		trigger = {
+			1146 = {
+				development = 15
+				has_tax_building_trigger = yes
+			}
+			estate_influence = {
+				estate = estate_dhimmi
+				influence = 60
+			}
+		}
+		effect = {
+			1146 = {
+				add_base_tax = 3
+			}
+		}
+	}
+	mr_mali_yoruba_fifth = {
+		icon = mission_kon_greatest_power_kongo
+		position = 7
+		required_missions = {
+			mr_mali_yoruba_fourth
+			mr_mali_farma_sixth
+			mr_mali_guinean_fourth
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = sahel_region
+				region = niger_region
+				region = guinea_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			sahel_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			niger_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			guinea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			army_size = 150
+		}
+		effect = {
+			add_mil_power = 100
+		}
+	}
 	mr_mali_exploration_first = {
 		icon = mission_ne_great_lakes_conquest
 		position = 8
@@ -1800,7 +2013,7 @@ branch_3 = {
 			else_if = {
 				limit = {
 					NOT = {
-						and = {
+						AND = {
 							bornu_area = {
 								type = all
 								owned_by = ROOT
@@ -1886,7 +2099,7 @@ branch_3 = {
 		required_missions = {
 			mr_mali_farma_fifth
 		}
-		position = 7
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				area = kurdufan_area

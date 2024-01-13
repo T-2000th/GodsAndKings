@@ -41,6 +41,11 @@ mr_mali_farma_fifth_title: "The Battle for the Sahel"
 mr_mali_northeast_first_title: "Defend Our Eastern Flank"
 mr_mali_northeast_second_title: "Follow the Caravans"
 
+mr_mali_yoruba_first_title: "End the Mossi Raids"
+mr_mali_yoruba_second_title: "Surround the Yoruba Empire"
+mr_mali_yoruba_third_title: "To the River's End"
+mr_mali_yoruba_fourth_title: "Patronize the Ooni"
+mr_mali_yoruba_fifth_title: "Hegemon of West Africa"
 
 mr_mali_sahara_first_title: "Shore of the Sahara"
 mr_mali_sahara_second_title: "Restore Ghanaian Cities"
@@ -155,6 +160,8 @@ lower_niger_river_camps: "Lower Niger Camps"
 niger_ports: "Ports of Oya"
 futa_jallon_bridge: "The Great Futa Jallon Bridge"
 upper_niger_river_farms: "Farmland of the Empire"
+recruit_mossi_raiders: "Recruiting Mossi Raiders"
+invasion_of_yorubaland: "Siege of Benin"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"

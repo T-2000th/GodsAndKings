@@ -11,6 +11,12 @@ saharan_fortress = {
 restoring_walata = {
 	local_development_cost = -0.30
 }
+recruit_mossi_raiders = {
+	loot_amount = 0.25
+}
+invasion_of_yorubaland = {
+	siege_ability = 0.10
+}
 expanded_colonial_efforts = {
 	local_colony_cost_modifier = -0.5
 	local_colonial_growth = 25
