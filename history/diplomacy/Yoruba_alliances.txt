@@ -1,0 +1,19 @@
+
+vassal = {
+	first = YRE
+	second = DGB
+	start_date = 1444.1.1
+	end_date = 1502.1.1
+}
+vassal = {
+	first = YRE
+	second = NUP
+	start_date = 1444.1.1
+	end_date = 1502.1.1
+}
+vassal = {
+	first = YRE
+	second = DAH
+	start_date = 1444.1.1
+	end_date = 1502.1.1
+}

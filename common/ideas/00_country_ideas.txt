@@ -17260,7 +17260,7 @@ OYO_ideas = {
 	}
 
 	trigger = {
-		tag = OYO
+		tag = YRE
 	}
 	free = yes
 

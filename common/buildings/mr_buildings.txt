@@ -208,6 +208,7 @@ mrb_jewler = {
 		OR = {
 			trade_goods = ivory
 			trade_goods = gems
+			trade_goods = glass
 		}
 	}
 	
