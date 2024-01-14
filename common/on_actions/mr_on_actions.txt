@@ -777,10 +777,16 @@ on_bi_yearly_pulse_3 = {
 		christian_school_events.21 #pick reformed denomination
 		MRestate_privileges_and_agendas_events.5
 		promoting_art_events.2	#Art finished!
+		mrCrusaderEvents.13 # Clean up province modifiers
 	}
 }
 
 # province
+on_province_owner_change = {
+	events = {
+		kannauj.1			#Fall of the current Maharaja
+	}	
+}	
 on_province_religion_converted = {
 	if = {
 		limit = {
@@ -1584,4 +1590,15 @@ on_raid_coast = {
 			}
 		}
 	}
+}
+# country
+on_parliament_debate_succeeded = {
+    on_parliament_debate_succeeded_effect = yes
+    increase_issue_passed_counter = yes
+    if = {
+        limit = {
+            mission_completed = nav_expanded_cortes
+        }
+        change_government_reform_progress = 25
+    }
 }

@@ -1,0 +1,8 @@
+﻿l_english:
+#events
+ kannauj.EVTNAME1: "The Fall of the [From.Dynasty.GetName] Empire"
+ kannauj.EVTDESC1: " "
+ kannauj.1.db: "With the fall of Kanauj [new_maharaja.GetName] has taken control of the Rajput Empire. Long live the Maharaja of [new_maharaja.GetName]!"
+ kannauj.1.dc: "With the fall of Kannauj the Emperor of the Rajputs is no longer recognised by the Princes. The dynasty has lost all relevance and the Samantas will no longer pretend to honor the wishes of the old Maharaja."
+ kannauj.EVTOPTA1: "We will prevail!"
+ claiming_the_maharaja_tooltip: "We will become the new Maharaja of the Rajput Empire."

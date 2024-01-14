@@ -1038,6 +1038,7 @@ new_world_i = {
 			continent = asia
 			continent = africa
 		}
+		is_city = yes
 		has_port = yes
 		is_island = no
 		is_state = yes
@@ -1252,13 +1253,12 @@ printing_press = {
 			is_capital = yes
 			trade_goods = paper
 		}
-		# OR = {
-			# religion = protestant
-			# religion = reformed
-			# region = north_german_region
-			# region = south_german_region
-		# }
-
+		is_city = yes
+		OR = { # Don't spawn in Oceania or Reisland
+			continent = europe
+			continent = asia
+			continent = africa
+		}
 	}
 	start_chance = 5		#in 100 for when a province can_start
 	

@@ -124,6 +124,7 @@ monarchy = {
 				shan_kingdom_reform
 				halych_government
 				samanta_vassal_reform
+				indep_samanta_reform
 				maharajadhiraja_reform
 				kingdom_of_light_reform
 				empire_of_light_reform
@@ -394,6 +395,7 @@ monarchy = {
 				vodka_of_the_crown_reform
 				jap_gokaido_reform
 				thalassocracy_reform
+				thalassocracy_reform_basque
 				royal_charters_reform
 				commercial_trade_empire_reform
 			}
