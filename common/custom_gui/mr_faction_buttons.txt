@@ -1,0 +1,48 @@
+custom_button = {
+    name = faction_b_1 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_nubians
+		tag = EGY
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = cantuse_because_egypt_1
+			always = no
+		}
+	} 
+	effect = {
+	}
+	tooltip = "Boost"
+}
+custom_button = {
+    name = faction_b_2 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_berbers
+		tag = EGY
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = cantuse_because_egypt_2
+			always = no
+		}
+	} 
+	effect = {
+	}
+	tooltip = "Boost"
+}
+custom_button = {
+    name = faction_b_3 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_mamluks
+		tag = EGY
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = cantuse_because_egypt_3
+			always = no
+		}
+	} 
+	effect = {
+	}
+	tooltip = "Boost"
+}
