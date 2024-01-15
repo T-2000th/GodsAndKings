@@ -301,6 +301,7 @@ estate_burghers = {
 		estate_burghers_control_over_the_coinage_catalonia
 		estate_burghers_crusaders_grant_italian_quarter
 		estate_merchants_agojio_clearing
+		estate_burghers_savannah_expansion
 		#Africa
 		estate_burghers_crusader_frontiers
 		estate_burghers_development_of_the_maghreb

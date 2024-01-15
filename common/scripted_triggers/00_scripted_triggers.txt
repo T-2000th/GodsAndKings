@@ -4599,3 +4599,4 @@ total_non_estate_disasters_completed = {
 			value = $value$
 		}
 	}
+}

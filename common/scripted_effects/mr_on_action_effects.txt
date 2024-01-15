@@ -251,6 +251,110 @@ on_province_owner_change_estate_privileges_mr_effect = {
 		}
 		remove_province_modifier = clearing_the_agojio
 	}
+	if = {
+		limit = {
+			has_terrain = steppe
+			owner = {
+				has_estate_privilege = estate_burghers_savannah_expansion
+			}
+			NOT = {
+				has_province_modifier = estate_burghers_savannah_expansion_steppe
+			}
+		}
+		add_province_modifier = {
+			name = estate_burghers_savannah_expansion_steppe
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_terrain = savannah
+			owner = {
+				has_estate_privilege = estate_burghers_savannah_expansion
+			}
+			NOT = {
+				has_province_modifier = estate_burghers_savannah_expansion_savannah
+			}
+		}
+		add_province_modifier = {
+			name = estate_burghers_savannah_expansion_savannah
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_climate = arid
+			owner = {
+				has_estate_privilege = estate_burghers_savannah_expansion
+				mission_completed = mr_mali_rivers_second
+			}
+			NOT = {
+				has_province_modifier = estate_burghers_savannah_expansion_arid
+			}
+		}
+		add_province_modifier = {
+			name = estate_burghers_savannah_expansion_arid
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_climate = tropical
+			owner = {
+				has_estate_privilege = estate_burghers_savannah_expansion
+				mission_completed = mr_mali_rivers_third
+			}
+			NOT = {
+				has_province_modifier = estate_burghers_savannah_expansion_tropical
+			}
+		}
+		add_province_modifier = {
+			name = estate_burghers_savannah_expansion_tropical
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = estate_burghers_savannah_expansion_savannah
+				has_province_modifier = estate_burghers_savannah_expansion_steppe
+				has_province_modifier = estate_burghers_savannah_expansion_arid
+				has_province_modifier = estate_burghers_savannah_expansion_tropical
+			}
+			NOT = {
+				owner = {
+					has_estate_privilege = estate_burghers_savannah_expansion
+				}
+			}
+		}
+		remove_province_modifier = estate_burghers_savannah_expansion_savannah
+		remove_province_modifier = estate_burghers_savannah_expansion_steppe
+		remove_province_modifier = estate_burghers_savannah_expansion_arid
+		remove_province_modifier = estate_burghers_savannah_expansion_tropical
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_dhmimmi_ooni
+			}
+			religion_group = african_pagan_group
+		}
+		add_province_modifier = {
+			name = estate_dhimmi_pagan_production
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_dhimmi_pagan_production
+			NOT = {
+				owner = {
+					has_estate_privilege = estate_dhmimmi_ooni
+				}
+			}
+		}
+		remove_province_modifier = estate_dhimmi_pagan_production
+	}
 }
 
 #for elite unit xp

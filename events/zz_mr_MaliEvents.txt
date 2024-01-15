@@ -817,6 +817,33 @@ country_event = {
 		add_dip_power = 100
 	}
 }
+country_event = {
+	id = mr_MaliFlavor.116
+	title = mr_MaliFlavor.116.t
+	desc = mr_MaliFlavor.116.d
+	picture = MUSLIM_PAGAN_DISPUTE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.116.a
+		create_subject = {
+			subject_type = core_farma_subject
+			who = YRE
+		}
+		YRE = {
+			kill_ruler = yes
+			define_ruler = {
+				dynasty = "Ooni"
+			}
+			change_country_color = {
+				country = ROOT
+			}
+			add_liberty_desire = -35
+			farma_dynamic_name_change_effect = yes
+		}
+	}
+}
 country_event = { #The Court is Split!
 	id = mr_MaliFlavor.12
 	title = mr_MaliFlavor.12.t

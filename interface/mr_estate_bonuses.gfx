@@ -8,5 +8,9 @@ spriteTypes = {
 		name = "GFX_estate_nobles_malian_farmas"
 		texturefile = "gfx/interface/estate_nobles_malian_farmas.dds"
 	}	
+	spriteType = {
+		name = "GFX_estate_dhimmi_mali_ooni"
+		texturefile = "gfx/interface/estate_dhimmi_mali_ooni.dds"
+	}	
 	
 }

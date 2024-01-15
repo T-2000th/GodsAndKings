@@ -195,3 +195,45 @@ lower_niger_river_camps = {
 	local_state_maintenance_modifier = -0.10
 	local_production_efficiency = 0.075
 }
+estate_burghers_savannah_expansion_savannah = {
+	local_development_cost = -0.1
+}
+estate_burghers_savannah_expansion_steppe = {
+	local_development_cost = -0.15
+}
+loyalty_triangle = {
+	reduced_liberty_desire_on_other_continent = 10
+	global_tariffs = 0.15
+}
+triangle_trade_boon_mali = {
+	local_governing_cost = -0.15
+}
+goods_produced_boon_mali = {
+	trade_goods_size = 0.25
+}
+estate_burghers_savannah_expansion_arid = {
+	local_development_cost = -0.05
+}
+estate_burghers_savannah_expansion_tropical = {
+	local_development_cost = -0.05
+}
+bambuk_mine = {
+	local_gold_depletion_chance_modifier = -1
+}
+gold_mansa = {
+	inflation_reduction = 0.2
+}
+the_golden_country = {
+	development_cost_modifier = -0.05
+}
+master_of_the_golden_country = {
+	all_power_cost = -0.025
+}
+estate_dhimmi_pagan_production = {
+	trade_goods_size_modifier = 0.15
+}
+hegemon_of_africa_MAL = {
+	reduced_liberty_desire_on_same_continent = 25
+	vassal_income = 0.25
+	prestige_decay = -0.02
+}

@@ -88,6 +88,12 @@ mr_MaliFlavor.115.d: "The Sultans of Kanem have been brought to heel - their era
 mr_MaliFlavor.115.a: "Remove the Sayfawa, install a Keita!"
 mr_MaliFlavor.115.b: "We shall let sleeping dogs lie, for now."
 
+
+mr_MaliFlavor.116.t: "The Ooni of Ife Ile"
+mr_MaliFlavor.116.d: "The Ooni of the Yoruba are spiritual leaders within their community. Prior to our conquest of the region, they had immense influence over their population, in both the areas of religion and the realm of politics. They are said to have direct communication with the various gods and spirits that inhabit the world, and are looked to for guidance and leadership. We, of course, have no doubt that this is all a folly of the heathens. Only those who have read and mastered the words of the Prophet can give advice that will lead a Mansa to glory and power - but we are not going to disrupt their traditional practice, far from it. By placing an Ooni at the head of the Ife-Ile Farma, we shall quell any potential uprisings within the land, saving us the headache of needing to put down revolts from would-be liberators. We shall respect their traditions, allowing them to continue their practices under a watchful eye - a good Mansa is generous, afterall."
+mr_MaliFlavor.116.a: "Bring them into the fold!"
+
+
 #Malian Faction events
 mr_MaliFlavor.12.t: "The Court is Split"
 mr_MaliFlavor.12.a: "We shall go to the Council for Support!"

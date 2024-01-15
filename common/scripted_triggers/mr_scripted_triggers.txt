@@ -450,6 +450,25 @@ is_staple_crop = {
 	trade_goods = maize
 }
 
+is_upgraded_good = {
+	custom_trigger_tooltip = {
+		tooltip = is_upgrade_good
+		trade_goods = alcohol
+		trade_goods = honey_wine
+		trade_goods = rum
+		trade_goods = rice_wine
+		trade_goods = military_supplies
+		trade_goods = jewelry
+		trade_goods = cheese
+		trade_goods = marble
+		trade_goods = steel
+		trade_goods = gunpowder
+		trade_goods = chocolate
+		trade_goods = perfume
+	}	
+}
+
+
 is_greek = {
 	OR = {
 		primary_culture = greek

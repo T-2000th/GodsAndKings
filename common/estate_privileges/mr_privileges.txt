@@ -1373,3 +1373,165 @@ estate_nobles_malian_farmas = {
 		factor = 1
 	}
 }
+estate_burghers_savannah_expansion = {
+	icon = privilege_dev_cost_forest
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.05
+	loyalty = 0.05
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_burghers_savannah_expansion }
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_savannah_expansion_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = savannah
+				}
+				add_province_modifier = {
+					name = estate_burghers_savannah_expansion_savannah
+					duration = -1
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_terrain = steppe
+				}
+				add_province_modifier = {
+					name = estate_burghers_savannah_expansion_steppe
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				mission_completed = mr_mali_rivers_second
+			}
+			custom_tooltip = estate_burghers_savannah_expansion_bonus
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_climate = arid
+					}
+					add_province_modifier = {
+						name = estate_burghers_savannah_expansion_arid
+						duration = -1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				mission_completed = mr_mali_rivers_third
+			}
+			custom_tooltip = estate_burghers_savannah_expansion_bonus_1
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_climate = tropical
+					}
+					add_province_modifier = {
+						name = estate_burghers_savannah_expansion_tropical
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_forest_expansion_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_burghers_savannah_expansion_savannah
+						has_province_modifier = estate_burghers_savannah_expansion_steppe
+						has_province_modifier = estate_burghers_savannah_expansion_arid
+						has_province_modifier = estate_burghers_savannah_expansion_tropical
+					}
+				}
+				remove_province_modifier = estate_burghers_savannah_expansion_savannah
+				remove_province_modifier = estate_burghers_savannah_expansion_steppe
+				remove_province_modifier = estate_burghers_savannah_expansion_arid
+				remove_province_modifier = estate_burghers_savannah_expansion_tropical
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = savannah
+					has_terrain = steppe
+				}
+				value = 8
+			}
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+#estate_nobles_mali_ooni
+estate_dhmimmi_ooni = {
+	icon = GFX_estate_dhimmi_mali_ooni
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.05
+	loyalty = 0.10
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_dhmimmi_ooni }
+		any_owned_province = {
+			religion_group = african_pagan_group
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_dhimmi_ooni_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion_group = african_pagan_group
+				}
+				add_province_modifier = {
+					name = estate_dhimmi_pagan_production
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_dhimmi_ooni_rt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_dhimmi_pagan_production
+				}
+				remove_province_modifier = estate_dhimmi_pagan_production
+			}
+		}
+	}
+	benefits = {
+		tolerance_of_heathens_capacity = 1
+		tolerance_heathen = 1
+		relation_with_heathens = 25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

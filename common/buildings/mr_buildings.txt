@@ -33,6 +33,36 @@ mrb_brewery = {
 				change_trade_goods = rum
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -53,6 +83,27 @@ mrb_brewery = {
 				change_trade_goods = grain
 			}
 		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
+		}
+		
     }
 
 	on_obsolete = { }
@@ -82,6 +133,36 @@ mrb_creamery = {
 				change_trade_goods = cheese
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -90,6 +171,26 @@ mrb_creamery = {
 				limit = { trade_goods = cheese }
 				change_trade_goods = livestock
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -129,6 +230,52 @@ mrb_textileprocessor = {
 				set_province_flag = was_cotton_province
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					tag = MAL
+					NOT = {
+						mission_completed = mr_mali_trade_goods_second
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mali_textiles_1
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -146,6 +293,26 @@ mrb_textileprocessor = {
 			else_if = {
 				change_trade_goods = wool
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -176,6 +343,36 @@ mrb_steelmill = {
 				change_trade_goods = steel
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -189,6 +386,26 @@ mrb_steelmill = {
 				remove_building = mrb_gunsmith
 				change_trade_goods = iron
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -229,6 +446,58 @@ mrb_jewler = {
 				set_province_flag = was_gems_province
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					tag = MAL
+					NOT = {
+						mission_completed = mr_mali_trade_goods_second
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mali_textiles_2
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
+		}
     }
 
 	on_destroyed = {
@@ -246,6 +515,26 @@ mrb_jewler = {
 			else_if = {
 				change_trade_goods = gems
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -276,6 +565,42 @@ mrb_confectionary = {
 				change_trade_goods = chocolate
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
+		}
     }
 
 	on_destroyed = {
@@ -284,6 +609,34 @@ mrb_confectionary = {
 				limit = { trade_goods = chocolate }
 				change_trade_goods = cocoa
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -314,6 +667,42 @@ mrb_lumberyard = {
 				change_trade_goods = naval_supplies
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
+		}
     }
 
 	on_destroyed = {
@@ -322,6 +711,26 @@ mrb_lumberyard = {
 				limit = { trade_goods = naval_supplies }
 				change_trade_goods = lumber
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -363,13 +772,48 @@ mrb_winery = {
 					owner = { has_estate_privilege = estate_nobles_rice_wine }
 					has_province_modifier = rice_bonus_prod
 				}
-				remove_province_modifier = rice_bonus_prod
 				add_province_modifier = { 
 					name = rice_wine_bonus_prod
 					duration = -1
 					hidden = yes
 				}
 			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -392,12 +836,27 @@ mrb_winery = {
 					has_province_modifier = rice_wine_bonus_prod
 				}
 				remove_province_modifier = rice_wine_bonus_prod
-				add_province_modifier = { 
-					name = rice_bonus_prod
-					duration = -1
-					hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
 				}
 			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -428,6 +887,36 @@ mrb_powdermill = {
 				change_trade_goods = gunpowder
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -436,6 +925,26 @@ mrb_powdermill = {
 				limit = { trade_goods = gunpowder }
 				change_trade_goods = sulfur
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
 		}
     }
 
@@ -467,6 +976,36 @@ mrb_gunsmith = {
 				change_trade_goods = military_supplies
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_first
+				}
+			}
+			add_province_modifier = {
+				name = triangle_trade_boon_mali
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_third
+				}
+			}
+			add_province_modifier = {
+				name = goods_produced_boon_mali
+				duration = -1
+			}
+		}
     }
 
 	on_destroyed = {
@@ -475,6 +1014,26 @@ mrb_gunsmith = {
 				limit = { trade_goods = military_supplies }
 				change_trade_goods = steel
 			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = triangle_trade_boon_mali
+			}
+			remove_province_modifier = triangle_trade_boon_mali
+		}
+		if = {
+			limit = {
+				has_province_modifier = goods_produced_boon_mali
+			}
+			remove_province_modifier = goods_produced_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = mr_mali_trade_goods_second
+				}
+			}
+			add_base_production = -1
 		}
     }
 

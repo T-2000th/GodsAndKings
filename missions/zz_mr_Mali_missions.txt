@@ -787,8 +787,38 @@ branch_2 = {
 			}
 		}
 		effect = {
-			1146 = {
-				add_base_tax = 3
+			unlock_estate_privilege = {
+				estate_privilege = estate_dhmimmi_ooni
+			}
+			if = {
+				limit = {
+					YRE = {
+						is_subject_of_type = farma_subject
+					}
+				}
+				custom_tooltip = yoruba_event_yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						YRE = {
+							is_subject_of_type = farma_subject
+						}
+					}
+				}
+				custom_tooltip = yoruba_event_no
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						YRE = {
+							is_subject_of_type = farma_subject
+						}
+					}
+					country_event = {
+						id = mr_MaliFlavor.116
+					}
+				}
 			}
 		}
 	}
@@ -823,10 +853,25 @@ branch_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
-			army_size = 150
 		}
 		effect = {
-			add_mil_power = 100
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 50
+				}
+			}
+			add_country_modifier = {
+				name = hegemon_of_africa_MAL
+				duration = -1
+			}
 		}
 	}
 	mr_mali_exploration_first = {
@@ -2586,6 +2631,165 @@ branch_3 = {
 			}
 		}
 	}
+	mr_mali_trade_goods_first = {
+		icon = mission_the_triangle_trade
+		position = 15
+		required_missions = {
+			mr_mali_exploration_eleventh
+			mr_mali_exploration_ninth
+			mr_mali_exploration_sixth
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 1531
+					NOT = {
+						1531 = { #Bilenmani
+							trade_share = {
+								country = MAL
+								share = 50
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2935
+					NOT = {
+						2935 = { #Agojio
+							trade_share = {
+								country = MAL
+								share = 50
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2249
+					NOT = {
+						2935 = { #Agojio
+							trade_share = {
+								country = MAL
+								share = 50
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2249
+					NOT = {
+						2249 = { #Ivory Coast
+							trade_node_value = 25
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			1531 = { #Bilenmani
+				trade_share = {
+					country = MAL
+					share = 50
+				}
+			}
+			2935 = { #Agojio
+				trade_share = {
+					country = MAL
+					share = 50
+				}
+			}
+			2249 = { #Ivory Coast
+					trade_node_value = 25
+			}
+		}
+		effect = {
+			custom_tooltip = all_upgrade_buildings_MAL
+			custom_tooltip = " "
+			add_country_modifier = {
+				name = loyalty_triangle
+				duration = 10950
+			}
+		}
+	}
+	mr_mali_gold_first = {
+		position = 16
+		icon = mission_dalaskogen
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1120
+				province_id = 2240
+				province_id = 5204
+				province_id = 2252
+			}
+			local_autonomy = 1
+		}
+		trigger = {
+			1120 = {
+				owned_by = ROOT
+				NOT = {
+					local_autonomy = 1
+				}
+			}
+			2240 = {
+				owned_by = ROOT
+				NOT = {
+					local_autonomy = 1
+				}
+			}
+			5204 = {
+				owned_by = ROOT
+				NOT = {
+					local_autonomy = 1
+				}
+			}
+			2252 = {
+				owned_by = ROOT
+				NOT = {
+					local_autonomy = 1
+				}
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_control_over_the_mint
+			}
+			custom_tooltip = " "
+			1120 = {
+				add_province_modifier = {
+					name = bambuk_mine
+					duration = -1
+				}
+			}
+		}
+	}
+	mr_mali_gold_second = {
+		position = 17
+		icon = mission_high_income
+		required_missions = {
+			mr_mali_gold_first
+		}
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			trading_part = {
+				trade_goods = gold
+				value = 0.25
+			}
+			NOT = {
+				inflation = 5
+			}
+			employed_advisor = {
+				category = ADM 	
+			}
+		}
+		effect = {
+			custom_tooltip = doubles_chance_of_finding_gold #Need to Test
+			add_ruler_modifier = {
+				name = gold_mansa
+				duration = -1
+			}
+		}
+	}
 }
 branch_4 = {
 	slot = 4
@@ -2867,7 +3071,174 @@ branch_4 = {
 			}
 		}
 	}
-
+	mr_mali_trade_goods_second = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 15
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				trade_goods = ivory
+				trade_goods = wool
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = have_mali_variable_1
+				check_variable = {
+					value = 2
+					which = mali_textiles_1
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = have_mali_variable_2
+				check_variable = {
+					value = 2
+					which = mali_textiles_2
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			custom_tooltip = lower_dev_requirement
+		}
+	}
+	mr_mali_trade_goods_third = {
+		icon = mission_mal_riches_of_trade
+		position = 16
+		required_missions = {
+			mr_mali_trade_goods_first
+			mr_mali_trade_goods_second
+		}
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = cocoa
+				trade_goods = sugar
+				trade_goods = tropical_wood
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = cocoa_rice_tropical_wood
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					trade_goods = cocoa
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					value = 1
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					trade_goods = sugar
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					value = 1
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					trade_goods = tropical_wood
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+					value = 1
+				}
+			}
+			num_of_owned_provinces_with = {
+				is_upgraded_good = no
+				NOT = {
+					trade_goods = gold
+				}
+				continent = africa
+				development = 7
+				has_trade_building_trigger = yes
+				value = 3
+			}
+		}
+		effect = {
+			custom_tooltip = random_province_trade_change
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						is_upgraded_good = no
+						NOT = {
+							trade_goods = gold
+						}
+						continent = africa
+						development = 7
+						has_trade_building_trigger = yes
+					}
+					change_trade_goods = chocolate
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						is_upgraded_good = no
+						NOT = {
+							trade_goods = gold
+						}
+						continent = africa
+						development = 7
+						has_trade_building_trigger = yes
+					}
+					change_trade_goods = rum
+					add_base_production = 1
+				}
+				random_owned_province = {
+					limit = {
+						is_upgraded_good = no
+						NOT = {
+							trade_goods = gold
+						}
+						continent = africa
+						development = 7
+						has_trade_building_trigger = yes
+					}
+					change_trade_goods = naval_supplies
+					add_base_production = 1
+				}
+			}
+		}
+	}
+	mr_mali_golden = {
+		icon = mission_mali_gold_country
+		required_missions = {
+			mr_mali_rivers_third
+			mr_mali_gold_second
+			mr_mali_trade_goods_third
+		}
+		position = 18
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				monthly_income = MAL
+			}
+		}
+		trigger = {
+			monthly_income = 250
+			NOT = {
+				any_country = {
+					monthly_income = MAL
+				}
+			}
+			2249 = { #Niani
+				is_strongest_trade_power = PREV
+				highest_value_trade_node = yes
+			}
+		}
+		effect = {
+			add_ruler_modifier = {
+				name = master_of_the_golden_country
+				duration = -1
+			}
+			add_country_modifier = {
+				name = the_golden_country
+				duration = 18250
+			}
+		}
+	}
 }
 branch_5 = {
 	slot = 5
@@ -2947,8 +3318,10 @@ branch_5 = {
 				province_id = 5220
 			}
 			NOT = {
+				AND = {
 					has_trade_building_trigger = yes
 					development = 10
+				}	
 			}
 		}
 		trigger = {
@@ -3066,6 +3439,9 @@ branch_5 = {
 					duration = -1
 				}
 			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_savannah_expansion
+			}
 		}
 	}
 	mr_mali_rivers_second = {
@@ -3115,6 +3491,7 @@ branch_5 = {
 					duration = -1
 				}
 			}
+			custom_tooltip = estate_privilege_buff_savannah_1_tt
 		}
 	}
 	mr_mali_rivers_third = {
@@ -3180,6 +3557,7 @@ branch_5 = {
 					duration = -1
 				}
 			}
+			custom_tooltip = estate_privilege_buff_savannah_2_tt
 			hidden_effect = {
 				5187 = {
 					add_province_modifier = {

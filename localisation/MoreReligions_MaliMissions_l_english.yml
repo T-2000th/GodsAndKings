@@ -54,6 +54,13 @@ mr_mali_rivers_first_title: "The Ports of the Senegal"
 mr_mali_rivers_second_title: "Develop the Jeliba"
 mr_mali_rivers_third_title: "The Great River Bends"
 
+mr_mali_trade_goods_first_title: "The Triangle Trade"
+mr_mali_trade_goods_second_title: "Mandika Craftsmen"
+mr_mali_trade_goods_third_title: "A Changing Industry"
+mr_mali_gold_first_title: "Secure the Mines"
+mr_mali_gold_second_title: "Corner the Market"
+mr_mali_golden_title: "The Golden Country"
+
 #Mission Descriptions
 
 #Tooltips 
@@ -121,6 +128,20 @@ all_provinces_in_katsina_hausa_zazzau_transfer: "All provinces in the §YKatsina
 GRE_permanent_power_projection: "Greek Power Projection"
 MAL_permanent_power_projection: "Defeated Kanem"
 benin_warri_nun_get_tt: "Benin, Warri, and Nun will get the following:"
+all_upgrade_buildings_MAL: "Upon completing this mission, building a §YGoods Upgrade§! Building will grant §G-20%§! Governing Cost in the province."
+have_mali_variable_1: "Upgrade a §YCloth§! Trade Goods province at least twice. Current: §T[Root.have_mali_variable_1.GetValue]§!" 
+have_mali_variable_2: "Upgrade an §YIvory§! Trade Goods province at least twice. Current: §T[Root.have_mali_variable_2.GetValue]§!"
+lower_dev_requirement: "\nUpon completing this mission, building a §YGoods Upgrade§! Building will grant §G+1§! Base Production in the province."
+is_upgrade_good: "Has an Upgraded Trade Goods."
+cocoa_rice_tropical_wood: "Have three §YNew World§! province with Sugar, Tropical Wood, and Cocoa."
+random_province_trade_change: "Three random §YOld World§! Provinces that meet the requirement will have their Trade Goods changed to §YChocolate§!, §YRum§!, and §YNaval Supplies§!.\n\nUpon completing this mission, building a §YGoods Upgrade§! Building will grant §G+0.25§! Goods Produced in the province."
+estate_privilege_buff_savannah_1_tt: "This will upgrade the Estate Privilege §YSavannah Expansion§! with §G-5%§! Development Cost in §YArid§! Climate Provinces."
+estate_privilege_buff_savannah_2_tt: "This will upgrade the Estate Privilege §YSavannah Expansion§! with §G-5%§! Development Cost in §YTropical§! Climate Provinces."
+doubles_chance_of_finding_gold: "We will now have doubled chances of finding Gold or Silver in the New World.\n"
+yoruba_event_yes: "\n£yes£If we complete this event with @YRE §YYoruba§! as a Farma, we will get the event §YThe Ooni of Ife Ile§!."
+yoruba_event_no: "\n£no£If we complete this event with @YRE §YYoruba§! as a Farma, we will get the event §YThe Ooni of Ife Ile§!."
+estate_dhmimmi_ooni: "Patron of Traditional Faiths"
+estate_dhmimmi_ooni_desc: "The traditions of our people range and vary in scope. From the Amma of the Dogon, to the Vodun of the Fon, and even the Orisha of the Yoruba, we have found a way to recognize and protect those various traditions within our great state."
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -162,6 +183,14 @@ futa_jallon_bridge: "The Great Futa Jallon Bridge"
 upper_niger_river_farms: "Farmland of the Empire"
 recruit_mossi_raiders: "Recruiting Mossi Raiders"
 invasion_of_yorubaland: "Siege of Benin"
+loyalty_triangle: "The Loyal Subjects"
+triangle_trade_boon_mali: "The Triangle Trade"
+goods_produced_boon_mali: "Malian Goods Upgrades"
+bambuk_mine: "Bambuk Secured"
+gold_mansa: "Mansa of Gold"
+master_of_the_golden_country: "The Great Golden Mansa"
+the_golden_country: "Economic Powerhouse"
+hegemon_of_africa_MAL: "Hegemon of Africa"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -191,6 +220,7 @@ mr_guinala_academy: "Guinala Naval Academy"
 malian_treasure_fleets: "Malian Treasure Fleets"
 malian_treasure_fleets_desc: "Mali and its massive colonial holdings require a strong and powerful fleet to guide them through the harsh Atlantic ocean. To ensure that the Malian Empire gains the great treasures of the new world, strong admirals with powerful ships protect our fleets, making sure that we get the riches and rewards of the Reislands."
 is_in_guinea_area: "Is a §YGuinean§! Province."
+
 
 
 #Cbs
@@ -229,6 +259,25 @@ malian_merchants_FACTION_DESC: "The Berber merchants of North Africa and beyond 
 malian_merchants_influence: "Foreign Merchant Influence"
 favor_the_guild_tt: "\nWe will ask the faction for support, in exchange they shall request we fulfill their wishes.\n"
 
+
+#Estate Privileges
+estate_burghers_savannah_expansion: "Savannah Expansion"
+unlock_privilege_estate_burghers_savannah_expansion_tt: "This will unlock the §YSavannah Expansion§! Merchant Guild Estate Privilege."
+unlock_privilege_estate_dhmimmi_ooni_tt: "This will unlock the §YPatron of Traditional Faith§! Dhimmi Estate Privilege."
+estate_burghers_savannah_expansion_desc: "The Savannah is infamously difficult to tame. Rains are inconsistent and disease and heat can destroy a crop. With our recent rennovations and expansions of the great rivers, we shall expand our farmland and remove this uncertainty around weather and replae it with bushels of grain, spice, and ivory."
+estate_burghers_savannah_expansion_gt: "Every owned Savannah province will get the province modifier §YSavannah Expansion§! until revoked, granting §G-10%§! Development Cost\n\nEvery owned Steppe province will get the province modifier §YSavannah Expansion§! until revoked, granting §G-15%§! Development Cost"
+estate_burghers_savannah_expansion_rt: "Every owned Savannah province will remove the province modifier §YSavannah Expansion§!, granting §G+10%§! Development Cost\n\nEvery owned Steppe province will remove the province modifier §YSavannah Expansion§! until revoked, granting §G+15%§! Development Cost"
+estate_dhimmi_ooni_gt: "Every owned §YAfrican Pagan§! Province will gain §G+10%§! Goods Produced until revoked."
+estate_dhimmi_ooni_rt: "Every owned §YAfrican Pagan§! Province will lose §G+10%§! Goods Produced."
+estate_burghers_savannah_expansion_steppe: "Savannah Expansion"
+estate_burghers_savannah_expansion_savannah: "Savannah Expansion"
+estate_burghers_savannah_expansion_bonus: "Every province with Arid Climate will gain §Y-5%§! Development Cost."
+estate_burghers_savannah_expansion_arid: "Battling the Sahel"
+estate_burghers_savannah_expansion_bonus_2: "Every province with Tropical Climate will gain §Y-5%§! Development Cost."
+estate_burghers_savannah_expansion_tropical: "Battling the Forests"
+estate_dhimmi_pagan_production: "African Pagan Productions"
+
+
 #Province Groups
 upper_niger_river_region: "Upper Niger River"
 lower_niger_river_region: "Lower Niger River"
@@ -245,3 +294,5 @@ FR4: "Hausa-Farma"
 FR4_ADJ: "Hausa"
 FR5: "Tchad-Farma"
 FR5_ADJ: "Tchad"
+FR6: "Ife-Farma"
+FR6_ADK: "Ife"

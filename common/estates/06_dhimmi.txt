@@ -145,6 +145,7 @@ estate_dhimmi = {
 		#estate_dhimmi_military_service
 		estate_dhimmi_protected_communities
 		estate_dhimmi_contribution_demand
+		estate_dhmimmi_ooni
 		# Made for Africa.
 		estate_dhimmi_promote_multicultural_positions
 	}

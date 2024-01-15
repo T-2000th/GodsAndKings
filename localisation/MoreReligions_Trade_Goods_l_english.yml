@@ -16,7 +16,7 @@
  building_mrb_apiary: "Apiary"
  building_mrb_orchard: "Orchard"
  building_mrb_quarry: "Quarry"
- GOODS_CHANGE_BUILDINGS_REQ: "§GRequires\n§Y8§! Base Prod.§!"
+ GOODS_CHANGE_BUILDINGS_REQ: "§GRequires\n§Y8§! Base Prod.§!"  
 
  alcohol: "Alcohol"
  alcoholDESC: "Across both the old world and new, through the process of fermentation and distillation, Alcohol is quite the popular good. While it can lead to problems with addiction and overdose, the relative safety of the beverage has made even more popular than water in some areas."
