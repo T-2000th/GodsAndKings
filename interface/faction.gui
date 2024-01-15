@@ -74,6 +74,28 @@ guiTypes = {
 				buttonFont = "vic_18"
 				Orientation = "CENTER"	
 				buttonText = "Faction Quest"
+		}	
+			guiButtonType =
+		{
+			name ="faction_a_2"
+			quadTextureSprite= "GFX_standard_button_105"
+			position = { x = 158 y = 70 }
+			scripted = yes
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			Orientation = "CENTER"	
+			buttonText = "Faction Quest"
+		}		
+		guiButtonType =
+		{
+			name ="faction_a_3"
+			quadTextureSprite= "GFX_standard_button_105"
+			position = { x = 158 y = 238 }
+			scripted = yes
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"
+			Orientation = "CENTER"	
+			buttonText = "Faction Quest"
 		}		
 	}
 

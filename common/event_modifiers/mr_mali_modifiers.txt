@@ -237,3 +237,21 @@ hegemon_of_africa_MAL = {
 	vassal_income = 0.25
 	prestige_decay = -0.02
 }
+task_d_win = {
+	land_morale = 0.1
+}
+task_e_win = {
+	infantry_power = 0.10
+}
+task_f_win = {
+	build_cost = -0.10
+}
+task_g_win = {
+	global_foreign_trade_power = 0.15
+}
+task_h_win = {
+	global_tax_modifier = 0.10
+}
+task_i_win = {
+	colonist_placement_chance = 0.05	
+}

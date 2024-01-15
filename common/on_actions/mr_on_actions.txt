@@ -251,6 +251,43 @@ on_battle_won_country = {
 			value = 1
 		}
 	}
+	if = {
+		limit = {
+			has_ruler_flag = task_d
+			NOT = {
+				check_variable = {
+					which = battle_counter_GUILDS
+					value = 9
+				}
+			}
+		}
+		change_variable = {
+			which = battle_counter_GUILDS
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_d
+			check_variable = {
+				which = battle_counter_GUILDS
+				value = 9
+			}
+			NOT = {
+				check_variable = {
+					which = battle_counter_GUILDS
+					value = 10
+				}
+			}
+		}
+		change_variable = {
+			which = battle_counter_GUILDS
+			value = 1
+		}
+		country_event = {
+			id = mr_MaliFlavor.16
+		}
+	}
 }
 on_battle_lost_country = {
 	if = {
@@ -333,8 +370,76 @@ on_battle_won_unit = {
 			value = 1
 		}
 	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_ruler_flag = task_e
+				NOT = {
+					check_variable = {
+						which = ruler_counter_GUILDS
+						value = 5
+					}
+				}
+			}
+			is_ruler_commanding_unit = yes
+		}
+		unit_owner = {
+			change_variable = {
+				which = ruler_counter_GUILDS
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_ruler_flag = task_e
+				check_variable = {
+					which = ruler_counter_GUILDS
+					value = 4
+				}
+				NOT = {
+					check_variable = {
+						which = ruler_counter_GUILDS
+						value = 5
+					}
+				}
+			}
+			is_ruler_commanding_unit = yes
+		}
+		unit_owner = {
+			change_variable = {
+				which = ruler_counter_GUILDS
+				value = 1
+			}
+			country_event = {
+				id = mr_MaliFlavor.16
+			}
+		}
+	}
 }
-
+on_battle_lost_unit = {
+	if = {
+		limit = {
+			unit_owner = {
+				has_ruler_flag = task_e
+				NOT = {
+					check_variable = {
+						which = ruler_counter_GUILDS
+						value = 5
+					}
+				}
+			}
+			is_ruler_commanding_unit = yes
+		}
+		unit_owner = {
+			change_variable = {
+				which = ruler_counter_GUILDS
+				value = -1
+			}
+		}
+	}
+}
 on_siege_won_country = {
 	if = {
 		limit = {
@@ -959,7 +1064,16 @@ on_trade_good_changed = {
 		}
 	}
 }
-
+on_center_of_trade_upgrade = {
+	if = {
+		limit = { owner = { has_ruler_flag = task_g } }
+		owner = {
+			country_event = {
+				id = mr_MaliFlavor.16
+			}
+		}
+	}
+}
 #ROOT = province that was expanded in, FROM = country that did it
 on_expanded_infrastructure = {
 	if = {
@@ -983,6 +1097,20 @@ on_expanded_infrastructure = {
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
+		}
+	}
+}
+on_colony_finished = { #ROOT - Province
+	if = {
+		limit = {
+			owner = {
+				has_ruler_flag = task_i
+			}
+		}
+		owner = {
+			country_event = {
+				id = mr_MaliFlavor.16
+			}
 		}
 	}
 }

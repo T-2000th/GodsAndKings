@@ -218,6 +218,51 @@ temple = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_h
+					NOT = {
+						check_variable = {
+							which = mal_count_mosques
+							value = 4
+						}
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mal_count_mosques
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_h
+					check_variable = {
+						which = mal_count_mosques
+						value = 4
+					}
+					NOT = {
+						check_variable = {
+							which = mal_count_mosques
+							value = 5
+						}
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mal_count_mosques
+					value = 1
+				}
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -1036,6 +1081,51 @@ cathedral = {
 			add_province_modifier = {
 				name = temples_byz_modifier
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_h
+					NOT = {
+						check_variable = {
+							which = mal_count_mosques
+							value = 4
+						}
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mal_count_mosques
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_h
+					check_variable = {
+						which = mal_count_mosques
+						value = 4
+					}
+					NOT = {
+						check_variable = {
+							which = mal_count_mosques
+							value = 5
+						}
+					}
+				}
+			}
+			FROM = {
+				change_variable = {
+					which = mal_count_mosques
+					value = 1
+				}
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
 			}
 		}
 	}

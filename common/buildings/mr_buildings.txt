@@ -63,6 +63,19 @@ mrb_brewery = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
     }
 
 	on_destroyed = {
@@ -161,6 +174,19 @@ mrb_creamery = {
 			add_province_modifier = {
 				name = goods_produced_boon_mali
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
 			}
 		}
     }
@@ -276,6 +302,19 @@ mrb_textileprocessor = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
     }
 
 	on_destroyed = {
@@ -371,6 +410,19 @@ mrb_steelmill = {
 			add_province_modifier = {
 				name = goods_produced_boon_mali
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
 			}
 		}
     }
@@ -498,6 +550,19 @@ mrb_jewler = {
 			}
 			remove_province_modifier = goods_produced_boon_mali
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
     }
 
 	on_destroyed = {
@@ -601,6 +666,19 @@ mrb_confectionary = {
 			}
 			remove_province_modifier = goods_produced_boon_mali
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
     }
 
 	on_destroyed = {
@@ -702,6 +780,19 @@ mrb_lumberyard = {
 				has_province_modifier = goods_produced_boon_mali
 			}
 			remove_province_modifier = goods_produced_boon_mali
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
 		}
     }
 
@@ -811,9 +902,16 @@ mrb_winery = {
 		}
 		if = {
 			limit = {
-				has_province_modifier = goods_produced_boon_mali
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
 			}
-			remove_province_modifier = goods_produced_boon_mali
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
 		}
     }
 
@@ -917,6 +1015,19 @@ mrb_powdermill = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+				
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
+			}
+		}
     }
 
 	on_destroyed = {
@@ -1004,6 +1115,18 @@ mrb_gunsmith = {
 			add_province_modifier = {
 				name = goods_produced_boon_mali
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_ruler_flag = task_f
+				}
+			}
+			FROM = {
+				country_event = {
+					id = mr_MaliFlavor.16
+				}
 			}
 		}
     }

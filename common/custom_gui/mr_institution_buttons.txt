@@ -26,9 +26,130 @@ custom_button = {
 				}
 			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_other_ongoing
+			NOT = {
+				OR = {
+					has_ruler_flag = task_d
+					has_ruler_flag = task_e
+					has_ruler_flag = task_f
+					has_ruler_flag = support_the_guilds
+					has_ruler_flag = task_g
+					has_ruler_flag = task_h
+					has_ruler_flag = task_i
+					has_ruler_flag = support_the_merchants
+				}
+			}
+		}
 	} #Determines when the button is clickable
     effect = {
 		set_ruler_flag = support_the_court
+		country_event = {
+			id = mr_MaliFlavor.13
+		}
+		play_sound = alert_new
+	} #Effect
+	tooltip = "Faction Quest"
+}
+custom_button = {
+    name = faction_a_2 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_factions = yes
+		tag = MAL
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_1_TT
+			NOT = {
+				OR = {
+					has_ruler_flag = task_d
+					has_ruler_flag = task_e
+					has_ruler_flag = task_f
+					has_ruler_flag = support_the_guilds
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_TT_go
+			NOT = {
+				OR = {
+					has_ruler_modifier= task_d_win
+					has_ruler_modifier= task_e_win
+					has_ruler_modifier= task_f_win
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_other_ongoing
+			NOT = {
+				OR = {
+					has_ruler_flag = task_a
+					has_ruler_flag = task_b
+					has_ruler_flag = task_c
+					has_ruler_flag = support_the_court
+					has_ruler_flag = task_g
+					has_ruler_flag = task_h
+					has_ruler_flag = task_i
+					has_ruler_flag = support_the_merchants
+				}
+			}
+		}
+	} #Determines when the button is clickable
+    effect = {
+		set_ruler_flag = support_the_guilds
+		country_event = {
+			id = mr_MaliFlavor.13
+		}
+		play_sound = alert_new
+	} #Effect
+	tooltip = "Faction Quest"
+}
+custom_button = {
+    name = faction_a_3 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_factions = yes
+		tag = MAL
+	} #Determines when the button is visible
+    trigger = {
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_2_TT
+			NOT = {
+				OR = {
+					has_ruler_flag = task_g
+					has_ruler_flag = task_h
+					has_ruler_flag = task_i
+					has_ruler_flag = support_the_merchants
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_TT_go
+			NOT = {
+				OR = {
+					has_ruler_modifier= task_g_win
+					has_ruler_modifier= task_h_win
+					has_ruler_modifier= task_i_win
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = faction_quest_other_ongoing
+			NOT = {
+				OR = {
+					has_ruler_flag = task_a
+					has_ruler_flag = task_b
+					has_ruler_flag = task_c
+					has_ruler_flag = support_the_court
+					has_ruler_flag = task_d
+					has_ruler_flag = task_e
+					has_ruler_flag = task_f
+					has_ruler_flag = support_the_guilds
+				}
+			}
+		}
+	} #Determines when the button is clickable
+    effect = {
+		set_ruler_flag = support_the_merchants
 		country_event = {
 			id = mr_MaliFlavor.13
 		}

@@ -983,12 +983,12 @@ country_event = { #Court Faction
 		}
 	}
 
-	option = { #Task A for Guilds
+	option = { #Task D for Guilds
 		trigger = {
 			has_ruler_flag = support_the_guilds
 		}
-		name = mr_MaliFlavor.13.d
-		custom_tooltip = how_to_complete_task_a_and_reward
+		name = mr_MaliFlavor.13.ed
+		custom_tooltip = how_to_complete_task_d_and_reward
 		tooltip = {
 			add_ruler_modifier = {
 				name = task_d_win
@@ -998,6 +998,111 @@ country_event = { #Court Faction
 		hidden_effect = {
 			clr_ruler_flag = support_the_guilds
 			set_ruler_flag = task_d
+			set_variable = {
+				which = battle_counter_GUILDS
+				value = 0
+			}
+		}
+	}
+	option = { #Task e for Guilds
+		trigger = {
+			has_ruler_flag = support_the_guilds
+		}
+		name = mr_MaliFlavor.13.e
+		custom_tooltip = how_to_complete_task_e_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_e_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_guilds
+			set_ruler_flag = task_e
+			set_variable = {
+				which = ruler_counter_GUILDS
+				value = 0
+			}
+		}
+	}
+	option = { #Task f for Guilds
+		trigger = {
+			has_ruler_flag = support_the_guilds
+		}
+		name = mr_MaliFlavor.13.f
+		custom_tooltip = how_to_complete_task_f_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_f_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_guilds
+			set_ruler_flag = task_f
+		}
+	}
+	option = { #Task g for Merchants
+		trigger = {
+			has_ruler_flag = support_the_merchants
+		}
+		name = mr_MaliFlavor.13.g
+		custom_tooltip = how_to_complete_task_g_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_g_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_merchants
+			set_ruler_flag = task_g
+		}
+	}
+	option = { #Task h for Merchants
+		trigger = {
+			has_ruler_flag = support_the_merchants
+		}
+		name = mr_MaliFlavor.13.h
+		custom_tooltip = how_to_complete_task_h_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_h_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_merchants
+			set_ruler_flag = task_h
+			set_variable = {
+				which = mal_count_mosques
+				value = 0
+			}
+		}
+	}
+	option = { #Task i for Merchants
+		trigger = {
+			has_ruler_flag = support_the_merchants
+		}
+		name = mr_MaliFlavor.13.i
+		custom_tooltip = how_to_complete_task_i_and_reward
+		tooltip = {
+			add_ruler_modifier = {
+				name = task_i_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			clr_ruler_flag = support_the_merchants
+			set_ruler_flag = task_i
+		}
+	}
+	option = { #Quit Option
+		name = mr_MaliFlavor.13.zz
+		hidden_effect = {
+			clr_ruler_flag = support_the_guilds
+			clr_ruler_flag = support_the_merchants
+			clr_ruler_flag = support_the_court
 		}
 	}
 }
@@ -1014,6 +1119,13 @@ country_event = {
 		add_faction_influence = {
 			faction = malian_court
 			influence = 15
+		}
+		trigger = {
+			OR = {
+				has_ruler_flag = task_a
+				has_ruler_flag = task_b
+				has_ruler_flag = task_c
+			}
 		}
 		if = {
 			limit = {
@@ -1046,6 +1158,95 @@ country_event = {
 			remove_quest_stuff = yes
 		}
 	}
+
+	option = {
+		name = mr_mali_flavor.16.b
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = 15
+		}
+		trigger = {
+			OR = {
+				has_ruler_flag = task_d
+				has_ruler_flag = task_e
+				has_ruler_flag = task_f
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_d
+			}
+			add_ruler_modifier = {
+				name = task_d_win
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_e
+			}
+			add_ruler_modifier = {
+				name = task_e_win
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_f
+			}
+			add_ruler_modifier = {
+				name = task_f_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			remove_quest_stuff = yes
+		}
+	}
+	option = {
+		name = mr_mali_flavor.16.c
+		add_faction_influence = {
+			faction = malian_merchants
+			influence = 15
+		}
+		trigger = {
+			OR = {
+				has_ruler_flag = task_g
+				has_ruler_flag = task_h
+				has_ruler_flag = task_i
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_g
+			}
+			add_ruler_modifier = {
+				name = task_g_win
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_h
+			}
+			add_ruler_modifier = {
+				name = task_h_win
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = task_i
+			}
+			add_ruler_modifier = {
+				name = task_i_win
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			remove_quest_stuff = yes
+		}
+	}
 }
 
 country_event = {
@@ -1058,6 +1259,38 @@ country_event = {
 		OR = {
 			had_ruler_flag = {
 				flag = task_a
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_b
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_c
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_d
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_e
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_f
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_g
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_h
+				days = 3650
+			}
+			had_ruler_flag = {
+				flag = task_i
 				days = 3650
 			}
 		}
@@ -1087,6 +1320,67 @@ country_event = {
  			    size = 3
 				leader_dynasty = "Keita"
 			}
+		}
+		hidden_effect = {
+			remove_quest_stuff = yes
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.17.b
+		trigger = {
+			OR = {
+				had_ruler_flag = {
+					flag = task_d
+					days = 3650
+				}
+				had_ruler_flag = {
+					flag = task_e
+					days = 3650
+				}
+				had_ruler_flag = {
+					flag = task_f
+					days = 3650
+				}
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+ 			    size = 3
+				leader_dynasty = "Keita"
+			}
+		}
+		hidden_effect = {
+			remove_quest_stuff = yes
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.17.c
+		trigger = {
+			OR = {
+				had_ruler_flag = {
+					flag = task_g
+					days = 3650
+				}
+				had_ruler_flag = {
+					flag = task_h
+					days = 3650
+				}
+				had_ruler_flag = {
+					flag = task_i
+					days = 3650
+				}
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+ 			    size = 3
+				leader_dynasty = "Keita"
+			}
+		}
+		hidden_effect = {
+			remove_quest_stuff = yes
 		}
 	}
 }

@@ -574,5 +574,48 @@ remove_quest_stuff = {
 		}
 		clr_ruler_flag = task_c
 	}
-	
+	if = {
+		limit = {
+			has_ruler_flag = task_d
+		}
+		clr_ruler_flag = task_d
+		set_variable = {
+			which = battle_counter_GUILDS
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_e
+		}
+		clr_ruler_flag = task_e
+		set_variable = {
+			which = ruler_counter_GUILDS
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_f
+		}
+		clr_ruler_flag = task_f
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_g
+		}
+		clr_ruler_flag = task_g
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_h
+		}
+		clr_ruler_flag = task_h
+	}
+	if = {
+		limit = {
+			has_ruler_flag = task_i
+		}
+		clr_ruler_flag = task_i
+	}
 }
