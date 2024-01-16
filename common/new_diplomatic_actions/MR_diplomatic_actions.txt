@@ -430,7 +430,6 @@ reign_in_farma = {
 		}
 	}
 	on_accept = {
-		farma_dynamic_name_change_effect = yes
 		create_subject = {
 			subject_type = core_farma_subject
 			subject = FROM
@@ -438,6 +437,7 @@ reign_in_farma = {
 		}
 		FROM = {
 			change_country_color = { country = ROOT }
+			farma_dynamic_name_change_effect = yes
 		}
 		custom_tooltip = every_farma_subject
 		hidden_effect = {
@@ -450,6 +450,10 @@ reign_in_farma = {
 					modifier = annexed_farma
 				}
 				add_liberty_desire = 25
+			}
+			change_variable = {
+				which = integrated_FARM
+				value = 1
 			}
 		}
 	}

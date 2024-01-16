@@ -78,8 +78,11 @@ afr_broke_our_promise = {
 }
 annexed_farma = {
 	opinion = -50
-	yearly_decay = 2
+	yearly_decay = -5
 }
 is_farma = {
 	opinion = 25
+}
+befriended_the_kongo = {
+	opinion = 50
 }

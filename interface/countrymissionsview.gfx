@@ -614,4 +614,8 @@ spriteTypes = {
 		name = "mission_mali_gold_country"
 		texturefile = "gfx/interface/missions/mission_mali_gold_country.dds"
 	}
+	spriteType = { #mission_mali_shells
+		name = "mission_mali_shells"
+		texturefile = "gfx/interface/missions/mission_mali_shells.dds"
+	}
 }

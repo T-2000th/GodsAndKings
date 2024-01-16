@@ -93,6 +93,19 @@ mr_MaliFlavor.116.t: "The Ooni of Ife Ile"
 mr_MaliFlavor.116.d: "The Ooni of the Yoruba are spiritual leaders within their community. Prior to our conquest of the region, they had immense influence over their population, in both the areas of religion and the realm of politics. They are said to have direct communication with the various gods and spirits that inhabit the world, and are looked to for guidance and leadership. We, of course, have no doubt that this is all a folly of the heathens. Only those who have read and mastered the words of the Prophet can give advice that will lead a Mansa to glory and power - but we are not going to disrupt their traditional practice, far from it. By placing an Ooni at the head of the Ife-Ile Farma, we shall quell any potential uprisings within the land, saving us the headache of needing to put down revolts from would-be liberators. We shall respect their traditions, allowing them to continue their practices under a watchful eye - a good Mansa is generous, afterall."
 mr_MaliFlavor.116.a: "Bring them into the fold!"
 
+mr_MaliFlavor.18.t: "Kingdom of the Kongo - Friend or Foe?"
+mr_MaliFlavor.18.d: "Beyond the three islands of the cape lie the great kingdoms of the Kongo, headed by those under the Nkuwa Lukeni. Our initial contact with them was primarily through merchants and sailors, interacting on the fringes of the empire. After initial contacts, we know that a large-scale invasion on the scale of the Kanem or the Tlemcen would not be as easy as thought - this region is isolated and foreign, we would not be familiar with the territory and could be lured into traps by this highly centralized kingdom. Instead, our mystics argue for a soft hand of diplomacy, using religion as an inroad into working with the Kongo. At the end of the day, the mansa must make a decision."
+mr_MaliFlavor.18.a: "Send diplomats - establish communication."
+mr_MaliFlavor.18.b: "Map out the land - we shall claim it!"
+
+
+mr_MaliFlavor.19.t: "The Conversion of the Mwene Kongo"
+mr_MaliFlavor.19.d: "Placeholder"
+mr_MaliFlavor.19.a: "We shall welcome them into the Ummah!"
+
+mr_MaliFlavor.20.t: "The Cowry Shell Economy"
+mr_MaliFlavor.20.d: "Inherited from our forerunner the Wagadou Empire, the Cowry shell is our preferred legal tender. Coming from as far away as the Indian ocean and the Pacific ocean, to right in our backyard in the coastal islands off the gulf of Guinea. In a land where gold is a primary trade good, we did not adopt the tradition of metallic coins, and all merchants who wish to do business with the great Malian Empire must learn to accept this simple fact. With our conquest of the isles of the east, we have received a flood of new shells into our economy. While our economists write laws to manage potential inflation, our nobles adorn themselves with cowry jewelry. Foreigners remark that our queens have necklaces and bracelets not covered with diamonds or gold, but with shells. Craftsmen sell gilded crowns to foreign dignitaries to bring back as artifacts of our wondrous culture. This alone has driven the price of these shells sky high, as foreign merchants now scramble to find a supplier. Our empire’s influence is great and mighty, and it all begins with this simple and humble cowry."
+mr_MaliFlavor.20.a: "What a curious little thing."
 
 #Malian Faction events
 mr_MaliFlavor.12.t: "The Court is Split"

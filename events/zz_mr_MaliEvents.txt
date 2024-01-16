@@ -308,6 +308,10 @@ country_event = {
 				who = ROOT
 				subject_type = farma_subject
 			}
+			change_variable = {
+				which = integrated_FARM
+				value = 1
+			}
 		}
 		farma_dynamic_name_change_effect = yes
 		MAL = {
@@ -627,11 +631,9 @@ country_event = {
 					has_country_flag = release_in_event_MAL
 				}
 				grant_independence = yes
-				MAL = {
-					create_subject = {
-						subject = PREV
-						subject_type = farma_subject
-					}
+				PREV = {
+					create_alliance = MAL
+					join_all_offensive_wars_of = MAL
 				}
 				set_country_flag = to_be_annexed_MAL
 				add_liberty_desire = -50
@@ -671,12 +673,9 @@ country_event = {
 		}
 		custom_tooltip = all_provinces_in_katsina_hausa_zazzau_transfer
 		hidden_effect = {
-			every_subject_country = {
+			every_country = {
 				limit = {
-					OR = {
-						has_country_flag = to_be_annexed_MAL
-						culture = hausa
-					}
+					has_country_flag = to_be_annexed_MAL
 					NOT = { tag = HAU }
 				}
 				every_owned_province = {
@@ -699,6 +698,10 @@ country_event = {
 		create_subject = {
 			subject = HAU
 			subject_type = core_farma_subject
+		}
+		change_variable = {
+			which = integrated_FARM
+			value = 1
 		}
 		HAU = {
 			add_historical_friend = MAL	
@@ -726,12 +729,9 @@ country_event = {
 		}
 		custom_tooltip = all_provinces_in_katsina_hausa_zazzau_transfer
 		hidden_effect = {
-			every_subject_country = {
+			every_country = {
 				limit = {
-					OR = {
-						has_country_flag = to_be_annexed_MAL
-						culture = hausa
-					}
+					has_country_flag = to_be_annexed_MAL
 					NOT = { tag = HAU }
 				}
 				every_owned_province = {
@@ -754,6 +754,10 @@ country_event = {
 		create_subject = {
 			subject = HAU
 			subject_type = core_farma_subject
+		}
+		change_variable = {
+			which = integrated_FARM
+			value = 1
 		}
 		HAU = {
 			change_country_color = {
@@ -830,6 +834,10 @@ country_event = {
 		create_subject = {
 			subject_type = core_farma_subject
 			who = YRE
+		}
+		change_variable = {
+			which = integrated_FARM
+			value = 1
 		}
 		YRE = {
 			kill_ruler = yes
@@ -1155,6 +1163,10 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			change_variable = {
+				which = NumOfFactionQuests
+				value = 1
+			}
 			remove_quest_stuff = yes
 		}
 	}
@@ -1200,6 +1212,10 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			change_variable = {
+				which = NumOfFactionQuests
+				value = 1
+			}
 			remove_quest_stuff = yes
 		}
 	}
@@ -1244,6 +1260,10 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			change_variable = {
+				which = NumOfFactionQuests
+				value = 1
+			}
 			remove_quest_stuff = yes
 		}
 	}
@@ -1381,6 +1401,107 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_quest_stuff = yes
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.18
+	title = mr_MaliFlavor.18.t
+	desc = mr_MaliFlavor.18.d
+	picture = NZINGHA_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Kill the Kongo 
+		name = mr_MaliFlavor.18.a
+		
+		reverse_add_opinion = {
+			who = KON
+			modifier = befriended_the_kongo
+		}
+		add_trust = {
+			who = KON
+			value = 10
+			mutual = yes
+		}
+		set_country_flag = ally_congo_MAL
+	}
+
+	option = { #Befriend the Kongo
+		name = mr_MaliFlavor.18.b
+		coastal_kongo = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		kongo_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		angola_namibia_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		set_country_flag = fight_congo_MAL
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.19
+	title = mr_MaliFlavor.19.t
+	desc = mr_MaliFlavor.19.d
+	picture = SONGHAI_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.19.a
+		KON = {
+			change_religion = ROOT
+		}
+		if = {
+			limit = {
+				4079 = {
+					country_or_non_sovereign_subject_holds = KON
+				}
+			}
+			4079 = {
+				add_core = MAL
+				remove_core = KON
+				cede_province = MAL
+			}
+		}
+		custom_tooltip = enable_integrating_KON
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.20
+	title = mr_MaliFlavor.20.t
+	desc = mr_MaliFlavor.20.d
+	picture = EP_ISLAND_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = mr_MaliFlavor.20.a
+		change_price = {
+			trade_goods = shellfish
+			key = new_coinage
+			value = 0.5
+			duration = -1
+		}
+		add_country_modifier = {
+			name = malian_shells_1
+			duration = -1
 		}
 	}
 }

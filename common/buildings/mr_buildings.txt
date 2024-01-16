@@ -276,12 +276,14 @@ mrb_textileprocessor = {
 					}
 				}
 			}
-			FROM = {
-				change_variable = {
-					which = mali_textiles_1
-					value = 1
+			hidden_effect = {
+				FROM = {
+					change_variable = {
+						which = mali_textiles_1
+						value = 1
+					}
 				}
-			}
+			}	
 		}
 		if = {
 			limit = {
@@ -518,10 +520,12 @@ mrb_jewler = {
 					}
 				}
 			}
-			FROM = {
-				change_variable = {
-					which = mali_textiles_2
-					value = 1
+			hidden_effect = {
+				FROM = {
+					change_variable = {
+						which = mali_textiles_2
+						value = 1
+					}
 				}
 			}
 		}

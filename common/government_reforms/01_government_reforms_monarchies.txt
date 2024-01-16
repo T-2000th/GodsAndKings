@@ -3439,13 +3439,11 @@ musa_rule = {
 	legacy_equivalent = musa_rule_legacy
 	potential = {
 		OR = {
-			tag = MAL
 			have_had_reform = musa_rule
 		}
 	}
 	trigger = {
 		OR = {
-			tag = MAL
 			have_had_reform = musa_rule
 		}
 	}

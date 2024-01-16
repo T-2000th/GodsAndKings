@@ -1313,9 +1313,18 @@ estate_nobles_malian_farmas = {
 	can_select = {
 		tag = MAL
 		is_subject = no
+		NOT = {
+			mission_completed = mr_mali_government_first
+		}
+	}
+	can_revoke = {
+		mission_completed = mr_mali_government_first
 	}
 	is_valid = {
-		always = yes
+		NOT = {
+			mission_completed = mr_mali_government_first
+		}
+		tag = MAL
 	}
 	benefits = {
 		reduced_liberty_desire_on_same_continent = 15

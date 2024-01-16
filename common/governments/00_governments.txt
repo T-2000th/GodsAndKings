@@ -151,6 +151,7 @@ monarchy = {
 				rex_africae
 				mr_empire_of_japan_reformed 
 				mr_malian_kingdom
+				mr_malian_confederation
 			}
 		}
 		hereditary_vs_nobility = {

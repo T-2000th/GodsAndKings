@@ -202,6 +202,10 @@ branch_1 = {
 						who = TEE
 						subject_type = core_farma_subject
 					}
+					change_variable = {
+						which = integrated_FARM
+						value = 1
+					}
 					TEE = {
 						change_country_color = { country = ROOT }
 						farma_dynamic_name_change_effect = yes
@@ -313,7 +317,112 @@ branch_1 = {
 			}
 		}
 	}
-	
+	mr_mali_government_first = {
+		icon = mission_restore_trade_superiority
+		position = 7
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			owner = {
+				is_subject_of_type = farma_subject
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = integrate_three_farma
+				check_variable = {
+					which = integrated_FARM
+					value = 3
+				}
+			}
+
+			num_accepted_cultures = 3
+		}
+		effect = {
+			remove_estate_privilege = estate_nobles_malian_farmas
+			custom_tooltip = " "
+			custom_tooltip = every_subject_lower_desire
+			hidden_effect = {
+				every_subject_country = {
+					add_liberty_desire = -33
+				}
+			}
+		}
+	}
+	mr_mali_government_second = {
+		icon = mission_eliminate_pretenders
+		position = 8
+		required_missions = {
+			mr_mali_government_first
+		}
+		trigger = {
+			crown_land_share = 30
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = check_num_of_factions
+				check_variable = {
+					which = NumOfFactionQuests
+					value = 3
+				}
+			}
+		}
+		effect = {
+			add_ruler_modifier = {
+				name = master_of_the_court
+				duration = -1
+			}
+			custom_tooltip = prevent_rebellions_at_new_mansa
+		}
+	}
+	mr_mali_government_third = {
+		icon = mission_friends_or_enemies 
+		position = 10
+		required_missions = {
+			mr_mali_government_second
+		}
+		trigger = {
+			crown_land_share = 50
+			custom_trigger_tooltip = {
+				tooltip = check_num_of_factions_8
+				check_variable = {
+					which = NumOfFactionQuests
+					value = 8
+				}
+			}
+			estate_loyalty = {
+				estate = all
+				loyalty = 65
+			}
+		}
+		effect = {
+			add_government_reform = mr_malian_confederation
+		}
+	}
+	mr_mali_government_fourth = {
+		icon = mission_restore_faith_in_the_throne 
+		position = 11
+		required_missions = {
+			mr_mali_government_third
+		}
+		trigger = {
+			capital_scope = {
+				has_building = university
+				development = 30
+			}
+			current_size_of_parliament = 20
+			percentage_backing_issue = 0.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = unified_state
+				duration = -1
+			}
+			add_ruler_modifier = {
+				name = pressure_on_the_mashwar
+				duration = -1
+			}
+		}
+	}
 	mr_mali_exploration_twelth = {
 		icon = mission_ne_birch_bark_canoes
 		position = 13
@@ -1250,7 +1359,7 @@ branch_3 = {
 						} 
 						NOT = {
 							has_opinion = {
-								who = ROOT
+								who = MAL
 								value = 100
 							}
 						}
@@ -1520,18 +1629,14 @@ branch_3 = {
 							type = all
 							country_or_non_sovereign_subject_holds = GAO
 						}
-						NOT = {
-							GAO = {
-								is_subject_of_type_with_overlord = {
-									who = MAL
-									type = core_farma_subject
-								}
-							}
-						}
 					}
 					create_subject = {
 						subject_type = core_farma_subject
 						subject = GAO
+					}
+					change_variable = {
+						which = integrated_FARM
+						value = 1
 					}
 					GAO = {
 						change_country_color = {
@@ -1808,7 +1913,7 @@ branch_3 = {
 			add_casus_belli = {
 				target = KNM
 				type = cb_farma_subjugation_war
-				months = 180
+				months = 360
 			}
 		}
 	}
@@ -2020,7 +2125,7 @@ branch_3 = {
 		required_missions = {
 			mr_mali_farma_fifth
 		}
-		position = 6
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				area = kurdufan_area
@@ -2068,7 +2173,7 @@ branch_3 = {
 	}
 	mr_mali_jolof_first = {
 		icon = mission_claim_the_canaries
-		position = 8
+		position = 7
 		required_missions = {
 		}
 		provinces_to_highlight = {
@@ -2201,7 +2306,7 @@ branch_3 = {
 	}
 	mr_mali_jolof_second = {
 		icon = mission_mal_fighting_musa
-		position = 10
+		position = 9
 		required_missions = {
 			mr_mali_jolof_first
 		}
@@ -2275,6 +2380,10 @@ branch_3 = {
 							subject_type = core_farma_subject
 							subject = JOL
 						}
+						change_variable = {
+							which = integrated_FARM
+							value = 1
+						}
 					}
 					JOL = {
 						change_country_color = { country = ROOT }
@@ -2284,6 +2393,30 @@ branch_3 = {
 						}
 					}
 				}
+			}
+		}
+	}
+	mr_mali_naval_third = {
+		icon = mission_disrupt_portuguese_trade
+		position = 10
+		required_missions = {
+			mr_mali_naval_first
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = mr_naval_third_tt
+				check_variable = {
+					which = naval_battle_counter_MAL
+					value = 15
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = enable_malian_fun
+
+			add_country_modifier = {
+				name = malian_winners
+				duration = 12775
 			}
 		}
 	}
@@ -2820,9 +2953,61 @@ branch_4 = {
 			}
 		}
 	}
+	mr_mali_northeast_third = {
+		icon = mission_reconquer_ceuta
+		position = 4
+		required_missions = {
+			mr_mali_northeast_second
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+
+		}
+	}
+	mr_mali_northeast_fourth = {
+		icon = mission_turning_the_tables
+		position = 5
+		required_missions = {
+			mr_mali_northeast_third
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+
+		}
+	}
+	mr_mali_northeast_fifth = {
+		icon = per_the_persian_influence
+		position = 7
+		required_missions = {
+			mr_mali_northeast_fourth
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+
+		}
+	}
+	mr_mali_northeast_eight = {
+		icon = per_establish_eastern_defenses
+		position = 8
+		required_missions = {
+			mr_mali_northeast_seventh
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
 	mr_mali_naval_first = {
 		icon = mission_galleys_in_port
-		position = 8
+		position = 9
 		required_missions = {
 		}
 		provinces_to_highlight = {
@@ -2876,7 +3061,7 @@ branch_4 = {
 	}
 	mr_mali_naval_second = {
 		icon = mission_corsairs_of_the_north_sea
-		position = 9
+		position = 10
 		required_missions = {
 			mr_mali_naval_first
 		}
@@ -2892,35 +3077,11 @@ branch_4 = {
 			}
 		}
 	}
-	mr_mali_naval_third = {
-		icon = mission_disrupt_portuguese_trade
-		position = 10
-		required_missions = {
-			mr_mali_naval_second
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mr_naval_third_tt
-				check_variable = {
-					which = naval_battle_counter_MAL
-					value = 15
-				}
-			}
-		}
-		effect = {
-			custom_tooltip = enable_malian_fun
-
-			add_country_modifier = {
-				name = malian_winners
-				duration = 12775
-			}
-		}
-	}
 	mr_mali_naval_fourth = {
 		icon = mission_son_military_expertise
 		position = 11
 		required_missions = {
-			mr_mali_naval_third
+			mr_mali_naval_second
 		}
 		trigger = {
 			naval_tradition = 50
@@ -3410,6 +3571,487 @@ branch_5 = {
 				}
 			}
 
+		}
+	}
+	mr_mali_sahara_third = {
+		icon = per_establish_eastern_defenses
+		position = 3
+		required_missions = {
+			mr_mali_sahara_second
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+
+		}
+	}
+	mr_mali_sahara_fourth = {
+		icon = mission_control_the_barbary_coast
+		position = 4
+		required_missions = {
+			mr_mali_sahara_third
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+	mr_mali_sahara_fifth = {
+		icon = mission_develop_cordoba
+		position = 5
+		required_missions = {
+			mr_mali_sahara_fourth
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+	mr_mali_northeast_sixth = {
+		icon = mission_combat_barbary_piracy
+		position = 6
+		required_missions = {
+			mr_mali_northeast_fourth
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+	mr_mali_northeast_seventh = {
+		icon = mission_fatimid_caliphate
+		position = 7
+		required_missions = {
+			mr_mali_northeast_sixth
+		}
+		trigger = {
+			always = no
+		}
+		effect = {
+			
+		}
+	}
+	mr_mali_south_africa_first = {
+		icon = mission_retake_ceuta
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1306
+				province_id = 1795
+				province_id = 1097
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			1306 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1795 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1097 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1163 = {
+				create_colony_mission_reward_province = {
+					country = ROOT
+				}
+			}
+			1164 = {
+				create_colony_mission_reward_province = {
+					country = ROOT
+				}
+			}
+			2251 = {
+				create_colony_mission_reward_province = {
+					country = ROOT
+				}
+			}
+			1165 = {
+				create_colony_mission_reward_province = {
+					country = ROOT
+				}
+			}
+			country_event = {
+				id = mr_MaliFlavor.18
+			}
+		}
+	}
+	mr_mali_south_africa_second = {
+		icon = mission_african_soldier
+		position = 9
+		required_missions = {
+			mr_mali_south_africa_first
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = KON
+			NOT = {
+				OR = {
+					owner = {
+						has_opinion = {
+							who = MAL
+							value = 200
+						}
+						trust = { who = MAL value = 100 }
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = fight_congo_MAL
+					}
+				}
+				OR = {
+					area = kongo_area
+					area = coastal_kongo
+					area = angola_namibia_area
+				}
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kongo_explain
+				OR = {
+					has_country_flag = fight_congo_MAL
+					has_country_flag = ally_congo_MAL
+				}
+				OR = {
+					AND = {
+						has_country_flag = fight_congo_MAL
+						kongo_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						coastal_kongo = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						angola_namibia_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					AND = {
+						has_country_flag = ally_congo_MAL
+						KON = {
+							trust = {
+								who = MAL
+								value = 100
+							}
+						}
+						marriage_with = KON
+						reverse_has_opinion = {
+							who = KON
+							value = 200
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			kongo_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cape_of_good_hope_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					kongo_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					coastal_kongo = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					angola_namibia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				custom_tooltip = fight_yes_KON
+				tooltip = {
+					add_country_modifier = {
+						name = trade_companies_mali
+						duration = 3650
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							kongo_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+							coastal_kongo = {
+								type = all
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+							angola_namibia_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = ROOT
+							}
+						}
+					}
+				}
+				custom_tooltip = fight_no_KON
+				tooltip = {
+					add_country_modifier = {
+						name = trade_companies_mali
+						duration = 3650
+					}
+				}
+			}
+			if = {
+				limit = {
+					KON = {
+						trust = {
+							who = MAL
+							value = 100
+						}
+					}
+					marriage_with = KON
+					reverse_has_opinion = {
+						who = KON
+						value = 200
+					}
+				}
+				custom_tooltip = peace_yes_KON
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.19
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						AND = {
+							KON = {
+								trust = {
+									who = MAL
+									value = 100
+								}
+							}
+							marriage_with = KON
+							reverse_has_opinion = {
+								who = KON
+								value = 200
+							}
+						}
+					}
+				}
+				custom_tooltip = peace_no_KON
+				tooltip = {
+					country_event = {
+						id = mr_MaliFlavor.19
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						KON = {
+							trust = {
+								who = MAL
+								value = 100
+							}
+						}
+						marriage_with = KON
+						reverse_has_opinion = {
+							who = KON
+							value = 200
+						}
+					}
+					country_event = {
+						id = mr_MaliFlavor.19
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = trade_companies_mali
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+	mr_mali_south_africa_third = {
+		icon = mission_rb_conquer_the_isles
+		position = 10
+		required_missions = {
+			mr_mali_south_africa_second
+		}
+		provinces_to_highlight = {
+			area = cape_of_good_hope_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			cape_of_good_hope_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			trade_company_south_africa = {
+				has_trade_company_investment_in_area = {
+					investment = district
+					investor = ROOT
+				}
+			}
+		}
+		effect = {
+			1177 = {
+				add_building_construction = {
+					building = trade_depot
+					speed = 0.5
+					cost = 0
+				}
+			}
+			south_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mr_mali_south_africa_fourth = {
+		icon = mission_portuguese_malabar
+		position = 11
+		required_missions = {
+			mr_mali_south_africa_third
+		}
+		provinces_to_highlight = {
+			region = south_africa_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = south_africa_region
+				value = 15
+			}
+			quelimane_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1248 = {
+				add_permanent_claim = ROOT
+			}
+			1101 = {
+				add_permanent_claim = ROOT
+			}
+			1100 = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = this_will_upgrade_establish_communities_and_maximize_profits
+			hidden_effect = {
+				set_country_flag = locked_trading_policy_establish_communities_upgraded
+				set_country_flag = locked_trading_policy_hostile_trading_upgraded
+			}
+		}
+	}
+	mr_mali_south_africa_fifth = {
+		icon = mission_mali_shells
+		position = 13
+		required_missions = {
+			mr_mali_south_africa_fourth
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1248
+				province_id = 1101
+				province_id = 1100
+			}
+			NOT = {
+				development = 10
+			}
+			NOT = {
+				has_trade_building_trigger = yes
+			}
+		}
+		trigger = {
+			1248 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+				has_trade_building_trigger = yes
+			}
+			1101 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+				has_trade_building_trigger = yes
+			}
+			1100 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			custom_tooltip = shellfish_and_shell_coins
+				tooltip = {
+					change_trade_goods = shellfish
+					add_province_modifier = {
+						name = shell_coins
+						duration = -1
+					}
+				}
+			hidden_effect = {
+				1248 = {
+					change_trade_goods = shellfish
+					add_province_modifier = {
+						name = shell_coins
+						duration = -1
+					}
+				}
+				1101 = {
+					change_trade_goods = shellfish
+					add_province_modifier = {
+						name = shell_coins
+						duration = -1
+					}
+				}
+				1100 = {
+					change_trade_goods = shellfish
+					add_province_modifier = {
+						name = shell_coins
+						duration = -1
+					}
+				}
+			}
+			country_event = {
+				id = mr_MaliFlavor.20
+			}
 		}
 	}
 	mr_mali_rivers_first = {

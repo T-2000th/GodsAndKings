@@ -46,7 +46,7 @@ on_startup = {
 			which = gsc_sieges_won_variable value = 0
 		}
 	}
-	#Mali Counting Mechanic
+	#Mali Counting Mechanics
 	if = {
 		limit = {
 			tag = MAL
@@ -59,6 +59,66 @@ on_startup = {
 		}
 		set_variable = {
 			which = naval_battle_counter_MAL
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				check_variable = {
+					which = NumOfFactionQuests
+					value = 1
+				}
+			}
+		}
+		set_variable = {
+			which = NumOfFactionQuests
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				check_variable = {
+					which = mali_textiles_1
+					value = 1
+				}
+			}
+		}
+		set_variable = {
+			which = mali_textiles_1
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				check_variable = {
+					which = mali_textiles_2
+					value = 1
+				}
+			}
+		}
+		set_variable = {
+			which = mali_textiles_2
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				check_variable = {
+					which = integrated_FARM
+					value = 1
+				}
+			}
+		}
+		set_variable = {
+			which = integrated_FARM
 			value = 0
 		}
 	}
@@ -865,7 +925,7 @@ on_expanded_infrastructure = {
 	if = {
 		limit = {
 			FROM = {
-				has_ruler_modifier = task_a_desc
+				has_ruler_flag = task_a
 			}
 		}
 		FROM = {
