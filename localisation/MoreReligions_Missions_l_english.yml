@@ -1370,3 +1370,8 @@ if_free_no: "£no£If we are independant when we complete this mission, we shall
 christian_provinces_TT: "All §YChristian§! provinces in the §YAl Jazira§! area will recieve the following:"
 muslim_provinces_TT: "All §YMuslim§! provinces in the §YAl Jazira§! area will recieve the following:"
 centralizing_state_buff: "§YCentralize State§! will now grant §G+33§! §YProsperity§! in a province."
+
+this_tag_cant_boost: "§TThese factions cannot be Boosted using Mana!§!"
+cantuse_because_egypt_1: "This faction cannot be Boosted due to being the §YSudanese Eunuchs§!."
+cantuse_because_egypt_2: "This faction cannot be Boosted due to being the §YBerber Auxilliaries§!."
+cantuse_because_egypt_3: "This faction cannot be Boosted due to being the §YTurkic Mamluks§!."
