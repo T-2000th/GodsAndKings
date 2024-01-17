@@ -3,6 +3,7 @@ country_decisions = {
 		color = { 253 229 101 }
 		potential = {
 			is_random_new_world = no
+			major = yes
 			mission_completed = mr_mali_exploration_eighth
 			NOT = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -66,6 +67,7 @@ country_decisions = {
 	}
 	integrate_jol = {
 		color = { 253 229 101 }
+		major = yes
 		potential = {
 			exists = JOL
 			has_country_flag = MAL_happy
@@ -107,4 +109,46 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	malian_faction_check = {
+		color = { 253 229 101 }
+		major = yes
+		potential = {
+			NOT = {
+				mission_completed = mr_mali_government_second
+			}
+			tag = MAL
+			ai = no
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = complete_mission_MAL_TT
+				NOT = {
+					mission_completed = mr_mali_government_second
+				}
+				NOT = {
+					check_variable = {
+						which = revolt_on_ruler_MAL
+						value = 3
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = revolt_on_ruler_MAL
+							value = 3
+						}
+					}
+				}
+				custom_tooltip = malian_revolt_count
+			}
+			else = {
+				custom_tooltip = succession_secured
+			}
+		}
+	}
+
 }

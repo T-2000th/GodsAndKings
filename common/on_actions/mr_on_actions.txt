@@ -122,6 +122,24 @@ on_startup = {
 			value = 0
 		}
 	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				AND = {
+					check_variable = {
+						which = revolt_on_ruler_MAL
+						value = 0
+					}
+					mission_completed = mr_mali_government_second
+				}
+			}
+		}
+		set_variable = {
+			which = revolt_on_ruler_MAL
+			value = 0
+		}
+	}
 #Horde raze counting variable
 	if = {
         limit = {
@@ -625,6 +643,37 @@ on_monarch_death = {
 		PWY = { remove_country_modifier = mr_eng_pacification }
 		SHP = { remove_country_modifier = mr_eng_pacification }
 		CHS = { remove_country_modifier = mr_eng_pacification }
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				mission_completed = mr_mali_government_second
+			}
+			NOT = {
+				check_variable = {
+					which = revolt_on_ruler_MAL
+					value = 3
+				}
+			}
+		}
+		country_event = { id = mr_MaliFlavor.21 }
+	}
+	if = {
+		limit = {
+			tag = MAL
+			NOT = {
+				mission_completed = mr_mali_government_second
+			}
+			check_variable = {
+				which = revolt_on_ruler_MAL
+				value = 3
+			}
+		}
+		set_variable = {
+			which = revolt_on_ruler_MAL
+			value = 0
+		}
 	}
 }
 
@@ -1344,6 +1393,19 @@ on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accept
 			limit = { has_country_modifier = grain_olives_modifier }
 			remove_country_modifier = grain_olives_modifier
 		}
+	}
+	if = {
+		limit = { 
+			has_country_modifier = european_markets_MAL
+			FROM = {
+				OR = {
+					tag = ADU
+					tag = CBD
+				}
+			}
+			
+		 }
+		remove_country_modifier = european_markets_MAL
 	}
 }
 ##MR_harmonised effects

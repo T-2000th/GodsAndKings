@@ -276,3 +276,19 @@ shell_coins = {
 malian_shells_1 = {
 	inflation_action_cost = -0.33
 }
+defeat_of_almohad = {
+	prestige = 1
+	monarch_military_power = 1
+}
+securing_trade_MAL = {
+	merchants = 1
+	reduced_trade_penalty_on_non_main_tradenode = 0.5
+}
+waystation_MAL = {
+	global_sailors_modifier = 0.1	
+	global_ship_recruit_speed = -0.15
+}
+european_markets_MAL = {
+	mil_tech_cost_modifier = -0.10
+	global_regiment_cost = -0.05
+}

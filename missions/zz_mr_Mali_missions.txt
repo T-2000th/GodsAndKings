@@ -1497,13 +1497,6 @@ branch_3 = {
 						duration = 7300
 					}
 				}
-				custom_tooltip = vassal_gains
-				tooltip = {
-					add_country_modifier = {
-						name = songhai_bonus
-						duration = 7300
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -1524,13 +1517,6 @@ branch_3 = {
 				tooltip = {
 					add_country_modifier = {
 						name = fresh_recruits_SONG
-						duration = 7300
-					}
-				}
-				custom_tooltip = vassal_gains
-				tooltip = {
-					add_country_modifier = {
-						name = songhai_bonus
 						duration = 7300
 					}
 				}
@@ -3574,16 +3560,101 @@ branch_5 = {
 		}
 	}
 	mr_mali_sahara_third = {
-		icon = per_establish_eastern_defenses
+		icon = per_establish_western_defenses
 		position = 3
 		required_missions = {
 			mr_mali_sahara_second
 		}
+		provinces_to_highlight = {
+			OR = {
+				area = tafilalt_area
+				area = sus_area
+				area = southern_morocco_area
+			}
+		}
 		trigger = {
-			always = no
+			tafilalt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sus_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5215 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-
+			marrekesh_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			macaronesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { 
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+					NOT = { is_permanent_claim = ROOT }
+				}
+			}
+			custom_tooltip = " "
+			add_ruler_modifier = {
+				name = defeat_of_almohad
+				duration = -1
+			}
+			if = {
+				limit = {
+					SOS = {
+						is_subject_of_type = farma_subject
+					}
+				}
+				custom_tooltip = turn_them_sunni_twenty_yes
+			}
+			else_if = {
+				limit = {
+					SOS = {
+						is_subject_of_type = farma_subject
+					}
+				}
+				custom_tooltip = turn_them_sunni_twenty_yes
+			}
 		}
 	}
 	mr_mali_sahara_fourth = {
@@ -3592,11 +3663,49 @@ branch_5 = {
 		required_missions = {
 			mr_mali_sahara_third
 		}
+		provinces_to_highlight = {
+			OR = {
+				area = macaronesia_area
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = marrekesh_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 		trigger = {
-			always = no
+			macaronesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_morocco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			marrekesh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			
+			add_country_modifier = {
+				name = securing_trade_MAL
+				duration = -1
+			}
+			macaronesia_area = {
+				add_province_modifier = {
+					name = waystation_MAL
+					duration = -1
+				}
+			}
+			iberia_region = {
+				discover_country = MAL
+			}
 		}
 	}
 	mr_mali_sahara_fifth = {
@@ -3606,10 +3715,358 @@ branch_5 = {
 			mr_mali_sahara_fourth
 		}
 		trigger = {
-			always = no
+			if = {
+				limit = {
+					exists = CBD
+				}
+				OR = {
+					AND = {
+						is_rival = CBD
+						CBD = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					AND = {
+						alliance_with = CBD
+						reverse_has_opinion = {
+							who = CBD
+							value = 120
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						is_rival = ADU
+						ADU = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					AND = {
+						alliance_with = ADU
+						reverse_has_opinion = {
+							who = ADU
+							value = 120
+						}
+					}
+					NOT = {
+						exists = ADU
+					}
+				}
+			}
 		}
 		effect = {
-			
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							alliance_with = ADU
+							reverse_has_opinion = {
+								who = ADU
+								value = 120
+							}
+						}
+						AND = {
+							alliance_with = CBD
+							reverse_has_opinion = {
+								who = CBD
+								value = 120
+							}
+						}
+					}
+				}
+				custom_tooltip = alliance_yes_andalusia
+				tooltip = {
+					add_country_modifier = {
+						name = european_markets_MAL
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								alliance_with = ADU
+								reverse_has_opinion = {
+									who = ADU
+									value = 120
+								}
+							}
+							AND = {
+								alliance_with = CBD
+								reverse_has_opinion = {
+									who = CBD
+									value = 120
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = alliance_no_andalusia
+				tooltip = {
+					add_country_modifier = {
+						name = european_markets_MAL
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							is_rival = CBD
+							CBD = {
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+						}
+						AND = {
+							is_rival = ADU
+							ADU = {
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+						}
+						AND = {
+							NOT = {
+								exists = ADU
+							}
+							NOT = {
+								exists = CBD
+							}
+						}
+					}
+				}
+				custom_tooltip = if_war_yes_iberia_MAL
+				tooltip = {
+					lower_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					upper_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								is_rival = CBD
+								CBD = {
+									OR = {
+										has_opinion_modifier = {
+											who = ROOT
+											modifier = insulted
+										}
+										has_opinion_modifier = {
+											who = ROOT
+											modifier = scornfully_insulted
+										}
+									}
+								}
+							}
+							AND = {
+								is_rival = ADU
+								ADU = {
+									OR = {
+										has_opinion_modifier = {
+											who = ROOT
+											modifier = insulted
+										}
+										has_opinion_modifier = {
+											who = ROOT
+											modifier = scornfully_insulted
+										}
+									}
+								}
+							}
+							AND = {
+								NOT = {
+									exists = ADU
+								}
+								NOT = {
+									exists = CBD
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = if_war_no_iberia_MAL
+				tooltip = {
+					lower_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					upper_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_rival = CBD
+						CBD = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					lower_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					upper_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					add_casus_belli = {
+						type = cb_farma_subjugation_war
+						target = CBD
+					}
+				}
+				else_if = {
+					limit = {
+						is_rival = ADU
+						ADU = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					lower_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					upper_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					add_casus_belli = {
+						type = cb_farma_subjugation_war
+						target = ADU
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								alliance_with = ADU
+								reverse_has_opinion = {
+									who = ADU
+									value = 120
+								}
+							}
+							AND = {
+								alliance_with = CBD
+								reverse_has_opinion = {
+									who = CBD
+									value = 120
+								}
+							}
+						}
+					}
+					add_country_modifier = {
+						name = european_markets_MAL
+						duration = -1
+					}
+				}
+				else = {
+					lower_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+					upper_andalucia_area = {
+						limit = {
+							NOT = { owned_by = ROOT}
+							NOT = { owned_by = ROOT}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
 		}
 	}
 	mr_mali_northeast_sixth = {

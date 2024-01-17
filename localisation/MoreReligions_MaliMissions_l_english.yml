@@ -136,7 +136,6 @@ temne_farma_tt_yes: "£yes£If we complete this mission while @TEE §YTemne§! o
 goods_produced_production_TT: "If we have an available §YLumber§! or §YTropical Wood§! province, it will be transformed into §YNaval Supplies§!.\n\nAll provinces that meet the requirements will gain the following:"
 if_gao_vassal_yes: "£yes£If we complete this mission while @GAO §YGao§! owns all provinces in the §YDendi§! and §YGao§! Areas, we will gain the following:"
 if_gao_vassal_no: "£no£If we complete this mission while @GAO §YGao§! owns all provinces in the §YDendi§! and §YGao§! Areas, we will gain the following:"
-vassal_gains: "Additionally, @GAO §YGao§! will become a Core Farma, will become a Historical Friend, and will recieve the following:"
 gao_owned_root_yes: "£yes£If we complete this mission while we own all provinces in the §YDendi§! and §YGao§! Areas, we will inherit @GAO §YGao§! and gain §YAyneha§! Culture accepted for free. We will also gain the following in the province of Gao:"
 gao_owned_root_no: "£no£If we complete this mission while we own all provinces in the §YDendi§! and §YGao§! Areas, we will inherit @GAO §YGao§! and gain §YAyneha§! Culture accepted for free. We will also gain the following in the province of Gao:"
 if_gbi_farma_yes: "£yes£If we complete this mission while @GBI §YGobir§! is a Farma, we will gain the following:"
@@ -177,6 +176,12 @@ peace_no_KON: "\n£no£If we we chose to align the @KON §YKongo§! and have §Y
 enable_integrating_KON: "This will enable the integration of the Kongo as a Core Farma"
 this_will_upgrade_establish_communities_and_maximize_profits: "We will gain access to the upgraded §YEstablish Communities§! and §YMaximize Profits§! Trading Policies."
 shellfish_and_shell_coins: "All highlighted provinces will gain the following:"
+turn_them_sunni_twenty_yes: "£yes£If @SOS §YMasmuda§! is a §YFarma Subject§! when we complete this mission, they will have their ruler replaced with a §YSunni§! one, and they shall receive §Y-30%§! Liberty Desire."
+turn_them_sunni_twenty_no: "£no£If @SOS §YMasmuda§! is a §YFarma Subject§! when we complete this mission, they will have their ruler replaced with a §YSunni§! one, and they shall receive §Y-30%§! Liberty Desire."
+alliance_yes_andalusia: "£yes£If @CBD §YCordoba§! or @ADU §YAndalusia§! is our ally and has 120 opinion of us, we will gain the following modifier. If we break our alliance with them, we shall lose the following modifier:"
+alliance_no_andalusia: "£no£If @CBD §YCordoba§! or @ADU §YAndalusia§! is our ally and has 120 opinion of us, we will gain the following modifier. If we break our alliance with them, we shall lose the following modifier:"
+if_war_yes_iberia_MAL: "£yes£If @CBD §YCordoba§! or @ADU §YAndalusia§! has been rivaled and insulted, we will gain the §YMalian Campaign of Conquest§! Casus Belli on them for §G-1§! Months. We will also gain:"
+if_war_no_iberia_MAL: "£no£If @CBD §YCordoba§! or @ADU §YAndalusia§! has been rivaled and insulted, we will gain the §YMalian Campaign of Conquest§! Casus Belli on them for §G-1§! Months. We will also gain:"
 
 #Modifiers
  explorer_mindset: "Beyond the Seas"
@@ -235,6 +240,10 @@ trade_companies_mali: "Trade Investments"
 shell_coins: "Shell Coinage"
 new_coinage: "New Malian Coinage"
 malian_shells_1: "Shell Economists"
+defeat_of_almohad: "Defeat of the Almohads"
+securing_trade_MAL: "Securing Saharan Trade"
+waystation_MAL: "Westward Waystation"
+european_markets_MAL: "European Markets"
 
 #Extra
 develop_agojio_TT: "Every Colonial Provinces with Jungle Terrain will recieve the following:\n§G-10%§! Local Development Cost\n§G-20%§! Local Construction Cost"
@@ -266,6 +275,12 @@ malian_treasure_fleets_desc: "Mali and its massive colonial holdings require a s
 is_in_guinea_area: "Is a §YGuinean§! Province."
 every_subject_lower_desire: "Every Subject Country will gain §G-33%§! §YLiberty Desire§!."
 befriended_the_kongo: "Befriended the Kongolese"
+malian_revolt_count: "We must completed §YThree§! Faction Quests in our ruler's lifespan in order to ensure a revolt will not fire.\n\nFaction Quests Completed: §Y[Root.revolt_on_ruler_MAL.GetValue]§! / §Y3§!"
+succession_secured: "We have secured our succession - all we can do now is wait."
+malian_faction_check_title: "Malian Succession Checker"
+malian_faction_check_desc: "The Malian state is disorderly - even after Abubakir III's reforms and centralizations, we are still weak and discombobulated. We must ensure that the powers that be in our empire do not rise against us, in any way shape or form..."
+complete_mission_MAL_TT: "We must complete the mission §YBalancing the Mashwar§! to remove the chance of revolt happening on our ruler's death forever. In the mean time, completing three faction quests will prevent them from uprising after your current ruler's death."
+
 
 
 

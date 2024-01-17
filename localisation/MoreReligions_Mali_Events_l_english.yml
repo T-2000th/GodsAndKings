@@ -180,3 +180,7 @@ task_f_win: "Gained Support of the Guilds"
 task_g_win: "Gained Support of the Merchants"
 task_h_win: "Gained Support of the Merchants"
 task_i_win: "Gained Support of the Merchants"
+
+mr_MaliFlavor.21.t: "The Failure of the Mansa"
+mr_MaliFlavor.21.d: "The Mansa has failed to contain the factions of his court. Now, with the passing of the old king and the rise of a young and inexperienced ruler, the factions launch a series of revolts across the empire, weakening it. One can only imagine the devestation wrought by the failure of the Mansa..."
+mr_MaliFlavor.21.a: "We must attempt to do better..."

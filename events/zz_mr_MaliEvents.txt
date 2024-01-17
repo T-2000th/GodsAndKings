@@ -1167,6 +1167,10 @@ country_event = {
 				which = NumOfFactionQuests
 				value = 1
 			}
+			change_variable = {
+				which = revolt_on_ruler_MAL
+				value = 1
+			}
 			remove_quest_stuff = yes
 		}
 	}
@@ -1216,6 +1220,10 @@ country_event = {
 				which = NumOfFactionQuests
 				value = 1
 			}
+			change_variable = {
+				which = revolt_on_ruler_MAL
+				value = 1
+			}
 			remove_quest_stuff = yes
 		}
 	}
@@ -1262,6 +1270,10 @@ country_event = {
 		hidden_effect = {
 			change_variable = {
 				which = NumOfFactionQuests
+				value = 1
+			}
+			change_variable = {
+				which = revolt_on_ruler_MAL
 				value = 1
 			}
 			remove_quest_stuff = yes
@@ -1502,6 +1514,43 @@ country_event = {
 		add_country_modifier = {
 			name = malian_shells_1
 			duration = -1
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.21
+	title = mr_MaliFlavor.21.t
+	desc = mr_MaliFlavor.21.d
+	picture = AFRICAN_REVOLT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = revolt_on_ruler_MAL
+				value = 0
+			}
+		}
+		
+	}
+
+	option = {
+		name = mr_MaliFlavor.21.a
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 2
+				win = yes
+			}
+			
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 2
+				win = yes
+			}
 		}
 	}
 }
