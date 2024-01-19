@@ -1490,6 +1490,9 @@ country_event = {
 				cede_province = MAL
 			}
 		}
+		hidden_effect = {
+			set_country_flag = integrate_KON_MAL
+		}
 		custom_tooltip = enable_integrating_KON
 	}
 }
@@ -1551,6 +1554,299 @@ country_event = {
 				size = 2
 				win = yes
 			}
+		}
+	}
+}
+country_event = { #The Lords of the Fezzan
+	id = mr_MaliFlavor.22
+	title = mr_MaliFlavor.22.t
+	desc = mr_MaliFlavor.22.d
+	picture = SAHARA_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.22.a
+		custom_tooltip = all_fezzan_north_sahara_ouled_nail
+		tooltip = {
+			add_province_modifier = {
+				name = defeat_of_the_ibadi
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = fezzan_area
+						area = north_saharan_area
+						area = ouled_nail_area
+					}
+				}
+				add_province_modifier = {
+					name = defeat_of_the_ibadi
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.22.b
+		trigger = {
+			FZA = {
+				exists = no
+			}
+		}
+		custom_tooltip = release_fza_as_a_core_farma
+		disable_scholar_cost = yes
+		hidden_effect = {
+			release = FZA
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = fezzan_area
+						area = north_saharan_area
+						area = ouled_nail_area
+					}
+				}
+				add_core = FZA
+				cede_province = FZA
+			}
+			create_subject = {
+				subject_type = core_farma_subject
+				who = FZA
+				
+			}
+			FZA = {
+				farma_dynamic_name_change_effect = yes
+				change_country_color = {
+					country = MAL
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.23
+	title = mr_MaliFlavor.23.t
+	desc = mr_MaliFlavor.23.d
+	picture = maghrebi_FORT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.23.a
+		custom_tooltip = tunisian_ports_TT
+		tooltip = {
+			add_province_modifier = {
+				name = tunisian_ports_MAL
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = djerba_area
+						area = tunisia_area
+						has_port = yes
+					}
+				}
+				add_province_modifier = {
+					name = tunisian_ports_MAL
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.23.b
+		trigger = {
+			TUN = {
+				exists = no
+			}
+		}
+		custom_tooltip = tunisian_farma_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = djerba_area
+						area = tunisia_area
+					}
+				}
+				cede_province = TUN
+				add_core = TUN
+			}
+			create_subject = {
+				subject_type = core_farma_subject
+				who = FZA
+			}
+			set_country_flag = subjugated_tunisia_MAL
+			TUN = {
+				farma_dynamic_name_change_effect = yes
+				change_country_color = {
+					country = MAL
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mr_MaliFlavor.24
+	title = mr_MaliFlavor.24.t
+	desc = mr_MaliFlavor.24.d
+	picture = EYALET_REBELLION_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Kill the Visiers
+		name = mr_MaliFlavor.24.a
+		add_country_modifier = {
+			name = defeat_of_the_fatimids
+			duration = -1
+		}
+		add_ruler_modifier = {
+			name = fatimid_killer_Mal
+			duration = -1
+		}
+	}
+
+	option = {#Free Egypt
+		name = mr_MaliFlavor.24.b
+		delta_area = {
+			cede_province = EG2
+			add_core = EG2
+		}
+		bahari_area = {
+			cede_province = EG2
+			add_core = EG2
+		}
+		create_subject = {
+			subject_type = core_farma_subject
+			who = EG2
+		}
+		EG2 = {
+			change_country_color = {
+				country = ROOT
+			}
+		}
+		al_wahat_area = {
+			add_core = EG2
+		}
+		vostani_area = {
+			add_core = EG2
+		}
+		said_area = {
+			add_core = EG2
+		}
+		red_sea_coast_area = {
+			add_core = EG2
+		}
+	}
+}
+country_event = { #Farma of Kongo
+	id = mr_MaliFlavor.25
+	title = mr_MaliFlavor.25.t
+	desc = mr_MaliFlavor.25.d
+	picture = AFRICAN_SOCIAL_GATHERING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.25.a
+		MAL = {
+			create_subject = {
+				who = ROOT
+				subject_type = farma_subject
+			}
+			change_variable = {
+				which = integrated_FARM
+				value = 1
+			}
+		}
+		farma_dynamic_name_change_effect = yes
+		MAL = {
+			set_country_flag = mali_subject_KON
+			country_event = {
+				id = mr_MaliFlavor.26
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.6
+				trust = { 
+					who = MAL 
+					value = 90 
+				}
+			}
+			modifier = {
+				factor = 1.6
+					owes_favors = { 
+						who = MAL 
+						value = 75 
+			 	 	}
+			}
+			modifier = {
+				factor = 1.6
+				trust = {
+					who = MAL 
+				 	value = 100 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.25.b
+		MAL = {
+			country_event = {
+				id = mr_MaliFlavor.26
+			}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				trust = { who = MAL value = 90 }
+				owes_favors = { 
+					who = MAL 
+					value = 50 
+				}
+			}
+		}
+	}
+}
+country_event = { #Farma of Kongo Reaction
+	id = mr_MaliFlavor.26
+	title = mr_MaliFlavor.26.t
+	desc = mr_MaliFlavor.26.d
+	picture = AFRICAN_SOCIAL_GATHERING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = mr_MaliFlavor.6.a
+		trigger = {
+			has_country_flag = mali_subject_KON
+		}
+		add_prestige = 20
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = mali_subject_KON
+			}	
+		}
+		name = mr_MaliFlavor.6.b
+		break_alliance = KON
+		add_casus_belli = {
+			type = cb_farma_subjugation_war
+			target = KON
 		}
 	}
 }

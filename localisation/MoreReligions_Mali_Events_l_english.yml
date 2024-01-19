@@ -107,6 +107,21 @@ mr_MaliFlavor.20.t: "The Cowry Shell Economy"
 mr_MaliFlavor.20.d: "Inherited from our forerunner the Wagadou Empire, the Cowry shell is our preferred legal tender. Coming from as far away as the Indian ocean and the Pacific ocean, to right in our backyard in the coastal islands off the gulf of Guinea. In a land where gold is a primary trade good, we did not adopt the tradition of metallic coins, and all merchants who wish to do business with the great Malian Empire must learn to accept this simple fact. With our conquest of the isles of the east, we have received a flood of new shells into our economy. While our economists write laws to manage potential inflation, our nobles adorn themselves with cowry jewelry. Foreigners remark that our queens have necklaces and bracelets not covered with diamonds or gold, but with shells. Craftsmen sell gilded crowns to foreign dignitaries to bring back as artifacts of our wondrous culture. This alone has driven the price of these shells sky high, as foreign merchants now scramble to find a supplier. Our empire’s influence is great and mighty, and it all begins with this simple and humble cowry."
 mr_MaliFlavor.20.a: "What a curious little thing."
 
+mr_MaliFlavor.23.t: "Conquest of Ifriqiya"
+mr_MaliFlavor.23.d: "Conquest of Ifriqiya"
+mr_MaliFlavor.23.a: "I wish to own these ports for myself!"
+mr_MaliFlavor.23.b: "Allow the locals to rule under our supervision!"
+
+mr_MaliFlavor.25.t: "The Subjugation of the Kongo"
+mr_MaliFlavor.25.d: "Placeholder"
+mr_MaliFlavor.25.a: "We shall refuse!"
+mr_MaliFlavor.25.b: "We shall accept!"
+
+mr_MaliFlavor.26.t: "The Fate of the Kongo Kingdom"
+mr_MaliFlavor.26.d: "We knew our proposal would be audatious. We were asking for a great power in the Kongo to bend the knee to us in subjugation, to give up their rights and privileges as rulers to be underneath us. However, we also knew that we had every right to press this claim. We are far larger, far more powerful, and far more influential in their secret court meetings than they think. So when our demand was sent, we patiently waited a response. When the messenger arrived, his face was calm - he clearly rehearsed what he was about to say."
+mr_MaliFlavor.26.a: "The Kongo shall join the Empire!"
+mr_MaliFlavor.26.b: "The fools dare refuse? Time to end this kingdom!"
+
 #Malian Faction events
 mr_MaliFlavor.12.t: "The Court is Split"
 mr_MaliFlavor.12.a: "We shall go to the Council for Support!"
@@ -184,3 +199,18 @@ task_i_win: "Gained Support of the Merchants"
 mr_MaliFlavor.21.t: "The Failure of the Mansa"
 mr_MaliFlavor.21.d: "The Mansa has failed to contain the factions of his court. Now, with the passing of the old king and the rise of a young and inexperienced ruler, the factions launch a series of revolts across the empire, weakening it. One can only imagine the devestation wrought by the failure of the Mansa..."
 mr_MaliFlavor.21.a: "We must attempt to do better..."
+
+
+
+mr_MaliFlavor.22.t: "Administration of Fezzan"
+mr_MaliFlavor.22.d: "placeholder"
+mr_MaliFlavor.22.a: "We shall directly administer this land!"
+mr_MaliFlavor.22.b: "We shall let the local emirs assist us."
+
+mr_MaliFlavor.24.t: "Fate of the Wiziers"
+mr_MaliFlavor.24.d: " "
+mr_MaliFlavor.24.a: "All heretics shall be defeated, no matter what!"
+mr_MaliFlavor.24.b: "Perhaps these men still have some use..."
+
+defeat_of_the_fatimids: "Defeat of the Fatimids"
+fatimid_killer_Mal: "Dethroning of the Wiziers"

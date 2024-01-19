@@ -553,6 +553,13 @@ farma_dynamic_name_change_effect = {
 	if = { limit = { tag = HAU } farma_name_effect = { tag = FR4 } }
 	if = { limit = { tag = KNM } farma_name_effect = { tag = FR5 } }
 	if = { limit = { tag = YRE } farma_name_effect = { tag = FR6 } }
+	if = { limit = { tag = KON } farma_name_effect = { tag = FR7 } }
+	if = { limit = { tag = FZA } farma_name_effect = { tag = FR8 } }
+	if = { limit = { tag = TUN } farma_name_effect = { tag = FR9 } }
+	if = { limit = { tag = TMB } farma_name_effect = { tag = FA1 } }
+	if = { limit = { tag = YAT } farma_name_effect = { tag = FA2 } }
+	if = { limit = { tag = TKR } farma_name_effect = { tag = FA3 } }
+	if = { limit = { tag = KNG } farma_name_effect = { tag = FA4 } }
 }
 
 remove_quest_stuff = {

@@ -1,0 +1,8 @@
+government = republic
+primary_culture = al_misr_arabic
+add_government_reform = wazir_republic
+religion = sunni
+religious_school = ismaili_school
+technology_group = muslim
+capital = 361 # Cairo
+

@@ -266,6 +266,7 @@ ZHI = "countries/Zahiri.txt"
 KWA = "countries/Kuwaa.txt"
 AKA = "countries/Akan.txt"
 MDK = "countries/Mandinka.txt"
+EG2 = "countries/Egypt2.txt" #Puppet Egpyt
 
 
 

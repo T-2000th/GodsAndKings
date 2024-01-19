@@ -292,3 +292,30 @@ european_markets_MAL = {
 	mil_tech_cost_modifier = -0.10
 	global_regiment_cost = -0.05
 }
+defeat_of_the_ibadi = {
+	local_missionary_strength = 0.03
+	local_regiment_cost = -0.1
+}
+a_link_to_Mediterannean_trade = {
+	mercantilism_cost = -0.25
+}
+tunisian_ports_MAL = {
+	local_sailors_modifier = 0.25
+	local_ship_cost = -0.1
+}
+defeat_of_the_fatimids = {
+	missionaries = 1
+	tolerance_own = 2
+}
+fatimid_killer_Mal = {
+	global_heretic_missionary_strength = 0.03
+	reverse_relation_with_same_religion = 25
+}
+nile_river_conquest = {
+	local_development_cost = -0.1
+	trade_goods_size_modifier = 0.10
+}
+malian_empire_dominant = {
+	administrative_efficiency = 0.05
+	global_trade_power = 0.1	
+}

@@ -356,12 +356,12 @@ branch_1 = {
 			mr_mali_government_first
 		}
 		trigger = {
-			crown_land_share = 30
+			crown_land_share = 40
 			stability = 1
 			custom_trigger_tooltip = {
 				tooltip = check_num_of_factions
 				check_variable = {
-					which = NumOfFactionQuests
+					which = revolt_on_ruler_MAL
 					value = 3
 				}
 			}
@@ -386,7 +386,7 @@ branch_1 = {
 				tooltip = check_num_of_factions_8
 				check_variable = {
 					which = NumOfFactionQuests
-					value = 8
+					value = 10
 				}
 			}
 			estate_loyalty = {
@@ -1352,18 +1352,26 @@ branch_3 = {
 			custom_trigger_tooltip = {
 				tooltip = no_farma_tt
 				NOT = {
-					any_country = {
-						is_subject_of_type_with_overlord = {
-							who = MAL
-							type = farma_subject
-						} 
-						NOT = {
-							has_opinion = {
+					AND = {
+						any_country = {
+							is_subject_of_type_with_overlord = {
 								who = MAL
-								value = 100
+								type = farma_subject
+							} 
+							liberty_desire = 50
+						}
+						any_country = {
+							is_subject_of_type_with_overlord = {
+								who = MAL
+								type = farma_subject
+							} 
+							NOT = {
+								has_opinion = {
+									who = MAL
+									value = 100
+								}
 							}
 						}
-						liberty_desire = 50
 					}
 				}
 			}
@@ -2941,54 +2949,211 @@ branch_4 = {
 	}
 	mr_mali_northeast_third = {
 		icon = mission_reconquer_ceuta
-		position = 4
+		position = 5
 		required_missions = {
 			mr_mali_northeast_second
 		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_saharan_area
+				area = fezzan_area
+				province_id = 350
+				province_id = 5266
+				province_id = 351
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 		trigger = {
-			always = no
+			north_saharan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fezzan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			350 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5266 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			351 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-
+			hautes_plaines_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			kabylia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			tunisia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			djerba_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			barbary_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			algiers_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+			 	}
+			 	add_permanent_claim = ROOT 
+			}
+			custom_tooltip = " "
+			add_casus_belli = {
+				type = cb_farma_subjugation_war
+				target = TLC
+			}
+			custom_tooltip = " "
+			country_event = {
+				id = mr_MaliFlavor.22
+			}
 		}
 	}
 	mr_mali_northeast_fourth = {
 		icon = mission_turning_the_tables
-		position = 5
+		position = 7
 		required_missions = {
 			mr_mali_northeast_third
 		}
-		trigger = {
-			always = no
-		}
-		effect = {
-
-		}
-	}
-	mr_mali_northeast_fifth = {
-		icon = per_the_persian_influence
-		position = 7
-		required_missions = {
-			mr_mali_northeast_fourth
+		provinces_to_highlight = {
+			OR = {
+				area = hautes_plaines_area
+				area = kabylia_area
+				area = barbary_coast_area
+				area = algiers_area
+			}
 		}
 		trigger = {
-			always = no
+			hautes_plaines_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			algiers_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			barbary_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-
+			if = {
+				limit = {
+					NOT = {
+						336 = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+				}
+				336 = {
+					add_center_of_trade_level = 1
+				}
+			}
+			else = {
+				add_adm_power = 100
+			}
+			add_country_modifier = {
+				name = a_link_to_Mediterannean_trade
+				duration = -1
+			}
+			egypt_region = {
+				discover_country = MAL
+			}
+			arabia_region = {
+				discover_country = MAL
+			}
+			horn_of_africa_region = {
+				discover_country = MAL
+			}
 		}
 	}
-	mr_mali_northeast_eight = {
+	mr_mali_northeast_eighth = {
 		icon = per_establish_eastern_defenses
 		position = 8
 		required_missions = {
 			mr_mali_northeast_seventh
 		}
+		provinces_to_highlight = {
+			OR = {
+				region = egypt_region
+				area = dongola_area
+				area = upper_nubia_area
+				area = sennar_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 		trigger = {
-			always = no
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dongola_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_nubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sennar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			
+			nile_river_region = {
+				add_province_modifier = {
+					name = nile_river_conquest
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = malian_empire_dominant
+				duration = -1
+			}
 		}
 	}
 	mr_mali_naval_first = {
@@ -3593,46 +3758,30 @@ branch_5 = {
 			marrekesh_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { 
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
 					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			western_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { 
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
 					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			northern_morocco_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { 
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
 					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			macaronesia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { 
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
 					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			custom_tooltip = " "
 			add_ruler_modifier = {
@@ -3649,11 +3798,31 @@ branch_5 = {
 			}
 			else_if = {
 				limit = {
-					SOS = {
-						is_subject_of_type = farma_subject
+					NOT = {
+						SOS = {
+							is_subject_of_type = farma_subject
+						}
 					}
 				}
 				custom_tooltip = turn_them_sunni_twenty_yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						SOS = {
+							is_subject_of_type = farma_subject
+						}
+					}
+					SOS = {
+						kill_ruler = yes
+						define_ruler = {
+							dynasty = MAL
+							religion = MAL
+							culture = SOS
+						}
+						change_religion = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -4073,13 +4242,44 @@ branch_5 = {
 		icon = mission_combat_barbary_piracy
 		position = 6
 		required_missions = {
-			mr_mali_northeast_fourth
+			mr_mali_northeast_third
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = djerba_area
+				area = tripolitania_area
+				area = tunisia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
-			always = no
+			djerba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tunisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			
+			egypt_region = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			country_event = {
+				id = mr_MaliFlavor.23
+			}
 		}
 	}
 	mr_mali_northeast_seventh = {
@@ -4088,11 +4288,56 @@ branch_5 = {
 		required_missions = {
 			mr_mali_northeast_sixth
 		}
+		provinces_to_highlight = {
+			OR = {
+				area = cyrenaica_area
+				area = delta_area
+				area = bahari_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
 		trigger = {
-			always = no
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bahari_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			
+			dongola_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			sennar_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_nubia_area = {
+				limit = {
+					NOT = { owned_by = ROOT}
+					NOT = { owned_by = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = " "
+			country_event = {
+				id = mr_MaliFlavor.24
+			}
 		}
 	}
 	mr_mali_south_africa_first = {

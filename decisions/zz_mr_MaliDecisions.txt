@@ -109,6 +109,50 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	integrate_kon = {
+		color = { 253 229 101 }
+		major = yes
+		potential = {
+			exists = KON
+			has_country_flag = integrate_KON_MAL
+			KON = {
+				is_free_or_tributary_trigger = yes
+			}
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = JOL
+		}
+		allow = {
+			KON = {
+				NOT = {
+					OR = {
+						num_of_cities = 15
+						num_of_cities = MAL
+					}
+				}
+				trust = {
+					who = ROOT
+					value = 100
+				}
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+		effect = {
+			KON = {
+				country_event = {
+					id = mr_MaliFlavor.25
+				}
+			}
+			custom_tooltip = kongo_farma_decision_requirements 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400
+	}
 	malian_faction_check = {
 		color = { 253 229 101 }
 		major = yes
