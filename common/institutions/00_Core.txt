@@ -495,41 +495,7 @@ firearms_institution = {
 	trade_company_efficiency = 0.4
 	
 	effect = {
-		if = {
-			limit = {
-				mil_tech = 1
-				NOT = {  mil_tech = 2 }
-			}
-			add_mil_tech = 3
-		}
-		else_if = {
-			limit = {
-				mil_tech = 2
-				NOT = {  mil_tech = 3 }
-			}
-			add_mil_tech = 2
-		}
-		else_if = {
-			limit = {
-				mil_tech = 3
-				NOT = {  mil_tech = 4 }
-			}
-			add_mil_tech = 1
-		}
-		else_if = {
-			limit = {
-				mil_tech = 4
-				NOT = {  mil_tech = 5 }
-			}
-			add_mil_tech = 1
-		}
-		else_if = {
-			limit = {
-				mil_tech = 5
-				NOT = {  mil_tech = 6 }
-			}
-			add_mil_tech = 1
-		}
+		add_mil_power = 100
 	}
 	
 	#only used in bookmarks
