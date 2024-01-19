@@ -491,6 +491,7 @@ estate_nobles = {
 		estate_nobles_diet_right_aragon
 		estate_nobles_mr_warlord_aristocracy_gsc
 		estate_nobles_malian_farmas
+		estate_nobles_kanem_strong_duchies
 		# To be integrated, African privileges (Inferno)
 		estate_nobles_integrate_the_amazigh
 		estate_nobles_sicilian_reliance

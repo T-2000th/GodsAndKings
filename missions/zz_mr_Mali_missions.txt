@@ -1352,24 +1352,24 @@ branch_3 = {
 			custom_trigger_tooltip = {
 				tooltip = no_farma_tt
 				NOT = {
-					AND = {
-						any_country = {
-							is_subject_of_type_with_overlord = {
+					any_country = {
+						is_subject_of_type_with_overlord = {
+							who = MAL
+							type = farma_subject
+						} 
+						liberty_desire = 50
+					}
+				}
+				NOT = {
+					any_country = {
+						is_subject_of_type_with_overlord = {
+							who = MAL
+							type = farma_subject
+						} 
+						NOT = {
+							has_opinion = {
 								who = MAL
-								type = farma_subject
-							} 
-							liberty_desire = 50
-						}
-						any_country = {
-							is_subject_of_type_with_overlord = {
-								who = MAL
-								type = farma_subject
-							} 
-							NOT = {
-								has_opinion = {
-									who = MAL
-									value = 100
-								}
+								value = 100
 							}
 						}
 					}
@@ -2813,8 +2813,11 @@ branch_4 = {
 				province_id = 5340
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-				is_city = no
+				and = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = no
+				}
+				
 			}
 		}
 		trigger = {

@@ -355,6 +355,8 @@ estate_burghers_savannah_expansion_arid: "Battling the Sahel"
 estate_burghers_savannah_expansion_bonus_2: "Every province with Tropical Climate will gain §Y-5%§! Development Cost."
 estate_burghers_savannah_expansion_tropical: "Battling the Forests"
 estate_dhimmi_pagan_production: "African Pagan Productions"
+estate_nobles_kanem_strong_duchies: "Kanem Patronage"
+estate_nobles_kanem_strong_duchies_desc: "Placeholder"
 
 
 #Province Groups

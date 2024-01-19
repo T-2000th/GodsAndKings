@@ -9,5 +9,6 @@ primary_culture = kanuri
 capital = 1158	# Gatiga, Gazargamu
 historical_rival = YAO
 religious_school = maliki_school
+set_estate_privilege = estate_nobles_kanem_strong_duchies
 
 
