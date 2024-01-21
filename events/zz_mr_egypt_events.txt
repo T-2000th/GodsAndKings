@@ -727,3 +727,126 @@ country_event = { # Fate of the crusader states
 		add_permanent_claim_multi_provinces = { target = outremer_region }
 	}
 }
+
+country_event = { # Consolidation of Maghrebi vassals
+	id = mr_egypt.6
+	title = mr_egypt.6.t
+	desc = mr_egypt.6.d
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = EGY
+		maghreb_region = {
+			type = all
+			OR = {
+				is_city = no # Stupid uncolonized islands
+				country_or_non_sovereign_subject_holds = ROOT
+				province_id = 1096 # Jolof starts owning Cape Verde, we don't fuck with that
+			}
+		}
+		calc_true_if = {
+			amount = 2
+			all_subject_country = {
+				capital_scope = {
+					region = maghreb_region
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = { # Combine them!
+		name = mr_egypt.6.oa
+
+		random_subject_country = {
+			limit = { capital_scope = { region = maghreb_region } }
+
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+ 					capital_scope = { region = maghreb_region }
+				}
+				PREV = {
+					inherit = PREV
+				}
+			}
+		}
+	}
+
+	option = { # Tax them for big moolahs!
+		name = mr_egypt.6.ob
+
+		custom_tooltip = egy_vassal_taxes_TT
+
+		add_prestige = 10
+		add_country_modifier = {
+			name = egy_vassal_taxes
+			duration = 18250 # 50 years = 5000 duccies! but over time
+		}
+	}
+}
+
+country_event = { # Vassal contract betrayed!
+	id = mr_egypt.7
+	title = mr_egypt.7.t
+	desc = mr_egypt.7.d
+	picture = OVEREXTENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_country_modifier = egy_vassal_taxes
+		NOT = { # Fewer than 2 vassals in the maghreb
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					capital_scope = {
+						region = maghreb_region
+					}
+				}
+			}
+		}
+	}
+	# This is immediate so someone can't read the tooltip and cheese it by
+	# swapping accepted cultures (idk why you would tryhard that much tho
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = maghreb_region
+					owned_by = ROOT
+					OR = {
+						nationalism = 1
+						province_is_or_accepts_culture = no # This is a scripted trigger, CWTools just malds it for some reason
+					}
+				}
+
+				add_province_modifier = {
+					name = egy_angry_maghrebis
+					duration = 7300 # 20 years
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mr_egypt.7.oa
+		remove_country_modifier = egy_vassal_taxes
+		add_prestige = -10
+
+		custom_tooltip = mr_egypt.7.tt
+		tooltip = {
+			add_province_modifier = {
+				name = egy_angry_maghrebis
+				duration = 7300
+			}
+		}
+
+	}
+}

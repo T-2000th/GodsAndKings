@@ -5,12 +5,14 @@ custom_button = {
 		tag = EGY
 	} #Determines when the button is visible
     trigger = {
-		custom_trigger_tooltip = {
-			tooltip = cantuse_because_egypt_1
-			always = no
-		}
-	} 
+		adm_power = 100
+	}
 	effect = {
+		add_faction_influence = {
+			faction = wr_nubians
+			influence = 5
+		}
+		add_adm_power = -100
 	}
 	tooltip = "Boost"
 }
@@ -21,12 +23,14 @@ custom_button = {
 		tag = EGY
 	} #Determines when the button is visible
     trigger = {
-		custom_trigger_tooltip = {
-			tooltip = cantuse_because_egypt_2
-			always = no
-		}
-	} 
+		dip_power = 100
+	}
 	effect = {
+		add_faction_influence = {
+			faction = wr_berbers
+			influence = 5
+		}
+		add_dip_power = -100
 	}
 	tooltip = "Boost"
 }
@@ -37,12 +41,14 @@ custom_button = {
 		tag = EGY
 	} #Determines when the button is visible
     trigger = {
-		custom_trigger_tooltip = {
-			tooltip = cantuse_because_egypt_3
-			always = no
-		}
-	} 
+		mil_power = 100
+	}
 	effect = {
+		add_faction_influence = {
+			faction = wr_mamluks
+			influence = 5
+		}
+		add_mil_power = 100
 	}
 	tooltip = "Boost"
 }

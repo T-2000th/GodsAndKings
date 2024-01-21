@@ -12,10 +12,19 @@
  egypt_conquest_east_4_desc: "REPLACE_ME"
  egypt_conquest_east_5_title: "Defeat the False Caliph"
  egypt_conquest_east_5_desc: "REPLACE_ME"
+
  egypt_conquest_west_1_title: "Gates of Cyrenaica"
  egypt_conquest_west_1_desc: "REPLACE_ME"
  egypt_conquest_west_2_title: "Push Into Libya"
  egypt_conquest_west_2_desc: "REPLACE_ME"
+ egypt_conquest_west_3_title: "Raise Additional Berbers"
+ egypt_conquest_west_3_desc: "REPLACE_ME"
+ egypt_conquest_west_4_title: "Secure the Hinterland"
+ egypt_conquest_west_4_desc: "REPLACE_ME"
+ egypt_conquest_west_5_title: "Returning Home"
+ egypt_conquest_west_5_desc: "REPLACE_ME"
+ egy_subjugate_morrocco_TT: "\nWe will gain a subjugation CB on every nation with a capital in the Maghreb region lasting §Y25 years§!. \nIf the whole region is owned by us or our subjects, we will receive an event allowing us to §Yconsolidate§! our subjects into one."
+
  egypt_development_1_title: "Develop Upper Nile"
  egypt_development_1_desc: "REPLACE_ME"
  egypt_development_2_title: "Expand South"
@@ -31,7 +40,19 @@
  desc_egy_economic_boom: "Mild weather and our extremely intelligent policies have led to a period of stable, rapid growth in the economy."
  egy_desert_campaigns: "Desert Campaigns"
  desc_egy_desert_campaigns: "By purchasing the services of several Bedouin tribes, we can greatly improve the performance of our army in the harsh desert environments we plan to fight in, and take advantage of their excellent light cavalry."
+ egy_berber_homeland_secured: "Berber Homeland Secured"
+ desc_egy_berber_homeland_secured: "With our conquest of Libya, Tunis, and Algeria, we have brought the homelands of our Berber subjects back into the fold. This will give us greater support from them, but also make them more powerful at court."
+ egy_vassal_taxes: "Vassal Taxes"
+ desc_egy_vassal_taxes: "In exchange for letting our Maghrebi subjects remain independent, they have agreed to pool their resources in providing us a significantly increased yearly tribute."
+ egy_angry_maghrebis: "Angry Maghrebis"
+ desc_egy_angry_maghrebis: "Our policies in the Maghreb have become widely regared as tyrannical, making the population restive and hostile to our administrators. Tax receipts, tariff duties, and the like are down across the board."
 
  mr_egypt_create_al_franj_title: "Create Al-Franj"
  mr_egypt_create_al_franj_desc: "REPLACE_ME"
  mr_create_franj_crusader_tt: "All §Ycrusader states§! are subjects of §Y[Root.GetName].§!"
+
+
+## ------------------------ Factions -------------------------------------------
+ wr_nubians_influence: "REPLACE_ME"
+ wr_berbers_influence: "REPLACE_ME"
+ wr_mamluks_influence: "REPLACE_ME"
