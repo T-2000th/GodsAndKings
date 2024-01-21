@@ -341,7 +341,11 @@ maghrebi_corsairs = {
 	can_select = {
 		is_primitive = no
 		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
+		OR = {
+
 		culture_group = maghrebi
+		has_country_flag = subjugated_tunisia_MAL
+		}
 	}
 
 	cost = 0.1
