@@ -1,3 +1,36 @@
+custom_icon = {
+    name = faction_base_1 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_nubians
+		tag = EGY
+		NOT = {
+			adm_power = 100
+		}
+	} #Determines when the button is visible
+	tooltip = cantuse_because_egypt_1
+}
+custom_icon = {
+    name = faction_base_2 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_berbers
+		tag = EGY
+		NOT = {
+			dip_power = 100
+		}
+	} #Determines when the button is visible
+	tooltip = cantuse_because_egypt_2
+}
+custom_icon = {
+    name = faction_base_3 #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_faction = wr_mamluks
+		tag = EGY
+		NOT = {
+			mil_power = 100
+		}
+	} #Determines when the button is visible
+	tooltip = cantuse_because_egypt_3
+}
 custom_button = {
     name = faction_b_1 #Must match a scripted guiButtonType in a .gui file
     potential = {
@@ -48,7 +81,7 @@ custom_button = {
 			faction = wr_mamluks
 			influence = 5
 		}
-		add_mil_power = 100
+		add_mil_power = -100
 	}
 	tooltip = "Boost"
 }

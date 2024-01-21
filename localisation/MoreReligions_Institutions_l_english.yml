@@ -152,5 +152,9 @@
 
  BUTTON_SPREAD: "Research Institution"
  start_institution_research_title: "Start Foreign Research"
+
+faction_base_text_1: "Boost"
+faction_base_text_2: "Boost"
+faction_base_text_3: "Boost"
  
  

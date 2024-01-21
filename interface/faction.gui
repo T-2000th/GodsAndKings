@@ -64,6 +64,39 @@ guiTypes = {
 				clicksound = close_window
 			}	
 		##Gods and Kings
+		iconType =
+		{
+			name ="faction_base_1"
+			scripted = yes
+			quadTextureSprite= "GFX_standard_button_105"
+			position = { x= 158 y = 200 }
+			Orientation = "UPPER_LEFT"
+			buttonText = "BOOST"
+			buttonFont = "vic_18"
+			Orientation = "CENTER"	
+		}
+		iconType =
+		{
+			name ="faction_base_2"
+			scripted = yes
+			quadTextureSprite= "GFX_standard_button_105"
+			position = { x= 158 y = 32 }
+			Orientation = "UPPER_LEFT"
+			buttonText = "BOOST"
+			buttonFont = "vic_18"
+			Orientation = "CENTER"	
+		}
+		iconType =
+		{
+			name ="faction_base_3"
+			scripted = yes
+			quadTextureSprite= "GFX_standard_button_105"
+			position = { x= 158 y = -136 }
+			Orientation = "UPPER_LEFT"
+			buttonText = "BOOST"
+			buttonFont = "vic_18"
+			Orientation = "CENTER"	
+		}
 		guiButtonType =
 		{
 			name ="faction_b_1"
