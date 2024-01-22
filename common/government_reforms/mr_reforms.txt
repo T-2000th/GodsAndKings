@@ -1408,4 +1408,10 @@ mr_malian_confederation = {
 			malian_parliament = yes
 		}
 	}
+
+	factions = {
+		malian_court 
+		malian_guilds 
+		malian_merchants 
+	}
 }

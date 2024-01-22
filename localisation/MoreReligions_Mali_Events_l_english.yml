@@ -214,3 +214,19 @@ mr_MaliFlavor.24.b: "Perhaps these men still have some use..."
 
 defeat_of_the_fatimids: "Defeat of the Fatimids"
 fatimid_killer_Mal: "Dethroning of the Wiziers"
+
+#Mean time to Happen events
+
+mr_MaliFlavor.27.t: "Influential Merchant in [Root.GetName]"
+mr_MaliFlavor.27.d: "The province of [Root.GetName] has been the home to many members of the Foreign Merchant community. However, they reside within its capital city that is fundamentally different from them - they are a member of the Ummah while the majority of [ROOT.Capital.GetName] are of a different faith. Complaints are common, but recently, an incredibly influential merchant has approached the Mansa demanding that we deal with the unfaithful, claiming that they recently performed a ritual or tradition too heretical to overlook. Naturally, this was an overstatement to say the least, but pressure has been placed on the Mansa to do something. They demand we lift protections of the non-muslims in the city, and allow their missionaries to do their work, but this could cause extreme backlash."
+mr_MaliFlavor.27.a: "Allow missionaries in the city."
+mr_MaliFlavor.27.b: "The city is ours, not yours!"
+merchants_request_conversion: "Merchant Conversion Granted"
+merchant_request_denied: "Merchant Request Denied"
+
+
+mr_MaliFlavor.28.t: "Foreign Connections"
+mr_MaliFlavor.28.d: "The merchants have grown exceptionally powerful in our nation. Their connections stretch far and wide, to far away lands of Iran, India, and even the lands of Nusantara. Using their connections, they have brought these goods into the province of [Root.GetName], and have requested grants to open a plantation within the region. It is clear that their plan would not succeed without our help, and the merchants seem to expect some sort of support in the province - yet their influence in the province is merely on the surface, so accepting this could upset local merchants."
+mr_MaliFlavor.28.a: "I always wanted a new market here!"
+mr_MaliFlavor.28.b: "I like the concept, but that price is insane!"
+mr_MaliFlavor.28.c: "I am not messing with [Root.GetAdjective] merchants!"

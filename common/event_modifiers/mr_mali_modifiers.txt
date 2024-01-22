@@ -319,3 +319,12 @@ malian_empire_dominant = {
 	administrative_efficiency = 0.05
 	global_trade_power = 0.1	
 }
+merchants_request_conversion = {
+	local_missionary_strength = 0.03
+	local_unrest = 5
+	local_tax_modifier = -0.05
+}
+merchant_request_denied = {
+	malian_merchants_influence = -0.15
+	tolerance_heathen = 0.5
+}
