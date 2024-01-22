@@ -589,4 +589,23 @@ spriteTypes = {
 		name = "GFX_establish_shogun"
 		texturefile = "gfx/interface/government_mechanics/japanese_splendor/establish_shogun.dds"
 	}
+	
+	#Dutch Government
+
+	spriteType = {
+		name = "GFX_dutch_centralization_frame"
+		texturefile = "gfx/interface/government_mechanics/dutch_centrilazation/dutch_centralization_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_dutch_progress_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/maitreyan_zealotry/maitreyan_zealotry_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/maitreyan_zealotry/maitreyan_zealotry_progress_bar_empty.dds"
+		size = { x = 235 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+	}
 }

@@ -149,6 +149,8 @@ monarchy = {
 				medieval_caliphate
 				# Added for Africa (Inferno)
 				rex_africae
+				#Dutch reforms
+				dutch_confederation
 			}
 		}
 		hereditary_vs_nobility = {

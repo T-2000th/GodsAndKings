@@ -1312,3 +1312,22 @@ thalassocracy_reform_basque = {
 		factor = 1
 	}
 }
+
+	#Dutch Government reforms
+
+dutch_confederation = {
+	icon = "feudal_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = HOL
+			was_tag = HOL
+			}
+	}
+	modifiers = {
+		governing_capacity = 150
+		}	
+		government_abilities = {
+			Dutch_confederation_mechanic
+		}
+}
