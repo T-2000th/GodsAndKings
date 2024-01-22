@@ -358,11 +358,16 @@ branch_1 = {
 		trigger = {
 			crown_land_share = 40
 			stability = 1
-			custom_trigger_tooltip = {
-				tooltip = check_num_of_factions
-				check_variable = {
-					which = revolt_on_ruler_MAL
-					value = 3
+			if = {
+				limit = {
+					ai = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = check_num_of_factions
+					check_variable = {
+						which = revolt_on_ruler_MAL
+						value = 3
+					}
 				}
 			}
 		}
@@ -382,11 +387,16 @@ branch_1 = {
 		}
 		trigger = {
 			crown_land_share = 50
-			custom_trigger_tooltip = {
-				tooltip = check_num_of_factions_8
-				check_variable = {
-					which = NumOfFactionQuests
-					value = 10
+			if = {
+				limit = {
+					ai = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = check_num_of_factions_8
+					check_variable = {
+						which = NumOfFactionQuests
+						value = 10
+					}
 				}
 			}
 			estate_loyalty = {
@@ -1349,27 +1359,32 @@ branch_3 = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = no_farma_tt
-				NOT = {
-					any_country = {
-						is_subject_of_type_with_overlord = {
-							who = MAL
-							type = farma_subject
-						} 
-						liberty_desire = 50
-					}
+			if = {
+				limit = {
+					ai = no
 				}
-				NOT = {
-					any_country = {
-						is_subject_of_type_with_overlord = {
-							who = MAL
-							type = farma_subject
-						} 
-						NOT = {
-							has_opinion = {
+				custom_trigger_tooltip = {
+					tooltip = no_farma_tt
+					NOT = {
+						any_country = {
+							is_subject_of_type_with_overlord = {
 								who = MAL
-								value = 100
+								type = farma_subject
+							} 
+							liberty_desire = 50
+						}
+					}
+					NOT = {
+						any_country = {
+							is_subject_of_type_with_overlord = {
+								who = MAL
+								type = farma_subject
+							} 
+							NOT = {
+								has_opinion = {
+									who = MAL
+									value = 100
+								}
 							}
 						}
 					}
@@ -1383,13 +1398,15 @@ branch_3 = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = given_subsidies_or_cash
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-							value = 20
-						}
-						subsidised_percent_amount = { 
-							value = 0.30
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = sent_gift
+								value = 20
+							}
+							subsidised_percent_amount = { 
+								value = 0.30
+							}
 						}
 					}
 				}
@@ -3591,24 +3608,30 @@ branch_5 = {
 					type = core_farma_subject
 				}
 			}
-			5221 = {
-				num_of_units_in_province = {
-					who = MAL
-					amount = 1
+			if = {
+				limit = {
+					ai = no
+				}
+				5221 = {
+					num_of_units_in_province = {
+						who = MAL
+						amount = 1
+					}
+				}
+				5220 = {
+					num_of_units_in_province = {
+						who = MAL
+						amount = 1
+					}
+				}
+				5224 = {
+					num_of_units_in_province = {
+						who = MAL
+						amount = 1
+					}
 				}
 			}
-			5220 = {
-				num_of_units_in_province = {
-					who = MAL
-					amount = 1
-				}
-			}
-			5224 = {
-				num_of_units_in_province = {
-					who = MAL
-					amount = 1
-				}
-			}
+			
 		}
 		effect = {
 			seize_empty_province_effect = { province = 5224 }
@@ -4358,12 +4381,15 @@ branch_5 = {
 		}
 		trigger = {
 			1306 = {
+				is_city = yes
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			1795 = {
+				is_city = yes
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			1097 = {
+				is_city = yes
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}

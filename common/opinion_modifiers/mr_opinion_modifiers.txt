@@ -78,7 +78,7 @@ afr_broke_our_promise = {
 }
 annexed_farma = {
 	opinion = -50
-	yearly_decay = -5
+	yearly_decay = 5
 }
 is_farma = {
 	opinion = 25
