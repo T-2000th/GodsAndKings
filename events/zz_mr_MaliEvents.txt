@@ -1879,7 +1879,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 200
 	}
 
 	is_mtth_scaled_to_size = 1
@@ -1905,6 +1905,95 @@ province_event = {
 			add_country_modifier = {
 				name = merchant_request_denied
 				duration = 3650
+			}
+			add_faction_influence = {
+				faction = malian_merchants
+				influence = -5
+			}
+		}
+	}
+}
+province_event = {
+	id = mr_MaliFlavor.28 #Foreign Sales
+	title = mr_MaliFlavor.28.t
+	desc = mr_MaliFlavor.28.d
+	picture = muslimgfx_MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		owner = {
+			has_faction = malian_merchants
+			faction_influence = {
+				faction = malian_merchants
+				influence = 40
+			}
+		}
+		NOT = {
+			has_province_flag = mali_merchant_upgrade
+		}
+		is_upgraded_good = no
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+
+	is_mtth_scaled_to_size = 1
+
+	option = {
+		name = mr_MaliFlavor.28.a #Pay the cost, import the goods!
+		add_unrest = 3
+		random_list = {
+			33 = {
+				change_trade_goods = opium
+			}
+			33 = {
+				change_trade_goods = cinnamon
+			}
+			33 = {
+				change_trade_goods = saffron
+			}
+		}
+		owner = {
+			add_years_of_income = -0.5
+		}
+		hidden_effect = {
+			set_province_flag = mali_merchant_upgrade
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.28.b #Twist their arm, lower the cost!
+		add_unrest = 3
+		random_list = {
+			33 = {
+				change_trade_goods = opium
+			}
+			33 = {
+				change_trade_goods = cinnamon
+			}
+			33 = {
+				change_trade_goods = saffron
+			}
+		}
+		owner = {
+			add_years_of_income = -0.25
+			add_faction_influence = {
+				faction = malian_merchants
+				influence = -15
+			}
+		}
+		hidden_effect = {
+			set_province_flag = mali_merchant_upgrade
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.28.c #Let us prioritize our local merchants.
+		add_unrest = -5
+		owner = {
+			add_faction_influence = {
+				faction = malian_merchants
+				influence = -10
 			}
 		}
 	}
