@@ -214,3 +214,7 @@ mr_MaliFlavor.24.b: "Perhaps these men still have some use..."
 
 defeat_of_the_fatimids: "Defeat of the Fatimids"
 fatimid_killer_Mal: "Dethroning of the Wiziers"
+
+#Mean time to Happen events
+
+mr_MaliFlavor.27.t: "Influential Merchant in [Root.GetName]"

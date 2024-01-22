@@ -1850,3 +1850,62 @@ country_event = { #Farma of Kongo Reaction
 		}
 	}
 }
+
+#Mean time to happen events
+province_event = {
+	id = mr_MaliFlavor.27
+	title = mr_MaliFlavor.27.t
+	desc = mr_MaliFlavor.27.d
+	picture = muslimgfx_CITY_DEVELOPMENT_eventPicture
+
+
+	trigger = {
+		owner = {
+			has_faction = malian_merchants
+		}
+		NOT = {
+			religion = ROOT
+		}
+		NOT = {
+			OR = {
+				has_province_modifier = merchants_request_conversion
+				owner = {
+					has_country_modifier = merchant_request_denied
+				}
+			}
+			
+
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	is_mtth_scaled_to_size = 1
+
+
+	option = {
+		name = mr_MaliFlavor.27.a #Allow conversion
+		owner = {
+			add_faction_influence = {
+				faction = malian_merchants
+				influence = 5
+			}
+		}
+		add_province_modifier = {
+			name = merchants_request_conversion
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.27.b #Deny Conversion
+		owner = {
+			add_country_modifier = {
+				name = merchant_request_denied
+				duration = 3650
+			}
+		}
+	}
+}
