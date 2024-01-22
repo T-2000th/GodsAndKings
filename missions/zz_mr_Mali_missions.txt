@@ -1383,17 +1383,18 @@ branch_3 = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = given_subsidies_or_cash
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-							value = 20
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = sent_gift
+								value = 20
+							}
+							subsidised_percent_amount = { 
+								value = 0.30
+							}
 						}
-						subsidised_percent_amount = { 
-							value = 0.30
-						}
-					}
+					}	
 				}
-				
 			}
 		}
 		effect = {
@@ -2882,6 +2883,7 @@ branch_4 = {
 		position = 3
 		required_missions = {
 			mr_mali_northeast_first
+			mr_mali_sahara_second
 		}
 		provinces_to_highlight = {
 			OR = { 
