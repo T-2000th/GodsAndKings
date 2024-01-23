@@ -26,7 +26,18 @@ Dutch_confederation_mechanic = {
 
 				}
 			}
-
+			scaled_modifier = {
+				trigger = {
+					has_government_power = {
+						mechanic_type = Dutch_confederation_mechanic
+						power_type = Dutch_centralization
+						value = 100
+					}
+				}
+				modifier = {
+					disable_annexation_penalty = yes
+				}
+			}
 			reverse_scaled_modifier = {
 				modifier = {
 					monthly_Dutch_centralization = 0.10
