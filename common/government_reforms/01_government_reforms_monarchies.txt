@@ -1711,7 +1711,7 @@ bohemian_elective_kingdom_reform = {
 
 stadthalter_monarchy_reform = {
 	icon = "dutch_republic"
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	potential = {
 		OR = {
 			AND = {

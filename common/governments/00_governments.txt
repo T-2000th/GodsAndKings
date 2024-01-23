@@ -102,7 +102,7 @@ monarchy = {
 				holy_imperial_monarchy_reform
 				burgundian_state_reform
 				bohemian_elective_kingdom_reform
-				stadthalter_monarchy_reform
+				#stadthalter_monarchy_reform
 				janissary_autocracy_reform
 				admiralty_regime_reform
 				system_of_councils_reform
@@ -482,7 +482,7 @@ monarchy = {
 		russian_empire_reform
 		principality
 		english_monarchy
-		stadthalter_monarchy_reform
+		#stadthalter_monarchy_reform
 		states_general_reform
 		polish_elective_monarchy
 		polish_great_sejm

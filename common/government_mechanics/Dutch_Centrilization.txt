@@ -1,6 +1,8 @@
 Dutch_confederation_mechanic = {
+	#alert_icon_gfx = 
+	#alert_icon_index = 
 	available = {
-		has_dlc = "Domination"
+		always = yes
 	}
 
 	powers = {
@@ -10,7 +12,63 @@ Dutch_confederation_mechanic = {
 			min = 0	
 			base_monthly_growth = 0
 			reset_on_new_ruler = no
-			
+			is_good = yes
+			monarch_power = dip
+
+			scaled_modifier = {
+				modifier = {
+					monthly_Dutch_centralization = -0.10
+					reduced_liberty_desire = -50
+					vassal_forcelimit_bonus = 0.25
+					vassal_manpower_bonus = 0.25
+					vassal_sailors_bonus = 0.25
+					vassal_income = 0.25
+
+				}
+			}
+
+			reverse_scaled_modifier = {
+				modifier = {
+					monthly_Dutch_centralization = 0.10
+					reduced_liberty_desire = 75
+					vassal_forcelimit_bonus = -0.20
+					vassal_manpower_bonus = -0.20
+					vassal_sailors_bonus = -0.20
+					vassal_income = -0.10
+				}
+			}
+
 		}
+	}
+
+	interactions = {
+			Dutch_centralization_boost = {
+		#   gui = 
+		   	icon = "support_heir_button"
+		   	trigger = { dip_power = 100 }
+		    effect = { add_government_power = {
+				mechanic_type = Dutch_confederation_mechanic
+				power_type = Dutch_centralization
+				value = 10
+				} 
+				add_dip_power = -100
+			}
+		   cooldown_years = 10 
+		}	
+
+			Dutch_centralization_remove = {
+			#gui = 
+		   	icon = "support_heir_button"
+		   	trigger = { dip_power = 100 }
+		    effect = { add_government_power = {
+				mechanic_type = Dutch_confederation_mechanic
+				power_type = Dutch_centralization
+				value = -10
+				} 
+				add_dip_power = -100
+			}
+		   	cooldown_years = 10 
+		}	
+
 	}
 }
