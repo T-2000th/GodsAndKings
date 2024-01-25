@@ -594,18 +594,19 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_dutch_centralization_frame"
-		texturefile = "gfx/interface/government_mechanics/dutch_centrilazation/dutch_centralization_frame.dds"
+		texturefile = "gfx/interface/government_mechanics/centralization_progress/dutch_centralization_progress_frame.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	
 
 	progressbartype = {
-		name = "GFX_dutch_progress_bar"
+		name = "GFX_dutch_centralization_progressbar_frame"
 		color = { 1.0 0.0 0.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/government_mechanics/maitreyan_zealotry/maitreyan_zealotry_progress_bar.dds"
-		textureFile2 = "gfx/interface/government_mechanics/maitreyan_zealotry/maitreyan_zealotry_progress_bar_empty.dds"
-		size = { x = 235 y = 18 }
+		textureFile1 = "gfx/interface/government_mechanics/centralization_progress/dutch_centralization_progressbar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/centralization_progress/dutch_centralization_progressbar_background.dds"
+		size = { x = 219 y = 18 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 }
