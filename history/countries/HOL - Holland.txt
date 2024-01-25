@@ -57,10 +57,11 @@ capital = 4383 #Haag
 		name = "Jacoba"
 		dynasty = "von Wittelsbach"
 		adm = 2
-		dip = 1
-		mil = 1
+		dip = 3
+		mil = 2
 		female = yes
 	}
+	add_ruler_personality = benevolent_personality
 }
 
 1580.1.1 = { set_legacy_government = administrative_republic } # Constitutionalism and the General Estates

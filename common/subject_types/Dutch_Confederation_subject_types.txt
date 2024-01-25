@@ -1,5 +1,5 @@
 dutch_confederation = { #incomplete
-	copy_from = vassal
+	copy_from = default
 	
 	# Graphics:
 	sprite = GFX_icon_vassal
@@ -7,21 +7,36 @@ dutch_confederation = { #incomplete
 	diplomacy_subject_sprite = GFX_diplomacy_amvassal
 
 	# Properties:
+	can_fight_independence_war = yes
+	transfer_trade_power = no
 	transfer_trade_if_merchant_republic = yes
-	can_be_annexed = yes
+	joins_overlords_wars = no
+	can_be_annexed = no
+	extend_trading_range = yes
 	has_power_projection = no
 	gets_help_with_rebels = yes
 	forms_trade_companies = no
-
+	counts_for_borders = yes
+	must_accept_cta_from_overlord = yes
+	favors_cost_to_join_offensive_wars = 50   #Defines how much favors the overlord need to invest to call the subject into an offensive war
+	favors_cost_to_join_defensive_wars = 25   #Defines how much favors the overlord need to invest to call the subject into a defensive war
+	opinion_cost_to_join_offensive_wars = 50
+	opinion_cost_to_join_defensive_wars = 25
+	opinion_on_subject_integration = 0
 	max_government_rank = 1
 
+	base_liberty_desire = 50
 	liberty_desire_development_ratio = 0.25
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.0
 	forcelimit_to_overlord = 0.1
+	manpower_to_overlord = 0.1
+	sailors_to_overlord = 0.1
+	takes_diplo_slot = no
 
-	relative_power_class = 2
+	relative_power_class = 1
 	should_quit_wars_on_activation = yes
+	trust_on_start = 35
 
 	restoration_cb = cb_disloyal_vassal
 

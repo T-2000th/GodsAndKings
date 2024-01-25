@@ -17,7 +17,7 @@ Dutch_confederation_mechanic = {
 
 			scaled_modifier = {
 				modifier = {
-					monthly_Dutch_centralization = -0.10
+					monthly_Dutch_centralization = -0.50
 					reduced_liberty_desire = -50
 					vassal_forcelimit_bonus = 0.25
 					vassal_manpower_bonus = 0.25
@@ -40,8 +40,8 @@ Dutch_confederation_mechanic = {
 			}
 			reverse_scaled_modifier = {
 				modifier = {
-					monthly_Dutch_centralization = 0.10
-					reduced_liberty_desire = 75
+					monthly_Dutch_centralization = 0
+					reduced_liberty_desire = 0
 					vassal_forcelimit_bonus = -0.20
 					vassal_manpower_bonus = -0.20
 					vassal_sailors_bonus = -0.20
