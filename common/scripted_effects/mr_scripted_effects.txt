@@ -552,7 +552,8 @@ farma_dynamic_name_change_effect = {
 	if = { limit = { tag = GAO } farma_name_effect = { tag = FR3 } }
 	if = { limit = { tag = HAU } farma_name_effect = { tag = FR4 } }
 	if = { limit = { tag = KNM } farma_name_effect = { tag = FR5 } }
-	if = { limit = { tag = YRE } farma_name_effect = { tag = FR6 } }
+	if = { limit = { tag = YRE } farma_name_effect = { tag = FR6A } }
+	if = { limit = { tag = YRE MAL = { mission_completed = mr_mali_yoruba_fourth } } farma_name_effect = { tag = FR6A } }
 	if = { limit = { tag = KON } farma_name_effect = { tag = FR7 } }
 	if = { limit = { tag = FZA } farma_name_effect = { tag = FR8 } }
 	if = { limit = { tag = TUN } farma_name_effect = { tag = FR9 } }

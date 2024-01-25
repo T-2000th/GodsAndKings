@@ -632,6 +632,7 @@ country_event = {
 				}
 				grant_independence = yes
 				PREV = {
+					white_peace = MAL
 					create_alliance = MAL
 					join_all_offensive_wars_of = MAL
 				}
