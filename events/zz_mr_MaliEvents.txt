@@ -637,7 +637,6 @@ country_event = {
 					join_all_offensive_wars_of = MAL
 				}
 				set_country_flag = to_be_annexed_MAL
-				add_liberty_desire = -50
 			}
 		}
 	}
@@ -811,7 +810,7 @@ country_event = {
 			}
 			spawn_rebels = {
 				size = 3
-				leader_dynasty = "Sayfawa"
+				leader_dynasty = "Keita"
 				type = pretender_rebels
 			}
 		}
