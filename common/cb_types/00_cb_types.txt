@@ -1432,6 +1432,7 @@ cb_take_mandate = {
 			religion_group = pagan
 			religion_group = eastern
 			tag = SJI
+			tag = HGH
 		}
 		OR = {
 			ai = no
