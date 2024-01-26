@@ -215,6 +215,8 @@ monarchy = {
 				restore_the_master_of_offices_reform
 				court_of_art_and_culture_reform
 				integrated_ottoman_officials
+				#G&K
+				al_hind_government
 			}
 		}
 		state_and_religion = {
@@ -742,6 +744,8 @@ republic = {
 								#1.36
 								legacy_of_the_safavid_reform
 								state_madrasas_reform
+				#G&K
+				al_hind_government								
 			}
 		}
 		military_doctrines = {

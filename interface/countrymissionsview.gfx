@@ -602,4 +602,12 @@ spriteTypes = {
 		name = "mission_aristotle"
 		texturefile = "gfx/interface/missions/mission_aristotle.dds"
 	}
+	spriteType = {
+		name = "mission_indian_empire_blk"
+		texturefile = "gfx/interface/missions/mission_indian_empire_blk.dds"
+	}
+	spriteType = {
+		name = "mission_balkh_surges"
+		texturefile = "gfx/interface/missions/mission_balkh_surges.dds"
+	}		
 }

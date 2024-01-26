@@ -12,7 +12,7 @@ mr_balkh_missions_revolt = {
 		}
 		
 	balkh_revolt_1 = {
-		icon = mission_build_up_to_force_limit
+		icon = per_balance_of_power
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -27,17 +27,17 @@ mr_balkh_missions_revolt = {
             set_country_flag = BLK_barlas_revolt1
 			clr_country_flag = BLK_barlas_revolt0
 			}
-		custom_tooltip = add_10_crown_land_share
+		custom_tooltip = add_5_crown_land_share
 		  hidden_effect = {
 			change_estate_land_share = {
 				estate = all
-				share = -10
+				share = -5
 				}
 			}			
 		}
 	}		
 	balkh_revolt_2 = {
-		icon = mission_build_up_to_force_limit
+		icon = per_recruit_the_qizilbash
 		required_missions = { balkh_revolt_1 }
 		position = 2
 		trigger = {
@@ -60,7 +60,7 @@ mr_balkh_missions_revolt = {
 		}
 	}
 	balkh_revolt_3 = {
-		icon = mission_build_up_to_force_limit
+		icon = aq_qoyunlu_dethrone_the_timurids
 		required_missions = { balkh_revolt_2 }
 		position = 3
 		trigger = {
@@ -79,7 +79,7 @@ mr_balkh_missions_revolt = {
 		}
 	}	
 	balkh_revolt_4 = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_afghan_frontier
 		required_missions = { balkh_revolt_3 }
 		position = 4
 		trigger = {
@@ -125,7 +125,7 @@ mr_balkh_missions_push_west = {
 		}
 		
 	balkh_makran_port = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_dominate_gujarati_trade
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = { province_id = 2231 }
@@ -150,7 +150,7 @@ mr_balkh_missions_push_west = {
 		}
 	}
 	balkh_indus_estuary = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_sindh_dlh
 		required_missions = { balkh_makran_port }
 		position = 4
 		provinces_to_highlight = { 
@@ -240,7 +240,7 @@ mr_balkh_missions_5 = {
 		   }
 		}
 	balkh_conquer_kashmir = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_marwari_horses
 		required_missions = { }
 		position = 1
 		provinces_to_highlight = { area = kashmir_area }
@@ -258,27 +258,46 @@ mr_balkh_missions_5 = {
 		}
 	}	
 	balkh_conquer_lahore = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_pacify_punjab
 		required_missions = { balkh_conquer_kashmir }
 		position = 3
 		provinces_to_highlight = { area = lahore_area }
+		
 		trigger = {
-        lahore_area = {
-		type = all
-		owned_by = ROOT
-		is_core = ROOT
-		  }
-		NOT = { exists = PUN }
-		}
+			if = {
+				limit = {
+					exists = PUN
+				}
+				PUN = {
+					capital_scope = {
+						controlled_by = ROOT
+					}
+				}
+			}
+			else = {
+				507 = {
+					controlled_by = ROOT
+				}
+			}
+		}		
 		effect = {
-		country_event = { id = MR_balkh_flavor.14 }
+		if = {
+		 limit = { exists = PUN }
+		  country_event = { id = MR_balkh_flavor.14 }
+		}
+		else = {
+         add_ruler_modifier = {
+          name = balkh_khwarazmian_slayer
+		  duration = -1
+		 }
+		}
 		add_permanent_claim_multi_provinces = { target = delhi_area }	
 		add_permanent_claim_multi_provinces = { target = sirhind_area }		
 		add_permanent_claim_multi_provinces = { target = multan_area }	
 		}
 	}
 	balkh_conquer_multan = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_restore_rule_over_multan
 		required_missions = { balkh_conquer_lahore }
 		position = 4
 		provinces_to_highlight = { area = multan_area }
@@ -327,7 +346,7 @@ mr_balkh_indian_missions3 = {
 		}
 		
 	balkh_indian_ambitions = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_indian_empire
 		required_missions = { 
 		balkh_conquer_multan
 		balkh_indus_estuary
@@ -343,7 +362,7 @@ mr_balkh_indian_missions3 = {
 		}
 	}
 	balkh_indian_formation = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_indian_empire_blk
 		required_missions = { 
         balkh_indian_ambitions
 		}
@@ -373,6 +392,13 @@ mr_balkh_indian_missions3 = {
 		effect = {
 		country_event = { id = MR_balkh_flavor.11 }
 		if = {
+         limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		 custom_tooltip = BLK_compromise_reward_TT
+         add_permanent_claim_multi_provinces = { target = katehar_area } 
+		 add_permanent_claim_multi_provinces = { target = oudh_area } 	
+		 add_permanent_claim_multi_provinces = { target = rajasthan_region } 
+	    }			
+		if = {
          limit = { NOT = { has_country_flag = balkh_compromise_path } }
          custom_tooltip = BLK_conversion_reward_TT 
 		 custom_tooltip = BLK_delhi_CoR
@@ -395,7 +421,7 @@ mr_balkh_missions_india_internal_2 = {
 		}
 		
 	balkh_introduce_coinage = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_establish_mint_towns
 		required_missions = { 
         balkh_appoint_vakil
 		}
@@ -415,11 +441,12 @@ mr_balkh_missions_india_internal_2 = {
 		}		
 		}
 		effect = {
-		
+		 custom_tooltip = unlock_coin_minting_TT
+		 set_country_flag = domestic_coinage_minting
 		}
 	}
 	balkh_introduce_kharaj = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_general_land_assessment
 		required_missions = { 
         balkh_introduce_coinage
 		}
@@ -435,7 +462,7 @@ mr_balkh_missions_india_internal_2 = {
 		  }
 		}
 		effect = {
-		
+		 country_event = { id = MR_balkh_flavor.49 }
 		}
 	}	
 }	
@@ -454,7 +481,7 @@ mr_balkh_missions_india_internal_3 = {
 		}
 		
 	balkh_appoint_vakil = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_embassy_to_the_west
 		required_missions = { 
         balkh_indian_formation
 		}
@@ -475,7 +502,7 @@ mr_balkh_missions_india_internal_3 = {
 		}
 	}
 	balkh_create_subah = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_malwa_guj
 		required_missions = { 
         balkh_appoint_vakil
 		}
@@ -488,11 +515,12 @@ mr_balkh_missions_india_internal_3 = {
 		 }
 		}
 		effect = {
-		
+		 set_country_flag = 5_crownland_on_seize
+		 custom_tooltip = 5_crownland_on_seize_TT
 		}
 	}
 	balkh_create_laws = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_court_education
 		required_missions = { 
         balkh_create_subah
 		}
@@ -515,7 +543,7 @@ mr_balkh_missions_india_internal_3 = {
 		}
 	}
 	balkh_caste_system = {
-		icon = mission_build_up_to_force_limit
+	    icon = mission_din_i_llahi 
 		required_missions = { 
         balkh_create_laws
 		balkh_introduce_kharaj
@@ -544,7 +572,7 @@ mr_balkh_missions_india_internal_4 = {
 		   }
 		}
 	balkh_introduce_dagh_and_chehra = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_integrate_the_purbias
 		required_missions = { 
         balkh_appoint_vakil
 		}
@@ -560,7 +588,7 @@ mr_balkh_missions_india_internal_4 = {
 		}
 	}
 	balkh_introduce_self_responsibility = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_rajput_mansabdars
 		required_missions = { 
         balkh_introduce_dagh_and_chehra
 		}
@@ -592,7 +620,7 @@ mr_balkh_indian_missions_east = {
 		}
 		
 	balkh_conquer_kannauj = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_subdue_rajputana
 		required_missions = { 
         balkh_indian_formation
 		}
@@ -614,6 +642,11 @@ mr_balkh_indian_missions_east = {
 		set_country_flag = BLK_rajput_vassals_flag
 		custom_tooltip = BLK_western_aryan_vassals_TT
 		if = {
+         limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		 custom_tooltip = BLK_compromise_reward_TT	
+		 add_permanent_claim_multi_provinces = { target = hindusthan_region } 
+	    }		
+		if = {
          limit = { NOT = { has_country_flag = balkh_compromise_path } }
          custom_tooltip = BLK_conversion_reward_TT 	 
 		 custom_tooltip = BLK_demand_subjugation_TT
@@ -627,7 +660,7 @@ mr_balkh_indian_missions_east = {
 		}
 	}
 	balkh_conquer_hindustan = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_emperor_of_hindusthan
 		required_missions = { 
         balkh_conquer_kannauj
 		}
@@ -653,6 +686,12 @@ mr_balkh_indian_missions_east = {
 				duration = -1
 			}
 			custom_tooltip = BLK_hindustan_bonus_TT
+		     if = {
+			  limit = { NOT = { has_country_flag = balkh_conversion_path } }
+			   custom_tooltip = BLK_compromise_reward_TT	
+			   add_permanent_claim_multi_provinces = { target = jharkhand_area }
+			   add_permanent_claim_multi_provinces = { target = gaur_area } 
+	         }			
 			hidden_effect = {
 			if = {
 				limit = { owns_all_provinces = { culture = nepali } }
@@ -667,12 +706,13 @@ mr_balkh_indian_missions_east = {
 					name = balkh_masters_of_hindustan_bihari
 					duration = 7300
 				}				
-			}			
+			}
+			country_event = { id = MR_balkh_flavor.40 days = 200 }	
 		}
 	  }
 	}
 	balkh_conquer_jharkhand = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_a_million_elephants
 		required_missions = { 
         balkh_conquer_hindustan
 		}
@@ -697,10 +737,16 @@ mr_balkh_indian_missions_east = {
 		name = balkh_elephants
 		duration = -1 
 		 }
+		if = {
+	     limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT	
+		  add_permanent_claim_multi_provinces = { target = west_bengal_area }
+		  add_permanent_claim_multi_provinces = { target = east_bengal_area } 
+	     }		 
 		}
 	}
 	balkh_bengal_ports = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_bengal_entrepot
 		required_missions = { 
         balkh_conquer_jharkhand
 		}
@@ -731,8 +777,12 @@ mr_balkh_indian_missions_east = {
 		add_country_modifier = {
 			name = BLK_bengali_entrepot
 			duration = -1 
-			}			
-		add_permanent_claim_multi_provinces = { target = arakan_area }		
+			}				
+		if = {
+	     limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT	
+		  add_permanent_claim_multi_provinces = { target = bengal_region }
+	    }		
 		if = {
          limit = { NOT = { has_country_flag = balkh_compromise_path } }
          custom_tooltip = BLK_conversion_reward_TT 
@@ -756,7 +806,7 @@ mr_balkh_indian_missions_east = {
 	   }			
 	}
 	balkh_naga_hill_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_koch
 		required_missions = { 
         balkh_bengal_ports
 		}
@@ -817,7 +867,7 @@ mr_balkh_indian_missions_east = {
 		}
 	}		
 	balkh_bengal_consolidation = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_the_tiger_triumphant
 		required_missions = { 
         balkh_naga_hill_conquest
 		balkh_garjati_conquest
@@ -861,7 +911,7 @@ mr_balkh_missions_india_east_coast = {
 		}
 		
 	balkh_orissa_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_cuttack
 		required_missions = { 
         balkh_bengal_ports
 		}
@@ -889,7 +939,7 @@ mr_balkh_missions_india_east_coast = {
 		}
 	}
 	balkh_garjati_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_rule_the_garjats
 		required_missions = { 
         balkh_orissa_conquest
 		}
@@ -904,6 +954,9 @@ mr_balkh_missions_india_east_coast = {
 			owns_all_provinces = { culture = garjati }
 		}
 		effect = {
+		if = {
+         limit = { NOT = { has_country_flag = balkh_compromise_path } }
+            custom_tooltip = BLK_conversion_reward_TT 
 			custom_tooltip = garjati_assimilation_TT
 			2048 = { 
 				if = { 
@@ -967,11 +1020,23 @@ mr_balkh_missions_india_east_coast = {
 				else = { 
 				 change_religion = ROOT 
 				}
-			}			
+			}
+		if = {
+	     limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT
+		  custom_tooltip = BLK_claim_telugu_TT
+		  hidden_effect = {
+		   every_province = { 
+		    limit = { culture = telegu }
+			add_permanent_claim = ROOT 
+		   }
+		  } 
+	    }			
 		}
+	  }
 	}
 	balkh_telugu_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_andhra_vij
 		required_missions = { 
         balkh_garjati_conquest
 		}
@@ -999,10 +1064,21 @@ mr_balkh_missions_india_east_coast = {
 		}
 		effect = {
 			country_event = { id = MR_balkh_flavor.20 } 
+			if = {
+			limit = { NOT = { has_country_flag = balkh_conversion_path } }
+			custom_tooltip = BLK_compromise_reward_TT
+			custom_tooltip = BLK_claim_tamil_TT
+			hidden_effect = {
+			every_province = { 
+				limit = { culture = tamil }
+				add_permanent_claim = ROOT 
+			}
+		  } 
+		 }			
 		}
 	}
 	balkh_madurai_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_the_tamil_trade_guilds
 		required_missions = { 
         balkh_telugu_conquest
 		}
@@ -1058,10 +1134,16 @@ mr_balkh_missions_india_east_coast = {
 			discount = yes
 		 }		 
 	    }
+		if = {
+	     limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT	
+		  add_permanent_claim_multi_provinces = { target = lanka_area }
+		  add_permanent_claim_multi_provinces = { target = south_lanka_area }
+	    }		
 	  }
 	}
 	balkh_lankan_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_lanka
 		required_missions = { 
         balkh_madurai_conquest
 		}
@@ -1123,7 +1205,7 @@ mr_balkh_missions_india_east_coast = {
 		}
 	}
 	balkh_coromandel_consolidation = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_divert_trade_from_bengal
 		required_missions = { 
         balkh_lankan_conquest
 		}
@@ -1167,7 +1249,7 @@ mr_balkh_missions_india_west_coast = {
 		   }
 		}
 	balkh_rajput_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_fortify_rajputana
 		required_missions = { 
         balkh_indian_formation
 		}
@@ -1182,22 +1264,39 @@ mr_balkh_missions_india_west_coast = {
         num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
 		value = 15
 		culture = rajput
-		is_core = yes
+		is_core = owner
 		  if = { 
 		   limit = { ROOT = { has_country_flag = balkh_conversion_path } }
 		   custom_trigger_tooltip = {
 		   tooltip = balkh_convert_trigger_TT
 		   religion = ROOT
 		    }
-		   }		
+		   }		   
 		 }
-		}
+		}		
 		effect = {
-		
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT
+          custom_tooltip = BLK_enable_rajput_estate_TT 		
+		  set_country_flag = BLK_enable_rajput_estate
+		  add_permanent_claim_multi_provinces = { target = west_india_region }
+		  }	
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+		  custom_tooltip = BLK_conversion_reward_TT
+		  custom_tooltip = add_10_crown_land_share
+		   hidden_effect = {
+			 change_estate_land_share = {
+			 	estate = all
+				share = -10
+				}
+			}
+		  }			  
 		}
 	}	
 	balkh_mining_city = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_jawal_silver_mine
 		required_missions = { 
         balkh_rajput_conquest
 		}
@@ -1208,7 +1307,7 @@ mr_balkh_missions_india_west_coast = {
 		trigger = {
         2058 = { 
 		owned_by = ROOT
-		is_core = yes
+		is_core = ROOT
 		base_production = 10
 		  if = { 
 		   limit = { ROOT = { has_country_flag = balkh_conversion_path } }
@@ -1220,11 +1319,23 @@ mr_balkh_missions_india_west_coast = {
 		 }
 		}
 		effect = {
-		
+		 2058 = {
+		  change_province_name = "Khotamongon" 
+		  rename_capital = "Khotamongon"
+		  add_province_modifier = { 
+		   name = BLK_silver_mine_city
+		   duration = -1
+		  } 
+		 }
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+		  custom_tooltip = BLK_conversion_reward_TT
+		  custom_tooltip = BLK_rajput_mercs_TT
+		  }			 
 		}
 	}	
 	balkh_conquer_gujarat = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_secure_hajj_ports
 		required_missions = { 
         balkh_mining_city
 		}
@@ -1253,11 +1364,30 @@ mr_balkh_missions_india_west_coast = {
 		 }
 		}
 		effect = {
-		
+		 add_treasury = 300 
+		 custom_tooltip = BLK_hajj_ports_TT
+		 hidden_effect = {
+		  every_owned_province = {
+		   limit = {
+		    has_port = yes
+			 province_has_center_of_trade_of_level = 1
+			 trade_company_region = trade_company_west_india
+			}
+			 add_province_modifier = {
+			  name = BLK_hajj_ports
+			  duration = -1
+			 }
+			}
+		   }		 
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+		  custom_tooltip = BLK_conversion_reward_TT
+		  custom_tooltip = BLK_hajj_decision_TT
+		  }		
 		}
 	}
 	balkh_consolidate_west_india = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_conquer_gujarat_dlh
 		required_missions = { 
         balkh_conquer_gujarat 
 		balkh_conquer_malwa 
@@ -1284,7 +1414,7 @@ mr_balkh_missions_india_west_coast = {
 		 }
 		}
 		effect = {
-		
+		 country_event = { id = MR_balkh_flavor.28 }
 		}
 	}		
 }		
@@ -1303,7 +1433,7 @@ mr_balkh_missions_india_deccan = {
 		}
 		
 	balkh_conquer_malwa = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_subdue_malwa
 		required_missions = { 
         balkh_mining_city
 		}
@@ -1328,11 +1458,25 @@ mr_balkh_missions_india_deccan = {
 		 }
 		}
 		effect = {
-		
+		 add_country_modifier = {
+          name = BLK_gates_of_deccan
+		  duration = 7300
+		 }
+		if = {
+		 limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT
+		  custom_tooltip = BLK_claim_marathi_TT
+		  hidden_effect = {
+		   every_province = { 
+		    limit = { culture = marathi }
+			add_permanent_claim = ROOT 
+			}
+		  } 
+		 }		 
 		}
 	}
 	balkh_marathi_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_marathi_fiefs
 		required_missions = { 
         balkh_conquer_malwa
 		}
@@ -1344,10 +1488,12 @@ mr_balkh_missions_india_deccan = {
 		 }
 		} 
 		trigger = {
+		545 = { owned_by = ROOT }
+		529 = { owned_by = ROOT }
         num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
 		value = 15
 		culture = marathi
-		is_core = yes
+		is_core = ROOT
 		  if = { 
 		   limit = { ROOT = { has_country_flag = balkh_conversion_path } }
 		   custom_trigger_tooltip = {
@@ -1358,11 +1504,35 @@ mr_balkh_missions_india_deccan = {
 		 }
 		}
 		effect = {
-		
+		 529 = {
+		  add_province_modifier = { 
+		   name = city_building_modifier
+		   duration = -1
+		  }		 
+		 }
+		 custom_tooltip = city_building_modifier_TT
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_conversion_path } }
+		  custom_tooltip = BLK_compromise_reward_TT
+          custom_tooltip = BLK_enable_marathi_estate_TT 		
+		  set_country_flag = BLK_enable_maratha_estate	
+		  add_permanent_claim_multi_provinces = { target = deccan_region }
+		  }	
+		 if = {
+          limit = { NOT = { has_country_flag = balkh_compromise_path } }
+		  custom_tooltip = BLK_conversion_reward_TT
+		  custom_tooltip = add_10_crown_land_share
+		   hidden_effect = {
+			 change_estate_land_share = {
+			 	estate = all
+				share = -10
+				}
+			}
+		  }		 
 		}
 	}
 	balkh_deccan_wealth = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_entrepot_of_india
 		required_missions = { 
         balkh_marathi_conquest
 		}
@@ -1412,11 +1582,25 @@ mr_balkh_missions_india_deccan = {
 		 }
 		}
 		effect = {
-		
+		custom_tooltip = BLK_deccan_mines_TT
+		hidden_effect = {
+		 if = {
+		  limit = { 532 = { owned_by = ROOT } }
+		   532 = { province_event = { id = MR_balkh_flavor.33 } }
+		 }
+		 if = {
+		  limit = { 2031 = { owned_by = ROOT } }
+		   2031 = { province_event = { id = MR_balkh_flavor.34 } }
+		 }
+		 if = {
+		  limit = { 4423 = { owned_by = ROOT } }
+		   4423 = { province_event = { id = MR_balkh_flavor.35 } }
+		 }		 
 		}
+	  }
 	}
 		balkh_malabar_conquest = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_secure_the_malabar_coast
 		required_missions = { 
         balkh_deccan_wealth
 		}
@@ -1442,11 +1626,16 @@ mr_balkh_missions_india_deccan = {
 		 }
 		}
 		effect = {
-		
+		537 = {
+		 add_province_modifier = { 
+		  name = BLK_rice_bowl
+		  duration = -1
+		  }
+		 }
 		}
 	}	
 		balkh_deccan_consolidation = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_viceroyalty_of_the_deccan
 		required_missions = { 
         balkh_malabar_conquest
 		}
@@ -1472,7 +1661,20 @@ mr_balkh_missions_india_deccan = {
 		 }
 		}
 		effect = {
-		
+		 country_event = { id = MR_balkh_flavor.29 }
+		 542 = {
+		  add_base_tax = 3
+          add_base_manpower = 3
+		  if = {
+           limit = { ETK = { has_country_flag = balkh_conversion_path } }
+            change_province_name = "Al-Haydariyyah" 
+		    rename_capital = "Al-Haydariyyah"
+		  }
+		  else = {
+            change_province_name = "Arslanorda" 
+		    rename_capital = "Arslanorda"
+		  }		  
+		 }
 		}
 	}
 }
@@ -1491,7 +1693,7 @@ mr_balkh_missions_india_unified = {
 		}	
 
 		balkh_indian_unification = {
-		icon = mission_build_up_to_force_limit
+		icon = mission_balkh_surges
 		required_missions = { 
         balkh_deccan_consolidation
 		balkh_coromandel_consolidation
@@ -1517,7 +1719,760 @@ mr_balkh_missions_india_unified = {
 		 }
 		}
 		effect = {
-		
+		 country_event = { id = MR_balkh_flavor.44 }		
 		}
 	}		
 }	
+
+mr_balkh_missions_resources = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }
+		}		
+	
+		balkh_resource_spec = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { }
+		position = 19
+		trigger = {
+         num_of_owned_provinces_with = {
+		  value = 10
+		  has_production_building_trigger = yes 
+		 }
+		}
+		effect = {
+		 country_event = { id = MR_balkh_flavor.48 }
+		}
+	}
+}
+mr_balkh_missions_resources_branchers = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }		
+		NOT = { 
+		 OR = { 
+		  has_country_flag = balkh_opium_time 
+		  has_country_flag = balkh_cotton_time 
+		  } 
+		 }
+		}
+		balkh_resource_branch1 = {
+		icon = mission_unknown_mission
+		position = 20
+		required_missions = {
+			balkh_resource_spec
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = branching_mission_TT
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = branching_mission_TT
+		}
+	}	
+		balkh_resource_branch2 = {
+		icon = mission_unknown_mission
+		position = 21
+		required_missions = {
+			balkh_resource_branch1
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = branching_mission_TT
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = branching_mission_TT
+		}
+	}	
+		balkh_resource_branch3 = {
+		icon = mission_unknown_mission
+		position = 22
+		required_missions = {
+			balkh_resource_branch2
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = branching_mission_TT
+				always = no
+			}
+		}
+		effect = {
+			custom_tooltip = branching_mission_TT
+		}
+	}		
+}	
+
+mr_balkh_missions_resources_opium = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }		
+		  has_country_flag = balkh_opium_time 	   
+		}
+		
+		balkh_cultivate_opium = {
+		icon = mam_harness_spice_trade
+		required_missions = { balkh_resource_spec }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}
+		balkh_opium_smokers = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_cultivate_opium }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}
+		balkh_opium_smugglers = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_opium_smokers }
+		position = 22
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}	
+}
+
+mr_balkh_missions_resources_cotton = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }		
+		  has_country_flag = balkh_cotton_time 	   
+		}
+		
+		balkh_cultivate_cotton = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_resource_spec }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}
+		balkh_textile_development = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_cultivate_cotton }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}
+		balkh_cotton_company = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_textile_development }
+		position = 22
+		trigger = {
+        
+		}
+		effect = {
+		
+		}
+	}	
+}
+
+mr_balkh_missions_locked = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	
+		NOT = { 
+		 OR = { 
+		  has_country_flag = BLK_delhi_capital 
+		  has_country_flag = BLK_balkh_capital 
+		  } 
+		 }
+}		 
+	
+		balkh_locked_mission_1 = {
+		icon = mission_unknown_mission
+		required_missions = { }
+		position = 19
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = locked_mission_TT
+				always = no
+			}        
+		}
+		effect = {
+		custom_tooltip = locked_mission_TT
+		}
+	}
+}
+
+mr_balkh_missions_afghan4 = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_balkh_capital 		  		 
+}		 
+	
+		balkh_mountain_development = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 19
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}
+		balkh_rebuild_mausoleum = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_mountain_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_balkh_university = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_rebuild_mausoleum }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}
+		balkh_unified_afghanistan = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { 
+			balkh_balkh_university
+			balkh_zarkashan
+			balkh_lapis_mines
+			}
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_afghan3 = {
+	slot = 3
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_balkh_capital 		  		 
+}		 
+	
+		balkh_rebuild_firozkoh = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_mountain_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_zarkashan = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_rebuild_firozkoh }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_afghan5 = {
+	slot = 5
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_balkh_capital 		  		 
+}		 
+	
+		balkh_panjshir_excavations = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_mountain_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_lapis_mines = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_panjshir_excavations }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_bengal4 = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_delhi_capital 		  		 
+}		 
+	
+		balkh_jungle_development = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 19
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}
+		balkh_bengal4_2 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_jungle_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_bengal4_3 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_bengal4_2 }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}
+		balkh_bengal4_4 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { 
+			balkh_bengal4_3
+			balkh_bengal3_3
+			balkh_bengal5_3
+			}
+		position = 22
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_bengal3 = {
+	slot = 3
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_balkh_capital 		  		 
+}		 
+	
+		balkh_bengal3_2 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_jungle_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_bengal3_3 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_bengal3_2 }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_bengal5 = {
+	slot = 5
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 
+		  has_country_flag = BLK_balkh_capital 		  		 
+}		 
+	
+		balkh_bengal5_2 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_jungle_development }
+		position = 20
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+		balkh_bengal5_3 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { balkh_bengal5_2 }
+		position = 21
+		trigger = {
+        
+		}
+		effect = {
+
+		}
+	}	
+}
+
+mr_balkh_missions_persia1 = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 	  		 
+}		 
+	
+		balkh_conquer_baluchistan = {
+		icon = mission_bedouins
+		required_missions = { }
+		position = 23
+		provinces_to_highlight = { 
+		 area = makran_area
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 		
+		trigger = {
+         makran_area = {
+		 type = all
+		 country_or_non_sovereign_subject_holds = ROOT
+		  }	
+		}
+		effect = {
+		 custom_tooltip = BLK_baluchi_conquest_TT
+		 hidden_effect = {
+		  every_owned_province = { 
+		   limit = { culture = baluchi }
+		    add_province_modifier = { 
+		     name = balkh_baluchi_conquest
+		 	 duration = 1825
+			}
+		  }
+		}
+		 custom_tooltip = BLK_persia_coastal_perms_TT
+		 hidden_effect = {
+		  every_province = { 
+		   limit = { 
+		    region = persia_region
+			has_port = yes
+		     }
+		    add_permanent_claim = ROOT
+		  }
+		}		
+	  }
+	}	
+		balkh_conquer_persia_south_coast = {
+		icon = qara_qoyunlu_dominate_the_gulf
+		required_missions = {
+         balkh_conquer_baluchistan
+		}
+		position = 25
+		provinces_to_highlight = { 
+		 region = persia_region
+		 has_port = yes
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 		
+		trigger = {
+         num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+		 value = 5
+		 region = persia_region
+		 has_port = yes
+		 }
+		}
+		effect = {
+		 add_country_modifier = { 
+		  name = balkh_gulf_fleet
+		  duration = 4380 
+		 }		
+		custom_tooltip = balkh_galley_spawning_TT
+		hidden_effect = {
+		 every_owned_province = {
+		  limit = { 
+           region = persia_region 
+		   has_port = yes 
+		   has_dock_building_trigger = yes 
+		  }
+		  ROOT = { galley = PREV }
+		  ROOT = { galley = PREV }
+		 }
+		}
+	  }
+	}	
+}
+
+mr_balkh_missions_persia3 = {
+	slot = 3
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 	  		 
+    }		 
+	
+		balkh_conquer_sistan = {
+		icon = mission_arabian_fort
+		position = 23
+		provinces_to_highlight = { 
+		 area = sistan_area
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 		
+		trigger = {
+         sistan_area = {
+		 type = all
+		 country_or_non_sovereign_subject_holds = ROOT
+		  }        
+		}
+		effect = {
+		 435 = {
+		  add_or_upgrade_fort_building = yes
+		  add_province_modifier = { 
+		   name = balkh_secured_west_border
+		   duration = 9125
+		  }		  
+		 }
+		 if = { 
+		  limit = { NOT = { mission_completed = balkh_conquer_herat } }
+		   add_permanent_claim_multi_provinces = { target = khorasan_region }
+		 }		 
+	    }
+	}
+		balkh_conquer_khorasan = {
+		icon = per_reform_our_defenses
+		required_missions = { 
+		 balkh_conquer_baluchistan
+		 balkh_conquer_sistan
+		 balkh_conquer_herat
+		}
+		position = 24
+		provinces_to_highlight = { 
+		 region = khorasan_region
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 		
+		trigger = {
+         khorasan_region = {
+		  type = all
+		  country_or_non_sovereign_subject_holds = ROOT
+		 }
+		}
+		effect = {
+		 define_general = {
+		  shock = 5
+		  fire = 2
+		  manuever = 5
+		  siege = 1
+		  name = "Tarmaghan" 
+		 }
+		 custom_tooltip = BLK_tarmaghan_7_battles_TT	
+		 hidden_effect = {
+		  set_country_flag = BLK_tarmaghan_7_battles
+		  set_variable = {
+		   which = BLK_tarmaghan_7_battles
+		   value = 0
+		   }
+		 }
+	   }
+	}
+		balkh_conquer_persia = {
+		icon = mam_tabriz
+		required_missions = { 
+		 balkh_conquer_khorasan
+		 balkh_conquer_persia_south_coast
+		}
+		position = 26
+		provinces_to_highlight = { 
+		 region = persia_region
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}		
+		trigger = {
+         persia_region = {
+		  type = all
+		  country_or_non_sovereign_subject_holds = ROOT
+		 }        
+		}
+		effect = {
+		 country_event = { id = MR_balkh_flavor.47 }
+		}
+	}	
+} 
+
+mr_balkh_missions_persia5 = {
+	slot = 5
+	generic = no
+	ai = no
+	has_country_shield = yes
+	
+	potential = {
+	    OR = {
+			tag = BLK
+			tag = ETK
+		   }	 	  		 
+}		 
+	
+		balkh_conquer_herat = {
+		icon = per_convert_persia
+		required_missions = { }
+		position = 23
+		provinces_to_highlight = { 
+		 province_id = 446
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}		
+		trigger = {
+         446 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+		 custom_tooltip = balkh_can_plant_saffron_TT
+		 set_country_flag = balkh_can_plant_saffron
+		 if = { 
+		  limit = { NOT = { mission_completed = balkh_conquer_sistan } }
+		   add_permanent_claim_multi_provinces = { target = khorasan_region }
+		 }		 
+		}
+	}
+		balkh_conquer_turkmens = {
+		icon = mam_recruit_the_mamluks
+		required_missions = {
+         balkh_conquer_herat
+		 balkh_conquer_khorasan
+		}
+		position = 25
+		provinces_to_highlight = { 
+		 culture = turkmeni
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}		
+		trigger = {
+         num_of_owned_provinces_with = { 
+		  culture = turkmeni
+		  value = 4
+		 }
+		}
+		effect = {
+		 country_event = { id = MR_balkh_flavor.46 }
+		}
+	}	
+}

@@ -56,3 +56,12 @@ outremer_region = {
 	321 2308 407 4268 # Cyprus, Edessa, Ar-Raqqah, Aqbah
 	365 5284 2315 5375 # Sinai peninsula
 }
+rajasthan_region = { 
+	2058 4462 518 4501 2087 #mewar area
+	2067 4506 514 513 #marwar area
+	4502 2066 512 4507 #jangladesh area
+	519 2064 520 4500 #jaipur area
+	4464 #Bundi
+	528 #Hadoti
+	4465 #Ranthambore
+	}

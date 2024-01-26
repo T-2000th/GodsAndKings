@@ -207,7 +207,6 @@ maharajadhiraja_reform = {
 		liberty_desire_from_subject_development = -0.25
 		diplomatic_reputation = 2
 	}
-
 }
 indep_samanta_reform = {
 	icon = "articles_of_agreement"
@@ -1257,9 +1256,9 @@ qara_order_reform = {
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
-			#has_unlocked_government_reform = {
-			#	government_reform = qara_order_reform
-			#}
+			has_unlocked_government_reform = {
+				government_reform = qara_order_reform
+			}
 			tag = BLK
 	}
 	trigger = {
@@ -1293,4 +1292,218 @@ qara_order_reform = {
 	government_abilities = { qaraunas_confidence_mechanic }
 	
 	has_term_election = no
+}
+
+al_hind_government = {
+	icon = "peacock_throne"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			tag = ETK
+			NOT = { map_setup = map_setup_random }
+			mission_completed = balkh_indian_unification
+			has_country_flag = balkh_conversion_path
+		}
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+
+	modifiers = {
+		tolerance_own = 1
+	}
+
+	assimilation_cultures = {
+		altaic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		baltic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		british = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		burman = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		byzantine = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		carpathian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		caucasian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		gaelic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		central_indic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		east_asian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		kongo_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		cushitic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		dravidian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		african = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		east_slavic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		eastern_aryan = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		evenks = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		french = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		germanic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		great_lakes_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		hindusthani = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		iberian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		iranian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		japanese_g = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		kamchatkan_g = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		korean_g = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		latin = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		lost_cultures_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		turko_semitic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		maghrebi = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		malay = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		mande = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		pacific = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		sahelian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		scandinavian = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		southeastasian_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		south_slavic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		southern_african = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		sudanese = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		tartar = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		thai_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		tibetan_group = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		finno_ugric = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		west_african = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		west_slavic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		western_aryan = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		slavic = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}
+		turkistani = {
+			missionaries = 1
+			global_missionary_strength = 0.01
+		}		
+	}
 }

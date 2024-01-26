@@ -1,0 +1,24 @@
+custom_button = {
+    name = mint_currency #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		has_country_flag = domestic_coinage_minting
+	 } #Determines when the button is visible
+    trigger = {
+	 NOT = { inflation = 100 }
+	} #Determines when the button is clickable
+    effect = {
+	 add_years_of_owned_provinces_production_income = { 
+	  years = 4
+	  trigger = {
+	   OR = { 
+	    trade_goods = silver
+	    trade_goods = gold
+	    trade_goods = copper
+	   }
+	  }
+	  custom_tooltip = mint_currency_TT
+	 }
+	 add_inflation = 3
+	} #Effect
+	tooltip = mint_currency_button_title
+}

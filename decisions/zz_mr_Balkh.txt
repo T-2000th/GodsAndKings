@@ -1,0 +1,99 @@
+country_decisions = {
+	balkh_prospect_decision = {
+		major = no
+		potential = {	
+			ai = no
+			mission_completed = balkh_mining_city
+			has_country_flag = balkh_conversion_path	
+			any_hired_mercenary_company = { template = merc_rajput_prospectors }
+			NOT = { 
+				num_of_owned_provinces_with = {
+					value = 4
+					province_group = rajasthan_region
+					trade_goods = silver
+				}
+			}
+		}
+		provinces_to_highlight = {
+			NOT = { trade_goods = silver }
+			NOT = { has_province_flag = BLK_no_silver_here }
+			province_group = rajasthan_region
+		}
+		allow = { 
+			custom_trigger_tooltip = {
+				tooltip = BLK_prospect_5_years_TT	
+				NOT = { has_country_modifier = BLK_prospecting_efforts }
+            }
+			custom_trigger_tooltip = {
+				tooltip = BLK_prospect_merc_TT
+					any_hired_mercenary_company = { 
+						template = merc_rajput_prospectors 
+							location = { 
+								province_group = rajasthan_region
+								NOT = { trade_goods = silver }
+								NOT = { has_province_flag = BLK_no_silver_here }
+							}
+					}
+			}
+			custom_trigger_tooltip = {
+				tooltip = BLK_4_mines_TT
+				NOT = { 
+					num_of_owned_provinces_with = {
+						value = 4
+						province_group = rajasthan_region
+						trade_goods = silver
+					}
+				}			
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+				name = BLK_prospecting_efforts
+				duration = 1825
+				hidden = yes
+			}
+			random_hired_mercenary_company = { 
+				template = merc_rajput_prospectors
+					location = { 
+						province_event = {
+							id = MR_balkh_flavor.30
+							}
+					}
+				} 	
+			}
+				
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	balkh_sponsor_hajj = {
+		major = no
+		potential = {	
+			ai = no
+			mission_completed = balkh_conquer_gujarat
+			has_country_flag = balkh_conversion_path	
+		}
+		allow = { 
+			custom_trigger_tooltip = {
+				tooltip = BLK_hajj_15_years_TT	
+				NOT = { has_country_modifier = BLK_sponsor_hajj }
+            }
+			treasury = 150
+		}
+		effect = {
+			add_country_modifier = { 
+				name = BLK_sponsor_hajj
+				duration = 5475
+			}
+			add_estate_loyalty = { 
+				estate = estate_clergy
+				loyalty = 20
+			}
+			add_piety = 0.3
+			add_treasury = -150 	
+		}				
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+}

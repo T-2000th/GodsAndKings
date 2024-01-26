@@ -38,3 +38,27 @@ defined_text = {
         }
     }
 }
+
+defined_text = {
+    name = GetTigerName
+	random = no
+
+    text = {
+        localisation_key = TIGER_NEGUDAR
+        trigger = {
+            has_country_flag = tiger_named_negudar
+        }
+    }
+    text = {
+        localisation_key = TIGER_QARA
+        trigger = {
+            has_country_flag = tiger_named_qara
+        }
+    }
+    text = {
+        localisation_key = TIGER_NAMUR
+        trigger = {
+            has_country_flag = tiger_named_tiger
+        }
+    }	
+}

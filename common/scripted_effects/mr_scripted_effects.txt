@@ -513,6 +513,7 @@ city_building_effect = {
 		limit = {
 			has_province_modifier = city_building_modifier
 			development = 9
+			province_id = 2231
 		}
 		owner = {
 			country_event = {
@@ -522,8 +523,33 @@ city_building_effect = {
 	}
 	if = {
 		limit = {
+			has_province_modifier = city_building_modifier
+			development = 11
+			province_id = 572
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.36
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = city_building_modifier
+			development = 12
+			province_id = 529
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.38
+			}
+		}
+	}	
+	if = {
+		limit = {
 			has_province_modifier = city_building_modifier			
 			development = 16
+			province_id = 2231
 		}
 		owner = {
 			country_event = {
@@ -531,4 +557,28 @@ city_building_effect = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			has_province_modifier = city_building_modifier			
+			development = 16
+			province_id = 572
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.37
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = city_building_modifier
+			development = 16
+			province_id = 529
+		}
+		owner = {
+			country_event = {
+				id = MR_balkh_flavor.39
+			}
+		}
+	}	
 }

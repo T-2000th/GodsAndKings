@@ -384,10 +384,6 @@ country_event = {
 		
          522 = {
             move_capital_effect = yes
-            add_province_modifier = { 
-			name = city_building_modifier
-			duration = -1
-			}
 		}	
 		custom_tooltip = BLK_delhi_development_missions_TT
 		hidden_effect = { 
@@ -781,7 +777,7 @@ country_event = {
 		ai_chance = { factor = 50 }	
 		
 		add_treasury = 100
-		FROM = { country_event = { id = MR_balkh_flavor.27a } }
+		FROM = { country_event = { id = MR_balkh_flavor.271 } }
 	}
 	option = {
 		name = MR_balkh_flavor.24.b #HellNaw
@@ -810,7 +806,7 @@ country_event = {
 		ai_chance = { factor = 75 }	
 		
 		add_treasury = 1000
-		FROM = { country_event = { id = MR_balkh_flavor.27b } }
+		FROM = { country_event = { id = MR_balkh_flavor.272 } }
 	}
 	option = {
 		name = MR_balkh_flavor.25.b #NAW
@@ -839,7 +835,7 @@ country_event = {
 		ai_chance = { factor = 100 }	
 		
 		add_treasury = 2500
-		FROM = { country_event = { id = MR_balkh_flavor.27c } }
+		FROM = { country_event = { id = MR_balkh_flavor.273 } }
 	}
 	option = {
 		name = MR_balkh_flavor.26.b #Nah dog
@@ -856,15 +852,15 @@ country_event = {
 }
 
 country_event = {
-	id = MR_balkh_flavor.27a #Artefact
-	title = MR_balkh_flavor.27a.t
-	desc = MR_balkh_flavor.27a.d
+	id = MR_balkh_flavor.271 #Artefact
+	title = MR_balkh_flavor.271.t
+	desc = MR_balkh_flavor.271.d
 	picture = muslimgfx_BORDER_TENSION_eventPicture
 
     is_triggered_only = yes
 	
 	option = {
-		name = MR_balkh_flavor.27a.a #YummyTooth
+		name = MR_balkh_flavor.271.a #YummyTooth
 		ai_chance = { factor = 100 }	
 		
 		add_treasury = -100
@@ -876,15 +872,15 @@ country_event = {
 }
 
 country_event = {
-	id = MR_balkh_flavor.27b #Artefact
-	title = MR_balkh_flavor.27b.t
-	desc = MR_balkh_flavor.27b.d
+	id = MR_balkh_flavor.272 #Artefact
+	title = MR_balkh_flavor.272.t
+	desc = MR_balkh_flavor.272.d
 	picture = muslimgfx_BORDER_TENSION_eventPicture
 
     is_triggered_only = yes
 	
 	option = {
-		name = MR_balkh_flavor.27b.a #YummyTooth
+		name = MR_balkh_flavor.272.a #YummyTooth
 		ai_chance = { factor = 100 }	
 		
 		add_treasury = -1000
@@ -896,15 +892,15 @@ country_event = {
 }
 
 country_event = {
-	id = MR_balkh_flavor.27c #Artefact
-	title = MR_balkh_flavor.27c.t
-	desc = MR_balkh_flavor.27c.d
+	id = MR_balkh_flavor.273 #Artefact
+	title = MR_balkh_flavor.273.t
+	desc = MR_balkh_flavor.273.d
 	picture = muslimgfx_BORDER_TENSION_eventPicture
 
     is_triggered_only = yes
 	
 	option = {
-		name = MR_balkh_flavor.27c.a #YummyTooth
+		name = MR_balkh_flavor.273.a #YummyTooth
 		ai_chance = { factor = 100 }	
 		
 		add_treasury = -2500
@@ -912,5 +908,854 @@ country_event = {
 		 name = BLK_buddha_tooth 
 		 duration = -1
 		 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.28 #ViceroyaltyofWestIndia
+	title = MR_balkh_flavor.28.t
+	desc = MR_balkh_flavor.28.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.28.a #Establish It
+		ai_chance = { factor = 90 }	
+		
+		add_country_modifier = {
+			name = BLK_west_india_viceroy
+			duration = -1
+			}
+		custom_tooltip = west_india_viceroyal_TT	
+		hidden_effect = {	
+		west_india_region = {
+			type = all 
+			add_province_modifier = {
+				name = BLK_viceroyalty_possession
+				duration = -1
+				}
+			}
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.28.b #Don't Establish it
+		ai_chance = { factor = 10 }
+		
+		add_prestige_or_monarch_power = { amount = 25 }
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.29 #ViceroyaltyofDeccan
+	title = MR_balkh_flavor.29.t
+	desc = MR_balkh_flavor.29.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.29.a #Establish It
+		ai_chance = { factor = 90 }	
+		
+		add_country_modifier = {
+			name = BLK_deccan_viceroy
+			duration = -1
+			}
+		custom_tooltip = deccan_viceroyal_TT	
+		hidden_effect = {	
+		deccan_region = {
+			type = all 
+			add_province_modifier = {
+				name = BLK_viceroyalty_possession
+				duration = -1
+				}
+			}
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.29.b #Don't Establish it
+		ai_chance = { factor = 10 }
+		
+		add_prestige_or_monarch_power = { amount = 25 }
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.30 #ProspectingEfforts
+	title = MR_balkh_flavor.30.t
+	desc = MR_balkh_flavor.30.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.30.a #Push		
+		
+		random_list = {
+		 35 = { 
+		  province_event = { id = MR_balkh_flavor.31 days = 365 }
+		 }
+		 65 = { 
+		  province_event = { id = MR_balkh_flavor.32 days = 365 }
+		 }	 
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.30.b #Push with Money
+		
+		owner = { 	
+		 add_treasury = -500
+		 }
+		province_event = {
+		 id = MR_balkh_flavor.31
+		 days = 365
+		}
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.31 #ProspectingEffortsSuccess
+	title = MR_balkh_flavor.31.t
+	desc = MR_balkh_flavor.31.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.31.a #SilverSurfer		
+		
+		change_trade_goods = silver	
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.32 #ProspectingEffortsFailure
+	title = MR_balkh_flavor.32.t
+	desc = MR_balkh_flavor.32.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.32.a #SilverSurfer		
+		
+		set_province_flag = BLK_no_silver_here	
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.33 #ProspectRaichur
+	title = MR_balkh_flavor.33.t
+	desc = MR_balkh_flavor.33.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.33.a #LocalProspectors		
+		
+		add_treasury = -200
+		random_list = {
+		 45 = { 
+		  province_event = { id = MR_balkh_flavor.331 days = 183 }
+		 }
+		 55 = { 
+		  province_event = { id = MR_balkh_flavor.332 days = 183 }
+		 }	 
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.33.b #MalianProspectors		
+		
+		add_treasury = -1000  
+		province_event = { id = MR_balkh_flavor.331 days = 183 } 
+			
+	}
+	option = {
+		name = MR_balkh_flavor.33.c #LocalInsaneGeezer		
+		
+		random_list = {
+		 15 = { 
+		  province_event = { id = MR_balkh_flavor.334 days = 183 }
+		 }
+		 60 = { 
+		  province_event = { id = MR_balkh_flavor.332 days = 183 }
+		 }
+		 25 = { 
+		  province_event = { id = MR_balkh_flavor.333 days = 183 }
+		 }	 
+		}	
+	}	
+}
+
+province_event = {
+	id = MR_balkh_flavor.331 #Gold
+	title = MR_balkh_flavor.331.t
+	desc = MR_balkh_flavor.331.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.331.a #GoldHere		
+		
+		change_trade_goods = gold
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.334 #GoldCrazy
+	title = MR_balkh_flavor.334.t
+	desc = MR_balkh_flavor.334.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.334.a #GoldHere		
+		
+		change_trade_goods = gold
+		change_province_name = "Rachamallapur"
+		rename_capital = "Rachamallapur"
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.332 #NoGold
+	title = MR_balkh_flavor.332.t
+	desc = MR_balkh_flavor.332.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.332.a #NoGold		
+		
+		add_treasury = 100
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.333 #RIP
+	title = MR_balkh_flavor.333.t
+	desc = MR_balkh_flavor.333.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.333.a #CaveIn		
+		
+		add_devastation = 40
+		add_treasury = -50
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.34 #ProspectMorasanadu
+	title = MR_balkh_flavor.34.t
+	desc = MR_balkh_flavor.34.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.34.a #LocalProspectors		
+		
+		add_treasury = -200
+		random_list = {
+		 45 = { 
+		  province_event = { id = MR_balkh_flavor.341 days = 274 }
+		 }
+		 55 = { 
+		  province_event = { id = MR_balkh_flavor.342 days = 274 }
+		 }	 
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.34.b #MalianProspectors		
+		
+		add_treasury = -1000  
+		province_event = { id = MR_balkh_flavor.341 days = 274 } 
+			
+	}
+	option = {
+		name = MR_balkh_flavor.34.c #LocalInsaneGeezer		
+		
+		random_list = {
+		 15 = { 
+		  province_event = { id = MR_balkh_flavor.344 days = 274 }
+		 }
+		 60 = { 
+		  province_event = { id = MR_balkh_flavor.342 days = 274 }
+		 }
+		 25 = { 
+		  province_event = { id = MR_balkh_flavor.343 days = 274 }
+		 }	 
+		}	
+	}	
+}
+
+province_event = {
+	id = MR_balkh_flavor.341 #Gold
+	title = MR_balkh_flavor.341.t
+	desc = MR_balkh_flavor.341.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.341.a #GoldHere		
+		
+		change_trade_goods = gold
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.344 #GoldCrazy
+	title = MR_balkh_flavor.344.t
+	desc = MR_balkh_flavor.344.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.344.a #GoldHere		
+		
+		change_trade_goods = gold
+		change_province_name = "Udayadityapur"
+		rename_capital = "Udayadityapur"
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.342 #NoGold
+	title = MR_balkh_flavor.342.t
+	desc = MR_balkh_flavor.342.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.342.a #NoGold		
+		
+		add_treasury = 100
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.343 #RIP
+	title = MR_balkh_flavor.343.t
+	desc = MR_balkh_flavor.343.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.343.a #CaveIn		
+		
+		add_devastation = 40
+		add_treasury = -50
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.35 #ProspectGutti
+	title = MR_balkh_flavor.35.t
+	desc = MR_balkh_flavor.35.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.35.a #LocalProspectors		
+		
+		add_treasury = -200
+		random_list = {
+		 45 = { 
+		  province_event = { id = MR_balkh_flavor.351 days = 365 }
+		 }
+		 55 = { 
+		  province_event = { id = MR_balkh_flavor.352 days = 365 }
+		 }	 
+		}	
+	}
+	option = {
+		name = MR_balkh_flavor.35.b #MalianProspectors		
+		
+		add_treasury = -1000  
+		province_event = { id = MR_balkh_flavor.351 days = 365 } 
+			
+	}
+	option = {
+		name = MR_balkh_flavor.35.c #LocalInsaneGeezer		
+		
+		random_list = {
+		 15 = { 
+		  province_event = { id = MR_balkh_flavor.354 days = 365 }
+		 }
+		 60 = { 
+		  province_event = { id = MR_balkh_flavor.352 days = 365 }
+		 }
+		 25 = { 
+		  province_event = { id = MR_balkh_flavor.353 days = 365 }
+		 }	 
+		}	
+	}	
+}
+
+province_event = {
+	id = MR_balkh_flavor.351 #Gold
+	title = MR_balkh_flavor.351.t
+	desc = MR_balkh_flavor.351.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.351.a #GoldHere		
+		
+		change_trade_goods = gold
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.354 #GoldCrazy
+	title = MR_balkh_flavor.354.t
+	desc = MR_balkh_flavor.354.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.354.a #GoldHere		
+		
+		change_trade_goods = gold
+		change_province_name = "Akshayakeertinagar"
+		rename_capital = "Akshayakeertinagar"
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.352 #NoGold
+	title = MR_balkh_flavor.352.t
+	desc = MR_balkh_flavor.352.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.352.a #NoGold		
+		
+		add_treasury = 100
+	}		
+}
+
+province_event = {
+	id = MR_balkh_flavor.353 #RIP
+	title = MR_balkh_flavor.353.t
+	desc = MR_balkh_flavor.353.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	
+	option = {
+		name = MR_balkh_flavor.353.a #CaveIn		
+		
+		add_devastation = 40
+		add_treasury = -50
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.36 #CinnamonGrowth
+	title = MR_balkh_flavor.36.t
+	desc = MR_balkh_flavor.36.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.36.a #Cinnamoney
+		
+		572 = { 
+		 add_province_modifier = {
+          name = BLK_cinnamon_port
+		  duration = -1
+		 }
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.37 #PortofKalanpu
+	title = MR_balkh_flavor.37.t
+	desc = MR_balkh_flavor.37.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	    572 = {
+		remove_province_modifier = city_building_modifier
+	   }
+	}
+	option = {
+		name = MR_balkh_flavor.37.a #Build
+		
+		572 = { 		 
+		add_province_modifier = { 
+		  name = balkh_seaport
+		  duration = -1
+          }		  
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.38 #BombayReclamation
+	title = MR_balkh_flavor.38.t
+	desc = MR_balkh_flavor.38.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.38.a #Build
+		
+		529 = { 		 
+		 add_province_modifier = { 
+		   name = balkh_seaport_1
+		   duration = -1
+           }
+		 change_province_name = "Bandar-e Mombayn"
+		 rename_capital = "Bandar-e Mombayn"
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.39 #PortofKalanpu
+	title = MR_balkh_flavor.39.t
+	desc = MR_balkh_flavor.39.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	    529 = {
+		remove_province_modifier = city_building_modifier
+	   }
+	}
+	option = {
+		name = MR_balkh_flavor.39.a #Build
+		
+		529 = { 		 
+		add_province_modifier = { 
+		  name = balkh_huge_seaport_1
+		  duration = -1
+          }		  
+		}
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.40 #Tiger
+	title = MR_balkh_flavor.40.t
+	desc = MR_balkh_flavor.40.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		set_country_flag = balkh_has_a_tiger
+	}
+	option = {
+		name = MR_balkh_flavor.40.a #Negudar
+		
+		set_country_flag = tiger_named_negudar
+		custom_tooltip = tiger_named_negudar_TT
+	}
+	option = {
+		name = MR_balkh_flavor.40.b #Qara
+		
+		set_country_flag = tiger_named_qara
+		custom_tooltip = tiger_named_qara_TT
+	}	
+	option = {
+		name = MR_balkh_flavor.40.c #Namur
+		
+		set_country_flag = tiger_named_tiger
+		custom_tooltip = tiger_named_tiger_TT
+	}
+
+	after = { 
+		country_event = { 
+			id = MR_balkh_flavor.41
+			days = 750
+			}
+		}
+}
+
+country_event = {
+	id = MR_balkh_flavor.41 #TigerGrowsUp
+	title = MR_balkh_flavor.41.t
+	desc = MR_balkh_flavor.41.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.41.a #TigerKing
+		
+		add_ruler_personality = tiger_king_personality	
+	}
+	after = { 
+		country_event = { 
+			id = MR_balkh_flavor.42
+			days = 823
+			}
+		}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.42 #Assassination Attempt
+	title = MR_balkh_flavor.42.t
+	desc = MR_balkh_flavor.42.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.42.a #TigerSavesYou
+		highlight = yes
+		trigger = { has_country_flag = balkh_has_a_tiger }
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20
+		}
+	}
+	after = { 
+		country_event = { 
+			id = MR_balkh_flavor.43
+			days = 2807
+			}
+		}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.43 #Tiger Dies :(
+	title = MR_balkh_flavor.43.t
+	desc = MR_balkh_flavor.43.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.43.a #StateFuneral
+		trigger = { NOT = { has_country_flag = balkh_outlived_by_tiger } }
+		
+		clr_country_flag = balkh_has_a_tiger
+	}
+	option = {
+		name = MR_balkh_flavor.43.b #BuriedNextToKing
+		trigger = { NOT = { has_country_flag = balkh_outlived_by_tiger } }
+		
+		clr_country_flag = balkh_has_a_tiger
+	}			
+}
+
+country_event = {
+	id = MR_balkh_flavor.44 #Capstone
+	title = MR_balkh_flavor.44.t
+	desc = MR_balkh_flavor.44.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.44.a #Islam
+		trigger = { has_country_flag = balkh_conversion_path }
+		
+		add_government_reform = al_hind_government
+	}
+	option = {
+		name = MR_balkh_flavor.44.b #NotSlam
+		trigger = { has_country_flag = balkh_compromise_path }
+		
+		
+	}	
+	after = { 
+		country_event = { 
+			id = MR_balkh_flavor.45
+			days = 15
+			}
+		}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.45 #OurFuture
+	title = MR_balkh_flavor.45.t
+	desc = MR_balkh_flavor.45.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.45.a #China
+		
+		set_country_flag = balkh_mandate_taker
+		custom_tooltip = balkh_mandate_taker_TT
+	}
+	option = {
+		name = MR_balkh_flavor.45.b #SEA		
+		
+		set_country_flag = balkh_sea_campaigns
+		custom_tooltip = balkh_sea_campaigns_TT
+	}	
+	option = {
+		name = MR_balkh_flavor.45.c #SEA
+		
+		add_country_modifier = {
+			name = balkh_colonial_ambitions
+			duration = -1
+		}
+	}	
+}
+
+country_event = {
+	id = MR_balkh_flavor.46 #Mamluks
+	title = MR_balkh_flavor.46.t
+	desc = MR_balkh_flavor.46.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.46.a #Mamluck
+		
+		add_country_modifier = {
+         name = balkh_mamluk_soldiers
+		 duration = -1
+		}
+		every_owned_province = {
+		 limit = { culture = turkmeni }
+		  add_province_modifier = { 
+		   name = balkh_mamluk_soldiers_local
+		   duration = -1
+		   hidden = yes
+		  }
+		}
+	}
+	option = {
+		name = MR_balkh_flavor.46.b #Noluck		
+		
+		add_army_professionalism = 0.05
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.47 #Iran
+	title = MR_balkh_flavor.47.t
+	desc = MR_balkh_flavor.47.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.47.a #A new Ilkhan
+		
+		every_province = {
+		 limit = { region = persia_region }
+		  cede_province = ILK
+		}
+	}
+	option = {
+		name = MR_balkh_flavor.47.b #Mine	
+		
+		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.48 #CrackorCotton
+	title = MR_balkh_flavor.48.t
+	desc = MR_balkh_flavor.48.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.48.a #Crack
+		
+		set_country_flag = balkh_opium_time 
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = MR_balkh_flavor.48.b #Mine	
+		
+		set_country_flag = balkh_cotton_time
+		swap_non_generic_missions = yes		
+	}		
+}
+
+country_event = {
+	id = MR_balkh_flavor.49 #Kharaj
+	title = MR_balkh_flavor.49.t
+	desc = MR_balkh_flavor.49.d
+	picture = muslimgfx_BORDER_TENSION_eventPicture
+
+    is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = MR_balkh_flavor.49.a #0
+		
+		add_country_modifier = balkh_kharaj_0
+	}
+	option = {
+		name = MR_balkh_flavor.49.b #10	
+		
+		add_country_modifier = balkh_kharaj_10
+	}	
+	option = {
+		name = MR_balkh_flavor.49.c #25	
+		
+		add_country_modifier = balkh_kharaj_25
+	}	
+	option = {
+		name = MR_balkh_flavor.49.e #40	
+		
+		add_country_modifier = balkh_kharaj_40	
+	}
+	option = {
+		name = MR_balkh_flavor.49.f #50	
+		
+		add_country_modifier = balkh_kharaj_50	
+	}
+	option = {
+		name = MR_balkh_flavor.49.g #70	
+		
+		add_country_modifier = balkh_kharaj_70	
+	}
+	option = {
+		name = MR_balkh_flavor.49.h #90	
+		
+		add_country_modifier = balkh_kharaj_90	
 	}		
 }

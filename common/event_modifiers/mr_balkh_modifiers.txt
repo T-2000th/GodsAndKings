@@ -28,6 +28,9 @@ balkh_elephants = {
 balkh_sindh_conquest = {
     local_core_creation = -0.33
 }
+balkh_baluchi_conquest = {
+    local_core_creation = -0.33
+}
 balkh_imperial_ambitions = {
     province_warscore_cost = -0.1
     prestige = 1
@@ -64,9 +67,96 @@ BLK_bengali_viceroy = {
 BLK_coromandel_viceroy = {
 	governing_capacity_modifier = 0.25
 }
+BLK_west_india_viceroy = {
+	governing_capacity_modifier = 0.25
+}
+BLK_deccan_viceroy = {
+	governing_capacity_modifier = 0.25
+}
 BLK_trade_master_ceylon = {
 	center_of_trade_upgrade_cost = -0.2
 }
 BLK_buddha_tooth = {
 	tolerance_own = 1
+}
+BLK_silver_mine_city = {
+	local_prosperity_growth = 0.1
+	local_gold_depletion_chance_modifier = -0.25
+}
+BLK_hajj_ports = {
+	global_tax_income = 6
+	local_center_of_trade_upgrade_cost = -0.33
+}
+BLK_gates_of_deccan = {
+	artillery_barrage_cost = -0.40
+	artillery_level_modifier = 0.25
+}
+BLK_prospecting_efforts = {
+	
+}
+BLK_sponsor_hajj = {
+	tolerance_own = 1
+}
+BLK_rice_bowl = {
+	trade_goods_size = 2
+	land_forcelimit = 10
+}
+balkh_huge_seaport = {
+	naval_forcelimit = 12
+}
+BLK_cinnamon_port = {
+	trade_goods_size = 1.5
+}
+balkh_seaport_1 = {
+    local_sailors_modifier = 1
+	local_ship_cost = -0.1
+	local_ship_repair = 0.5
+    province_trade_power_modifier = 1
+    allowed_num_of_manufactories = 1
+}
+balkh_colonial_ambitions = {
+    colonists = 1
+	range = 0.5
+	may_explore = yes
+}
+balkh_gulf_fleet = {
+	galley_cost = -0.15
+	global_ship_recruit_speed = -0.1
+}
+balkh_secured_west_border = {
+	local_fort_maintenance_modifier = -1
+}
+balkh_mamluk_soldiers = {
+	has_mamluks = yes
+	allowed_mamluks_fraction = 0.1
+}
+balkh_mamluk_soldiers_local = {
+	local_has_mamluks = yes
+}
+balkh_kharaj_0 = {
+	global_tax_modifier = -0.3
+	global_unrest = -5
+}
+balkh_kharaj_10 = {
+	global_tax_modifier = -0.15
+	global_unrest = -2.5
+}
+balkh_kharaj_25 = {
+	global_tax_modifier = 0.1
+}
+balkh_kharaj_40 = {
+	global_tax_modifier = 0.25
+	global_unrest = 2.5
+}
+balkh_kharaj_50 = {
+	global_tax_modifier = 0.33
+	global_unrest = 5
+}
+balkh_kharaj_70 = {
+	global_tax_modifier = 0.45
+	global_unrest = 8
+}
+balkh_kharaj_90 = {
+	global_tax_modifier = 0.6
+	global_unrest = 14
 }

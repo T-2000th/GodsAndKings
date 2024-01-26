@@ -340,6 +340,42 @@ on_battle_won_unit = {
 			    value = 0.5
 		   }
 	   }
+	}
+	if = {
+		limit = {
+			general_with_name = "Tarmaghan"
+			unit_owner = {
+				has_country_flag = BLK_tarmaghan_7_battles
+			}
+		}
+		unit_owner = {
+			change_variable = {
+				which = BLK_tarmaghan_7_battles 
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			general_with_name = "Tarmaghan"
+			unit_owner = {
+				has_country_flag = BLK_tarmaghan_7_battles
+			}
+			unit_owner = {
+				check_variable = {
+					which = BLK_tarmaghan_7_battles
+					value = 7
+				}
+			}
+		}
+		unit_owner = {
+			clr_country_flag = BLK_tarmaghan_7_battles
+			set_variable = {
+				which = BLK_tarmaghan_7_battles
+				value = 0
+			}
+			add_permanent_claim_multi_provinces = { target = persia_region }
+		}
 	}	
 }
 
@@ -1566,5 +1602,15 @@ on_new_term_election = {
 on_death_election = {
 	events = {
 		mr_egypt.2 #wazir election on death
+	}
+}
+
+on_revoke_estate_land = { 
+	if = { 
+		limit = { has_country_flag = 5_crownland_on_seize }
+			change_estate_land_share = {
+				estate = all
+				share = -5
+		}			
 	}
 }
