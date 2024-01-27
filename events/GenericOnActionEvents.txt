@@ -15,8 +15,13 @@ country_event = {
 			}
 		}
 		NOT = { has_country_flag = no_integrate_penalty }
+		NOT = { has_government_mechanic = Dutch_confederation_mechanic
+			has_government_power = {
+			mechanic_type = Dutch_confederation_mechanic
+			power_type = Dutch_centralization
+			value = 100}
 	}
-
+}
 	is_triggered_only = yes
 	
 	option = {
