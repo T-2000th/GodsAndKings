@@ -699,4 +699,21 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 
+	spriteType = {
+		name = "GFX_dutch_confederate"
+		texturefile = "gfx/interface/icon_dutch_confederate.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_dutch_confederate_lead"
+		texturefile = "gfx/interface/icon_dutch_confederate_lead.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_dutch_confederate_am"
+		texturefile = "gfx/interface/icon_dutch_confederate_am.dds"
+		noOfFrames = 3
+	}
 }

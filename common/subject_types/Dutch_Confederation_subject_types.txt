@@ -3,9 +3,9 @@ dutch_confederation = { #incomplete
 	count = vassal
 	
 	# Graphics:
-	sprite = GFX_icon_vassal
-	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
-	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+	sprite = GFX_dutch_confederate
+	diplomacy_overlord_sprite = GFX_dutch_confederate_lead
+	diplomacy_subject_sprite = GFX_dutch_confederate_am
 
 	# Properties:
 	must_accept_cta_from_overlord = yes
