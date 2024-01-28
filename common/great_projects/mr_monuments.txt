@@ -1211,3 +1211,102 @@ ketumati_temple  = {
 		}
 	}
 }
+
+mr_university_seville = {
+	start = 224
+	build_cost = 1000
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		224 = {
+			has_building = university
+		}
+	}
+	on_built = {
+		change_innovativeness = 5
+	}
+	on_destroyed = {
+		change_innovativeness = -30
+	}
+	can_use_modifiers_trigger = {
+		224 = {
+			has_building = university
+		}
+	}
+	can_upgrade_trigger = {
+		224 = {
+			has_building = university
+		}
+	}
+	keep_trigger = {
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 250
+		}
+		province_modifiers = {
+			local_institution_spread = 0.1
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 500
+		}
+		province_modifiers = {
+			local_institution_spread = 0.3
+			
+		}
+		area_modifier = {
+			local_development_cost = -0.2
+			
+		}
+		country_modifiers = {
+			technology_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 5
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_institution_spread = 0.5	
+		}
+		area_modifier = {
+			local_development_cost = -0.3
+		}
+		country_modifiers = {
+			technology_cost = -0.1
+			innovativeness_gain = 0.3
+		}
+		on_upgraded = {
+			owner = {
+				change_innovativeness = 5
+			}
+		}
+	}
+}
