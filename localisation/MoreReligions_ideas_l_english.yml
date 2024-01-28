@@ -527,6 +527,25 @@
  YNN_ideas_7: "The Mountain Province"
  YNN_ideas_7_desc: "Yunnan is a mountainous province, making it incredibly difficult to assault. The chokepoints give us a natural defense against our would-be enemies and are just as much of an asset to us as our brave forces are."
  
+#Mengzi Ideas
+ HGH_ideas: "Mengzi Ideas"
+ HGH_ideas_start: "Mengzi Traditions"
+ HGH_ideas_bonus: "Mengzi ambitions"
+ HGH_ideas_1: "Seize the Reins"
+ HGH_ideas_1_desc: "Ever since the Mongol conquests, our people have lived in the shadow of the Yuan. However, with their power being recently being reduced to their lands in Yunnan, we have come upon one of the best opportunities to extradite ourselves from this situation. We shall break away from the Prince's weak grasp and realise our own ambitions"
+ HGH_ideas_2: "Legacy of Ajall Shams"
+ HGH_ideas_2_desc: "Ajall Shams al-Din Omar al-Bukhari was the first governer of Yunnan, and many of our nobility can trace their lineage back to him. He was originally born in Bukhara, and served under the Yuan court for all his life. He was posthumously awarded the title Zhonghui. His legacy shall give glory to our state and dynasty!"
+ HGH_ideas_3: "Bring Light to China"
+ HGH_ideas_3_desc: "As the only muslim-majority state in China, we find ourselves in unusual circumstances. We have a duty to spread our faith to all corners of the realm and bring the light of Allah to the Middle Kingdom."
+ HGH_ideas_4: "Islamic Advisors"
+ HGH_ideas_4_desc: "With the status of Mengzi as one of the centers of Islam in China, we attract muslim advisors, warriors, and statesmen from far & wide. This allows us to improve our administration with some of the sharpest minds in the realm."
+ YNN_ideas_5: "The City of Mengzi"
+ HGH_ideas_5_desc: "The city of Mengzi stands as one of the most important stops on the trading route between Dong Kinh and Kunming. Under our rule it has grown into a major trading metropolis that grants us control over the Southern land routes."
+ HGH_ideas_6: "Adapting the Jizya"
+ HGH_ideas_6_desc: "While bringing our muslim faith to China, we also bring some foreign traditions, such as the Jizya. It would be wise to begin the levying of this tax on the non-muslim populace of our nation to ensure the stability of our state and bring in some extra revenue for the administration."
+ HGH_ideas_7: "Semu Legacy"
+ HGH_ideas_7_desc: "The Semu were a political class, formed under the Yuan dynasty in China. They were Central Asians, brought to China under the Mongol conquests as soldiers, intellectuals, and philosophers. Even if we have adapted many of the traditions of the locals, our faith and legacy remains"
+ 
 #Liang Ideas 
  LNG_ideas: "Liang Ideas"
  LNG_ideas_start: "Liang Traditions"

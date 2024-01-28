@@ -1550,6 +1550,44 @@ YNN_ideas = {
 	}
 }
 
+#Mengzi - Credit to trappist_1e
+HGH_ideas = {
+	trigger = {
+		tag = HGH
+	}
+	free = yes
+	start = {
+		development_cost = -0.1
+		land_morale = 0.15
+	}
+	bonus = {
+		tolerance_own = 2
+	}
+	HGH_first = { #Seize the Reins
+		land_morale = 0.1
+	}
+	HGH_second = { #Legacy of Ajall Shams
+		prestige = 1
+		legitimacy = 1
+	}
+	HGH_third = { #Convert China
+		global_missionary_strength = 0.2
+	}
+	HGH_fourth = { #Hui Advisors
+		advisor_cost = -0.1
+	}
+	HGH_fifth = { #The City of Honghe
+		global_own_trade_power = 0.2
+	}
+	HGH_sixth = { #Adapting the Jizya
+		global_tax_modifier = 0.1
+		dhimmi_loyalty_modifier = 0.05
+	}
+	HGH_seventh = { #Semu Legacy
+		num_accepted_cultures = 2
+	}
+}
+
 ##Hungarian Oligarch Ideas
 
 #Aba
