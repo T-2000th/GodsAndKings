@@ -1457,7 +1457,7 @@ estate_burghers_savannah_expansion = {
 		}
 	}
 	on_revoked = {
-		custom_tooltip = estate_burghers_forest_expansion_rt
+		custom_tooltip = estate_burghers_savannah_expansion_rt
 		hidden_effect = {
 			every_owned_province = {
 				limit = {

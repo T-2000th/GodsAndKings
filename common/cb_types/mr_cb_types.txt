@@ -229,5 +229,10 @@ cb_hausa_war = {
 	valid_for_subject = no
 
 	is_triggered_only = yes
+	prerequisites_self = {
+		NOT = {
+			has_global_flag = hausa_war_done
+		}
+	}
 	war_goal = superiority_hausa_war
 }

@@ -150,7 +150,6 @@ merc_reisland_ansari = {
 
     cost_modifier = 0.66 # Cost multiplier of the mercenary company. Note that there is a base +50% maintenance cost on mercenaries applied after this multiplier.
 
-    home_province = 828 
 	cavalry_weight = 0.4 
 	artillery_weight = 0.1 
 	cavalry_cap = 6

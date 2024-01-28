@@ -33,4 +33,8 @@ spriteTypes = {
 		name = "GFX_great_project_mr_three_pagodas"
 		texturefile = "gfx//interface//great_projects//great_project_three_pagodas_of_dali.dds"
 	}	
+	spriteType = {
+		name = "GFX_great_project_mr_guinala_academy"
+		texturefile = "gfx//interface//great_projects//great_project_mr_guinala_academy.dds"
+	}	
 }

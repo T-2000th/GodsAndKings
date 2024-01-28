@@ -101,7 +101,14 @@ province_event = {
 	id = seven_cities_events.2
 	title = seven_cities_events.2.t
 	desc = seven_cities_events.2.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -193,7 +200,14 @@ province_event = {
 	id = seven_cities_events.3
 	title = seven_cities_events.3.t
 	desc = seven_cities_events.3.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -287,7 +301,14 @@ province_event = {
 	id = seven_cities_events.4
 	title = seven_cities_events.4.t
 	desc = seven_cities_events.4.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -386,7 +407,14 @@ province_event = {
 	id = seven_cities_events.5
 	title = seven_cities_events.5.t
 	desc = seven_cities_events.5.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -474,7 +502,14 @@ province_event = {
 	id = seven_cities_events.6
 	title = seven_cities_events.6.t
 	desc = seven_cities_events.6.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -573,7 +608,14 @@ province_event = {
 	id = seven_cities_events.7
 	title = seven_cities_events.7.t
 	desc = seven_cities_events.7.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -677,7 +719,14 @@ province_event = {
 	id = seven_cities_events.8
 	title = seven_cities_events.8.t
 	desc = seven_cities_events.8.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -833,7 +882,14 @@ province_event = {
 	id = seven_cities_events.101
 	title = seven_cities_events.101.t
 	desc = seven_cities_events.101.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes 
 	
@@ -922,7 +978,14 @@ province_event = {
 	id = seven_cities_events.103
 	title = seven_cities_events.103.t
 	desc = seven_cities_events.103.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -960,7 +1023,14 @@ province_event = {
 	id = seven_cities_events.104
 	title = seven_cities_events.104.t
 	desc = seven_cities_events.104.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -1004,7 +1074,14 @@ province_event = {
 	id = seven_cities_events.105
 	title = seven_cities_events.105.t
 	desc = seven_cities_events.105.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -1329,7 +1406,14 @@ province_event = {
 	id = seven_cities_events.204
 	title = seven_cities_events.204.t
 	desc = seven_cities_events.204.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -2839,7 +2923,14 @@ province_event = {
 	id = seven_cities_events.300
 	title = seven_cities_events.300.t
 	desc = seven_cities_events.300.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -2905,7 +2996,14 @@ province_event = {
 	id = seven_cities_events.301
 	title = seven_cities_events.301.t
 	desc = seven_cities_events.301.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_BATTLE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -2965,7 +3063,14 @@ province_event = {
 	id = seven_cities_events.302
 	title = seven_cities_events.302.t
 	desc = seven_cities_events.302.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_BATTLE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3049,7 +3154,14 @@ province_event = {
 	id = seven_cities_events.303
 	title = seven_cities_events.303.t
 	desc = seven_cities_events.303.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_BATTLE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3117,7 +3229,14 @@ province_event = {
 	id = seven_cities_events.304
 	title = seven_cities_events.304.t
 	desc = seven_cities_events.304.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = SONGHAI_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3395,7 +3514,14 @@ province_event = {
 	id = seven_cities_events.307
 	title = seven_cities_events.307.t
 	desc = seven_cities_events.307.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_REVOLT_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3657,7 +3783,14 @@ province_event = {
 	id = seven_cities_events.400
 	title = seven_cities_events.400.t
 	desc = seven_cities_events.400.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_REVOLT_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3725,7 +3858,14 @@ province_event = {
 	id = seven_cities_events.401
 	title = seven_cities_events.401.t
 	desc = seven_cities_events.401.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3771,7 +3911,14 @@ province_event = {
 	id = seven_cities_events.402
 	title = seven_cities_events.402.t
 	desc = seven_cities_events.402.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3825,7 +3972,14 @@ country_event = {
 	id = seven_cities_events.403
 	title = seven_cities_events.403.t
 	desc = seven_cities_events.403.d
-	picture = LOADING_SHIP_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = LOADING_SHIP_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_EXPLORER_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -3855,7 +4009,14 @@ province_event = {
 	id = seven_cities_events.405
 	title = seven_cities_events.405.t
 	desc = seven_cities_events.405.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = ANSHANTI_FIREARMS_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3918,7 +4079,14 @@ province_event = {
 	id = seven_cities_events.406
 	title = seven_cities_events.406.t
 	desc = seven_cities_events.406.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = ANSHANTI_FIREARMS_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -3981,7 +4149,14 @@ province_event = {
 	id = seven_cities_events.407
 	title = seven_cities_events.407.t
 	desc = seven_cities_events.407.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = ANSHANTI_FIREARMS_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -4015,7 +4190,14 @@ province_event = {
 	id = seven_cities_events.408
 	title = seven_cities_events.408.t
 	desc = seven_cities_events.408.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = ANSHANTI_FIREARMS_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -4248,7 +4430,14 @@ province_event = {
 	id = seven_cities_events.414
 	title = seven_cities_events.414.t
 	desc = seven_cities_events.414.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 	
@@ -4370,7 +4559,14 @@ country_event = {
 	id = seven_cities_events.503
 	title = seven_cities_events.503.t
 	desc = seven_cities_events.503.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -4390,7 +4586,14 @@ country_event = {
 	id = seven_cities_events.504
 	title = seven_cities_events.504.t
 	desc = seven_cities_events.504.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -4410,7 +4613,14 @@ country_event = {
 	id = seven_cities_events.505
 	title = seven_cities_events.505.t
 	desc = seven_cities_events.505.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 
@@ -4430,7 +4640,14 @@ country_event = {
 	id = seven_cities_events.506
 	title = seven_cities_events.506.t
 	desc = seven_cities_events.506.d
-	picture = CONQUISTADORS_eventPicture
+	picture = {
+		trigger = { NOT = { FROM = { tag = MAL } } }
+		picture = CONQUISTADORS_eventPicture
+	}
+	picture = {
+		trigger = {  FROM = { tag = MAL } }
+		picture = AFRICAN_DISCIPLINE_eventPicture
+	}
 
 	is_triggered_only = yes
 

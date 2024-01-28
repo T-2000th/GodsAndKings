@@ -230,7 +230,7 @@ master_of_the_golden_country = {
 	all_power_cost = -0.025
 }
 estate_dhimmi_pagan_production = {
-	trade_goods_size_modifier = 0.15
+	local_production_efficiency = 0.1
 }
 hegemon_of_africa_MAL = {
 	reduced_liberty_desire_on_same_continent = 25
@@ -285,8 +285,8 @@ securing_trade_MAL = {
 	reduced_trade_penalty_on_non_main_tradenode = 0.5
 }
 waystation_MAL = {
-	global_sailors_modifier = 0.1	
-	global_ship_recruit_speed = -0.15
+	local_sailors_modifier = 0.1	
+	ship_recruit_speed = -0.15
 }
 european_markets_MAL = {
 	mil_tech_cost_modifier = -0.10
@@ -327,4 +327,7 @@ merchants_request_conversion = {
 merchant_request_denied = {
 	malian_merchants_influence = -0.15
 	tolerance_heathen = 0.5
+}
+african_raiders = {
+	privateer_efficiency = 0.2	
 }

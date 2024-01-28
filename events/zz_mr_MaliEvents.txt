@@ -625,23 +625,29 @@ country_event = {
 
 	option = {
 		name = mr_MaliFlavor.114.a
-		KNM = {
-			every_subject_country = {
-				limit = {
-					has_country_flag = release_in_event_MAL
+		every_country = {
+			limit = {
+				has_country_flag = release_in_event_MAL
+			}
+			grant_independence = yes
+			custom_tooltip = they_shall_join_us_in_battle
+			set_country_flag = to_be_annexed_MAL
+			hidden_effect = {
+				white_peace = MAL
+				MAL = {
+					create_subject = {
+						subject_type = farma_subject
+						who = PREV
+					}
+					add_favors = {
+						who = PREV
+						amount = 35
+					}
 				}
-				grant_independence = yes
-				PREV = {
-					white_peace = MAL
-					create_alliance = MAL
-					join_all_offensive_wars_of = MAL
-				}
-				set_country_flag = to_be_annexed_MAL
 			}
 		}
 	}
 }
-
 country_event = {
 	id = mr_MaliFlavor.14
 	title = mr_MaliFlavor.14.t
@@ -675,7 +681,13 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					has_country_flag = to_be_annexed_MAL
+					OR = {
+						has_country_flag = to_be_annexed_MAL
+						AND = {
+							culture = hausa
+							is_subject_of = KNM
+						}
+					}
 					NOT = { tag = HAU }
 				}
 				every_owned_province = {
@@ -683,7 +695,7 @@ country_event = {
 					cede_province = HAU
 				}
 			}
-			every_owned_province = {
+			every_province = {
 				limit = {
 					OR = {
 						area = katsina_area
@@ -704,6 +716,7 @@ country_event = {
 			value = 1
 		}
 		HAU = {
+			change_religion = ROOT
 			add_historical_friend = MAL	
 			change_country_color = {
 				country = ROOT
@@ -731,7 +744,13 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					has_country_flag = to_be_annexed_MAL
+					OR = {
+						has_country_flag = to_be_annexed_MAL
+						AND = {
+							culture = hausa
+							is_subject_of = KNM
+						}
+					}
 					NOT = { tag = HAU }
 				}
 				every_owned_province = {
@@ -739,7 +758,7 @@ country_event = {
 					cede_province = HAU
 				}
 			}
-			every_owned_province = {
+			every_province = {
 				limit = {
 					OR = {
 						area = katsina_area
@@ -779,6 +798,7 @@ country_event = {
 		GBI = {
 			add_liberty_desire = -50
 			change_tag = HAU
+			change_religion = ROOT
 			add_historical_friend = MAL	
 			farma_dynamic_name_change_effect = yes
 		}
@@ -1668,6 +1688,10 @@ country_event = {
 			}
 		}
 		custom_tooltip = tunisian_farma_tt
+		add_country_modifier = {
+			name = african_raiders
+			duration = 9125
+		}
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -1683,7 +1707,6 @@ country_event = {
 				subject_type = core_farma_subject
 				who = FZA
 			}
-			set_country_flag = subjugated_tunisia_MAL
 			TUN = {
 				farma_dynamic_name_change_effect = yes
 				change_country_color = {
@@ -1801,7 +1824,7 @@ country_event = { #Farma of Kongo
 	}
 
 	option = {
-		name = mr_MaliFlavor.25.b
+		name = mr_MaliFlavor.26.b
 		MAL = {
 			country_event = {
 				id = mr_MaliFlavor.26

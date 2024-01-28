@@ -251,6 +251,7 @@ branch_1 = {
 				trade_goods = tropical_wood
 				trade_goods = naval_supplies
 			}
+			is_in_guinea_area = yes
 			NOT = {
 				base_production = 5
 			}
@@ -1067,6 +1068,22 @@ branch_2 = {
 					}
 				}
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						banda_oriental_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+					banda_oriental_area = {
+						add_province_modifier = {
+							name = babele_river_south
+							duration = 12775
+						}
+					}
+				}
+			}
 		}
 	}
 	mr_mali_exploration_sixth = {
@@ -1220,7 +1237,7 @@ branch_2 = {
 			NOT = {
 				AND = {
 					country_or_non_sovereign_subject_holds = ROOT
-					num_of_times_improved_by_owner = 10
+					num_of_times_improved = 10
 					has_trade_building_trigger = yes
 				}
 			}
@@ -1228,7 +1245,7 @@ branch_2 = {
 		trigger = {
 			835 = {
 				country_or_non_sovereign_subject_holds = ROOT
-					num_of_times_improved_by_owner = 10
+					num_of_times_improved = 10
 					has_trade_building_trigger = yes
 			}
 			treasury = 2500
@@ -1588,6 +1605,29 @@ branch_3 = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					dendi_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					
+				}
+				custom_tooltip = gao_core_root_yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						dendi_area = {
+							type = all
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				custom_tooltip = gao_core_root_no
+			}
 			zazzau_area = {
 				limit = {
 					NOT = { is_core = ROOT	}
@@ -1671,6 +1711,16 @@ branch_3 = {
 						add_province_modifier = {
 							name = gao_modifier
 							duration = -1
+						}
+					}
+					
+				}
+				if = {
+					limit = {
+						dendi_area = {
+							type = all
+							owned_by = ROOT
+							is_core = ROOT
 						}
 					}
 					inherit = GAO
@@ -2718,7 +2768,7 @@ branch_3 = {
 				}
 			}
 			2249 = { #Ivory Coast
-					trade_node_value = 25
+				trade_node_value = 25
 			}
 		}
 		effect = {
@@ -2899,6 +2949,7 @@ branch_4 = {
 		position = 3
 		required_missions = {
 			mr_mali_northeast_first
+			mr_mali_sahara_second
 		}
 		provinces_to_highlight = {
 			OR = { 
@@ -3255,7 +3306,7 @@ branch_4 = {
 			mr_mali_naval_second
 		}
 		trigger = {
-			naval_tradition = 50
+			navy_tradition = 50
 			OR = {
 				has_idea_group = naval_ideas
 				has_idea_group = maritime_ideas
@@ -3268,9 +3319,9 @@ branch_4 = {
 			custom_tooltip = build_academy
 			hidden_effect = {
 				1114 = {
-					add_great_project_tier = {
+					add_great_project = {
 						type = mr_guinala_academy
-						tier = 2
+						instant = yes 
 					}
 				}
 			}
@@ -3315,7 +3366,6 @@ branch_4 = {
 			}
 		}
 		effect = {
-		
 			dominica_area = {
 				add_province_modifier = {
 					name = align_the_taino
@@ -3480,9 +3530,14 @@ branch_4 = {
 				}
 			}
 			num_of_owned_provinces_with = {
-				is_upgraded_good = no
 				NOT = {
-					trade_goods = gold
+					AND = {
+						trade_goods = gold
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = not_an_upgraded_good
+					is_upgraded_good = no
 				}
 				continent = africa
 				development = 7
@@ -3495,10 +3550,12 @@ branch_4 = {
 			hidden_effect = {
 				random_owned_province = {
 					limit = {
-						is_upgraded_good = no
 						NOT = {
-							trade_goods = gold
+							AND = {
+								trade_goods = gold
+							}
 						}
+						is_upgraded_good = no
 						continent = africa
 						development = 7
 						has_trade_building_trigger = yes
@@ -3508,10 +3565,12 @@ branch_4 = {
 				}
 				random_owned_province = {
 					limit = {
-						is_upgraded_good = no
 						NOT = {
-							trade_goods = gold
+							AND = {
+								trade_goods = gold
+							}
 						}
+						is_upgraded_good = no
 						continent = africa
 						development = 7
 						has_trade_building_trigger = yes
@@ -3521,16 +3580,27 @@ branch_4 = {
 				}
 				random_owned_province = {
 					limit = {
-						is_upgraded_good = no
 						NOT = {
-							trade_goods = gold
+							AND = {
+								trade_goods = gold
+							}
 						}
+						is_upgraded_good = no
 						continent = africa
 						development = 7
 						has_trade_building_trigger = yes
 					}
 					change_trade_goods = naval_supplies
 					add_base_production = 1
+				}
+				every_owned_province = {
+					limit = {
+						province_has_good_upgrade_trigger = yes
+					}
+					add_province_modifier = {
+						name = goods_produced_boon_mali
+						duration = -1
+					}
 				}
 			}
 		}
@@ -4707,8 +4777,8 @@ branch_5 = {
 			}
 			custom_tooltip = this_will_upgrade_establish_communities_and_maximize_profits
 			hidden_effect = {
-				set_country_flag = locked_trading_policy_establish_communities_upgraded
-				set_country_flag = locked_trading_policy_hostile_trading_upgraded
+				set_country_flag = enabled_trading_policy_establish_communities_upgraded
+				set_country_flag = enabled_trading_policy_maximize_profit_upgraded
 			}
 		}
 	}
@@ -4720,7 +4790,7 @@ branch_5 = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1248
+				province_id = 1102
 				province_id = 1101
 				province_id = 1100
 			}
@@ -4732,7 +4802,7 @@ branch_5 = {
 			}
 		}
 		trigger = {
-			1248 = {
+			1102 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				development = 10
 				has_trade_building_trigger = yes
@@ -4758,7 +4828,7 @@ branch_5 = {
 					}
 				}
 			hidden_effect = {
-				1248 = {
+				1102 = {
 					change_trade_goods = shellfish
 					add_province_modifier = {
 						name = shell_coins

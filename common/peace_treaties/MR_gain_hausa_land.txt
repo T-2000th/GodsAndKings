@@ -63,6 +63,9 @@ po_gain_hausa_land = {
 		country_event = {
 			id = mr_MaliFlavor.14
 		}
+		hidden_effect = {
+			set_global_flag = hausa_war_done
+		}
 	}
 	ai_weight = { # Defaults to always evaluate to 0
 		export_to_variable = {

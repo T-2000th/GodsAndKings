@@ -8,6 +8,7 @@ unlock_cult = roog_cult
 unlock_cult = nyame_cult
 capital = 1116
 religious_school = maliki_school
+add_historical_friend = MAL
 
 #Rulers of the Jolof Empire
 1350.1.1 = {

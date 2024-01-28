@@ -607,6 +607,10 @@ remove_quest_stuff = {
 			has_ruler_flag = task_f
 		}
 		clr_ruler_flag = task_f
+		set_variable = {
+			which = mal_count_workshops
+			value = 0
+		}
 	}
 	if = {
 		limit = {
@@ -619,6 +623,10 @@ remove_quest_stuff = {
 			has_ruler_flag = task_h
 		}
 		clr_ruler_flag = task_h
+		set_variable = {
+			which = mal_count_mosques
+			value = 0
+		}
 	}
 	if = {
 		limit = {

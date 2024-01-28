@@ -442,29 +442,38 @@ is_french_bishop_elector = {
 }
 
 is_staple_crop = {
-	trade_goods = grain
-	trade_goods = rice
-	trade_goods = vegetables
-	trade_goods = potato
-	trade_goods = tomato
-	trade_goods = maize
+	OR = {
+		trade_goods = grain
+		trade_goods = rice
+		trade_goods = vegetables
+		trade_goods = potato
+		trade_goods = tomato
+		trade_goods = maize
+	}
+	
 }
 
 is_upgraded_good = {
 	custom_trigger_tooltip = {
 		tooltip = is_upgrade_good
-		trade_goods = alcohol
-		trade_goods = honey_wine
-		trade_goods = rum
-		trade_goods = rice_wine
-		trade_goods = military_supplies
-		trade_goods = jewelry
-		trade_goods = cheese
-		trade_goods = marble
-		trade_goods = steel
-		trade_goods = gunpowder
-		trade_goods = chocolate
-		trade_goods = perfume
+		OR = {
+			trade_goods = alcohol
+			trade_goods = honey_wine
+			trade_goods = rum
+			trade_goods = rice_wine
+			trade_goods = military_supplies
+			trade_goods = jewelry
+			trade_goods = cheese
+			trade_goods = marble
+			trade_goods = steel
+			trade_goods = gunpowder
+			trade_goods = chocolate
+			trade_goods = perfume
+			trade_goods = cloth
+			trade_goods = silk
+			trade_goods = wine
+			trade_goods = naval_supplies
+		}
 	}	
 }
 
@@ -512,6 +521,23 @@ is_in_guinea_area = {
 			province_id = 5201
 			province_id = 5203
 			area = west_africa_coast_area
+		}
+	}
+}
+province_has_good_upgrade_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = province_has_good_upgrade_TT
+		OR = {
+			has_building = mrb_brewery
+			has_building = mrb_creamery
+			has_building = mrb_textileprocessor
+			has_building = mrb_steelmill
+			has_building = mrb_jewler
+			has_building = mrb_confectionary
+			has_building = mrb_lumberyard
+			has_building = mrb_winery
+			has_building = mrb_powdermill
+			has_building = mrb_gunsmith
 		}
 	}
 }

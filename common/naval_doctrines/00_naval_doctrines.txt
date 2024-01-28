@@ -674,7 +674,7 @@ malian_treasure_fleets = {
 	can_select = {
 		is_primitive = no
 		NOT = { has_country_flag = unlock_norwegian_naval_doctrine }
-		OR = {
+		AND = {
 			mission_completed = mr_mali_naval_third
 			tag = MAL
 		}
