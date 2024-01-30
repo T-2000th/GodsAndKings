@@ -1902,7 +1902,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 200
+		months = 250
 	}
 
 	is_mtth_scaled_to_size = 1
@@ -2018,6 +2018,261 @@ province_event = {
 				faction = malian_merchants
 				influence = -10
 			}
+		}
+	}
+}
+country_event = {
+	id = mr_MaliFlavor.29
+	title = mr_MaliFlavor.29.t
+	desc = mr_MaliFlavor.29.d
+	picture = AFRICAN_MARRIAGE_eventPicture
+
+	trigger = {
+		has_faction = malian_merchants
+		has_faction = malian_court
+		has_faction = malian_guilds
+		NOT = {
+			has_ruler_flag = concubine_lover
+		}
+		has_consort = yes
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+
+	option = {
+		name = mr_MaliFlavor.29.a
+		add_faction_influence = {
+			faction = malian_court
+			influence = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_MALIAN_COURT
+			influence = 15
+			duration = 7300
+		}
+		add_prestige = -5
+		hidden_effect = {
+			set_ruler_flag = concubine_lover
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.29.b
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_MALIAN_COURT_SCORN
+			influence = -10
+			duration = 7300
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		remove_consort = yes
+		define_consort = {
+			country_of_origin = ROOT
+			religion = ROOT
+			culture = ROOT
+		}
+		hidden_effect = {
+			set_ruler_flag = concubine_lover
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.29.c
+		add_faction_influence = {
+			faction = malian_merchants
+			influence = 15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			desc = EST_MALIAN_COURT_SCORN
+			influence = -5
+			duration = 7300
+		}
+		random_list = {
+			30 = {
+				remove_consort = yes
+				define_consort = {
+					country_of_origin = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+			70 = {
+				add_prestige = -5
+			}
+		}
+		hidden_effect = {
+			set_ruler_flag = concubine_lover
+		}
+	}
+}
+country_event = { #A Rising Manshaju
+	id = mr_MaliFlavor.30
+	title = mr_MaliFlavor.30.t
+	desc = mr_MaliFlavor.30.d
+	picture = MALI_DECLINE_eventPicture
+
+	trigger = {
+		has_faction = malian_court
+		NOT = {
+			OR = {
+				has_country_modifier = mashaju_employed_1
+				has_country_modifier = mashaju_employed_2
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 250
+	}
+
+	option = {
+		name = mr_MaliFlavor.30.a #He cannot be allowed to gain more power!
+		add_country_modifier = {
+			name = mashaju_employed_1
+			duration = 9125
+		}
+		add_faction_influence = {
+			faction = malian_court
+			influence = 10
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.30.b #He has done well to come this far. Reward him with a higher position!
+		add_country_modifier = {
+			name = mashaju_employed_2
+			duration = 9125
+		}
+		define_advisor = {
+			type = treasurer
+			culture = ROOT
+			discount = yes
+			skill = 3
+			religion = ROOT
+		}
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = 10
+		}
+	}
+}
+country_event = { #Heirs of the Empire
+	id = mr_MaliFlavor.31
+	title = mr_MaliFlavor.31.t
+	desc = mr_MaliFlavor.31.d
+	picture = AFRICAN_KING_MEDIATING_eventPicture
+
+	trigger = {
+		has_faction = malian_court
+		num_of_subjects = 1
+	}
+	mean_time_to_happen = {
+		months = 250
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				save_event_target_as = malian_court_target
+			}
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.31.a
+		event_target:malian_court_target = {
+			add_liberty_desire = -10
+		}
+		add_faction_influence = {
+			faction = malian_court
+			influence = -15
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.31.b
+		event_target:malian_court_target = {
+			add_liberty_desire = 10
+		}
+		add_faction_influence = {
+			faction = malian_court
+			influence = 15
+		}
+	}
+
+	option = {
+		name = mr_MaliFlavor.31.c
+		trigger = {
+			ruler_has_personality = just_personality
+		}
+		highlight = yes
+		add_faction_influence = {
+			faction = malian_court
+			influence = 5
+		}
+		add_prestige = 25
+	}
+}
+country_event = { #Clad in Lions Furt
+	id = mr_MaliFlavor.32
+	title = mr_MaliFlavor.32.t
+	desc = mr_MaliFlavor.32.d
+	picture = ANSHANTI_FIREARMS_eventPicture
+	trigger = {
+		has_heir = yes
+		has_faction = malian_guilds
+		faction_in_power = malian_guilds
+		NOT = {
+			heir_has_personality = cruel_personality
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+	}
+
+	option = {
+		name = mr_MaliFlavor.32.a
+		custom_tooltip = triple_chance_of_cruel
+		change_heir_mil = 1	
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = 5
+		}
+		set_heir_flag = triple_chance_of_cruel_mal
+	}
+	option = {
+		name = mr_MaliFlavor.32.b
+		change_heir_adm = 1	
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = -15
+		}
+	}
+	option = {
+		name = mr_MaliFlavor.32.c
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		highlight = yes
+		event_target:malian_court_target = {
+			add_liberty_desire = -5
+		}
+		change_heir_mil = 2	
+		add_heir_personality = cruel_personality	
+		add_faction_influence = {
+			faction = malian_guilds
+			influence = 5
 		}
 	}
 }

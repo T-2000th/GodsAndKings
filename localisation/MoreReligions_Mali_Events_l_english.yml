@@ -230,3 +230,32 @@ mr_MaliFlavor.28.d: "The merchants have grown exceptionally powerful in our nati
 mr_MaliFlavor.28.a: "I always wanted a new market here!"
 mr_MaliFlavor.28.b: "I like the concept, but that price is insane!"
 mr_MaliFlavor.28.c: "I am not messing with [Root.GetAdjective] merchants!"
+
+mr_MaliFlavor.29.t: "Concubines and the Mansa"
+mr_MaliFlavor.29.d: "The Mansa is known for having many wives on his retinue. This is in part to ensure alliances and support from various factions across the empire, but also to ensure his bloodline continues - the chief wife holds immense power and influence over the state. [Root.Monarch.GetName] had a spat with his current chief wife, [Root.Consort.GetName], who has been interfering with his affairs at the royal court. As such, he consulted with his council on another chief wife to take, in order to balance and secure the court. So far, some suggestions have been floated around the courtroom - he could marry an elite slave, a non-royal which would please the Donson Ton but annoy the Grand Council. Similarly, perhaps he could simply remain with his current chieg wife, as she was simply gaining influence instead of outright opposing him. Perhaps a mediator could assist in the process?"
+mr_MaliFlavor.29.a: "Why change what isn't broken? Keep [Root.Consort.GetName]!"
+mr_MaliFlavor.29.b: "[Root.Consort.GetName] has become too much of an annoyance. Bring in the slave-girl!"
+mr_MaliFlavor.29.c: "These troubles are weighing on my mind - I shall go to a Mori and seek guidance."
+EST_MALIAN_COURT_SCORN: "Court Outraged"
+EST_MALIAN_COURT: "Court Placated"
+
+mr_MaliFlavor.30.t: "A Rising Manshaju"
+mr_MaliFlavor.30.d: "In the old days, slaves and servants could reach the status of power of a farma with some difficulty. It was the height of their power, while most were used for menial labor or domestic servitude. Now, however, a group of servants within the state are growing in influence and power. One, a Manshaju of a major city within Mali, has become so mighty that he dwarfs even noble families within the court with his influence and power. He speaks directly into the Mansa's ear of plans and structure, and many within the state have come to the Mansa requesting that his power be limited. Their reasoning is obvious; they wish to climb the ladder, to fill the void this Manshaju's dismissal or restricting would create. However, the servant's ability to rule is unquestionably benefitial at maintaining the peace of the realm, - removing him would cause disruptions across the state."
+mr_MaliFlavor.30.a: "He cannot be allowed to gain power!"
+mr_MaliFlavor.30.b: "He has done well to come this far. Reward him with a higher position!"
+mashaju_employed_1: "Manshaju Dismissed"
+mashaju_employed_2: "Manshaju Secured"
+
+mr_MaliFlavor.31.t: "The Bickering Heirs"
+mr_MaliFlavor.31.d: "Within the court of the Mansa, heirs are brought from the far reaches of the empire to reside within his great palace. Young men, often no more than boys, are sent from Farmas and Tributaries on the periphery to be educated by their overlord so that they might be raised appropriately. Of course, this is also a hostage situation - should any of these farmas grow restless, their heirs would never return home. But despite this looming dagger hanging above their heads, they more often than break bread with one another. Recently, arguments have been brewing; one of the Mansa's sons has been arguing with an heir from another land, slandering them with cruel words. Interestingly enough, many in our court agree with the boy; the foreign heir is crude and arrogant, unwilling to bend to local authority. Yet, even more curiously, some agree that this foreign boy is still not deserving of these words, least of all the foreign dignitaries who wish to see their heir protected and cared for."
+mr_MaliFlavor.31.a: "Let us be kind to our guest, he is but a boy."
+mr_MaliFlavor.31.b: "The boy shall learn respect, chastise him!"
+mr_MaliFlavor.31.c: "Mediate this conflict; they shall be brothers, not enemies."
+
+mr_MaliFlavor.32.t: "A Lion in a King's Robe"
+mr_MaliFlavor.32.d: "Recently, it appears that our heir is slowly but surely becoming more of a hunter than a ruler. He enjoys going out with the soldiers during their drills, riding his horses on the outskirts of the capital city, and he was seen practicing with a musket nearby his Jeliw whilst the latter attempted to teach the boy about his past. Ironically, many are saying he is appearing more and more like the great Sundiata, but perhaps this is going too far. He has his fans in court but his actions are unbecoming of a king, and could become a problem the older he gets - perhaps he’ll be cruel or wicked over just and fair, or maybe he’ll rule despondently as he feeds his desire for action and adventure. Something must be done!"
+
+mr_MaliFlavor.32.a: "I see no harm - he shall be a strong king!"
+mr_MaliFlavor.32.b: "This could be troublesome - redirect his focus to other matters."
+mr_MaliFlavor.32.c: "If anything, I'd say he's not going far enough!"
+triple_chance_of_cruel: "This will triple the chance of our heir adopting the Cruel Personality"

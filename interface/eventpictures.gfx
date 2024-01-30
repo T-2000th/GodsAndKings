@@ -810,4 +810,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_pictures_AOW/ANSHANTI_FIREARMS_eventPicture.dds"
 		alwaystransparent = yes
 	}
+	#AFRICAN_MARRIAGE_eventPicture
+	spriteType = {
+		name = "AFRICAN_MARRIAGE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AOW/AFRICAN_MARRIAGE_eventPicture.dds"
+		alwaystransparent = yes
+	}
 }

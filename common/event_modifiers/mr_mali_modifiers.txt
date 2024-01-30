@@ -331,3 +331,11 @@ merchant_request_denied = {
 african_raiders = {
 	privateer_efficiency = 0.2	
 }
+mashaju_employed_1 = {
+	global_unrest = 1
+	nobles_loyalty_modifier = 0.1
+	advisor_cost = -0.05
+}
+mashaju_employed_2 = {
+	global_unrest = -1
+}

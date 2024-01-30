@@ -2798,6 +2798,10 @@ cruel_personality = {
 					heir_has_personality = petty_personality
 				}
 			}
+			modifier = {
+				factor = 3
+				has_heir_flag = triple_chance_of_cruel_mal
+			}
 		}
 	}
 	

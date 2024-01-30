@@ -1275,9 +1275,9 @@ branch_2 = {
 			}
 		}
 		trigger = {
-			south_america = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				continent = south_america
+				value = 200
 			}
 		}
 		effect = {

@@ -1,3 +1,7 @@
-1134 = {
-	add_building = university
+every_province = {
+	limit = {
+		continent = south_america
+	}
+	cede_province = ROOT
+	add_core = ROOT
 }
