@@ -1,0 +1,176 @@
+riverside_temple = {
+	local_production_efficiency = 0.05
+	local_governing_cost = -0.10
+	local_missionary_strength = 0.03
+	local_development_cost_modifier = -0.03
+}
+river_shrine = {
+	local_production_efficiency = 0.10
+	local_governing_cost = -0.10
+	local_missionary_strength = 0.03
+	local_development_cost_modifier = -0.05
+}
+conqueror_of_lao = {
+	ae_impact = -0.05
+	land_attrition = -0.10 
+	land_forcelimit_modifier = 0.15
+}
+laotian_mandala = {
+	reduced_liberty_desire = 10
+	yearly_karma_decay = 0.015
+	diplomatic_upkeep = 3
+}
+lua_palace = {
+	local_amount_of_hussars = 1
+	local_manpower_modifier = 0.15
+	allowed_num_of_buildings = 1 
+}
+vientiane_palace = {
+	local_governing_cost = -0.20
+	local_defensiveness = 0.33
+	allowed_num_of_buildings = 1 
+}
+mekong_pearl = {
+	local_tax_modifier = 0.15
+	local_build_cost = -0.20
+	local_production_efficiency = 0.15
+	allowed_num_of_buildings = 1 
+}
+champasak_palace = {
+	local_production_efficiency = 0.10
+	local_tax_modifier = 0.15
+	allowed_num_of_buildings = 1 
+}
+hui_master = {
+	diplomatic_upkeep = 1
+}
+zhuang_master = {
+	recover_army_morale_speed = 0.08
+}
+miao_master = {
+	global_trade_goods_size_modifier = 0.08
+}
+mount_kailash = {
+	local_defensiveness = 0.5
+	local_development_cost = -0.3
+	allowed_num_of_buildings = 1 
+}
+mekong_wtc = {
+	trade_value = 5
+	local_development_cost_modifier = -0.05
+	allowed_num_of_buildings = 1 
+	trade_goods_size_modifier = 0.10
+	local_governing_cost = -0.15
+}
+trade_focus_PMN = {
+	naval_tradition_from_trade = 0.25
+	global_ship_trade_power = 0.10
+	global_prosperity_growth = 0.07
+}
+mekong_domination = {
+	monthly_splendor = 1 
+	land_attrition = -0.10 
+}
+maenam_karma_start_1 = {
+	global_revolt_risk = -0.5
+}
+maenam_karma_start_2 = {
+	global_tax_modifier = 0.10
+}
+maenam_karma_start_3 = {
+	reinforce_speed = 0.25
+}
+maenam_karma_start_4 = {
+	ae_impact = -0.10
+	land_morale = 0.10
+}
+
+maenam_karma_neutral_2 = {
+	global_defender_dice_roll_bonus = 1
+	defensiveness = 0.15
+}
+maenam_karma_good_2 = {
+	yearly_karma_decay = 0.010
+	stability_cost_modifier = -0.10
+}
+maenam_karma_bad_2 = {
+	adm_advisor_cost = -0.15
+	manpower_recovery_speed = 0.05
+}
+maenam_karma_phi_2 = {
+	core_creation = -0.05
+	infantry_power = 0.15
+}
+
+maenam_karma_good_2 = {
+	advisor_pool = 1
+	church_loyalty_modifier = 0.1
+}
+maenam_karma_bad_2 = {
+	global_autonomy = -0.05
+	advisor_cost = -0.15
+}
+maenam_karma_phi_2 = {
+	female_advisor_chance = 0.25
+	may_recruit_female_generals = yes
+	manpower_recovery_speed = 0.05
+	global_missionary_strength = 0.02
+}
+maenam_karma_neutral_3 = {
+	legitimacy = 0.05
+	governing_capacity_modifier = 0.10
+}
+
+laotian_lord_of_life = {
+	yearly_absolutism = 1
+	max_absolutism = 10
+	nobles_loyalty_modifier = 0.10
+	church_loyalty_modifier = 0.10
+	burghers_loyalty_modifier = 0.10
+}
+
+PMN_source_secured = {
+	legitimacy = 0.05
+	governing_capacity_modifier = 0.10
+}
+PMN_burmar_secured = {
+	governing_capacity_modifier = 0.15
+	army_tradition_decay = -0.02
+}
+
+trade_focus_PMN = {
+	naval_tradition_from_trade = 0.20
+	global_ship_trade_power = 0.15
+}
+
+maenam_trade_opendoor = {
+	diplomatic_upkeep = 1
+	merchants = 1
+	naval_attrition = -0.15
+}
+maenam_trade_competitive = {
+	innovativeness_gain = 0.25
+	trade_efficiency = 0.1
+	global_ship_trade_power = 0.15
+}
+maenam_trade_closeddoor = {
+	diplomatic_reputation = -0.5
+	ship_durability = 0.10
+	navy_tradition_decay = -0.01
+}
+
+maenam_mandala_opendoor = {
+	idea_cost = -0.1
+	tolerance_heathen = 3
+}
+maenam_mandala_competitive = {
+	prestige = 1.0
+	merc_maintenance_modifier = -0.15
+}
+maenam_mandala_closeddoor = {
+	monthly_splendor = 0.5
+	build_cost = -0.10
+}
+mekong_powered = {
+	local_production_efficiency = 0.25
+}

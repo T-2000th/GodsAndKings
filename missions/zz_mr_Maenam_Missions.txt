@@ -1,0 +1,1847 @@
+MR_maenam_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = { tag = PMN }
+	has_country_shield = yes
+	
+	mr_maenam_warpath_2 = {	#Conquer Lanna and hopefully get Emerald Buddha
+		icon = mission_a_million_rice_fields
+		position = 2
+		required_missions = { mr_maenam_warpath_1 }
+		provinces_to_highlight = {
+			area = northern_thai_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			northern_thai_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			shan_hill_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			karenni_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_warpath_3 = {	#Impose your supremacy over Shan
+		icon = mission_conquer_siam
+		position = 3
+		required_missions = { mr_maenam_warpath_2 }
+		provinces_to_highlight = {
+			area = shan_hill_area 
+			area = karenni_area
+			area = yun_gui_borderland_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			shan_hill_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			karenni_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			yun_gui_borderland_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			upper_burma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_burma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = shan_cb_TT
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = shan
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = local_cultures_accepted_SIA
+				duration = -1
+			}
+		}
+	}
+	
+	mr_maenam_warpath_4 = {	#Conquer Burma, get claim on Mon
+		icon = mission_kanbawzathadi_palace
+		position = 4
+		required_missions = { mr_maenam_warpath_3 }
+		provinces_to_highlight = {
+			area = upper_burma_area 
+			area = central_burma_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			upper_burma_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			central_burma_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			lower_burma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_warpath_5 = {	#Conquer Mon, claim the rest of Burma
+		icon = mission_restore_the_pagan_kingdom
+		position = 5
+		required_missions = { mr_maenam_warpath_4 }
+		provinces_to_highlight = {
+			area = lower_burma_area 
+			area = north_tenasserim_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			lower_burma_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			north_tenasserim_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			chindwin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kachin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			arakan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_warpath_6 = {	#United Burma, get modifier 
+		icon = mission_annex_prome
+		position = 6
+		required_missions = { mr_maenam_warpath_5 }
+		provinces_to_highlight = {
+			area = chindwin_area 
+			area = kachin_area
+			area = arakan_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chindwin_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			kachin_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			arakan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = PMN_burmar_secured
+				duration = -1
+			}
+		}
+	}
+	
+	mr_maenam_globalization_1 = {	#Globalized Trade bring cash
+		icon = mission_open_up_china
+		position = 7
+		required_missions = { mr_maenam_warpath_6 mr_maenam_unification_4 }
+		provinces_to_highlight = {
+			area = mekong_area 
+			NOT = {
+				development = 15 
+				country_or_non_sovereign_subject_holds = ROOT
+				has_trade_building_trigger = yes
+			}
+		}
+		trigger = {
+			has_institution = global_trade
+			mekong_area = {
+				development = 15 
+				country_or_non_sovereign_subject_holds = ROOT
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+					name = trade_focus_PMN
+					duration = -1
+				}
+		}
+	}
+	
+	
+	mr_maenam_globalization_2 = {	#Visitor from the West
+		icon = mission_trade_company_region_abroad
+		position = 8
+		required_missions = { mr_maenam_globalization_1 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			any_country = {
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 120
+						}
+					}
+					capital_scope = {
+						continent = europe
+					}
+					technology_group = western
+				}
+			}
+		effect = {
+			605 = {
+				add_province_modifier = {
+					name = mekong_wtc
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_globalization_3 = {	#Isolation or Innovation?
+		icon = mission_asian_trader
+		position = 9
+		required_missions = { mr_maenam_globalization_2 }
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+			605 = {
+				is_strongest_trade_power = ROOT
+			}
+			calc_true_if = {
+				amount = 4
+				all_province = {
+					has_trade_building_trigger = yes
+					has_dock_building_trigger = yes
+					province_has_center_of_trade_of_level = 1
+					area = mekong_area
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = maenam_trade_TT_1
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_trade_opendoor
+					duration = -1
+				}
+			}
+			custom_tooltip = maenam_trade_TT_2
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_trade_competitive
+					duration = -1
+				}
+			}
+			custom_tooltip = maenam_trade_TT_3
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_trade_closeddoor
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+					calc_true_if = {
+					any_country = {
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 120
+						}
+					}
+					capital_scope = {
+						continent = europe
+					}
+					technology_group = western
+				}
+					amount = 2
+					}	
+					}
+					add_country_modifier = {
+						name = maenam_trade_opendoor
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+					calc_true_if = {
+						any_country = {
+						OR = {
+							has_won_war_against = {
+							who = ROOT
+							max_years_since = 5
+							}
+						}
+						capital_scope = {
+							continent = europe
+						}
+					technology_group = western
+					}
+					amount = 2
+					}
+					}
+					add_country_modifier = {
+						name = maenam_trade_closeddoor
+						duration = -1
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = maenam_trade_competitive
+						duration = -1
+						}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_globalization_4 = {	#The Golden Mandala
+		icon = mission_market_place_with_asian_traders
+		position = 10
+		required_missions = { mr_maenam_globalization_3 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 40
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 40
+			}
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 40
+			}
+			has_institution = enlightenment
+		}
+		effect = {
+			custom_tooltip = maenam_mandala_TT_1
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_mandala_opendoor
+					duration = -1
+				}
+			}
+			custom_tooltip = maenam_mandala_TT_2
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_mandala_competitive
+					duration = -1
+				}
+			}
+			custom_tooltip = maenam_mandala_TT_3
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_mandala_closeddoor
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+					calc_true_if = {
+					any_country = {
+					OR = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 120
+						}
+					}
+					capital_scope = {
+						continent = europe
+					}
+					technology_group = western
+				}
+					amount = 2
+					}
+					}
+					add_country_modifier = {
+						name = maenam_mandala_opendoor
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+					calc_true_if = {
+						any_country = {
+						OR = {
+							has_won_war_against = {
+							who = ROOT
+							max_years_since = 20
+							}
+						}
+						capital_scope = {
+							continent = europe
+						}
+					technology_group = western
+					}
+					amount = 2
+					}
+					}
+					add_country_modifier = {
+						name = maenam_mandala_closeddoor
+						duration = -1
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = maenam_mandala_competitive
+						duration = -1
+						}
+				}
+			}
+		}
+	}
+}
+
+MR_maenam_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = { tag = PMN }
+	has_country_shield = yes
+	
+	mr_maenam_warpath_1 = { #Army buildup
+		icon = mission_mnd_siam_royal_duel
+		required_missions = { }
+		
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.50 
+		}
+		
+		effect = {
+			north_laos_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vientiane_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			champasak_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_thai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			define_advisor = {
+				type = commandant
+				skill = 1
+				discount = yes
+				culture = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_unification_1 = {	#Rival Angkor and get claims on Thai
+		icon = mission_indian_soldier_elephant
+		position = 3
+		required_missions = { mr_maenam_warpath_1 }
+		provinces_to_highlight = {
+			owned_by = ANK
+		}
+		trigger = {
+			OR = {
+				is_rival = ANK
+				total_development = ANK
+				NOT = { exists = ANK }
+			}
+		}
+		effect = {
+			khorat_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_thai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sukhothai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			create_general = { tradition = 50 }
+		}
+	}
+	
+	mr_maenam_unification_2 = {	#Unite the Thai and Crush Angkor for good
+		icon = mission_conquer_siam
+		position = 4
+		required_missions = { mr_maenam_unification_1 }
+		provinces_to_highlight = {
+			area = khorat_area
+			area = central_thai_area
+			area = sukhothai_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			khorat_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			central_thai_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			sukhothai_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			cambodia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			angkor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_unification_3 = {	#Conquer Angkor
+		icon = mission_mnd_khm_avenge_angkor
+		position = 5
+		required_missions = { mr_maenam_unification_2 }
+		provinces_to_highlight = {
+			area = cambodia_area
+			area = angkor_area
+			area = mekong_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			cambodia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			angkor_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			mekong_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			tenasserim_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	mr_maenam_unification_4 = {	#Conquer Si Thammarat 
+		icon = mission_galleys_in_port
+		position = 6
+		required_missions = { mr_maenam_unification_3 }
+		provinces_to_highlight = {
+			area = tenasserim_area
+			area = north_tenasserim_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tenasserim_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			north_tenasserim_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			2390 = {
+				add_latest_building = {
+					fort = yes
+					builder = ROOT
+				}
+				add_province_modifier = {
+					name = gateway_shan_fort
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_legimacy_2 = {	#Rule with Resolve
+		icon = mission_mnd_siam_royal_duel
+		position = 13
+		required_missions = { mr_maenam_legimacy_1 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			barrack = 15
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		}
+		
+		effect = {
+			custom_tooltip = karma_start_TT_1
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_neutral_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_2
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_good_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_3
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_bad_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = maenam_karma_start_TT_4
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_phi_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_4
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							karma = -33
+							NOT = { karma = 33 }
+						}
+					}
+					add_country_modifier = {
+						name = maenam_karma_neutral_2
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						karma = 34
+					}
+					add_country_modifier = {
+						name = maenam_karma_good_2
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { karma = -34 }
+					}
+					add_country_modifier = {
+						name = maenam_karma_bad_2
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						religion = mr_satsanaphi
+					}
+					add_country_modifier = {
+						name = maenam_karma_phi_2
+						duration = 7300
+					}
+				}
+				else = {
+					add_adm_power = 100
+				}
+			}
+		}
+	}
+
+}
+
+MR_maenam_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = { tag = PMN }
+	has_country_shield = yes
+	
+	mr_maenam_dev_2 = { #Luang Prabang devving
+		icon = mission_mnd_khm_avenge_angkor
+		position = 2
+		required_missions = { 
+			mr_maenam_dev_1
+		}
+		provinces_to_highlight = {
+			province_id = 615
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			615 = {
+				development = 15
+			}
+		}
+		effect = {
+			615 = {
+				add_province_modifier = {
+					name = lua_palace
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_1 = {	#Secure Pasak
+		icon = mission_a_million_elephants
+		position = 4
+		required_missions = { mr_maenam_dev_5 }
+		provinces_to_highlight = {
+			area = khorat_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					area = khorat_area
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			custom_tooltip = mr_maenam_river_1_TT
+			tooltip = {
+				add_province_modifier = {
+					name = riverside_temple
+					duration = 14600
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = khorat_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_5 = {	#Calm the Khone
+		icon = mission_end_the_shan_domination
+		position = 6
+		required_missions = { mr_maenam_river_4 }
+		provinces_to_highlight = {
+			area = shan_hill_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					area = shan_hill_area
+					NOT = { has_tax_building_trigger = yes }
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = shan_thai_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = shan
+					}
+					change_culture = shan_thai
+				}
+				add_accepted_culture = shan_thai
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						accepted_culture = shan
+					}
+					remove_accepted_culture = shan
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = shan_hill_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_8 = {	#Pacify the Miao
+		icon = mission_kowtow
+		position = 7
+		required_missions = { mr_maenam_river_5 }
+		provinces_to_highlight = {
+			area = hunan_area 
+			area = south_hunan_area
+			area = guizhou_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hunan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			south_hunan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			guizhou_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hui_master
+				duration = 10950
+			}
+		}
+	}
+	
+	mr_maenam_legimacy_1 = {	#Righteous Rule
+		icon = mission_a_great_mandala
+		position = 12
+		required_missions = { }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			temple = 15
+			grown_by_development = 50
+		}
+		
+		effect = {
+			custom_tooltip = karma_start_TT_1
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_start_1
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_2
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_start_2
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_3
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_start_3
+					duration = 7300
+				}
+			}
+			custom_tooltip = maenam_karma_start_TT_4
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_start_4
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_4
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							karma = -33
+							NOT = { karma = 33 }
+						}
+					}
+					add_country_modifier = {
+						name = karma_start_1
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						karma = 34
+					}
+					add_country_modifier = {
+						name = karma_start_2
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { karma = -34 }
+					}
+					add_country_modifier = {
+						name = karma_start_3
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						religion = mr_satsanaphi
+					}
+					add_country_modifier = {
+						name = maenam_karma_start_4
+						duration = 7300
+					}
+				}
+				else = {
+					add_adm_power = 100
+				}
+			}
+		}
+	}
+	
+	mr_maenam_legimacy_4 = {	#Maha Sri Vitha
+		icon = mission_chakravarti
+		position = 14
+		required_missions = { mr_maenam_legimacy_2 mr_maenam_legimacy_3 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 500
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				absolutism = 75
+			}
+			has_regency = no
+			is_at_war = no
+			is_subject = no
+		}
+		effect = {
+			add_country_modifier = {
+						name = laotian_lord_of_life
+						duration = -1
+					}
+		}
+	}
+	
+}
+
+MR_maenam_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = { tag = PMN }
+	has_country_shield = yes
+	
+	mr_maenam_dev_1 = {	#Free Trade Center, turn tributaries into vassals
+		icon = mission_a_million_elephants
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+		
+		}
+		trigger = {
+		OR = {
+		
+		AND = {
+			LUA = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+						NOT = { liberty_desire = 50 }
+						NOT = { truce_with = ROOT }
+				}
+				CHK = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+						NOT = { liberty_desire = 50 }
+						NOT = { truce_with = ROOT }
+				}
+				MPH = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+						NOT = { liberty_desire = 50 }
+						NOT = { truce_with = ROOT }
+				}
+				}
+			AND = {
+				615 = { country_or_non_sovereign_subject_holds = ROOT }
+				4839 = { country_or_non_sovereign_subject_holds = ROOT }
+				1844 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		has_institution = renaissance
+		}
+		effect = {
+			614 = {
+				center_of_trade = 2
+				add_province_modifier = {
+					name = mekong_pearl
+					duration = -1
+				}
+			}
+			custom_tooltip = maenamlao_TT_1
+			tooltip = {
+				change_dip = 1
+				add_country_modifier = {
+					name = laotian_mandala
+					duration = -1
+				}	
+				add_government_reform = maenam_reform_a
+			}
+			custom_tooltip = maenamlao_TT_2
+			tooltip = {
+				change_mil = 1
+				add_country_modifier = {
+					name = conqueror_of_lao
+					duration = 18250
+				}	
+				add_government_reform = maenam_reform_b
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							LUA = {	has_opinion = {	who = ROOT	value = 200	}	NOT = { liberty_desire = 50 }	NOT = { truce_with = ROOT }	}
+							CHK = {	has_opinion = {	who = ROOT	value = 200	}	NOT = { liberty_desire = 50 }	NOT = { truce_with = ROOT }	}
+							MPH = {	has_opinion = {	who = ROOT	value = 200	}	NOT = { liberty_desire = 50 }	NOT = { truce_with = ROOT }	}
+							}
+					}
+					vassalize = LUA
+					vassalize = CHK
+					vassalize = MPH
+					add_country_modifier = {
+						name = laotian_mandala
+						duration = -1
+					}
+					set_country_flag = mae_trib_quo
+					add_government_reform = maenam_reform_a
+					change_dip = 1
+				}
+				else_if = {
+					limit = {
+						AND = {
+							615 = { country_or_non_sovereign_subject_holds = ROOT }
+							4839 = { country_or_non_sovereign_subject_holds = ROOT }
+							1844 = { country_or_non_sovereign_subject_holds = ROOT }
+							}
+					}
+					add_country_modifier = {
+						name = conqueror_of_lao
+						duration = 18250
+					}
+			champasak_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+								}
+			north_laos_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+								}
+				set_country_flag = mae_trib_annex
+				add_government_reform = maenam_reform_b
+				change_mil = 1
+				}
+				else = {
+					add_adm_power = 100
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_dev_3 = { #Vientiane devving
+		icon = mission_mnd_khm_resurgence
+		position = 2
+		required_missions = { 
+			mr_maenam_dev_1
+		}
+		provinces_to_highlight = {
+			province_id = 614
+			NOT = {
+				development = 20
+			}
+		}
+		trigger = {
+			614 = {
+				development = 20
+			}
+		}
+		effect = {
+			614 = {
+				add_province_modifier = {
+					name = vientiane_palace
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	mr_maenam_dev_5 = { #Rule over entire Laos and Khorat for river buff
+		icon = mission_bengal_campaign
+		position = 3
+		required_missions = { mr_maenam_dev_2 mr_maenam_dev_3 mr_maenam_dev_4 }
+		provinces_to_highlight = {
+			area = khorat_area
+			area = north_laos_area
+			area = vientiane_area
+			area = champasak_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			khorat_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			north_laos_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			vientiane_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			champasak_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			615 = {
+				add_province_modifier = {
+					name = river_shrine
+					duration = -1
+				}
+			}
+			614 = {
+				add_province_modifier = {
+					name = river_shrine
+					duration = -1
+				}
+			}
+			4839 = {
+				add_province_modifier = {
+					name = river_shrine
+					duration = -1
+				}
+			}
+			4838 = {
+				add_province_modifier = {
+					name = river_shrine
+					duration = -1
+				}
+			}
+			5042 = {
+				add_province_modifier = {
+					name = river_shrine
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_2 = {	#Secure Ping/Sukhotai area
+		icon = mission_mnd_khm_avenge_angkor
+		position = 4
+		required_missions = { mr_maenam_dev_5 }
+		provinces_to_highlight = {
+			area = sukhothai_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					area = sukhothai_area
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			custom_tooltip = mr_maenam_river_1_TT
+			tooltip = {
+				add_province_modifier = {
+					name = riverside_temple
+					duration = 14600
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = sukhothai_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_river_4 = {	#Secure Chao Phraya
+		icon = mission_mnd_siam_revolution
+		position = 5
+		required_missions = { mr_maenam_river_1 mr_maenam_river_2 mr_maenam_river_3 }
+		provinces_to_highlight = {
+			area = central_thai_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					area = central_thai_area
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+				}
+				amount = 5
+			}
+		}
+		effect = {
+			custom_tooltip = mr_maenam_river_1_TT #Flavor toolip
+			tooltip = {
+				add_province_modifier = {
+					name = riverside_temple
+					duration = 14600
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = central_thai_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_river_6 = {	#Court the Red Mistress
+		icon = mission_mnd_siam_subjugate_vietnam
+		position = 6
+		required_missions = { mr_maenam_river_4 }
+		provinces_to_highlight = {
+			area = red_river_delta_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					area = red_river_delta_area
+					NOT = { has_tax_building_trigger = yes }
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = viet_lao_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = vietnamese
+					}
+					change_culture = lao
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						accepted_culture = vietnamese
+					}
+					remove_accepted_culture = vietnamese
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = red_river_delta_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_9 = {	#Pacify the Hui
+		icon = mission_kowtow
+		position = 7
+		required_missions = { mr_maenam_river_6 }
+		provinces_to_highlight = {
+			area = yun_gui_area 
+			area = dali_area
+			area = chuannan_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			yun_gui_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			dali_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			chuannan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hui_master
+				duration = 10950
+			}
+		}
+	}
+	
+	
+	mr_maenam_river_11 = {	#Reaching the source
+		icon = mission_a_million_rice_fields
+		position = 8
+		required_missions = { mr_maenam_river_8 mr_maenam_river_9 mr_maenam_river_10 }
+		provinces_to_highlight = {
+			region = tibet_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					region = tibet_region
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			tibet_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = PMN_source_secured
+				duration = 10950
+			}
+		}
+	}
+	
+	mr_maenam_river_12 = {	#Holy Mount of Kailash
+		icon = mission_buddhist_monk_praying
+		position = 9
+		required_missions = { mr_maenam_river_11 }
+		provinces_to_highlight = {
+			province_id = 5450
+			NOT = {
+				development = 20
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			5450 = {
+				development = 20
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			5450 = {
+				add_province_modifier = {
+					name = mount_kailash
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_13 = {	#Harness the Holiness
+		icon = mission_have_manufactories
+		position = 10
+		required_missions = { mr_maenam_river_12 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			has_institution = manufactories
+		}
+		effect = {
+			change_dip = 1
+			add_country_modifier = {
+				name = mekong_domination
+				duration = -1
+				}	
+			add_government_reform = mekong_trickle_down_reform
+			custom_tooltip = PMN_mekong_power_TT
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+					OR = {
+						area = angkor_area
+						area = cambodia_area
+						area = mekong_area
+						area = khorat_area
+						area = central_thai_area
+						area = vientiane_area
+						area = sukhothai_area
+						area = champasak_area
+						area = north_laos_area
+						area = karenni_area
+						area = northern_thai_area
+						area = shan_hill_area
+						area = yun_gui_borderland_area
+						area = dali_area
+						area = west_kham_area
+					}
+					}
+					add_province_modifier = {
+						name = mekong_powered
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_legimacy_3 = {	#Rule with Virtue
+		icon = mission_mnd_khm_restore_angkor
+		position = 13
+		required_missions = { mr_maenam_legimacy_1 }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			religious_unity = 0.8
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+		}
+		
+		effect = {
+			custom_tooltip = karma_start_TT_1
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_neutral_3
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_2
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_good_3
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_3
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_bad_3
+					duration = 7300
+				}
+			}
+			custom_tooltip = maenam_karma_start_TT_4
+			tooltip = {
+				add_country_modifier = {
+					name = maenam_karma_phi_3
+					duration = 7300
+				}
+			}
+			custom_tooltip = karma_start_TT_4
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							karma = -33
+							NOT = { karma = 33 }
+						}
+					}
+					add_country_modifier = {
+						name = maenam_karma_neutral_3
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						karma = 34
+					}
+					add_country_modifier = {
+						name = maenam_karma_good_3
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { karma = -34 }
+					}
+					add_country_modifier = {
+						name = maenam_karma_bad_3
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						religion = mr_satsanaphi
+					}
+					add_country_modifier = {
+						name = maenam_karma_phi_3
+						duration = 7300
+					}
+				}
+				else = {
+					add_adm_power = 100
+				}
+			}
+		}
+	}
+	
+}
+MR_maenam_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = { tag = PMN }
+	has_country_shield = yes
+	
+	
+	mr_maenam_dev_4 = { #Champasak devving
+		icon = mission_mnd_khm_restore_angkor
+		position = 2
+		required_missions = { 
+			mr_maenam_dev_1
+		}
+		provinces_to_highlight = {
+			province_id = 4839
+			NOT = {
+				development = 15
+			}
+		}
+		trigger = {
+			4839 = {
+				development = 15
+			}
+		}
+		effect = {
+			4839 = {
+				add_province_modifier = {
+					name = champasak_palace
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_river_3 = {	#Secure Nan
+		icon = mission_a_million_rice_fields
+		position = 4
+		required_missions = { mr_maenam_dev_5 }
+		provinces_to_highlight = {
+			area = northern_thai_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					area = northern_thai_area
+					country_or_non_sovereign_subject_holds = ROOT
+					has_tax_building_trigger = yes
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			custom_tooltip = mr_maenam_river_1_TT
+			tooltip = {
+				add_province_modifier = {
+					name = riverside_temple
+					duration = 14600
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = northern_thai_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	mr_maenam_river_7 = {	#Tame Irrawaddy
+		icon = mission_restore_the_pagan_kingdom
+		position = 6
+		required_missions = { mr_maenam_river_4 }
+		provinces_to_highlight = {
+			area = lower_burma_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_tax_building_trigger = yes
+			}
+		}
+		trigger = {
+			NOT = {
+				any_province = {
+					area = lower_burma_area
+					NOT = { has_tax_building_trigger = yes }
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = burmese_thai_TT
+			custom_tooltip = mr_maenam_river_1_TT
+			tooltip = {
+				add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = burmese
+					}
+					change_culture = shan_thai
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						accepted_culture = burmese
+					}
+					remove_accepted_culture = burmese
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						area = lower_burma_area
+						country_or_non_sovereign_subject_holds = ROOT
+						has_tax_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = riverside_temple
+						duration = 14600
+					}
+				}
+			}
+		}
+	}
+	
+	
+	mr_maenam_river_10 = {	#Pacify the Zhuang
+		icon = mission_kowtow
+		position = 7
+		required_missions = { mr_maenam_river_7 }
+		provinces_to_highlight = {
+			area = guangxi_area 
+			area = west_guangdong_area
+			area = guangdong_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			guangxi_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			west_guangdong_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			guangdong_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = zhuang_master
+				duration = 10950
+			}
+		}
+	}
+	
+}
